@@ -36,13 +36,13 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {"owo_gripstock_recon_01"},
 		stock = {
 			offset = true, 
-			position = vector3_box(0, -0.04, 0.06),
-			scale = vector3_box(1, 1, 0.85)
+			position = vector3_box(0, -0.04, 0.065),
+			scale = vector3_box(1, 1.15, 0.85)
 		},
 		stockac = {
 			offset = true, 
 			position = vector3_box(0, 0.02, 0),
-			scale = vector3_box(1, 0.8, 1)
+			scale = vector3_box(1, 1, 1)
 		}
 	},
 	-- Magazine: Flat
@@ -66,7 +66,7 @@ mod.inject_fixes(this_variant, {
 		},
 		rearmag = {
 			offset = true, 
-			position = vector3_box(.0, -0.23, 0.035), 
+			position = vector3_box(.0, -0.255, 0.035), 
 			rotation = vector3_box(0, 0, 0), 
 			scale = vector3_box(1, 1, 1), 
 		}
@@ -85,10 +85,7 @@ mod.inject_fixes(this_variant, {
 			offset = true, 
 			position = vector3_box(.0, -0.23, 0.035), 
 			rotation = vector3_box(0, 0, 0), 
-			scale = vector3_box(0, 0, 0), 
-			hide_mesh = {
-				{"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
-			}
+			scale = vector3_box(0, 0, 0)
 		}
 	},
 })
