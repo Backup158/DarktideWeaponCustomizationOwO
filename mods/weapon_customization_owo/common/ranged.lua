@@ -78,18 +78,35 @@ function mod.owo_lasgun_magazine_rear(variant_id, type)
 end
 
 -- Muzzle: Suppressor
+-- helper suppressors not working
 function mod.owo_suppressor(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"}
 	})
+	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
+		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1"},
+		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2"}
+	})
 
 	mod.inject_models(variant_id, {
 		owo_suppressor_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			automatic_equip = {
+				muzzle_2 = owo_suppressor_helper_01
+			}
 		},
 		owo_suppressor_02 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
+			automatic_equip = {
+				muzzle_2 = owo_suppressor_helper_02
+			}
+		},
+		owo_suppressor_helper_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
+		},
+		owo_suppressor_helper_02 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		}
 	})
 end
