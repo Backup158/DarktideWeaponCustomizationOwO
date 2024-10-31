@@ -19,3 +19,16 @@ function mod.owo_helbore_gripstock_recon_01(variant_id,type)
 		},
 	})
 end
+
+function mod.owo_lasgun_magazine_01_flat(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+		{id = "owo_lasgun_magazine_flat", name = "OwO Flat Magazine 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_lasgun_magazine_flat = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
+		},
+	})
+end

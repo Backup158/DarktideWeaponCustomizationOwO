@@ -15,6 +15,8 @@ local this_variant = "lasgun_p2_m1" -- Helbore Lasgun
 -- ############################################
 -- Straight Grip and Recon Stock
 mod.owo_helbore_gripstock_recon_01(this_variant)
+-- Flat Mag
+mod.owo_lasgun_magazine_01_flat(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -25,6 +27,13 @@ mod.inject_fixes(this_variant, {
 		stock = {
 			offset = true, 
 			position = vector3_box(0, 0, 0.05)
+		}
+	},
+	-- Magazine: Flat
+	{	dependencies = {"owo_lasgun_magazine_flat"},
+		magazine = {
+			offset = true,
+			scale = vector3_box(1, 1, 0.5)
 		}
 	},
 })
