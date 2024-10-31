@@ -10,6 +10,13 @@ local _item_minion = "content/items/weapons/minions"
 local this_variant = "lasgun_p2_m1" -- Helbore Lasgun
 
 -- ############################################
+-- Add Custom Attachments
+-- Makes new tables for attachment anchors
+-- ############################################
+mod.wc.attachment[this_variant].stockac = {}
+mod.wc.attachment[this_variant].stockac2 = {}
+
+-- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
@@ -27,6 +34,15 @@ mod.inject_fixes(this_variant, {
 		stock = {
 			offset = true, 
 			position = vector3_box(0, 0, 0.05)
+		},
+		stockac = {
+			offset = true, 
+			position = vector3_box(0, 0.02, 0),
+			scale = vector3_box(1, 0.8, 1)
+		},
+		stockac2 = {
+			offset = true, 
+			position = vector3_box(0, -1, 0)
 		}
 	},
 	-- Magazine: Flat
