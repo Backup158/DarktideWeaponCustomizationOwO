@@ -53,6 +53,7 @@ mod.inject_fixes(this_variant, {
 		}
 	},
 
+	-- Magazine: Rear
 	{	dependencies = {
 			"owo_lasgun_magazine_rear_01",
 			"owo_gripstock_recon_01"
@@ -70,23 +71,24 @@ mod.inject_fixes(this_variant, {
 			scale = vector3_box(1, 1, 1), 
 		}
 	},
+	--		Magazine: Rear when there's no recon stock
 	{	dependencies = {
 		"owo_lasgun_magazine_rear_01"
-	},
-	magazine = {
-		offset = true, 
-		position = vector3_box(.0, .0, 0), 
-		rotation = vector3_box(0, 0, 0), 
-		scale = vector3_box(1, 1, 0.7)
-	},
-	rearmag = {
-		offset = true, 
-		position = vector3_box(.0, -0.23, 0.035), 
-		rotation = vector3_box(0, 0, 0), 
-		scale = vector3_box(0, 0, 0), 
-		hide_mesh = {
-			{"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+		},
+		magazine = {
+			offset = true, 
+			position = vector3_box(.0, .0, 0), 
+			rotation = vector3_box(0, 0, 0), 
+			scale = vector3_box(1, 1, 0.7)
+		},
+		rearmag = {
+			offset = true, 
+			position = vector3_box(.0, -0.23, 0.035), 
+			rotation = vector3_box(0, 0, 0), 
+			scale = vector3_box(0, 0, 0), 
+			hide_mesh = {
+				{"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+			}
 		}
-	}
-},
+	},
 })
