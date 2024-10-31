@@ -22,11 +22,10 @@ mod.wc.attachment[this_variant].rearmag = {}
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
--- Straight Grip and Recon Stock
-mod.owo_helbore_gripstock_recon_01(this_variant)
--- Flat Mag
-mod.owo_lasgun_magazine_01_flat(this_variant)
-mod.owo_lasgun_magazine_01_rear(this_variant)
+mod.owo_helbore_gripstock_recon(this_variant)
+mod.owo_lasgun_magazine_flat(this_variant)
+mod.owo_lasgun_magazine_rear(this_variant)
+mod.owo_suppressor(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -88,4 +87,15 @@ mod.inject_fixes(this_variant, {
 			scale = vector3_box(0, 0, 0)
 		}
 	},
+
+	{	dependencies = {
+			"owo_suppressor_01|owo_suppressor_02"
+		},
+		muzzle = {
+			offset = true, 
+			position = vector3_box(0, 0, 0), 
+			rotation = vector3_box(0, 0, 0), 
+			scale = vector3_box(1, 1, 1)
+		},
+	}
 })
