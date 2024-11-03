@@ -13,6 +13,7 @@ local _item_minion = "content/items/weapons/minions"
 -- inject_models adds the models for actual use
 -- ############################################
 -- Stock: Straight Grip and Recon Stock
+--		Helbores
 function mod.owo_helbore_gripstock_recon(variant_id,type)
 	mod.inject_attachments_owo(variant_id, "stock" or type, {
 		{id = "owo_gripstock_recon_01", name = "OwO StraightGrip Recon 1"},
@@ -72,7 +73,8 @@ function mod.owo_lasgun_magazine_flat(variant_id, type)
 end
 
 -- Magazine: Rear Lasgun 
--- I stole this from Syn
+--		For Straight Grip and Recon Stock
+-- 		I stole this from Syn
 function mod.owo_lasgun_magazine_rear(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_lasgun_magazine_rear_01", name = "OwO Rear Mag 1", no_randomize = true},
@@ -125,6 +127,40 @@ function mod.owo_suppressor(variant_id, type)
 		},
 		owo_suppressor_helper_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_2", mesh_move = false, parent = "barrel"
+		}
+	})
+end
+
+-- Barrel: Shotgun barrel short
+--		Bolt pistol
+function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+		{id = "owo_bistol_shotgun_barrel_short_01", name = "OwO Shotgun Shorty 1"},
+		{id = "owo_bistol_shotgun_barrel_short_04", name = "OwO Shotgun Shorty 2"},
+		{id = "owo_bistol_shotgun_barrel_short_05", name = "OwO Shotgun Shorty 3"},
+		{id = "owo_bistol_shotgun_barrel_short_06", name = "OwO Shotgun Shorty 4"},
+		{id = "owo_bistol_shotgun_barrel_short_08", name = "OwO Shotgun Shorty 5"},
+		{id = "owo_bistol_shotgun_barrel_short_09", name = "OwO Shotgun Shorty 6"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_bistol_shotgun_barrel_short_01 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrel", parent = "receiver"
+		},
+		owo_bistol_shotgun_barrel_short_04 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrel", parent = "receiver"
+		},
+		owo_bistol_shotgun_barrel_short_05 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrel", parent = "receiver"
+		},
+		owo_bistol_shotgun_barrel_short_06 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrel", parent = "receiver"
+		},
+		owo_bistol_shotgun_barrel_short_08 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrel", parent = "receiver"
+		},
+		owo_bistol_shotgun_barrel_short_09 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrel", parent = "receiver"
 		}
 	})
 end
