@@ -16,6 +16,8 @@ local _item_minion = "content/items/weapons/minions"
 function mod.owo_helbore_gripstock_recon(variant_id,type)
 	mod.inject_attachments_owo(variant_id, "stock" or type, {
 		{id = "owo_gripstock_recon_01", name = "OwO StraightGrip Recon 1"},
+		{id = "owo_gripstock_recon_02", name = "OwO StraightGrip Recon 2"},
+		{id = "owo_gripstock_recon_03", name = "OwO StraightGrip Recon 3"},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac" or type, {
 		{id = "owo_gripstock_grip_01a",            name = "OwO StraightGrip stockac", no_randomize = true},
@@ -25,6 +27,22 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 		-- stock
 	    owo_gripstock_recon_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_01", type = "stock", parent = "receiver", 
+			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0),
+			automatic_equip = {
+				stockac = "owo_gripstock_grip_01a"
+
+			}
+		},
+		owo_gripstock_recon_02 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_02", type = "stock", parent = "receiver", 
+			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0),
+			automatic_equip = {
+				stockac = "owo_gripstock_grip_01a"
+
+			}
+		},
+		owo_gripstock_recon_03 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_03", type = "stock", parent = "receiver", 
 			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0),
 			automatic_equip = {
 				stockac = "owo_gripstock_grip_01a"
@@ -85,8 +103,8 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
-		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1"},
-		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2"}
+		{id = "owo_suppressor_helper_01", name = "OwO Suppressor vesa 1"},
+		{id = "owo_suppressor_helper_02", name = "OwO Suppressor vesa 2"}
 	})
 
 	mod.inject_models(variant_id, {

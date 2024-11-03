@@ -33,7 +33,7 @@ mod.owo_suppressor(this_variant)
 -- ############################################
 mod.inject_fixes(this_variant, {
 	-- Straight Grip and Recon Stock
-	{	dependencies = {"owo_gripstock_recon_01"},
+	{	dependencies = {"owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03"},
 		stock = {
 			offset = true, 
 			position = vector3_box(0, -0.04, 0.065),
@@ -56,7 +56,7 @@ mod.inject_fixes(this_variant, {
 	-- Magazine: Rear
 	{	dependencies = {
 			"owo_lasgun_magazine_rear_01",
-			"owo_gripstock_recon_01"
+			"owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03"
 		},
 		magazine = {
 			offset = true, 
@@ -97,25 +97,26 @@ mod.inject_fixes(this_variant, {
 			offset = true, 
 			position = vector3_box(0, 0, 0), 
 			rotation = vector3_box(0, 0, 0), 
-			scale = vector3_box(1.4, 1.8, 1.4)
-		}
-		--[[,
+			scale = vector3_box(1.2, 1.8, 1.2)
+		},
 		muzzle_2 = {
 			offset = true, 
 			position = vector3_box(0, 0, 0), 
 			rotation = vector3_box(0, 25, 0), 
-			scale = vector3_box(1.4, 1.4, 1.4)
-		},
-		]]
-	},
+			scale = vector3_box(1.2, 1.8, 1.2)
+		}
+		
+	}
+	--[[,
 	{	dependencies = {
 			"owo_suppressor_helper_01|owo_suppressor_helper_02"
 		},
 		muzzle_2 = {
 			offset = true, 
 			position = vector3_box(0, 0, 0), 
-			rotation = vector3_box(0, 0, 0), 
+			rotation = vector3_box(0, 25, 0), 
 			scale = vector3_box(1.4, 1.4, 1.4)
 		}
 	}
+	]]
 })
