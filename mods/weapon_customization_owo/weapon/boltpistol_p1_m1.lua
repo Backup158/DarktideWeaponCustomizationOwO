@@ -33,6 +33,7 @@ mod.inject_fixes(this_variant, {
 			scale = vector3_box(1, 0.33, 1)
         }
     },
+    -- SCALING AND POS IS FUCKED RN
     {   dependencies = {
         "owo_bistol_shotgun_barrel_short_01",
         "ilasgun_muzzle_01|ilasgun_muzzle_02|ilasgun_muzzle_03"
@@ -42,7 +43,7 @@ mod.inject_fixes(this_variant, {
         muzzle = {
             offset = true, 
             position = vector3_box(0, 0.47, 0), -- 0.45
-            scale = vector3_box(1, 3, 1)        -- 1/3 * 3 = 1
+            scale = vector3_box(1, 3, 1)        -- 1/3 * 3 = 1 BUT WHY OWNE TIT TWOOOOORK
         }
     }
 })
