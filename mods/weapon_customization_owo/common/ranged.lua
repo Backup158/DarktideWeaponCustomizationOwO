@@ -47,6 +47,12 @@ mod.wc.barrelshroudac4List = {
 	"owo_dreg_shroudac4_01"
 }
 
+mod.wc.add_custom_attachments.bayonet2 = "bayonet2List"
+mod.wc.bayonet2List = {
+	"owo_dreg_bayonet_empty",
+	"owo_dreg_bayonet_rear_01"
+}
+
 -- ############################################
 -- Injection Definitions
 -- inject_attachments_owo injects attachment descriptions first
@@ -304,5 +310,37 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 			model = "", type = "barrelshroudac", 
 			mesh_move = false, parent = 'receiver'
 		},
+	})
+end
+
+-- Bayonet: Dreg Gunner bayonet
+--		Brauto
+function mod.owo_dreg_gunner_bayonet(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
+		{id = "owo_dreg_bayonet_empty", name = "OwO Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner bayonet"},
+
+	})
+	mod.inject_attachments_owo(variant_id, "bayonet2", {
+		{id = "owo_dreg_bayonet_empty", name = "OwO Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Shroud", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_dreg_bayonet_01 = {
+			model = _item_melee.."/blades/combat_blade_blade_03", type = "bayonet", 
+			mesh_move = false, parent = 'barrel', 
+			automatic_equip = {
+				bayonet2 = "owo_dreg_bayonet_rear_01"
+			}
+		},
+		owo_dreg_bayonet_empty = {
+			model = "", type = "bayonet2", 
+			mesh_move = false, parent = 'barrel'
+		},
+		owo_dreg_bayonet_rear_01 = {
+			model = _item_melee.."/blades/combat_blade_blade_05", type = "bayonet2", 
+			mesh_move = false, parent = 'barrel'
+		}
 	})
 end
