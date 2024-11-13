@@ -4,8 +4,6 @@
 
 [MT Weapon Customization Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/276) by Random Account/MT607
 
-[The Syndonai Edits Weapon Customization Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/290) by Syndonai
-
 # ***Notices youw pawts*** (Parts I added)
 Part: Weapons available
 - Suppressor: Helbore Lasguns
