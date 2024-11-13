@@ -17,7 +17,7 @@ mod.wc.attachment[this_variant].stockac = {}
 --mod.wc.attachment[this_variant].stockac2 = {}
 -- mod.wc.attachment[this_variant].stockac3 = {}
 mod.wc.attachment[this_variant].rearmag = {}
-mod.wc.attachment[this_variant].muzzle_2 = {}
+mod.wc.attachment[this_variant].muzzle2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -99,7 +99,7 @@ mod.inject_fixes(this_variant, {
 			rotation = vector3_box(0, 0, 0), 
 			scale = vector3_box(1.2, 1.8, 1.2)
 		},
-		muzzle_2 = {
+		muzzle2 = {
 			offset = true, 
 			position = vector3_box(0, 0, 0), 
 			rotation = vector3_box(0, 25, 0), 
@@ -111,7 +111,7 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {
 			"owo_suppressor_helper_01|owo_suppressor_helper_02"
 		},
-		muzzle_2 = {
+		muzzle2 = {
 			offset = true, 
 			position = vector3_box(0, 0, 0), 
 			rotation = vector3_box(0, 25, 0), 

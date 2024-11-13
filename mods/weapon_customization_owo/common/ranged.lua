@@ -8,6 +8,13 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 -- TABLE
+mod.wc.add_custom_attachments.muzzle2 = "muzzle2List"
+mod.wc.muzzle2List = {
+	"owo_suppressor_helper_empty",
+	"owo_suppressor_helper_01",
+	"owo_suppressor_helper_02"
+}
+
 mod.wc.add_custom_attachments.barrelac = "barrelacList"
 mod.wc.barrelacList = {
 	"owo_revolver_shotgun_barrel_01",
@@ -150,29 +157,33 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"}
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
-		{id = "owo_suppressor_helper_01", name = "OwO Suppressor vesa 1"},
-		{id = "owo_suppressor_helper_02", name = "OwO Suppressor vesa 2"}
+	mod.inject_attachments_owo(variant_id, "muzzle2" or type, {
+		{id = "owo_suppressor_helper_empty", name = "OwO Suppressor'vesa Empty"},
+		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1"},
+		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2"}
 	})
 
 	mod.inject_models(variant_id, {
 		owo_suppressor_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = owo_suppressor_helper_01
+				muzzle2 = owo_suppressor_helper_01
 			}
 		},
 		owo_suppressor_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = owo_suppressor_helper_02
+				muzzle2 = owo_suppressor_helper_02
 			}
 		},
+		owo_suppressor_helper_empty = {
+			model = "", type = "muzzle2", mesh_move = false, parent = "barrel"
+		},
 		owo_suppressor_helper_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle2", mesh_move = false, parent = "barrel"
 		},
 		owo_suppressor_helper_02 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle2", mesh_move = false, parent = "barrel"
 		}
 	})
 end
