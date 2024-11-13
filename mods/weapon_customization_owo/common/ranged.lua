@@ -35,6 +35,11 @@ mod.wc.barrelshroudac2List = {
 	"owo_dreg_shroudac2_01"
 }
 
+mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac3List"
+mod.wc.barrelshroudac3List = {
+	"owo_dreg_shroud_empty",
+	"owo_dreg_shroudac3_01"
+}
 
 -- ############################################
 -- Injection Definitions
@@ -50,7 +55,7 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 		{id = "owo_gripstock_recon_03", name = "OwO StraightGrip Recon 3"},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac" or type, {
-		{id = "owo_gripstock_grip_01a",            name = "OwO StraightGrip stockac", no_randomize = true},
+		{id = "owo_gripstock_grip_01a",  name = "OwO StraightGrip stockac", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -237,15 +242,19 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
-		{id = "owo_dreg_shroud_01",      name = "OwO Dreg Shroud", no_randomize = true},
+		{id = "owo_dreg_shroud_01", name = "OwO Dreg Shroud", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac", {
-		{id = "owo_dreg_shroud_empty",      name = "Dreg Shroud Empty", no_randomize = true},
-		{id = "owo_dreg_shroudac_01",      name = "OwO Dreg Shroud Ac", no_randomize = true},
+		{id = "owo_dreg_shroud_empty", name = "Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_shroudac_01", name = "OwO Dreg Shroud Ac", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac2", {
-		{id = "owo_dreg_shroud_empty",      name = "Dreg Shroud Empty", no_randomize = true},
-		{id = "owo_dreg_shroudac2_01",      name = "OwO Dreg Shroud Ac2", no_randomize = true},
+		{id = "owo_dreg_shroud_empty", name = "Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_shroudac2_01", name = "OwO Dreg Shroud Ac2", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac3", {
+		{id = "owo_dreg_shroud_empty", name = "Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_shroudac3_01", name = "OwO Dreg Shroud Ac3", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -256,15 +265,12 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 			automatic_equip = {
 				barrelshroud= "owo_dreg_shroud_01", 
 				barrelshroudac= "owo_dreg_shroudac_01", 
-				barrelshroudac2= "owo_dreg_shroudac2_01"
+				barrelshroudac2= "owo_dreg_shroudac2_01",
+				barrelshroudac3= "owo_dreg_shroudac3_01"
 			}
 		},
 		owo_dreg_shroud_01 = {
 			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_01", type = "barrelshroud", 
-			mesh_move = false, parent = 'receiver'
-		},
-		owo_dreg_shroud_empty = {
-			model = "", type = "barrelshroudac", 
 			mesh_move = false, parent = 'receiver'
 		},
 		owo_dreg_shroudac_01 = {
@@ -274,6 +280,14 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 		owo_dreg_shroudac2_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_02", type = "barrelshroudac2", 
 			mesh_move = false, parent = 'barrel'
+		},
+		owo_dreg_shroudac3_01 = {
+			model = _item_ranged.."/underbarrels/boltgun_rifle_underbarrel_03", type = "barrelshroudac3", 
+			mesh_move = false, parent = 'barrel'
+		},
+		owo_dreg_shroud_empty = {
+			model = "", type = "barrelshroudac", 
+			mesh_move = false, parent = 'receiver'
 		},
 	})
 end

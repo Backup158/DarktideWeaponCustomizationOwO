@@ -16,7 +16,7 @@ local this_variant = "autogun_p1_m1"
 mod.wc.attachment[this_variant].barrelshroud = {}
 mod.wc.attachment[this_variant].barrelshroudac = {}
 mod.wc.attachment[this_variant].barrelshroudac2 = {}
-mod.wc.attachment[this_variant].barrelshroudac = {}
+mod.wc.attachment[this_variant].barrelshroudac3 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -28,14 +28,7 @@ mod.owo_dreg_gunner_barrel(this_variant, "barrel")
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
-    --[[
-    {   dependencies = {
-            "owo_dreg_barrel_01",
-            "apistol_muzzle_01|apistol_muzzle_02|apistol_muzzle_03|apistol_muzzle_04|apistol_muzzle_05"
-        }, -- Barrel
-	    muzzle = {offset = true, position = vector3_box(0, 0.9, -0.09), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.9, 1)}
-    },
-    ]]
+    -- Helbore bayonets
 	{   dependencies = {
             "owo_dreg_barrel_01",
             "autogun_bayonet_01|autogun_bayonet_02"
@@ -45,14 +38,36 @@ mod.inject_fixes(this_variant, {
 	{   dependencies = {
             "owo_dreg_barrel_01"
         },
-	    barrel = {offset = true, position = vector3_box(0, 0, 0.025), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.45, 0.7, 0.45)},
-        barrelshroud = {offset = true, position = vector3_box(0, 0, 0.025), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.39, 0.7, 0.39)},
-        barrelshroudac = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1, 1)},
-        barrelshroudac2 = {offset = true, position = vector3_box(0, 0, -0.115), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.5, 1.9, 0.8)},
-        flashlight = {offset = true, position = vector3_box(0.0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.)},
-        trinket_hook = {parent = "barrel", position = vector3_box(0, 0.182, -.0925), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1, 1)},
-	    emblem_left = {offset = false, parent = "barrel", position = vector3_box(-0.03, 0, -.02), rotation = vector3_box(0, 0, 180), scale = vector3_box(2, 2, 2)},
-	    emblem_right = {offset = false, parent = "barrel", position = vector3_box(0.03, 0, -.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(2, 2, 2)},
-	    muzzle = {offset = true, position = vector3_box(0, 1, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.2, 2.2, 2.2)}
+	    barrel = { offset = true, 
+            position = vector3_box(0, 0, 0.025), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(0.45, 0.7, 0.45)
+        },
+        -- outside, one with the front sight
+        barrelshroud = {
+            offset = true, position = vector3_box(0, 0, 0.025), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(0.39, 0.7, 0.39)
+        }, 
+        -- long receiver, reverse las
+        barrelshroudac = {
+            offset = true, position = vector3_box(0, 0, 0),
+            rotation = vector3_box(0, 0, 180),
+            scale = vector3_box(1, 1, 1)
+        },
+        -- bayonet lug
+        barrelshroudac2 = {
+            offset = true, position = vector3_box(0, 0, -0.115), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(1, 1.9, 0.8)
+        }, 
+        -- hand grip for long receiver
+        barrelshroudac3 = {
+            offset = true, position = vector3_box(0, 0, -0.115), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(1, 1.5, 1.67)
+        }, 
+        flashlight = {offset = true, position = vector3_box(0.0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        muzzle = {offset = true, position = vector3_box(0, 1, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.2, 2.2, 2.2)}
     },
 })
