@@ -41,7 +41,7 @@ mod.inject_fixes(this_variant, {
 	    barrel = { offset = true, 
             position = vector3_box(0, 0, 0.025), 
             rotation = vector3_box(0, 0, 0), 
-            scale = vector3_box(0.45, 0.7, 0.45)
+            scale = vector3_box(0.45, 0.63, 0.45)
         },
         -- outside, one with the front sight
         barrelshroud = {
@@ -63,7 +63,7 @@ mod.inject_fixes(this_variant, {
         }, 
         -- hand grip for long receiver
         barrelshroudac3 = {
-            offset = true, position = vector3_box(0, 0, -0.115), 
+            offset = true, position = vector3_box(0, 0, -0.155), 
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(1, 1.5, 1.67)
         }, 
