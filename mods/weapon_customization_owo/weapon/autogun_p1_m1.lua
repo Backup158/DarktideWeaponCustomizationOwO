@@ -14,9 +14,10 @@ local this_variant = "autogun_p1_m1" -- Braced Autoguns
 -- Makes new tables for attachment anchors
 -- ############################################
 mod.wc.attachment[this_variant].barrelshroud = {}
-mod.wc.attachment[this_variant].barrelshroudac = {}
+--mod.wc.attachment[this_variant].barrelshroudac = {}
 mod.wc.attachment[this_variant].barrelshroudac2 = {}
 mod.wc.attachment[this_variant].barrelshroudac3 = {}
+mod.wc.attachment[this_variant].barrelshroudac4 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -33,7 +34,7 @@ mod.inject_fixes(this_variant, {
             "owo_dreg_barrel_01",
             "autogun_bayonet_01|autogun_bayonet_02"
         }, -- Barrel
-	    bayonet = {offset = true, position = vector3_box(0, 0.699, -0.095), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.7, 2.0)}
+	    bayonet = {offset = true, position = vector3_box(0, 0.699, -0.095), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 1.7, 3.0)}
     },
 	{   dependencies = {
             "owo_dreg_barrel_01"
@@ -41,20 +42,20 @@ mod.inject_fixes(this_variant, {
 	    barrel = { offset = true, 
             position = vector3_box(0, 0, 0.025), 
             rotation = vector3_box(0, 0, 0), 
-            scale = vector3_box(0.45, 0.63, 0.45)
+            scale = vector3_box(0.27, 0.63, 0.27)
         },
         -- outside, one with the front sight
         barrelshroud = {
             offset = true, position = vector3_box(0, 0, 0.025), 
             rotation = vector3_box(0, 0, 0), 
-            scale = vector3_box(0.39, 0.7, 0.39)
+            scale = vector3_box(0.24, 0.7, 0.24)
         }, 
-        -- long receiver, reverse las
+        --[[-- long receiver, reverse las
         barrelshroudac = {
             offset = true, position = vector3_box(0, 0, 0),
             rotation = vector3_box(0, 0, 180),
             scale = vector3_box(1, 1, 1)
-        },
+        },]]
         -- bayonet lug
         barrelshroudac2 = {
             offset = true, position = vector3_box(0, 0, -0.115), 
@@ -63,11 +64,17 @@ mod.inject_fixes(this_variant, {
         }, 
         -- hand grip for long receiver
         barrelshroudac3 = {
-            offset = true, position = vector3_box(0, 0, -0.155), 
+            offset = true, position = vector3_box(0, 0, -0.215), 
             rotation = vector3_box(0, 0, 0), 
-            scale = vector3_box(1, 1.5, 1.67)
+            scale = vector3_box(2, 1.5, 2.5)
         }, 
-        flashlight = {offset = true, position = vector3_box(0.0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        -- hand grip (top)
+        barrelshroudac4 = {
+            offset = true, position = vector3_box(0, 0.153, 0.115), 
+            rotation = vector3_box(180, 0, 0), 
+            scale = vector3_box(2.4, 0.969, 2.85)
+        }, 
+        flashlight = {offset = true, position = vector3_box(0.096, 0.17, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 2.7, 2.7)},
         muzzle = {offset = true, position = vector3_box(0, 1, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.2, 2.2, 2.2)}
     },
 })
