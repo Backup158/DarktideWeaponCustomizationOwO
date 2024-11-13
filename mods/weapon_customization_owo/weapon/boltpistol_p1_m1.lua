@@ -7,7 +7,7 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
-local this_variant = "boltpistol_p1_m1"
+local this_variant = "boltpistol_p1_m1" -- Bolt Pistol
 
 -- ############################################
 -- Add Custom Attachments
