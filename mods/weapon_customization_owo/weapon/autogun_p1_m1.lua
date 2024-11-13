@@ -15,7 +15,8 @@ local this_variant = "autogun_p1_m1"
 -- ############################################
 mod.wc.attachment[this_variant].barrelshroud = {}
 mod.wc.attachment[this_variant].barrelshroudac = {}
-mod.wc.attachment[this_variant].barrelshroudacs = {}
+mod.wc.attachment[this_variant].barrelshroudac2 = {}
+mod.wc.attachment[this_variant].barrelshroudac = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -39,14 +40,15 @@ mod.inject_fixes(this_variant, {
             "owo_dreg_barrel_01",
             "autogun_bayonet_01|autogun_bayonet_02"
         }, -- Barrel
-	    bayonet = {offset = true, position = vector3_box(0, 0.9, -0.09), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.4, 1.7)}
+	    bayonet = {offset = true, position = vector3_box(0, 0.699, -0.095), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.7, 2.0)}
     },
 	{   dependencies = {
             "owo_dreg_barrel_01"
         },
 	    barrel = {offset = true, position = vector3_box(0, 0, 0.025), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.45, 0.7, 0.45)},
         barrelshroud = {offset = true, position = vector3_box(0, 0, 0.025), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.39, 0.7, 0.39)},
-	    barrelshroudac = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.64, 1.2, 0.7)},
+        barrelshroudac = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1, 1)},
+        barrelshroudac2 = {offset = true, position = vector3_box(0, 0, -0.115), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.5, 1.9, 0.8)},
         flashlight = {offset = true, position = vector3_box(0.0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.)},
         trinket_hook = {parent = "barrel", position = vector3_box(0, 0.182, -.0925), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1, 1)},
 	    emblem_left = {offset = false, parent = "barrel", position = vector3_box(-0.03, 0, -.02), rotation = vector3_box(0, 0, 180), scale = vector3_box(2, 2, 2)},

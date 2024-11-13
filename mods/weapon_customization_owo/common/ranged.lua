@@ -8,21 +8,31 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 -- TABLE
-mod.wc.add_custom_attachments.barrelshroud = "barrelshrouds"
-mod.wc.barrelshrouds = {
-	"owo_dreg_shroud_01"
-}
-
 mod.wc.add_custom_attachments.barrelac = "barrelacList"
 mod.wc.barrelacList = {
-	"owo_dreg_shroudac_empty",
-	"owo_dreg_shroudac_02",
 	"owo_revolver_shotgun_barrel_01",
 	"owo_revolver_shotgun_barrel_04",
 	"owo_revolver_shotgun_barrel_05",
 	"owo_revolver_shotgun_barrel_06",
 	"owo_revolver_shotgun_barrel_08",	
 	"owo_revolver_shotgun_barrel_09"
+}
+
+mod.wc.add_custom_attachments.barrelshroud = "barrelshroudList"
+mod.wc.barrelshroudList = {
+	"owo_dreg_shroud_01"
+}
+
+mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
+mod.wc.barrelshroudacList = {
+	"owo_dreg_shroud_empty",
+	"owo_dreg_shroudac_01"
+}
+
+mod.wc.add_custom_attachments.barrelshroudac2 = "barrelshroudac2List"
+mod.wc.barrelshroudac2List = {
+	"owo_dreg_shroud_empty",
+	"owo_dreg_shroudac2_01"
 }
 
 
@@ -223,15 +233,19 @@ end
 --		Brauto
 function mod.owo_dreg_gunner_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel 1"},
+		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel"},
 
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
 		{id = "owo_dreg_shroud_01",      name = "OwO Dreg Shroud", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac", {
-		{id = "owo_dreg_shroudac_empty",      name = "Dreg Shroud Ac Empty", no_randomize = true},
-		{id = "owo_dreg_shroudac_02",      name = "OwO Dreg Shroud Ac", no_randomize = true},
+		{id = "owo_dreg_shroud_empty",      name = "Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_shroudac_01",      name = "OwO Dreg Shroud Ac", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac2", {
+		{id = "owo_dreg_shroud_empty",      name = "Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_shroudac2_01",      name = "OwO Dreg Shroud Ac2", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -241,20 +255,25 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 			mesh_move = false, parent = 'receiver', 
 			automatic_equip = {
 				barrelshroud= "owo_dreg_shroud_01", 
-				barrelshroudac= "owo_dreg_shroudac_02", 
+				barrelshroudac= "owo_dreg_shroudac_01", 
+				barrelshroudac2= "owo_dreg_shroudac2_01"
 			}
 		},
 		owo_dreg_shroud_01 = {
 			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_01", type = "barrelshroud", 
 			mesh_move = false, parent = 'receiver'
 		},
-		owo_dreg_shroudac_empty = {
-			model = "",
-			type = "barrelshroudac", mesh_move = false, parent = 'receiver'
+		owo_dreg_shroud_empty = {
+			model = "", type = "barrelshroudac", 
+			mesh_move = false, parent = 'receiver'
 		},
-		owo_dreg_shroudac_02 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", 
-			type = "barrelshroudac", mesh_move = false, parent = 'barrel'
+		owo_dreg_shroudac_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "barrelshroudac", 
+			mesh_move = false, parent = 'receiver'
+		},
+		owo_dreg_shroudac2_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_02", type = "barrelshroudac2", 
+			mesh_move = false, parent = 'barrel'
 		},
 	})
 end
