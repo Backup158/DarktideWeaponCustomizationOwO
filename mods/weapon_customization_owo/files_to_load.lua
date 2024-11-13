@@ -12,8 +12,8 @@ mod.load_mod_file("common/ranged")
 -- ##############################
 
 --#region #### Ranged #####
---[[
 mod.load_mod_file("weapon/autogun_p1_m1")
+--[[
 mod.load_mod_file("weapon/autopistol_p1_m1")
 mod.load_mod_file("weapon/ogryn_gauntlet_p1_m1")
 mod.load_mod_file("weapon/ogryn_rippergun_p1_m1")

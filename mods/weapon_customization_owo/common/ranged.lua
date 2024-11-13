@@ -9,6 +9,9 @@ local _item_minion = "content/items/weapons/minions"
 
 -- TABLE
 mod.wc.add_custom_attachments.barrelac = "barrelac"
+mod.wc.barrelshrouds = {
+	"owo_dreg_shroud_01"
+}
 mod.wc.barrelshroudacs = {
 	"owo_revolver_shotgun_barrel_01",
 	"owo_revolver_shotgun_barrel_04",
@@ -180,7 +183,7 @@ end
 -- Barrel: Shotgun barrel extension
 --		Revolver
 function mod.owo_revolver_shotgun_barrel(variant_id)
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelex" or type, {
 		{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1"},
 		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 2"},
 		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 3"},
@@ -189,70 +192,65 @@ function mod.owo_revolver_shotgun_barrel(variant_id)
 		{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Barrel 6"},
 	})
 
+	-- parent receiver nor barrel matters
 	mod.inject_models(variant_id, {
 		owo_revolver_shotgun_barrel_01 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrel", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelex", parent = "receiver"
 		},
 		owo_revolver_shotgun_barrel_04 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrel", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelex", parent = "receiver"
 		},
 		owo_revolver_shotgun_barrel_05 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrel", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelex", parent = "receiver"
 		},
 		owo_revolver_shotgun_barrel_06 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrel", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelex", parent = "receiver"
 		},
 		owo_revolver_shotgun_barrel_08 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrel", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelex", parent = "receiver"
 		},
 		owo_revolver_shotgun_barrel_09 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrel", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelex", parent = "receiver"
 		}
 	})
-	--[[
-	mod.inject_attachments_owo(variant_id, "barrelac", {
-		{id = "owo_revolver_shotgun_barrelac_01", name = "OwO Shotgun Extension 1"},
-		{id = "owo_revolver_shotgun_barrelac_04", name = "OwO Shotgun Extension 2"},
-		{id = "owo_revolver_shotgun_barrelac_05", name = "OwO Shotgun Extension 3"},
-		{id = "owo_revolver_shotgun_barrelac_06", name = "OwO Shotgun Extension 4"},
-		{id = "owo_revolver_shotgun_barrelac_08", name = "OwO Shotgun Extension 5"},
-		{id = "owo_revolver_shotgun_barrelac_09", name = "OwO Shotgun Extension 6"},
+end
+
+-- Barrel: Dreg Gunner barrel
+--		Brauto
+function mod.owo_dreg_gunner_barrel(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel 1"},
+
 	})
-	mod.inject_attachments_owo(variant_id, "barrel", {
-		{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Revolver 1"},
-		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Revolver 2"},
-		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Revolver 3"},
-		{id = "owo_revolver_shotgun_barrel_06", name = "OwO Shotgun Revolver 4"},
-		{id = "owo_revolver_shotgun_barrel_08", name = "OwO Shotgun Revolver 5"},
-		{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Revolver 6"},
-		
+	mod.inject_attachments_owo(variant_id, "barrelshroud", {
+		{id = "owo_dreg_shroud_01",      name = "OwO Dreg Shroud", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac", {
+		{id = "owo_dreg_shroudac_empty",      name = "Dreg Shroud Ac Empty", no_randomize = true},
+		{id = "owo_dreg_shroudac_02",      name = "OwO Dreg Shroud Ac", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
-		owo_revolver_shotgun_barrelac_01 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelac", parent = "barrel"
-		},
-		owo_revolver_shotgun_barrelac_04 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelac", parent = "barrel"
-		},
-		owo_revolver_shotgun_barrelac_05 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelac", parent = "barrel"
-		},
-		owo_revolver_shotgun_barrelac_06 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelac", parent = "barrel"
-		},
-		owo_revolver_shotgun_barrelac_08 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelac", parent = "barrel"
-		},
-		owo_revolver_shotgun_barrelac_09 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelac", parent = "barrel"
-		},
-		owo_revolver_shotgun_barrel_01 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_02", type = "barrel", parent = "receiver",
+		-- thanks syn for the exitus barrel
+		owo_dreg_barrel_01 = {
+			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_02", type = "barrel", 
+			mesh_move = false, parent = 'receiver', 
 			automatic_equip = {
-				barrelac = "owo_revolver_shotgun_barrelac_01"
+				barrelshroud= "owo_dreg_shroud_01", 
+				barrelshroudac= "owo_dreg_shroud_02", 
 			}
-		}
+		},
+		owo_dreg_shroud_01 = {
+			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_01", type = "barrelshroud", 
+			mesh_move = false, parent = 'receiver'
+		},
+		owo_dreg_shroudac_02 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", 
+			type = "barrelshroudac", mesh_move = false, parent = 'barrel'
+		},
+		owo_dreg_shroudac_empty = {
+			model = "",
+			type = "barrelshroudac", mesh_move = false, parent = 'receiver'
+		},
 	})
-	]]
 end
