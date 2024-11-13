@@ -8,11 +8,15 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 -- TABLE
-mod.wc.add_custom_attachments.barrelac = "barrelac"
+mod.wc.add_custom_attachments.barrelshroud = "barrelshrouds"
 mod.wc.barrelshrouds = {
 	"owo_dreg_shroud_01"
 }
-mod.wc.barrelshroudacs = {
+
+mod.wc.add_custom_attachments.barrelac = "barrelacList"
+mod.wc.barrelacList = {
+	"owo_dreg_shroudac_empty",
+	"owo_dreg_shroudac_02",
 	"owo_revolver_shotgun_barrel_01",
 	"owo_revolver_shotgun_barrel_04",
 	"owo_revolver_shotgun_barrel_05",
@@ -237,20 +241,20 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 			mesh_move = false, parent = 'receiver', 
 			automatic_equip = {
 				barrelshroud= "owo_dreg_shroud_01", 
-				barrelshroudac= "owo_dreg_shroud_02", 
+				barrelshroudac= "owo_dreg_shroudac_02", 
 			}
 		},
 		owo_dreg_shroud_01 = {
 			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_01", type = "barrelshroud", 
 			mesh_move = false, parent = 'receiver'
 		},
-		owo_dreg_shroudac_02 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", 
-			type = "barrelshroudac", mesh_move = false, parent = 'barrel'
-		},
 		owo_dreg_shroudac_empty = {
 			model = "",
 			type = "barrelshroudac", mesh_move = false, parent = 'receiver'
+		},
+		owo_dreg_shroudac_02 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", 
+			type = "barrelshroudac", mesh_move = false, parent = 'barrel'
 		},
 	})
 end
