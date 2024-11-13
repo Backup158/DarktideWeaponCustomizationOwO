@@ -64,7 +64,7 @@ mod.inject_fixes(this_variant, {
         barrelshroudac2 = {
             offset = true, position = vector3_box(0, 0, -0.115), 
             rotation = vector3_box(0, 0, 0), 
-            scale = vector3_box(1, 1.9, 0.8)
+            scale = vector3_box(1, 2.45, 0.8)
         }, 
         -- hand grip for long receiver
         barrelshroudac3 = {
@@ -110,14 +110,14 @@ mod.inject_fixes(this_variant, {
             scale = vector3_box(1, 2, 1)
         },]]
         bayonet = {
-            offset = true, position = vector3_box(0, 0.55, -0.055), 
+            offset = true, position = vector3_box(0, 0.8, -0.18), 
             rotation = vector3_box(-90, 0, 0), 
-            scale = vector3_box(0.35, 0.275, 0.35)
+            scale = vector3_box(1, 1, 0.555)
         },
         bayonet2 = {
-            offset = true, position = vector3_box(0, 0.55, -0.069), 
+            offset = true, position = vector3_box(0, 0.8, -0.222), 
             rotation = vector3_box(90, 0, 0), 
-            scale = vector3_box(0.35, 0.225, 0.075)
+            scale = vector3_box(1, 0.67, 0.115)
         },
     }
 })
