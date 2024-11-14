@@ -27,8 +27,8 @@ mod.load_mod_file("weapon/lasgun_p2_m1")
 --[[
 mod.load_mod_file("weapon/lasgun_p3_m1")
 mod.load_mod_file("weapon/laspistol_p1_m1")
-mod.load_mod_file("weapon/bolter_p1_m1")
 ]]
+mod.load_mod_file("weapon/bolter_p1_m1")
 mod.load_mod_file("weapon/boltpistol_p1_m1")
 --[[
 mod.load_mod_file("weapon/shotgun_p1_m1")

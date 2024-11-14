@@ -355,3 +355,86 @@ function mod.owo_dreg_gunner_bayonet(variant_id, type)
 		}
 	})
 end
+
+-- California Bolter
+--		Receiver: Vertically challenged
+--		Grip: Already included in MT Plugin
+--			Bolter
+--[[ Cannot contain:     
+	Pistol grip that protrudes conspicuously beneath the action of the weapon
+    Thumbhole stock
+    Folding or telescoping stock
+    Grenade or flare launcher
+    Flash suppressor
+    Forward pistol grip 
+	California Penal Code § 32310 PC 
+		“large-capacity magazine” means any ammunition-feeding device with the capacity to hold more than 10 rounds
+]]
+function mod.owo_california_bolter(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "receiver" or type, {
+		{id = "owo_california_bolter_01", name = "OwO California Bolter 1"},
+		{id = "owo_california_bolter_02", name = "OwO California Bolter 2"},
+		{id = "owo_california_bolter_03", name = "OwO California Bolter 3"},
+		{id = "owo_california_bolter_04", name = "OwO California Bolter 4"},
+		{id = "owo_california_bolter_05", name = "OwO California Bolter 5"},
+		{id = "owo_california_bolter_06", name = "OwO California Bolter 6"},
+		{id = "owo_california_bolter_07", name = "OwO California Bolter 7"},
+		{id = "owo_california_bolter_08", name = "OwO California Bolter 8"},
+	})
+	-- 1-7
+	mod.inject_models(variant_id, {
+		owo_california_bolter_01 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = "receiver", 
+			mesh_move = false
+			--[[
+			-- Thumbhole, Folding, and Telescoping Stocks
+			, no_support = {
+				"syn_thumbgun_stock_01",	-- syn thumbhole
+				"syn_thumbgun_stock_02",
+				"syn_thumbgun_stock_03",
+				"syn_thumbgun_stock_04",
+				"syn_thumbgun_stock_05",
+				-- infantry autogun 4
+				-- brauto 1-3, 5-8
+				-- headhunter 1,3
+				"xl_autogun_rifle_stock_04",	-- syn xl iag
+				"xl_autogun_rifle_stock_05",	-- syn xl brauto
+				"xl_autogun_rifle_stock_06",
+				"xl_autogun_rifle_stock_07",
+				"xl_autogun_rifle_stock_12",
+				"xl_autogun_rifle_stock_13",
+				"xl_autogun_rifle_stock_14",
+				"xl_autogun_rifle_stock_08",	-- syn xl headhunter
+				"xl_autogun_rifle_stock_16",
+			}]]
+		},
+		owo_california_bolter_02 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_02", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_03 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_03", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_04 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_04", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_05 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_05", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_06 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_06", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_07 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_07", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_08 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_08", type = "receiver", 
+			mesh_move = false
+		}
+	})
+end
