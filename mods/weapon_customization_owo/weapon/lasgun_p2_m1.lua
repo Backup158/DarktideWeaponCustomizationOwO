@@ -45,6 +45,15 @@ mod.inject_fixes(this_variant, {
 			scale = vector3_box(1, 1, 1)
 		}
 	},
+	-- Hiding helpers when not equipped
+	{	dependencies = {"!owo_gripstock_recon_01", "!owo_gripstock_recon_02", "!owo_gripstock_recon_03"},
+		stockac = {
+			hide_mesh = {
+				{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+			}
+		}
+	},
+
 	-- Magazine: Flat
 	{	dependencies = {"owo_lasgun_magazine_flat"},
 		magazine = {
@@ -73,7 +82,7 @@ mod.inject_fixes(this_variant, {
 	},
 	--		Magazine: Rear when there's no recon stock
 	{	dependencies = {
-		"owo_lasgun_magazine_rear_01"
+			"owo_lasgun_magazine_rear_01"
 		},
 		magazine = {
 			offset = true, 
@@ -86,6 +95,15 @@ mod.inject_fixes(this_variant, {
 			position = vector3_box(.0, -0.23, 0.035), 
 			rotation = vector3_box(0, 0, 0), 
 			scale = vector3_box(0, 0, 0)
+		}
+	},
+	{	dependencies = {
+			"!owo_lasgun_magazine_rear_01"
+		},
+		rearmag = {
+			hide_mesh = {
+                {"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
 		}
 	},
 
@@ -120,6 +138,7 @@ mod.inject_fixes(this_variant, {
 			scale = vector3_box(1.2, 1.8, 1.2)
 		}
 	},
+	-- Hiding helpers when not equipped
 	{	dependencies = {
 			"!owo_suppressor_01", "!owo_suppressor_02"
 		},

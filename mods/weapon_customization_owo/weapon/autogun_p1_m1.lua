@@ -35,13 +35,6 @@ mod.owo_fin_grip(this_variant, "grip")
 -- ############################################
 mod.inject_fixes(this_variant, {
     -- DREG GUNNER BARREL
-    -- Helbore bayonets
-	{   dependencies = {
-            "owo_dreg_barrel_01",
-            "autogun_bayonet_01|autogun_bayonet_02"
-        },
-	    bayonet = {offset = true, position = vector3_box(0, 0.699, -0.095), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 1.7, 3.0)}
-    },
     -- Iag
     {   dependencies = {
             "owo_dreg_barrel_01",
@@ -133,6 +126,42 @@ mod.inject_fixes(this_variant, {
         flashlight = {offset = true, position = vector3_box(0.096, 0.17, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 2.7, 2.7)},
         muzzle = {offset = true, position = vector3_box(0, 1, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.2, 2.2, 2.2)}
     },
+    -- Helbore bayonets
+	{   dependencies = {
+            "owo_dreg_barrel_01",
+            "autogun_bayonet_01|autogun_bayonet_02"
+        },
+        bayonet = {offset = true, position = vector3_box(0, 0.699, -0.095), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 1.7, 3.0)}
+    },
+    -- Hiding helpers when not equipped
+    {   dependencies = {
+            "!owo_dreg_barrel_01"
+        },
+        -- outside, one with the front sight
+        barrelshroud = {
+            hide_mesh = {
+                {"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
+        }
+        -- bayonet lug
+        barrelshroudac2 = {
+            hide_mesh = {
+                {"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
+        }, 
+        -- hand grip for long receiver
+        barrelshroudac3 = {
+            hide_mesh = {
+                {"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
+        }, 
+        -- hand grip (top)
+        barrelshroudac4 = {
+            hide_mesh = {
+                {"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
+        }, 
+    }
     -- DREG GUNNER BAYONET
     {   dependencies = {
             "!owo_dreg_barrel_01",
