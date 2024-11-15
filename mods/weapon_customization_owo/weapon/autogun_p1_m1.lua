@@ -34,7 +34,9 @@ mod.owo_fin_grip(this_variant, "grip")
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
+    -- ######
     -- DREG GUNNER BARREL
+    -- ######
     -- Iag
     {   dependencies = {
             "owo_dreg_barrel_01",
@@ -162,7 +164,9 @@ mod.inject_fixes(this_variant, {
             }
         }, 
     },
+    -- ######
     -- DREG GUNNER BAYONET
+    -- ######
     {   dependencies = {
             "!owo_dreg_barrel_01",
             "owo_dreg_bayonet_01",
@@ -202,7 +206,9 @@ mod.inject_fixes(this_variant, {
             }
         },
     },
+    -- ######
     -- FIN GRIP
+    -- ######
     {   dependencies = {
             "owo_fin_grip_01"
         },

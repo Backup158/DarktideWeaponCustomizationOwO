@@ -26,7 +26,9 @@ mod.owo_california_bolter(this_variant, "receiver")
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
+    -- ######
     -- California Bolter receiver main
+    -- ######
     {   dependencies = {
             "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08"
         },

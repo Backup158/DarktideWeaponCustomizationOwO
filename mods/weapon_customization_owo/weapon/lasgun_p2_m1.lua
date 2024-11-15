@@ -32,7 +32,9 @@ mod.owo_suppressor(this_variant)
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
+	-- ######
 	-- Straight Grip and Recon Stock
+	-- ######
 	{	dependencies = {"owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03"},
 		stock = {
 			offset = true, 
@@ -54,7 +56,9 @@ mod.inject_fixes(this_variant, {
 		}
 	},
 
+	-- ######
 	-- Magazine: Flat
+	-- ######
 	{	dependencies = {"owo_lasgun_magazine_flat"},
 		magazine = {
 			offset = true,
@@ -62,7 +66,9 @@ mod.inject_fixes(this_variant, {
 		}
 	},
 
+	-- ######
 	-- Magazine: Rear
+	-- ######
 	{	dependencies = {
 			"owo_lasgun_magazine_rear_01",
 			"owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03"
@@ -107,7 +113,9 @@ mod.inject_fixes(this_variant, {
 		}
 	},
 
+	-- ######
 	-- Muzzle: Suppressor
+	-- ######
 	{	dependencies = {
 			"owo_suppressor_01|owo_suppressor_02"
 		},
