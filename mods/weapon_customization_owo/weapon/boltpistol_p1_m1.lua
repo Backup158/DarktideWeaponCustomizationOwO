@@ -29,21 +29,17 @@ mod.inject_fixes(this_variant, {
         },
         barrel = {
             offset = true, 
-			position = vector3_box(0, 0, 0),
-			scale = vector3_box(1, 0.33, 1)
-        }
-    },
-    -- SCALING AND POS IS FUCKED RN
-    {   dependencies = {
-        "owo_bistol_shotgun_barrel_short_01",
-        "ilasgun_muzzle_01|ilasgun_muzzle_02|ilasgun_muzzle_03"
+			position = vector3_box(0, 0.01, 0.01),
+			scale = vector3_box(1, 0.33, 0.9)
         },
-        -- muzzles are parented to barrels
-        -- inherits scale and position
+        --[[
+        -- SCALING AND POS IS FUCKED RN
+        -- because of changes in base mod
         muzzle = {
             offset = true, 
             position = vector3_box(0, 0.47, 0), -- 0.45
             scale = vector3_box(1, 3, 1)        -- 1/3 * 3 = 1 BUT WHY OWNE TIT TWOOOOORK
         }
-    }
+        ]]
+    },
 })

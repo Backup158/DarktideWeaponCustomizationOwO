@@ -17,7 +17,7 @@ mod.wc.attachment[this_variant].stockac = {}
 --mod.wc.attachment[this_variant].stockac2 = {}
 -- mod.wc.attachment[this_variant].stockac3 = {}
 mod.wc.attachment[this_variant].rearmag = {}
-mod.wc.attachment[this_variant].muzzle_2 = {}
+mod.wc.attachment[this_variant].muzzle2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -45,6 +45,15 @@ mod.inject_fixes(this_variant, {
 			scale = vector3_box(1, 1, 1)
 		}
 	},
+	-- Hiding helpers when not equipped
+	{	dependencies = {"!owo_gripstock_recon_01", "!owo_gripstock_recon_02", "!owo_gripstock_recon_03"},
+		stockac = {
+			hide_mesh = {
+				{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+			}
+		}
+	},
+
 	-- Magazine: Flat
 	{	dependencies = {"owo_lasgun_magazine_flat"},
 		magazine = {
@@ -73,7 +82,7 @@ mod.inject_fixes(this_variant, {
 	},
 	--		Magazine: Rear when there's no recon stock
 	{	dependencies = {
-		"owo_lasgun_magazine_rear_01"
+			"owo_lasgun_magazine_rear_01"
 		},
 		magazine = {
 			offset = true, 
@@ -88,6 +97,15 @@ mod.inject_fixes(this_variant, {
 			scale = vector3_box(0, 0, 0)
 		}
 	},
+	{	dependencies = {
+			"!owo_lasgun_magazine_rear_01"
+		},
+		rearmag = {
+			hide_mesh = {
+                {"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
+		}
+	},
 
 	-- Muzzle: Suppressor
 	{	dependencies = {
@@ -99,24 +117,47 @@ mod.inject_fixes(this_variant, {
 			rotation = vector3_box(0, 0, 0), 
 			scale = vector3_box(1.2, 1.8, 1.2)
 		},
-		muzzle_2 = {
+	},
+	{	dependencies = {
+			"owo_suppressor_01"
+		},
+		muzzle2 = {
+			offset = true, 
+			position = vector3_box(0, 0, 0),
+			rotation = vector3_box(0, 22, 0), 
+			scale = vector3_box(1.2, 1.8, 1.2)
+		}	
+	},
+	{	dependencies = {
+			"owo_suppressor_02"
+		},
+		muzzle2 = {
 			offset = true, 
 			position = vector3_box(0, 0, 0), 
-			rotation = vector3_box(0, 25, 0), 
+			rotation = vector3_box(0, 17, 0), 
 			scale = vector3_box(1.2, 1.8, 1.2)
 		}
-		
-	}
-	--[[,
+	},
+	-- Hiding helpers when not equipped
 	{	dependencies = {
-			"owo_suppressor_helper_01|owo_suppressor_helper_02"
+			"!owo_suppressor_01", "!owo_suppressor_02"
 		},
-		muzzle_2 = {
+		muzzle2 = {
+            hide_mesh = {
+                {"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
+        },
+	},
+	-- the skinny bayonet. sits on muzzle
+	{	dependencies = {
+			"owo_suppressor_01|owo_suppressor_02",
+			"autogun_bayonet_03"
+		},
+		bayonet = {
 			offset = true, 
-			position = vector3_box(0, 0, 0), 
-			rotation = vector3_box(0, 25, 0), 
-			scale = vector3_box(1.4, 1.4, 1.4)
-		}
-	}
-	]]
+			position = vector3_box(0, 0.03, -0.032), 
+			rotation = vector3_box(0, 0, 0), 
+			scale = vector3_box(0.85, 0.5, 0.85)
+		},
+	},
 })

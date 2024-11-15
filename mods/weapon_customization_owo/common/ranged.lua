@@ -8,6 +8,13 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 -- TABLE
+mod.wc.add_custom_attachments.muzzle2 = "muzzle2List"
+mod.wc.muzzle2List = {
+	"owo_suppressor_helper_empty",
+	"owo_suppressor_helper_01",
+	"owo_suppressor_helper_02"
+}
+
 mod.wc.add_custom_attachments.barrelac = "barrelacList"
 mod.wc.barrelacList = {
 	"owo_revolver_shotgun_barrel_01",
@@ -51,6 +58,12 @@ mod.wc.add_custom_attachments.bayonet2 = "bayonet2List"
 mod.wc.bayonet2List = {
 	"owo_dreg_bayonet_empty",
 	"owo_dreg_bayonet_rear_01"
+}
+
+mod.wc.add_custom_attachments.grip2 = "grip2List"
+mod.wc.grip2List = {
+	"owo_fin_grip2_empty",
+	"owo_fin_grip2_01"
 }
 
 -- ############################################
@@ -144,35 +157,39 @@ function mod.owo_lasgun_magazine_rear(variant_id, type)
 end
 
 -- Muzzle: Suppressor
--- helper suppressors not working
+-- 		Helbores
 function mod.owo_suppressor(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"}
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
-		{id = "owo_suppressor_helper_01", name = "OwO Suppressor vesa 1"},
-		{id = "owo_suppressor_helper_02", name = "OwO Suppressor vesa 2"}
+	mod.inject_attachments_owo(variant_id, "muzzle2" or type, {
+		{id = "owo_suppressor_helper_empty", name = "OwO Suppressor'vesa Empty"},
+		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1"},
+		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2"}
 	})
 
 	mod.inject_models(variant_id, {
 		owo_suppressor_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = owo_suppressor_helper_01
+				muzzle2 = "owo_suppressor_helper_01"
 			}
 		},
 		owo_suppressor_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = owo_suppressor_helper_02
+				muzzle2 = "owo_suppressor_helper_02"
 			}
 		},
+		owo_suppressor_helper_empty = {
+			model = "", type = "muzzle2", mesh_move = false, parent = "barrel"
+		},
 		owo_suppressor_helper_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle2", mesh_move = false, parent = "barrel"
 		},
 		owo_suppressor_helper_02 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle2", mesh_move = false, parent = "barrel"
 		}
 	})
 end
@@ -215,12 +232,13 @@ end
 --		Revolver
 function mod.owo_revolver_shotgun_barrel(variant_id)
 	mod.inject_attachments_owo(variant_id, "barrelex" or type, {
-		{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1"},
-		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 2"},
-		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 3"},
-		{id = "owo_revolver_shotgun_barrel_06", name = "OwO Shotgun Barrel 4"},
-		{id = "owo_revolver_shotgun_barrel_08", name = "OwO Shotgun Barrel 5"},
-		{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Barrel 6"},
+		{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1 (1)"},
+		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 2 (4)"},
+		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 3 (5)"},
+		{id = "owo_revolver_shotgun_barrel_06", name = "OwO Shotgun Barrel 4 (6)"},
+		-- barrel 7 with the skulls is too squished
+		{id = "owo_revolver_shotgun_barrel_08", name = "OwO Shotgun Barrel 5 (8)"},
+		{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Barrel 6 (9)"},
 	})
 
 	-- parent receiver nor barrel matters
@@ -247,7 +265,7 @@ function mod.owo_revolver_shotgun_barrel(variant_id)
 end
 
 -- Barrel: Dreg Gunner barrel
---		Brauto
+--		Brauto/Iag
 function mod.owo_dreg_gunner_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
 		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel"},
@@ -314,11 +332,11 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 end
 
 -- Bayonet: Dreg Gunner bayonet
---		Brauto
+--		Brauto/Iag
 function mod.owo_dreg_gunner_bayonet(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
 		{id = "owo_dreg_bayonet_empty", name = "OwO Dreg Shroud Empty", no_randomize = true},
-		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner bayonet"},
+		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner Bayonet"},
 
 	})
 	mod.inject_attachments_owo(variant_id, "bayonet2", {
@@ -344,3 +362,155 @@ function mod.owo_dreg_gunner_bayonet(variant_id, type)
 		}
 	})
 end
+
+-- Receiver: Vertically challenged California Bolter
+--		Grip: Already included in MT Plugin
+--			Bolter
+--[[ Cannot contain:     
+	Pistol grip that protrudes conspicuously beneath the action of the weapon
+    Thumbhole stock
+    Folding or telescoping stock
+    Grenade or flare launcher
+    Flash suppressor
+    Forward pistol grip 
+	California Penal Code § 32310 PC 
+		“large-capacity magazine” means any ammunition-feeding device with the capacity to hold more than 10 rounds
+	SBR
+		A semiautomatic, centerfire rifle that has an overall length of less than 30 inches
+]]
+function mod.owo_california_bolter(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "receiver" or type, {
+		{id = "owo_california_bolter_01", name = "OwO California Bolter 1"},
+		{id = "owo_california_bolter_02", name = "OwO California Bolter 2"},
+		{id = "owo_california_bolter_03", name = "OwO California Bolter 3"},
+		{id = "owo_california_bolter_04", name = "OwO California Bolter 4"},
+		{id = "owo_california_bolter_05", name = "OwO California Bolter 5"},
+		{id = "owo_california_bolter_06", name = "OwO California Bolter 6"},
+		{id = "owo_california_bolter_07", name = "OwO California Bolter 7"},
+		{id = "owo_california_bolter_08", name = "OwO California Bolter 8"},
+	})
+	-- 1-7
+	mod.inject_models(variant_id, {
+		owo_california_bolter_01 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = "receiver", 
+			mesh_move = false
+			--[[
+			, no_support = {
+				-- Thumbhole, Folding, and Telescoping Stocks
+				"syn_thumbgun_stock_01",	-- syn thumbhole
+				"syn_thumbgun_stock_02",
+				"syn_thumbgun_stock_03",
+				"syn_thumbgun_stock_04",
+				"syn_thumbgun_stock_05",
+				-- infantry autogun 4
+				-- brauto 1-3, 5-8
+				-- headhunter 1,3
+				"xl_autogun_rifle_stock_04",	-- syn xl iag
+				"xl_autogun_rifle_stock_05",	-- syn xl brauto
+				"xl_autogun_rifle_stock_06",
+				"xl_autogun_rifle_stock_07",
+				"xl_autogun_rifle_stock_12",
+				"xl_autogun_rifle_stock_13",
+				"xl_autogun_rifle_stock_14",
+				"xl_autogun_rifle_stock_08",	-- syn xl headhunter
+				"xl_autogun_rifle_stock_16",
+			}]]
+		},
+		owo_california_bolter_02 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_02", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_03 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_03", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_04 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_04", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_05 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_05", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_06 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_06", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_07 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_07", type = "receiver", 
+			mesh_move = false
+		},
+		owo_california_bolter_08 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_08", type = "receiver", 
+			mesh_move = false
+		}
+	})
+end
+
+function mod.owo_fin_grip(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "grip" or type, {
+		{id = "owo_fin_grip_01", name = "OwO Fin Grip 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "grip2" or type, {
+		{id = "owo_fin_grip2_empty", name = "OwO Fin Grip empty"},
+		{id = "owo_fin_grip2_01", name = "OwO Fin Grip'vesa 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_fin_grip_01 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = "grip", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				grip2 = "owo_fin_grip2_01"
+			}
+		},
+		owo_fin_grip2_empty = {
+			model = "", type = "grip2", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_fin_grip2_01 = {
+			model = _item_melee.."/blades/combat_blade_blade_02", type = "grip2", 
+			mesh_move = false, parent = "receiver"
+		},
+	})
+end
+
+--[[
+TEMPLATES
+mod.wc.add_custom_attachments.KUMQUAT = "KUMQUATList"
+mod.wc.KUMQUATList = {
+	""
+}
+
+function mod.owo_NAAAAAME(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "" or type, {
+		{id = "owo_", name = "OwO "},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_ = {
+			model = _item_ranged.."", type = "", 
+			mesh_move = false, parent = "",
+			automatic_equip = {
+				grip2 = "owo_fin_grip2_01"
+			}
+		},
+		owo_ = {
+			model = "", type = "", 
+			mesh_move = false, parent = "receiver"
+		}
+	})
+end
+
+mod.inject_fixes(this_variant, {
+    {   dependencies = {
+            "owo_"
+        },
+        grip = {
+            offset = true, position = vector3_box(0, 0, 0), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(1, 1, 1)
+        }
+    }
+})
+]]
