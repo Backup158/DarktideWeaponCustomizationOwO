@@ -232,12 +232,13 @@ end
 --		Revolver
 function mod.owo_revolver_shotgun_barrel(variant_id)
 	mod.inject_attachments_owo(variant_id, "barrelex" or type, {
-		{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1"},
-		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 2"},
-		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 3"},
-		{id = "owo_revolver_shotgun_barrel_06", name = "OwO Shotgun Barrel 4"},
-		{id = "owo_revolver_shotgun_barrel_08", name = "OwO Shotgun Barrel 5"},
-		{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Barrel 6"},
+		{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1 (1)"},
+		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 2 (4)"},
+		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 3 (5)"},
+		{id = "owo_revolver_shotgun_barrel_06", name = "OwO Shotgun Barrel 4 (6)"},
+		-- barrel 7 with the skulls is too squished
+		{id = "owo_revolver_shotgun_barrel_08", name = "OwO Shotgun Barrel 5 (8)"},
+		{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Barrel 6 (9)"},
 	})
 
 	-- parent receiver nor barrel matters

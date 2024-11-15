@@ -42,9 +42,58 @@ mod.inject_fixes(this_variant, {
         },
 	    bayonet = {offset = true, position = vector3_box(0, 0.699, -0.095), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 1.7, 3.0)}
     },
+    -- Iag
+    {   dependencies = {
+            "owo_dreg_barrel_01",
+            "receiver_01|receiver_10"
+        },
+        barrel = { offset = true, 
+            position = vector3_box(0, 0, -0.014), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(0.27, 0.63, 0.27)
+        },
+        barrelshroud = { offset = true, 
+            position = vector3_box(0, 0, -0.014), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(0.24, 0.7, 0.24)
+        }, 
+    },
+    -- Brautos
+    {   dependencies = {
+            "owo_dreg_barrel_01",
+            "receiver_03|receiver_06|receiver_07|receiver_08"
+        },
+        barrel = { offset = true, 
+            position = vector3_box(0, 0, 0.025), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(0.27, 0.63, 0.27)
+        },
+        barrelshroud = {
+            offset = true, position = vector3_box(0, 0, 0.025), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(0.24, 0.7, 0.24)
+        }, 
+    },
+    -- Headhunters
+    {   dependencies = {
+            "owo_dreg_barrel_01",
+            "receiver_02|receiver_04|receiver_05|receiver_09"
+        },
+        barrel = { offset = true, 
+            position = vector3_box(0, 0, -0.012), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(0.27, 0.63, 0.27)
+        },
+        barrelshroud = {
+            offset = true, position = vector3_box(0, 0, -0.012), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(0.24, 0.7, 0.24)
+        }, 
+    },
 	{   dependencies = {
             "owo_dreg_barrel_01"
         },
+        --[[ will get aligned based receiver
 	    barrel = { offset = true, 
             position = vector3_box(0, 0, 0.025), 
             rotation = vector3_box(0, 0, 0), 
@@ -56,6 +105,7 @@ mod.inject_fixes(this_variant, {
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(0.24, 0.7, 0.24)
         }, 
+        ]]
         --[[-- long receiver, reverse las
         barrelshroudac = {
             offset = true, position = vector3_box(0, 0, 0),
@@ -112,6 +162,15 @@ mod.inject_fixes(this_variant, {
             offset = true, position = vector3_box(0, 0.8, -0.222), 
             rotation = vector3_box(90, 0, 0), 
             scale = vector3_box(1, 0.67, 0.115)
+        },
+    },
+    {   dependencies = {
+            "!owo_dreg_bayonet_01"
+        },
+        bayonet2 = {
+            hide_mesh = {
+                {"bayonet2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
         },
     },
     -- FIN GRIP
