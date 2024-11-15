@@ -26,24 +26,32 @@ mod.owo_california_bolter(this_variant, "receiver")
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
+    -- California Bolter receiver main
+    {   dependencies = {
+            "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08"
+        },
+        receiver = {
+            offset = true, 
+            position = vector3_box(0, 0, 0.054),
+            scale = vector3_box(1, 1, 0.64)
+        },    
+        -- In compliance with California Penal Code § 32310 PC 
+        -- Reducing magazine capacity
+        magazine = {
+            offset = true, 
+            position = vector3_box(0, 0, 0.055),
+            scale = vector3_box(1, 1, 0.58)
+        },
+    },
+    -- Cali grips
     {   dependencies = {
             "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08",
-            "!hlasgun_stock_01|!hlasgun_stock_02|!hlasgun_stock_03|!plas_pisgrip_01|!plas_pisgrip_02|!plas_pisgrip_03"
+            "!hlasgun_grip_01","!hlasgun_grip_02", "!hlasgun_grip_03", "!plas_pisgrip_01","!plas_pisgrip_02", "!plas_pisgrip_03"
         },
-    receiver = {
-        offset = true, 
-        position = vector3_box(0, 0, 0.054),
-        scale = vector3_box(1, 1, 0.64)
-        },
-    magazine = {
-        offset = true, 
-        position = vector3_box(0, 0, 0.055),
-        scale = vector3_box(1, 1, 0.58)
-        },
-    grip = {
-        offset = true, 
-        position = vector3_box(0, 0, 0),
-        scale = vector3_box(1, 1, 1.564)
+        grip = {
+            offset = true, 
+            position = vector3_box(0, 0, 0),
+            scale = vector3_box(1, 1, 1.564)
         }
     },
     -- MT Plasma grips
@@ -52,22 +60,22 @@ mod.inject_fixes(this_variant, {
             "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08",
             "plas_pisgrip_01|plas_pisgrip_02|plas_pisgrip_03"
         },
-    grip = {
-        offset = true, 
-        position = vector3_box(0, 0.006, -0.038),
-        scale = vector3_box(1, 1, 1.564)
+        grip = {
+            offset = true, 
+            position = vector3_box(0, 0.006, -0.038),
+            scale = vector3_box(1, 1, 1.564)
         }
     },
     -- Repositioning for MT Cadia Compliant Stock
     -- makes it sit higher than usual so the top of the trigger guard is flush with the receiver
     {   dependencies = {
             "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08",
-            "hlasgun_stock_01|hlasgun_stock_02|hlasgun_stock_03"
+            "hlasgun_grip_01|hlasgun_grip_02|hlasgun_grip_03"
         },
-    grip = {
-        offset = true, 
-        position = vector3_box(0, 0, 0.025),
-        scale = vector3_box(1, 1, 1)
+        grip = {
+            offset = true, 
+            position = vector3_box(0, 0, 0.075),
+            scale = vector3_box(1, 1, 1.564)
         }
     }
 })

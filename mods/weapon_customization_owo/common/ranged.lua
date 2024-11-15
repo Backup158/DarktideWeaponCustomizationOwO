@@ -60,6 +60,12 @@ mod.wc.bayonet2List = {
 	"owo_dreg_bayonet_rear_01"
 }
 
+mod.wc.add_custom_attachments.grip2 = "grip2List"
+mod.wc.grip2List = {
+	"owo_fin_grip2_empty",
+	"owo_fin_grip2_01"
+}
+
 -- ############################################
 -- Injection Definitions
 -- inject_attachments_owo injects attachment descriptions first
@@ -151,7 +157,7 @@ function mod.owo_lasgun_magazine_rear(variant_id, type)
 end
 
 -- Muzzle: Suppressor
--- helper suppressors not working
+-- 		Helbores
 function mod.owo_suppressor(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
@@ -167,13 +173,13 @@ function mod.owo_suppressor(variant_id, type)
 		owo_suppressor_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle2 = owo_suppressor_helper_01
+				muzzle2 = "owo_suppressor_helper_01"
 			}
 		},
 		owo_suppressor_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle2 = owo_suppressor_helper_02
+				muzzle2 = "owo_suppressor_helper_02"
 			}
 		},
 		owo_suppressor_helper_empty = {
@@ -258,7 +264,7 @@ function mod.owo_revolver_shotgun_barrel(variant_id)
 end
 
 -- Barrel: Dreg Gunner barrel
---		Brauto
+--		Brauto/Iag
 function mod.owo_dreg_gunner_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
 		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel"},
@@ -325,11 +331,11 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 end
 
 -- Bayonet: Dreg Gunner bayonet
---		Brauto
+--		Brauto/Iag
 function mod.owo_dreg_gunner_bayonet(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
 		{id = "owo_dreg_bayonet_empty", name = "OwO Dreg Shroud Empty", no_randomize = true},
-		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner bayonet"},
+		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner Bayonet"},
 
 	})
 	mod.inject_attachments_owo(variant_id, "bayonet2", {
@@ -356,8 +362,7 @@ function mod.owo_dreg_gunner_bayonet(variant_id, type)
 	})
 end
 
--- California Bolter
---		Receiver: Vertically challenged
+-- Receiver: Vertically challenged California Bolter
 --		Grip: Already included in MT Plugin
 --			Bolter
 --[[ Cannot contain:     
@@ -369,6 +374,8 @@ end
     Forward pistol grip 
 	California Penal Code § 32310 PC 
 		“large-capacity magazine” means any ammunition-feeding device with the capacity to hold more than 10 rounds
+	SBR
+		A semiautomatic, centerfire rifle that has an overall length of less than 30 inches
 ]]
 function mod.owo_california_bolter(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "receiver" or type, {
@@ -387,8 +394,8 @@ function mod.owo_california_bolter(variant_id, type)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = "receiver", 
 			mesh_move = false
 			--[[
-			-- Thumbhole, Folding, and Telescoping Stocks
 			, no_support = {
+				-- Thumbhole, Folding, and Telescoping Stocks
 				"syn_thumbgun_stock_01",	-- syn thumbhole
 				"syn_thumbgun_stock_02",
 				"syn_thumbgun_stock_03",
@@ -438,3 +445,71 @@ function mod.owo_california_bolter(variant_id, type)
 		}
 	})
 end
+
+function mod.owo_fin_grip(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "grip" or type, {
+		{id = "owo_fin_grip_01", name = "OwO Fin Grip 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "grip2" or type, {
+		{id = "owo_fin_grip2_empty", name = "OwO Fin Grip empty"},
+		{id = "owo_fin_grip2_01", name = "OwO Fin Grip'vesa 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_fin_grip_01 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = "grip", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				grip2 = "owo_fin_grip2_01"
+			}
+		},
+		owo_fin_grip2_empty = {
+			model = "", type = "grip2", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_fin_grip2_01 = {
+			model = _item_melee.."/blades/combat_blade_blade_02", type = "grip2", 
+			mesh_move = false, parent = "receiver"
+		},
+	})
+end
+
+--[[
+TEMPLATES
+mod.wc.add_custom_attachments.KUMQUAT = "KUMQUATList"
+mod.wc.KUMQUATList = {
+	""
+}
+
+function mod.owo_NAAAAAME(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "" or type, {
+		{id = "owo_", name = "OwO "},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_ = {
+			model = _item_ranged.."", type = "", 
+			mesh_move = false, parent = "",
+			automatic_equip = {
+				grip2 = "owo_fin_grip2_01"
+			}
+		},
+		owo_ = {
+			model = "", type = "", 
+			mesh_move = false, parent = "receiver"
+		}
+	})
+end
+
+mod.inject_fixes(this_variant, {
+    {   dependencies = {
+            "owo_"
+        },
+        grip = {
+            offset = true, position = vector3_box(0, 0, 0), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(1, 1, 1)
+        }
+    }
+})
+]]

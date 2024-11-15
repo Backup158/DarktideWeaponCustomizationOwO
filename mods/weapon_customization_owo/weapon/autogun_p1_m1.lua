@@ -7,7 +7,7 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
-local this_variant = "autogun_p1_m1" -- Braced Autoguns
+local this_variant = "autogun_p1_m1" -- Braced/Infantry Autoguns
 
 -- ############################################
 -- Add Custom Attachments
@@ -20,6 +20,7 @@ mod.wc.attachment[this_variant].barrelshroudac3 = {}
 mod.wc.attachment[this_variant].barrelshroudac4 = {}
 mod.wc.attachment[this_variant].bayonet = {}
 mod.wc.attachment[this_variant].bayonet2 = {}
+mod.wc.attachment[this_variant].grip2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -27,6 +28,7 @@ mod.wc.attachment[this_variant].bayonet2 = {}
 -- ############################################
 mod.owo_dreg_gunner_barrel(this_variant, "barrel")
 mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
+mod.owo_fin_grip(this_variant, "grip")
 
 -- ############################################
 -- Inject Fixes
@@ -101,14 +103,6 @@ mod.inject_fixes(this_variant, {
             "owo_dreg_barrel_01",
             "owo_dreg_bayonet_01"
         },
-        --[[bayonet = {
-            offset = true, position = vector3_box(0, 0.6, -0.3), 
-            scale = vector3_box(1, 2.1, 1)
-        },
-        bayonet2 = {
-            offset = true, position = vector3_box(0, 0.6, -0.3), 
-            scale = vector3_box(1, 2, 1)
-        },]]
         bayonet = {
             offset = true, position = vector3_box(0, 0.8, -0.18), 
             rotation = vector3_box(-90, 0, 0), 
@@ -118,6 +112,30 @@ mod.inject_fixes(this_variant, {
             offset = true, position = vector3_box(0, 0.8, -0.222), 
             rotation = vector3_box(90, 0, 0), 
             scale = vector3_box(1, 0.67, 0.115)
+        },
+    },
+    -- FIN GRIP
+    {   dependencies = {
+            "owo_fin_grip_01"
+        },
+        grip = {
+            offset = true, position = vector3_box(0, 0, 0), 
+            rotation = vector3_box(0, 0, 0), 
+            scale = vector3_box(1, 1, 1)
+        },
+        grip2 = {
+            offset = true, position = vector3_box(0, -0.0715, 0.0195), 
+            rotation = vector3_box(145, 0, 0), 
+            scale = vector3_box(0.35, 0.35, 0.165)
+        },
+    },
+    {   dependencies = {
+            "!owo_fin_grip_01"
+        },
+        grip2 = {
+            hide_mesh = {
+                {"grip2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
         },
     }
 })

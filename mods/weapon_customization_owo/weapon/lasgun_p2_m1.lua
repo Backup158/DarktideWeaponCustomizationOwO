@@ -99,24 +99,46 @@ mod.inject_fixes(this_variant, {
 			rotation = vector3_box(0, 0, 0), 
 			scale = vector3_box(1.2, 1.8, 1.2)
 		},
+	},
+	{	dependencies = {
+			"owo_suppressor_01"
+		},
 		muzzle2 = {
 			offset = true, 
-			position = vector3_box(0, 0, 0), 
-			rotation = vector3_box(0, 25, 0), 
+			position = vector3_box(0, 0, 0),
+			rotation = vector3_box(0, 22, 0), 
 			scale = vector3_box(1.2, 1.8, 1.2)
-		}
-		
-	}
-	--[[,
+		}	
+	},
 	{	dependencies = {
-			"owo_suppressor_helper_01|owo_suppressor_helper_02"
+			"owo_suppressor_02"
 		},
 		muzzle2 = {
 			offset = true, 
 			position = vector3_box(0, 0, 0), 
-			rotation = vector3_box(0, 25, 0), 
-			scale = vector3_box(1.4, 1.4, 1.4)
+			rotation = vector3_box(0, 17, 0), 
+			scale = vector3_box(1.2, 1.8, 1.2)
 		}
-	}
-	]]
+	},
+	{	dependencies = {
+			"!owo_suppressor_01", "!owo_suppressor_02"
+		},
+		muzzle2 = {
+            hide_mesh = {
+                {"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
+        },
+	},
+	-- the skinny bayonet. sits on muzzle
+	{	dependencies = {
+			"owo_suppressor_01|owo_suppressor_02",
+			"autogun_bayonet_03"
+		},
+		bayonet = {
+			offset = true, 
+			position = vector3_box(0, 0.03, -0.032), 
+			rotation = vector3_box(0, 0, 0), 
+			scale = vector3_box(0.85, 0.5, 0.85)
+		},
+	},
 })
