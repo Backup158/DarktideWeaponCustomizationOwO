@@ -26,4 +26,4 @@ Part: Weapons available
 - California compliant fin grips: Braced/Infantry/Vigilant Autoguns
 
 ![Helbore with Suppressor, Recon stock with revolver grip, Recon rear map, and parts from other plugins](https://imgur.com/QlFc2Ta.png)
-
+![Braced Autogun with Dreg Gunner Barrel and Bayonet](https://imgur.com/jKbqmQt.png)
