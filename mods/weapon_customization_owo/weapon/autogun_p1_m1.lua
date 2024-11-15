@@ -61,8 +61,8 @@ mod.inject_fixes(this_variant, {
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(0.27, 0.63, 0.27)
         },
-        barrelshroud = {
-            offset = true, position = vector3_box(0, 0, 0.025), 
+        barrelshroud = { offset = true, 
+            position = vector3_box(0, 0, 0.025), 
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(0.24, 0.7, 0.24)
         }, 
@@ -77,8 +77,8 @@ mod.inject_fixes(this_variant, {
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(0.27, 0.63, 0.27)
         },
-        barrelshroud = {
-            offset = true, position = vector3_box(0, 0, -0.012), 
+        barrelshroud = { offset = true, 
+            position = vector3_box(0, 0, -0.012), 
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(0.24, 0.7, 0.24)
         }, 
@@ -106,20 +106,20 @@ mod.inject_fixes(this_variant, {
             scale = vector3_box(1, 1, 1)
         },]]
         -- bayonet lug
-        barrelshroudac2 = {
-            offset = true, position = vector3_box(0, 0, -0.115), 
+        barrelshroudac2 = { offset = true, 
+            position = vector3_box(0, 0, -0.115), 
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(1, 2.45, 0.8)
         }, 
         -- hand grip for long receiver
-        barrelshroudac3 = {
-            offset = true, position = vector3_box(0, 0, -0.215), 
+        barrelshroudac3 = { offset = true, 
+            position = vector3_box(0, 0, -0.215), 
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(2, 1.5, 2.5)
         }, 
         -- hand grip (top)
-        barrelshroudac4 = {
-            offset = true, position = vector3_box(0, 0.153, 0.115), 
+        barrelshroudac4 = { offset = true, 
+            position = vector3_box(0, 0.153, 0.115), 
             rotation = vector3_box(180, 0, 0), 
             scale = vector3_box(2.4, 0.969, 2.85)
         }, 
@@ -142,7 +142,7 @@ mod.inject_fixes(this_variant, {
             hide_mesh = {
                 {"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
             }
-        }
+        },
         -- bayonet lug
         barrelshroudac2 = {
             hide_mesh = {
@@ -161,7 +161,7 @@ mod.inject_fixes(this_variant, {
                 {"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
             }
         }, 
-    }
+    },
     -- DREG GUNNER BAYONET
     {   dependencies = {
             "!owo_dreg_barrel_01",
@@ -206,13 +206,13 @@ mod.inject_fixes(this_variant, {
     {   dependencies = {
             "owo_fin_grip_01"
         },
-        grip = {
-            offset = true, position = vector3_box(0, 0, 0), 
+        grip = { offset = true, 
+            position = vector3_box(0, 0, 0), 
             rotation = vector3_box(0, 0, 0), 
             scale = vector3_box(1, 1, 1)
         },
-        grip2 = {
-            offset = true, position = vector3_box(0, -0.0715, 0.0195), 
+        grip2 = { offset = true, 
+            position = vector3_box(0, -0.0715, 0.0195), 
             rotation = vector3_box(145, 0, 0), 
             scale = vector3_box(0.35, 0.35, 0.165)
         },
@@ -225,5 +225,5 @@ mod.inject_fixes(this_variant, {
                 {"grip2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
             }
         },
-    }
+    },
 })
