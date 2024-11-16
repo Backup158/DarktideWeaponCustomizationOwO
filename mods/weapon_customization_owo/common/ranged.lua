@@ -68,6 +68,24 @@ mod.wc.grip2List = {
 	"owo_fin_grip2_01"
 }
 
+mod.wc.add_custom_attachments.owomagazineac1 = "owomagazineac1List"
+mod.wc.owomagazineac1List = {
+	"owo_jungle_mag_empty",
+	"owo_jungle_mag_helper_01"
+}
+
+mod.wc.add_custom_attachments.owomagazineac2 = "owomagazineac2List"
+mod.wc.owomagazineac2List = {
+	"owo_jungle_mag_connector_f_empty",
+	"owo_jungle_mag_connector_f_01"
+}
+
+mod.wc.add_custom_attachments.owomagazineac3 = "owomagazineac3List"
+mod.wc.owomagazineac3List = {
+	"owo_jungle_mag_connector_b_empty",
+	"owo_jungle_mag_connector_b_01"
+}
+
 -- ############################################
 -- Injection Definitions
 -- inject_attachments_owo injects attachment descriptions first
@@ -524,6 +542,57 @@ function mod.owo_scab_gunner_barrel(variant_id, type)
 		},
 	})
 
+end
+
+-- Magazine: Jungle Mags
+function mod.owo_jungle_mag(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+		{id = "owo_jungle_mag_01", name = "OwO Jungle Mag 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owomagazineac1" or type, {
+		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag'vesa Empty"},
+		{id = "owo_jungle_mag_helper_01", name = "OwO Jungle Mag'vesa 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owomagazineac2" or type, {
+		{id = "owo_jungle_mag_connector_f_empty", name = "OwO Jungle Mag Connector Empty"},
+		{id = "owo_jungle_mag_connector_f_01", name = "OwO Jungle Connector f 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owomagazineac3" or type, {
+		{id = "owo_jungle_mag_connector_b_empty", name = "OwO Jungle Mag Connector Empty"},
+		{id = "owo_jungle_mag_connector_b_01", name = "OwO Jungle Connector b 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_jungle_mag_01 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "magazine", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_01", owomagazineac2 = "owo_jungle_mag_connector_f_01", owomagazineac3 = "owo_jungle_mag_connector_b_01" }
+		},
+		owo_jungle_mag_empty = {
+			model = "", type = "owomagazineac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_helper_01 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "owomagazineac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_connector_f_empty = {
+			model = "", type = "owomagazineac2", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_connector_f_01 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac2", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_connector_b_empty = {
+			model = "", type = "owomagazineac3", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_connector_b_01 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac3", 
+			mesh_move = false, parent = "receiver"
+		},
+	})
 end
 
 --[[

@@ -22,6 +22,9 @@ mod.wc.attachment[this_variant].bayonet = {}
 mod.wc.attachment[this_variant].bayonet2 = {}
 mod.wc.attachment[this_variant].grip2 = {}
 mod.wc.attachment[this_variant].muzzle2 = {}
+mod.wc.attachment[this_variant].owomagazineac1 = {}
+mod.wc.attachment[this_variant].owomagazineac2 = {}
+mod.wc.attachment[this_variant].owomagazineac3 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -31,6 +34,7 @@ mod.owo_dreg_gunner_barrel(this_variant, "barrel")
 mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
 mod.owo_fin_grip(this_variant, "grip")
 mod.owo_suppressor(this_variant, "muzzle")
+mod.owo_jungle_mag(this_variant, "magazine")
 
 -- ############################################
 -- Inject Fixes
@@ -148,5 +152,20 @@ mod.inject_fixes(this_variant, {
             "autogun_bayonet_03"
         },
         bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85) },
+    },
+
+    -- ######
+	-- Magazine: Jungle Mags
+	-- ######
+    {   dependencies = { "owo_jungle_mag_01"},
+        magazine = { offset = true,     position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        owomagazineac1 = { offset = true, position = vector3_box(-0.065, 0.106, -0.27), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1) },
+        owomagazineac2 = { offset = true, position = vector3_box(-0.03, 0.158, -0.078), rotation = vector3_box(90, 0, 90), scale = vector3_box(1, 1.74, 0.37) },
+        owomagazineac3 = { offset = true, position = vector3_box(-0.03, 0.048, -0.078), rotation = vector3_box(-90, 0, 90), scale = vector3_box(1, 1.74, 0.37) },
+    },
+    {   dependencies = { "!owo_jungle_mag_01"},
+        owomagazineac1 = { hide_mesh = {{"owomagazineac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        owomagazineac2 = { hide_mesh = {{"owomagazineac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        owomagazineac3 = { hide_mesh = {{"owomagazineac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
 })
