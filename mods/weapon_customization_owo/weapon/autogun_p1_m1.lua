@@ -21,6 +21,7 @@ mod.wc.attachment[this_variant].barrelshroudac4 = {}
 mod.wc.attachment[this_variant].bayonet = {}
 mod.wc.attachment[this_variant].bayonet2 = {}
 mod.wc.attachment[this_variant].grip2 = {}
+mod.wc.attachment[this_variant].muzzle2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -29,6 +30,7 @@ mod.wc.attachment[this_variant].grip2 = {}
 mod.owo_dreg_gunner_barrel(this_variant, "barrel")
 mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
 mod.owo_fin_grip(this_variant, "grip")
+mod.owo_suppressor(this_variant, "muzzle")
 
 -- ############################################
 -- Inject Fixes
@@ -230,6 +232,35 @@ mod.inject_fixes(this_variant, {
             hide_mesh = {
                 {"grip2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
             }
+        },
+    },
+
+    -- ######
+	-- Muzzle: SUPPRESSOR
+	-- ######
+    {	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
+        muzzle = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2)},
+    },
+    {	dependencies = {"owo_suppressor_01"},
+        muzzle2 = {offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2)},	
+    },
+    {	dependencies = {"owo_suppressor_02"},
+        muzzle2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2)}
+    },
+    -- Hiding helpers when not equipped
+    {	dependencies = {"!owo_suppressor_01", 
+            "!owo_suppressor_02"
+        },
+        muzzle2 = {hide_mesh = {
+                {"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+            }
+        },
+    },
+    -- the skinny bayonet. sits on muzzle
+    {	dependencies = {"owo_suppressor_01|owo_suppressor_02",
+            "autogun_bayonet_03"
+        },
+        bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85)
         },
     },
 })
