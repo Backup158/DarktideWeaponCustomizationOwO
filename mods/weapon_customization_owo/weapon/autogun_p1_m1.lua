@@ -7,7 +7,7 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
-local this_variant = "autogun_p1_m1" -- Braced/Infantry Autoguns
+local this_variant = "autogun_p1_m1" -- Braced/Infantry/Vigilant Autoguns
 
 -- ############################################
 -- Add Custom Attachments
@@ -37,6 +37,7 @@ mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
 mod.owo_fin_grip(this_variant, "grip")
 mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_jungle_mag(this_variant, "magazine")
+mod.owo_m16a2_barrel(this_variant, "barrel")
 
 -- ############################################
 -- Inject Fixes
@@ -90,17 +91,6 @@ mod.inject_fixes(this_variant, {
         },
         bayonet = {offset = true, position = vector3_box(0, 0.699, -0.095), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 1.7, 3.0) }
     },
-    -- Hiding helpers when not equipped
-    {   dependencies = {"!owo_dreg_barrel_01"},
-        -- outside, one with the front sight
-        barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-        -- bayonet lug
-        barrelshroudac2 = {hide_mesh = {{"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-        -- hand grip for long receiver
-        barrelshroudac3 = {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-        -- hand grip (top)
-        barrelshroudac4 = {hide_mesh = {{"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-    },
     -- ######
     -- DREG GUNNER BAYONET
     -- ######
@@ -116,9 +106,6 @@ mod.inject_fixes(this_variant, {
         bayonet = {offset = true, position = vector3_box(0, 0.8, -0.18), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 0.555) },
         bayonet2 = {offset = true, position = vector3_box(0, 0.8, -0.222), rotation = vector3_box(90, 0, 0), scale = vector3_box(1, 0.67, 0.115) },
     },
-    {   dependencies = {"!owo_dreg_bayonet_01"},
-        bayonet2 = {hide_mesh = { {"bayonet2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
     -- ######
     -- FIN GRIP
     -- ######
@@ -126,9 +113,6 @@ mod.inject_fixes(this_variant, {
         grip = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- fin
         grip2 = { offset = true, position = vector3_box(0, -0.0715, 0.0195), rotation = vector3_box(145, 0, 0), scale = vector3_box(0.35, 0.35, 0.165) },
-    },
-    {   dependencies = {"!owo_fin_grip_01"},
-        grip2 = { hide_mesh = {{"grip2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 
     -- ######
@@ -142,12 +126,6 @@ mod.inject_fixes(this_variant, {
     },
     {	dependencies = {"owo_suppressor_02"},
         muzzle2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2) }
-    },
-    -- Hiding helpers when not equipped
-    {	dependencies = {"!owo_suppressor_01", 
-            "!owo_suppressor_02"
-        },
-        muzzle2 = {hide_mesh = {{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- the skinny bayonet. sits on muzzle
     {	dependencies = {"owo_suppressor_01|owo_suppressor_02",
@@ -181,9 +159,47 @@ mod.inject_fixes(this_variant, {
         -- left
         owomagazineac4 = { offset = true, position = vector3_box(-0.094, 0.0713, -0.171), rotation = vector3_box(120, 90, 90), scale = vector3_box(1, 1.532, 0.37) },
         -- right
-        owomagazineac5 = { offset = true, position = vector3_box(0.03, 0.0647, -0.170), rotation = vector3_box(169, -90, 90), scale = vector3_box(1, 1.532, 0.37) },
+        owomagazineac5 = { offset = true, position = vector3_box(0.03, 0.0647, -0.170), rotation = vector3_box(-90, -90, 90), scale = vector3_box(1, 1.532, 0.37) },
     },
 
+    -- ######
+	-- Barrel: M16a2
+    -- basically the same as syn's aquilon barrel
+	-- ######
+    {   dependencies = { "owo_m16a2_barrel_01"},
+        barrel = { offset = true,     position = vector3_box(0, 0.3, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        flashlight = {offset = false, position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        trinket_hook = {offset = true, position = vector3_box(0, 0.01, -0.05)},
+        barrelshroud = { offset = true, position = vector3_box(0, 0.397, 0.06), rotation = vector3_box(-90, 0, 45), scale = vector3_box(1.9, 2.388, 1.5) },
+        -- Front Post
+        barrelshroudac2 = { offset = true, position = vector3_box(0, 0.705, 0.092), rotation = vector3_box(90, 0, 0), scale = vector3_box(1, 0.27, 0.47) },
+    },
+
+    -- ############
+    -- HIDING HELPERS
+    -- ############
+    -- Muzzles
+    {	dependencies = {"!owo_suppressor_01", 
+            "!owo_suppressor_02"
+        },
+        muzzle2 = {hide_mesh = {{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- Bayonet
+    {   dependencies = {"!owo_dreg_bayonet_01"},
+        bayonet2 = {hide_mesh = { {"bayonet2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
+    -- Barrels
+    {   dependencies = {"!owo_dreg_barrel_01", "!owo_m16a2_barrel_01"},
+        -- outside, one with the front sight
+        barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        -- bayonet lug
+        barrelshroudac2 = {hide_mesh = {{"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+        -- hand grip for long receiver
+        barrelshroudac3 = {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+        -- hand grip (top)
+        barrelshroudac4 = {hide_mesh = {{"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+    },
+    -- Magazines
     {   dependencies = { "!owo_jungle_mag_01",
             "!owo_jungle_mag_02",
             "!owo_jungle_mag_03",
@@ -194,5 +210,9 @@ mod.inject_fixes(this_variant, {
         owomagazineac3 = { hide_mesh = {{"owomagazineac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
         owomagazineac4 = { hide_mesh = {{"owomagazineac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
         owomagazineac5 = { hide_mesh = {{"owomagazineac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
+    -- Grips
+    {   dependencies = {"!owo_fin_grip_01"},
+        grip2 = { hide_mesh = {{"grip2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })

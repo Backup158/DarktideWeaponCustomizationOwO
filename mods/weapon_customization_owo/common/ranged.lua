@@ -29,7 +29,9 @@ mod.wc.barrelacList = {
 
 mod.wc.add_custom_attachments.barrelshroud = "barrelshroudList"
 mod.wc.barrelshroudList = {
-	"owo_dreg_shroud_01"
+	"owo_dreg_shroud_01",
+	"owo_m16a2_empty",
+	"owo_m16a2_barrelshroud_01",
 }
 
 --[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
@@ -41,7 +43,8 @@ mod.wc.barrelshroudacList = {
 mod.wc.add_custom_attachments.barrelshroudac2 = "barrelshroudac2List"
 mod.wc.barrelshroudac2List = {
 	"owo_dreg_shroud_empty",
-	"owo_dreg_shroudac2_01"
+	"owo_dreg_shroudac2_01",
+	"owo_m16a2_barrelshroudac2_01",
 }
 
 mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac3List"
@@ -367,12 +370,12 @@ end
 --		Brauto/Iag
 function mod.owo_dreg_gunner_bayonet(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
-		{id = "owo_dreg_bayonet_empty", name = "OwO Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_bayonet_empty", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner Bayonet"},
 
 	})
 	mod.inject_attachments_owo(variant_id, "bayonet2", {
-		{id = "owo_dreg_bayonet_empty", name = "OwO Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_bayonet_empty", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Shroud", no_randomize = true},
 	})
 
@@ -557,6 +560,7 @@ function mod.owo_scab_gunner_barrel(variant_id, type)
 end
 
 -- Magazine: Jungle Mags
+--		Autoguns
 function mod.owo_jungle_mag(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_jungle_mag_01", name = "OwO Jungle Mag 1"},
@@ -660,6 +664,45 @@ function mod.owo_jungle_mag(variant_id, type)
 	})
 end
 
+-- Barrel: M16a2 barrel
+-- 		Autoguns
+-- 		I stole this from Syn's Aquilon Barrel (barrel and shroud are identical lmao)
+function mod.owo_m16a2_barrel(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+		{id = "owo_m16a2_barrel_01", name = "OwO M16a2 Barrel"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
+		{id = "owo_m16a2_empty", name = "OwO Empty Barrel Shroud"},
+		{id = "owo_m16a2_barrelshroud_01", name = "OwO M16a2 Barrel Shroud"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac2" or type, {
+		{id = "owo_m16a2_empty", name = "OwO Empty Barrel Shroud"},
+		{id = "owo_m16a2_barrelshroudac2_01", name = "OwO M16a2 Barrel Shroudac2"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_m16a2_barrel_01 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_m16a2_barrelshroud_01",
+				barrelshroudac2 = "owo_m16a2_barrelshroudac2_01",
+			}
+		},
+		owo_m16a2_empty = {
+			model = "", type = "barrelshroud", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16a2_barrelshroud_01 = {
+			model = _item_melee.."/grips/hatchet_grip_04", type = "barrelshroud", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16a2_barrelshroudac2_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "barrelshroudac2", 
+			mesh_move = false, parent = "receiver"
+		},
+	})
+
+end
 --[[
 TEMPLATES
 mod.wc.add_custom_attachments.KUMQUAT = "KUMQUATList"
