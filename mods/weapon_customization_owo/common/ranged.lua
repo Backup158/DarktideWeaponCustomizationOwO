@@ -600,19 +600,19 @@ function mod.owo_jungle_mag(variant_id, type)
 		},
 		owo_jungle_mag_connector_f_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac2", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = "magazine"
 		},
 		owo_jungle_mag_connector_b_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac3", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = "magazine"
 		},
 		owo_jungle_mag_connector_l_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac4", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = "magazine"
 		},
 		owo_jungle_mag_connector_r_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac5", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = "magazine"
 		},
 	})
 end
