@@ -68,7 +68,15 @@ mod.wc.barrelshroudac4List = {
 mod.wc.add_custom_attachments.bayonet2 = "bayonet2List"
 mod.wc.bayonet2List = {
 	"owo_dreg_bayonet_empty",
-	"owo_dreg_bayonet_rear_01"
+	"owo_dreg_bayonet_rear_01",
+	"owo_bayonet_empty",
+	"owo_bayonet_m7_helper_01",
+}
+
+mod.wc.add_custom_attachments.bayonet3 = "bayonet3List"
+mod.wc.bayonet3List = {
+	"owo_bayonet_empty",
+	"owo_bayonet_m7_helper_00",
 }
 
 mod.wc.add_custom_attachments.grip2 = "grip2List"
@@ -747,8 +755,40 @@ end
 
 -- Bayonet: M7 Bayonet
 --		Autoguns
-function mod.owo_m7_bayoent(variant_id, type)
-
+function mod.owo_m7_bayonet(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
+		{id = "owo_bayonet_m7_01", name = "OwO M7 Bayonet"},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonet2" or type, {
+		{id = "owo_bayonet_empty", name = "Empty Bayonet"},
+		{id = "owo_bayonet_m7_helper_01", name = "M7 Bayonet Grip"},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonet3" or type, {
+		{id = "owo_bayonet_empty", name = "Empty Bayonet"},
+		{id = "owo_bayonet_m7_helper_00", name = "M7 Bayonet Lug"},
+	})
+	
+	mod.inject_models(variant_id, {
+		owo_bayonet_m7_01 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "bayonet", 
+			mesh_move = false, parent = "barrel",
+			automatic_equip = { bayonet2 = "owo_bayonet_m7_helper_01",
+				bayonet3 = "owo_bayonet_m7_helper_00"
+			}
+		},
+		owo_bayonet_empty = {
+			model = "", type = "bayonet2", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_bayonet_m7_helper_01 = {
+			model = _item_melee.."/grips/combat_knife_grip_03", type = "bayonet2", 
+			mesh_move = false, parent = "bayonet",
+		},
+		owo_bayonet_m7_helper_00 = {
+			model = _item_melee.."/grips/chain_sword_grip_07", type = "bayonet3", 
+			mesh_move = false, parent = "bayonet",
+		},
+	})
 end
 
 
