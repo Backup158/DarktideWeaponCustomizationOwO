@@ -159,7 +159,7 @@ mod.inject_fixes(this_variant, {
     -- ######
 	-- Magazine: Jungle Mags
 	-- ######
-    {   dependencies = { "owo_jungle_mag_01"},
+    {   dependencies = { "owo_jungle_mag_01|owo_jungle_mag_02|owo_jungle_mag_03"},
         magazine = { offset = true,     position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         owomagazineac1 = { offset = true, position = vector3_box(-0.065, 0.106, -0.27), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1) },
         -- front
@@ -171,7 +171,24 @@ mod.inject_fixes(this_variant, {
         -- right
         owomagazineac5 = { offset = true, position = vector3_box(0.03, 0.056, -0.15), rotation = vector3_box(-90, -90, 90), scale = vector3_box(1, 1.532, 0.37) },
     },
-    {   dependencies = { "!owo_jungle_mag_01"},
+    {   dependencies = { "owo_jungle_mag_04"},
+        magazine = { offset = true,     position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        owomagazineac1 = { offset = true, position = vector3_box(-0.065, 0.153, -0.309), rotation = vector3_box(-170, 0, 0), scale = vector3_box(1, 1, 1) },
+        -- front
+        owomagazineac2 = { offset = true, position = vector3_box(-0.032, 0.117, -0.149), rotation = vector3_box(108, 0, 90), scale = vector3_box(1, 1.74, 0.37) },
+        -- back
+        owomagazineac3 = { offset = true, position = vector3_box(-0.032, 0.016, -0.196), rotation = vector3_box(-67, 0, 90), scale = vector3_box(1, 1.74, 0.37) },
+        -- left
+        owomagazineac4 = { offset = true, position = vector3_box(-0.094, 0.0713, -0.171), rotation = vector3_box(120, 90, 90), scale = vector3_box(1, 1.532, 0.37) },
+        -- right
+        owomagazineac5 = { offset = true, position = vector3_box(0.03, 0.0647, -0.170), rotation = vector3_box(169, -90, 90), scale = vector3_box(1, 1.532, 0.37) },
+    },
+
+    {   dependencies = { "!owo_jungle_mag_01",
+            "!owo_jungle_mag_02",
+            "!owo_jungle_mag_03",
+            "!owo_jungle_mag_04",
+        },
         owomagazineac1 = { hide_mesh = {{"owomagazineac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
         owomagazineac2 = { hide_mesh = {{"owomagazineac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
         owomagazineac3 = { hide_mesh = {{"owomagazineac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },

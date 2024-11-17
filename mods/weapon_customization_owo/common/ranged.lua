@@ -560,10 +560,16 @@ end
 function mod.owo_jungle_mag(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_jungle_mag_01", name = "OwO Jungle Mag 1"},
+		{id = "owo_jungle_mag_02", name = "OwO Jungle Mag 2"},
+		{id = "owo_jungle_mag_03", name = "OwO Jungle Mag 3"},
+		{id = "owo_jungle_mag_04", name = "OwO Jungle Mag 4"},
 	})
 	mod.inject_attachments_owo(variant_id, "owomagazineac1" or type, {
 		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag Empty"},
 		{id = "owo_jungle_mag_helper_01", name = "OwO Jungle Mag'vesa 1"},
+		{id = "owo_jungle_mag_helper_02", name = "OwO Jungle Mag'vesa 2"},
+		{id = "owo_jungle_mag_helper_03", name = "OwO Jungle Mag'vesa 3"},
+		{id = "owo_jungle_mag_helper_04", name = "OwO Jungle Mag'vesa 4"},
 	})
 	mod.inject_attachments_owo(variant_id, "owomagazineac2" or type, {
 		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag Empty"},
@@ -583,6 +589,7 @@ function mod.owo_jungle_mag(variant_id, type)
 	})
 
 	mod.inject_models(variant_id, {
+		-- Main magazine
 		owo_jungle_mag_01 = {
 			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "magazine", 
 			mesh_move = false, parent = "receiver",
@@ -590,14 +597,50 @@ function mod.owo_jungle_mag(variant_id, type)
 				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
 			}
 		},
+		owo_jungle_mag_02 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_02", type = "magazine", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_02", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
+				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
+			}
+		},
+		owo_jungle_mag_03 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_03", type = "magazine", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_03", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
+				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
+			}
+		},
+		owo_jungle_mag_04 = {
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_04", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
+				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
+			}
+		},
+		-- Empty
 		owo_jungle_mag_empty = {
 			model = "", type = "owomagazineac1", 
 			mesh_move = false, parent = "receiver"
 		},
+		-- Backup magazine
 		owo_jungle_mag_helper_01 = {
 			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "owomagazineac1", 
 			mesh_move = false, parent = "receiver"
 		},
+		owo_jungle_mag_helper_02 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_02", type = "owomagazineac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_helper_03 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_03", type = "owomagazineac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_helper_04 = {
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "owomagazineac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- "tape"
 		owo_jungle_mag_connector_f_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac2", 
 			mesh_move = false, parent = "magazine"
