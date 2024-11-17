@@ -30,8 +30,11 @@ mod.wc.barrelacList = {
 mod.wc.add_custom_attachments.barrelshroud = "barrelshroudList"
 mod.wc.barrelshroudList = {
 	"owo_dreg_shroud_01",
-	"owo_m16a2_empty",
-	"owo_m16a2_barrelshroud_01",
+	"owo_m16_empty",
+	"owo_m16_barrelshroud_a1",
+	"owo_m16_barrelshroud_a1_02",
+	"owo_m16_barrelshroud_a2",
+
 }
 
 --[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
@@ -44,13 +47,16 @@ mod.wc.add_custom_attachments.barrelshroudac2 = "barrelshroudac2List"
 mod.wc.barrelshroudac2List = {
 	"owo_dreg_shroud_empty",
 	"owo_dreg_shroudac2_01",
-	"owo_m16a2_barrelshroudac2_01",
+	"owo_m16_empty",
+	"owo_m16_barrelshroudac2_01",
 }
 
 mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac3List"
 mod.wc.barrelshroudac3List = {
 	"owo_dreg_shroud_empty",
-	"owo_dreg_shroudac3_01"
+	"owo_dreg_shroudac3_01",
+	"owo_m16_empty",
+	"owo_m16_barrelshroudac3_a1",
 }
 
 mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac4List"
@@ -664,45 +670,89 @@ function mod.owo_jungle_mag(variant_id, type)
 	})
 end
 
--- Barrel: M16a2 barrel
+-- Barrel: M16 barrels
 -- 		Autoguns
 -- 		I stole this from Syn's Aquilon Barrel (barrel and shroud are identical lmao)
-function mod.owo_m16a2_barrel(variant_id, type)
+function mod.owo_m16_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		{id = "owo_m16a2_barrel_01", name = "OwO M16a2 Barrel"},
+		{id = "owo_m16_barrel_a1", name = "OwO M16a1 Barrel 1"},
+		{id = "owo_m16_barrel_a1_02", name = "OwO M16a1 Barrel 2"},
+		{id = "owo_m16_barrel_a2", name = "OwO M16a2 Barrel 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
-		{id = "owo_m16a2_empty", name = "OwO Empty Barrel Shroud"},
-		{id = "owo_m16a2_barrelshroud_01", name = "OwO M16a2 Barrel Shroud"},
+		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud"},
+		{id = "owo_m16_barrelshroud_a1", name = "OwO M16a1 Barrel Shroud"},
+		{id = "owo_m16_barrelshroud_a1_02", name = "OwO M16a2 Barrel Shroud"},
+		{id = "owo_m16_barrelshroud_a2", name = "OwO M16a2 Barrel Shroud"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac2" or type, {
-		{id = "owo_m16a2_empty", name = "OwO Empty Barrel Shroud"},
-		{id = "owo_m16a2_barrelshroudac2_01", name = "OwO M16a2 Barrel Shroudac2"},
+		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud"},
+		{id = "owo_m16_barrelshroudac2_01", name = "OwO M16 Front Sight shroudac"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac3" or type, {
+		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud"},
+		{id = "owo_m16_barrelshroudac3_a1", name = "OwO M16a1 Barrel Shroudac3"},
 	})
 
 	mod.inject_models(variant_id, {
-		owo_m16a2_barrel_01 = {
+		owo_m16_barrel_a1 = {
 			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelshroud = "owo_m16a2_barrelshroud_01",
-				barrelshroudac2 = "owo_m16a2_barrelshroudac2_01",
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+				barrelshroudac3 = "owo_m16_barrelshroudac3_a1"
 			}
 		},
-		owo_m16a2_empty = {
+		owo_m16_barrel_a2 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+			}
+		},
+		owo_m16_barrel_a1_02 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+			}
+		},
+		owo_m16_empty = {
 			model = "", type = "barrelshroud", 
 			mesh_move = false, parent = "receiver"
 		},
-		owo_m16a2_barrelshroud_01 = {
+		owo_m16_barrelshroud_a1 = {
+			model = _item_melee.."/grips/hatchet_grip_03", type = "barrelshroud", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_barrelshroud_a2 = {
 			model = _item_melee.."/grips/hatchet_grip_04", type = "barrelshroud", 
 			mesh_move = false, parent = "receiver"
 		},
-		owo_m16a2_barrelshroudac2_01 = {
+		owo_m16_barrelshroud_a1_02 = {
+			model = _item_melee.."/grips/hatchet_grip_05", type = "barrelshroud", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_barrelshroudac2_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "barrelshroudac2", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_barrelshroudac3_a1 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "barrelshroudac2", 
 			mesh_move = false, parent = "receiver"
 		},
 	})
 
 end
+
+-- Bayonet: M7 Bayonet
+--		Autoguns
+function mod.owo_m7_bayoent(variant_id, type)
+
+end
+
+
+
 --[[
 TEMPLATES
 mod.wc.add_custom_attachments.KUMQUAT = "KUMQUATList"
