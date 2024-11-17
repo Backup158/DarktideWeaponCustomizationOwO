@@ -25,6 +25,8 @@ mod.wc.attachment[this_variant].muzzle2 = {}
 mod.wc.attachment[this_variant].owomagazineac1 = {}
 mod.wc.attachment[this_variant].owomagazineac2 = {}
 mod.wc.attachment[this_variant].owomagazineac3 = {}
+mod.wc.attachment[this_variant].owomagazineac4 = {}
+mod.wc.attachment[this_variant].owomagazineac5 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -162,10 +164,14 @@ mod.inject_fixes(this_variant, {
         owomagazineac1 = { offset = true, position = vector3_box(-0.065, 0.106, -0.27), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1) },
         owomagazineac2 = { offset = true, position = vector3_box(-0.03, 0.158, -0.078), rotation = vector3_box(90, 0, 90), scale = vector3_box(1, 1.74, 0.37) },
         owomagazineac3 = { offset = true, position = vector3_box(-0.03, 0.048, -0.078), rotation = vector3_box(-90, 0, 90), scale = vector3_box(1, 1.74, 0.37) },
+        owomagazineac4 = { offset = true, position = vector3_box(-0.095, 0.105, -0.078), rotation = vector3_box(90, 90, 90), scale = vector3_box(1, 1.74, 0.37) },
+        owomagazineac5 = { offset = true, position = vector3_box(0.031, 0.105, -0.078), rotation = vector3_box(-90, -90, 90), scale = vector3_box(1, 1.74, 0.37) },
     },
     {   dependencies = { "!owo_jungle_mag_01"},
         owomagazineac1 = { hide_mesh = {{"owomagazineac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
         owomagazineac2 = { hide_mesh = {{"owomagazineac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
         owomagazineac3 = { hide_mesh = {{"owomagazineac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        owomagazineac4 = { hide_mesh = {{"owomagazineac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        owomagazineac5 = { hide_mesh = {{"owomagazineac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
 })

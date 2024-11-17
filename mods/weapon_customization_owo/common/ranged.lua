@@ -76,14 +76,26 @@ mod.wc.owomagazineac1List = {
 
 mod.wc.add_custom_attachments.owomagazineac2 = "owomagazineac2List"
 mod.wc.owomagazineac2List = {
-	"owo_jungle_mag_connector_f_empty",
+	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_f_01"
 }
 
 mod.wc.add_custom_attachments.owomagazineac3 = "owomagazineac3List"
 mod.wc.owomagazineac3List = {
-	"owo_jungle_mag_connector_b_empty",
+	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_b_01"
+}
+
+mod.wc.add_custom_attachments.owomagazineac4 = "owomagazineac4List"
+mod.wc.owomagazineac4List = {
+	"owo_jungle_mag_empty",
+	"owo_jungle_mag_connector_l_01"
+}
+
+mod.wc.add_custom_attachments.owomagazineac5 = "owomagazineac5List"
+mod.wc.owomagazineac5List = {
+	"owo_jungle_mag_empty",
+	"owo_jungle_mag_connector_r_01"
 }
 
 -- ############################################
@@ -550,23 +562,33 @@ function mod.owo_jungle_mag(variant_id, type)
 		{id = "owo_jungle_mag_01", name = "OwO Jungle Mag 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "owomagazineac1" or type, {
-		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag'vesa Empty"},
+		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag Empty"},
 		{id = "owo_jungle_mag_helper_01", name = "OwO Jungle Mag'vesa 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "owomagazineac2" or type, {
-		{id = "owo_jungle_mag_connector_f_empty", name = "OwO Jungle Mag Connector Empty"},
+		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag Empty"},
 		{id = "owo_jungle_mag_connector_f_01", name = "OwO Jungle Connector f 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "owomagazineac3" or type, {
-		{id = "owo_jungle_mag_connector_b_empty", name = "OwO Jungle Mag Connector Empty"},
+		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag Empty"},
 		{id = "owo_jungle_mag_connector_b_01", name = "OwO Jungle Connector b 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owomagazineac4" or type, {
+		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag Empty"},
+		{id = "owo_jungle_mag_connector_l_01", name = "OwO Jungle Connector l 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owomagazineac5" or type, {
+		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag Empty"},
+		{id = "owo_jungle_mag_connector_r_01", name = "OwO Jungle Connector r 1"},
 	})
 
 	mod.inject_models(variant_id, {
 		owo_jungle_mag_01 = {
 			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "magazine", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_01", owomagazineac2 = "owo_jungle_mag_connector_f_01", owomagazineac3 = "owo_jungle_mag_connector_b_01" }
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_01", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
+				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
+			}
 		},
 		owo_jungle_mag_empty = {
 			model = "", type = "owomagazineac1", 
@@ -576,20 +598,20 @@ function mod.owo_jungle_mag(variant_id, type)
 			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "owomagazineac1", 
 			mesh_move = false, parent = "receiver"
 		},
-		owo_jungle_mag_connector_f_empty = {
-			model = "", type = "owomagazineac2", 
-			mesh_move = false, parent = "receiver"
-		},
 		owo_jungle_mag_connector_f_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac2", 
 			mesh_move = false, parent = "receiver"
 		},
-		owo_jungle_mag_connector_b_empty = {
-			model = "", type = "owomagazineac3", 
-			mesh_move = false, parent = "receiver"
-		},
 		owo_jungle_mag_connector_b_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac3", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_connector_l_01 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac4", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_jungle_mag_connector_r_01 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "owomagazineac5", 
 			mesh_move = false, parent = "receiver"
 		},
 	})
