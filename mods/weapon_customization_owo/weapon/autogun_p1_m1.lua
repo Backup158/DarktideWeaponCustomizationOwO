@@ -341,10 +341,10 @@ mod.inject_fixes(this_variant, {
         no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
         sight =             { offset = true, position  = vector3_box(0, 0, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight2 =            { offset = true, position  = vector3_box(0, 0.012, 0.014), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.39, 0.222) },
-        sight3 =            { offset = true, position  = vector3_box(0, 0.012, 0.014), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.95, 0.39, 0.222) },
-        sight4 =            { offset = true, position  = vector3_box(0, 0.062, 0.009), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.204) },
-        sight5 =            { offset = true, position  = vector3_box(0, 0.02, 0.014), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.45, 0.28, 0.26) },
+        sight2 =            { offset = true, position  = vector3_box(0.002, 0.012, 0.014), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.39, 0.222) },
+        sight3 =            { offset = true, position  = vector3_box(-0.002, 0.012, 0.014), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.95, 0.39, 0.222) },
+        sight4 =            { offset = true, position  = vector3_box(0, 0.062, 0.014), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.204) },
+        sight5 =            { offset = true, position  = vector3_box(-0.003, 0.02, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.45, 0.28, 0.26) },
     },
 
     -- ####################################################################################
