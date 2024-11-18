@@ -340,7 +340,7 @@ mod.inject_fixes(this_variant, {
     -- ######
     -- Sight: EOTech
     -- ######
-    {   dependencies = { "owo_holosight_01|owo_holosight_02" },
+    {   dependencies = { "owo_holosight_01|owo_holosight_02|owo_holosight_03" },
         no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
         owosightac1 =       { offset = true, position  = vector3_box(0.004, 0.012, 0.014), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.39, 0.222) },
@@ -356,6 +356,12 @@ mod.inject_fixes(this_variant, {
         owosight2 =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
         owosight2ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         owosight2ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.03), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+    },
+    {   dependencies = { "owo_holosight_03" },
+        sight =             { offset = true, position  = vector3_box(0, 0.05, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        owosight2 =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        owosight2ac1 =      { offset = true, position  = vector3_box(0.042, -0.15, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        owosight2ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
 
     -- ####################################################################################
@@ -398,13 +404,13 @@ mod.inject_fixes(this_variant, {
         grip2 = { hide_mesh = {{"grip2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Sights
-    {   dependencies = {"!owo_holosight_01", "!owo_holosight_02"},
+    {   dependencies = {"!owo_holosight_01", "!owo_holosight_02", "!owo_holosight_03"},
         owosightac1 = { hide_mesh = {{"owosightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosightac2 = { hide_mesh = {{"owosightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosightac3 = { hide_mesh = {{"owosightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosightac4 = { hide_mesh = {{"owosightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = {"!owo_holosight_02"},
+    {   dependencies = {"!owo_holosight_02", "!owo_holosight_03"},
         owosight2 = { hide_mesh = {{"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosight2ac1 = { hide_mesh = {{"owosight2ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosight2ac2 = { hide_mesh = {{"owosight2ac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
