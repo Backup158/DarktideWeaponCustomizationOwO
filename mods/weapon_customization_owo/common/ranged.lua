@@ -581,6 +581,10 @@ function mod.owo_jungle_mag(variant_id, type)
 		{id = "owo_jungle_mag_02", name = "OwO Jungle Mag 2"},
 		{id = "owo_jungle_mag_03", name = "OwO Jungle Mag 3"},
 		{id = "owo_jungle_mag_04", name = "OwO Jungle Mag 4"},
+		{id = "owo_jungle_mag_01_flip", name = "OwO Jungle Mag 1 (Right)"},
+		{id = "owo_jungle_mag_02_flip", name = "OwO Jungle Mag 2 (Right)"},
+		{id = "owo_jungle_mag_03_flip", name = "OwO Jungle Mag 3 (Right)"},
+		{id = "owo_jungle_mag_04_flip", name = "OwO Jungle Mag 4 (Right)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owomagazineac1" or type, {
 		{id = "owo_jungle_mag_empty", name = "OwO Jungle Mag Empty"},
@@ -630,6 +634,34 @@ function mod.owo_jungle_mag(variant_id, type)
 			}
 		},
 		owo_jungle_mag_04 = {
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_04", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
+				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
+			}
+		},
+		owo_jungle_mag_01_flip = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "magazine", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_01", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
+				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
+			}
+		},
+		owo_jungle_mag_02_flip = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_02", type = "magazine", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_02", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
+				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
+			}
+		},
+		owo_jungle_mag_03_flip = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_03", type = "magazine", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_03", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
+				owomagazineac3 = "owo_jungle_mag_connector_b_01", owomagazineac4 = "owo_jungle_mag_connector_l_01", owomagazineac5 = "owo_jungle_mag_connector_r_01",
+			}
+		},
+		owo_jungle_mag_04_flip = {
 			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { owomagazineac1 = "owo_jungle_mag_helper_04", owomagazineac2 = "owo_jungle_mag_connector_f_01", 
@@ -784,6 +816,7 @@ function mod.owo_m7_bayonet(variant_id, type)
 			model = _item_melee.."/grips/combat_knife_grip_03", type = "bayonet2", 
 			mesh_move = false, parent = "bayonet",
 		},
+		-- Bayonet lug
 		owo_bayonet_m7_helper_00 = {
 			model = _item_melee.."/grips/chain_sword_grip_07", type = "bayonet3", 
 			mesh_move = false, parent = "bayonet",
@@ -791,7 +824,8 @@ function mod.owo_m7_bayonet(variant_id, type)
 	})
 end
 
-
+-- Sight: EOTech
+--		Autoguns
 
 --[[
 TEMPLATES
