@@ -867,9 +867,15 @@ end
 --		Autoguns
 function mod.owo_holosight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
-		{id = "owo_holosight_01", name = "OwO EOTech"},
-		{id = "owo_holosight_02", name = "OwO EOTech + Magnifier"},
-		{id = "owo_holosight_03", name = "OwO EOTech + Magnifier (Side)"},
+		{id = "owo_holosight_03_01", name = "OwO EOTech"},
+		{id = "owo_holosight_03_02", name = "OwO EOTech + Magnifier"},
+		{id = "owo_holosight_03_03", name = "OwO EOTech + Magnifier (Side)"},
+		{id = "owo_holosight_01_01", name = "OwO EOTech (Fat)"},
+		{id = "owo_holosight_01_02", name = "OwO EOTech (Fat) + Magn"},
+		{id = "owo_holosight_01_03", name = "OwO EOTech (Fat) + Magn (Side)"},
+		{id = "owo_holosight_02_01", name = "OwO EOTech (Tall)"},
+		{id = "owo_holosight_02_02", name = "OwO EOTech (Tall) + Magn"},
+		{id = "owo_holosight_02_03", name = "OwO EOTech (Tall) + Magn (Side)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_holosight_empty", name = "Empty Sight"},
@@ -901,7 +907,59 @@ function mod.owo_holosight(variant_id, type)
 	})
 
 	mod.inject_models(variant_id, {
-		owo_holosight_01 = {
+		owo_holosight_01_01 = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+			}
+		},
+		owo_holosight_01_02 = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
+			}
+		},
+		owo_holosight_01_03 = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
+			}
+		},
+		owo_holosight_02_01 = {
+			model = _item_ranged.."/sights/reflex_sight_02", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+			}
+		},
+		owo_holosight_02_02 = {
+			model = _item_ranged.."/sights/reflex_sight_02", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
+			}
+		},
+		owo_holosight_02_03 = {
+			model = _item_ranged.."/sights/reflex_sight_02", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
+			}
+		},
+		owo_holosight_03_01 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
@@ -909,7 +967,7 @@ function mod.owo_holosight(variant_id, type)
 				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
 			}
 		},
-		owo_holosight_02 = {
+		owo_holosight_03_02 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
@@ -918,7 +976,7 @@ function mod.owo_holosight(variant_id, type)
 				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
 			}
 		},
-		owo_holosight_03 = {
+		owo_holosight_03_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
