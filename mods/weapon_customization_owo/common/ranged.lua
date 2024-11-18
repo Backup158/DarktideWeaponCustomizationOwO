@@ -127,7 +127,17 @@ mod.wc.owosightac4List = {
 	"owo_holosight_helper_04"
 }
 
-mod.wc.sniper_zoom_levels.owo_holosight_02 = 15
+--[[
+mod.table_append(mod.wc.sights, {
+	"owo_holosight_01",
+	"owo_holosight_02",
+	"owo_holosight_03",
+})
+mod.table_append(mod.wc.scopes, {
+	"lasgun_rifle_elysian_muzzle_01",
+})
+mod.wc.sniper_zoom_levels.lasgun_rifle_elysian_muzzle_01 = 15
+]]
 mod.wc.add_custom_attachments.owosight2 = "owosight2List"
 mod.wc.owosight2List = {
 	"owo_holosight_empty",
