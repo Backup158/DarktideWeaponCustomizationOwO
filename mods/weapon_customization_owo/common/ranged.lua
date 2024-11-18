@@ -36,13 +36,11 @@ mod.wc.barrelshroudList = {
 	"owo_m16_barrelshroud_a2",
 
 }
-
 --[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
 mod.wc.barrelshroudacList = {
 	"owo_dreg_shroud_empty",
 	"owo_dreg_shroudac_01"
 }]]
-
 mod.wc.add_custom_attachments.barrelshroudac2 = "barrelshroudac2List"
 mod.wc.barrelshroudac2List = {
 	"owo_dreg_shroud_empty",
@@ -50,7 +48,6 @@ mod.wc.barrelshroudac2List = {
 	"owo_m16_empty",
 	"owo_m16_barrelshroudac2_01",
 }
-
 mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac3List"
 mod.wc.barrelshroudac3List = {
 	"owo_dreg_shroud_empty",
@@ -58,7 +55,6 @@ mod.wc.barrelshroudac3List = {
 	"owo_m16_empty",
 	"owo_m16_barrelshroudac3_a1",
 }
-
 mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac4List"
 mod.wc.barrelshroudac4List = {
 	"owo_dreg_shroud_empty",
@@ -72,7 +68,6 @@ mod.wc.bayonet2List = {
 	"owo_bayonet_empty",
 	"owo_bayonet_m7_helper_01",
 }
-
 mod.wc.add_custom_attachments.bayonet3 = "bayonet3List"
 mod.wc.bayonet3List = {
 	"owo_bayonet_empty",
@@ -90,25 +85,21 @@ mod.wc.owomagazineac1List = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_helper_01"
 }
-
 mod.wc.add_custom_attachments.owomagazineac2 = "owomagazineac2List"
 mod.wc.owomagazineac2List = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_f_01"
 }
-
 mod.wc.add_custom_attachments.owomagazineac3 = "owomagazineac3List"
 mod.wc.owomagazineac3List = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_b_01"
 }
-
 mod.wc.add_custom_attachments.owomagazineac4 = "owomagazineac4List"
 mod.wc.owomagazineac4List = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_l_01"
 }
-
 mod.wc.add_custom_attachments.owomagazineac5 = "owomagazineac5List"
 mod.wc.owomagazineac5List = {
 	"owo_jungle_mag_empty",
@@ -120,37 +111,33 @@ mod.wc.owosightac1List = {
 	"owo_holosight_empty",
 	"owo_holosight_helper_01"
 }
-
 mod.wc.add_custom_attachments.owosightac2 = "owosightac2List"
 mod.wc.owosightac2List = {
 	"owo_holosight_empty",
 	"owo_holosight_helper_02"
 }
-
 mod.wc.add_custom_attachments.owosightac3 = "owosightac3List"
 mod.wc.owosightac3List = {
 	"owo_holosight_empty",
 	"owo_holosight_helper_03"
 }
-
 mod.wc.add_custom_attachments.owosightac4 = "owosightac4List"
 mod.wc.owosightac4List = {
 	"owo_holosight_empty",
 	"owo_holosight_helper_04"
 }
 
+mod.wc.sniper_zoom_levels.owo_holosight_02 = 15
 mod.wc.add_custom_attachments.owosight2 = "owosight2List"
 mod.wc.owosight2List = {
 	"owo_holosight_empty",
 	"owo_holosight_sight2_01"
 }
-
 mod.wc.add_custom_attachments.owosight2ac1 = "owosight2ac1List"
 mod.wc.owosight2ac1List = {
 	"owo_holosight_empty",
 	"owo_holosight_sight2_helper_01"
 }
-
 mod.wc.add_custom_attachments.owosight2ac2 = "owosight2ac2List"
 mod.wc.owosight2List = {
 	"owo_holosight_empty",
