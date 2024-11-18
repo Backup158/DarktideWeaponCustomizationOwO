@@ -115,28 +115,46 @@ mod.wc.owomagazineac5List = {
 	"owo_jungle_mag_connector_r_01"
 }
 
-mod.wc.add_custom_attachments.sight2 = "sight2List"
-mod.wc.sight2List = {
+mod.wc.add_custom_attachments.owosightac1 = "owosightac1List"
+mod.wc.owosightac1List = {
 	"owo_holosight_empty",
 	"owo_holosight_helper_01"
 }
 
-mod.wc.add_custom_attachments.sight3 = "sight3List"
-mod.wc.sight3List = {
+mod.wc.add_custom_attachments.owosightac2 = "owosightac2List"
+mod.wc.owosightac2List = {
 	"owo_holosight_empty",
 	"owo_holosight_helper_02"
 }
 
-mod.wc.add_custom_attachments.sight4 = "sight4List"
-mod.wc.sight4List = {
+mod.wc.add_custom_attachments.owosightac3 = "owosightac3List"
+mod.wc.owosightac3List = {
 	"owo_holosight_empty",
 	"owo_holosight_helper_03"
 }
 
-mod.wc.add_custom_attachments.sight5 = "sight5List"
-mod.wc.sight5List = {
+mod.wc.add_custom_attachments.owosightac4 = "owosightac4List"
+mod.wc.owosightac4List = {
 	"owo_holosight_empty",
 	"owo_holosight_helper_04"
+}
+
+mod.wc.add_custom_attachments.owosight2 = "owosight2List"
+mod.wc.owosight2List = {
+	"owo_holosight_empty",
+	"owo_holosight_sight2_01"
+}
+
+mod.wc.add_custom_attachments.owosight2ac1 = "owosight2ac1List"
+mod.wc.owosight2ac1List = {
+	"owo_holosight_empty",
+	"owo_holosight_sight2_helper_01"
+}
+
+mod.wc.add_custom_attachments.owosight2ac2 = "owosight2ac2List"
+mod.wc.owosight2List = {
+	"owo_holosight_empty",
+	"owo_holosight_sight2_helper_02"
 }
 
 -- ############################################
@@ -853,22 +871,35 @@ end
 function mod.owo_holosight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_holosight_01", name = "OwO EOTech"},
+		{id = "owo_holosight_02", name = "OwO EOTech + Magnifier"},
 	})
-	mod.inject_attachments_owo(variant_id, "sight2" or type, {
+	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_holosight_empty", name = "Empty Sight"},
 		{id = "owo_holosight_helper_01", name = "OwO EOTech'vesa sight container 1"},
 	})
-	mod.inject_attachments_owo(variant_id, "sight3" or type, {
+	mod.inject_attachments_owo(variant_id, "owosightac2" or type, {
 		{id = "owo_holosight_empty", name = "Empty Sight"},
 		{id = "owo_holosight_helper_02", name = "OwO EOTech'vesa sight container 2"},
 	})
-	mod.inject_attachments_owo(variant_id, "sight4" or type, {
+	mod.inject_attachments_owo(variant_id, "owosightac3" or type, {
 		{id = "owo_holosight_empty", name = "Empty Sight"},
 		{id = "owo_holosight_helper_03", name = "OwO EOTech'vesa base bulge"},
 	})
-	mod.inject_attachments_owo(variant_id, "sight5" or type, {
+	mod.inject_attachments_owo(variant_id, "owosightac4" or type, {
 		{id = "owo_holosight_empty", name = "Empty Sight"},
 		{id = "owo_holosight_helper_04", name = "OwO EOTech'vesa base"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosight2" or type, {
+		{id = "owo_holosight_empty", name = "Empty Sight"},
+		{id = "owo_holosight_sight2_01", name = "OwO EOTech Magnifier Stand"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosight2ac1" or type, {
+		{id = "owo_holosight_empty", name = "Empty Sight"},
+		{id = "owo_holosight_sight2_helper_01", name = "OwO EOTech Magnifier 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosight2ac2" or type, {
+		{id = "owo_holosight_empty", name = "Empty Sight"},
+		{id = "owo_holosight_sight2_helper_02", name = "OwO EOTech Magnifier 2"},
 	})
 
 	mod.inject_models(variant_id, {
@@ -876,29 +907,49 @@ function mod.owo_holosight(variant_id, type)
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
-				sight2 = "owo_holosight_helper_01", sight3 = "owo_holosight_helper_02", 
-				sight4 = "owo_holosight_helper_03", sight5 = "owo_holosight_helper_04",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+			}
+		},
+		owo_holosight_02 = {
+			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
 			}
 		},
 		owo_holosight_empty = {
-			model = "", type = "sight2", 
+			model = "", type = "owosightac1", 
 			mesh_move = false, parent = "sight"
 		},
 		owo_holosight_helper_01 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight2", 
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "owosightac1", 
 			mesh_move = false, parent = "sight"
 		},
 		owo_holosight_helper_02 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight3", 
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "owosightac2", 
 			mesh_move = false, parent = "sight"
 		},
 		owo_holosight_helper_03 = {
-			model = _item_melee.."/grips/hatchet_grip_03", type = "sight4", 
+			model = _item_melee.."/grips/hatchet_grip_03", type = "owosightac3", 
 			mesh_move = false, parent = "sight"
 		},
 		owo_holosight_helper_04 = {
-			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sight5", -- WHY WONT THITS SHSOTU FHUKCU
-			--model = _item_melee.."/grips/chain_sword_grip_06", type = "sight5", 
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "owosightac4",
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_sight2_01 = {
+			model = _item_melee.."/grips/2h_chain_sword_grip_01", type = "owosight2",
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_sight2_helper_01 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "owosight2ac1",
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_sight2_helper_02 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "owosight2ac2",
 			mesh_move = false, parent = "sight"
 		},
 	})
