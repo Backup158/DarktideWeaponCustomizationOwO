@@ -28,6 +28,10 @@ mod.wc.attachment[this_variant].owomagazineac2 = {}
 mod.wc.attachment[this_variant].owomagazineac3 = {}
 mod.wc.attachment[this_variant].owomagazineac4 = {}
 mod.wc.attachment[this_variant].owomagazineac5 = {}
+mod.wc.attachment[this_variant].sight2 = {}
+mod.wc.attachment[this_variant].sight3 = {}
+mod.wc.attachment[this_variant].sight4 = {}
+mod.wc.attachment[this_variant].sight5 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -40,6 +44,7 @@ mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_jungle_mag(this_variant, "magazine")
 mod.owo_m16_barrel(this_variant, "barrel")
 mod.owo_m7_bayonet(this_variant, "bayonet")
+mod.owo_holosight(this_variant, "sight")
 
 -- ############################################
 -- Inject Fixes
@@ -301,14 +306,14 @@ mod.inject_fixes(this_variant, {
     {   dependencies = { "owo_m16_barrel_a1_02",
             "receiver_02|receiver_04|receiver_05|receiver_09"
         },
-        flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        barrelshroud = { offset = true, position = vector3_box(0, 0.375, 0.074), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.9, 2.388, 1.07) },
+        flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1)},
+        barrelshroud =      { offset = true,    position = vector3_box(0, 0.375, 0.074),    rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.9, 2.388, 1.07) },
     },
     {   dependencies = { "owo_m16_barrel_a2",
             "receiver_02|receiver_04|receiver_05|receiver_09"
         },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        barrelshroud = { offset = true, position = vector3_box(0, 0.395, 0.074), rotation = vector3_box(-90, 0, 0), scale = vector3_box(2.188, 2.388, 1.5) },
+        barrelshroud =      { offset = true,    position = vector3_box(0, 0.395, 0.074),    rotation = vector3_box(-90, 0, 0), scale = vector3_box(2.188, 2.388, 1.5) },
     },
     
     -- ######
@@ -329,13 +334,24 @@ mod.inject_fixes(this_variant, {
         bayonet3 = {offset = true, position = vector3_box(0, -0.012, -0.002), rotation = vector3_box(0, 90, 180), scale = vector3_box(0.25, 0.825, 0.25) },
     },
 
+    -- ######
+    -- Sight: EOTech
+    -- ######
+    {   dependencies = { "owo_holosight_01" },
+        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+        sight =             { offset = true, position  = vector3_box(0, 0, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        sight2 =            { offset = true, position  = vector3_box(0, 0.012, 0.014), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.39, 0.222) },
+        sight3 =            { offset = true, position  = vector3_box(0, 0.012, 0.014), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.95, 0.39, 0.222) },
+        sight4 =            { offset = true, position  = vector3_box(0, 0.062, 0.009), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.204) },
+        sight5 =            { offset = true, position  = vector3_box(0, 0.02, 0.014), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.45, 0.28, 0.26) },
+    },
+
     -- ####################################################################################
     -- HIDING HELPERS
     -- ####################################################################################
     -- Muzzles
-    {	dependencies = {"!owo_suppressor_01", 
-            "!owo_suppressor_02"
-        },
+    {	dependencies = {"!owo_suppressor_01", "!owo_suppressor_02"},
         muzzle2 = {hide_mesh = {{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Bayonet
@@ -344,6 +360,12 @@ mod.inject_fixes(this_variant, {
         bayonet3 = {hide_mesh = { {"bayonet3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     -- Barrels
+    -- Barrels
+    {   dependencies = {"!owo_dreg_barrel_01", "!owo_m16_barrel_a1", "!owo_m16_barrel_a1_02", "owo_m16_barrel_a2"},
+        barrelshroudac2 = {hide_mesh = {{"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+        barrelshroudac3 = {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+        barrelshroudac4 = {hide_mesh = {{"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+    },
     {   dependencies = {"!owo_dreg_barrel_01", "!owo_m16_barrel_a1", "!owo_m16_barrel_a1_02", "!owo_m16_barrel_a2"},
         barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         barrelshroudac2 = {hide_mesh = {{"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
@@ -363,5 +385,12 @@ mod.inject_fixes(this_variant, {
     -- Grips
     {   dependencies = {"!owo_fin_grip_01"},
         grip2 = { hide_mesh = {{"grip2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- Sights
+    {   dependencies = {"!owo_holosight_01"},
+        sight2 = { hide_mesh = {{"sight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        sight3 = { hide_mesh = {{"sight3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        sight4 = { hide_mesh = {{"sight4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        sight5 = { hide_mesh = {{"sight5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })

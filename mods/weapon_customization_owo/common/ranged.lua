@@ -115,6 +115,30 @@ mod.wc.owomagazineac5List = {
 	"owo_jungle_mag_connector_r_01"
 }
 
+mod.wc.add_custom_attachments.sight2 = "sight2List"
+mod.wc.sight2List = {
+	"owo_holosight_empty",
+	"owo_holosight_helper_01"
+}
+
+mod.wc.add_custom_attachments.sight3 = "sight3List"
+mod.wc.sight3List = {
+	"owo_holosight_empty",
+	"owo_holosight_helper_02"
+}
+
+mod.wc.add_custom_attachments.sight4 = "sight4List"
+mod.wc.sight4List = {
+	"owo_holosight_empty",
+	"owo_holosight_helper_03"
+}
+
+mod.wc.add_custom_attachments.sight5 = "sight5List"
+mod.wc.sight5List = {
+	"owo_holosight_empty",
+	"owo_holosight_helper_04"
+}
+
 -- ############################################
 -- Injection Definitions
 -- inject_attachments_owo injects attachment descriptions first
@@ -826,6 +850,60 @@ end
 
 -- Sight: EOTech
 --		Autoguns
+function mod.owo_holosight(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "sight" or type, {
+		{id = "owo_holosight_01", name = "OwO EOTech"},
+	})
+	mod.inject_attachments_owo(variant_id, "sight2" or type, {
+		{id = "owo_holosight_empty", name = "Empty Sight"},
+		{id = "owo_holosight_helper_01", name = "OwO EOTech'vesa sight container 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "sight3" or type, {
+		{id = "owo_holosight_empty", name = "Empty Sight"},
+		{id = "owo_holosight_helper_02", name = "OwO EOTech'vesa sight container 2"},
+	})
+	mod.inject_attachments_owo(variant_id, "sight4" or type, {
+		{id = "owo_holosight_empty", name = "Empty Sight"},
+		{id = "owo_holosight_helper_03", name = "OwO EOTech'vesa base bulge"},
+	})
+	mod.inject_attachments_owo(variant_id, "sight5" or type, {
+		{id = "owo_holosight_empty", name = "Empty Sight"},
+		{id = "owo_holosight_helper_04", name = "OwO EOTech'vesa base"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_holosight_01 = {
+			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				sight2 = "owo_holosight_helper_01", sight3 = "owo_holosight_helper_02", 
+				sight4 = "owo_holosight_helper_03", sight5 = "owo_holosight_helper_04",
+			}
+		},
+		owo_holosight_empty = {
+			model = "", type = "sight2", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_helper_01 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight2", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_helper_02 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight3", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_helper_03 = {
+			model = _item_melee.."/grips/hatchet_grip_03", type = "sight4", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_helper_04 = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sight5", -- WHY WONT THITS SHSOTU FHUKCU
+			--model = _item_melee.."/grips/chain_sword_grip_06", type = "sight5", 
+			mesh_move = false, parent = "sight"
+		},
+	})
+end
+
 
 --[[
 TEMPLATES
