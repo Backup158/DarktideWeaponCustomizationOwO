@@ -21,6 +21,8 @@ mod.wc.attachment[this_variant].muzzle2 = {}
 mod.wc.attachment[this_variant].barrelac1 = {}
 mod.wc.attachment[this_variant].bayonet2 = {}
 mod.wc.attachment[this_variant].bayonet3 = {}
+mod.wc.attachment[this_variant].receiverac1 = {}
+mod.wc.attachment[this_variant].receiverac2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -33,6 +35,7 @@ mod.owo_suppressor(this_variant)
 mod.owo_wood_krieg(this_variant)
 mod.owo_bayonet(this_variant)
 mod.owo_condom(this_variant)
+mod.owo_bolt_action(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -165,6 +168,16 @@ mod.inject_fixes(this_variant, {
         bayonet = {offset = true,   position = vector3_box(0, 0.564, -0.058),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) }
     },
 
+	-- ######
+	-- Receiver: Bolt Action
+	-- ######
+	{	dependencies = {"owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05",
+		},
+		receiver = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+		receiverac1 = {offset = true, position = vector3_box(0.025, -0.02, 0.12), rotation = vector3_box(-180, -57, -180), scale = vector3_box(0.55, 0.45, 0.55 ) },
+		receiverac2 = {offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.6, 1 ) },
+	},
+
 	-- #########################
 	-- Hiding unused helpers
 	-- #########################
@@ -190,5 +203,10 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {"!owo_m7_bayonet_01", "!owo_bayonet_seitengewehr", "!owo_bayonet_03",},
 		bayonet2 = {hide_mesh = {     {"bayonet2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		bayonet3 = {hide_mesh = {     {"bayonet3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
+	-- Receivers
+	{	dependencies = {"!owo_bolt_helbore_01", "!owo_bolt_helbore_02", "!owo_bolt_helbore_03", "!owo_bolt_helbore_04", "!owo_bolt_helbore_05",},
+		receiverac1 = {hide_mesh = {     {"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 })

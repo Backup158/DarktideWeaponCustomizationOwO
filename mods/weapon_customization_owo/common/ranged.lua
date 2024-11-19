@@ -7,7 +7,13 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
+-- #############################
+-- WAKEUP
+-- GRABABRUSHANDPUTALITTLEMAKEUP
+-- HARRYDIDJAPUCHERNAMEINTHE
 -- TABLE
+-- #############################
+-- MUZZLE
 mod.wc.add_custom_attachments.muzzle2 = "muzzle2List"
 mod.wc.muzzle2List = {
 	"owo_suppressor_helper_empty",
@@ -17,6 +23,7 @@ mod.wc.muzzle2List = {
 	"owo_condom_helper_01",
 }
 
+-- BARREL
 mod.wc.add_custom_attachments.barrelac = "barrelacList"
 mod.wc.barrelacList = {
 	"owo_revolver_shotgun_barrel_01",
@@ -28,7 +35,11 @@ mod.wc.barrelacList = {
 	"owo_scab_gunner_barrelac_empty",
 	"owo_scab_gunner_barrelac_01"
 }
-
+mod.wc.add_custom_attachments.barrelac1 = "barrelac1List"
+mod.wc.barrelac1List = {
+	"owo_wood_krieg_empty",
+	"owo_wood_krieg_ac1_01",
+}
 mod.wc.add_custom_attachments.barrelshroud = "barrelshroudList"
 mod.wc.barrelshroudList = {
 	"owo_dreg_shroud_01",
@@ -61,7 +72,7 @@ mod.wc.barrelshroudac4List = {
 	"owo_dreg_shroud_empty",
 	"owo_dreg_shroudac4_01"
 }
-
+-- BAYONET
 mod.wc.add_custom_attachments.bayonet2 = "bayonet2List"
 mod.wc.bayonet2List = {
 	"owo_dreg_bayonet_empty",
@@ -75,13 +86,13 @@ mod.wc.bayonet3List = {
 	"owo_bayonet_empty",
 	"owo_bayonet_m7_helper_00",
 }
-
+-- GRIP
 mod.wc.add_custom_attachments.grip2 = "grip2List"
 mod.wc.grip2List = {
 	"owo_fin_grip2_empty",
 	"owo_fin_grip2_01"
 }
-
+-- MAGAZINE
 mod.wc.add_custom_attachments.owomagazineac1 = "owomagazineac1List"
 mod.wc.owomagazineac1List = {
 	"owo_jungle_mag_empty",
@@ -107,7 +118,7 @@ mod.wc.owomagazineac5List = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_r_01"
 }
-
+-- SIGHT
 mod.wc.add_custom_attachments.owosightac1 = "owosightac1List"
 mod.wc.owosightac1List = {
 	"owo_holosight_empty",
@@ -155,11 +166,16 @@ mod.wc.owosight2List = {
 	"owo_holosight_empty",
 	"owo_holosight_sight2_helper_02"
 }
-
-mod.wc.add_custom_attachments.barrelac1 = "barrelac1List"
-mod.wc.barrelac1List = {
-	"owo_wood_krieg_empty",
-	"owo_wood_krieg_ac1_01",
+-- RECEIVER
+mod.wc.add_custom_attachments.receiverac1 = "receiverac1List"
+mod.wc.receiverac1List = {
+	"owo_bolt_empty",
+	"owo_bolt_helbore_bolt_01",
+}
+mod.wc.add_custom_attachments.receiverac2 = "receiverac2List"
+mod.wc.receiverac2List = {
+	"owo_bolt_empty",
+	"owo_bolt_helbore_bolt_02",
 }
 
 -- ############################################
@@ -857,8 +873,8 @@ function mod.owo_m16_barrel(variant_id, type)
 
 end
 
--- Bayonet: M7, Seitengewehr 98 (Butcher's Blade)
---		Autoguns
+-- Bayonet: M7, Seitengewehr 98 (Butcher's Blade), Épée Baïonnette 1886
+--		Autoguns, Helbores
 function mod.owo_bayonet(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
 		{id = "owo_bayonet_m7_01", name = "OwO M7 Bayonet"},
@@ -1129,6 +1145,68 @@ function mod.owo_wood_krieg(variant_id, type)
 
 end
 
+-- Receiver: Helbore Bolt Action
+function mod.owo_bolt_action(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "receiver" or type, {
+		{id = "owo_bolt_helbore_01", name = "OwO Helbore Bolt Action 1"},
+		{id = "owo_bolt_helbore_02", name = "OwO Helbore Bolt Action 2"},
+		{id = "owo_bolt_helbore_03", name = "OwO Helbore Bolt Action 3"},
+		{id = "owo_bolt_helbore_04", name = "OwO Helbore Bolt Action 4"},
+		{id = "owo_bolt_helbore_05", name = "OwO Helbore Bolt Action 5"},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac1" or type, {
+		{id = "owo_bolt_empty", name = "receiverac1 empty"},
+		{id = "owo_bolt_helbore_bolt_01", name = "OwO bolt action bolt"},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac2" or type, {
+		{id = "owo_bolt_empty", name = "receiverac1 empty"},
+		{id = "owo_bolt_helbore_bolt_02", name = "OwO bolt action bolt shaft"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_bolt_helbore_01 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_01", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		owo_bolt_helbore_02 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_02", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		-- WHY IS THERE NO 3
+		owo_bolt_helbore_03 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_04", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		owo_bolt_helbore_04 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_05", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		owo_bolt_helbore_05 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_ml01", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		owo_bolt_empty = {
+			model = "", type = "receiverac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- grippy part
+		owo_bolt_helbore_bolt_01 = {
+			model = _item_melee.."/grips/combat_knife_grip_07", type = "receiverac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- the shaft
+		owo_bolt_helbore_bolt_02 = {
+			model = _item_melee.."/grips/combat_knife_grip_01", type = "receiverac2", 
+			mesh_move = false, parent = "receiver"
+		},
+	})
+end
+
 --[[
 TEMPLATES
 mod.wc.add_custom_attachments.KUMQUAT = "KUMQUATList"
@@ -1146,13 +1224,13 @@ function mod.owo_NAAAAAME(variant_id, type)
 			model = _item_ranged.."", type = "", 
 			mesh_move = false, parent = "",
 			automatic_equip = {
-				grip2 = "owo_fin_grip2_01"
+				 = ""
 			}
 		},
-		owo_ = {
+		owo_ _empty = {
 			model = "", type = "", 
-			mesh_move = false, parent = "receiver"
-		}
+			mesh_move = false, parent = ""
+		},
 	})
 end
 
