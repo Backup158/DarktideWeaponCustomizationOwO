@@ -46,7 +46,7 @@ mod.owo_fin_grip(this_variant, "grip")
 mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_jungle_mag(this_variant, "magazine")
 mod.owo_m16_barrel(this_variant, "barrel")
-mod.owo_m7_bayonet(this_variant, "bayonet")
+mod.owo_bayonet(this_variant, "bayonet")
 mod.owo_holosight(this_variant, "sight")
 
 -- ############################################

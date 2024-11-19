@@ -18,6 +18,8 @@ mod.wc.attachment[this_variant].stockac = {}
 -- mod.wc.attachment[this_variant].stockac3 = {}
 mod.wc.attachment[this_variant].rearmag = {}
 mod.wc.attachment[this_variant].muzzle2 = {}
+mod.wc.attachment[this_variant].barrelac1 = {}
+mod.wc.attachment[this_variant].barrelac2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -27,6 +29,7 @@ mod.owo_helbore_gripstock_recon(this_variant)
 mod.owo_lasgun_magazine_flat(this_variant)
 mod.owo_lasgun_magazine_rear(this_variant)
 mod.owo_suppressor(this_variant)
+mod.owo_wood_krieg(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -95,4 +98,20 @@ mod.inject_fixes(this_variant, {
 		},
 		bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ) },
 	},
+
+	-- ######
+	-- Barrel: Wood
+	-- ######
+	{	dependencies = {"owo_wood_krieg_01",
+		},
+		barrel = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+		--barrelac1 = {offset = true, position = vector3_box(0, 0.25, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.66 ) }, -- ramp handle stock but not necessary
+		barrelac2 = {offset = true, position = vector3_box(0, 0.19, -0.001), rotation = vector3_box(90, 0, 180), scale = vector3_box(0.78, 0.6, 1.188 ) },
+	},
+	-- Regular Helbore bayonets (barrel parent)
+	{   dependencies = {"owo_wood_krieg_01",
+            "autogun_bayonet_01|autogun_bayonet_02"
+        },
+        bayonet = {offset = true,   position = vector3_box(0, 0.488, -0.05),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) }
+    },
 })

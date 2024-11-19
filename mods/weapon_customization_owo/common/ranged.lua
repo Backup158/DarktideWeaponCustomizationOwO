@@ -34,7 +34,6 @@ mod.wc.barrelshroudList = {
 	"owo_m16_barrelshroud_a1",
 	"owo_m16_barrelshroud_a1_02",
 	"owo_m16_barrelshroud_a2",
-
 }
 --[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
 mod.wc.barrelshroudacList = {
@@ -152,6 +151,17 @@ mod.wc.add_custom_attachments.owosight2ac2 = "owosight2ac2List"
 mod.wc.owosight2List = {
 	"owo_holosight_empty",
 	"owo_holosight_sight2_helper_02"
+}
+
+mod.wc.add_custom_attachments.barrelac1 = "barrelac1List"
+mod.wc.barrelac1List = {
+	"owo_wood_krieg_empty",
+	"owo_wood_krieg_ac1_01",
+}
+mod.wc.add_custom_attachments.barrelac2 = "barrelac2List"
+mod.wc.barrelac2List = {
+	"owo_wood_krieg_empty",
+	"owo_wood_krieg_ac2_01",
 }
 
 -- ############################################
@@ -824,9 +834,9 @@ function mod.owo_m16_barrel(variant_id, type)
 
 end
 
--- Bayonet: M7 Bayonet
+-- Bayonet: M7
 --		Autoguns
-function mod.owo_m7_bayonet(variant_id, type)
+function mod.owo_bayonet(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
 		{id = "owo_bayonet_m7_01", name = "OwO M7 Bayonet"},
 	})
@@ -1020,6 +1030,44 @@ function mod.owo_holosight(variant_id, type)
 	})
 end
 
+-- Barrel: Wooden Helbore
+function mod.owo_wood_krieg(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+		{id = "owo_wood_krieg_01", name = "OwO Wooden Helbore 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelac1" or type, {
+		{id = "owo_wood_krieg_empty", name = "Empty Barrel"},
+		{id = "owo_wood_krieg_ac1_01", name = "OwO Wooden Helbore ac1 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelac2" or type, {
+		{id = "owo_wood_krieg_empty", name = "Empty Barrel"},
+		{id = "owo_wood_krieg_ac2_01", name = "OwO Wooden Helbore ac2 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_wood_krieg_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelac1 = "owo_wood_krieg_ac1_01",
+				barrelac2 = "owo_wood_krieg_ac2_01",
+			}
+		},
+		owo_wood_krieg_empty = {
+			model = "", type = "barrelac1", 
+			mesh_move = false, parent = "barrel"
+		},
+		owo_wood_krieg_ac1_01 = {
+			--model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = "barrelac1", 
+			model = "", type = "barrelac1", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_wood_krieg_ac2_01 = {
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = "barrelac2", 
+			mesh_move = false, parent = "barrel",
+		},
+	})
+
+end
 
 --[[
 TEMPLATES
