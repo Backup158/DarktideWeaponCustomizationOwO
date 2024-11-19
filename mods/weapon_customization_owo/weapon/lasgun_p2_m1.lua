@@ -23,6 +23,10 @@ mod.wc.attachment[this_variant].bayonet2 = {}
 mod.wc.attachment[this_variant].bayonet3 = {}
 mod.wc.attachment[this_variant].receiverac1 = {}
 mod.wc.attachment[this_variant].receiverac2 = {}
+mod.wc.attachment[this_variant].owosightac1 = {}
+mod.wc.attachment[this_variant].owosightac2 = {}
+mod.wc.attachment[this_variant].owosightac3 = {}
+mod.wc.attachment[this_variant].owosightac4 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -36,6 +40,7 @@ mod.owo_wood_krieg(this_variant)
 mod.owo_bayonet(this_variant)
 mod.owo_condom(this_variant)
 mod.owo_bolt_action(this_variant)
+mod.owo_rear_sight(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -150,7 +155,7 @@ mod.inject_fixes(this_variant, {
     },
     {   dependencies = {"owo_bayonet_03"},
         bayonet2 = {offset = true, position = vector3_box(0, 0.025, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.1, 1.35, 0.6) },
-        bayonet3 = {offset = true, position = vector3_box(0, 0.06, -0.014), rotation = vector3_box(180, 0, 180), scale = vector3_box(0.25, 0.09, 0.245) },
+        bayonet3 = {offset = true, position = vector3_box(0, 0.06, 0.014), rotation = vector3_box(180, 0, 180), scale = vector3_box(0.25, 0.09, 0.245) },
     },
 
 	-- ######
@@ -174,8 +179,28 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {"owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05",
 		},
 		receiver = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-		receiverac1 = {offset = true, position = vector3_box(0.025, -0.02, 0.12), rotation = vector3_box(-180, -57, -180), scale = vector3_box(0.55, 0.45, 0.55 ) },
-		receiverac2 = {offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.6, 1 ) },
+		receiverac1 = {offset = true, position = vector3_box(0.025, -0.02, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
+		receiverac2 = {offset = true, position = vector3_box(0, 0.028, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.6, 1 ) },
+	},
+
+	-- ######
+	-- Sight: Rear Sight Flip ups
+	-- ######
+	{	dependencies = {"owo_rear_sight_01",},
+		no_scope_offset =   { position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0)},
+		scope_offset =      { position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0)},
+		sight = {offset = true, position = vector3_box(0, 0.012, 0.125), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
+	},
+	{	dependencies = {"owo_rear_sight_02",},
+		no_scope_offset =   { position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0)},
+		scope_offset =      { position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0)},
+		sight = {offset = true, position = vector3_box(0, 0.012, 0.125), rotation = vector3_box(-45, 90, 135), scale = vector3_box(0.23, 0.5, 0.1 ) },
+	},
+	{	dependencies = {"owo_rear_sight_01|owo_rear_sight_02",},
+		owosightac1 = {offset = true, position = vector3_box(0.00000013, 0.044, -0.09), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.05, 0.3, 0.1 ) },
+		owosightac2 = {offset = true, position = vector3_box(-0.000000255, 0.044, -0.09), rotation = vector3_box(90, 0, 180), scale = vector3_box(0.05, 0.3, 0.1 ) },
+		owosightac3 = {offset = true, position = vector3_box(-0.012, 0.06, -0.002), rotation = vector3_box(0, 90, -90), scale = vector3_box(0.55, 0.48, 0.42 ) },
+		owosightac4 = {offset = true, position = vector3_box(-0.012, 0.06, 0.002), rotation = vector3_box(0, 90, 90), scale = vector3_box(0.55, 0.48, 0.42 ) },
 	},
 
 	-- #########################
@@ -199,7 +224,7 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {"!owo_wood_krieg_01", "!owo_wood_krieg_02", "!owo_wood_krieg_03",},
 		barrelac1 = {hide_mesh = {     {"barrelac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
-	-- Bayoent
+	-- Bayonet
 	{	dependencies = {"!owo_m7_bayonet_01", "!owo_bayonet_seitengewehr", "!owo_bayonet_03",},
 		bayonet2 = {hide_mesh = {     {"bayonet2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		bayonet3 = {hide_mesh = {     {"bayonet3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
@@ -209,4 +234,11 @@ mod.inject_fixes(this_variant, {
 		receiverac1 = {hide_mesh = {     {"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
+	-- Sights
+	{	dependencies = {"!owo_rear_sight_01", "!owo_rear_sight_02"},
+		owosightac1 = {hide_mesh = {     {"owosightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		owosightac2 = {hide_mesh = {     {"owosightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		owosightac3 = {hide_mesh = {     {"owosightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		owosightac4 = {hide_mesh = {     {"owosightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	}
 })

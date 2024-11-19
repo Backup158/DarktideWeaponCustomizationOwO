@@ -122,24 +122,32 @@ mod.wc.owomagazineac5List = {
 mod.wc.add_custom_attachments.owosightac1 = "owosightac1List"
 mod.wc.owosightac1List = {
 	"owo_holosight_empty",
-	"owo_holosight_helper_01"
+	"owo_holosight_helper_01",
+	"owo_rear_sight_empty",
+	"owo_rear_sight_ac1_01",
 }
 mod.wc.add_custom_attachments.owosightac2 = "owosightac2List"
 mod.wc.owosightac2List = {
 	"owo_holosight_empty",
-	"owo_holosight_helper_02"
+	"owo_holosight_helper_02",
+	"owo_rear_sight_empty",
+	"owo_rear_sight_ac2_01",
 }
 mod.wc.add_custom_attachments.owosightac3 = "owosightac3List"
 mod.wc.owosightac3List = {
 	"owo_holosight_empty",
-	"owo_holosight_helper_03"
+	"owo_holosight_helper_03",
+	"owo_rear_sight_empty",
+	"owo_rear_sight_ac3_01",
 }
 mod.wc.add_custom_attachments.owosightac4 = "owosightac4List"
 mod.wc.owosightac4List = {
 	"owo_holosight_empty",
-	"owo_holosight_helper_04"
+	"owo_holosight_helper_04",
+	"owo_rear_sight_empty",
+	"owo_rear_sight_ac4_01",
 }
-
+-- SIGHT2
 --[[
 mod.table_append(mod.wc.sights, {
 	"owo_holosight_01",
@@ -1206,6 +1214,67 @@ function mod.owo_bolt_action(variant_id, type)
 		},
 	})
 end
+
+-- Sight: Rear sights with flip up
+function mod.owo_rear_sight(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "sight" or type, {
+		{id = "owo_rear_sight_01", name = "OwO Rear Flip - Lebel (Down)"},
+		{id = "owo_rear_sight_02", name = "OwO Rear Flip - Lebel (Up)"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
+		{id = "owo_rear_sight_empty", name = "Empty Sight"},
+		{id = "owo_rear_sight_ac1_01", name = "Flip sight range select 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac2" or type, {
+		{id = "owo_rear_sight_empty", name = "Empty Sight"},
+		{id = "owo_rear_sight_ac2_01", name = "Flip sight range select 2"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac3" or type, {
+		{id = "owo_rear_sight_empty", name = "Empty Sight"},
+		{id = "owo_rear_sight_ac3_01", name = "Flip Sight 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac4" or type, {
+		{id = "owo_rear_sight_empty", name = "Empty Sight"},
+		{id = "owo_rear_sight_ac4_01", name = "Flip Sight 2"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_rear_sight_01 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_01", owosightac2 = "owo_rear_sight_ac2_01",
+				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
+			}
+		},
+		owo_rear_sight_02 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
+		},
+		owo_rear_sight_empty = {
+			model = "", type = "owosightac1", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_rear_sight_ac1_01 = {
+			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "owosightac1", 
+			mesh_move = false, parent = "sight",
+		},
+		owo_rear_sight_ac2_01 = {
+			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "owosightac2", 
+			mesh_move = false, parent = "sight",
+		},
+		owo_rear_sight_ac3_01 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "owosightac3", 
+			mesh_move = false, parent = "sight",
+		},
+		owo_rear_sight_ac4_01 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "owosightac4", 
+			mesh_move = false, parent = "sight",
+		},
+	})
+end
+
+
 
 --[[
 TEMPLATES
