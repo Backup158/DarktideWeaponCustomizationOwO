@@ -134,6 +134,21 @@ mod.inject_fixes(this_variant, {
         bayonet2 = {offset = true, position = vector3_box(0, 0.002, -0.036), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.46, 0.25) },
         bayonet3 = {offset = true, position = vector3_box(0, 0, -0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.6, 0.2) },
     },
+	-- Épée baïonnette modèle 1886 Lebel
+	{   dependencies = {"owo_bayonet_03",
+            "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03"
+        },
+        bayonet = {offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+    {   dependencies = {"owo_bayonet_03",
+            "!owo_wood_krieg_01","!owo_wood_krieg_02","!owo_wood_krieg_03"
+        },
+        bayonet = {offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+    {   dependencies = {"owo_bayonet_03"},
+        bayonet2 = {offset = true, position = vector3_box(0, 0.025, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.1, 1.35, 0.6) },
+        bayonet3 = {offset = true, position = vector3_box(0, 0.06, -0.014), rotation = vector3_box(180, 0, 180), scale = vector3_box(0.25, 0.09, 0.245) },
+    },
 
 	-- ######
 	-- Barrel: Wood
@@ -172,7 +187,7 @@ mod.inject_fixes(this_variant, {
 		barrelac1 = {hide_mesh = {     {"barrelac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	-- Bayoent
-	{	dependencies = {"!owo_m7_bayonet_01", "!owo_bayonet_seitengewehr", },
+	{	dependencies = {"!owo_m7_bayonet_01", "!owo_bayonet_seitengewehr", "!owo_bayonet_03",},
 		bayonet2 = {hide_mesh = {     {"bayonet2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		bayonet3 = {hide_mesh = {     {"bayonet3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},

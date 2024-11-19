@@ -295,7 +295,7 @@ function mod.owo_condom(variant_id, type)
 		{id = "owo_condom_01", name = "OwO Lasbarrel Condom"}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle2" or type, {
-		{id = "owo_condom_helper_empty", name = "OwO Condom'vesa Empty"},
+		{id = "owo_condom_helper_empty", name = "Condom'vesa Empty"},
 		{id = "owo_condom_helper_01", name = "OwO Condom'vesa"}
 	})
 
@@ -863,16 +863,19 @@ function mod.owo_bayonet(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
 		{id = "owo_bayonet_m7_01", name = "OwO M7 Bayonet"},
 		{id = "owo_bayonet_seitengewehr", name = "OwO Seitengewehr 98"},
+		{id = "owo_bayonet_03", name = "OwO Épée Baïonnette 1886"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonet2" or type, {
 		{id = "owo_bayonet_empty", name = "Empty Bayonet"},
 		{id = "owo_bayonet_m7_helper_01", name = "M7 Bayonet Grip"},
 		{id = "owo_bayonet_seitengewehr_helper_01", name = "Seitengewehr Grip"},
+		{id = "owo_bayonet_03_helper_01", name = "Epee Grip"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonet3" or type, {
 		{id = "owo_bayonet_empty", name = "Empty Bayonet"},
 		{id = "owo_bayonet_m7_helper_00", name = "M7 Bayonet Lug"},
 		{id = "owo_bayonet_seitengewehr_helper_02", name = "Seitengewehr Grip bulge"},
+		{id = "owo_bayonet_03_helper_02", name = "Epee loop d'loop"},
 	})
 	
 	mod.inject_models(variant_id, {
@@ -890,6 +893,13 @@ function mod.owo_bayonet(variant_id, type)
 				bayonet3 = "owo_bayonet_seitengewehr_helper_02"
 			}
 		},
+		owo_bayonet_03 = {
+			model = _item_ranged.."/bayonets/bayonet_03", type = "bayonet", 
+			mesh_move = false, parent = "barrel",
+			automatic_equip = { bayonet2 = "owo_bayonet_03_helper_01",
+				bayonet3 = "owo_bayonet_03_helper_02"
+			}
+		},
 		owo_bayonet_empty = {
 			model = "", type = "bayonet2", 
 			mesh_move = false, parent = "bayonet"
@@ -902,6 +912,10 @@ function mod.owo_bayonet(variant_id, type)
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = "bayonet2", 
 			mesh_move = false, parent = "bayonet",
 		},
+		owo_bayonet_03_helper_01 = {
+			model = _item_melee.."/grips/combat_knife_grip_02", type = "bayonet2", 
+			mesh_move = false, parent = "bayonet",
+		},
 		-- Bayonet lug
 		owo_bayonet_m7_helper_00 = {
 			model = _item_melee.."/grips/chain_sword_grip_07", type = "bayonet3", 
@@ -909,6 +923,10 @@ function mod.owo_bayonet(variant_id, type)
 		},
 		owo_bayonet_seitengewehr_helper_02 = {
 			model = _item_melee.."/grips/2h_chain_sword_grip_02", type = "bayonet3", 
+			mesh_move = false, parent = "bayonet",
+		},
+		owo_bayonet_03_helper_02 = {
+			model = _item_melee.."/heads/hatchet_head_03", type = "bayonet3", 
 			mesh_move = false, parent = "bayonet",
 		},
 	})
