@@ -73,18 +73,36 @@ mod.wc.barrelshroudac4List = {
 	"owo_dreg_shroudac4_01"
 }
 -- BAYONET
-mod.wc.add_custom_attachments.bayonet2 = "bayonet2List"
-mod.wc.bayonet2List = {
+mod.wc.add_custom_attachments.bayonetac1 = "bayonetac1List"
+mod.wc.bayonetac1List = {
 	"owo_dreg_bayonet_empty",
 	"owo_dreg_bayonet_rear_01",
 	"owo_bayonet_empty",
 	"owo_bayonet_m7_helper_01",
 	"owo_bayonet_seitengewehr_helper_01",
+	"owo_underbarrel_gl_empty",
+	"owo_m203_helper_01",
 }
-mod.wc.add_custom_attachments.bayonet3 = "bayonet3List"
-mod.wc.bayonet3List = {
+mod.wc.add_custom_attachments.bayonetac2 = "bayonetac2List"
+mod.wc.bayonetac2List = {
 	"owo_bayonet_empty",
 	"owo_bayonet_m7_helper_00",
+	"owo_underbarrel_gl_empty",
+	"owo_m203_helper_02",
+}
+mod.wc.add_custom_attachments.bayonetac3 = "bayonetac3List"
+mod.wc.bayonetac3List = {
+	"owo_bayonet_empty",
+	"owo_dreg_bayonet_rear_01",
+	"owo_underbarrel_gl_empty",
+	"owo_m203_helper_03",
+}
+mod.wc.add_custom_attachments.bayonetac4 = "bayonetac4List"
+mod.wc.bayonetac4List = {
+	"owo_bayonet_empty",
+	"owo_bayonet_m7_helper_00",
+	"owo_underbarrel_gl_empty",
+	"owo_m203_helper_04",
 }
 -- GRIP
 mod.wc.add_custom_attachments.grip2 = "grip2List"
@@ -484,7 +502,7 @@ function mod.owo_dreg_gunner_bayonet(variant_id, type)
 		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner Bayonet"},
 
 	})
-	mod.inject_attachments_owo(variant_id, "bayonet2", {
+	mod.inject_attachments_owo(variant_id, "bayonetac1", {
 		{id = "owo_dreg_bayonet_empty", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Shroud", no_randomize = true},
 	})
@@ -494,15 +512,15 @@ function mod.owo_dreg_gunner_bayonet(variant_id, type)
 			model = _item_melee.."/blades/combat_blade_blade_03", type = "bayonet", 
 			mesh_move = false, parent = 'barrel', 
 			automatic_equip = {
-				bayonet2 = "owo_dreg_bayonet_rear_01"
+				bayonetac1 = "owo_dreg_bayonet_rear_01"
 			}
 		},
 		owo_dreg_bayonet_empty = {
-			model = "", type = "bayonet2", 
+			model = "", type = "bayonetac1", 
 			mesh_move = false, parent = 'barrel'
 		},
 		owo_dreg_bayonet_rear_01 = {
-			model = _item_melee.."/blades/combat_blade_blade_05", type = "bayonet2", 
+			model = _item_melee.."/blades/combat_blade_blade_05", type = "bayonetac1", 
 			mesh_move = false, parent = 'barrel'
 		}
 	})
@@ -889,13 +907,13 @@ function mod.owo_bayonet(variant_id, type)
 		{id = "owo_bayonet_seitengewehr", name = "OwO Seitengewehr 98"},
 		{id = "owo_bayonet_03", name = "OwO Épée Baïonnette 1886"},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonet2" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
 		{id = "owo_bayonet_empty", name = "Empty Bayonet"},
 		{id = "owo_bayonet_m7_helper_01", name = "M7 Bayonet Grip"},
 		{id = "owo_bayonet_seitengewehr_helper_01", name = "Seitengewehr Grip"},
 		{id = "owo_bayonet_03_helper_01", name = "Epee Grip"},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonet3" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac2" or type, {
 		{id = "owo_bayonet_empty", name = "Empty Bayonet"},
 		{id = "owo_bayonet_m7_helper_00", name = "M7 Bayonet Lug"},
 		{id = "owo_bayonet_seitengewehr_helper_02", name = "Seitengewehr Grip bulge"},
@@ -906,51 +924,51 @@ function mod.owo_bayonet(variant_id, type)
 		owo_bayonet_m7_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "bayonet", 
 			mesh_move = false, parent = "barrel",
-			automatic_equip = { bayonet2 = "owo_bayonet_m7_helper_01",
-				bayonet3 = "owo_bayonet_m7_helper_00"
+			automatic_equip = { bayonetac1 = "owo_bayonet_m7_helper_01",
+				bayonetac2 = "owo_bayonet_m7_helper_00"
 			}
 		},
 		owo_bayonet_seitengewehr = {
 			model = _item_melee.."/blades/combat_knife_blade_01", type = "bayonet", 
 			mesh_move = false, parent = "barrel",
-			automatic_equip = { bayonet2 = "owo_bayonet_seitengewehr_helper_01",
-				bayonet3 = "owo_bayonet_seitengewehr_helper_02"
+			automatic_equip = { bayonetac1 = "owo_bayonet_seitengewehr_helper_01",
+				bayonetac2 = "owo_bayonet_seitengewehr_helper_02"
 			}
 		},
 		owo_bayonet_03 = {
 			model = _item_ranged.."/bayonets/bayonet_03", type = "bayonet", 
 			mesh_move = false, parent = "barrel",
-			automatic_equip = { bayonet2 = "owo_bayonet_03_helper_01",
-				bayonet3 = "owo_bayonet_03_helper_02"
+			automatic_equip = { bayonetac1 = "owo_bayonet_03_helper_01",
+				bayonetac2 = "owo_bayonet_03_helper_02"
 			}
 		},
 		owo_bayonet_empty = {
-			model = "", type = "bayonet2", 
+			model = "", type = "bayonetac1", 
 			mesh_move = false, parent = "bayonet"
 		},
 		owo_bayonet_m7_helper_01 = {
-			model = _item_melee.."/grips/combat_knife_grip_03", type = "bayonet2", 
+			model = _item_melee.."/grips/combat_knife_grip_03", type = "bayonetac1", 
 			mesh_move = false, parent = "bayonet",
 		},
 		owo_bayonet_seitengewehr_helper_01 = {
-			model = _item_ranged.."/handles/combat_blade_handle_04", type = "bayonet2", 
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "bayonetac1", 
 			mesh_move = false, parent = "bayonet",
 		},
 		owo_bayonet_03_helper_01 = {
-			model = _item_melee.."/grips/combat_knife_grip_02", type = "bayonet2", 
+			model = _item_melee.."/grips/combat_knife_grip_02", type = "bayonetac1", 
 			mesh_move = false, parent = "bayonet",
 		},
 		-- Bayonet lug
 		owo_bayonet_m7_helper_00 = {
-			model = _item_melee.."/grips/chain_sword_grip_07", type = "bayonet3", 
+			model = _item_melee.."/grips/chain_sword_grip_07", type = "bayonetac2", 
 			mesh_move = false, parent = "bayonet",
 		},
 		owo_bayonet_seitengewehr_helper_02 = {
-			model = _item_melee.."/grips/2h_chain_sword_grip_02", type = "bayonet3", 
+			model = _item_melee.."/grips/2h_chain_sword_grip_02", type = "bayonetac2", 
 			mesh_move = false, parent = "bayonet",
 		},
 		owo_bayonet_03_helper_02 = {
-			model = _item_melee.."/heads/hatchet_head_03", type = "bayonet3", 
+			model = _item_melee.."/heads/hatchet_head_03", type = "bayonetac2", 
 			mesh_move = false, parent = "bayonet",
 		},
 	})
@@ -1274,6 +1292,58 @@ function mod.owo_rear_sight(variant_id, type)
 	})
 end
 
+-- Bayonet: Underbarrel Grenade Launcher
+function mod.owo_underbarrel_gl(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
+		{id = "owo_m203", name = "OwO M203 Grenade Launcher"},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
+		{id = "owo_underbarrel_gl_empty", name = "Empty Bayonet"},
+		{id = "owo_m203_helper_01", name = "OwO M203 ac1"},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac2" or type, {
+		{id = "owo_underbarrel_gl_empty", name = "Empty Bayonet"},
+		{id = "owo_m203_helper_02", name = "OwO M203 ac2"},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac3" or type, {
+		{id = "owo_underbarrel_gl_empty", name = "Empty Bayonet"},
+		{id = "owo_m203_helper_03", name = "OwO M203 ac3"},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac4" or type, {
+		{id = "owo_underbarrel_gl_empty", name = "Empty Bayonet"},
+		{id = "owo_m203_helper_04", name = "OwO M203 ac4"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_m203 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "bayonet", 
+			mesh_move = false, parent = "barrel",
+			automatic_equip = { bayonetac1 = "owo_m203_helper_01", bayonetac2 = "owo_m203_helper_02", 
+				bayonetac3 = "owo_m203_helper_03", bayonetac4 = "owo_m203_helper_04", 
+			}
+		},
+		owo_underbarrel_gl_empty = {
+			model = "", type = "bayonetac1", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_m203_helper_01 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_02", type = "bayonetac1", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_m203_helper_02 = {
+			model = _item_melee.."/grips/combat_knife_grip_03", type = "bayonetac2", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_m203_helper_03 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "bayonetac3", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_m203_helper_04 = {
+			model = _item_ranged.."/recievers/shotgun_double_barrel_receiver_01", type = "bayonetac4", 
+			mesh_move = false, parent = "bayonet"
+		},
+	})
+end
 
 
 --[[
