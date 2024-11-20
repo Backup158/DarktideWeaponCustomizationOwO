@@ -14,6 +14,8 @@ Parts are prefixed with `OwO`.
 
 [MT Weapon Customization Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/276) by Random Account/MT607
 
+Install per instructions on the [DMF Documentation](https://dmf-docs.darkti.de/#/installing-mods)
+
 # ***Notices youw pawts*** (Parts I added)
 Part: Weapons available
 - Suppressor: Helbore Lasguns
@@ -22,7 +24,7 @@ Part: Weapons available
 - Short shotgun barrel: Bolt Pistol (muzzles won't work with these)
 - Dreg Gunner barrel: Braced/Infantry/Vigilant Autoguns
 - Dreg Gunner bayonet: Braced/Infantry/Vigilant Autoguns
-- California compliant Bolter receiver: Bolter
+- California compliant Bolter receiver: Spearhead Boltgun
 - California compliant fin grips: Braced/Infantry/Vigilant Autoguns
 
 ![Helbore with Suppressor, Recon stock with revolver grip, Recon rear map, and parts from other plugins](https://imgur.com/QlFc2Ta.png)
