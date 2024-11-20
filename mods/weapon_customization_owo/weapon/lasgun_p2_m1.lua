@@ -50,7 +50,7 @@ mod.owo_underbarrel_gl(this_variant)
 -- ############################################
 mod.inject_fixes(this_variant, {
 	-- ######
-	-- Straight Grip and Recon Stock
+	-- Stock: STRAIGHT GRIP AND RECON STOCK
 	-- ######
 	{	dependencies = {"owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03"},
 		stock = {offset = true, position = vector3_box(0, -0.04, 0.065), scale = vector3_box(1, 1.15, 0.85 ) },
@@ -58,14 +58,14 @@ mod.inject_fixes(this_variant, {
 	},
 
 	-- ######
-	-- Magazine: Flat
+	-- Magazine: FLAT
 	-- ######
 	{	dependencies = {"owo_lasgun_magazine_flat"},
 		magazine = {offset = true,scale = vector3_box(1, 1, 0.5 ) },
 	},
 
 	-- ######
-	-- Magazine: Rear
+	-- Magazine: REAR
 	-- ######
 	{	dependencies = {"owo_lasgun_magazine_rear_01",
 			"owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03"
@@ -80,7 +80,7 @@ mod.inject_fixes(this_variant, {
 	},
 
 	-- ######
-	-- Muzzle: Suppressor
+	-- Muzzle: SUPPRESSOR
 	-- ######
 	{	dependencies = {"owo_suppressor_01|owo_suppressor_02"},
 		muzzle = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },
@@ -99,7 +99,7 @@ mod.inject_fixes(this_variant, {
 	},
 
 	-- ######
-	-- Muzzle: Condom
+	-- Muzzle: CONDOM
 	-- ######
 	{	dependencies = {"owo_condom_01"},
 		muzzle = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
@@ -113,7 +113,7 @@ mod.inject_fixes(this_variant, {
 	},
 
 	-- ######
-    -- Bayonet: M7
+    -- Bayonet: HISTORICAL PACK
     -- ######
 	-- M7
     {   dependencies = {"owo_bayonet_m7_01",
@@ -162,7 +162,7 @@ mod.inject_fixes(this_variant, {
     },
 
 	-- ######
-	-- Barrel: Wood
+	-- Barrel: WOODEN HELBORE
 	-- ######
 	{	dependencies = {"owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03",
 		},
@@ -177,7 +177,7 @@ mod.inject_fixes(this_variant, {
     },
 
 	-- ######
-	-- Receiver: Bolt Action
+	-- Receiver: BOLT ACTION HELBORE
 	-- ######
 	{	dependencies = {"owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05",
 		},
@@ -187,7 +187,7 @@ mod.inject_fixes(this_variant, {
 	},
 
 	-- ######
-	-- Sight: Rear Sight Flip ups
+	-- Sight: FLIP-UP REAR SIGHTS
 	-- ######
 	{	dependencies = {"owo_rear_sight_01",},
 		no_scope_offset =   { position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0)},
@@ -210,11 +210,11 @@ mod.inject_fixes(this_variant, {
 	-- Bayonet: Underbarrel Grenade Launcher
 	-- ######
 	{	dependencies = {"owo_m203"},
-		bayonet = {offset = true, position = vector3_box(0, 0.044, -0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-		bayonetac1 = {offset = true, position = vector3_box(0, 0.044, -0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-		bayonetac2 = {offset = true, position = vector3_box(0, 0.044, 0.094), rotation = vector3_box(90, 0, 180), scale = vector3_box(0.05, 0.3, 0.1 ) },
-		bayonetac3 = {offset = true, position = vector3_box(-0.012, 0.012, -0.088), rotation = vector3_box(0, 90, -90), scale = vector3_box(0.55, 0.7, 0.42 ) },
-		bayonetac4 = {offset = true, position = vector3_box(-0.012, 0.012, 0.088), rotation = vector3_box(0, 90, 90), scale = vector3_box(0.55, 0.7, 0.42 ) },
+		bayonet = {offset = true, position = vector3_box(0, -0.172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+		bayonetac1 = {offset = true, position = vector3_box(0, 0.138, 0.), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
+		bayonetac2 = {offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
+		bayonetac3 = {offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
+		bayonetac4 = {offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
 	},
 
 	-- #########################
