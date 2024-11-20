@@ -229,15 +229,15 @@ mod.inject_fixes(this_variant, {
 	-- Sight: SOVIET PU SCOPE
 	-- ######
 	{	dependencies = {"owo_pu_scope_01",},
-		no_scope_offset =   { position = vector3_box(0, -0.002, -0.045), rotation = vector3_box(0, 0, 0)},
-		scope_offset =      { position = vector3_box(0, -0.002, -0.045), rotation = vector3_box(0, 0, 0)},
+		no_scope_offset =   { position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0)},
+		scope_offset =      { position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0)},
 		sight = 	  {offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
 		owosightac1 = {offset = true, position = vector3_box(0, 0.192 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
 		owosightac2 = {offset = true, position = vector3_box(0.017, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.06 ) },
 		owosightac3 = {offset = true, position = vector3_box(-0.017, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.06 ) },
-		owosightac4 = {offset = true, position = vector3_box(0, 0.08, -0.035), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+		owosightac4 = {offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
 		owosightac5 = {offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
-		owosightac6 = {offset = true, position = vector3_box(0, 0.095, 0.022), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
+		owosightac6 = {offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
 	},
 
 	-- #########################
