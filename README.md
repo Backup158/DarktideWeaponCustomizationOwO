@@ -51,7 +51,7 @@ Part: Weapons available
 
 **Sights**
 - EOTech and Magnifier: Braced/Infantry/Vigilant Autoguns. _Adds standalone holographic sight, sight with magnifier to the side, and sight with magnifier lined up._
-- Flip Up Rear Sights: Helbore Lasguns. _Based on WWI style iron sights with a ladder range select._
+- Ladder Aperture Sights: Helbore Lasguns. _Based on WWI style iron sights._
 
 **Grips**
 - California Compliant Fin Grips: Braced/Infantry/Vigilant Autoguns
