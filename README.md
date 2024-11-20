@@ -1,7 +1,13 @@
 # OwO? What is this?
-Addon plugin for the Extended Weapon Customization mod for *Warhammer 40,000: Darktide*. Adds various parts I felt like adding, mostly intended for use with screenshots. A responsible mod author would spend the time making sure these parts are aligned for various combinations of parts. I ain't that kind of author.
+Addon plugin for the Extended Weapon Customization mod for *Warhammer 40,000: Darktide*. Adds various parts, typically inspired by history. Intended mainly for use in screenshots, with in-game performance secondary to appearances. 
 
-Report alignment issues and I might fix it if I'm not busy rotting.
+**!!!!!**
+
+**Expect issues and _noticable_ performance drops. A responsible mod author would spend the time making sure these parts are compatibly aligned with all the other pieces and optimized. I ain't that kind of author.**
+
+**!!!!!**
+
+Report alignment issues and I might fix it if I'm not busy (rotting in bed).
 
 Parts are prefixed with `OwO`.
 
@@ -28,4 +34,8 @@ Part: Weapons available
 - California compliant fin grips: Braced/Infantry/Vigilant Autoguns
 
 ![Helbore with Suppressor, Recon stock with revolver grip, Recon rear map, and parts from other plugins](https://imgur.com/QlFc2Ta.png)
+Helbore with Suppressor, Recon stock with revolver grip, Recon rear map, and parts from other plugins
 ![Braced Autogun with Dreg Gunner Barrel and Bayonet](https://imgur.com/jKbqmQt.png)
+Braced Autogun with Dreg Gunner Barrel and Bayonet
+
+Other pictures will be on Nexus if I ever release them.
