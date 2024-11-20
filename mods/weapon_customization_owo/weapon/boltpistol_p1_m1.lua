@@ -24,14 +24,8 @@ mod.owo_bistol_shotgun_barrel_short(this_variant)
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
-    {   dependencies = {
-            "owo_bistol_shotgun_barrel_short_01|owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08|owo_bistol_shotgun_barrel_short_09"
-        },
-        barrel = {
-            offset = true, 
-			position = vector3_box(0, 0.01, 0.01),
-			scale = vector3_box(1, 0.33, 0.9)
-        },
+    {   dependencies = {"owo_bistol_shotgun_barrel_short_01|owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08|owo_bistol_shotgun_barrel_short_09"},
+        barrel = {offset = true,  position = vector3_box(0, 0.01, 0.01), scale = vector3_box(1, 0.33, 0.9)},
         --[[
         -- SCALING AND POS IS FUCKED RN
         -- because of changes in base mod

@@ -33,16 +33,7 @@ mod.owo_revolver_shotgun_barrel(this_variant)
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
-    {   dependencies = {
-            "owo_revolver_shotgun_barrel_01|owo_revolver_shotgun_barrel_04|owo_revolver_shotgun_barrel_05|owo_revolver_shotgun_barrel_06|owo_revolver_shotgun_barrel_08|owo_revolver_shotgun_barrel_09"
-        },
-        barrelex = {
-            offset = true, 
-            --position = vector3_box(-0.033, -0.4, 0.1),
-            position = vector3_box(0, 0, 0),
-            --mesh_position = vector3_box(1, 1, 0),
-            --mesh_position = vector3_box(0.033, 0.4, -0.1),
-            scale = vector3_box(1, 0.55, 0.75)
-        }
+    {   dependencies = {"owo_revolver_shotgun_barrel_01|owo_revolver_shotgun_barrel_04|owo_revolver_shotgun_barrel_05|owo_revolver_shotgun_barrel_06|owo_revolver_shotgun_barrel_08|owo_revolver_shotgun_barrel_09"},
+        barrelex = {offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 0.55, 0.75)}
     }
 })
