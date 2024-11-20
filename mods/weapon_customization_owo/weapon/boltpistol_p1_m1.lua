@@ -28,7 +28,7 @@ mod.inject_fixes(this_variant, {
         barrel = {offset = true,  position = vector3_box(0, 0.01, 0.01), scale = vector3_box(1, 0.33, 0.9)},
         --[[
         -- SCALING AND POS IS FUCKED RN
-        -- because of changes in base mod
+        -- because of changes in base mod? idk lol
         muzzle = {
             offset = true, 
             position = vector3_box(0, 0.47, 0), -- 0.45
