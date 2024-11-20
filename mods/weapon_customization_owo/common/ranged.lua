@@ -143,6 +143,7 @@ mod.wc.owosightac1List = {
 	"owo_holosight_helper_01",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac1_01",
+	"owo_pu_scope_helper_01",
 }
 mod.wc.add_custom_attachments.owosightac2 = "owosightac2List"
 mod.wc.owosightac2List = {
@@ -150,6 +151,7 @@ mod.wc.owosightac2List = {
 	"owo_holosight_helper_02",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac2_01",
+	"owo_pu_scope_helper_02",
 }
 mod.wc.add_custom_attachments.owosightac3 = "owosightac3List"
 mod.wc.owosightac3List = {
@@ -157,6 +159,7 @@ mod.wc.owosightac3List = {
 	"owo_holosight_helper_03",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac3_01",
+	"owo_pu_scope_helper_03",
 }
 mod.wc.add_custom_attachments.owosightac4 = "owosightac4List"
 mod.wc.owosightac4List = {
@@ -164,6 +167,17 @@ mod.wc.owosightac4List = {
 	"owo_holosight_helper_04",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac4_01",
+	"owo_pu_scope_helper_04",
+}
+mod.wc.add_custom_attachments.owosightac5 = "owosightac5List"
+mod.wc.owosightac5List = {
+	"owo_pu_scope_empty",
+	"owo_pu_scope_helper_05",
+}
+mod.wc.add_custom_attachments.owosightac6 = "owosightac6List"
+mod.wc.owosightac6List = {
+	"owo_pu_scope_empty",
+	"owo_pu_scope_helper_06",
 }
 -- SIGHT2
 --[[
@@ -826,7 +840,7 @@ end
 
 -- Barrel: M16 barrels
 -- 		Autoguns
--- 		I stole this from Syn's Aquilon Barrel (barrel and shroud are identical lmao)
+-- 		I stole this from Syn's Aquilon Barrel (barrel and shroud are near identical lmao)
 function mod.owo_m16_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
 		{id = "owo_m16_barrel_a1", name = "OwO M16a1 Barrel 1"},
@@ -970,6 +984,108 @@ function mod.owo_bayonet(variant_id, type)
 		owo_bayonet_03_helper_02 = {
 			model = _item_melee.."/heads/hatchet_head_03", type = "bayonetac2", 
 			mesh_move = false, parent = "bayonet",
+		},
+	})
+end
+
+-- Barrel: Wooden Helbore
+function mod.owo_wood_krieg(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+		{id = "owo_wood_krieg_01", name = "OwO Wooden Helbore 1 (2)"},
+		{id = "owo_wood_krieg_02", name = "OwO Wooden Helbore 2 (3)"},
+		{id = "owo_wood_krieg_03", name = "OwO Wooden Helbore 3 (7)"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelac1" or type, {
+		{id = "owo_wood_krieg_empty", name = "Empty Barrel"},
+		{id = "owo_wood_krieg_ac1_01", name = "OwO Wooden Helbore ac1 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_wood_krieg_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
+		},
+		owo_wood_krieg_02 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
+		},
+		owo_wood_krieg_03 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_ml01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
+		},
+		owo_wood_krieg_empty = {
+			model = "", type = "barrelac1", 
+			mesh_move = false, parent = "barrel"
+		},
+		owo_wood_krieg_ac1_01 = {
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = "barrelac1", 
+			mesh_move = false, parent = "barrel",
+		},
+	})
+
+end
+
+-- Receiver: Helbore Bolt Action
+function mod.owo_bolt_action(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "receiver" or type, {
+		{id = "owo_bolt_helbore_01", name = "OwO Helbore Bolt Action 1"},
+		{id = "owo_bolt_helbore_02", name = "OwO Helbore Bolt Action 2"},
+		{id = "owo_bolt_helbore_03", name = "OwO Helbore Bolt Action 3"},
+		{id = "owo_bolt_helbore_04", name = "OwO Helbore Bolt Action 4"},
+		{id = "owo_bolt_helbore_05", name = "OwO Helbore Bolt Action 5"},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac1" or type, {
+		{id = "owo_bolt_empty", name = "receiverac1 empty"},
+		{id = "owo_bolt_helbore_bolt_01", name = "OwO bolt action bolt"},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac2" or type, {
+		{id = "owo_bolt_empty", name = "receiverac1 empty"},
+		{id = "owo_bolt_helbore_bolt_02", name = "OwO bolt action bolt shaft"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_bolt_helbore_01 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_01", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		owo_bolt_helbore_02 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_02", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		-- WHY IS THERE NO 3
+		owo_bolt_helbore_03 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_04", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		owo_bolt_helbore_04 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_05", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		owo_bolt_helbore_05 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_ml01", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
+		},
+		owo_bolt_empty = {
+			model = "", type = "receiverac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- grippy part
+		owo_bolt_helbore_bolt_01 = {
+			model = _item_melee.."/grips/combat_knife_grip_07", type = "receiverac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- the shaft
+		owo_bolt_helbore_bolt_02 = {
+			model = _item_melee.."/grips/combat_knife_grip_01", type = "receiverac2", 
+			mesh_move = false, parent = "receiver"
 		},
 	})
 end
@@ -1131,108 +1247,6 @@ function mod.owo_holosight(variant_id, type)
 	})
 end
 
--- Barrel: Wooden Helbore
-function mod.owo_wood_krieg(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		{id = "owo_wood_krieg_01", name = "OwO Wooden Helbore 1 (2)"},
-		{id = "owo_wood_krieg_02", name = "OwO Wooden Helbore 2 (3)"},
-		{id = "owo_wood_krieg_03", name = "OwO Wooden Helbore 3 (7)"},
-	})
-	mod.inject_attachments_owo(variant_id, "barrelac1" or type, {
-		{id = "owo_wood_krieg_empty", name = "Empty Barrel"},
-		{id = "owo_wood_krieg_ac1_01", name = "OwO Wooden Helbore ac1 1"},
-	})
-
-	mod.inject_models(variant_id, {
-		owo_wood_krieg_01 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = "barrel", 
-			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
-		},
-		owo_wood_krieg_02 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = "barrel", 
-			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
-		},
-		owo_wood_krieg_03 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_ml01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
-		},
-		owo_wood_krieg_empty = {
-			model = "", type = "barrelac1", 
-			mesh_move = false, parent = "barrel"
-		},
-		owo_wood_krieg_ac1_01 = {
-			model = _item_ranged.."/handles/combat_blade_handle_01", type = "barrelac1", 
-			mesh_move = false, parent = "barrel",
-		},
-	})
-
-end
-
--- Receiver: Helbore Bolt Action
-function mod.owo_bolt_action(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "receiver" or type, {
-		{id = "owo_bolt_helbore_01", name = "OwO Helbore Bolt Action 1"},
-		{id = "owo_bolt_helbore_02", name = "OwO Helbore Bolt Action 2"},
-		{id = "owo_bolt_helbore_03", name = "OwO Helbore Bolt Action 3"},
-		{id = "owo_bolt_helbore_04", name = "OwO Helbore Bolt Action 4"},
-		{id = "owo_bolt_helbore_05", name = "OwO Helbore Bolt Action 5"},
-	})
-	mod.inject_attachments_owo(variant_id, "receiverac1" or type, {
-		{id = "owo_bolt_empty", name = "receiverac1 empty"},
-		{id = "owo_bolt_helbore_bolt_01", name = "OwO bolt action bolt"},
-	})
-	mod.inject_attachments_owo(variant_id, "receiverac2" or type, {
-		{id = "owo_bolt_empty", name = "receiverac1 empty"},
-		{id = "owo_bolt_helbore_bolt_02", name = "OwO bolt action bolt shaft"},
-	})
-
-	mod.inject_models(variant_id, {
-		owo_bolt_helbore_01 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_01", type = "receiver", 
-			mesh_move = false,
-			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
-		},
-		owo_bolt_helbore_02 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_02", type = "receiver", 
-			mesh_move = false,
-			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
-		},
-		-- WHY IS THERE NO 3
-		owo_bolt_helbore_03 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_04", type = "receiver", 
-			mesh_move = false,
-			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
-		},
-		owo_bolt_helbore_04 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_05", type = "receiver", 
-			mesh_move = false,
-			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
-		},
-		owo_bolt_helbore_05 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_ml01", type = "receiver", 
-			mesh_move = false,
-			automatic_equip = {receiverac1 = "owo_bolt_helbore_bolt_01", receiverac2 = "owo_bolt_helbore_bolt_02"}
-		},
-		owo_bolt_empty = {
-			model = "", type = "receiverac1", 
-			mesh_move = false, parent = "receiver"
-		},
-		-- grippy part
-		owo_bolt_helbore_bolt_01 = {
-			model = _item_melee.."/grips/combat_knife_grip_07", type = "receiverac1", 
-			mesh_move = false, parent = "receiver"
-		},
-		-- the shaft
-		owo_bolt_helbore_bolt_02 = {
-			model = _item_melee.."/grips/combat_knife_grip_01", type = "receiverac2", 
-			mesh_move = false, parent = "receiver"
-		},
-	})
-end
-
 -- Sight: Rear sights with flip up
 function mod.owo_rear_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
@@ -1343,6 +1357,80 @@ function mod.owo_underbarrel_gl(variant_id, type)
 			mesh_move = false, parent = "bayonet"
 		},
 	})
+end
+
+-- Sight: Soviet PU scope
+function mod.owo_pu_scope(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "sight" or type, {
+		{id = "owo_pu_scope_01", name = "OwO Soviet PU Scope 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope_helper_01", name = "PU Scope'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac2" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope_helper_02", name = "PU Scope'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac3" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope_helper_03", name = "PU Scope'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac4" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope_helper_04", name = "PU Scope'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac5" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope_helper_05", name = "PU Scope'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac6" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope_helper_06", name = "PU Scope'vesa"},
+	})
+	
+	mod.inject_models(variant_id, {
+		owo_pu_scope_01 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_pu_scope_helper_01", owosightac2 = "owo_pu_scope_helper_02",
+				owosightac3 = "owo_pu_scope_helper_03", owosightac4 = "owo_pu_scope_helper_04",
+				owosightac5 = "owo_pu_scope_helper_05", owosightac6 = "owo_pu_scope_helper_06",
+			}
+		},
+		owo_pu_scope_empty = {
+			model = "", type = "owosightac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_pu_scope_helper_01 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "owosightac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- Crosshair
+		owo_pu_scope_helper_02 = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "owosightac2", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_pu_scope_helper_03 = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "owosightac3", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_pu_scope_helper_04 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "owosightac4", 
+			mesh_move = false, parent = "sight"
+		},
+		-- Knobs
+		owo_pu_scope_helper_05 = {
+			model = _item_melee.."/pommels/shovel_pommel_01", type = "owosightac5", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_pu_scope_helper_06 = {
+			model = _item_melee.."/pommels/shovel_pommel_01", type = "owosightac6", 
+			mesh_move = false, parent = "sight"
+		},
+	})
+	
 end
 
 
