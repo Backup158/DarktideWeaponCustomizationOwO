@@ -490,7 +490,13 @@ function mod.owo_m16_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
 		{id = "owo_m16_barrel_a1", name = "OwO M16a1 Barrel 1"},
 		{id = "owo_m16_barrel_a1_02", name = "OwO M16a1 Barrel 2"},
-		{id = "owo_m16_barrel_a2", name = "OwO M16a2 Barrel 1"},
+		{id = "owo_m16_barrel_a2", name = "OwO M16a2 Barrel"},
+		{id = "owo_m16_barrel_t_a1", name = "OwO M16a1 Barrel (Tall Post) 1"},
+		{id = "owo_m16_barrel_t_a1_02", name = "OwO M16a1 Barrel (Tall Post) 2"},
+		{id = "owo_m16_barrel_t_a2", name = "OwO M16a2 Barrel (Tall Post)"},
+		{id = "owo_m16_barrel_n_a1", name = "OwO M16a1 Barrel (No Post) 1"},
+		{id = "owo_m16_barrel_n_a1_02", name = "OwO M16a1 Barrel (No Post) 2"},
+		{id = "owo_m16_barrel_n_a2", name = "OwO M16a2 Barrel (No Post)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
 		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud"},
@@ -526,6 +532,50 @@ function mod.owo_m16_barrel(variant_id, type)
 		owo_m16_barrel_a1_02 = {
 			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
 			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+			}
+		},
+		owo_m16_barrel_t_a1 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+				barrelshroudac3 = "owo_m16_barrelshroudac3_a1"
+			}
+		},
+		owo_m16_barrel_t_a2 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+			}
+		},
+		owo_m16_barrel_t_a1_02 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+			}
+		},
+		owo_m16_barrel_n_a1 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver", hide_mesh = {{'barrelshroudac2', 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+				barrelshroudac3 = "owo_m16_barrelshroudac3_a1"
+			}
+		},
+		owo_m16_barrel_n_a2 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver", hide_mesh = {{'barrelshroudac2', 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
+				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+			}
+		},
+		owo_m16_barrel_n_a1_02 = {
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
+			mesh_move = false, parent = "receiver", hide_mesh = {{'barrelshroudac2', 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 			}

@@ -221,15 +221,29 @@ mod.inject_fixes(this_variant, {
     -- basically the same as syn's aquilon barrel
 	-- ######
     -- Iags
-    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2",
+    --      Barrels need to be aligned for each type of receiver >:(
+    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2",
             "!receiver_03", "!receiver_06", "!receiver_07", "!receiver_08",
             "!receiver_02", "!receiver_04", "!receiver_05", "!receiver_09",
         },
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
-        -- Front Post
+    },
+    --      Front Post
+    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2",
+            "!receiver_03", "!receiver_06", "!receiver_07", "!receiver_08",
+            "!receiver_02", "!receiver_04", "!receiver_05", "!receiver_09",
+        },
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.092),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.27, 0.47) },
     },
+    --      Front Post (Tall)
+    {   dependencies = { "owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2",
+            "!receiver_03", "!receiver_06", "!receiver_07", "!receiver_08",
+            "!receiver_02", "!receiver_04", "!receiver_05", "!receiver_09",
+        },
+        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.108),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.355, 0.47) },
+    },
+    --      A1 1 barrel is the only one with a sloped grip at the bottom
     {   dependencies = { "owo_m16_barrel_a1",
             "!receiver_03", "!receiver_06", "!receiver_07", "!receiver_08",
             "!receiver_02", "!receiver_04", "!receiver_05", "!receiver_09",
@@ -255,13 +269,23 @@ mod.inject_fixes(this_variant, {
         barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
     -- Brautos
-    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2",
+    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2",
             "receiver_03|receiver_06|receiver_07|receiver_08",
         },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1)},
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0.03),       rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.646, 0.092),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.27, 0.47) },
+    },
+    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2",
+            "receiver_03|receiver_06|receiver_07|receiver_08",
+        },
+        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.646, 0.092),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.27, 0.47) },
+    },
+    {   dependencies = { "owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2",
+            "receiver_03|receiver_06|receiver_07|receiver_08",
+        },
+        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.646, 0.102),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.355, 0.47) },
     },
     {   dependencies = { "owo_m16_barrel_a1",
             "receiver_03|receiver_06|receiver_07|receiver_08"
@@ -273,19 +297,30 @@ mod.inject_fixes(this_variant, {
             "receiver_03|receiver_06|receiver_07|receiver_08"
         },
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.305, 0.064),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1.9, 2.388, 1.07) },
+        barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_m16_barrel_a2",
             "receiver_03|receiver_06|receiver_07|receiver_08"
         },
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.305, 0.064),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(2.188, 2.388, 1.5) },
+        barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Headhunters (Vigilants)
-    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2",
+    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2",
             "receiver_02|receiver_04|receiver_05|receiver_09",
         },
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
+    },
+    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2",
+            "receiver_02|receiver_04|receiver_05|receiver_09",
+        },
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.741, 0.098),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.27, 0.47) },
+    },
+    {   dependencies = { "owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2",
+            "receiver_02|receiver_04|receiver_05|receiver_09",
+        },
+        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.741, 0.108),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.355, 0.47) },
     },
     {   dependencies = { "owo_m16_barrel_a1",
             "receiver_02|receiver_04|receiver_05|receiver_09"
