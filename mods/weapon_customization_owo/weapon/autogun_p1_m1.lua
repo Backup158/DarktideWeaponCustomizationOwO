@@ -413,17 +413,17 @@ mod.inject_fixes(this_variant, {
 	-- Sight: M16 Sights
 	-- ######
 	{	dependencies = {"owo_m16_sight_01|owo_m16_sight_02"},
-        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0473), rotation = vector3_box(0, 0, 0)},
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0473), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =   { position = vector3_box(0, -0.00015, -0.0483), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.00015, -0.0483), rotation = vector3_box(0, 0, 0)},
         sight =       {offset = true, position = vector3_box(0, -0.048, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 1, 0.88 ) },
         owosightac1 =    {offset = true, position = vector3_box(0.005, 0.308, 0.114), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.12, 0.15 ) },
         owosightac2 =    {offset = true, position = vector3_box(-0.005, 0.308, 0.114), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.12, 0.15 ) },
         -- rear sight aperture. the peep hole then the 2 bases
         owosightac3 =    {offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
-        owosightac4 =    {offset = true, position = vector3_box(0.003, 0.038, 0.175), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
-        owosightac5 =    {offset = true, position = vector3_box(-0.003, 0.038, 0.175), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
+        owosightac4 =    {offset = true, position = vector3_box(0.003, 0.038, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
+        owosightac5 =    {offset = true, position = vector3_box(-0.003, 0.038, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
         -- windage wheel on the right side of the sight
-        owosightac6 =    {offset = true, position = vector3_box(0.01, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.026 ) },
+        owosightac6 =    {offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.026 ) },
         -- rear elevation wheel on the back base
         owosightac7 =    {offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 90, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
     },
