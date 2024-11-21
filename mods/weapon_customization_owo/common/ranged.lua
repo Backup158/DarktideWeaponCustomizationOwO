@@ -194,17 +194,20 @@ mod.wc.sniper_zoom_levels.lasgun_rifle_elysian_muzzle_01 = 15
 mod.wc.add_custom_attachments.owosight2 = "owosight2List"
 mod.wc.owosight2List = {
 	"owo_holosight_empty",
-	"owo_holosight_sight2_01"
+	"owo_holosight_sight2_01",
+	"owo_pu_scope_riser_01"
 }
 mod.wc.add_custom_attachments.owosight2ac1 = "owosight2ac1List"
 mod.wc.owosight2ac1List = {
 	"owo_holosight_empty",
-	"owo_holosight_sight2_helper_01"
+	"owo_holosight_sight2_helper_01",
+	--"owo_pu_scope2_helper_01",
 }
 mod.wc.add_custom_attachments.owosight2ac2 = "owosight2ac2List"
 mod.wc.owosight2List = {
 	"owo_holosight_empty",
-	"owo_holosight_sight2_helper_02"
+	"owo_holosight_sight2_helper_02",
+	--"owo_pu_scope2_helper_02",
 }
 -- RECEIVER
 mod.wc.add_custom_attachments.receiverac1 = "receiverac1List"
@@ -1388,7 +1391,19 @@ function mod.owo_pu_scope(variant_id, type)
 		{id = "owo_pu_scope_empty", name = "Empty Scope"},
 		{id = "owo_pu_scope_helper_06", name = "PU Scope'vesa"},
 	})
-	
+	mod.inject_attachments_owo(variant_id, "owosight2" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope_riser_01", name = "PU Scope Riser"},
+	})
+	--[[mod.inject_attachments_owo(variant_id, "owosight2ac1" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope2_helper_01", name = "PU Scope Riser'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosight2ac2" or type, {
+		{id = "owo_pu_scope_empty", name = "Empty Scope"},
+		{id = "owo_pu_scope2_helper_02", name = "PU Scope Riser'vesa"},
+	})]]
+
 	mod.inject_models(variant_id, {
 		owo_pu_scope_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
@@ -1397,6 +1412,7 @@ function mod.owo_pu_scope(variant_id, type)
 				owosightac1 = "owo_pu_scope_helper_01", owosightac2 = "owo_pu_scope_helper_02",
 				owosightac3 = "owo_pu_scope_helper_03", owosightac4 = "owo_pu_scope_helper_04",
 				owosightac5 = "owo_pu_scope_helper_05", owosightac6 = "owo_pu_scope_helper_06",
+				owosight2 = "owo_pu_scope_riser_01"
 			}
 		},
 		owo_pu_scope_empty = {
@@ -1429,6 +1445,21 @@ function mod.owo_pu_scope(variant_id, type)
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "owosightac6", 
 			mesh_move = false, parent = "sight"
 		},
+		-- Riser
+		owo_pu_scope_riser_01 = {
+			model = _item_melee.."/grips/falchion_grip_03", type = "owosight2", 
+			mesh_move = false, parent = "receiver",
+			--automatic_equip = { owosight2ac1 = "owo_pu_scope2_helper_01", owosight2ac2 = "owo_pu_scope2_helper_02",}
+		},
+		--[[ Too thick
+		owo_pu_scope2_helper_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "owosight2ac1", 
+			mesh_move = false, parent = "sight",
+		},
+		owo_pu_scope2_helper_02 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "owosight2ac2", 
+			mesh_move = false, parent = "sight",
+		},]]
 	})
 	
 end

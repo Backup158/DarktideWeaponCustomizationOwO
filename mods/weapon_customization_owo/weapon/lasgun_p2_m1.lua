@@ -31,6 +31,9 @@ mod.wc.attachment[this_variant].owosightac3 = {}
 mod.wc.attachment[this_variant].owosightac4 = {}
 mod.wc.attachment[this_variant].owosightac5 = {}
 mod.wc.attachment[this_variant].owosightac6 = {}
+mod.wc.attachment[this_variant].owosight2 = {}
+mod.wc.attachment[this_variant].owosight2ac1 = {}
+mod.wc.attachment[this_variant].owosight2ac2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -233,11 +236,18 @@ mod.inject_fixes(this_variant, {
 		scope_offset =      { position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0)},
 		sight = 	  {offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
 		owosightac1 = {offset = true, position = vector3_box(0, 0.192 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+		-- Crosshair
 		owosightac2 = {offset = true, position = vector3_box(0.017, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.06 ) },
 		owosightac3 = {offset = true, position = vector3_box(-0.017, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.06 ) },
 		owosightac4 = {offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+		-- Knobs
 		owosightac5 = {offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
 		owosightac6 = {offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
+		-- Riser
+		owosight2 = {offset = true, position = vector3_box(0, 0.104, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
+		--[[owosight2ac1 = {offset = true, position = vector3_box(0, 0.0146, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 0.13, 1.15 ) },
+		owosight2ac2 = {offset = true, position = vector3_box(0, 0.024, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 0.13, 1.15 ) },
+		]]
 	},
 
 	-- #########################
@@ -283,7 +293,11 @@ mod.inject_fixes(this_variant, {
 		owosightac4 = {hide_mesh = {     {"owosightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	{	dependencies = {"!owo_pu_scope_01"},
-		owosightac5 = {hide_mesh = {     {"owosightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-		owosightac6 = {hide_mesh = {     {"owosightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		owosightac5 = 	{hide_mesh = {     {"owosightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		owosightac6 = 	{hide_mesh = {     {"owosightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		owosight2 = 	{hide_mesh = {     {"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		--[[owosight2ac1 = 	{hide_mesh = {     {"owosight2ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		owosight2ac2 = 	{hide_mesh = {     {"owosight2ac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		]]
 	},
 })
