@@ -1290,6 +1290,36 @@ function mod.owo_pu_scope(variant_id, type)
 	
 end
 
+-- Sight: M16 Carry Handle
+function mod.owo_m16_sight(variant_id, type)
+	mod.inject_attachments(variant_id, "sight", {
+		{id = "owo_m16_sight_01", name = "OwO M16 Carry Sight 1"},
+		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight 2"},
+	})
+	mod.inject_models(variant_id, {
+		owo_m16_sight_01  = {
+			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = "sight", 
+			mesh_move = false,hide_mesh = {{"sight", 1}}, 
+			automatic_equip = {
+				rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"
+			}
+		},
+		owo_m16_sight_02  = {
+			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_02", type = "sight", 
+			mesh_move = false,hide_mesh = {{"sight", 1}}, 
+			automatic_equip = {
+				rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"
+			}
+		},
+		rlas_sight_01b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = "sight", mesh_move = false,hide_mesh = {{"sight", 1}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
+		rlas_sight_02b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_02", type = "sight", mesh_move = false,hide_mesh = {{"sight", 5}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
+		rlas_sight_03b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_03", type = "sight", mesh_move = false,hide_mesh = {{"sight", 5}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
+		rlas_sight_04b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_04", type = "sight", mesh_move = false,hide_mesh = {{"sight", 4}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
+		rlas_sight_05b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_05", type = "sight", mesh_move = false,hide_mesh = {{"sight", 1}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
+		rlas_sight_06b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_06", type = "sight", mesh_move = false,hide_mesh = {{"sight", 1}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
+	})
+end
+
 -- Magazine: Lasgun Flat
 function mod.owo_lasgun_magazine_flat(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
