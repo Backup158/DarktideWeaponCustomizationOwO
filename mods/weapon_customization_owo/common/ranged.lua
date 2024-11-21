@@ -1007,17 +1007,17 @@ function mod.owo_wood_krieg(variant_id, type)
 		owo_wood_krieg_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = "barrel", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
+			automatic_equip = { barrelac1 = "owo_wood_krieg_ac1_01", }
 		},
 		owo_wood_krieg_02 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = "barrel", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
+			automatic_equip = { barrelac1 = "owo_wood_krieg_ac1_01", }
 		},
 		owo_wood_krieg_03 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_ml01", type = "barrel", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
+			automatic_equip = { barrelac1 = "owo_wood_krieg_ac1_01", }
 		},
 		owo_wood_krieg_empty = {
 			model = "", type = "barrelac1", 
@@ -1284,7 +1284,9 @@ function mod.owo_rear_sight(variant_id, type)
 		owo_rear_sight_02 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "barrel", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac2 = "owo_wood_krieg_ac1_01", }
+			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_01", owosightac2 = "owo_rear_sight_ac2_01",
+			owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
+		}
 		},
 		owo_rear_sight_empty = {
 			model = "", type = "owosightac1", 
