@@ -1250,11 +1250,11 @@ function mod.owo_holosight(variant_id, type)
 	})
 end
 
--- Sight: Rear sights with flip up
+-- Sight: Rear sights with flip up. Ladder Aperture Sights
 function mod.owo_rear_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
-		{id = "owo_rear_sight_01", name = "OwO Rear Flip - Lebel (Down)"},
-		{id = "owo_rear_sight_02", name = "OwO Rear Flip - Lebel (Up)"},
+		{id = "owo_rear_sight_01", name = "OwO Aperture Sight - Lebel (Down)"},
+		{id = "owo_rear_sight_02", name = "OwO Aperture Sight - Lebel (Up)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight"},
@@ -1363,6 +1363,7 @@ function mod.owo_underbarrel_gl(variant_id, type)
 end
 
 -- Sight: Soviet PU scope
+--		Sight rings are too mf fat
 function mod.owo_pu_scope(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_pu_scope_01", name = "OwO Soviet PU Scope 1"},
