@@ -22,7 +22,6 @@ mod.wc.muzzle2List = {
 	"owo_condom_helper_empty",
 	"owo_condom_helper_01",
 }
-
 -- BARREL
 mod.wc.add_custom_attachments.barrelac = "barrelacList"
 mod.wc.barrelacList = {
@@ -749,8 +748,8 @@ function mod.owo_underbarrel_gl(variant_id, type)
 end
 
 -- Receiver: Vertically challenged California Bolter
---		Grip: Already included in MT Plugin
---			Bolter
+--		Grip: Already included in MT Plugin or use fin grip with stock
+--		Bolter
 --[[ Cannot contain:     
 	Pistol grip that protrudes conspicuously beneath the action of the weapon
     Thumbhole stock
@@ -894,6 +893,36 @@ function mod.owo_bolt_action(variant_id, type)
 	})
 end
 
+-- Grip: Fin Grip
+--		Autoguns
+function mod.owo_fin_grip(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "grip" or type, {
+		{id = "owo_fin_grip_01", name = "OwO Fin Grip 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "grip2" or type, {
+		{id = "owo_fin_grip2_empty", name = "OwO Fin Grip empty"},
+		{id = "owo_fin_grip2_01", name = "OwO Fin Grip'vesa 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_fin_grip_01 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = "grip", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				grip2 = "owo_fin_grip2_01"
+			}
+		},
+		owo_fin_grip2_empty = {
+			model = "", type = "grip2", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_fin_grip2_01 = {
+			model = _item_melee.."/blades/combat_blade_blade_02", type = "grip2", 
+			mesh_move = false, parent = "receiver"
+		},
+	})
+end
+
 -- Stock: Straight Grip and Recon Stock
 --		Helbores
 function mod.owo_helbore_gripstock_recon(variant_id,type)
@@ -939,41 +968,6 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 		},
 	})
 end
-
-
-
--- Grip: Fin grip
---		Autoguns
-function mod.owo_fin_grip(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "grip" or type, {
-		{id = "owo_fin_grip_01", name = "OwO Fin Grip 1"},
-	})
-	mod.inject_attachments_owo(variant_id, "grip2" or type, {
-		{id = "owo_fin_grip2_empty", name = "OwO Fin Grip empty"},
-		{id = "owo_fin_grip2_01", name = "OwO Fin Grip'vesa 1"},
-	})
-
-	mod.inject_models(variant_id, {
-		owo_fin_grip_01 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = "grip", 
-			mesh_move = false, parent = "receiver",
-			automatic_equip = {
-				grip2 = "owo_fin_grip2_01"
-			}
-		},
-		owo_fin_grip2_empty = {
-			model = "", type = "grip2", 
-			mesh_move = false, parent = "receiver"
-		},
-		owo_fin_grip2_01 = {
-			model = _item_melee.."/blades/combat_blade_blade_02", type = "grip2", 
-			mesh_move = false, parent = "receiver"
-		},
-	})
-end
-
-
-
 
 -- Sight: EOTech
 --		Autoguns
