@@ -235,7 +235,7 @@ mod.inject_fixes(this_variant, {
             "!receiver_02", "!receiver_04", "!receiver_05", "!receiver_09",
         },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1)},
-        barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.06),     rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1.47, 2.388, 1.63) },
+        barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.066),     rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1.47, 2.748, 1.63) },
         barrelshroudac3 =   { offset = true,    position = vector3_box(0, 0.667, -0.024),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.884, 1.45, 0.5) },
     },
     {   dependencies = { "owo_m16_barrel_a1_02",
@@ -243,7 +243,7 @@ mod.inject_fixes(this_variant, {
             "!receiver_02", "!receiver_04", "!receiver_05", "!receiver_09",
         },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.06), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.9, 2.388, 1.07) },
+        barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.9, 2.388, 1.07) },
         barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
     {   dependencies = { "owo_m16_barrel_a2",
@@ -251,7 +251,7 @@ mod.inject_fixes(this_variant, {
             "!receiver_02", "!receiver_04", "!receiver_05", "!receiver_09",
         },
         flashlight =        { offset = false,   position = vector3_box(0.036, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.06), rotation = vector3_box(-90, 0, 0), scale = vector3_box(2.188, 2.388, 1.5) },
+        barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(2.188, 2.388, 1.5) },
         barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
     -- Brautos
@@ -266,7 +266,7 @@ mod.inject_fixes(this_variant, {
     {   dependencies = { "owo_m16_barrel_a1",
             "receiver_03|receiver_06|receiver_07|receiver_08"
         },
-        barrelshroud =      { offset = true,    position = vector3_box(0, 0.305, 0.064),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1.47, 2.388, 1.63) },
+        barrelshroud =      { offset = true,    position = vector3_box(0, 0.305, 0.066),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1.47, 2.748, 1.63) },
         barrelshroudac3 =   { offset = true,    position = vector3_box(0, 0.589, -0.024),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.884, 1.45, 0.5) },
     },
     {   dependencies = { "owo_m16_barrel_a1_02",
@@ -413,17 +413,17 @@ mod.inject_fixes(this_variant, {
 	-- Sight: M16 Sights
 	-- ######
 	{	dependencies = {"owo_m16_sight_01|owo_m16_sight_02"},
-        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0493), rotation = vector3_box(0, 0, 0)},
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0493), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0473), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0473), rotation = vector3_box(0, 0, 0)},
         sight =       {offset = true, position = vector3_box(0, -0.048, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 1, 0.88 ) },
         owosightac1 =    {offset = true, position = vector3_box(0.005, 0.308, 0.114), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.12, 0.15 ) },
         owosightac2 =    {offset = true, position = vector3_box(-0.005, 0.308, 0.114), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.12, 0.15 ) },
         -- rear sight aperture. the peep hole then the 2 bases
         owosightac3 =    {offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
-        owosightac4 =    {offset = true, position = vector3_box(0.003, 0.038, 0.15), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
-        owosightac5 =    {offset = true, position = vector3_box(-0.003, 0.038, 0.15), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
+        owosightac4 =    {offset = true, position = vector3_box(0.003, 0.038, 0.175), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
+        owosightac5 =    {offset = true, position = vector3_box(-0.003, 0.038, 0.175), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
         -- windage wheel on the right side of the sight
-        owosightac6 =    {offset = true, position = vector3_box(0.01, 0.036, 0.17), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.026 ) },
+        owosightac6 =    {offset = true, position = vector3_box(0.01, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.026 ) },
         -- rear elevation wheel on the back base
         owosightac7 =    {offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 90, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
     },

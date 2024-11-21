@@ -143,6 +143,7 @@ mod.wc.owosightac1List = {
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac1_01",
 	"owo_pu_scope_helper_01",
+	"owo_m16_sight_helper_01",
 }
 mod.wc.add_custom_attachments.owosightac2 = "owosightac2List"
 mod.wc.owosightac2List = {
@@ -151,6 +152,7 @@ mod.wc.owosightac2List = {
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac2_01",
 	"owo_pu_scope_helper_02",
+	"owo_m16_sight_helper_02",
 }
 mod.wc.add_custom_attachments.owosightac3 = "owosightac3List"
 mod.wc.owosightac3List = {
@@ -159,6 +161,7 @@ mod.wc.owosightac3List = {
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac3_01",
 	"owo_pu_scope_helper_03",
+	"owo_m16_sight_helper_03",
 }
 mod.wc.add_custom_attachments.owosightac4 = "owosightac4List"
 mod.wc.owosightac4List = {
@@ -167,19 +170,22 @@ mod.wc.owosightac4List = {
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac4_01",
 	"owo_pu_scope_helper_04",
+	"owo_m16_sight_helper_04",
 }
 mod.wc.add_custom_attachments.owosightac5 = "owosightac5List"
 mod.wc.owosightac5List = {
 	"owo_pu_scope_empty",
 	"owo_pu_scope_helper_05",
+	"owo_m16_sight_helper_05",
 }
 mod.wc.add_custom_attachments.owosightac6 = "owosightac6List"
 mod.wc.owosightac6List = {
 	"owo_pu_scope_empty",
 	"owo_pu_scope_helper_06",
+	"owo_m16_sight_helper_06",
 }
-mod.wc.add_custom_attachments.owosightac6 = "owosightac7List"
-mod.wc.owosightac6List = {
+mod.wc.add_custom_attachments.owosightac7 = "owosightac7List"
+mod.wc.owosightac7List = {
 	"owo_m16_sight_empty",
 	"owo_m16_sight_helper_07",
 }
