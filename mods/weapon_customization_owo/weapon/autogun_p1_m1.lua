@@ -34,6 +34,9 @@ mod.wc.attachment[this_variant].owosightac1 = {}
 mod.wc.attachment[this_variant].owosightac2 = {}
 mod.wc.attachment[this_variant].owosightac3 = {}
 mod.wc.attachment[this_variant].owosightac4 = {}
+mod.wc.attachment[this_variant].owosightac5 = {}
+mod.wc.attachment[this_variant].owosightac6 = {}
+mod.wc.attachment[this_variant].owosightac7 = {}
 mod.wc.attachment[this_variant].owosight2 = {}
 mod.wc.attachment[this_variant].owosight2ac1 = {}
 mod.wc.attachment[this_variant].owosight2ac2 = {}
@@ -52,6 +55,7 @@ mod.owo_bayonet(this_variant, "bayonet")
 mod.owo_holosight(this_variant, "sight")
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_condom(this_variant, "muzzle")
+mod.owo_m16_sight(this_variant, "sight")
 
 -- ############################################
 -- Inject Fixes
@@ -155,6 +159,20 @@ mod.inject_fixes(this_variant, {
     },
 
     -- ######
+	-- Muzzle: CONDOM
+	-- ######
+	{	dependencies = {"owo_condom_01"},
+        muzzle =    {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
+        muzzle2 =   {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
+    },
+    -- the skinny bayonet. sits on muzzle
+    {	dependencies = {"owo_condom_01",
+            "autogun_bayonet_03"
+        },
+        bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
+    },
+
+    -- ######
 	-- Magazine: Jungle Mags
 	-- ######
     {   dependencies = { "owo_jungle_mag_01|owo_jungle_mag_02|owo_jungle_mag_03"},
@@ -210,7 +228,7 @@ mod.inject_fixes(this_variant, {
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
         -- Front Post
-        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.092),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(1, 0.27, 0.47) },
+        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.092),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.27, 0.47) },
     },
     {   dependencies = { "owo_m16_barrel_a1",
             "!receiver_03", "!receiver_06", "!receiver_07", "!receiver_08",
@@ -243,7 +261,7 @@ mod.inject_fixes(this_variant, {
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1)},
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0.03),       rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
-        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.646, 0.092),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(1, 0.27, 0.47) },
+        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.646, 0.092),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.27, 0.47) },
     },
     {   dependencies = { "owo_m16_barrel_a1",
             "receiver_03|receiver_06|receiver_07|receiver_08"
@@ -267,7 +285,7 @@ mod.inject_fixes(this_variant, {
         },
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
-        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.741, 0.098),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(1, 0.27, 0.47) },
+        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.741, 0.098),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.36, 0.27, 0.47) },
     },
     {   dependencies = { "owo_m16_barrel_a1",
             "receiver_02|receiver_04|receiver_05|receiver_09"
@@ -392,18 +410,23 @@ mod.inject_fixes(this_variant, {
     },
 
     -- ######
-	-- Muzzle: CONDOM
+	-- Sight: M16 Sights
 	-- ######
-	{	dependencies = {"owo_condom_01"},
-		muzzle =    {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
-		muzzle2 =   {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
-	},
-	-- the skinny bayonet. sits on muzzle
-	{	dependencies = {"owo_condom_01",
-			"autogun_bayonet_03"
-		},
-		bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
-	},
+	{	dependencies = {"owo_m16_sight_01|owo_m16_sight_02"},
+        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0493), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0493), rotation = vector3_box(0, 0, 0)},
+        sight =       {offset = true, position = vector3_box(0, -0.048, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 1, 0.88 ) },
+        owosightac1 =    {offset = true, position = vector3_box(0.005, 0.308, 0.114), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.12, 0.15 ) },
+        owosightac2 =    {offset = true, position = vector3_box(-0.005, 0.308, 0.114), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.12, 0.15 ) },
+        -- rear sight aperture. the peep hole then the 2 bases
+        owosightac3 =    {offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
+        owosightac4 =    {offset = true, position = vector3_box(0.003, 0.038, 0.15), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
+        owosightac5 =    {offset = true, position = vector3_box(-0.003, 0.038, 0.15), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
+        -- windage wheel on the right side of the sight
+        owosightac6 =    {offset = true, position = vector3_box(0.01, 0.036, 0.17), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.026 ) },
+        -- rear elevation wheel on the back base
+        owosightac7 =    {offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 90, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+    },
 
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
@@ -513,7 +536,8 @@ mod.inject_fixes(this_variant, {
     -- Sights
     {   dependencies = {"!owo_holosight_01_01", "!owo_holosight_01_02", "!owo_holosight_01_03",
             "!owo_holosight_02_01", "!owo_holosight_02_02", "!owo_holosight_02_03",
-            "!owo_holosight_03_01", "!owo_holosight_03_02", "!owo_holosight_03_03"
+            "!owo_holosight_03_01", "!owo_holosight_03_02", "!owo_holosight_03_03",
+            "!owo_m16_sight_01", "!owo_m16_sight_02",
         },
         owosightac1 = { hide_mesh = {{"owosightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosightac2 = { hide_mesh = {{"owosightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
@@ -527,5 +551,11 @@ mod.inject_fixes(this_variant, {
         owosight2 = { hide_mesh = {{"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosight2ac1 = { hide_mesh = {{"owosight2ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosight2ac2 = { hide_mesh = {{"owosight2ac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = { "!owo_m16_sight_01", "!owo_m16_sight_02",
+        },
+        owosightac5 = { hide_mesh = {{"owosightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        owosightac6 = { hide_mesh = {{"owosightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        owosightac7 = { hide_mesh = {{"owosightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })

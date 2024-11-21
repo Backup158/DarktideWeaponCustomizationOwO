@@ -178,6 +178,11 @@ mod.wc.owosightac6List = {
 	"owo_pu_scope_empty",
 	"owo_pu_scope_helper_06",
 }
+mod.wc.add_custom_attachments.owosightac6 = "owosightac7List"
+mod.wc.owosightac6List = {
+	"owo_m16_sight_empty",
+	"owo_m16_sight_helper_07",
+}
 -- SIGHT2
 --[[
 mod.table_append(mod.wc.sights, {
@@ -1292,31 +1297,95 @@ end
 
 -- Sight: M16 Carry Handle
 function mod.owo_m16_sight(variant_id, type)
-	mod.inject_attachments(variant_id, "sight", {
+	mod.inject_attachments_owo(variant_id, "sight", {
 		{id = "owo_m16_sight_01", name = "OwO M16 Carry Sight 1"},
 		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight 2"},
 	})
+	mod.inject_attachments_owo(variant_id, "owosightac1", {
+		{id = "owo_m16_sight_empty", name = "Empty Sight"},
+		{id = "owo_m16_sight_helper_01", name = "OwO M16 Carry Sight'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac2", {
+		{id = "owo_m16_sight_empty", name = "Empty Sight"},
+		{id = "owo_m16_sight_helper_02", name = "OwO M16 Carry Sight'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac3", {
+		{id = "owo_m16_sight_empty", name = "Empty Sight"},
+		{id = "owo_m16_sight_helper_03", name = "OwO M16 Carry Sight'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac4", {
+		{id = "owo_m16_sight_empty", name = "Empty Sight"},
+		{id = "owo_m16_sight_helper_04", name = "OwO M16 Carry Sight'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac5", {
+		{id = "owo_m16_sight_empty", name = "Empty Sight"},
+		{id = "owo_m16_sight_helper_05", name = "OwO M16 Carry Sight'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac6", {
+		{id = "owo_m16_sight_empty", name = "Empty Sight"},
+		{id = "owo_m16_sight_helper_06", name = "OwO M16 Carry Sight'vesa"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac7", {
+		{id = "owo_m16_sight_empty", name = "Empty Sight"},
+		{id = "owo_m16_sight_helper_07", name = "OwO M16 Carry Sight'vesa"},
+	})
+
 	mod.inject_models(variant_id, {
 		owo_m16_sight_01  = {
 			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = "sight", 
-			mesh_move = false,hide_mesh = {{"sight", 1}}, 
-			automatic_equip = {
-				rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"
+			mesh_move = false, parent = 'receiver', hide_mesh = {{"sight", 1}}, -- hiding the stock. i stole this from MT
+			automatic_equip = { owosightac1 = "owo_m16_sight_helper_01", owosightac2 = "owo_m16_sight_helper_02", 
+				owosightac3 = "owo_m16_sight_helper_03", 
+				owosightac4 = "owo_m16_sight_helper_04", owosightac5 = "owo_m16_sight_helper_05", 
+				owosightac6 = "owo_m16_sight_helper_06", owosightac7 = "owo_m16_sight_helper_07", 
 			}
 		},
 		owo_m16_sight_02  = {
 			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_02", type = "sight", 
-			mesh_move = false,hide_mesh = {{"sight", 1}}, 
-			automatic_equip = {
-				rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"
+			mesh_move = false, parent = 'receiver', hide_mesh = {{"sight", 5}},
+			automatic_equip = { owosightac1 = "owo_m16_sight_helper_01", owosightac2 = "owo_m16_sight_helper_02", 
+				owosightac3 = "owo_m16_sight_helper_03", 
+				owosightac4 = "owo_m16_sight_helper_04", owosightac5 = "owo_m16_sight_helper_05", 
+				owosightac6 = "owo_m16_sight_helper_06", owosightac7 = "owo_m16_sight_helper_07", 
 			}
 		},
-		rlas_sight_01b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = "sight", mesh_move = false,hide_mesh = {{"sight", 1}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
-		rlas_sight_02b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_02", type = "sight", mesh_move = false,hide_mesh = {{"sight", 5}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
-		rlas_sight_03b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_03", type = "sight", mesh_move = false,hide_mesh = {{"sight", 5}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
-		rlas_sight_04b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_04", type = "sight", mesh_move = false,hide_mesh = {{"sight", 4}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
-		rlas_sight_05b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_05", type = "sight", mesh_move = false,hide_mesh = {{"sight", 1}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
-		rlas_sight_06b =      {model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_06", type = "sight", mesh_move = false,hide_mesh = {{"sight", 1}}, automatic_equip = {rail= "rail_default",lens = "scope_lens_default", lens_2 = "scope_lens_default", sightac2 = "sightac_reconiron"}},
+		owo_m16_sight_empty = {
+			model = "", type = 'owosightac1',
+			mesh_move = false, parent = 'sight'
+		},
+		-- Carry handle side rails
+		owo_m16_sight_helper_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = 'owosightac1',
+			mesh_move = false, parent = 'sight'
+		},
+		owo_m16_sight_helper_02 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = 'owosightac2',
+			mesh_move = false, parent = 'sight'
+		},
+		-- Rear sight aperture
+		owo_m16_sight_helper_03 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = 'owosightac3',
+			mesh_move = false, parent = 'sight'
+		},
+		owo_m16_sight_helper_04 = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = 'owosightac4',
+			mesh_move = false, parent = 'sight'
+		},
+		owo_m16_sight_helper_05 = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = 'owosightac5',
+			mesh_move = false, parent = 'sight'
+		},
+		-- Windage Wheel
+		owo_m16_sight_helper_06 = {
+			model = _item_melee.."/heads/human_power_maul_head_05", type = 'owosightac6',
+			mesh_move = false, parent = 'sight'
+		},
+		-- Rear Elevation Wheel
+		-- seems to be a newer addition on a2+
+		owo_m16_sight_helper_07 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = 'owosightac7',
+			mesh_move = false, parent = 'sight'
+		},
 	})
 end
 
