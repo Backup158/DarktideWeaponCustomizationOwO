@@ -231,7 +231,7 @@ mod.inject_fixes(this_variant, {
 	-- ######
 	-- Sight: SOVIET PU SCOPE
 	-- ######
-	{	dependencies = {"owo_pu_scope_01",},
+	{	dependencies = {"owo_pu_scope_01|owo_pu_scope_02",},
 		no_scope_offset =   { position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0)},
 		scope_offset =      { position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0)},
 		sight = 	  {offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
@@ -248,6 +248,13 @@ mod.inject_fixes(this_variant, {
 		--[[owosight2ac1 = {offset = true, position = vector3_box(0, 0.0146, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 0.13, 1.15 ) },
 		owosight2ac2 = {offset = true, position = vector3_box(0, 0.024, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 0.13, 1.15 ) },
 		]]
+	},
+	-- Riser alightment
+	{	dependencies = {"owo_pu_scope_01",},
+		owosight2 = {offset = true, position = vector3_box(0, 0.104, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
+	},
+	{	dependencies = {"owo_pu_scope_02",},
+		owosight2 = {offset = true, position = vector3_box(0, 0.064, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.67, 0.4, 0.5 ) },
 	},
 
 	-- #########################
@@ -286,13 +293,13 @@ mod.inject_fixes(this_variant, {
 		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	-- Sights
-	{	dependencies = {"!owo_rear_sight_01", "!owo_rear_sight_02", "!owo_pu_scope_01"},
+	{	dependencies = {"!owo_rear_sight_01", "!owo_rear_sight_02", "!owo_pu_scope_01", "!owo_pu_scope_02"},
 		owosightac1 = {hide_mesh = {     {"owosightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		owosightac2 = {hide_mesh = {     {"owosightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		owosightac3 = {hide_mesh = {     {"owosightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		owosightac4 = {hide_mesh = {     {"owosightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
-	{	dependencies = {"!owo_pu_scope_01"},
+	{	dependencies = {"!owo_pu_scope_01", "!owo_pu_scope_02"},
 		owosightac5 = 	{hide_mesh = {     {"owosightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		owosightac6 = 	{hide_mesh = {     {"owosightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		owosight2 = 	{hide_mesh = {     {"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},

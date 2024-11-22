@@ -1305,7 +1305,8 @@ end
 --		Sight rings are too mf fat
 function mod.owo_pu_scope(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
-		{id = "owo_pu_scope_01", name = "OwO Soviet PU Scope 1"},
+		{id = "owo_pu_scope_01", name = "OwO Soviet PU Scope, Riser 1"},
+		{id = "owo_pu_scope_02", name = "OwO Soviet PU Scope, Riser 1b"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_pu_scope_empty", name = "Empty Scope"},
@@ -1346,6 +1347,16 @@ function mod.owo_pu_scope(variant_id, type)
 
 	mod.inject_models(variant_id, {
 		owo_pu_scope_01 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_pu_scope_helper_01", owosightac2 = "owo_pu_scope_helper_02",
+				owosightac3 = "owo_pu_scope_helper_03", owosightac4 = "owo_pu_scope_helper_04",
+				owosightac5 = "owo_pu_scope_helper_05", owosightac6 = "owo_pu_scope_helper_06",
+				owosight2 = "owo_pu_scope_riser_01"
+			}
+		},
+		owo_pu_scope_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
@@ -1408,7 +1419,7 @@ end
 function mod.owo_m16_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight", {
 		{id = "owo_m16_sight_01", name = "OwO M16 Carry Sight"},
-		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight (No Rear Wheel)"},
+		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight (No Rear Elevation Wheel)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1", {
 		{id = "owo_m16_sight_empty", name = "Empty Sight"},
@@ -1484,12 +1495,12 @@ function mod.owo_m16_sight(variant_id, type)
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = 'owosightac5',
 			mesh_move = false, parent = 'sight'
 		},
-		-- Windage Drum
+		-- Windage Knob
 		owo_m16_sight_helper_06 = {
 			model = _item_melee.."/heads/human_power_maul_head_05", type = 'owosightac6',
 			mesh_move = false, parent = 'sight'
 		},
-		-- Rear Elevation Wheel
+		-- Rear Elevation Knob
 		-- seems to be a newer addition on a2+
 		owo_m16_sight_helper_07 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = 'owosightac7',

@@ -436,9 +436,9 @@ mod.inject_fixes(this_variant, {
         owosightac3 =    {offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
         owosightac4 =    {offset = true, position = vector3_box(0.001, 0.038, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
         owosightac5 =    {offset = true, position = vector3_box(-0.003, 0.038, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
-        -- windage drum on the right side of the sight
+        -- Windage Knob on the right side of the sight
         owosightac6 =    {offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
-        -- rear elevation wheel in the base, below the rear sight
+        -- Rear Elevation Knob in the base, below the rear sight
         owosightac7 =    {offset = true, position = vector3_box(0, 0.002, 0.154), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
     },
 
