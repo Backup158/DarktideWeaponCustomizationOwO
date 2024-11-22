@@ -243,11 +243,6 @@ mod.inject_fixes(this_variant, {
 		-- Knobs
 		owosightac5 = {offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
 		owosightac6 = {offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
-		-- Riser
-		owosight2 = {offset = true, position = vector3_box(0, 0.104, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
-		--[[owosight2ac1 = {offset = true, position = vector3_box(0, 0.0146, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 0.13, 1.15 ) },
-		owosight2ac2 = {offset = true, position = vector3_box(0, 0.024, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 0.13, 1.15 ) },
-		]]
 	},
 	-- Riser alightment
 	{	dependencies = {"owo_pu_scope_01",},

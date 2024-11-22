@@ -58,6 +58,7 @@ mod.owo_holosight(this_variant, "sight")
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_condom(this_variant, "muzzle")
 mod.owo_m16_sight(this_variant, "sight")
+mod.owo_pu_scope(this_variant, "sight")
 
 -- ############################################
 -- Inject Fixes
@@ -443,6 +444,30 @@ mod.inject_fixes(this_variant, {
     },
 
     -- ######
+	-- Sight: SOVIET PU SCOPE
+	-- ######
+	{	dependencies = {"owo_pu_scope_01|owo_pu_scope_02"},
+        no_scope_offset =   { position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0)},
+        sight = 	  {offset = true, position = vector3_box(0, -0.09, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+        owosightac1 = {offset = true, position = vector3_box(0, 0.106 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+        -- Crosshair
+        owosightac2 = {offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+        owosightac3 = {offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+        owosightac4 = {offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+        -- Knobs
+        owosightac5 = {offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
+        owosightac6 = {offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
+    },
+    -- Riser alightment
+    {	dependencies = {"owo_pu_scope_01"},
+        owosight2 = {offset = true, position = vector3_box(0, 0.016, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
+    },
+    {	dependencies = {"owo_pu_scope_02"},
+        owosight2 = {offset = true, position = vector3_box(0, -0.036, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.67, 0.4, 0.5 ) },
+    },
+
+    -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
 	{	dependencies = {"owo_m203"},
@@ -525,7 +550,7 @@ mod.inject_fixes(this_variant, {
         bayonetac4 = {hide_mesh = {     {"bayonetac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
     -- Barrels
-    -- a2 barrel doesn't use barrelshroudac3, but that's covered in the function
+    --      a2 barrel doesn't use barrelshroudac3, but that's covered in the function
     {   dependencies = {"!owo_dreg_barrel_01", 
             "!owo_m16_barrel_a1", "!owo_m16_barrel_a1_02", "!owo_m16_barrel_a2",
             "!owo_m16_barrel_t_a1", "!owo_m16_barrel_t_a1_02", "!owo_m16_barrel_t_a2",
@@ -543,7 +568,7 @@ mod.inject_fixes(this_variant, {
         barrelshroudac5 = {hide_mesh = {{"barrelshroudac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
         barrelshroudac6 = {hide_mesh = {{"barrelshroudac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
-    -- No post versions
+    --      No post versions
     {   dependencies = {"owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
         },
         barrelshroudac2 = {hide_mesh = {{"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
@@ -585,9 +610,16 @@ mod.inject_fixes(this_variant, {
         owosight2ac2 = { hide_mesh = {{"owosight2ac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "!owo_m16_sight_01", "!owo_m16_sight_02",
+            "!owo_pu_scope_01", "!owo_pu_scope_02",
         },
         owosightac5 = { hide_mesh = {{"owosightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosightac6 = { hide_mesh = {{"owosightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = { "!owo_m16_sight_01", "!owo_m16_sight_02",
+        },
         owosightac7 = { hide_mesh = {{"owosightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
+    {	dependencies = {"!owo_pu_scope_01", "!owo_pu_scope_02"},
+		owosight2 = 	{hide_mesh = {     {"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
 })
