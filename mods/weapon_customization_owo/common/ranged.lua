@@ -46,6 +46,12 @@ mod.wc.barrelshroudList = {
 	"owo_m16_barrelshroud_a1",
 	"owo_m16_barrelshroud_a1_02",
 	"owo_m16_barrelshroud_a2",
+	"owo_m16_barrelshroud_t_a1",
+	"owo_m16_barrelshroud_t_a1_02",
+	"owo_m16_barrelshroud_t_a2",
+	"owo_m16_barrelshroud_n_a1",
+	"owo_m16_barrelshroud_n_a1_02",
+	"owo_m16_barrelshroud_n_a2",
 }
 --[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
 mod.wc.barrelshroudacList = {
@@ -66,10 +72,22 @@ mod.wc.barrelshroudac3List = {
 	"owo_m16_empty",
 	"owo_m16_barrelshroudac3_a1",
 }
-mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac4List"
+mod.wc.add_custom_attachments.barrelshroudac4 = "barrelshroudac4List"
 mod.wc.barrelshroudac4List = {
 	"owo_dreg_shroud_empty",
-	"owo_dreg_shroudac4_01"
+	"owo_dreg_shroudac4_01",
+	"owo_m16_sight_empty",
+	"owo_m16_sight_helper_04",
+}
+mod.wc.add_custom_attachments.barrelshroudac5 = "barrelshroudac5List"
+mod.wc.barrelshroudac5List = {
+	"owo_m16_sight_empty",
+	"owo_m16_sight_helper_05",
+}
+mod.wc.add_custom_attachments.barrelshroudac6 = "barrelshroudac6List"
+mod.wc.barrelshroudac6List = {
+	"owo_m16_sight_empty",
+	"owo_m16_sight_helper_06",
 }
 -- BAYONET
 mod.wc.add_custom_attachments.bayonetac1 = "bayonetac1List"
@@ -512,6 +530,18 @@ function mod.owo_m16_barrel(variant_id, type)
 		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud"},
 		{id = "owo_m16_barrelshroudac3_a1", name = "OwO M16a1 Barrel Shroudac3"},
 	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac4" or type, {
+		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud"},
+		{id = "owo_m16_barrelshroudac4_01", name = "OwO M16a1 Barrel Shroudac3"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac5" or type, {
+		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud"},
+		{id = "owo_m16_barrelshroudac5_01", name = "OwO M16a1 Barrel Shroudac3"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac6" or type, {
+		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud"},
+		{id = "owo_m16_barrelshroudac6_01", name = "OwO M16a1 Barrel Shroudac3"},
+	})
 
 	mod.inject_models(variant_id, {
 		owo_m16_barrel_a1 = {
@@ -519,7 +549,8 @@ function mod.owo_m16_barrel(variant_id, type)
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
-				barrelshroudac3 = "owo_m16_barrelshroudac3_a1"
+				barrelshroudac3 = "owo_m16_barrelshroudac3_a1",
+				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_a2 = {
@@ -527,6 +558,7 @@ function mod.owo_m16_barrel(variant_id, type)
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_a1_02 = {
@@ -534,6 +566,7 @@ function mod.owo_m16_barrel(variant_id, type)
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_t_a1 = {
@@ -541,7 +574,8 @@ function mod.owo_m16_barrel(variant_id, type)
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
-				barrelshroudac3 = "owo_m16_barrelshroudac3_a1"
+				barrelshroudac3 = "owo_m16_barrelshroudac3_a1",
+				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_t_a2 = {
@@ -549,6 +583,7 @@ function mod.owo_m16_barrel(variant_id, type)
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_t_a1_02 = {
@@ -556,6 +591,7 @@ function mod.owo_m16_barrel(variant_id, type)
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
+				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_n_a1 = {
@@ -596,12 +632,29 @@ function mod.owo_m16_barrel(variant_id, type)
 			model = _item_melee.."/grips/hatchet_grip_05", type = "barrelshroud", 
 			mesh_move = false, parent = "receiver"
 		},
+		-- Front Post
 		owo_m16_barrelshroudac2_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "barrelshroudac2", 
 			mesh_move = false, parent = "receiver"
 		},
+		-- helper a1 grip
 		owo_m16_barrelshroudac3_a1 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "barrelshroudac2", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "barrelshroudac3", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- Front Post Sights
+		-- middle then sides
+		owo_m16_barrelshroudac4_01 = {
+			-- why tf is it like this???
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "barrelshroudac4", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_barrelshroudac5_01 = {
+			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "barrelshroudac5", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_barrelshroudac6_01 = {
+			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "barrelshroudac6", 
 			mesh_move = false, parent = "receiver"
 		},
 	})
