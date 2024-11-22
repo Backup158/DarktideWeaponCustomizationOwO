@@ -281,15 +281,17 @@ function mod.owo_grip_laser(variant_id, type)
 					i tried adding a manual check for this one too, but it's not working
 				the preview part is handled by weapon_customization/extensions/flashlight_extension.lua
 					added a manual check. also didn't work
+					Adding an additional entry to the templates DID work, but only for the flashlight light, not the beam
 				there also seems to be references in wc/patches/ewapon_templates.lua (CHECK THIS) and wc/weapon_customization_anchors.lua (prob jsut for position)
 					ok i checked it. it's just calling the extension
 			]]
+			name = "owo_grip_laser_01",
 			model = _item_ranged.."/flashlights/flashlight_05", type = "flashlight", 
 			data = { {loc_flashlight_light_cone = 2}, 
 				{loc_flashlight_intensity = 2}, 
 				{loc_flashlight_battery = 2}
 			},
-			mesh_move = false,
+			mesh_move = false, parent = "receiver"
 		},
 	})
 end
