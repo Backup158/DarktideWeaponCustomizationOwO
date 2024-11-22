@@ -307,7 +307,7 @@ mod.inject_fixes(this_variant, {
             "receiver_02|receiver_04|receiver_05|receiver_09",
         },
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
+        trinket_hook =      { offset = true,    position = vector3_box(0, 0.022, -0.166), scale = vector3_box(1, 1, 1)},
     },
     {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_t_a1|owo_m16_barrel_n_a1",
             "receiver_02|receiver_04|receiver_05|receiver_09"
@@ -440,7 +440,7 @@ mod.inject_fixes(this_variant, {
         -- Windage Knob on the right side of the sight
         owosightac6 =    {offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
         -- Rear Elevation Knob in the base, below the rear sight
-        owosightac7 =    {offset = true, position = vector3_box(0, 0.002, 0.154), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
+        owosightac7 =    {offset = true, position = vector3_box(0, 0.012, 0.146), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
     },
 
     -- ######
