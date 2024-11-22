@@ -405,22 +405,15 @@ mod.inject_fixes(this_variant, {
         owosightac3 =       { offset = true, position  = vector3_box(-0.003, 0.046, 0.014), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         owosightac4 =       { offset = true, position  = vector3_box(0, 0.05, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.28, 0.192) },
     },
-    {   dependencies = { "owo_holosight_03_01|owo_holosight_03_02|owo_holosight_03_03",
-            "reflex_scopehelper_01|reflex_scopehelper_02|reflex_scopehelper_03|reflex_scopehelper_04|reflex_scopehelper_05|reflex_scopehelper_06",
-        },
-        sight_2 =       { offset = true, position  = vector3_box(0, 0.016, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-    },
     {   dependencies = { "owo_holosight_03_01" },
         sight =             { offset = true, position  = vector3_box(0, 0, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
     },
+    --      Holo + Magnifier puts the holo a bit more forwards
     {   dependencies = { "owo_holosight_03_02|owo_holosight_03_03" },
         sight =             { offset = true, position  = vector3_box(0, 0.05, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         owosight2 =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
-        owosight2ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        owosight2ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.03), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
     {   dependencies = { "owo_holosight_03_02" },
-        owosight2 =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
         owosight2ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         owosight2ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.03), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
@@ -443,10 +436,10 @@ mod.inject_fixes(this_variant, {
         owosightac3 =    {offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
         owosightac4 =    {offset = true, position = vector3_box(0.001, 0.038, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
         owosightac5 =    {offset = true, position = vector3_box(-0.003, 0.038, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
-        -- windage wheel on the right side of the sight
-        owosightac6 =    {offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.026 ) },
-        -- rear elevation wheel on the back base
-        owosightac7 =    {offset = true, position = vector3_box(0, -0.004, 0.136), rotation = vector3_box(45, 90, 45), scale = vector3_box(1.0, 0.09, 1.0 ) },
+        -- windage drum on the right side of the sight
+        owosightac6 =    {offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
+        -- rear elevation wheel in the base, below the rear sight
+        owosightac7 =    {offset = true, position = vector3_box(0, 0.002, 0.154), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
     },
 
     -- ######

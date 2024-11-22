@@ -1407,8 +1407,8 @@ end
 -- Sight: M16 Carry Handle
 function mod.owo_m16_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight", {
-		{id = "owo_m16_sight_01", name = "OwO M16 Carry Sight 1"},
-		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight 2"},
+		{id = "owo_m16_sight_01", name = "OwO M16 Carry Sight"},
+		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight (No Rear Wheel)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1", {
 		{id = "owo_m16_sight_empty", name = "Empty Sight"},
@@ -1455,7 +1455,7 @@ function mod.owo_m16_sight(variant_id, type)
 			automatic_equip = { owosightac1 = "owo_m16_sight_helper_01", owosightac2 = "owo_m16_sight_helper_02", 
 				owosightac3 = "owo_m16_sight_helper_03", 
 				owosightac4 = "owo_m16_sight_helper_04", owosightac5 = "owo_m16_sight_helper_05", 
-				owosightac6 = "owo_m16_sight_helper_06", owosightac7 = "owo_m16_sight_helper_07", 
+				owosightac6 = "owo_m16_sight_helper_06", owosightac7 = "owo_m16_sight_empty", 
 			}
 		},
 		owo_m16_sight_empty = {
@@ -1484,7 +1484,7 @@ function mod.owo_m16_sight(variant_id, type)
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = 'owosightac5',
 			mesh_move = false, parent = 'sight'
 		},
-		-- Windage Wheel
+		-- Windage Drum
 		owo_m16_sight_helper_06 = {
 			model = _item_melee.."/heads/human_power_maul_head_05", type = 'owosightac6',
 			mesh_move = false, parent = 'sight'
