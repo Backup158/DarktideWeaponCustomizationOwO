@@ -1202,13 +1202,13 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			}
 		},
 		owo_laspistol_helper_empty = {
-			model = "/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", 
+			model = "/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", mesh_move = false,
 		},
 		owo_laspistol_helper_01 = {
-			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", 
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", mesh_move = false,
 		},
 		owo_laspistol_helper2_01 = {
-			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "receiverac2", parent = "receiver", 
+			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "receiverac2", parent = "receiver", mesh_move = false,
 		},
 	})
 end
