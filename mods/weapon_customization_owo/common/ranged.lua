@@ -55,12 +55,11 @@ mod.wc.barrelshroudList = {
 	"owo_m16_barrelshroud_n_a2",
 	"owo_bistol_shotgun_barrel_short_empty", 
 	"owo_bistol_shotgun_barrel_short_01",
-	"owo_bistol_shotgun_barrel_short_04"
+	"owo_bistol_shotgun_barrel_short_04",
 	"owo_bistol_shotgun_barrel_short_05",
 	"owo_bistol_shotgun_barrel_short_06",
 	"owo_bistol_shotgun_barrel_short_08",
 	"owo_bistol_shotgun_barrel_short_09",
-
 }
 --[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
 mod.wc.barrelshroudacList = {
@@ -270,9 +269,9 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle2" or type, {
-		{id = "owo_suppressor_helper_empty", name = "OwO Suppressor'vesa Empty"},
-		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1"},
-		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2"}
+		{id = "owo_suppressor_helper_empty", name = "OwO Suppressor'vesa Empty", no_randomize = true},
+		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
+		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true}
 	})
 
 	mod.inject_models(variant_id, {
@@ -303,11 +302,11 @@ end
 -- Muzzle: Lasgun Condom
 function mod.owo_condom(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
-		{id = "owo_condom_01", name = "OwO Lasbarrel Condom"}
+		{id = "owo_condom_01", name = "OwO Lasbarrel Condom", no_randomize = true}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle2" or type, {
-		{id = "owo_condom_helper_empty", name = "Condom'vesa Empty"},
-		{id = "owo_condom_helper_01", name = "OwO Condom'vesa"}
+		{id = "owo_condom_helper_empty", name = "Condom'vesa Empty", no_randomize = true},
+		{id = "owo_condom_helper_01", name = "OwO Condom'vesa", no_randomize = true}
 	})
 
 	mod.inject_models(variant_id, {
@@ -345,37 +344,87 @@ end
 -- Barrel: Shotgun barrel short
 --		Bolt pistol
 function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+		{id = "owo_bistol_sg_base_01", name = "OwO Shotgun Shorty 1"},
+		{id = "owo_bistol_sg_base_04", name = "OwO Shotgun Shorty 2"},
+		{id = "owo_bistol_sg_base_05", name = "OwO Shotgun Shorty 3"},
+		{id = "owo_bistol_sg_base_06", name = "OwO Shotgun Shorty 4"},
+		{id = "owo_bistol_sg_base_08", name = "OwO Shotgun Shorty 5"},
+		{id = "owo_bistol_sg_base_09", name = "OwO Shotgun Shorty 6"},
+	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
-		{id = "owo_bistol_shotgun_barrel_short_empty", name = "Empty Barrel Shroud"},
-		{id = "owo_bistol_shotgun_barrel_short_01", name = "OwO Shotgun Shorty 1"},
-		{id = "owo_bistol_shotgun_barrel_short_04", name = "OwO Shotgun Shorty 2"},
-		{id = "owo_bistol_shotgun_barrel_short_05", name = "OwO Shotgun Shorty 3"},
-		{id = "owo_bistol_shotgun_barrel_short_06", name = "OwO Shotgun Shorty 4"},
-		{id = "owo_bistol_shotgun_barrel_short_08", name = "OwO Shotgun Shorty 5"},
-		{id = "owo_bistol_shotgun_barrel_short_09", name = "OwO Shotgun Shorty 6"},
+		{id = "owo_bistol_shotgun_barrel_short_empty", name = "Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_bistol_shotgun_barrel_short_01", name = "OwO Shotgun Shorty 1", no_randomize = true},
+		{id = "owo_bistol_shotgun_barrel_short_04", name = "OwO Shotgun Shorty 2", no_randomize = true},
+		{id = "owo_bistol_shotgun_barrel_short_05", name = "OwO Shotgun Shorty 3", no_randomize = true},
+		{id = "owo_bistol_shotgun_barrel_short_06", name = "OwO Shotgun Shorty 4", no_randomize = true},
+		{id = "owo_bistol_shotgun_barrel_short_08", name = "OwO Shotgun Shorty 5", no_randomize = true},
+		{id = "owo_bistol_shotgun_barrel_short_09", name = "OwO Shotgun Shorty 6", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
+		owo_bistol_sg_base_01 = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_01",
+			}
+		}, 
+		owo_bistol_sg_base_04 = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04",
+			}
+		}, 
+		owo_bistol_sg_base_05 = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05",
+			}
+		}, 
+		owo_bistol_sg_base_06 = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06",
+			}
+		}, 
+		owo_bistol_sg_base_08 = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08",
+			}
+		}, 
+		owo_bistol_sg_base_09 = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_09",
+			}
+		}, 
 		owo_bistol_shotgun_barrel_short_empty = {
 			model = "", type = "barrelshroud", parent = "barrel"
 		},
 		owo_bistol_shotgun_barrel_short_01 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", 
+			mesh_move = false, parent = "barrel"
 		},
 		owo_bistol_shotgun_barrel_short_04 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroud", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroud", 
+			mesh_move = false, parent = "barrel"
 		},
 		owo_bistol_shotgun_barrel_short_05 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelshroud", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelshroud", 
+			mesh_move = false, parent = "barrel"
 		},
 		owo_bistol_shotgun_barrel_short_06 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelshroud", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelshroud", 
+			mesh_move = false, parent = "barrel"
 		},
 		owo_bistol_shotgun_barrel_short_08 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroud", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroud", 
+			mesh_move = false, parent = "barrel"
 		},
 		owo_bistol_shotgun_barrel_short_09 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroud", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroud", 
+			mesh_move = false, parent = "barrel"
 		}
 	})
 end
