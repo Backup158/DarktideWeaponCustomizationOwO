@@ -23,14 +23,18 @@ mod.wc.muzzle2List = {
 	"owo_condom_helper_01",
 }
 -- BARREL
-mod.wc.add_custom_attachments.barrelac = "barrelacList"
-mod.wc.barrelacList = {
+mod.wc.add_custom_attachments.barrelex = "barrelexList"
+mod.wc.barrelexList = {
+	"owo_revolver_shotgun_barrel_empty",
 	"owo_revolver_shotgun_barrel_01",
 	"owo_revolver_shotgun_barrel_04",
 	"owo_revolver_shotgun_barrel_05",
 	"owo_revolver_shotgun_barrel_06",
-	"owo_revolver_shotgun_barrel_08",	
+	"owo_revolver_shotgun_barrel_08",
 	"owo_revolver_shotgun_barrel_09",
+}
+mod.wc.add_custom_attachments.barrelac = "barrelacList"
+mod.wc.barrelacList = {
 	"owo_scab_gunner_barrelac_empty",
 	"owo_scab_gunner_barrelac_01"
 }
@@ -262,6 +266,21 @@ mod.wc.receiverac2List = {
 -- inject_attachments_owo injects attachment descriptions first
 -- inject_models adds the models for actual use
 -- ############################################
+-- Flashlight/Special: Grip Laser
+function mod.owo_grip_laser(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "flashlight" or type, {
+		{id = "owo_grip_laser_01", name = "OwO Grip Laser"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_grip_laser_01 = {
+			-- Flashlight_data tells what kind of beam to use (size). 5 is laser
+			model = _item_ranged.."/flashlights/flashlight_05", type = "flashlight", data = flashlight_data[5],
+			mesh_move = false,
+		},
+	})
+end
+
 -- Muzzle: Suppressor
 function mod.owo_suppressor(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
@@ -429,10 +448,11 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 	})
 end
 
--- Barrel: Shotgun barrel extension
+-- Barrelex: Shotgun barrel extension
 --		Revolver
 function mod.owo_revolver_shotgun_barrel(variant_id)
 	mod.inject_attachments_owo(variant_id, "barrelex" or type, {
+		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelex"},
 		{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1 (1)"},
 		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 2 (4)"},
 		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 3 (5)"},
@@ -442,26 +462,28 @@ function mod.owo_revolver_shotgun_barrel(variant_id)
 		{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Barrel 6 (9)"},
 	})
 
-	-- parent receiver nor barrel matters
 	mod.inject_models(variant_id, {
+		owo_revolver_shotgun_barrel_empty = {
+			model = "", type = "barrelex", parent = "barrel"
+		},
 		owo_revolver_shotgun_barrel_01 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelex", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelex", parent = "barrel"
 		},
 		owo_revolver_shotgun_barrel_04 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelex", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelex", parent = "barrel"
 		},
 		owo_revolver_shotgun_barrel_05 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelex", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelex", parent = "barrel"
 		},
 		owo_revolver_shotgun_barrel_06 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelex", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelex", parent = "barrel"
 		},
 		owo_revolver_shotgun_barrel_08 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelex", parent = "receiver"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelex", parent = "barrel"
 		},
 		owo_revolver_shotgun_barrel_09 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelex", parent = "receiver"
-		}
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelex", parent = "barrel"
+		},
 	})
 end
 
