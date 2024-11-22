@@ -13,6 +13,10 @@ local _item_minion = "content/items/weapons/minions"
 -- HARRYDIDJAPUCHERNAMEINTHE
 -- TABLE
 -- #############################
+mod.table_append(mod.wc.laser_pointers, {
+	"owo_grip_laser_01",
+})
+
 -- MUZZLE
 mod.wc.add_custom_attachments.muzzle2 = "muzzle2List"
 mod.wc.muzzle2List = {
@@ -269,7 +273,8 @@ mod.wc.receiverac2List = {
 -- Flashlight/Special: Grip Laser
 function mod.owo_grip_laser(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "flashlight" or type, {
-		{id = "owo_grip_laser_01", name = "OwO Grip Laser"},
+		{id = "owo_grip_laser_01", name = "OwO Grip Laser (R)"},
+		{id = "owo_grip_laser_02", name = "OwO Grip Laser (G)"},
 	})
 
 	mod.inject_models(variant_id, {
@@ -286,6 +291,15 @@ function mod.owo_grip_laser(variant_id, type)
 					ok i checked it. it's just calling the extension
 			]]
 			name = "owo_grip_laser_01",
+			model = _item_ranged.."/flashlights/flashlight_05", type = "flashlight", 
+			data = { {loc_flashlight_light_cone = 2}, 
+				{loc_flashlight_intensity = 2}, 
+				{loc_flashlight_battery = 2}
+			},
+			mesh_move = false, parent = "receiver"
+		},
+		owo_grip_laser_02 = {
+			name = "owo_grip_laser_02",
 			model = _item_ranged.."/flashlights/flashlight_05", type = "flashlight", 
 			data = { {loc_flashlight_light_cone = 2}, 
 				{loc_flashlight_intensity = 2}, 

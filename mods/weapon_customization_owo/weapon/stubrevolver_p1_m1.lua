@@ -35,7 +35,7 @@ mod.inject_fixes(this_variant, {
             position = vector3_box(0, 0, 0), scale = vector3_box(1, 0.55, 0.75)
         },
     },
-    {   dependencies = {"owo_grip_laser_01"},
+    {   dependencies = {"owo_grip_laser_01|owo_grip_laser_02"},
         flashlight = {offset = true,  position = vector3_box(-0.01, 0.044, -0.016), scale = vector3_box(0.345, 0.3, 0.285)},
     },
 
