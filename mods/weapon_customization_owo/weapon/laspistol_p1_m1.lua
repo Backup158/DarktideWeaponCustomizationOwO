@@ -15,6 +15,8 @@ local this_variant = "laspistol_p1_m1" -- Laspistols
 -- Makes new tables for attachment anchors
 -- ############################################
 mod.wc.attachment[this_variant].muzzle2 = {}
+mod.wc.attachment[this_variant].receiverac1 = {}
+mod.wc.attachment[this_variant].receiverac2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -22,8 +24,9 @@ mod.wc.attachment[this_variant].muzzle2 = {}
 -- ############################################
 mod.owo_grip_laser(this_variant, "flashlight")
 --mod.owo_lasgun_magazine_flat(this_variant, "magazine")
-mod.owo_laspistol_magazine_flat(this_variant)
+mod.owo_lasgun_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant, "muzzle")
+mod.owo_laspistol_grip_mag(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -50,9 +53,51 @@ mod.inject_fixes(this_variant, {
     -- ######
 	-- Magazine: FLAT MAG
 	-- ######
-    {   dependencies = {"owo_laspistol_magazine_flat_01"},
+    {   dependencies = {"owo_lasgun_magazine_flat_01"},
         magazine = {offset = true, scale = vector3_box(1, 1, 0.5)},
     },
+
+    -- ######
+    -- Receiver: Grip Mag
+    -- ######
+    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03"},
+        receiver = {offset = true, position = vector3_box(0, 0, 0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        -- AC1 NOT RESPECTING TRANSFORMS FML
+        -- and it's stealing mag anims lmaoooo
+        receiverac1 = {offset = true, position = vector3_box(0, 0.098, 0.032), rotation = vector3_box(0, 0, -180), scale = vector3_box(1.3, 2.33, 0.38)},
+        -- trigger already aligned
+        --receiverac2 = {offset = true, position = vector3_box(0, -0.04, -0.07), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.2, 0.2, 0.033)},
+        receiverac2 = {hide_mesh = { 	{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+        magazine = {offset = true, position = vector3_box(0, -0.115, -0.031), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.85, 0.5, 1)},
+        grip = {offset = true,position = vector3_box(0, 0.0, -0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1, 1)},
+    },
+    -- other sights
+    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
+            "!aquilon_scope_01", "!aquilon_scope_01a", "!aquilon_scope_02", "!aquilon_scope_02a",
+        },
+        no_scope_offset = {position = vector3_box(-0.063, -0.5, 0.053), rotation = vector3_box(0, 29, 0)},
+        scope_offset = {position = vector3_box(-0.063, -0.5, 0.053), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
+    },
+    -- Syn's aquilon scope alignment
+    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
+            "aquilon_scope_01|aquilon_scope_01a|aquilon_scope_02|aquilon_scope_02a"
+        },
+        no_scope_offset = {position = vector3_box(-0.063, -0.5, -0.303), rotation = vector3_box(0, 29, 0)},
+        scope_offset = {position = vector3_box(-0.063, -0.5, -0.303), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
+    },
+    -- Normal flashlights
+    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
+            "!owo_grip_laser_01", "!owo_grip_laser_02",
+        },
+        flashlight = {offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},
+    },
+    -- trigger flashlights
+    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
+            "owo_grip_laser_01|owo_grip_laser_02"
+        },
+        flashlight = {offset = true,  position = vector3_box(-0.034, 0.072, -0.057), scale = vector3_box(0.75, 0.425, 0.588)},
+    },
+    
     -- ######
 	-- Flashlight: LASER GRIP
 	-- ######
@@ -68,5 +113,10 @@ mod.inject_fixes(this_variant, {
             "!owo_condom_01"
         },
         muzzle2 = {hide_mesh = { 	{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    -- Receivers
+    {	dependencies = {"!owo_laspistol_grip_mag_01",  "!owo_laspistol_grip_mag_02", "!owo_laspistol_grip_mag_03"},
+        receiverac1 = {hide_mesh = { 	{"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+        receiverac2 = {hide_mesh = { 	{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
 })

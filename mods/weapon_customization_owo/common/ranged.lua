@@ -254,11 +254,15 @@ mod.wc.add_custom_attachments.receiverac1 = "receiverac1List"
 mod.wc.receiverac1List = {
 	"owo_bolt_empty",
 	"owo_bolt_helbore_bolt_01",
+	"owo_laspistol_helper_empty",
+	"owo_laspistol_helper_01",
 }
 mod.wc.add_custom_attachments.receiverac2 = "receiverac2List"
 mod.wc.receiverac2List = {
 	"owo_bolt_empty",
 	"owo_bolt_helbore_bolt_02",
+	"owo_laspistol_helper_empty",
+	"owo_laspistol_helper2_01",
 }
 
 -- ############################################
@@ -1162,6 +1166,53 @@ function mod.owo_bolt_action(variant_id, type)
 	})
 end
 
+-- Receiver: Pistol Grip Mag
+function mod.owo_laspistol_grip_mag(variant_id)
+	mod.inject_attachments_owo(variant_id, "receiver", {
+		{id = "owo_laspistol_grip_mag_01", name = "OwO Pistol Receiver 1"},
+		{id = "owo_laspistol_grip_mag_02", name = "OwO Pistol Receiver 2"},
+		{id = "owo_laspistol_grip_mag_03", name = "OwO Pistol Receiver 3 (M)"},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac1", {
+		{id = "owo_laspistol_helper_empty", name = "Empty Receiverac1"},
+		{id = "owo_laspistol_helper_01", name = "OwO Pistol Receiverac"},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac2", {
+		{id = "owo_laspistol_helper_empty", name = "Empty Receiverac2"},
+		{id = "owo_laspistol_helper2_01", name = "OwO Pistol Trigger"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_laspistol_grip_mag_01 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_receiver_01", type = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiverac1 = "owo_laspistol_helper_01", receiverac2 = "owo_laspistol_helper2_01"
+			}
+		},
+		owo_laspistol_grip_mag_02 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_receiver_02", type = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiverac1 = "owo_laspistol_helper_01", receiverac2 = "owo_laspistol_helper2_01"
+			}
+		},
+		owo_laspistol_grip_mag_03 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_receiver_0ml01", type = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiverac1 = "owo_laspistol_helper_01", receiverac2 = "owo_laspistol_helper2_01"
+			}
+		},
+		owo_laspistol_helper_empty = {
+			model = "/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", 
+		},
+		owo_laspistol_helper_01 = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", 
+		},
+		owo_laspistol_helper2_01 = {
+			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "receiverac2", parent = "receiver", 
+		},
+	})
+end
+
 -- Grip: Fin Grip
 --		Autoguns
 function mod.owo_fin_grip(variant_id, type)
@@ -1674,19 +1725,6 @@ function mod.owo_lasgun_magazine_flat(variant_id, type)
 		owo_lasgun_magazine_flat_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
 			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
-		},
-	})
-end
-
--- Magazine: Lasgun Flat
-function mod.owo_laspistol_magazine_flat(variant_id)
-	mod.inject_attachments_owo(variant_id, "magazine", {
-		{id = "owo_laspistol_magazine_flat_01", name = "OwO Flat Pistol Mag 1"},
-	})
-
-	mod.inject_models(variant_id, {
-		owo_laspistol_magazine_flat_01 = {
-			model = _item_ranged.."/magazines/lasgun_pistol_magazine_01", type = "magazine", mesh_move = false
 		},
 	})
 end
