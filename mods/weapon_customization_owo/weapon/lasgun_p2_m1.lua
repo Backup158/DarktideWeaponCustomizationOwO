@@ -76,7 +76,7 @@ mod.inject_fixes(this_variant, {
 	-- ######
 	-- Magazine: FLAT
 	-- ######
-	{	dependencies = {"owo_lasgun_magazine_flat"},
+	{	dependencies = {"owo_lasgun_magazine_flat_01"},
 		magazine = {offset = true,scale = vector3_box(1, 1, 0.5 ) },
 	},
 

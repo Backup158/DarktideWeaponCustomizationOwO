@@ -34,14 +34,15 @@ mod.inject_fixes(this_variant, {
 	-- ######
 	-- Magazine: FLAT LASGUN
 	-- ######
-	{	dependencies = { "owo_lasgun_magazine_flat", 
+	{	dependencies = { "owo_lasgun_magazine_flat_01", 
 			"!volley_lasgun_receiver_01",
 			"!volley_lasgun_receiver_02",
 			"!volley_lasgun_receiver_03",
 		},
 		magazine = { offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.75)},
 	},
-	{	dependencies = { "owo_lasgun_magazine_flat", 
+	-- trying to align with syn's aquilon barrel
+	{	dependencies = { "owo_lasgun_magazine_flat_01", 
 			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03"
 		},
 		magazine = { offset = true, position = vector3_box(0, 0.05, 0.03), scale = vector3_box(1, 1, 0.5)},

@@ -21,7 +21,8 @@ mod.wc.attachment[this_variant].muzzle2 = {}
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_grip_laser(this_variant, "flashlight")
-mod.owo_lasgun_magazine_flat(this_variant, "magazine")
+--mod.owo_lasgun_magazine_flat(this_variant, "magazine")
+mod.owo_laspistol_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant, "muzzle")
 
 -- ############################################
@@ -49,7 +50,7 @@ mod.inject_fixes(this_variant, {
     -- ######
 	-- Magazine: FLAT MAG
 	-- ######
-    {   dependencies = {"owo_lasgun_magazine_flat"},
+    {   dependencies = {"owo_laspistol_magazine_flat_01"},
         magazine = {offset = true, scale = vector3_box(1, 1, 0.5)},
     },
     -- ######

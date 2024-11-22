@@ -13,10 +13,6 @@ local _item_minion = "content/items/weapons/minions"
 -- HARRYDIDJAPUCHERNAMEINTHE
 -- TABLE
 -- #############################
-mod.table_append(mod.wc.laser_pointers, {
-	"owo_grip_laser_01",
-})
-
 -- MUZZLE
 mod.wc.add_custom_attachments.muzzle2 = "muzzle2List"
 mod.wc.muzzle2List = {
@@ -289,6 +285,11 @@ function mod.owo_grip_laser(variant_id, type)
 					Adding an additional entry to the templates DID work, but only for the flashlight light, not the beam
 				there also seems to be references in wc/patches/ewapon_templates.lua (CHECK THIS) and wc/weapon_customization_anchors.lua (prob jsut for position)
 					ok i checked it. it's just calling the extension
+				tried injectign to table above
+					mod.table_append(mod.wc.laser_pointers, {
+						"owo_grip_laser_01",
+					})
+				didnt work
 			]]
 			name = "owo_grip_laser_01",
 			model = _item_ranged.."/flashlights/flashlight_05", type = "flashlight", 
@@ -1666,13 +1667,26 @@ end
 -- Magazine: Lasgun Flat
 function mod.owo_lasgun_magazine_flat(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
-		{id = "owo_lasgun_magazine_flat", name = "OwO Flat Magazine 1"},
+		{id = "owo_lasgun_magazine_flat_01", name = "OwO Flat Magazine 1"},
 	})
 
 	mod.inject_models(variant_id, {
-		owo_lasgun_magazine_flat = {
+		owo_lasgun_magazine_flat_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
 			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
+		},
+	})
+end
+
+-- Magazine: Lasgun Flat
+function mod.owo_laspistol_magazine_flat(variant_id)
+	mod.inject_attachments_owo(variant_id, "magazine", {
+		{id = "owo_laspistol_magazine_flat_01", name = "OwO Flat Pistol Mag 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_laspistol_magazine_flat_01 = {
+			model = _item_ranged.."/magazines/lasgun_pistol_magazine_01", type = "magazine", mesh_move = false
 		},
 	})
 end
