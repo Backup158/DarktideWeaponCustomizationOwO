@@ -28,17 +28,18 @@ mod.inject_fixes(this_variant, {
     -- #####
     -- Barrel: Short Shotgun
     -- #####
+    {   dependencies = {"owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_04_s|owo_bistol_sg_base_05_s|owo_bistol_sg_base_06_s|owo_bistol_sg_base_08_s"},
+        muzzle = {offset = true, position = vector3_box(0, 0.47, 0),scale = vector3_box(1, 1, 1) },
+    },
     {   --dependencies = {"owo_bistol_sg_base_01|owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_09"},
         dependencies = {"owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08"},
         barrel = {offset = true,  position = vector3_box(0, 0.162, 0.012), scale = vector3_box(1, 1, 1) },
         barrelshroud = {offset = true,  position = vector3_box(0, -0.144, 0.002), scale = vector3_box(1.328, 0.33, 0.9) },
-        muzzle = {offset = true, position = vector3_box(0, 0.47, 0),scale = vector3_box(1, 1, 1) },
     },
     -- Super Shorty
     {   dependencies = {"owo_bistol_sg_base_04_s|owo_bistol_sg_base_05_s|owo_bistol_sg_base_06_s|owo_bistol_sg_base_08_s"},
-        barrel = {offset = true,  position = vector3_box(0, 0.102, 0.012), scale = vector3_box(1, 1, 1) },
-        barrelshroud = {offset = true,  position = vector3_box(0, -0.164, 0.002), scale = vector3_box(1.328, 0.16, 0.9) },
-        muzzle = {offset = true, position = vector3_box(0, 0.47, 0),scale = vector3_box(1, 1, 1) },
+        barrel = {offset = true,  position = vector3_box(0, 0.098, 0.012), scale = vector3_box(1, 1, 1) },
+        barrelshroud = {offset = true,  position = vector3_box(0, -0.082, 0.002), scale = vector3_box(1.328, 0.178, 0.9) },
     },
 
 
@@ -48,6 +49,8 @@ mod.inject_fixes(this_variant, {
     {   -- dependencies = {"!owo_bistol_sg_base_01", "!owo_bistol_sg_base_04", "!owo_bistol_sg_base_05", "!owo_bistol_sg_base_06", "!owo_bistol_sg_base_08", "!owo_bistol_sg_base_09",
         dependencies = {"!owo_bistol_sg_base_04", "!owo_bistol_sg_base_05", 
             "!owo_bistol_sg_base_06", "!owo_bistol_sg_base_08",
+            "!owo_bistol_sg_base_04_s", "!owo_bistol_sg_base_05_s", 
+            "!owo_bistol_sg_base_06_s", "!owo_bistol_sg_base_08_s",
         },
         barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
