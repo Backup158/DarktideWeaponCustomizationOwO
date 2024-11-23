@@ -64,7 +64,7 @@ mod.inject_fixes(this_variant, {
         receiver = {offset = true, position = vector3_box(0, 0, 0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
         -- None of my transformations are working im gonna kill someone
         -- and receiverac1 is stealing mag anims lmaoooo
-        -- SETTING OFFSET TO FALSE FIXED IT. lets this take over from default?
+        -- SETTING OFFSET TO FALSE FIXED IT. lets this take over from default? it would stretch this time but wouldn't move (unlike shotgun which didn't stretch either)
         receiverac1 = {offset = false, position = vector3_box(0, 0.136, 0.022), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.33, 0.38)},
         -- trigger already aligned. reuse as hammer? on a las weapon lmao
         -- receiverac2 = {offset = true, position = vector3_box(0, -0.04, -0.07), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.2, 0.2, 0.033)},
@@ -74,7 +74,7 @@ mod.inject_fixes(this_variant, {
     },
     -- other sights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
-            "!aquilon_scope_01", "!aquilon_scope_01a", "!aquilon_scope_02", "!aquilon_scope_02a",
+            --"!aquilon_scope_01", "!aquilon_scope_01a", "!aquilon_scope_02", "!aquilon_scope_02a",
             --"!lasgun_sight_01"
         },
         -- rotated to be straight in first person

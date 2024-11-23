@@ -25,21 +25,19 @@ mod.owo_bistol_shotgun_barrel_short(this_variant)
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
-    {   dependencies = {"owo_bistol_sg_base_01|owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_09"},
-        barrel = {offset = true,  position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        barrelshroud = {offset = true,  position = vector3_box(0, 0.01, 0.01), scale = vector3_box(1, 0.33, 0.9)},
-        muzzle = {
-            offset = true, 
-            position = vector3_box(0, 0.47, 0), -- 0.45
-            scale = vector3_box(1, 3, 1)        -- 1/3 * 3 = 1 BUT WHY OWNE TIT TWOOOOORK
-        },
+    {   --dependencies = {"owo_bistol_sg_base_01|owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_09"},
+        dependencies = {"owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08"},
+        barrel = {offset = true,  position = vector3_box(0, 0.162, 0.012), scale = vector3_box(1, 1, 1) },
+        barrelshroud = {offset = true,  position = vector3_box(0, -0.144, 0.002), scale = vector3_box(1.328, 0.33, 0.9) },
+        muzzle = {offset = true, position = vector3_box(0, 0.47, 0),scale = vector3_box(1, 1, 1) },
     },
 
     -- ###############
     -- HIDING UNUSED PARTS
-    -- 
-    {   dependencies = {"!owo_bistol_sg_base_01", "!owo_bistol_sg_base_04", "!owo_bistol_sg_base_05",
-            "!owo_bistol_sg_base_06", "!owo_bistol_sg_base_08", "!owo_bistol_sg_base_09",
+    -- ###############
+    {   -- dependencies = {"!owo_bistol_sg_base_01", "!owo_bistol_sg_base_04", "!owo_bistol_sg_base_05", "!owo_bistol_sg_base_06", "!owo_bistol_sg_base_08", "!owo_bistol_sg_base_09",
+        dependencies = {"!owo_bistol_sg_base_04", "!owo_bistol_sg_base_05", 
+            "!owo_bistol_sg_base_06", "!owo_bistol_sg_base_08",
         },
         barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },

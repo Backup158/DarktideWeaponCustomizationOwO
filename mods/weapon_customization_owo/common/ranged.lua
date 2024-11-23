@@ -397,31 +397,38 @@ end
 -- Barrel: Shotgun barrel short
 --		Bolt pistol
 function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
+	--[[
+	1,6 dont work, but 2-5 do
+		setting offset to false made 1,6 as 2d models not following the gun and no scale
+		what the FUCK?
+	
+	]]
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		{id = "owo_bistol_sg_base_01", name = "OwO Shotgun Shorty 1"},
-		{id = "owo_bistol_sg_base_04", name = "OwO Shotgun Shorty 2"},
-		{id = "owo_bistol_sg_base_05", name = "OwO Shotgun Shorty 3"},
-		{id = "owo_bistol_sg_base_06", name = "OwO Shotgun Shorty 4"},
-		{id = "owo_bistol_sg_base_08", name = "OwO Shotgun Shorty 5"},
-		{id = "owo_bistol_sg_base_09", name = "OwO Shotgun Shorty 6"},
+		--{id = "owo_bistol_sg_base_01", name = "OwO Shotgun Shorty 1"},
+		{id = "owo_bistol_sg_base_04", name = "OwO Shotgun Shorty 1 (4)"},
+		{id = "owo_bistol_sg_base_05", name = "OwO Shotgun Shorty 2 (5)"},
+		{id = "owo_bistol_sg_base_06", name = "OwO Shotgun Shorty 3 (6)"},
+		{id = "owo_bistol_sg_base_08", name = "OwO Shotgun Shorty 4 (8)"},
+		--{id = "owo_bistol_sg_base_09", name = "OwO Shotgun Shorty 6"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
 		{id = "owo_bistol_shotgun_barrel_short_empty", name = "Empty Barrel Shroud", no_randomize = true},
-		{id = "owo_bistol_shotgun_barrel_short_01", name = "OwO Shotgun Shorty 1", no_randomize = true},
+		--{id = "owo_bistol_shotgun_barrel_short_01", name = "OwO Shotgun Shorty 1", no_randomize = true},
 		{id = "owo_bistol_shotgun_barrel_short_04", name = "OwO Shotgun Shorty 2", no_randomize = true},
 		{id = "owo_bistol_shotgun_barrel_short_05", name = "OwO Shotgun Shorty 3", no_randomize = true},
 		{id = "owo_bistol_shotgun_barrel_short_06", name = "OwO Shotgun Shorty 4", no_randomize = true},
 		{id = "owo_bistol_shotgun_barrel_short_08", name = "OwO Shotgun Shorty 5", no_randomize = true},
-		{id = "owo_bistol_shotgun_barrel_short_09", name = "OwO Shotgun Shorty 6", no_randomize = true},
+		--{id = "owo_bistol_shotgun_barrel_short_09", name = "OwO Shotgun Shorty 6", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
-		owo_bistol_sg_base_01 = {
+		--[[owo_bistol_sg_base_01 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_01",
 			}
 		}, 
+		]]
 		owo_bistol_sg_base_04 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
 			mesh_move = false, parent = "receiver",
@@ -446,19 +453,21 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08",
 			}
 		}, 
-		owo_bistol_sg_base_09 = {
+		--[[owo_bistol_sg_base_09 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_09",
 			}
 		}, 
+		]]
 		owo_bistol_shotgun_barrel_short_empty = {
 			model = "", type = "barrelshroud", parent = "barrel"
 		},
-		owo_bistol_shotgun_barrel_short_01 = {
+		--[[owo_bistol_shotgun_barrel_short_01 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", 
 			mesh_move = false, parent = "barrel"
 		},
+		]]
 		owo_bistol_shotgun_barrel_short_04 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroud", 
 			mesh_move = false, parent = "barrel"
@@ -475,10 +484,11 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroud", 
 			mesh_move = false, parent = "barrel"
 		},
-		owo_bistol_shotgun_barrel_short_09 = {
+		--[[owo_bistol_shotgun_barrel_short_09 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroud", 
 			mesh_move = false, parent = "barrel"
 		}
+		]]
 	})
 end
 
@@ -491,15 +501,17 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 
 		And why it's not barrelex, because that wouldn't respect my transformations?!?!?!??!
 		NVM EVEN A CUSTOM ONE ISN"T RESPEDTEDD FUCK THIS
+
+		
 	]]
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel 1 (1)"},
-		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel 2 (4)"},
-		{id = "owo_revolver_shotgun_barrel_base_05", name = "OwO Shotgun Barrel 3 (5)"},
-		{id = "owo_revolver_shotgun_barrel_base_06", name = "OwO Shotgun Barrel 4 (6)"},
+		--{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel 1 (1)"},
+		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel 1 (4)"},
+		{id = "owo_revolver_shotgun_barrel_base_05", name = "OwO Shotgun Barrel 2 (5)"},
+		{id = "owo_revolver_shotgun_barrel_base_06", name = "OwO Shotgun Barrel 3 (6)"},
 		-- barrel 7 with the skulls is too squished
-		{id = "owo_revolver_shotgun_barrel_base_08", name = "OwO Shotgun Barrel 5 (8)"},
-		{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel 6 (9)"},
+		{id = "owo_revolver_shotgun_barrel_base_08", name = "OwO Shotgun Barrel 4 (8)"},
+		--{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel 6 (9)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owobarrelex" or type, {
 		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelex"},
