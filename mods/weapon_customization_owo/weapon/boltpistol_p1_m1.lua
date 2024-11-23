@@ -25,12 +25,22 @@ mod.owo_bistol_shotgun_barrel_short(this_variant)
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
+    -- #####
+    -- Barrel: Short Shotgun
+    -- #####
     {   --dependencies = {"owo_bistol_sg_base_01|owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_09"},
         dependencies = {"owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08"},
         barrel = {offset = true,  position = vector3_box(0, 0.162, 0.012), scale = vector3_box(1, 1, 1) },
         barrelshroud = {offset = true,  position = vector3_box(0, -0.144, 0.002), scale = vector3_box(1.328, 0.33, 0.9) },
         muzzle = {offset = true, position = vector3_box(0, 0.47, 0),scale = vector3_box(1, 1, 1) },
     },
+    -- Super Shorty
+    {   dependencies = {"owo_bistol_sg_base_04_s|owo_bistol_sg_base_05_s|owo_bistol_sg_base_06_s|owo_bistol_sg_base_08_s"},
+        barrel = {offset = true,  position = vector3_box(0, 0.102, 0.012), scale = vector3_box(1, 1, 1) },
+        barrelshroud = {offset = true,  position = vector3_box(0, -0.164, 0.002), scale = vector3_box(1.328, 0.16, 0.9) },
+        muzzle = {offset = true, position = vector3_box(0, 0.47, 0),scale = vector3_box(1, 1, 1) },
+    },
+
 
     -- ###############
     -- HIDING UNUSED PARTS

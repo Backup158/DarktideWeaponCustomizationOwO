@@ -58,12 +58,12 @@ mod.wc.barrelshroudList = {
 	"owo_m16_barrelshroud_n_a1_02",
 	"owo_m16_barrelshroud_n_a2",
 	"owo_bistol_shotgun_barrel_short_empty", 
-	"owo_bistol_shotgun_barrel_short_01",
+	-- "owo_bistol_shotgun_barrel_short_01",
 	"owo_bistol_shotgun_barrel_short_04",
 	"owo_bistol_shotgun_barrel_short_05",
 	"owo_bistol_shotgun_barrel_short_06",
 	"owo_bistol_shotgun_barrel_short_08",
-	"owo_bistol_shotgun_barrel_short_09",
+	-- "owo_bistol_shotgun_barrel_short_09",
 }
 --[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
 mod.wc.barrelshroudacList = {
@@ -410,6 +410,10 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 		{id = "owo_bistol_sg_base_06", name = "OwO Shotgun Shorty 3 (6)"},
 		{id = "owo_bistol_sg_base_08", name = "OwO Shotgun Shorty 4 (8)"},
 		--{id = "owo_bistol_sg_base_09", name = "OwO Shotgun Shorty 6"},
+		{id = "owo_bistol_sg_base_04_s", name = "OwO Sg Super Shorty 1 (4)"},
+		{id = "owo_bistol_sg_base_05_s", name = "OwO Sg Super Shorty 2 (5)"},
+		{id = "owo_bistol_sg_base_06_s", name = "OwO Sg Super Shorty 3 (6)"},
+		{id = "owo_bistol_sg_base_08_s", name = "OwO Sg Super Shorty 4 (8)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
 		{id = "owo_bistol_shotgun_barrel_short_empty", name = "Empty Barrel Shroud", no_randomize = true},
@@ -460,6 +464,30 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 			}
 		}, 
 		]]
+		owo_bistol_sg_base_04_s = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04",
+			}
+		}, 
+		owo_bistol_sg_base_05_s = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05",
+			}
+		}, 
+		owo_bistol_sg_base_06_s = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06",
+			}
+		}, 
+		owo_bistol_sg_base_08_s = {
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08",
+			}
+		}, 
 		owo_bistol_shotgun_barrel_short_empty = {
 			model = "", type = "barrelshroud", parent = "barrel"
 		},
@@ -505,13 +533,13 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 		
 	]]
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		--{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel 1 (1)"},
+		{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel 1 (1)"},
 		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel 1 (4)"},
 		{id = "owo_revolver_shotgun_barrel_base_05", name = "OwO Shotgun Barrel 2 (5)"},
 		{id = "owo_revolver_shotgun_barrel_base_06", name = "OwO Shotgun Barrel 3 (6)"},
 		-- barrel 7 with the skulls is too squished
 		{id = "owo_revolver_shotgun_barrel_base_08", name = "OwO Shotgun Barrel 4 (8)"},
-		--{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel 6 (9)"},
+		{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel 6 (9)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owobarrelex" or type, {
 		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelex"},
