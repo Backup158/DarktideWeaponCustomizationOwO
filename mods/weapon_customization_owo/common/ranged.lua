@@ -1202,7 +1202,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			}
 		},
 		owo_laspistol_grip_mag_helper_empty = {
-			model = "/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", mesh_move = false,
+			model = "", type = "receiverac1", parent = "receiver", mesh_move = false,
 		},
 		owo_laspistol_grip_mag_helper_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", mesh_move = false,

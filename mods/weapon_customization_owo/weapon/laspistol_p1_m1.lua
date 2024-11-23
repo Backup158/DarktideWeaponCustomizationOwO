@@ -75,18 +75,29 @@ mod.inject_fixes(this_variant, {
     -- other sights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "!aquilon_scope_01", "!aquilon_scope_01a", "!aquilon_scope_02", "!aquilon_scope_02a",
+            --"!lasgun_sight_01"
         },
         -- rotated to be straight in first person
         no_scope_offset = {offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0)},
         scope_offset = {offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
     },
+    --  MT Irons
+    -- offsets are already set, so these just get overwritten :skull:
+    --[[{   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
+            "lasgun_sight_01",
+        },
+        -- rotated to be straight in first person
+        no_scope_offset = {offset = true, position = vector3_box(-0.035, -0.5, -0.12), rotation = vector3_box(0, 29, 0)},
+        scope_offset = {offset = true, position = vector3_box(-0.035, -0.5, -0.12), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
+    },
     -- Syn's aquilon scope alignment
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "aquilon_scope_01|aquilon_scope_01a|aquilon_scope_02|aquilon_scope_02a"
         },
-        no_scope_offset = {offset = false, position = vector3_box(-0.063, -0.5, -0.303), rotation = vector3_box(0, 29, 0)},
-        scope_offset = {offset = false, position = vector3_box(-0.063, -0.5, -0.303), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
+        no_scope_offset = {offset = true, position = vector3_box(-0.035, -0.5, -0.053), rotation = vector3_box(0, 29, 0)},
+        scope_offset = {offset = true, position = vector3_box(-0.035, -0.5, -0.053), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
     },
+    ]]
     -- Normal flashlights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "!owo_grip_laser_01", "!owo_grip_laser_02",
