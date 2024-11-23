@@ -13,6 +13,10 @@ local _item_minion = "content/items/weapons/minions"
 -- HARRYDIDJAPUCHERNAMEINTHE
 -- TABLE
 -- #############################
+mod.table_append(mod.wc.laser_pointers, {
+	"owo_grip_laser_01",
+	"owo_grip_laser_02",
+})
 -- MUZZLE
 mod.wc.add_custom_attachments.muzzle2 = "muzzle2List"
 mod.wc.muzzle2List = {
@@ -280,19 +284,27 @@ function mod.owo_grip_laser(variant_id, type)
 	mod.inject_models(variant_id, {
 		owo_grip_laser_01 = {
 			--[[ FLASHLIGHT DISCUSSION
-			flashlight details found in weapon_customization/scripts/mods/weapon_customization/weapon_attachments/common_ranged.lua in flashlight_data table
-			To add laser sight, EWC uses weapon_customization/extensions/laser_pointer_extension.lua
+			wc = weapon_customization
+			flashlight details found in wc/scripts/mods/wc/weapon_attachments/common_ranged.lua in flashlight_data table
+			To add laser sight, EWC uses wc/extensions/laser_pointer_extension.lua
 				this does a manual check to see if the flashlight is 'laser_pointer', the ID for the built in laser pointer gras added
 					i tried adding a manual check for this one too, but it's not working
-				the preview part is handled by weapon_customization/extensions/flashlight_extension.lua
-					added a manual check. also didn't work
-					Adding an additional entry to the templates DID work, but only for the flashlight light, not the beam
-				there also seems to be references in wc/patches/ewapon_templates.lua (CHECK THIS) and wc/weapon_customization_anchors.lua (prob jsut for position)
-					ok i checked it. it's just calling the extension
-				tried injectign to table above
-					mod.table_append(mod.wc.laser_pointers, {
-						"owo_grip_laser_01",
-					})
+				the preview part is handled by wc/extensions/flashlight_extension.lua
+					added a manual check to has_laser_pointer. also didn't work
+						function calling for has_laser_pointer also checks if laser is enabled in mod settings
+					Adding an additional entry to the templates DID work, but only for the flashlight light (flashlight_templates), not the beam
+				there also seems to be references in wc/patches/weapon_templates.lua and wc/weapon_customization_anchors.lua
+					1 just calling extension and writing text to ui
+					2 specifying position and creates laser_pointer table
+					tried injectign to table (above)
+						mod.table_append(mod.wc.laser_pointers, {
+							"owo_grip_laser_01",
+						})
+						the table is laser_pointers. the name for the table in anchor is laser_pointer (which will throw errors if you try to use that as the inject)
+							trying to inject to a pointer instead of a table
+						weird thing is, that table contains flashlight_04 instead of laser_pointer
+					3 classes/gear_settings.lua and utilities/weapon_templates.lua reference laser_pointer but it's commented out
+						prob before gras implemented the extension file or while testing
 				didnt work
 			]]
 			name = "owo_grip_laser_01",

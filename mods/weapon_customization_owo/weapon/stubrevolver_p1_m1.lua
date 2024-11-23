@@ -35,11 +35,14 @@ mod.inject_fixes(this_variant, {
             position = vector3_box(0, 0, 0), scale = vector3_box(1, 0.55, 0.75)
         },
     },
+    -- #####
+    -- Flashlight: Grip Laser
+    -- #####
     {   dependencies = {"owo_grip_laser_01|owo_grip_laser_02"},
-        flashlight = {offset = true,  position = vector3_box(-0.01, 0.044, -0.016), scale = vector3_box(0.345, 0.3, 0.285)},
+        flashlight = {position = vector3_box(-0.01, 0.044, -0.016), scale = vector3_box(0.345, 0.3, 0.285)},
     },
 
-    -- #########
+    -- ################
     -- Hiding unused attachments
     -- ################
     {   dependencies = {"!owo_revolver_shotgun_barrel_base_01", "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08", "!owo_revolver_shotgun_barrel_base_09"},
