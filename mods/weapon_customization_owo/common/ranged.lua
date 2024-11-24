@@ -279,8 +279,8 @@ mod.wc.receiverac2List = {
 -- Flashlight/Special: Grip Laser
 function mod.owo_grip_laser(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "flashlight" or type, {
-		{id = "owo_grip_laser_01", name = "OwO Grip Laser (R)"},
-		{id = "owo_grip_laser_02", name = "OwO Grip Laser (G)"},
+		{id = "owo_grip_laser_01", name = "OwO Trigger Guard Laser (R)"},
+		{id = "owo_grip_laser_02", name = "OwO Trigger Guard (G)"},
 	})
 
 	mod.inject_models(variant_id, {
