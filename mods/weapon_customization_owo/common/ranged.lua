@@ -46,6 +46,10 @@ mod.wc.barrelshroudList = {
 	"owo_revolver_shotgun_barrel_06",
 	"owo_revolver_shotgun_barrel_08",
 	--"owo_revolver_shotgun_barrel_09",
+	"owo_revolver_shotgun_barrel_04_l",
+	"owo_revolver_shotgun_barrel_05_l",
+	"owo_revolver_shotgun_barrel_06_l",
+	"owo_revolver_shotgun_barrel_08_l",
 	"owo_dreg_shroud_empty",
 	"owo_dreg_shroud_01",
 	"owo_m16_empty",
@@ -546,6 +550,10 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 		-- barrel 7 with the skulls is too squished
 		{id = "owo_revolver_shotgun_barrel_base_08", name = "OwO Shotgun Barrel 4 (8)"},
 		--{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel 6 (9)"},
+		{id = "owo_revolver_shotgun_barrel_base_04_l", name = "OwO Shotgun Barrel Long 1 (4)"},
+		{id = "owo_revolver_shotgun_barrel_base_05_l", name = "OwO Shotgun Barrel Long 2 (5)"},
+		{id = "owo_revolver_shotgun_barrel_base_06_l", name = "OwO Shotgun Barrel Long 3 (6)"},
+		{id = "owo_revolver_shotgun_barrel_base_08_l", name = "OwO Shotgun Barrel Long 4 (8)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
 		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelex"},
@@ -583,6 +591,22 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_09"},
 		},]]
+		owo_revolver_shotgun_barrel_base_04_l = {
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
+		},
+		owo_revolver_shotgun_barrel_base_05_l = {
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_05"},
+		},
+		owo_revolver_shotgun_barrel_base_06_l = {
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_06"},
+		},
+		owo_revolver_shotgun_barrel_base_08_l = {
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_08"},
+		},
 		owo_revolver_shotgun_barrel_empty = {
 			model = "", type = "barrelshroud", parent = "barrel"
 		},

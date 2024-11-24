@@ -50,13 +50,22 @@ mod.inject_fixes(this_variant, {
 
     -- #####
     -- Barrel: Shotgun Extension
+    -- offset false or else position doesn't work
     -- #####
     {   dependencies = {"owo_revolver_shotgun_barrel_base_04|owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
         },
         -- stole this part from MT
         barrel = {offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        barrelshroud = {parent = "barrel", parent_node = 9, offset = true, 
+        barrelshroud = {parent = "barrel", parent_node = 9, offset = false, 
             position = vector3_box(0, 0.056, 0.02), scale = vector3_box(0.8, 0.345, 0.865)
+        },
+    },
+    --      Long barrel
+    {   dependencies = {"owo_revolver_shotgun_barrel_base_04_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l",
+        },
+        barrel = {offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        barrelshroud = {parent = "barrel", parent_node = 9, offset = false, 
+            position = vector3_box(0, 0.056, 0.02), scale = vector3_box(0.8, 0.615, 0.865)
         },
     },
     --      Muzzle handling
@@ -64,6 +73,11 @@ mod.inject_fixes(this_variant, {
             "!owo_suppressor_01", "!owo_suppressor_02"
         },
         muzzle = {parent = "barrel", position = vector3_box(0, 0.23, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+    },
+    {   dependencies = {"owo_revolver_shotgun_barrel_base_04_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l",
+            "!owo_suppressor_01", "!owo_suppressor_02"
+        },
+        muzzle = {parent = "barrel", position = vector3_box(0, 0.353, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
     },
     --      Suppressor compat
     {   dependencies = {"owo_revolver_shotgun_barrel_base_04|owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
