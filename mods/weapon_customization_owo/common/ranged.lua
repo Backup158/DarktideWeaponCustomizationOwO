@@ -27,16 +27,6 @@ mod.wc.muzzle2List = {
 	"owo_condom_helper_01",
 }
 -- BARREL
-mod.wc.add_custom_attachments.owobarrelex = "owobarrelexList"
-mod.wc.owobarrelexList = {
-	"owo_revolver_shotgun_barrel_empty",
-	"owo_revolver_shotgun_barrel_01",
-	"owo_revolver_shotgun_barrel_04",
-	"owo_revolver_shotgun_barrel_05",
-	"owo_revolver_shotgun_barrel_06",
-	"owo_revolver_shotgun_barrel_08",
-	"owo_revolver_shotgun_barrel_09",
-}
 mod.wc.add_custom_attachments.barrelac = "barrelacList"
 mod.wc.barrelacList = {
 	"owo_scab_gunner_barrelac_empty",
@@ -49,6 +39,13 @@ mod.wc.barrelac1List = {
 }
 mod.wc.add_custom_attachments.barrelshroud = "barrelshroudList"
 mod.wc.barrelshroudList = {
+	"owo_revolver_shotgun_barrel_empty",
+	--"owo_revolver_shotgun_barrel_01",
+	"owo_revolver_shotgun_barrel_04",
+	"owo_revolver_shotgun_barrel_05",
+	"owo_revolver_shotgun_barrel_06",
+	"owo_revolver_shotgun_barrel_08",
+	--"owo_revolver_shotgun_barrel_09",
 	"owo_dreg_shroud_empty",
 	"owo_dreg_shroud_01",
 	"owo_m16_empty",
@@ -284,7 +281,9 @@ function mod.owo_grip_laser(variant_id, type)
 	mod.inject_models(variant_id, {
 		owo_grip_laser_01 = {
 			--[[ FLASHLIGHT DISCUSSION
-			wc = weapon_customization
+			EWC 	= Extended Weapon Customization
+			wc 		= weapon_customization
+
 			flashlight details found in wc/scripts/mods/wc/weapon_attachments/common_ranged.lua in flashlight_data table
 			To add laser sight, EWC uses wc/extensions/laser_pointer_extension.lua
 				this does a manual check to see if the flashlight is 'laser_pointer', the ID for the built in laser pointer gras added
@@ -293,6 +292,8 @@ function mod.owo_grip_laser(variant_id, type)
 					added a manual check to has_laser_pointer. also didn't work
 						function calling for has_laser_pointer also checks if laser is enabled in mod settings
 					Adding an additional entry to the templates DID work, but only for the flashlight light (flashlight_templates), not the beam
+					flashlight_extension.lua has is_laser_pointer()
+							adding checks for this WORKS! but the laser is still red
 				there also seems to be references in wc/patches/weapon_templates.lua and wc/weapon_customization_anchors.lua
 					1 just calling extension and writing text to ui
 					2 specifying position and creates laser_pointer table
@@ -535,81 +536,74 @@ end
 -- Barrelex: Shotgun barrel extension
 --		Revolver
 function mod.owo_revolver_shotgun_barrel(variant_id, type)
-	--[[ You may be wondering why I did this instead of just directly adding it to Barrel Extensions
-		because they just wouldn't show up for some reason
-		maybe i need to redeclare the slot under the barrelexList
-
-		And why it's not barrelex, because that wouldn't respect my transformations?!?!?!??!
-		NVM EVEN A CUSTOM ONE ISN"T RESPEDTEDD FUCK THIS
-
-		
+	--[[ what the FUCK is wrong with barrels 1 and 9
 	]]
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel 1 (1)"},
+		--{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel 1 (1)"},
 		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel 1 (4)"},
 		{id = "owo_revolver_shotgun_barrel_base_05", name = "OwO Shotgun Barrel 2 (5)"},
 		{id = "owo_revolver_shotgun_barrel_base_06", name = "OwO Shotgun Barrel 3 (6)"},
 		-- barrel 7 with the skulls is too squished
 		{id = "owo_revolver_shotgun_barrel_base_08", name = "OwO Shotgun Barrel 4 (8)"},
-		{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel 6 (9)"},
+		--{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel 6 (9)"},
 	})
-	mod.inject_attachments_owo(variant_id, "owobarrelex" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
 		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelex"},
-		{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1 (1)"},
-		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 2 (4)"},
-		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 3 (5)"},
-		{id = "owo_revolver_shotgun_barrel_06", name = "OwO Shotgun Barrel 4 (6)"},
+		--{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1 (1)"},
+		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 1 (4)"},
+		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 2 (5)"},
+		{id = "owo_revolver_shotgun_barrel_06", name = "OwO Shotgun Barrel 3 (6)"},
 		-- barrel 7 with the skulls is too squished
-		{id = "owo_revolver_shotgun_barrel_08", name = "OwO Shotgun Barrel 5 (8)"},
-		{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Barrel 6 (9)"},
+		{id = "owo_revolver_shotgun_barrel_08", name = "OwO Shotgun Barrel 4 (8)"},
+		--{id = "owo_revolver_shotgun_barrel_09", name = "OwO Shotgun Barrel 6 (9)"},
 	})
 
 	mod.inject_models(variant_id, {
-		owo_revolver_shotgun_barrel_base_01 = {
+		--[[owo_revolver_shotgun_barrel_base_01 = {
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
-			automatic_equip = {owobarrelex = "owo_revolver_shotgun_barrel_01"},
-		},
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_01"},
+		},]]
 		owo_revolver_shotgun_barrel_base_04 = {
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
-			automatic_equip = {owobarrelex = "owo_revolver_shotgun_barrel_04"},
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
 		},
 		owo_revolver_shotgun_barrel_base_05 = {
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
-			automatic_equip = {owobarrelex = "owo_revolver_shotgun_barrel_05"},
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_05"},
 		},
 		owo_revolver_shotgun_barrel_base_06 = {
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
-			automatic_equip = {owobarrelex = "owo_revolver_shotgun_barrel_06"},
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_06"},
 		},
 		owo_revolver_shotgun_barrel_base_08 = {
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
-			automatic_equip = {owobarrelex = "owo_revolver_shotgun_barrel_08"},
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_08"},
 		},
-		owo_revolver_shotgun_barrel_base_09 = {
+		--[[owo_revolver_shotgun_barrel_base_09 = {
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
-			automatic_equip = {owobarrelex = "owo_revolver_shotgun_barrel_09"},
-		},
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_09"},
+		},]]
 		owo_revolver_shotgun_barrel_empty = {
-			model = "", type = "barrelex", parent = "barrel"
+			model = "", type = "barrelshroud", parent = "barrel"
 		},
-		owo_revolver_shotgun_barrel_01 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "owobarrelex", parent = "barrel"
-		},
+		--[[owo_revolver_shotgun_barrel_01 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", parent = "barrel"
+		},]]
 		owo_revolver_shotgun_barrel_04 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "owobarrelex", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroud", parent = "barrel"
 		},
 		owo_revolver_shotgun_barrel_05 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "owobarrelex", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelshroud", parent = "barrel"
 		},
 		owo_revolver_shotgun_barrel_06 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "owobarrelex", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelshroud", parent = "barrel"
 		},
 		owo_revolver_shotgun_barrel_08 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "owobarrelex", parent = "barrel"
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroud", parent = "barrel"
 		},
-		owo_revolver_shotgun_barrel_09 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "owobarrelex", parent = "barrel"
-		},
+		--[[owo_revolver_shotgun_barrel_09 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroud", parent = "barrel"
+		},]]
 	})
 end
 
