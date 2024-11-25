@@ -1371,6 +1371,9 @@ function mod.owo_holosight(variant_id, type)
 		{id = "owo_holosight_03_01", name = "OwO EOTech"},
 		{id = "owo_holosight_03_02", name = "OwO EOTech + Magnifier"},
 		{id = "owo_holosight_03_03", name = "OwO EOTech + Magnifier (Side)"},
+		{id = "owo_holosight_03_01_ps", name = "OwO EOTech (Point Shoot)"},
+		{id = "owo_holosight_03_02_ps", name = "OwO EOTech + M (Point Shoot)"},
+		{id = "owo_holosight_03_03_ps", name = "OwO EOTech + M/s (Point Shoot)"},
 		{id = "owo_holosight_01_01", name = "OwO EOTech (Fat)"},
 		{id = "owo_holosight_01_02", name = "OwO EOTech (Fat) + Magn"},
 		{id = "owo_holosight_01_03", name = "OwO EOTech (Fat) + Magn (Side)"},
@@ -1478,6 +1481,32 @@ function mod.owo_holosight(variant_id, type)
 			}
 		},
 		owo_holosight_03_03 = {
+			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
+			}
+		},
+		owo_holosight_03_01_ps = {
+			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+			}
+		},
+		owo_holosight_03_02_ps = {
+			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
+				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
+			}
+		},
+		owo_holosight_03_03_ps = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
