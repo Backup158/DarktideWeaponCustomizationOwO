@@ -574,19 +574,21 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_01"},
 		},]]
 		owo_revolver_shotgun_barrel_base_04 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
+			-- this was in wc/weapon_attachments/stub.lua and i thought it'd fix the animation issue but no fuck me im just too desperate
+			-- angle = -.5, move = vector3_box(0, -2, 0), remove = vector3_box(0, .1, 0),
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
 		},
 		owo_revolver_shotgun_barrel_base_05 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_05"},
 		},
 		owo_revolver_shotgun_barrel_base_06 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_06"},
 		},
 		owo_revolver_shotgun_barrel_base_08 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_08"},
 		},
 		--[[owo_revolver_shotgun_barrel_base_09 = {
