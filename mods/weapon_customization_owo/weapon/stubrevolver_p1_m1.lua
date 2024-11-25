@@ -32,21 +32,27 @@ mod.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: SUPPRESSOR
 	-- ######
-	{	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
+	{	dependencies = { "owo_suppressor_01|owo_suppressor_02",
+            "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08"
+        },
         muzzle = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"},
         },
     },
-    {	dependencies = {"owo_suppressor_01"},
+    {	dependencies = {"owo_suppressor_01",
+            "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08"
+        },
         muzzle2 = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, 0.016),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            position = vector3_box(0, 0.192, -0.022),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"},
         },	
     },
-    {	dependencies = {"owo_suppressor_02"},
+    {	dependencies = {"owo_suppressor_02",
+            "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08"
+        },
         muzzle2 = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, 0.016), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"},
         },
     },
@@ -74,9 +80,11 @@ mod.inject_fixes(this_variant, {
         },
         -- Offset is false so it can be reparented to barrel on load, which lets it follow the animation
         barrelshroud = {parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
-            position = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.460, 0.815),
+            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.460, 0.815),
             animation_wait_attach = {"barrel"},
         },
+        emblem_left = {position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
+        emblem_right = {position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
     },
    --[[ --      Long barrel
         Not doing until i figure out the positioning issue bug
@@ -92,7 +100,7 @@ mod.inject_fixes(this_variant, {
             "!owo_suppressor_01", "!owo_suppressor_02"
         },
         muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
-            position = vector3_box(0, 0.23, -0.042), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
+            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
             animation_wait_attach = {"barrel"},
         },
     },
@@ -106,11 +114,11 @@ mod.inject_fixes(this_variant, {
             "owo_suppressor_01|owo_suppressor_02"
         },
         muzzle = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.23, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
+            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
             animation_wait_attach = {"barrel"},
         },
         muzzle2 = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.23, 0.018),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            position = vector3_box(0, 0.236, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"}, 
         },	
     },
