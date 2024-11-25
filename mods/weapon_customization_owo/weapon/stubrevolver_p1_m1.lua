@@ -34,17 +34,20 @@ mod.inject_fixes(this_variant, {
 	-- ######
 	{	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
         muzzle = {parent = "barrel", parent_node = 9, offset = true, 
-            position = vector3_box(0, 0.212, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ) 
+            position = vector3_box(0, 0.192, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            animation_wait_attach = {"barrel"},
         },
     },
     {	dependencies = {"owo_suppressor_01"},
         muzzle2 = {parent = "barrel", parent_node = 9, offset = true, 
-            position = vector3_box(0, 0.212, 0.016),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ) 
+            position = vector3_box(0, 0.192, 0.016),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            animation_wait_attach = {"barrel"},
         },	
     },
     {	dependencies = {"owo_suppressor_02"},
         muzzle2 = {parent = "barrel", parent_node = 9, offset = true, 
-            position = vector3_box(0, 0.212, 0.016), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ) 
+            position = vector3_box(0, 0.192, 0.016), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            animation_wait_attach = {"barrel"},
         },
     },
     -- the skinny bayonet. sits on muzzle
@@ -52,7 +55,8 @@ mod.inject_fixes(this_variant, {
             "autogun_bayonet_03"
         },
         bayonet = {parent = "barrel", parent_node = 9, offset = true, 
-            position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ) 
+            position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ),
+            animation_wait_attach = {"barrel"},
         },
     },
 
@@ -66,10 +70,12 @@ mod.inject_fixes(this_variant, {
         -- trigger move is used in wc/weapon_attachments/WEAPON.lua
         barrel = { offset = true, mesh_move = false, 
             position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
-            trigger_move = {"muzzle", "rail", "barrelshroud", "muzzle2"}, animation_wait_detach = {"rail", "muzzle", "barrelshroud", "muzzle2"},
+            rotation_node = 2,
+            trigger_move = {"muzzle", "rail", "barrelshroud", "muzzle2"}, animation_wait_detach = {"muzzle2", "barrelshroud", "rail", "muzzle"},
         },
-        barrelshroud = {parent = "barrel", parent_node = 9, offset = true, 
-            position = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.460, 0.815)
+        barrelshroud = {parent = "barrel", parent_node = 9, offset = true, mesh_move = false, 
+            position = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.460, 0.815),
+            animation_wait_attach = {"barrel"},
         },
     },
    --[[ --      Long barrel
@@ -86,7 +92,8 @@ mod.inject_fixes(this_variant, {
             "!owo_suppressor_01", "!owo_suppressor_02"
         },
         muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
-            position = vector3_box(0, 0.23, -0.042), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)
+            position = vector3_box(0, 0.23, -0.042), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
+            animation_wait_attach = {"barrel"},
         },
     },
    --[[ {   dependencies = {"owo_revolver_shotgun_barrel_base_04_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l",
@@ -99,10 +106,12 @@ mod.inject_fixes(this_variant, {
             "owo_suppressor_01|owo_suppressor_02"
         },
         muzzle = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.23, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2)
+            position = vector3_box(0, 0.23, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
+            animation_wait_attach = {"barrel"},
         },
         muzzle2 = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.23, 0.018),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ) 
+            position = vector3_box(0, 0.23, 0.018),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            animation_wait_attach = {"barrel"}, 
         },	
     },
     -- #####
