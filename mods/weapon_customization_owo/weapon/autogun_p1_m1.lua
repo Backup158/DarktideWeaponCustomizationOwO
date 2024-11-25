@@ -428,8 +428,8 @@ mod.inject_fixes(this_variant, {
     },
     --      Point shooting
     {   dependencies = { "owo_holosight_03_01_ps|owo_holosight_03_02_ps|owo_holosight_03_03_ps" },
-        no_scope_offset =   { position = vector3_box(-0.25, 0.62, -0.253), rotation = vector3_box(0, -29, 0)},
-        scope_offset =      { position = vector3_box(-0.25, 0.62, -0.253), rotation = vector3_box(0, -29, 0)},
+        no_scope_offset =   { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0)},
+        scope_offset =      { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0)},
     },
 
     -- ######
