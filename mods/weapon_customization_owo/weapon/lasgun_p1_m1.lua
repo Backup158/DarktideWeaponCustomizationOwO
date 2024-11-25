@@ -24,6 +24,7 @@ mod.owo_lasgun_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant)
 mod.owo_scab_gunner_muzzle(this_variant)
 mod.owo_scab_gunner_barrel(this_variant)
+mod.owo_condom(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -32,7 +33,7 @@ mod.inject_fixes(this_variant, {
 	-- ######
 	-- Magazine: FLAT LASGUN
 	-- ######
-	{	dependencies = { "owo_lasgun_magazine_flat"},
+	{	dependencies = { "owo_lasgun_magazine_flat_01"},
 		magazine = { offset = true, position = vector3_box(0, 0, -0.02), scale = vector3_box(1, 1, 0.5 ) },
 	},
 
@@ -48,17 +49,25 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {"owo_suppressor_02"},
 		muzzle2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ) }
 	},
-	-- Hiding helpers when not equipped
-	{	dependencies = {"!owo_suppressor_01",  
-			"!owo_suppressor_02"
-		},
-		muzzle2 = {hide_mesh = { 	{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-	},
 	-- the skinny bayonet. sits on muzzle
 	{	dependencies = {"owo_suppressor_01|owo_suppressor_02", 
 			"autogun_bayonet_03"
 		},
 		bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ) },
+	},
+
+	-- ######
+	-- Muzzle: CONDOM
+	-- ######
+	{	dependencies = {"owo_condom_01"},
+		muzzle = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
+		muzzle2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
+	},
+	-- the skinny bayonet. sits on muzzle
+	{	dependencies = {"owo_condom_01",
+			"autogun_bayonet_03"
+		},
+		bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
 	},
 
 	-- ######
@@ -82,8 +91,18 @@ mod.inject_fixes(this_variant, {
 		barrel = { offset = true,  position = vector3_box(0, -0.08, 0),  rotation = vector3_box(0, 0, 0),  scale = vector3_box(1, 1, 1 ) },
 		barrelac = { offset = true,  position = vector3_box(0, 0.11, -0.018),  rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1, 0.885, 1.5 ) },
 	},
-	-- Hiding Unused
+
+	-- #########################
+	-- Hiding unused helpers
+	-- #########################
+	-- Barrels
 	{	dependencies = { "!owo_scab_gunner_barrel_01"},
 		barrelac = { hide_mesh = { 	{"barrelac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
+	-- Muzzles
+	{	dependencies = {"!owo_suppressor_01",  "!owo_suppressor_02", 
+			"!owo_condom_01"
+		},
+		muzzle2 = {hide_mesh = { 	{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 })
