@@ -1244,9 +1244,9 @@ end
 -- Receiver: Pistol Grip Mag
 function mod.owo_laspistol_grip_mag(variant_id)
 	mod.inject_attachments_owo(variant_id, "receiver", {
-		{id = "owo_laspistol_grip_mag_01", name = "OwO Pistol Receiver 1"},
-		{id = "owo_laspistol_grip_mag_02", name = "OwO Pistol Receiver 2"},
-		{id = "owo_laspistol_grip_mag_03", name = "OwO Pistol Receiver 3 (M)"},
+		{id = "owo_laspistol_grip_mag_01", name = "OwO Chunky Slide 1"},
+		{id = "owo_laspistol_grip_mag_02", name = "OwO Chunky Slide 2"},
+		{id = "owo_laspistol_grip_mag_03", name = "OwO Chunky Slide 3 (M)"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
 		{id = "owo_laspistol_grip_mag_helper_empty", name = "Empty Receiverac1"},
