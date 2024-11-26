@@ -1856,6 +1856,14 @@ function mod.owo_acog_sight(variant_id, type)
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_05", name = "OwO ACOG'vesa Knob", no_randomize = true},
 	})
+	mod.inject_attachments_owo(variant_id, "owosightac6" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_helper_06", name = "OwO ACOG'vesa Knob", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac7" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_helper_07", name = "OwO ACOG'vesa Cable", no_randomize = true},
+	})
 	mod.inject_attachments_owo(variant_id, "owosight2" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_sight2_01", name = "OwO ACOG RMR", no_randomize = true},

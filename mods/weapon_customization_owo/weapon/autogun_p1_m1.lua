@@ -484,27 +484,24 @@ mod.inject_fixes(this_variant, {
         sight =             { offset = true, position  = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         owosightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
         owosightac2 =       { offset = true, position  = vector3_box(0, -0.128, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        owosightac3 =       { offset = true, position  = vector3_box(-0.003, 0.088, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
-        -- Riser
-        owosightac4 =       { offset = true, position  = vector3_box(0, 0.052, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        owosightac3 =       { offset = true, position  = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
+        -- Base
+        owosightac4 =       { offset = true, position  = vector3_box(0, -0.018, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
         -- Knobs
-        owosightac5 =       { offset = true, position  = vector3_box(0, -0.032, 0.081), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24) },
-        owosightac6 =       { offset = true, position  = vector3_box(0.03, -0.032, 0.063), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.45, 0.68, 0.24) },
+        owosightac5 =       { offset = true, position  = vector3_box(0, -0.01, 0.061), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24) },
+        owosightac6 =       { offset = true, position  = vector3_box(0.028, -0.008, 0.034), rotation = vector3_box(-180, -90, -180), scale = vector3_box(0.45, 0.45, 0.12) },
         -- Cable
-        owosightac7 =       { offset = true, position  = vector3_box(-0.003, 0.088, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-    },
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_ps" },
-        owosight2 =             { hide_mesh = {{"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        owosightac7 =       { offset = true, position  = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
     },
     -- ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
-        owosight2 =       { offset = true, position  = vector3_box(0, 0.054, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.45, 0.28, 0.192) },
+        owosight2 =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
     --  Aligning sights to crosshair
     --      Aiming with ACOG
-    {   dependencies = { "owo_acog_sight_01_01|owo_acog_sight_02_01" },
-        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01" },
+        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0235), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0235), rotation = vector3_box(0, 0, 0)},
     },
     --      Aiming with RMR
     {   dependencies = { "owo_acog_sight_02_02" },
