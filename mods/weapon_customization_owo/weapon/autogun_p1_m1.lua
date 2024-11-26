@@ -505,8 +505,8 @@ mod.inject_fixes(this_variant, {
     },
     --      Aiming with RMR
     {   dependencies = { "owo_acog_sight_02_02" },
-        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =   { position = vector3_box(0.0002, 0.001, -0.100), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.100), rotation = vector3_box(0, 0, 0)},
     },
     --      Point shooting
     {   dependencies = { "owo_acog_sight_01_ps|owo_acog_sight_02_ps" },
