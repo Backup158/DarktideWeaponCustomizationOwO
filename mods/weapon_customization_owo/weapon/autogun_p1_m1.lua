@@ -59,6 +59,7 @@ mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_condom(this_variant, "muzzle")
 mod.owo_m16_sight(this_variant, "sight")
 mod.owo_pu_scope(this_variant, "sight")
+mod.owo_acog_sight(this_variant, "sight")
 
 -- ############################################
 -- Inject Fixes
@@ -476,6 +477,47 @@ mod.inject_fixes(this_variant, {
     },
 
     -- ######
+    -- Sight: Trijicon ACOG
+    -- ######
+    -- ACOG only
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_ps|owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
+        sight =             { offset = true, position  = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        owosightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
+        owosightac2 =       { offset = true, position  = vector3_box(0, -0.128, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        owosightac3 =       { offset = true, position  = vector3_box(-0.003, 0.088, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
+        -- Riser
+        owosightac4 =       { offset = true, position  = vector3_box(0, 0.052, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        -- Knobs
+        owosightac5 =       { offset = true, position  = vector3_box(0, -0.032, 0.081), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24) },
+        owosightac6 =       { offset = true, position  = vector3_box(0.03, -0.032, 0.063), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.45, 0.68, 0.24) },
+        -- Cable
+        owosightac7 =       { offset = true, position  = vector3_box(-0.003, 0.088, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_ps" },
+        owosight2 =             { hide_mesh = {{"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- ACOG with RMR on top
+    {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
+        owosight2 =       { offset = true, position  = vector3_box(0, 0.054, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.45, 0.28, 0.192) },
+    },
+    --  Aligning sights to crosshair
+    --      Aiming with ACOG
+    {   dependencies = { "owo_acog_sight_01_01|owo_acog_sight_02_01" },
+        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+    },
+    --      Aiming with RMR
+    {   dependencies = { "owo_acog_sight_02_02" },
+        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+    },
+    --      Point shooting
+    {   dependencies = { "owo_acog_sight_01_ps|owo_acog_sight_02_ps" },
+        no_scope_offset =   { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0)},
+        scope_offset =      { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0)},
+    },
+
+    -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
 	{	dependencies = {"owo_m203"},
@@ -604,6 +646,8 @@ mod.inject_fixes(this_variant, {
             "!owo_holosight_03_01", "!owo_holosight_03_02", "!owo_holosight_03_03",
             "!owo_holosight_03_01_ps", "!owo_holosight_03_02_ps", "!owo_holosight_03_03_ps",
             "!owo_m16_sight_01", "!owo_m16_sight_02",
+            "!owo_acog_sight_01", "!owo_acog_sight_01_ps",
+            "!owo_acog_sight_02_01", "!owo_acog_sight_02_02", "!owo_acog_sight_02_ps",
         },
         owosightac1 = { hide_mesh = {{"owosightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosightac2 = { hide_mesh = {{"owosightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
@@ -613,7 +657,8 @@ mod.inject_fixes(this_variant, {
     {   dependencies = { "!owo_holosight_01_02", "!owo_holosight_01_03",
             "!owo_holosight_02_02", "!owo_holosight_02_03",
             "!owo_holosight_03_02", "!owo_holosight_03_03",
-            "!owo_holosight_03_02_ps", "!owo_holosight_03_03_ps"
+            "!owo_holosight_03_02_ps", "!owo_holosight_03_03_ps",
+            "!owo_acog_sight_02_01", "!owo_acog_sight_02_02", "!owo_acog_sight_02_ps",
         },
         owosight2 = { hide_mesh = {{"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosight2ac1 = { hide_mesh = {{"owosight2ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
@@ -621,11 +666,15 @@ mod.inject_fixes(this_variant, {
     },
     {   dependencies = { "!owo_m16_sight_01", "!owo_m16_sight_02",
             "!owo_pu_scope_01", "!owo_pu_scope_02",
+            "!owo_acog_sight_01", "!owo_acog_sight_01_ps",
+            "!owo_acog_sight_02_01", "!owo_acog_sight_02_02", "!owo_acog_sight_02_ps",
         },
         owosightac5 = { hide_mesh = {{"owosightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         owosightac6 = { hide_mesh = {{"owosightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "!owo_m16_sight_01", "!owo_m16_sight_02",
+            "!owo_acog_sight_01", "!owo_acog_sight_01_ps",
+            "!owo_acog_sight_02_01", "!owo_acog_sight_02_02", "!owo_acog_sight_02_ps",
         },
         owosightac7 = { hide_mesh = {{"owosightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },

@@ -180,6 +180,7 @@ mod.wc.owosightac1List = {
 	"owo_rear_sight_ac1_01",
 	"owo_pu_scope_helper_01",
 	"owo_m16_sight_helper_01",
+	"owo_acog_sight_helper_01",
 }
 mod.wc.add_custom_attachments.owosightac2 = "owosightac2List"
 mod.wc.owosightac2List = {
@@ -189,6 +190,7 @@ mod.wc.owosightac2List = {
 	"owo_rear_sight_ac2_01",
 	"owo_pu_scope_helper_02",
 	"owo_m16_sight_helper_02",
+	"owo_acog_sight_helper_02",
 }
 mod.wc.add_custom_attachments.owosightac3 = "owosightac3List"
 mod.wc.owosightac3List = {
@@ -198,6 +200,7 @@ mod.wc.owosightac3List = {
 	"owo_rear_sight_ac3_01",
 	"owo_pu_scope_helper_03",
 	"owo_m16_sight_helper_03",
+	"owo_acog_sight_helper_03",
 }
 mod.wc.add_custom_attachments.owosightac4 = "owosightac4List"
 mod.wc.owosightac4List = {
@@ -207,23 +210,27 @@ mod.wc.owosightac4List = {
 	"owo_rear_sight_ac4_01",
 	"owo_pu_scope_helper_04",
 	"owo_m16_sight_helper_04",
+	"owo_acog_sight_helper_04",
 }
 mod.wc.add_custom_attachments.owosightac5 = "owosightac5List"
 mod.wc.owosightac5List = {
 	"owo_pu_scope_empty",
 	"owo_pu_scope_helper_05",
 	"owo_m16_sight_helper_05",
+	"owo_acog_sight_helper_05",
 }
 mod.wc.add_custom_attachments.owosightac6 = "owosightac6List"
 mod.wc.owosightac6List = {
 	"owo_pu_scope_empty",
 	"owo_pu_scope_helper_06",
 	"owo_m16_sight_helper_06",
+	"owo_acog_sight_helper_06",
 }
 mod.wc.add_custom_attachments.owosightac7 = "owosightac7List"
 mod.wc.owosightac7List = {
 	"owo_m16_sight_empty",
 	"owo_m16_sight_helper_07",
+	"owo_acog_sight_helper_07",
 }
 -- SIGHT2
 --[[
@@ -1371,7 +1378,7 @@ function mod.owo_holosight(variant_id, type)
 		{id = "owo_holosight_03_01", name = "OwO EOTech"},
 		{id = "owo_holosight_03_02", name = "OwO EOTech + Magnifier"},
 		{id = "owo_holosight_03_03", name = "OwO EOTech + Magnifier (Side)"},
-		{id = "owo_holosight_03_01_ps", name = "OwO EOTech (Point Shoot)"},
+		{id = "owo_holosight_03_01_ps", name = "OwO EOTech (Point Shooting)"},
 		{id = "owo_holosight_03_02_ps", name = "OwO EOTech + M (PS)"},
 		{id = "owo_holosight_03_03_ps", name = "OwO EOTech + M/s (PS)"},
 		{id = "owo_holosight_01_01", name = "OwO EOTech (Fat)"},
@@ -1815,6 +1822,149 @@ function mod.owo_m16_sight(variant_id, type)
 		owo_m16_sight_helper_07 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = 'owosightac7',
 			mesh_move = false, parent = 'sight'
+		},
+	})
+end
+
+-- Sight: Trijicon ACOG
+--		Autoguns
+function mod.owo_acog_sight(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "sight" or type, {
+		{id = "owo_acog_sight_01", name = "OwO ACOG"},
+		{id = "owo_acog_sight_01_ps", name = "OwO ACOG (Point Shooting)"},
+		{id = "owo_acog_sight_02_01", name = "OwO ACOG + RMR"},
+		{id = "owo_acog_sight_02_02", name = "OwO ACOG + RMR (Top)"},
+		{id = "owo_acog_sight_02_ps", name = "OwO ACOG + RMR (PS)"},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_helper_01", name = "OwO ACOG'vesa sight container 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac2" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_helper_02", name = "OwO ACOG'vesa rear sight container 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac3" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_helper_03", name = "OwO ACOG'vesa rear sight container 2", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac4" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_helper_04", name = "OwO ACOG'vesa Base", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "owosightac5" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_helper_05", name = "OwO ACOG'vesa Knob", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "owosight2" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_sight2_01", name = "OwO ACOG RMR", no_randomize = true},
+	})
+	--[[mod.inject_attachments_owo(variant_id, "owosight2ac1" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_sight2_helper_01", name = "OwO ACOG Magnifier 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "owosight2ac2" or type, {
+		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_acog_sight_sight2_helper_02", name = "OwO ACOG Magnifier 2", no_randomize = true},
+	})]]
+
+	mod.inject_models(variant_id, {
+		owo_acog_sight_01 = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_acog_sight_helper_01", owosightac2 = "owo_acog_sight_helper_02", 
+				owosightac3 = "owo_acog_sight_helper_03", owosightac4 = "owo_acog_sight_helper_04",
+				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
+				owosightac7 = "owo_acog_sight_helper_07",
+			}
+		},
+		owo_acog_sight_01_ps = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_acog_sight_helper_01", owosightac2 = "owo_acog_sight_helper_02", 
+				owosightac3 = "owo_acog_sight_helper_03", owosightac4 = "owo_acog_sight_helper_04",
+				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
+				owosightac7 = "owo_acog_sight_helper_07",
+			}
+		},
+		owo_acog_sight_02_01 = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_acog_sight_helper_01", owosightac2 = "owo_acog_sight_helper_02", 
+				owosightac3 = "owo_acog_sight_helper_03", owosightac4 = "owo_acog_sight_helper_04",
+				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
+				owosightac7 = "owo_acog_sight_helper_07",
+				owosight2 = "owo_acog_sight_sight2_01",
+			}
+		},
+		owo_acog_sight_02_02 = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_acog_sight_helper_01", owosightac2 = "owo_acog_sight_helper_02", 
+				owosightac3 = "owo_acog_sight_helper_03", owosightac4 = "owo_acog_sight_helper_04",
+				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
+				owosightac7 = "owo_acog_sight_helper_07",
+				owosight2 = "owo_acog_sight_sight2_01", -- owosight2ac1 = "owo_acog_sight_sight2_helper_01", owosight2ac2 = "owo_acog_sight_sight2_helper_02"
+			}
+		},
+		owo_acog_sight_02_ps = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				owosightac1 = "owo_acog_sight_helper_01", owosightac2 = "owo_acog_sight_helper_02", 
+				owosightac3 = "owo_acog_sight_helper_03", owosightac4 = "owo_acog_sight_helper_04",
+				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
+				owosightac7 = "owo_acog_sight_helper_07",
+				owosight2 = "owo_acog_sight_sight2_01", -- owosight2ac1 = "owo_acog_sight_sight2_helper_01", owosight2ac2 = "owo_acog_sight_sight2_helper_02"
+			}
+		},
+		
+		owo_acog_sight_empty = {
+			model = "", type = "owosightac1", 
+			mesh_move = false, parent = "sight"
+		},
+		-- Front of scope
+		owo_acog_sight_helper_01 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "owosightac1", 
+			mesh_move = false, parent = "sight"
+		},
+		-- Rear of scope
+		owo_acog_sight_helper_02 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "owosightac2", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_acog_sight_helper_03 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "owosightac3", 
+			mesh_move = false, parent = "sight"
+		},
+		-- Base
+		owo_acog_sight_helper_04 = {
+			model = _item_melee.."/grips/hatchet_grip_04", type = "owosightac4",
+			mesh_move = false, parent = "sight"
+		},
+		-- Knobs
+		owo_acog_sight_helper_05 = {
+			model = _item_melee.."/pommels/shovel_pommel_01", type = "owosightac5",
+			mesh_move = false, parent = "sight"
+		},
+		owo_acog_sight_helper_06 = {
+			model = _item_melee.."/pommels/shovel_pommel_01", type = "owosightac6",
+			mesh_move = false, parent = "sight"
+		},
+		-- Cable
+		owo_acog_sight_helper_07 = {
+			model = _item_melee.."/full/force_staff_full_01", type = "owosightac7",
+			mesh_move = false, parent = "sight"
+		},
+		-- RMR on top
+		owo_acog_sight_sight2_01 = {
+			model = _item_ranged.."/sights/reflex_sight_02", type = "owosight2",
+			mesh_move = false, parent = "sight"
 		},
 	})
 end
