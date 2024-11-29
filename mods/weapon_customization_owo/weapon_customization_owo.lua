@@ -8,6 +8,9 @@ local mod = get_mod("weapon_customization_owo")
 -- I don't know why
 -- #########################################
 
+-- Prints a message to the console log containing the current version number
+mod:info('WeaponCustomizationOwO v1.nya loaded uwu nya :3')
+
 function mod.load_mod_file(relative_path)
 	mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/"..relative_path)
 end
@@ -44,6 +47,7 @@ function mod.on_all_mods_loaded()
        return
     end
     mod.mt = mt
+	--[[ Thought it was necessary for patches
 	--@class WeaponCustomizationMod_Syn
     local syn = get_mod("weapon_customization_syn_edits")
     if not syn then
@@ -51,6 +55,7 @@ function mod.on_all_mods_loaded()
        return
     end
     mod.syn = syn
+	]]
 
 	local attachment_ids = {}
 	local model_ids = {}
