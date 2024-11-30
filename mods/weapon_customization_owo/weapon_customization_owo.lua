@@ -2,16 +2,16 @@ local mod = get_mod("weapon_customization_owo")
 local wc = get_mod("weapon_customization")
 local mt = get_mod("weapon_customization_mt_stuff")
 
+-- Prints a message to the console log containing the current version number
+mod:info('WeaponCustomizationOwO v1.nya loaded uwu nya :3')
+
 -- #########################################
 -- ############### ATTENTION ###############
 -- #########################################
--- This is basically just a copy of the core MT plugin file
+-- The rest of this is basically a copy of the core MT plugin file
 -- Functions won't load when I try to call them externally
 -- I don't know why
 -- #########################################
-
--- Prints a message to the console log containing the current version number
-mod:info('WeaponCustomizationOwO v1.nya loaded uwu nya :3')
 
 function mod.load_mod_file(relative_path)
 	mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/"..relative_path)
@@ -19,11 +19,12 @@ end
 
 -- need to get out of weapon_customization_owo/scripts/mods/weapon_customization_owo (YOU ARE HERE)
 -- 4 jumps to get back to main darktide mods folder
-package.path = package.path .. ';../../../../weapon_customization_mt_stuff/?.lua'
+--[[package.path = package.path .. ';../../../../weapon_customization_mt_stuff/?.lua'
 local mtMain = require 'wc_mts'
 if mtMain then
 	mod:info('mt main plugin found uwu nya :3')
-end
+end]]
+
 
 ---@param to table
 ---@param items table
@@ -61,7 +62,9 @@ function mod.on_all_mods_loaded()
 	---@param variant_id VariantID
 	---@param slot AttachmentSlot
 	---@param attachments_table CoreAttachment[]
-	--- Renamed so it doesn't overwrite explode. Functionally the same but I changed the prefix
+	-- Renamed because i was worried about collisions
+	-- 	probably not an actual issue since methods are called with the class name, like class.method
+	-- Functionally the same but I changed the prefix checking in the displayed names
 	function mod.inject_attachments_owo(variant_id, slot, attachments_table)
 		if not wc.attachment[variant_id] then
 			mod:error(string.format("attachment variant_id [%s] invalid", variant_id))
@@ -98,7 +101,6 @@ function mod.on_all_mods_loaded()
 		mod.table_append(model_ids[variant_id], table.keys(model_tables))
 	end
 
-	--[[
 	---@param variant_id VariantID
 	---@param fix_tables CoreAnchorFix[]
 	function mod.inject_fixes(variant_id, fix_tables)
@@ -108,12 +110,8 @@ function mod.on_all_mods_loaded()
 		end
 		mod.table_prepend(wc.anchors[variant_id].fixes, fix_tables)
 	end
-	]]
-
-	function mod.inject_fixes(variant_id, fix_tables)
-		mtMain.inject_fixes(variant_id, fix_tables)
-	end
-
+	
+	-- Applies all the fixes you injected into each wepaon
 	mod.load_mod_file("files_to_load")
 
 	-- Basic id validation
