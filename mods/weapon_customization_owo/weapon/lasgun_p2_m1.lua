@@ -65,10 +65,11 @@ mod.inject_fixes(this_variant, {
 		receiverac1 = {offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
 		receiverac2 = {offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
 	},
+
 	-- ######
 	-- Receiver: HELBORE MAS-49
 	-- ######
-	{	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_04|owo_helbore_mas49_05",
+	{	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05",
 		},
 		receiver = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 		receiverac1 = {offset = true, position = vector3_box(0.031, 0.022, 0.046), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.518, 0.573, 0.545 ) },
@@ -153,8 +154,10 @@ mod.inject_fixes(this_variant, {
 	{   dependencies = {"owo_wood_krieg_01",
             "autogun_bayonet_01|autogun_bayonet_02"
         },
-        bayonet = {offset = true,   position = vector3_box(0, 0.564, -0.058),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+        --bayonet = {offset = true,   position = vector3_box(0, 0.564, -0.058),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+		bayonet = {offset = true,   position = vector3_box(0, 0.504, -0.03),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
+	-- 	these barrels are shorter
 	{   dependencies = {"owo_wood_krieg_02|owo_wood_krieg_03",
             "autogun_bayonet_01|autogun_bayonet_02"
         },
@@ -297,7 +300,7 @@ mod.inject_fixes(this_variant, {
 	},
 	-- Receivers
 	{	dependencies = {"!owo_bolt_helbore_01", "!owo_bolt_helbore_02", "!owo_bolt_helbore_03", "!owo_bolt_helbore_04", "!owo_bolt_helbore_05",
-			"!owo_helbore_mas49_01", "!owo_helbore_mas49_02", "!owo_helbore_mas49_03", "!owo_helbore_mas49_04", "!owo_helbore_mas49_05",
+			"!owo_helbore_mas49_01", "!owo_helbore_mas49_02", "!owo_helbore_mas49_03", "!owo_helbore_mas49_05",
 		},
 		receiverac1 = {hide_mesh = {     {"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},

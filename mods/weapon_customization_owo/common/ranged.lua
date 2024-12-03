@@ -269,6 +269,7 @@ mod.wc.receiverac1List = {
 	"owo_bolt_helbore_bolt_01",
 	"owo_laspistol_grip_mag_helper_empty",
 	"owo_laspistol_grip_mag_helper_01",
+	"owo_helbore_mas49_ass",
 }
 mod.wc.add_custom_attachments.receiverac2 = "receiverac2List"
 mod.wc.receiverac2List = {
@@ -276,6 +277,7 @@ mod.wc.receiverac2List = {
 	"owo_bolt_helbore_bolt_02",
 	"owo_laspistol_grip_mag_helper_empty",
 	"owo_laspistol_grip_mag_helper2_01",
+	"owo_helbore_mas49_knob",
 }
 
 -- ############################################
@@ -1253,8 +1255,8 @@ function mod.owo_helbore_mas49(variant_id, type)
 		{id = "owo_helbore_mas49_01", name = "OwO Helbore MAS-49 1"},
 		{id = "owo_helbore_mas49_02", name = "OwO Helbore MAS-49 2"},
 		{id = "owo_helbore_mas49_03", name = "OwO Helbore MAS-49 3"},
-		{id = "owo_helbore_mas49_04", name = "OwO Helbore MAS-49 4"},
-		{id = "owo_helbore_mas49_05", name = "OwO Helbore MAS-49 5"},
+		--{id = "owo_helbore_mas49_04", name = "OwO Helbore MAS-49 4"},
+		{id = "owo_helbore_mas49_05", name = "OwO Helbore MAS-49 4 (M)"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac1" or type, {
 		{id = "owo_bolt_empty", name = "receiverac1 empty", no_randomize = true},
@@ -1282,11 +1284,11 @@ function mod.owo_helbore_mas49(variant_id, type)
 			mesh_move = false,
 			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
 		},
-		owo_helbore_mas49_04 = {
+		--[[owo_helbore_mas49_04 = {
 			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_05", type = "receiver", 
 			mesh_move = false,
 			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
-		},
+		},]]
 		owo_helbore_mas49_05 = {
 			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_ml01", type = "receiver", 
 			mesh_move = false,
@@ -1297,6 +1299,7 @@ function mod.owo_helbore_mas49(variant_id, type)
 			mesh_move = false, parent = "receiver"
 		},
 		-- makes the ass more shapely
+		-- fake dovetail
 		owo_helbore_mas49_ass = {
 			model = _item_ranged.."/magazines/boltgun_rifle_magazine_02", type = "receiverac1", 
 			mesh_move = false, parent = "receiver"
@@ -1621,8 +1624,8 @@ end
 -- Sight: Rear sights with flip up. Ladder Aperture Sights
 function mod.owo_rear_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
-		{id = "owo_rear_sight_01", name = "OwO Aperture Sight - Lebel (Down)"},
-		{id = "owo_rear_sight_02", name = "OwO Aperture Sight - Lebel (Up)"},
+		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
+		{id = "owo_rear_sight_02", name = "OwO Aperture, U Notch (Up)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
