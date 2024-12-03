@@ -154,7 +154,6 @@ mod.inject_fixes(this_variant, {
 	{   dependencies = {"owo_wood_krieg_01",
             "autogun_bayonet_01|autogun_bayonet_02"
         },
-        --bayonet = {offset = true,   position = vector3_box(0, 0.564, -0.058),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
 		bayonet = {offset = true,   position = vector3_box(0, 0.504, -0.03),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
 	-- 	these barrels are shorter
