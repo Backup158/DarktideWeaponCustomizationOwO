@@ -1299,7 +1299,7 @@ function mod.owo_helbore_mas49(variant_id, type)
 			mesh_move = false, parent = "receiver"
 		},
 		-- makes the ass more shapely
-		-- fake dovetail
+		-- dovetail for optic mount
 		owo_helbore_mas49_ass = {
 			model = _item_ranged.."/magazines/boltgun_rifle_magazine_02", type = "receiverac1", 
 			mesh_move = false, parent = "receiver"
@@ -1626,49 +1626,73 @@ function mod.owo_rear_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
 		{id = "owo_rear_sight_02", name = "OwO Aperture, U Notch (Up)"},
+		{id = "owo_rear_sight_o_01", name = "OwO MAS49 Irons"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac1_01", name = "Flip sight range select 1", no_randomize = true},
+		{id = "owo_rear_sight_ac1_02", name = "MAS49 Peep 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac2" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac2_01", name = "Flip sight range select 2", no_randomize = true},
+		{id = "owo_rear_sight_ac2_02", name = "MAS49 Peep 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac3" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac3_01", name = "Flip Sight 1", no_randomize = true},
+		{id = "owo_rear_sight_ac3_01", name = "Rear Aperture 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac4" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac4_01", name = "Flip Sight 2", no_randomize = true},
+		{id = "owo_rear_sight_ac4_01", name = "Rear Aperture 2", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
+		-- the base sight is the ladder
 		owo_rear_sight_01 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "barrel", 
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_01", owosightac2 = "owo_rear_sight_ac2_01",
 				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
 			}
 		},
 		owo_rear_sight_02 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "barrel", 
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_01", owosightac2 = "owo_rear_sight_ac2_01",
-			owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
-		}
+				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
+			}
+		},
+		-- mas sight
+		owo_rear_sight_o_01 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_02", owosightac2 = "owo_rear_sight_ac2_02",
+				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
+			}
 		},
 		owo_rear_sight_empty = {
 			model = "", type = "owosightac1", 
 			mesh_move = false, parent = "sight"
 		},
+		-- ladder sight select
 		owo_rear_sight_ac1_01 = {
 			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "owosightac1", 
 			mesh_move = false, parent = "sight",
 		},
+		-- mas peep
+		owo_rear_sight_ac1_02 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "owosightac1", 
+			mesh_move = false, parent = "sight",
+		},
+		-- ladder sight select
 		owo_rear_sight_ac2_01 = {
 			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "owosightac2", 
+			mesh_move = false, parent = "sight",
+		},
+		-- mas peep
+		owo_rear_sight_ac2_02 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "owosightac2", 
 			mesh_move = false, parent = "sight",
 		},
 		owo_rear_sight_ac3_01 = {
