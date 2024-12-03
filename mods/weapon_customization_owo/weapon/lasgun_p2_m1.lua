@@ -50,6 +50,7 @@ mod.owo_bolt_action(this_variant)
 mod.owo_rear_sight(this_variant)
 mod.owo_underbarrel_gl(this_variant)
 mod.owo_pu_scope(this_variant)
+mod.owo_helbore_mas49(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -64,6 +65,15 @@ mod.inject_fixes(this_variant, {
 		receiverac1 = {offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
 		receiverac2 = {offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
 	},
+	-- ######
+	-- Receiver: HELBORE MAS-49
+	-- ######
+	{	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_04|owo_helbore_mas49_05",
+		},
+		receiver = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+		receiverac1 = {offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+		receiverac2 = {offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+	},
 
 	-- ######
 	-- Stock: STRAIGHT GRIP AND RECON STOCK
@@ -77,6 +87,9 @@ mod.inject_fixes(this_variant, {
 	-- Magazine: FLAT
 	-- ######
 	{	dependencies = {"owo_lasgun_magazine_flat_01"},
+		magazine = {offset = true,scale = vector3_box(1, 1, 0.5 ) },
+	},
+	{	dependencies = {"owo_lasgun_magazine_flat_au_02"},
 		magazine = {offset = true,scale = vector3_box(1, 1, 0.5 ) },
 	},
 
@@ -95,7 +108,7 @@ mod.inject_fixes(this_variant, {
 		rearmag = {offset = true, position = vector3_box(.0, -0.23, 0.035), rotation = vector3_box(0, 0, 0), scale = vector3_box(0, 0, 0 ) },
 	},
 
-		-- ######
+	-- ######
 	-- Muzzle: SUPPRESSOR
 	-- ######
 	{	dependencies = {"owo_suppressor_01|owo_suppressor_02"},
@@ -283,7 +296,9 @@ mod.inject_fixes(this_variant, {
 		bayonetac4 = {hide_mesh = {     {"bayonetac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	-- Receivers
-	{	dependencies = {"!owo_bolt_helbore_01", "!owo_bolt_helbore_02", "!owo_bolt_helbore_03", "!owo_bolt_helbore_04", "!owo_bolt_helbore_05",},
+	{	dependencies = {"!owo_bolt_helbore_01", "!owo_bolt_helbore_02", "!owo_bolt_helbore_03", "!owo_bolt_helbore_04", "!owo_bolt_helbore_05",
+			"!owo_helbore_mas49_01", "!owo_helbore_mas49_02", "!owo_helbore_mas49_03", "!owo_helbore_mas49_04", "!owo_helbore_mas49_05",
+		},
 		receiverac1 = {hide_mesh = {     {"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},

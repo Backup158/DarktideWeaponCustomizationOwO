@@ -1247,6 +1247,67 @@ function mod.owo_bolt_action(variant_id, type)
 		},
 	})
 end
+-- Receiver: Helbore MAS-49
+function mod.owo_helbore_mas49(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "receiver" or type, {
+		{id = "owo_helbore_mas49_01", name = "OwO Helbore MAS-49 1"},
+		{id = "owo_helbore_mas49_02", name = "OwO Helbore MAS-49 2"},
+		{id = "owo_helbore_mas49_03", name = "OwO Helbore MAS-49 3"},
+		{id = "owo_helbore_mas49_04", name = "OwO Helbore MAS-49 4"},
+		{id = "owo_helbore_mas49_05", name = "OwO Helbore MAS-49 5"},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac1" or type, {
+		{id = "owo_bolt_empty", name = "receiverac1 empty", no_randomize = true},
+		{id = "owo_helbore_mas49_ass", name = "OwO MAS-49 Ass", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac2" or type, {
+		{id = "owo_bolt_empty", name = "receiverac1 empty", no_randomize = true},
+		{id = "owo_helbore_mas49_knob", name = "OwO MAS-49 Knob", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_helbore_mas49_01 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_01", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
+		},
+		owo_helbore_mas49_02 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_02", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
+		},
+		-- WHY IS THERE NO 3
+		owo_helbore_mas49_03 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_04", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
+		},
+		owo_helbore_mas49_04 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_05", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
+		},
+		owo_helbore_mas49_05 = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_ml01", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
+		},
+		owo_bolt_empty = {
+			model = "", type = "receiverac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- makes the ass more shapely
+		owo_helbore_mas49_ass = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "receiverac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		-- the knob on the right (Cocking)
+		owo_helbore_mas49_knob = {
+			model = _item_melee.."/grips/power_sword_grip_06", type = "receiverac2", 
+			mesh_move = false, parent = "receiver"
+		},
+	})
+end
 
 -- Receiver: Pistol Grip Mag
 function mod.owo_laspistol_grip_mag(variant_id)
@@ -1980,12 +2041,17 @@ end
 -- Magazine: Lasgun Flat
 function mod.owo_lasgun_magazine_flat(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
-		{id = "owo_lasgun_magazine_flat_01", name = "OwO Flat Magazine 1"},
+		{id = "owo_lasgun_magazine_flat_01", name = "OwO Flat Mag (Las) 1"},
+		{id = "owo_lasgun_magazine_flat_au_02", name = "OwO Flat Mag (Autogun) 2"},
 	})
 
 	mod.inject_models(variant_id, {
 		owo_lasgun_magazine_flat_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
+		},
+		owo_lasgun_magazine_flat_au_02 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_02", type = "magazine", parent = "receiver", 
 			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
 		},
 	})
