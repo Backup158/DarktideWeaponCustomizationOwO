@@ -71,8 +71,8 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_04|owo_helbore_mas49_05",
 		},
 		receiver = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-		receiverac1 = {offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-		receiverac2 = {offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+		receiverac1 = {offset = true, position = vector3_box(0.035, -0.01, 0.04), rotation = vector3_box(-90, 0, 90), scale = vector3_box(1, 0.685, 0.545 ) },
+		receiverac2 = {offset = true, position = vector3_box(0.046, 0.18, 0.096), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.755, 0.755, 0.15 ) },
 	},
 
 	-- ######
@@ -90,7 +90,7 @@ mod.inject_fixes(this_variant, {
 		magazine = {offset = true,scale = vector3_box(1, 1, 0.5 ) },
 	},
 	{	dependencies = {"owo_lasgun_magazine_flat_au_02"},
-		magazine = {offset = true,scale = vector3_box(1, 1, 0.5 ) },
+		magazine = {offset = true, position = vector3_box(0, 0, 0.05 ), scale = vector3_box(1, 1, 0.8 ) },
 	},
 
 	-- ######
