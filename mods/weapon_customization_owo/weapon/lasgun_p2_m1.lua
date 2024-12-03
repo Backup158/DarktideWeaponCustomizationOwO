@@ -244,17 +244,18 @@ mod.inject_fixes(this_variant, {
 		owosightac3 = {offset = true, position = vector3_box(-0.012, 0.012, -0.088), rotation = vector3_box(0, 90, -90), scale = vector3_box(0.55, 0.7, 0.42 ) },
 		owosightac4 = {offset = true, position = vector3_box(-0.012, 0.012, 0.088), rotation = vector3_box(0, 90, 90), scale = vector3_box(0.55, 0.7, 0.42 ) },
 	},
-	-- MAS49 sights
+	-- MAS49 irons
 	{	dependencies = {"owo_rear_sight_o_01",},
-		no_scope_offset =   { position = vector3_box(0, 0, -0.02), rotation = vector3_box(0, 0, 0)},
-		scope_offset =      { position = vector3_box(0, 0, -0.02), rotation = vector3_box(0, 0, 0)},
-		sight = {offset = true, position = vector3_box(0, 0.012, 0.117), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
+		no_scope_offset =   { position = vector3_box(0, 0, -0.0062), rotation = vector3_box(0, 0, 0)},
+		scope_offset =      { position = vector3_box(0, 0, -0.0062), rotation = vector3_box(0, 0, 0)},
+		sight = {offset = true, position = vector3_box(0, 0.012, 0.1158), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
+		owosightac1 = {offset = true, position = vector3_box(-0.044, 0.006, 0.002), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.1, 1.8 ) },
 	},
 	{	dependencies = {"owo_rear_sight_o_01",},
-		owosightac1 = {offset = true, position = vector3_box(0, 0.044, -0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(3, 0.2, 3 ) },
-		owosightac2 = {offset = true, position = vector3_box(0, 0.044, 0.094), rotation = vector3_box(-180, 0, 0), scale = vector3_box(3, 0.2, 3 ) },
-		owosightac3 = {offset = true, position = vector3_box(-0.012, 0.012, -0.088), rotation = vector3_box(0, 90, -90), scale = vector3_box(0.55, 0.7, 0.42 ) },
-		owosightac4 = {offset = true, position = vector3_box(-0.012, 0.012, 0.088), rotation = vector3_box(0, 90, 90), scale = vector3_box(0.55, 0.7, 0.42 ) },
+		-- fucked up rotation guy
+		owosightac2 = {offset = true, position = vector3_box(-0.044, 0.006, 0.002), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.1, 1.8 ) },
+		owosightac3 = {offset = true, position = vector3_box(-0.012, 0.012, -0.088), rotation = vector3_box(0, 90, -90), scale = vector3_box(0.55, 0.7, 0.3 ) },
+		owosightac4 = {offset = true, position = vector3_box(-0.012, 0.012, 0.088), rotation = vector3_box(0, 90, 90), scale = vector3_box(0.55, 0.7, 0.3 ) },
 	},
 
 	-- ######

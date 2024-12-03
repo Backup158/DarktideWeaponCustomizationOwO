@@ -1626,7 +1626,7 @@ function mod.owo_rear_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
 		{id = "owo_rear_sight_02", name = "OwO Aperture, U Notch (Up)"},
-		{id = "owo_rear_sight_o_01", name = "OwO MAS49 Irons"},
+		{id = "owo_rear_sight_o_01", name = "OwO _n_ (thicc)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
@@ -1646,6 +1646,10 @@ function mod.owo_rear_sight(variant_id, type)
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac4_01", name = "Rear Aperture 2", no_randomize = true},
 	})
+	--[[mod.inject_attachments_owo(variant_id, "owosightac5" or type, {
+		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_rear_sight_ac5_01", name = "MAS49 sight rod", no_randomize = true},
+	})]]
 
 	mod.inject_models(variant_id, {
 		-- the base sight is the ladder
@@ -1665,7 +1669,7 @@ function mod.owo_rear_sight(variant_id, type)
 		},
 		-- mas sight
 		owo_rear_sight_o_01 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
+			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_02", owosightac2 = "owo_rear_sight_ac2_02",
 				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
@@ -1692,7 +1696,7 @@ function mod.owo_rear_sight(variant_id, type)
 		},
 		-- mas peep
 		owo_rear_sight_ac2_02 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "owosightac2", 
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "owosightac2", 
 			mesh_move = false, parent = "sight",
 		},
 		owo_rear_sight_ac3_01 = {
