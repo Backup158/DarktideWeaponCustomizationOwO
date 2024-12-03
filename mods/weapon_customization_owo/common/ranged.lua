@@ -1298,7 +1298,7 @@ function mod.owo_helbore_mas49(variant_id, type)
 		},
 		-- makes the ass more shapely
 		owo_helbore_mas49_ass = {
-			model = _item_ranged.."/magazines/autogun_rifle_magazine_02", type = "receiverac1", 
+			model = _item_ranged.."/magazines/boltgun_rifle_magazine_02", type = "receiverac1", 
 			mesh_move = false, parent = "receiver"
 		},
 		-- the knob on the right (Cocking)
