@@ -188,6 +188,8 @@ mod.wc.owosightac2List = {
 	"owo_holosight_helper_02",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac2_01",
+	"owo_rear_sight_ac2_02",
+	"owo_rear_sight_ac2_03",
 	"owo_pu_scope_helper_02",
 	"owo_m16_sight_helper_02",
 	"owo_acog_sight_helper_02",
@@ -1044,6 +1046,7 @@ function mod.owo_bayonet(variant_id, type)
 			model = _item_melee.."/grips/2h_chain_sword_grip_02", type = "bayonetac2", 
 			mesh_move = false, parent = "bayonet",
 		},
+		-- epee loopy
 		owo_bayonet_03_helper_02 = {
 			model = _item_melee.."/heads/hatchet_head_03", type = "bayonetac2", 
 			mesh_move = false, parent = "bayonet",
@@ -1627,6 +1630,7 @@ function mod.owo_rear_sight(variant_id, type)
 		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
 		{id = "owo_rear_sight_02", name = "OwO Aperture, U Notch (Up)"},
 		{id = "owo_rear_sight_o_01", name = "OwO _n_ (thicc)"},
+		{id = "owo_rear_sight_o_02", name = "OwO MAS49/56 Irons"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
@@ -1637,6 +1641,7 @@ function mod.owo_rear_sight(variant_id, type)
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac2_01", name = "Flip sight range select 2", no_randomize = true},
 		{id = "owo_rear_sight_ac2_02", name = "MAS49 Peep 2", no_randomize = true},
+		{id = "owo_rear_sight_ac2_03", name = "MAS49/56 Feet", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac3" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
@@ -1675,6 +1680,14 @@ function mod.owo_rear_sight(variant_id, type)
 				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
 			}
 		},
+		-- mas 49/56
+		owo_rear_sight_o_02 = {
+			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_02", owosightac2 = "owo_rear_sight_ac2_03",
+				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
+			}
+		},
 		owo_rear_sight_empty = {
 			model = "", type = "owosightac1", 
 			mesh_move = false, parent = "sight"
@@ -1697,6 +1710,11 @@ function mod.owo_rear_sight(variant_id, type)
 		-- mas peep
 		owo_rear_sight_ac2_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "owosightac2", 
+			mesh_move = false, parent = "sight",
+		},
+		-- mas feet
+		owo_rear_sight_ac2_03 = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "owosightac2", 
 			mesh_move = false, parent = "sight",
 		},
 		owo_rear_sight_ac3_01 = {

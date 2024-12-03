@@ -224,7 +224,7 @@ mod.inject_fixes(this_variant, {
 	},
 
 	-- ######
-	-- Sight: FLIP-UP REAR SIGHTS
+	-- Sight: APERTURE SIGHTS
 	-- ######
 	-- U notch ladder sights
 	{	dependencies = {"owo_rear_sight_01",},
@@ -245,17 +245,22 @@ mod.inject_fixes(this_variant, {
 		owosightac4 = {offset = true, position = vector3_box(-0.012, 0.012, 0.088), rotation = vector3_box(0, 90, 90), scale = vector3_box(0.55, 0.7, 0.42 ) },
 	},
 	-- MAS49 irons
-	{	dependencies = {"owo_rear_sight_o_01",},
+	{	dependencies = {"owo_rear_sight_o_01|owo_rear_sight_o_02",},
 		no_scope_offset =   { position = vector3_box(0, 0, -0.0062), rotation = vector3_box(0, 0, 0)},
 		scope_offset =      { position = vector3_box(0, 0, -0.0062), rotation = vector3_box(0, 0, 0)},
 		sight = {offset = true, position = vector3_box(0, 0.012, 0.1158), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
 		owosightac1 = {offset = true, position = vector3_box(-0.044, 0.006, 0.002), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.1, 1.8 ) },
 	},
 	{	dependencies = {"owo_rear_sight_o_01",},
-		-- fucked up rotation guy
 		owosightac2 = {offset = true, position = vector3_box(-0.044, 0.006, 0.002), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.1, 1.8 ) },
 		owosightac3 = {offset = true, position = vector3_box(-0.012, 0.012, -0.088), rotation = vector3_box(0, 90, -90), scale = vector3_box(0.55, 0.7, 0.3 ) },
 		owosightac4 = {offset = true, position = vector3_box(-0.012, 0.012, 0.088), rotation = vector3_box(0, 90, 90), scale = vector3_box(0.55, 0.7, 0.3 ) },
+	},
+	--	MAS49/56
+	{	dependencies = {"owo_rear_sight_o_02",},
+		owosightac2 = {offset = true, position = vector3_box(0, -0.042, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.42, 1.11 ) },
+		owosightac3 = {offset = true, position = vector3_box(-0.026, 0.012, 0.054), rotation = vector3_box(0, 0, -90), scale = vector3_box(1.35, 0.23, 0.66 ) },
+		owosightac4 = {offset = true, position = vector3_box(-0.026, 0.012, -0.054), rotation = vector3_box(180, 0, -90), scale = vector3_box(1.35, 0.23, 0.66 ) },
 	},
 
 	-- ######
@@ -320,7 +325,7 @@ mod.inject_fixes(this_variant, {
 		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	-- Sights
-	{	dependencies = {"!owo_rear_sight_01", "!owo_rear_sight_02", "!owo_rear_sight_o_01",
+	{	dependencies = {"!owo_rear_sight_01", "!owo_rear_sight_02", "!owo_rear_sight_o_01", "!owo_rear_sight_o_02",
 			"!owo_pu_scope_01", "!owo_pu_scope_02"
 		},
 		owosightac1 = {hide_mesh = {     {"owosightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
