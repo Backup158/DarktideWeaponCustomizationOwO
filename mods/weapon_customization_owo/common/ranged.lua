@@ -216,6 +216,7 @@ mod.wc.owosightac4List = {
 }
 mod.wc.add_custom_attachments.owosightac5 = "owosightac5List"
 mod.wc.owosightac5List = {
+	"owo_rear_sight_ac5_01",
 	"owo_pu_scope_empty",
 	"owo_pu_scope_helper_05",
 	"owo_m16_sight_helper_05",
@@ -1651,10 +1652,10 @@ function mod.owo_rear_sight(variant_id, type)
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac4_01", name = "Rear Aperture 2", no_randomize = true},
 	})
-	--[[mod.inject_attachments_owo(variant_id, "owosightac5" or type, {
+	mod.inject_attachments_owo(variant_id, "owosightac5" or type, {
 		{id = "owo_rear_sight_empty", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac5_01", name = "MAS49 sight rod", no_randomize = true},
-	})]]
+		{id = "owo_rear_sight_ac5_01", name = "MAS49 sight seat", no_randomize = true},
+	})
 
 	mod.inject_models(variant_id, {
 		-- the base sight is the ladder
@@ -1678,6 +1679,7 @@ function mod.owo_rear_sight(variant_id, type)
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_02", owosightac2 = "owo_rear_sight_ac2_02",
 				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
+				owosightac5 = "owo_rear_sight_ac5_01",
 			}
 		},
 		-- mas 49/56
@@ -1686,6 +1688,7 @@ function mod.owo_rear_sight(variant_id, type)
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { owosightac1 = "owo_rear_sight_ac1_02", owosightac2 = "owo_rear_sight_ac2_03",
 				owosightac3 = "owo_rear_sight_ac3_01", owosightac4 = "owo_rear_sight_ac4_01",
+				owosightac5 = "owo_rear_sight_ac5_01",
 			}
 		},
 		owo_rear_sight_empty = {
@@ -1712,9 +1715,9 @@ function mod.owo_rear_sight(variant_id, type)
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "owosightac2", 
 			mesh_move = false, parent = "sight",
 		},
-		-- mas feet
+		-- mas 49/56 bulgey wulgey
 		owo_rear_sight_ac2_03 = {
-			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "owosightac2", 
+			model = _item_melee.."/heads/power_maul_head_03", type = "owosightac2", 
 			mesh_move = false, parent = "sight",
 		},
 		owo_rear_sight_ac3_01 = {
@@ -1723,6 +1726,11 @@ function mod.owo_rear_sight(variant_id, type)
 		},
 		owo_rear_sight_ac4_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "owosightac4", 
+			mesh_move = false, parent = "sight",
+		},
+		-- mas seat/feet
+		owo_rear_sight_ac5_01 = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "owosightac5", 
 			mesh_move = false, parent = "sight",
 		},
 	})
