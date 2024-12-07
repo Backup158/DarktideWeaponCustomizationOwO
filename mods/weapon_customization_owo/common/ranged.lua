@@ -2012,7 +2012,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "owosightac6" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_06", name = "OwO ACOG'vesa Knob", no_randomize = true},
-		{id = "owo_susat_ac5_01", name = "SUSAT'vesa reticle 2", no_randomize = true},
+		{id = "owo_susat_ac6_01", name = "SUSAT'vesa reticle 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac7" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
@@ -2042,7 +2042,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				owosightac7 = "owo_acog_sight_helper_07",
 			},
 			--[[hide_mesh = {
-				{"sight", 2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{"sight", 1}, -- supposed to just hide the sight. hides everything else since they inherit.
 			},]]
 		},
 		owo_acog_sight_01_ps = {
@@ -2110,7 +2110,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 		},
 		-- 	SUSAT: cylinder thing
 		owo_susat_ac1_01 = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "owosightac1", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "owosightac1", 
 			mesh_move = false, parent = "sight"
 		},
 		-- AC2, 3
