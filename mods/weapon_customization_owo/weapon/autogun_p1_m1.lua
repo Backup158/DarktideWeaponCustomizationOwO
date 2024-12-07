@@ -59,7 +59,7 @@ mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_condom(this_variant, "muzzle")
 mod.owo_m16_sight(this_variant, "sight")
 mod.owo_pu_scope(this_variant, "sight")
-mod.owo_acog_sight(this_variant, "sight")
+mod.owo_telescopic_sight(this_variant, "sight")
 
 -- ############################################
 -- Inject Fixes
@@ -490,9 +490,10 @@ mod.inject_fixes(this_variant, {
     },
 
     -- ######
-    -- Sight: Trijicon ACOG
+    -- Sight: Telescopic Sights
     -- ######
-    -- ACOG only
+    -- Trijicon ACOG
+    --  ACOG only
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_ps|owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
         sight =             { offset = true, position  = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         owosightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
@@ -506,13 +507,27 @@ mod.inject_fixes(this_variant, {
         -- Cable
         owosightac7 =       { offset = true, position  = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
     },
-    -- ACOG with RMR on top
+    --  ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
         owosight2 =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
+    -- SUSAT
+    {   dependencies = { "owo_susat_01" },
+        sight =             { offset = true, position  = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        -- cylinder thing
+        owosightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        -- Rear
+        owosightac2 =       { offset = true, position  = vector3_box(0, -0.128, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        owosightac3 =       { offset = true, position  = vector3_box(0, 0.064, 0.032), rotation = vector3_box(0, 17, 0), scale = vector3_box(1, 1, 1) },
+        -- Base
+        owosightac4 =       { offset = true, position  = vector3_box(0, -0.018, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
+        -- Reticle
+        owosightac5 =       { offset = true, position  = vector3_box(0, -0.01, 0.061), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.45, 0.68, 0.24) },
+        owosightac6 =       { offset = true, position  = vector3_box(0.028, -0.014, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.45, 0.45, 0.12) },
+    },
     --  Aligning sights to crosshair
     --      Aiming with ACOG
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01" },
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01|owo_susat_01" },
         no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0235), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0235), rotation = vector3_box(0, 0, 0)},
     },

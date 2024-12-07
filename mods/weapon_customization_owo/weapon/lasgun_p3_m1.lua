@@ -36,7 +36,7 @@ mod.owo_scab_gunner_muzzle(this_variant)
 mod.owo_scab_gunner_barrel(this_variant)
 mod.owo_condom(this_variant)
 mod.owo_holosight(this_variant, "sight")
-mod.owo_acog_sight(this_variant, "sight")
+mod.owo_telescopic_sight(this_variant, "sight")
 
 -- ############################################
 -- Inject Fixes
@@ -269,9 +269,10 @@ mod.inject_fixes(this_variant, {
     },
 
 	-- ######
-    -- Sight: Trijicon ACOG
+    -- Sight: Telescopic Sights
     -- ######
-    -- ACOG only
+    -- Trijicon ACOG
+    --  ACOG only
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_ps|owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
         owosightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
         owosightac2 =       { offset = true, position  = vector3_box(0, -0.128, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -295,7 +296,7 @@ mod.inject_fixes(this_variant, {
 		},
         sight =             { offset = true, position  = vector3_box(0, 0.138, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
-    -- ACOG with RMR on top
+    --  ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
         owosight2 =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },

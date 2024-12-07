@@ -41,6 +41,7 @@ function mod.table_append(to, items)
 end
 
 function mod.on_all_mods_loaded()
+	-- Need to keep the get_mod here so it works after reload.
 	---@class WeaponCustomizationMod
 	local wc = get_mod("weapon_customization")
 	if not wc then
@@ -64,7 +65,7 @@ function mod.on_all_mods_loaded()
 	---@param attachments_table CoreAttachment[]
 	-- Renamed because i was worried about collisions
 	-- 	probably not an actual issue since methods are called with the class name, like class.method
-	-- Functionally the same but I changed the prefix checking in the displayed names
+	-- Functionally the same but I changed the prefix checking in the displayed names so it's OwO instead of MT
 	function mod.inject_attachments_owo(variant_id, slot, attachments_table)
 		if not wc.attachment[variant_id] then
 			mod:error(string.format("attachment variant_id [%s] invalid", variant_id))

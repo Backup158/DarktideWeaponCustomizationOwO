@@ -1973,27 +1973,32 @@ function mod.owo_m16_sight(variant_id, type)
 	})
 end
 
--- Sight: Trijicon ACOG
---		Autoguns
-function mod.owo_acog_sight(variant_id, type)
+-- Sight: Telescopic Sights
+--		Trijicon ACOG, SUSAT (Small Unit Small Arms)
+--		Autoguns, Recons
+function mod.owo_telescopic_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_acog_sight_01", name = "OwO ACOG"},
 		{id = "owo_acog_sight_01_ps", name = "OwO ACOG (Point Shooting)"},
 		{id = "owo_acog_sight_02_01", name = "OwO ACOG + RMR"},
 		{id = "owo_acog_sight_02_02", name = "OwO ACOG + RMR (Top)"},
 		{id = "owo_acog_sight_02_ps", name = "OwO ACOG + RMR (PS)"},
+		{id = "owo_susat_01", name = "OwO SUSAT"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_01", name = "OwO ACOG'vesa sight container 1", no_randomize = true},
+		{id = "owo_susat_ac1_01", name = "SUSAT'vesa cylinder thing", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac2" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_02", name = "OwO ACOG'vesa rear sight container 1", no_randomize = true},
+		{id = "owo_susat_ac2_01", name = "SUSAT'vesa rear scope 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac3" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_03", name = "OwO ACOG'vesa rear sight container 2", no_randomize = true},
+		{id = "owo_susat_ac3_01", name = "SUSAT'vesa rear scope 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac4" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
@@ -2002,10 +2007,12 @@ function mod.owo_acog_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "owosightac5" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_05", name = "OwO ACOG'vesa Knob", no_randomize = true},
+		{id = "owo_susat_ac5_01", name = "SUSAT'vesa reticle 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac6" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_06", name = "OwO ACOG'vesa Knob", no_randomize = true},
+		{id = "owo_susat_ac5_01", name = "SUSAT'vesa reticle 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac7" or type, {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
@@ -2081,17 +2088,33 @@ function mod.owo_acog_sight(variant_id, type)
 				owosight2 = "owo_acog_sight_sight2_01", -- owosight2ac1 = "owo_acog_sight_sight2_helper_01", owosight2ac2 = "owo_acog_sight_sight2_helper_02"
 			}
 		},
+		owo_susat_01 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				owosightac1 = "owo_susat_ac1_01", owosightac2 = "owo_susat_ac2_01", 
+				owosightac3 = "owo_susat_ac3_01", owosightac4 = "owo_acog_sight_helper_04", 
+				owosightac5 = "owo_susat_ac6_01", owosightac6 = "owo_susat_ac6_01", 
+			}
+		},
 		
 		owo_acog_sight_empty = {
 			model = "", type = "owosightac1", 
 			mesh_move = false, parent = "sight"
 		},
-		-- Front of scope
+		-- AC1
+		-- 	ACOG: Front of scope
 		owo_acog_sight_helper_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "owosightac1", 
 			mesh_move = false, parent = "sight"
 		},
-		-- Rear of scope
+		-- 	SUSAT: cylinder thing
+		owo_susat_ac1_01 = {
+			model = _item_melee.."/pommels/axe_pommel_01", type = "owosightac1", 
+			mesh_move = false, parent = "sight"
+		},
+		-- AC2, 3
+		-- 	ACOG: Rear of scope
 		owo_acog_sight_helper_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "owosightac2", 
 			mesh_move = false, parent = "sight"
@@ -2100,18 +2123,38 @@ function mod.owo_acog_sight(variant_id, type)
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "owosightac3", 
 			mesh_move = false, parent = "sight"
 		},
-		-- Base
+		--	SUSAT: Rear of scope
+		owo_susat_ac2_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "owosightac2", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_susat_ac3_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "owosightac3", 
+			mesh_move = false, parent = "sight"
+		},
+		-- AC4
+		-- 	Base
 		owo_acog_sight_helper_04 = {
 			model = _item_melee.."/grips/hatchet_grip_04", type = "owosightac4",
 			mesh_move = false, parent = "sight"
 		},
-		-- Knobs
+		-- AC5, 6
+		-- 	ACOG: Knobs
 		owo_acog_sight_helper_05 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "owosightac5",
 			mesh_move = false, parent = "sight"
 		},
 		owo_acog_sight_helper_06 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "owosightac6",
+			mesh_move = false, parent = "sight"
+		},
+		-- SUSAT: Reticle
+		owo_susat_ac5_01 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "owosightac5", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_susat_ac6_01 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "owosightac6", 
 			mesh_move = false, parent = "sight"
 		},
 		-- Cable
