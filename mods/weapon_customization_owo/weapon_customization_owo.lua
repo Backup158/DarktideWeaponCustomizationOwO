@@ -1,6 +1,4 @@
 local mod = get_mod("weapon_customization_owo")
-local wc = get_mod("weapon_customization")
-local mt = get_mod("weapon_customization_mt_stuff")
 
 -- Prints a message to the console log containing the current version number
 mod:info('WeaponCustomizationOwO v1.nya loaded uwu nya :3')
@@ -44,12 +42,14 @@ end
 
 function mod.on_all_mods_loaded()
 	---@class WeaponCustomizationMod
+	local wc = get_mod("weapon_customization")
 	if not wc then
 		mod:error("Weapon Customization mod required")
 		return
 	end
 	mod.wc = wc
 	--@class WeaponCustomizationMod_MT
+	local mt = get_mod("weapon_customization_mt_stuff")
     if not mt then
         mod:error("Weapon Customization MT plugin required")
        return

@@ -2033,7 +2033,10 @@ function mod.owo_acog_sight(variant_id, type)
 				owosightac3 = "owo_acog_sight_helper_03", owosightac4 = "owo_acog_sight_helper_04",
 				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
 				owosightac7 = "owo_acog_sight_helper_07",
-			}
+			},
+			--[[hide_mesh = {
+				{"sight", 2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},]]
 		},
 		owo_acog_sight_01_ps = {
 			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
