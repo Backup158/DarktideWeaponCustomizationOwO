@@ -371,8 +371,6 @@ mod.inject_fixes(this_variant, {
     -- ######
     -- Fat EOTech
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02|owo_holosight_01_03" },
-        no_scope_offset =   { position = vector3_box(0, 0, -0.0193), rotation = vector3_box(0, 0, 0)},
-        scope_offset =      { position = vector3_box(0, 0, -0.0193), rotation = vector3_box(0, 0, 0)},
         owosightac1 =       { offset = true, position  = vector3_box(0, 0.042, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.526, 0.258) },
         owosightac2 =       { offset = true, position  = vector3_box(0, 0.042, 0.01), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.95, 0.526, 0.258) },
         owosightac3 =       { offset = true, position  = vector3_box(-0.003, 0.088, 0.008), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.204) },
@@ -395,8 +393,6 @@ mod.inject_fixes(this_variant, {
     },
     -- Tall EOTech
     {   dependencies = { "owo_holosight_02_01|owo_holosight_02_02|owo_holosight_02_03" },
-        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
         owosightac1 =       { offset = true, position  = vector3_box(0, 0.032, 0.014), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.39, 0.186) },
         owosightac2 =       { offset = true, position  = vector3_box(0, 0.032, 0.014), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.95, 0.39, 0.186) },
         owosightac3 =       { offset = true, position  = vector3_box(-0.003, 0.086, 0.013), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.204) },
@@ -442,13 +438,11 @@ mod.inject_fixes(this_variant, {
         owosight2ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
     --  Aligning sights to crosshair
-    {   dependencies = { "owo_holosight_03_01|owo_holosight_03_02|owo_holosight_03_03" },
-        no_scope_offset =   { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02|owo_holosight_01_03|owo_holosight_02_01|owo_holosight_02_02|owo_holosight_02_03|owo_holosight_03_01|owo_holosight_03_02|owo_holosight_03_03"},
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
     },
     --      Point shooting
     {   dependencies = { "owo_holosight_03_01_ps|owo_holosight_03_02_ps|owo_holosight_03_03_ps" },
-        no_scope_offset =   { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0)},
         scope_offset =      { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0)},
     },
 
