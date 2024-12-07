@@ -1,9 +1,12 @@
 local mod = get_mod("weapon_customization_owo")
 
+-- Prints a message to the console log containing the current version number
+mod:info('WeaponCustomizationOwO v1.nya loaded uwu nya :3')
+
 -- #########################################
 -- ############### ATTENTION ###############
 -- #########################################
--- This is basically just a copy of the core MT plugin file
+-- The rest of this is basically a copy of the core MT plugin file
 -- Functions won't load when I try to call them externally
 -- I don't know why
 -- #########################################
@@ -11,6 +14,14 @@ local mod = get_mod("weapon_customization_owo")
 function mod.load_mod_file(relative_path)
 	mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/"..relative_path)
 end
+
+-- need to get out of weapon_customization_owo/scripts/mods/weapon_customization_owo (YOU ARE HERE)
+-- 4 jumps to get back to main darktide mods folder
+--[[package.path = package.path .. ';../../../../weapon_customization_mt_stuff/?.lua'
+local mtMain = require 'wc_mts'
+if mtMain then
+	mod:info('mt main plugin found uwu nya :3')
+end]]
 
 
 ---@param to table
@@ -44,13 +55,6 @@ function mod.on_all_mods_loaded()
        return
     end
     mod.mt = mt
-	--@class WeaponCustomizationMod_Syn
-    local syn = get_mod("weapon_customization_syn_edits")
-    if not syn then
-        mod:error("Weapon Customization - Syndonai's Edits required")
-       return
-    end
-    mod.syn = syn
 
 	local attachment_ids = {}
 	local model_ids = {}
@@ -58,7 +62,9 @@ function mod.on_all_mods_loaded()
 	---@param variant_id VariantID
 	---@param slot AttachmentSlot
 	---@param attachments_table CoreAttachment[]
-	--- Renamed so it doesn't overwrite explode. Functionally the same but I changed the prefix
+	-- Renamed because i was worried about collisions
+	-- 	probably not an actual issue since methods are called with the class name, like class.method
+	-- Functionally the same but I changed the prefix checking in the displayed names
 	function mod.inject_attachments_owo(variant_id, slot, attachments_table)
 		if not wc.attachment[variant_id] then
 			mod:error(string.format("attachment variant_id [%s] invalid", variant_id))
@@ -104,7 +110,8 @@ function mod.on_all_mods_loaded()
 		end
 		mod.table_prepend(wc.anchors[variant_id].fixes, fix_tables)
 	end
-
+	
+	-- Applies all the fixes you injected into each wepaon
 	mod.load_mod_file("files_to_load")
 
 	-- Basic id validation

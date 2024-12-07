@@ -36,6 +36,9 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = { "owo_lasgun_magazine_flat_01"},
 		magazine = { offset = true, position = vector3_box(0, 0, -0.02), scale = vector3_box(1, 1, 0.5 ) },
 	},
+	{	dependencies = { "owo_lasgun_magazine_flat_au_02"},
+		magazine = { offset = true, scale = vector3_box(1, 1, 0.6 ) },
+	},
 
 	-- ######
 	-- Muzzle: SUPPRESSOR
