@@ -82,7 +82,7 @@ mod.inject_fixes(this_variant, {
         scope_offset = {offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
     },
     --  MT Irons
-    -- offsets are already set, so these just get overwritten :skull:
+    -- offsets are already set, so these just get overwritten unless this goes before them in the load order :skull:
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "lasgun_sight_01",
         },
