@@ -2095,6 +2095,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				owosightac1 = "owo_susat_ac1_01", owosightac2 = "owo_susat_ac2_01", 
 				owosightac3 = "owo_susat_ac3_01", owosightac4 = "owo_acog_sight_helper_04", 
 				owosightac5 = "owo_susat_ac6_01", owosightac6 = "owo_susat_ac6_01", 
+				lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 			}
 		},
 		
