@@ -2041,9 +2041,9 @@ function mod.owo_telescopic_sight(variant_id, type)
 				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
 				owosightac7 = "owo_acog_sight_helper_07",
 			},
-			--[[hide_mesh = {
-				{"sight", 1}, -- supposed to just hide the sight. hides everything else since they inherit.
-			},]]
+			hide_mesh = {
+				{"sight", 6,7}, -- hides just the housing
+			},
 		},
 		owo_acog_sight_01_ps = {
 			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
@@ -2053,7 +2053,10 @@ function mod.owo_telescopic_sight(variant_id, type)
 				owosightac3 = "owo_acog_sight_helper_03", owosightac4 = "owo_acog_sight_helper_04",
 				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
 				owosightac7 = "owo_acog_sight_helper_07",
-			}
+			},
+			hide_mesh = {
+				{"sight", 6,7}, -- hides just the housing
+			},
 		},
 		owo_acog_sight_02_01 = {
 			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
@@ -2064,7 +2067,10 @@ function mod.owo_telescopic_sight(variant_id, type)
 				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
 				owosightac7 = "owo_acog_sight_helper_07",
 				owosight2 = "owo_acog_sight_sight2_01",
-			}
+			},,
+			hide_mesh = {
+				{"sight", 6,7}, -- hides just the housing
+			},
 		},
 		owo_acog_sight_02_02 = {
 			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
@@ -2075,7 +2081,10 @@ function mod.owo_telescopic_sight(variant_id, type)
 				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
 				owosightac7 = "owo_acog_sight_helper_07",
 				owosight2 = "owo_acog_sight_sight2_01", -- owosight2ac1 = "owo_acog_sight_sight2_helper_01", owosight2ac2 = "owo_acog_sight_sight2_helper_02"
-			}
+			},
+			hide_mesh = {
+				{"sight", 6,7}, -- hides just the housing
+			},
 		},
 		owo_acog_sight_02_ps = {
 			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
@@ -2086,7 +2095,10 @@ function mod.owo_telescopic_sight(variant_id, type)
 				owosightac5 = "owo_acog_sight_helper_05", owosightac6 = "owo_acog_sight_helper_06",
 				owosightac7 = "owo_acog_sight_helper_07",
 				owosight2 = "owo_acog_sight_sight2_01", -- owosight2ac1 = "owo_acog_sight_sight2_helper_01", owosight2ac2 = "owo_acog_sight_sight2_helper_02"
-			}
+			},
+			hide_mesh = {
+				{"sight", 6,7}, -- hides just the housing
+			},
 		},
 		owo_susat_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
@@ -2094,9 +2106,9 @@ function mod.owo_telescopic_sight(variant_id, type)
 			automatic_equip = {
 				owosightac1 = "owo_susat_ac1_01", owosightac2 = "owo_susat_ac2_01", 
 				owosightac3 = "owo_susat_ac3_01", owosightac4 = "owo_acog_sight_helper_04", 
-				owosightac5 = "owo_susat_ac6_01", owosightac6 = "owo_susat_ac6_01", 
+				owosightac5 = "owo_susat_ac5_01", owosightac6 = "owo_susat_ac6_01", 
 				lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
-			}
+			},
 		},
 		
 		owo_acog_sight_empty = {

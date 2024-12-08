@@ -517,7 +517,7 @@ mod.inject_fixes(this_variant, {
         lens =              { parent = "sight", position  = vector3_box(0, 0.105, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"lens", 1, 2, 3, 5}}, data = {lens = 1}},
         lens_2 =            { parent = "sight", position  = vector3_box(0, -0.06, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"lens_2", 1, 2, 3, 5}}, data = {lens = 2} },
         -- cylinder thing
-        owosightac1 =       { offset = true, position  = vector3_box(0, 0.108, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.22, 1), data = {owosightac1 = 1} },
+        owosightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {owosightac1 = 1} },
         -- Rear
         owosightac2 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
         owosightac3 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
@@ -685,6 +685,7 @@ mod.inject_fixes(this_variant, {
             "!owo_holosight_03_02", "!owo_holosight_03_03",
             "!owo_holosight_03_02_ps", "!owo_holosight_03_03_ps",
             "!owo_acog_sight_02_01", "!owo_acog_sight_02_02", "!owo_acog_sight_02_ps",
+            "!owo_pu_scope_01", "!owo_pu_scope_02",
         },
         owosight2 = { hide_mesh = {{"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
@@ -711,7 +712,4 @@ mod.inject_fixes(this_variant, {
         },
         owosightac7 = { hide_mesh = {{"owosightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {	dependencies = {"!owo_pu_scope_01", "!owo_pu_scope_02"},
-		owosight2 = 	{hide_mesh = {     {"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-	},
 })
