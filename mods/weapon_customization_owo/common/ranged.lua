@@ -174,7 +174,7 @@ mod.wc.owomagazineac5List = {
 -- SIGHT
 mod.wc.add_custom_attachments.owosightac1 = "owosightac1List"
 mod.wc.owosightac1List = {
-	"owo_holosight_empty",
+	"owo_holosight_empty_01",
 	"owo_holosight_helper_01",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac1_01",
@@ -184,7 +184,7 @@ mod.wc.owosightac1List = {
 }
 mod.wc.add_custom_attachments.owosightac2 = "owosightac2List"
 mod.wc.owosightac2List = {
-	"owo_holosight_empty",
+	"owo_holosight_empty_02",
 	"owo_holosight_helper_02",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac2_01",
@@ -196,7 +196,7 @@ mod.wc.owosightac2List = {
 }
 mod.wc.add_custom_attachments.owosightac3 = "owosightac3List"
 mod.wc.owosightac3List = {
-	"owo_holosight_empty",
+	"owo_holosight_empty_03",
 	"owo_holosight_helper_03",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac3_01",
@@ -206,7 +206,7 @@ mod.wc.owosightac3List = {
 }
 mod.wc.add_custom_attachments.owosightac4 = "owosightac4List"
 mod.wc.owosightac4List = {
-	"owo_holosight_empty",
+	"owo_holosight_empty_04",
 	"owo_holosight_helper_04",
 	"owo_rear_sight_empty",
 	"owo_rear_sight_ac4_01",
@@ -238,19 +238,25 @@ mod.wc.owosightac7List = {
 }
 -- SIGHT_2
 --[[mod.table_append(mod.wc.sights_2, { 
-]]
+
 mod.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sight_2 is called
+	--"owo_reticle_helper_empty",
 	"owo_reticle_helper_01",
 	"owo_reticle_helper_02",
 	"owo_reticle_helper_03",
 })
---[[mod.wc.add_custom_attachments.sight_2 = "sight_2List"
+]]
+--[[
+-- when placed before MT plugin, this will not allow mt plugin to add to sight_2
+-- same with the regular table append wtf?
+mod.wc.add_custom_attachments.sight_2 = "sight_2List"
 mod.wc.sight_2List = {
 	"owo_reticle_helper_empty",
 	"owo_reticle_helper_01",
 	"owo_reticle_helper_02",
 	"owo_reticle_helper_03",
-}]]
+}
+]]
 --[[ scope fucked
 mod.table_append(mod.wc.scopes, {
 	"lasgun_rifle_elysian_muzzle_01",
@@ -259,19 +265,19 @@ mod.wc.sniper_zoom_levels.lasgun_rifle_elysian_muzzle_01 = 15
 ]]
 mod.wc.add_custom_attachments.owosight2 = "owosight2List"
 mod.wc.owosight2List = {
-	"owo_holosight_empty",
+	"owo_holosight_empty2",
 	"owo_holosight_sight2_01",
 	"owo_pu_scope_riser_01"
 }
 mod.wc.add_custom_attachments.owosight2ac1 = "owosight2ac1List"
 mod.wc.owosight2ac1List = {
-	"owo_holosight_empty",
+	"owo_holosight_empty2_01",
 	"owo_holosight_sight2_helper_01",
 	--"owo_pu_scope2_helper_01",
 }
 mod.wc.add_custom_attachments.owosight2ac2 = "owosight2ac2List"
 mod.wc.owosight2List = {
-	"owo_holosight_empty",
+	"owo_holosight_empty2_02",
 	"owo_holosight_sight2_helper_02",
 	--"owo_pu_scope2_helper_02",
 }
@@ -362,7 +368,7 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle2" or type, {
-		{id = "owo_suppressor_helper_empty", name = "OwO Suppressor'vesa Empty", no_randomize = true},
+		{id = "owo_suppressor_helper_empty", name = "Muzzle2 Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
 		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true}
 	})
@@ -1456,36 +1462,33 @@ function mod.owo_holosight(variant_id, type)
 		{id = "owo_holosight_01_01_ps", name = "OwO EOTech (Point Shooting)"},
 		{id = "owo_holosight_01_02_ps", name = "OwO EOTech + M (PS)"},
 		{id = "owo_holosight_01_03_ps", name = "OwO EOTech + M/s (PS)"},
-		{id = "owo_holosight_02_01", name = "OwO EOTech (Tall)"},
-		{id = "owo_holosight_02_02", name = "OwO EOTech (Tall) + M"},
-		{id = "owo_holosight_02_03", name = "OwO EOTech (Tall) + M/s"},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac1" or type, {
-		{id = "owo_holosight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holosight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_helper_01", name = "OwO EOTech'vesa sight container 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac2" or type, {
-		{id = "owo_holosight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holosight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_helper_02", name = "OwO EOTech'vesa sight container 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac3" or type, {
-		{id = "owo_holosight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holosight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_helper_03", name = "OwO EOTech'vesa base bulge", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosightac4" or type, {
-		{id = "owo_holosight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holosight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_helper_04", name = "OwO EOTech'vesa base", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosight2" or type, {
-		{id = "owo_holosight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holosight_empty2", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_sight2_01", name = "OwO EOTech Magnifier Stand", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosight2ac1" or type, {
-		{id = "owo_holosight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holosight_empty2_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_sight2_helper_01", name = "OwO EOTech Magnifier 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owosight2ac2" or type, {
-		{id = "owo_holosight_empty", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holosight_empty2_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_sight2_helper_02", name = "OwO EOTech Magnifier 2", no_randomize = true},
 	})
 
@@ -1498,6 +1501,7 @@ function mod.owo_holosight(variant_id, type)
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
 				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
 				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
+				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{"sight", 1}
@@ -1511,6 +1515,9 @@ function mod.owo_holosight(variant_id, type)
 				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
 				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
 			},
+			hide_mesh = {
+				{"sight", 1}
+			},
 		},
 		owo_holosight_01_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
@@ -1520,33 +1527,9 @@ function mod.owo_holosight(variant_id, type)
 				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
 				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
 			},
-		},
-		-- tall holo
-		owo_holosight_02_01 = {
-			model = _item_ranged.."/sights/reflex_sight_02", type = "sight", 
-			mesh_move = false, parent = "",
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
-				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
-				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
-			}
-		},
-		owo_holosight_02_02 = {
-			model = _item_ranged.."/sights/reflex_sight_02", type = "sight", 
-			mesh_move = false, parent = "",
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
-				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
-				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
-				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
-			}
-		},
-		owo_holosight_02_03 = {
-			model = _item_ranged.."/sights/reflex_sight_02", type = "sight", 
-			mesh_move = false, parent = "",
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
-				owosightac1 = "owo_holosight_helper_01", owosightac2 = "owo_holosight_helper_02", 
-				owosightac3 = "owo_holosight_helper_03", owosightac4 = "owo_holosight_helper_04",
-				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
-			}
+			hide_mesh = {
+				{"sight", 1}
+			},
 		},
 		owo_holosight_01_01_ps = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
@@ -1574,8 +1557,32 @@ function mod.owo_holosight(variant_id, type)
 				owosight2 = "owo_holosight_sight2_01", owosight2ac1 = "owo_holosight_sight2_helper_01", owosight2ac2 = "owo_holosight_sight2_helper_02"
 			}
 		},
-		owo_holosight_empty = {
+		owo_holosight_empty_01 = {
 			model = "", type = "owosightac1", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_empty_02 = {
+			model = "", type = "owosightac2", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_empty_03 = {
+			model = "", type = "owosightac3", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_empty_04 = {
+			model = "", type = "owosightac4", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_empty2 = {
+			model = "", type = "owosight2", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_empty2_01 = {
+			model = "", type = "owosight2ac1", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_holosight_empty2_02 = {
+			model = "", type = "owosight2ac2", 
 			mesh_move = false, parent = "sight"
 		},
 		owo_holosight_helper_01 = {
@@ -2211,32 +2218,37 @@ function mod.owo_telescopic_sight(variant_id, type)
 end
 
 -- Sight_2: Reticle only
-function mod.reticle_helper(variant_id)
+-- fuck it. i'll just use the ones mt already added and hide the mesh in the weapon classes
+--[[function mod.owo_reticle_helper(variant_id)
+
+	-- Adding to existing table, where empty sight is already included
 	mod.inject_attachments_owo(variant_id, "sight_2", {
-		{id = "owo_reticle_helper_empty",   name = "empty sight_2"},
-		{id = "owo_reticle_helper_01",   name = "Reticle 1 (·)"},
-		{id = "owo_reticle_helper_02",   name = "Reticle 2 [·]"},
-		{id = "owo_reticle_helper_03",   name = "Reticle 3 [+]"},
+		-- {id = "owo_reticle_helper_empty", name = "Empty sight_2"},
+		{id = "owo_reticle_helper_01", name = "Reticle 1 (·)"},
+		{id = "owo_reticle_helper_02", name = "Reticle 2 [·]"},
+		{id = "owo_reticle_helper_03", name = "Reticle 3 [+]"},
 	})
+
 	mod.inject_models(variant_id, {
-		owo_reticle_helper_empty = {
-			model = "", type = "sight_2", 
-			parent = "sight"
-		},
+		--owo_reticle_helper_empty = {
+		--	model = "", type = "sight_2", 
+		--	parent = "sight"
+		--},
 		owo_reticle_helper_01 = {
 			model = _item_ranged.."/sights/reflex_sight_01", type = "sight_2", 
-			parent = "sight", hide_mesh = {{"sight_2", 6}},
+			parent = "sight", hide_mesh = {{"sight_2", 6}}, -- for some reason this is diff
 		},
 		owo_reticle_helper_02 = {
 			model = _item_ranged.."/sights/reflex_sight_02", type = "sight_2", 
-			parent = "sight", hide_mesh = {{"sight_2", 5}},
+			parent = "sight", hide_mesh = {{"sight_2", 5}}, 
 		},
 		owo_reticle_helper_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight_2", 
-			parent = "sight", hide_mesh = {{"sight_2", 6}},
+			parent = "sight", hide_mesh = {{"sight_2", 5}},
 		},
 	})
 end
+]]
 
 -- Magazine: Lasgun Flat
 function mod.owo_lasgun_magazine_flat(variant_id, type)

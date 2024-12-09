@@ -42,26 +42,24 @@ mod.wc.attachment[this_variant].owosightac7 = {}
 mod.wc.attachment[this_variant].owosight2 = {}
 mod.wc.attachment[this_variant].owosight2ac1 = {}
 mod.wc.attachment[this_variant].owosight2ac2 = {}
-mod.wc.attachment[this_variant].sight_2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
-mod.owo_dreg_gunner_barrel(this_variant, "barrel")
-mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
-mod.owo_fin_grip(this_variant, "grip")
-mod.owo_suppressor(this_variant, "muzzle")
-mod.owo_jungle_mag(this_variant, "magazine")
-mod.owo_m16_barrel(this_variant, "barrel")
-mod.owo_bayonet(this_variant, "bayonet")
+--mod.owo_dreg_gunner_barrel(this_variant, "barrel")
+--mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
+--mod.owo_fin_grip(this_variant, "grip")
+--mod.owo_suppressor(this_variant, "muzzle")
+--mod.owo_jungle_mag(this_variant, "magazine")
+--mod.owo_m16_barrel(this_variant, "barrel")
+--mod.owo_bayonet(this_variant, "bayonet")
+--mod.owo_underbarrel_gl(this_variant, "bayonet")
+--mod.owo_condom(this_variant, "muzzle")
+--mod.owo_m16_sight(this_variant, "sight")
+--mod.owo_pu_scope(this_variant, "sight")
+--mod.owo_telescopic_sight(this_variant, "sight")
 mod.owo_holosight(this_variant, "sight")
-mod.owo_underbarrel_gl(this_variant, "bayonet")
-mod.owo_condom(this_variant, "muzzle")
-mod.owo_m16_sight(this_variant, "sight")
-mod.owo_pu_scope(this_variant, "sight")
-mod.owo_telescopic_sight(this_variant, "sight")
-mod.reticle_helper(this_variant, "sight_2")
 
 -- ############################################
 -- Inject Fixes
@@ -380,12 +378,13 @@ mod.inject_fixes(this_variant, {
     },
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_01_ps" },
         sight =             { offset = true, position  = vector3_box(0, 0, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_2 =           { offset = true, position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} }, -- 6 hides housing for sight 1, 5 hides sights 2 and 3
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     {   dependencies = { "owo_holosight_01_02|owo_holosight_01_03|owo_holosight_01_02_ps|owo_holosight_01_03_ps" },
         sight =             { offset = true, position  = vector3_box(0, 0.05, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         owosight2 =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} }, -- 6 hides housing for sight 1, 5 hides sights 2 and 3
     },
     {   dependencies = { "owo_holosight_01_02|owo_holosight_01_02_ps" },
         owosight2ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
@@ -396,30 +395,8 @@ mod.inject_fixes(this_variant, {
         owosight2ac1 =      { offset = true, position  = vector3_box(0.042, -0.15, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         owosight2ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
-    -- Tall EOTech
-    {   dependencies = { "owo_holosight_02_01|owo_holosight_02_02|owo_holosight_02_03" },
-        owosightac1 =       { offset = true, position  = vector3_box(0, 0.032, 0.014), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.39, 0.186) },
-        owosightac2 =       { offset = true, position  = vector3_box(0, 0.032, 0.014), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.95, 0.39, 0.186) },
-        owosightac3 =       { offset = true, position  = vector3_box(-0.003, 0.086, 0.013), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.204) },
-        owosightac4 =       { offset = true, position  = vector3_box(0, 0.054, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.45, 0.28, 0.192) },
-    },
-    {   dependencies = { "owo_holosight_02_01" },
-        sight =             { offset = true, position  = vector3_box(0, 0, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-    },
-    {   dependencies = { "owo_holosight_02_02|owo_holosight_02_03" },
-        sight =             { offset = true, position  = vector3_box(0, 0.05, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        owosight2 =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
-    },
-    {   dependencies = { "owo_holosight_02_02" },
-        owosight2ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        owosight2ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.03), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-    },
-    {   dependencies = { "owo_holosight_02_03" },
-        owosight2ac1 =      { offset = true, position  = vector3_box(0.042, -0.15, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        owosight2ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-    },
     --  Aligning sights to crosshair
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02|owo_holosight_01_03|owo_holosight_02_01|owo_holosight_02_02|owo_holosight_02_03"},
+    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02|owo_holosight_01_03"},
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
     },
     --      Point shooting
@@ -593,6 +570,24 @@ mod.inject_fixes(this_variant, {
         bayonetac2 = {offset = true, position = vector3_box(0, 0.06, 0.014), rotation = vector3_box(180, 0, 180), scale = vector3_box(0.25, 0.09, 0.245) },
     },
 
+
+    {   dependencies = {"owo_holosight_helper_01"
+        },
+        owosightac1 = { hide_mesh = {{"owosightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = {"owo_holosight_helper_02"
+        },
+        owosightac2 = { hide_mesh = {{"owosightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = {"owo_holosight_helper_03"
+        },
+        owosightac3 = { hide_mesh = {{"owosightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = {"owo_holosight_helper_04"
+        },
+        owosightac4 = { hide_mesh = {{"owosightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    --[[
     -- ####################################################################################
     -- HIDING HELPERS
     -- ####################################################################################
@@ -656,7 +651,6 @@ mod.inject_fixes(this_variant, {
     },
     -- Sights
     {   dependencies = {"!owo_holosight_01_01", "!owo_holosight_01_02", "!owo_holosight_01_03",
-            "!owo_holosight_02_01", "!owo_holosight_02_02", "!owo_holosight_02_03",
             "!owo_holosight_01_01_ps", "!owo_holosight_01_02_ps", "!owo_holosight_01_03_ps",
             "!owo_m16_sight_01", "!owo_m16_sight_02",
             "!owo_acog_sight_01", "!owo_acog_sight_01_ps",
@@ -670,7 +664,6 @@ mod.inject_fixes(this_variant, {
         owosightac4 = { hide_mesh = {{"owosightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "!owo_holosight_01_02", "!owo_holosight_01_03",
-            "!owo_holosight_02_02", "!owo_holosight_02_03",
             "!owo_holosight_01_02_ps", "!owo_holosight_01_03_ps",
             "!owo_acog_sight_02_01", "!owo_acog_sight_02_02", "!owo_acog_sight_02_ps",
             "!owo_pu_scope_01", "!owo_pu_scope_02",
@@ -679,7 +672,6 @@ mod.inject_fixes(this_variant, {
         owosight2 = { hide_mesh = {{"owosight2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "!owo_holosight_01_02", "!owo_holosight_01_03",
-            "!owo_holosight_02_02", "!owo_holosight_02_03",
             "!owo_holosight_01_02_ps", "!owo_holosight_01_03_ps",
         },
         owosight2ac1 = { hide_mesh = {{"owosight2ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
@@ -701,4 +693,5 @@ mod.inject_fixes(this_variant, {
         },
         owosightac7 = { hide_mesh = {{"owosightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
+    ]]
 })
