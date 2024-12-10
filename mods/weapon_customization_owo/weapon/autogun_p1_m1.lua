@@ -23,6 +23,7 @@ if not syn then
     mod.wc.attachment[this_variant].barrelshroudac5 = {}
     mod.wc.attachment[this_variant].barrelshroudac6 = {}
 end
+mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autoguns yet
 mod.wc.attachment[this_variant].bayonetac1 = {}
 mod.wc.attachment[this_variant].bayonetac2 = {}
 mod.wc.attachment[this_variant].bayonetac3 = {}

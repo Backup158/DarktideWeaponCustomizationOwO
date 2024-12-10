@@ -13,7 +13,7 @@ local this_variant = "lasgun_p1_m1" -- Infantry Lasgun
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
---mod.wc.attachment[this_variant].muzzle2 = {}
+mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to iLas yet
 mod.wc.attachment[this_variant].barrelac = {}
 
 -- ############################################
