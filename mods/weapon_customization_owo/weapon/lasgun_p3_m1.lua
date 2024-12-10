@@ -13,7 +13,6 @@ local this_variant = "lasgun_p3_m1" -- Recon Lasgun
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
---mod.wc.attachment[this_variant].muzzle_2 = {}
 mod.wc.attachment[this_variant].barrelac = {}
 mod.wc.attachment[this_variant].owosightac1 = {}
 mod.wc.attachment[this_variant].owosightac2 = {}

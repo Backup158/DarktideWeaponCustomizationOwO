@@ -1,4 +1,5 @@
 local mod = get_mod("weapon_customization_owo")
+local syn = get_mod("weapon_customization_syn_edits")
 
 -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -19,8 +20,8 @@ mod.table_append(mod.wc.laser_pointers, {
 })
 -- MUZZLE
 --[[
-mod.wc.add_custom_attachments.muzzle_2 = "muzzle_2List"
-mod.wc.muzzle_2List = {
+mod.wc.add_custom_attachments.muzzle_2 = "muzzle_2s"
+mod.wc.muzzle_2s = {
 	"owo_suppressor_helper_empty",
 	"owo_suppressor_helper_01",
 	"owo_suppressor_helper_02",
@@ -38,138 +39,129 @@ mod.table_append(mod.wc.muzzle_2s, {
 })
 -- BARREL
 --[[
-mod.wc.add_custom_attachments.barrelac = "barrelacList"
-mod.wc.barrelacList = {
-	"owo_scab_gunner_barrelac_empty",
-	"owo_scab_gunner_barrelac_01"
-}
-mod.wc.add_custom_attachments.barrelac1 = "barrelac1List"
-mod.wc.barrelac1List = {
-	"owo_wood_krieg_empty",
-	"owo_wood_krieg_ac1_01",
-}
-mod.wc.add_custom_attachments.barrelshroud = "barrelshroudList"
-mod.wc.barrelshroudList = {
-	"owo_revolver_shotgun_barrel_empty",
-	--"owo_revolver_shotgun_barrel_01",
-	"owo_revolver_shotgun_barrel_04",
-	"owo_revolver_shotgun_barrel_05",
-	"owo_revolver_shotgun_barrel_06",
-	"owo_revolver_shotgun_barrel_08",
-	--"owo_revolver_shotgun_barrel_09",
-	--"owo_revolver_shotgun_barrel_04_l",
-	--"owo_revolver_shotgun_barrel_05_l",
-	--"owo_revolver_shotgun_barrel_06_l",
-	--"owo_revolver_shotgun_barrel_08_l",
-	
-	"owo_dreg_shroud_empty",
-	"owo_dreg_shroud_01",
-	"owo_m16_empty",
-	"owo_m16_barrelshroud_a1",
-	"owo_m16_barrelshroud_a1_02",
-	"owo_m16_barrelshroud_a2",
-	"owo_m16_barrelshroud_t_a1",
-	"owo_m16_barrelshroud_t_a1_02",
-	"owo_m16_barrelshroud_t_a2",
-	"owo_m16_barrelshroud_n_a1",
-	"owo_m16_barrelshroud_n_a1_02",
-	"owo_m16_barrelshroud_n_a2",
-	"owo_bistol_shotgun_barrel_short_empty", 
-	-- "owo_bistol_shotgun_barrel_short_01",
-	"owo_bistol_shotgun_barrel_short_04",
-	"owo_bistol_shotgun_barrel_short_05",
-	"owo_bistol_shotgun_barrel_short_06",
-	"owo_bistol_shotgun_barrel_short_08",
-	-- "owo_bistol_shotgun_barrel_short_09",
-}
-]]
---[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
-mod.wc.barrelshroudacList = {
-	"owo_dreg_shroud_empty",
-	"owo_dreg_shroudac_01"
-}]]
---[[
-mod.wc.add_custom_attachments.barrelshroudac2 = "barrelshroudac2List"
-mod.wc.barrelshroudac2List = {
-	"owo_dreg_shroud_empty",
-	"owo_dreg_shroudac2_01",
-	"owo_m16_empty",
-	"owo_m16_barrelshroudac2_01",
-}
-mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac3List"
-mod.wc.barrelshroudac3List = {
-	"owo_dreg_shroud_empty",
-	"owo_dreg_shroudac3_01",
-	"owo_m16_empty",
-	"owo_m16_barrelshroudac3_a1",
-}
-mod.wc.add_custom_attachments.barrelshroudac4 = "barrelshroudac4List"
-mod.wc.barrelshroudac4List = {
-	"owo_dreg_shroud_empty",
-	"owo_dreg_shroudac4_01",
-	"owo_m16_sight_empty",
-	"owo_m16_sight_helper_04",
-}
-mod.wc.add_custom_attachments.barrelshroudac5 = "barrelshroudac5List"
-mod.wc.barrelshroudac5List = {
-	"owo_m16_sight_empty",
-	"owo_m16_sight_helper_05",
-}
-mod.wc.add_custom_attachments.barrelshroudac6 = "barrelshroudac6List"
-mod.wc.barrelshroudac6List = {
-	"owo_m16_sight_empty",
-	"owo_m16_sight_helper_06",
-}
+
 ]]
 -- Syn followed the same formatting (as MT) for his new attachments
 -- slot name + 's' for the table to add
-mod.table_append(mod.wc.barrelshrouds, {
-	"owo_dreg_shroud_empty",
-	"owo_dreg_shroud_01",
-	"owo_m16_empty",
-	"owo_m16_barrelshroud_a1",
-	"owo_m16_barrelshroud_a1_02",
-	"owo_m16_barrelshroud_a2",
-	"owo_revolver_shotgun_barrel_empty",
-	"owo_revolver_shotgun_barrel_04",
-	"owo_revolver_shotgun_barrel_05",
-	"owo_revolver_shotgun_barrel_06",
-	"owo_revolver_shotgun_barrel_08",
-	"owo_bistol_shotgun_barrel_short_empty", 
-	"owo_bistol_shotgun_barrel_short_04",
-	"owo_bistol_shotgun_barrel_short_05",
-	"owo_bistol_shotgun_barrel_short_06",
-	"owo_bistol_shotgun_barrel_short_08",
-})
-mod.table_append(mod.wc.barrelshroudac2s, {
-	"owo_dreg_shroud_empty_02",
-	"owo_dreg_shroudac2_01",
-	"owo_m16_empty_02",
-	"owo_m16_barrelshroudac2_01",
-})
-mod.table_append(mod.wc.barrelshroudac3s, {
-	"owo_dreg_shroud_empty_03",
-	"owo_dreg_shroudac3_01",
-	"owo_m16_empty_03",
-	"owo_m16_barrelshroudac3_01",
-})
-mod.table_append(mod.wc.barrelshroudac4s, {
-	"owo_dreg_shroud_empty_04",
-	"owo_dreg_shroudac4_01",
-	"owo_m16_empty_04",
-	"owo_m16_barrelshroudac4_01",
-})
-mod.table_append(mod.wc.barrelshroudac5s, {
-	"owo_m16_empty_05",
-	"owo_m16_barrelshroudac5_01",
-})
-mod.table_append(mod.wc.barrelshroudac6s, {
-	"owo_m16_empty_06",
-	"owo_m16_barrelshroudac6_01",
-})
+if syn then
+	mod.table_append(mod.wc.barrelshrouds, {
+		"owo_dreg_shroud_empty",
+		"owo_dreg_shroud_01",
+		"owo_m16_empty",
+		"owo_m16_barrelshroud_a1",
+		"owo_m16_barrelshroud_a1_02",
+		"owo_m16_barrelshroud_a2",
+		"owo_revolver_shotgun_barrel_empty",
+		"owo_revolver_shotgun_barrel_04",
+		"owo_revolver_shotgun_barrel_05",
+		"owo_revolver_shotgun_barrel_06",
+		"owo_revolver_shotgun_barrel_08",
+		"owo_bistol_shotgun_barrel_short_empty", 
+		"owo_bistol_shotgun_barrel_short_04",
+		"owo_bistol_shotgun_barrel_short_05",
+		"owo_bistol_shotgun_barrel_short_06",
+		"owo_bistol_shotgun_barrel_short_08",
+	})
+	mod.table_append(mod.wc.barrelshroudac2s, {
+		"owo_dreg_shroud_empty_02",
+		"owo_dreg_shroudac2_01",
+		"owo_m16_empty_02",
+		"owo_m16_barrelshroudac2_01",
+	})
+	mod.table_append(mod.wc.barrelshroudac3s, {
+		"owo_dreg_shroud_empty_03",
+		"owo_dreg_shroudac3_01",
+		"owo_m16_empty_03",
+		"owo_m16_barrelshroudac3_01",
+	})
+	mod.table_append(mod.wc.barrelshroudac4s, {
+		"owo_dreg_shroud_empty_04",
+		"owo_dreg_shroudac4_01",
+		"owo_m16_empty_04",
+		"owo_m16_barrelshroudac4_01",
+	})
+	mod.table_append(mod.wc.barrelshroudac5s, {
+		"owo_m16_empty_05",
+		"owo_m16_barrelshroudac5_01",
+	})
+	mod.table_append(mod.wc.barrelshroudac6s, {
+		"owo_m16_empty_06",
+		"owo_m16_barrelshroudac6_01",
+	})
+else 
+	mod.wc.add_custom_attachments.barrelshroud = "barrelshrouds"
+	mod.wc.barrelshrouds = {
+		"owo_revolver_shotgun_barrel_empty",
+		--"owo_revolver_shotgun_barrel_01",
+		"owo_revolver_shotgun_barrel_04",
+		"owo_revolver_shotgun_barrel_05",
+		"owo_revolver_shotgun_barrel_06",
+		"owo_revolver_shotgun_barrel_08",
+		--"owo_revolver_shotgun_barrel_09",
+		--"owo_revolver_shotgun_barrel_04_l",
+		--"owo_revolver_shotgun_barrel_05_l",
+		--"owo_revolver_shotgun_barrel_06_l",
+		--"owo_revolver_shotgun_barrel_08_l",
+		"owo_dreg_shroud_empty",
+		"owo_dreg_shroud_01",
+		"owo_m16_empty",
+		"owo_m16_barrelshroud_a1",
+		"owo_m16_barrelshroud_a1_02",
+		"owo_m16_barrelshroud_a2",
+		"owo_m16_barrelshroud_t_a1",
+		"owo_m16_barrelshroud_t_a1_02",
+		"owo_m16_barrelshroud_t_a2",
+		"owo_m16_barrelshroud_n_a1",
+		"owo_m16_barrelshroud_n_a1_02",
+		"owo_m16_barrelshroud_n_a2",
+		"owo_bistol_shotgun_barrel_short_empty", 
+		-- "owo_bistol_shotgun_barrel_short_01",
+		"owo_bistol_shotgun_barrel_short_04",
+		"owo_bistol_shotgun_barrel_short_05",
+		"owo_bistol_shotgun_barrel_short_06",
+		"owo_bistol_shotgun_barrel_short_08",
+		-- "owo_bistol_shotgun_barrel_short_09",
+	}
+	--[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacs"
+	mod.wc.barrelshroudacs = {
+		"owo_dreg_shroud_empty",
+		"owo_dreg_shroudac_01"
+	}]]
+	mod.wc.add_custom_attachments.barrelshroudac2 = "barrelshroudac2s"
+	mod.wc.barrelshroudac2s = {
+		"owo_dreg_shroud_empty",
+		"owo_dreg_shroudac2_01",
+		"owo_m16_empty",
+		"owo_m16_barrelshroudac2_01",
+	}
+	mod.wc.add_custom_attachments.barrelshroudac3 = "barrelshroudac3s"
+	mod.wc.barrelshroudac3s = {
+		"owo_dreg_shroud_empty",
+		"owo_dreg_shroudac3_01",
+		"owo_m16_empty",
+		"owo_m16_barrelshroudac3_a1",
+	}
+	mod.wc.add_custom_attachments.barrelshroudac4 = "barrelshroudac4s"
+	mod.wc.barrelshroudac4s = {
+		"owo_dreg_shroud_empty",
+		"owo_dreg_shroudac4_01",
+		"owo_m16_sight_empty",
+		"owo_m16_sight_helper_04",
+	}
+	mod.wc.add_custom_attachments.barrelshroudac5 = "barrelshroudac5s"
+	mod.wc.barrelshroudac5s = {
+		"owo_m16_sight_empty",
+		"owo_m16_sight_helper_05",
+	}
+	mod.wc.add_custom_attachments.barrelshroudac6 = "barrelshroudac6s"
+	mod.wc.barrelshroudac6s = {
+		"owo_m16_sight_empty",
+		"owo_m16_sight_helper_06",
+	}
+end
 -- BAYONET
-mod.wc.add_custom_attachments.bayonetac1 = "bayonetac1List"
-mod.wc.bayonetac1List = {
+mod.wc.add_custom_attachments.bayonetac1 = "bayonetac1s"
+mod.wc.bayonetac1s = {
 	"owo_dreg_bayonet_empty",
 	"owo_dreg_bayonet_rear_01",
 	"owo_bayonet_empty",
@@ -178,62 +170,62 @@ mod.wc.bayonetac1List = {
 	"owo_underbarrel_gl_empty",
 	"owo_m203_helper_01",
 }
-mod.wc.add_custom_attachments.bayonetac2 = "bayonetac2List"
-mod.wc.bayonetac2List = {
+mod.wc.add_custom_attachments.bayonetac2 = "bayonetac2s"
+mod.wc.bayonetac2s = {
 	"owo_bayonet_empty",
 	"owo_bayonet_m7_helper_00",
 	"owo_underbarrel_gl_empty",
 	"owo_m203_helper_02",
 }
-mod.wc.add_custom_attachments.bayonetac3 = "bayonetac3List"
-mod.wc.bayonetac3List = {
+mod.wc.add_custom_attachments.bayonetac3 = "bayonetac3s"
+mod.wc.bayonetac3s = {
 	"owo_bayonet_empty",
 	"owo_dreg_bayonet_rear_01",
 	"owo_underbarrel_gl_empty",
 	"owo_m203_helper_03",
 }
-mod.wc.add_custom_attachments.bayonetac4 = "bayonetac4List"
-mod.wc.bayonetac4List = {
+mod.wc.add_custom_attachments.bayonetac4 = "bayonetac4s"
+mod.wc.bayonetac4s = {
 	"owo_bayonet_empty",
 	"owo_bayonet_m7_helper_00",
 	"owo_underbarrel_gl_empty",
 	"owo_m203_helper_04",
 }
 -- GRIP
-mod.wc.add_custom_attachments.grip2 = "grip2List"
-mod.wc.grip2List = {
+mod.wc.add_custom_attachments.grip2 = "grip2s"
+mod.wc.grip2s = {
 	"owo_fin_grip2_empty",
 	"owo_fin_grip2_01"
 }
 -- MAGAZINE
-mod.wc.add_custom_attachments.owomagazineac1 = "owomagazineac1List"
-mod.wc.owomagazineac1List = {
+mod.wc.add_custom_attachments.owomagazineac1 = "owomagazineac1s"
+mod.wc.owomagazineac1s = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_helper_01"
 }
-mod.wc.add_custom_attachments.owomagazineac2 = "owomagazineac2List"
-mod.wc.owomagazineac2List = {
+mod.wc.add_custom_attachments.owomagazineac2 = "owomagazineac2s"
+mod.wc.owomagazineac2s = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_f_01"
 }
-mod.wc.add_custom_attachments.owomagazineac3 = "owomagazineac3List"
-mod.wc.owomagazineac3List = {
+mod.wc.add_custom_attachments.owomagazineac3 = "owomagazineac3s"
+mod.wc.owomagazineac3s = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_b_01"
 }
-mod.wc.add_custom_attachments.owomagazineac4 = "owomagazineac4List"
-mod.wc.owomagazineac4List = {
+mod.wc.add_custom_attachments.owomagazineac4 = "owomagazineac4s"
+mod.wc.owomagazineac4s = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_l_01"
 }
-mod.wc.add_custom_attachments.owomagazineac5 = "owomagazineac5List"
-mod.wc.owomagazineac5List = {
+mod.wc.add_custom_attachments.owomagazineac5 = "owomagazineac5s"
+mod.wc.owomagazineac5s = {
 	"owo_jungle_mag_empty",
 	"owo_jungle_mag_connector_r_01"
 }
 -- SIGHT
-mod.wc.add_custom_attachments.owosightac1 = "owosightac1List"
-mod.wc.owosightac1List = {
+mod.wc.add_custom_attachments.owosightac1 = "owosightac1s"
+mod.wc.owosightac1s = {
 	"owo_holosight_empty_01",
 	"owo_holosight_helper_01",
 	"owo_rear_sight_empty",
@@ -242,8 +234,8 @@ mod.wc.owosightac1List = {
 	"owo_m16_sight_helper_01",
 	"owo_acog_sight_helper_01",
 }
-mod.wc.add_custom_attachments.owosightac2 = "owosightac2List"
-mod.wc.owosightac2List = {
+mod.wc.add_custom_attachments.owosightac2 = "owosightac2s"
+mod.wc.owosightac2s = {
 	"owo_holosight_empty_02",
 	"owo_holosight_helper_02",
 	"owo_rear_sight_empty",
@@ -254,8 +246,8 @@ mod.wc.owosightac2List = {
 	"owo_m16_sight_helper_02",
 	"owo_acog_sight_helper_02",
 }
-mod.wc.add_custom_attachments.owosightac3 = "owosightac3List"
-mod.wc.owosightac3List = {
+mod.wc.add_custom_attachments.owosightac3 = "owosightac3s"
+mod.wc.owosightac3s = {
 	"owo_holosight_empty_03",
 	"owo_holosight_helper_03",
 	"owo_rear_sight_empty",
@@ -264,8 +256,8 @@ mod.wc.owosightac3List = {
 	"owo_m16_sight_helper_03",
 	"owo_acog_sight_helper_03",
 }
-mod.wc.add_custom_attachments.owosightac4 = "owosightac4List"
-mod.wc.owosightac4List = {
+mod.wc.add_custom_attachments.owosightac4 = "owosightac4s"
+mod.wc.owosightac4s = {
 	"owo_holosight_empty_04",
 	"owo_holosight_helper_04",
 	"owo_rear_sight_empty",
@@ -274,24 +266,24 @@ mod.wc.owosightac4List = {
 	"owo_m16_sight_helper_04",
 	"owo_acog_sight_helper_04",
 }
-mod.wc.add_custom_attachments.owosightac5 = "owosightac5List"
-mod.wc.owosightac5List = {
+mod.wc.add_custom_attachments.owosightac5 = "owosightac5s"
+mod.wc.owosightac5s = {
 	"owo_rear_sight_ac5_01",
 	"owo_pu_scope_empty",
 	"owo_pu_scope_helper_05",
 	"owo_m16_sight_helper_05",
 	"owo_acog_sight_helper_05",
 }
-mod.wc.add_custom_attachments.owosightac6 = "owosightac6List"
-mod.wc.owosightac6List = {
+mod.wc.add_custom_attachments.owosightac6 = "owosightac6s"
+mod.wc.owosightac6s = {
 	"owo_rear_sight_ac6_01",
 	"owo_pu_scope_empty",
 	"owo_pu_scope_helper_06",
 	"owo_m16_sight_helper_06",
 	"owo_acog_sight_helper_06",
 }
-mod.wc.add_custom_attachments.owosightac7 = "owosightac7List"
-mod.wc.owosightac7List = {
+mod.wc.add_custom_attachments.owosightac7 = "owosightac7s"
+mod.wc.owosightac7s = {
 	"owo_m16_sight_empty",
 	"owo_m16_sight_helper_07",
 	"owo_acog_sight_helper_07",
@@ -309,8 +301,8 @@ mod.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sight_
 --[[
 -- when placed before MT plugin, this will not allow mt plugin to add to sight_2
 -- same with the regular table append wtf?
-mod.wc.add_custom_attachments.sight_2 = "sight_2List"
-mod.wc.sight_2List = {
+mod.wc.add_custom_attachments.sight_2 = "sight_2s"
+mod.wc.sight_2s = {
 	"owo_reticle_helper_empty",
 	"owo_reticle_helper_01",
 	"owo_reticle_helper_02",
@@ -323,35 +315,35 @@ mod.table_append(mod.wc.scopes, {
 })
 mod.wc.sniper_zoom_levels.lasgun_rifle_elysian_muzzle_01 = 15
 ]]
-mod.wc.add_custom_attachments.owosight2 = "owosight2List"
-mod.wc.owosight2List = {
+mod.wc.add_custom_attachments.owosight2 = "owosight2s"
+mod.wc.owosight2s = {
 	"owo_holosight_empty2",
 	"owo_holosight_sight2_01",
 	"owo_pu_scope_riser_01"
 }
-mod.wc.add_custom_attachments.owosight2ac1 = "owosight2ac1List"
-mod.wc.owosight2ac1List = {
+mod.wc.add_custom_attachments.owosight2ac1 = "owosight2ac1s"
+mod.wc.owosight2ac1s = {
 	"owo_holosight_empty2_01",
 	"owo_holosight_sight2_helper_01",
 	--"owo_pu_scope2_helper_01",
 }
-mod.wc.add_custom_attachments.owosight2ac2 = "owosight2ac2List"
-mod.wc.owosight2List = {
+mod.wc.add_custom_attachments.owosight2ac2 = "owosight2ac2s"
+mod.wc.owosight2s = {
 	"owo_holosight_empty2_02",
 	"owo_holosight_sight2_helper_02",
 	--"owo_pu_scope2_helper_02",
 }
 -- RECEIVER
-mod.wc.add_custom_attachments.receiverac1 = "receiverac1List"
-mod.wc.receiverac1List = {
+mod.wc.add_custom_attachments.receiverac1 = "receiverac1s"
+mod.wc.receiverac1s = {
 	"owo_bolt_empty",
 	"owo_bolt_helbore_bolt_01",
 	"owo_laspistol_grip_mag_helper_empty",
 	"owo_laspistol_grip_mag_helper_01",
 	"owo_helbore_mas49_ass",
 }
-mod.wc.add_custom_attachments.receiverac2 = "receiverac2List"
-mod.wc.receiverac2List = {
+mod.wc.add_custom_attachments.receiverac2 = "receiverac2s"
+mod.wc.receiverac2s = {
 	"owo_bolt_empty",
 	"owo_bolt_helbore_bolt_02",
 	"owo_laspistol_grip_mag_helper_empty",
@@ -1068,7 +1060,7 @@ function mod.owo_dreg_gunner_bayonet(variant_id, type)
 
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
-		{id = "owo_dreg_bayonet_empty", name = "Empty Bayonet", no_randomize = true},
+		{id = "owo_dreg_bayonet_empty_01", name = "Empty Bayonetac1", no_randomize = true},
 		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Bayonet Hooker Ass", no_randomize = true},
 	})
 
@@ -1080,14 +1072,18 @@ function mod.owo_dreg_gunner_bayonet(variant_id, type)
 				bayonetac1 = "owo_dreg_bayonet_rear_01"
 			}
 		},
-		owo_dreg_bayonet_empty = {
-			model = "", type = "bayonetac1", 
-			mesh_move = false, parent = 'barrel'
-		},
 		owo_dreg_bayonet_rear_01 = {
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "bayonetac1", 
 			mesh_move = false, parent = 'barrel'
-		}
+		},
+		owo_dreg_bayonet_empty = {
+			model = "", type = "bayonet", 
+			mesh_move = false, parent = 'barrel'
+		},
+		owo_dreg_bayonet_empty_01 = {
+			model = "", type = "bayonetac1", 
+			mesh_move = false, parent = 'barrel'
+		},
 	})
 end
 
@@ -2537,8 +2533,8 @@ end
 
 --[[
 TEMPLATES
-mod.wc.add_custom_attachments.KUMQUAT = "KUMQUATList"
-mod.wc.KUMQUATList = {
+mod.wc.add_custom_attachments.KUMQUAT = "KUMQUATs"
+mod.wc.KUMQUATs = {
 	""
 }
 

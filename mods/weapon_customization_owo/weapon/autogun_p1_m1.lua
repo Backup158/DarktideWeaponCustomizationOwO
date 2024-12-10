@@ -1,4 +1,5 @@
 local mod = get_mod("weapon_customization_owo")
+local syn = get_mod("weapon_customization_syn_edits")
 
  -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -13,19 +14,20 @@ local this_variant = "autogun_p1_m1" -- Braced/Infantry/Vigilant Autoguns
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
---mod.wc.attachment[this_variant].barrelshroud = {}
---mod.wc.attachment[this_variant].barrelshroudac = {}
---mod.wc.attachment[this_variant].barrelshroudac2 = {}
---mod.wc.attachment[this_variant].barrelshroudac3 = {}
---mod.wc.attachment[this_variant].barrelshroudac4 = {}
---mod.wc.attachment[this_variant].barrelshroudac5 = {}
---mod.wc.attachment[this_variant].barrelshroudac6 = {}
+if not syn then
+    mod.wc.attachment[this_variant].barrelshroud = {}
+    mod.wc.attachment[this_variant].barrelshroudac = {}
+    mod.wc.attachment[this_variant].barrelshroudac2 = {}
+    mod.wc.attachment[this_variant].barrelshroudac3 = {}
+    mod.wc.attachment[this_variant].barrelshroudac4 = {}
+    mod.wc.attachment[this_variant].barrelshroudac5 = {}
+    mod.wc.attachment[this_variant].barrelshroudac6 = {}
+end
 mod.wc.attachment[this_variant].bayonetac1 = {}
 mod.wc.attachment[this_variant].bayonetac2 = {}
 mod.wc.attachment[this_variant].bayonetac3 = {}
 mod.wc.attachment[this_variant].bayonetac4 = {}
 mod.wc.attachment[this_variant].grip2 = {}
---mod.wc.attachment[this_variant].muzzle_2 = {}
 mod.wc.attachment[this_variant].owomagazineac1 = {}
 mod.wc.attachment[this_variant].owomagazineac2 = {}
 mod.wc.attachment[this_variant].owomagazineac3 = {}

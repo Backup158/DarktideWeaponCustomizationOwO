@@ -13,8 +13,6 @@ local this_variant = "lasgun_p2_m1" -- Helbore Lasgun
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
---mod.wc.attachment[this_variant].stockac = {}
---mod.wc.attachment[this_variant].stockac2 = {}
 -- mod.wc.attachment[this_variant].stockac3 = {}
 mod.wc.attachment[this_variant].rearmag = {}
 --mod.wc.attachment[this_variant].muzzle_2 = {}
