@@ -13,7 +13,7 @@ local this_variant = "lasgun_p3_m1" -- Recon Lasgun
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].muzzle2 = {}
+--mod.wc.attachment[this_variant].muzzle_2 = {}
 mod.wc.attachment[this_variant].barrelac = {}
 mod.wc.attachment[this_variant].owosightac1 = {}
 mod.wc.attachment[this_variant].owosightac2 = {}
@@ -30,7 +30,7 @@ mod.wc.attachment[this_variant].owosight2ac2 = {}
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
-mod.owo_lasgun_magazine_flat(this_variant)
+mod.owo_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant)
 mod.owo_scab_gunner_muzzle(this_variant)
 mod.owo_scab_gunner_barrel(this_variant)
@@ -67,10 +67,10 @@ mod.inject_fixes(this_variant, {
         muzzle = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2) },
     },
     {	dependencies = {"owo_suppressor_01"},
-        muzzle2 = {offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2) },	
+        muzzle_2 = {offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2) },	
     },
     {	dependencies = {"owo_suppressor_02"},
-        muzzle2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2) }
+        muzzle_2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2) }
     },
     -- the skinny bayonet. sits on muzzle
     {	dependencies = {"owo_suppressor_01|owo_suppressor_02",
@@ -84,7 +84,7 @@ mod.inject_fixes(this_variant, {
 	-- ######
 	{	dependencies = {"owo_condom_01"},
 		muzzle = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
-		muzzle2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
+		muzzle_2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
 	},
 	-- the skinny bayonet. sits on muzzle
 	{	dependencies = {"owo_condom_01",
@@ -299,7 +299,7 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {"!owo_suppressor_01",  "!owo_suppressor_02", 
 			"!owo_condom_01"
 		},
-		muzzle2 = {hide_mesh = {{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+		muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
 	},
 	-- Sights
 	{   dependencies = {"!owo_holosight_01_01", "!owo_holosight_01_02", "!owo_holosight_01_03",

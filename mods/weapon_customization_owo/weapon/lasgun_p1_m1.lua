@@ -13,14 +13,14 @@ local this_variant = "lasgun_p1_m1" -- Infantry Lasgun
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].muzzle2 = {}
+--mod.wc.attachment[this_variant].muzzle2 = {}
 mod.wc.attachment[this_variant].barrelac = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
-mod.owo_lasgun_magazine_flat(this_variant)
+mod.owo_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant)
 mod.owo_scab_gunner_muzzle(this_variant)
 mod.owo_scab_gunner_barrel(this_variant)

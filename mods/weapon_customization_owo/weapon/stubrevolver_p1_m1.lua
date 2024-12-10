@@ -14,8 +14,8 @@ local this_variant = "stubrevolver_p1_m1" -- Quickdraw Stub Revolver
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].muzzle2 = {}
-mod.wc.attachment[this_variant].barrelshroud = {}
+mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to revolver yet
+mod.wc.attachment[this_variant].barrelshroud = {} -- MT and Syn didn't add this to revolver yet
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -43,7 +43,7 @@ mod.inject_fixes(this_variant, {
     {	dependencies = {"owo_suppressor_01",
             "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08"
         },
-        muzzle2 = {parent = "barrel", parent_node = 9, offset = false, 
+        muzzle_2 = {parent = "barrel", parent_node = 9, offset = false, 
             position = vector3_box(0, 0.192, -0.022),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"},
         },	
@@ -51,7 +51,7 @@ mod.inject_fixes(this_variant, {
     {	dependencies = {"owo_suppressor_02",
             "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08"
         },
-        muzzle2 = {parent = "barrel", parent_node = 9, offset = false, 
+        muzzle_2 = {parent = "barrel", parent_node = 9, offset = false, 
             position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"},
         },
@@ -77,7 +77,7 @@ mod.inject_fixes(this_variant, {
         barrel = { offset = true, mesh_move = false, 
             position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
             rotation_node = 2,
-            trigger_move = {"muzzle", "rail", "barrelshroud", "muzzle2"}, animation_wait_detach = {"muzzle2", "barrelshroud", "rail", "muzzle"},
+            trigger_move = {"muzzle", "rail", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "rail", "muzzle"},
         },
         -- Offset is false so it can be reparented to barrel on load, which lets it follow the animation
         barrelshroud = {parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
@@ -125,7 +125,7 @@ mod.inject_fixes(this_variant, {
             position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
             animation_wait_attach = {"barrel"},
         },
-        muzzle2 = {parent = "barrel", parent_node = 9, 
+        muzzle_2 = {parent = "barrel", parent_node = 9, 
             position = vector3_box(0, 0.328, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"}, 
         },	
@@ -138,7 +138,7 @@ mod.inject_fixes(this_variant, {
             position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
             animation_wait_attach = {"barrel"},
         },
-        muzzle2 = {parent = "barrel", parent_node = 9, 
+        muzzle_2 = {parent = "barrel", parent_node = 9, 
             position = vector3_box(0, 0.236, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"}, 
         },	
@@ -165,6 +165,6 @@ mod.inject_fixes(this_variant, {
     -- Muzzles
     {	dependencies = {"!owo_suppressor_01",  "!owo_suppressor_02", 
         },
-        muzzle2 = {hide_mesh = { 	{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+        muzzle_2 = {hide_mesh = { 	{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
 })

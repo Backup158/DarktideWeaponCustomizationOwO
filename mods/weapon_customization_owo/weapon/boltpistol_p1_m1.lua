@@ -13,7 +13,7 @@ local this_variant = "boltpistol_p1_m1" -- Bolt Pistol
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].barrelshroud = {}
+--mod.wc.attachment[this_variant].barrelshroud = {}
 
 -- ############################################
 -- Injection Calls: attachments and models

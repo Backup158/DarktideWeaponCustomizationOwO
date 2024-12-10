@@ -14,7 +14,7 @@ local this_variant = "laspistol_p1_m1" -- Laspistols
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].muzzle2 = {}
+mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to laspistol yet
 mod.wc.attachment[this_variant].receiverac1 = {}
 mod.wc.attachment[this_variant].receiverac2 = {}
 
@@ -23,8 +23,7 @@ mod.wc.attachment[this_variant].receiverac2 = {}
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_grip_laser(this_variant, "flashlight")
---mod.owo_lasgun_magazine_flat(this_variant, "magazine")
-mod.owo_lasgun_magazine_flat(this_variant)
+mod.owo_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_laspistol_grip_mag(this_variant)
 
@@ -39,10 +38,10 @@ mod.inject_fixes(this_variant, {
         muzzle = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },
     },
     {	dependencies = {"owo_suppressor_01"},
-        muzzle2 = {offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },	
+        muzzle_2 = {offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },	
     },
     {	dependencies = {"owo_suppressor_02"},
-        muzzle2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ) }
+        muzzle_2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ) }
     },
     -- the skinny bayonet. sits on muzzle
     {	dependencies = {"owo_suppressor_01|owo_suppressor_02", 
@@ -123,7 +122,7 @@ mod.inject_fixes(this_variant, {
     {	dependencies = {"!owo_suppressor_01",  "!owo_suppressor_02", 
             "!owo_condom_01"
         },
-        muzzle2 = {hide_mesh = { 	{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+        muzzle_2 = {hide_mesh = { 	{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
     -- Receivers
     {	dependencies = {"!owo_laspistol_grip_mag_01",  "!owo_laspistol_grip_mag_02", "!owo_laspistol_grip_mag_03"},

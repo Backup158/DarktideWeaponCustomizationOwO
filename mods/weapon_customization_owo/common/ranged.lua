@@ -18,15 +18,26 @@ mod.table_append(mod.wc.laser_pointers, {
 	"owo_grip_laser_02",
 })
 -- MUZZLE
-mod.wc.add_custom_attachments.muzzle2 = "muzzle2List"
-mod.wc.muzzle2List = {
+--[[
+mod.wc.add_custom_attachments.muzzle_2 = "muzzle_2List"
+mod.wc.muzzle_2List = {
 	"owo_suppressor_helper_empty",
 	"owo_suppressor_helper_01",
 	"owo_suppressor_helper_02",
 	"owo_condom_helper_empty",
 	"owo_condom_helper_01",
 }
+]]
+-- This is what the MT plugin called the table that gets appended to muzzle_2
+mod.table_append(mod.wc.muzzle_2s, {
+	"owo_suppressor_helper_empty",
+	"owo_suppressor_helper_01",
+	"owo_suppressor_helper_02",
+	"owo_condom_helper_empty",
+	"owo_condom_helper_01",
+})
 -- BARREL
+--[[
 mod.wc.add_custom_attachments.barrelac = "barrelacList"
 mod.wc.barrelacList = {
 	"owo_scab_gunner_barrelac_empty",
@@ -46,11 +57,11 @@ mod.wc.barrelshroudList = {
 	"owo_revolver_shotgun_barrel_06",
 	"owo_revolver_shotgun_barrel_08",
 	--"owo_revolver_shotgun_barrel_09",
-	--[["owo_revolver_shotgun_barrel_04_l",
-	"owo_revolver_shotgun_barrel_05_l",
-	"owo_revolver_shotgun_barrel_06_l",
-	"owo_revolver_shotgun_barrel_08_l",
-	]]
+	--"owo_revolver_shotgun_barrel_04_l",
+	--"owo_revolver_shotgun_barrel_05_l",
+	--"owo_revolver_shotgun_barrel_06_l",
+	--"owo_revolver_shotgun_barrel_08_l",
+	
 	"owo_dreg_shroud_empty",
 	"owo_dreg_shroud_01",
 	"owo_m16_empty",
@@ -71,11 +82,13 @@ mod.wc.barrelshroudList = {
 	"owo_bistol_shotgun_barrel_short_08",
 	-- "owo_bistol_shotgun_barrel_short_09",
 }
+]]
 --[[mod.wc.add_custom_attachments.barrelshroudac = "barrelshroudacList"
 mod.wc.barrelshroudacList = {
 	"owo_dreg_shroud_empty",
 	"owo_dreg_shroudac_01"
 }]]
+--[[
 mod.wc.add_custom_attachments.barrelshroudac2 = "barrelshroudac2List"
 mod.wc.barrelshroudac2List = {
 	"owo_dreg_shroud_empty",
@@ -107,6 +120,53 @@ mod.wc.barrelshroudac6List = {
 	"owo_m16_sight_empty",
 	"owo_m16_sight_helper_06",
 }
+]]
+-- Syn followed the same formatting (as MT) for his new attachments
+-- slot name + 's' for the table to add
+mod.table_append(mod.wc.barrelshrouds, {
+	"owo_dreg_shroud_empty",
+	"owo_dreg_shroud_01",
+	"owo_m16_empty",
+	"owo_m16_barrelshroud_a1",
+	"owo_m16_barrelshroud_a1_02",
+	"owo_m16_barrelshroud_a2",
+	"owo_revolver_shotgun_barrel_empty",
+	"owo_revolver_shotgun_barrel_04",
+	"owo_revolver_shotgun_barrel_05",
+	"owo_revolver_shotgun_barrel_06",
+	"owo_revolver_shotgun_barrel_08",
+	"owo_bistol_shotgun_barrel_short_empty", 
+	"owo_bistol_shotgun_barrel_short_04",
+	"owo_bistol_shotgun_barrel_short_05",
+	"owo_bistol_shotgun_barrel_short_06",
+	"owo_bistol_shotgun_barrel_short_08",
+})
+mod.table_append(mod.wc.barrelshroudac2s, {
+	"owo_dreg_shroud_empty_02",
+	"owo_dreg_shroudac2_01",
+	"owo_m16_empty_02",
+	"owo_m16_barrelshroudac2_01",
+})
+mod.table_append(mod.wc.barrelshroudac3s, {
+	"owo_dreg_shroud_empty_03",
+	"owo_dreg_shroudac3_01",
+	"owo_m16_empty_03",
+	"owo_m16_barrelshroudac3_01",
+})
+mod.table_append(mod.wc.barrelshroudac4s, {
+	"owo_dreg_shroud_empty_04",
+	"owo_dreg_shroudac4_01",
+	"owo_m16_empty_04",
+	"owo_m16_barrelshroudac4_01",
+})
+mod.table_append(mod.wc.barrelshroudac5s, {
+	"owo_m16_empty_05",
+	"owo_m16_barrelshroudac5_01",
+})
+mod.table_append(mod.wc.barrelshroudac6s, {
+	"owo_m16_empty_06",
+	"owo_m16_barrelshroudac6_01",
+})
 -- BAYONET
 mod.wc.add_custom_attachments.bayonetac1 = "bayonetac1List"
 mod.wc.bayonetac1List = {
@@ -298,6 +358,11 @@ mod.wc.receiverac2List = {
 	"owo_laspistol_grip_mag_helper2_01",
 	"owo_helbore_mas49_knob",
 }
+-- STOCKS
+mod.table_append(mod.wc.stockacs, {
+	"owo_gripstock_grip_empty",
+	"owo_gripstock_grip_01a",
+})
 
 -- ############################################
 -- Injection Definitions
@@ -367,8 +432,8 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"}
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle2" or type, {
-		{id = "owo_suppressor_helper_empty", name = "Muzzle2 Empty", no_randomize = true},
+	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
+		{id = "owo_suppressor_helper_empty", name = "muzzle_2 Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
 		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true}
 	})
@@ -377,23 +442,23 @@ function mod.owo_suppressor(variant_id, type)
 		owo_suppressor_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle2 = "owo_suppressor_helper_01"
+				muzzle_2 = "owo_suppressor_helper_01"
 			}
 		},
 		owo_suppressor_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle2 = "owo_suppressor_helper_02"
+				muzzle_2 = "owo_suppressor_helper_02"
 			}
 		},
 		owo_suppressor_helper_empty = {
-			model = "", type = "muzzle2", mesh_move = false, parent = "barrel"
+			model = "", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		},
 		owo_suppressor_helper_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		},
 		owo_suppressor_helper_02 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		}
 	})
 end
@@ -403,7 +468,7 @@ function mod.owo_condom(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
 		{id = "owo_condom_01", name = "OwO Lasbarrel Condom", no_randomize = true}
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle2" or type, {
+	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
 		{id = "owo_condom_helper_empty", name = "Condom'vesa Empty", no_randomize = true},
 		{id = "owo_condom_helper_01", name = "OwO Condom'vesa", no_randomize = true}
 	})
@@ -412,14 +477,14 @@ function mod.owo_condom(variant_id, type)
 		owo_condom_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle2 = "owo_condom_helper_01"
+				muzzle_2 = "owo_condom_helper_01"
 			}
 		},
 		owo_condom_helper_empty = {
-			model = "", type = "muzzle2", mesh_move = false, parent = "barrel"
+			model = "", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		},
 		owo_condom_helper_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		},
 	})
 end
@@ -586,7 +651,7 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 		]]
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
-		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelex"},
+		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelshroud"},
 		--{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1 (1)"},
 		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 1 (4)"},
 		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 2 (5)"},
@@ -669,7 +734,6 @@ end
 function mod.owo_dreg_gunner_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
 		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel"},
-
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
 		{id = "owo_dreg_shroud_empty", name = "Dreg Shroud Empty", no_randomize = true},
@@ -680,15 +744,15 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 		{id = "owo_dreg_shroudac_01", name = "OwO Dreg Shroud Ac", no_randomize = true},
 	})]]
 	mod.inject_attachments_owo(variant_id, "barrelshroudac2", {
-		{id = "owo_dreg_shroud_empty", name = "Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_shroud_empty_02", name = "Dreg Shroud Empty", no_randomize = true},
 		{id = "owo_dreg_shroudac2_01", name = "OwO Dreg Shroud Ac2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac3", {
-		{id = "owo_dreg_shroud_empty", name = "Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_shroud_empty_03", name = "Dreg Shroud Empty", no_randomize = true},
 		{id = "owo_dreg_shroudac3_01", name = "OwO Dreg Shroud Ac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac4", {
-		{id = "owo_dreg_shroud_empty", name = "Dreg Shroud Empty", no_randomize = true},
+		{id = "owo_dreg_shroud_empty_04", name = "Dreg Shroud Empty", no_randomize = true},
 		{id = "owo_dreg_shroudac4_01", name = "OwO Dreg Shroud Ac4", no_randomize = true},
 	})
 
@@ -727,6 +791,18 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 		},
 		owo_dreg_shroud_empty = {
 			model = "", type = "barrelshroudac", 
+			mesh_move = false, parent = 'receiver'
+		},
+		owo_dreg_shroud_empty_02 = {
+			model = "", type = "barrelshroudac2", 
+			mesh_move = false, parent = 'receiver'
+		},
+		owo_dreg_shroud_empty_03 = {
+			model = "", type = "barrelshroudac3", 
+			mesh_move = false, parent = 'receiver'
+		},
+		owo_dreg_shroud_empty_04 = {
+			model = "", type = "barrelshroudac4", 
 			mesh_move = false, parent = 'receiver'
 		},
 	})
@@ -785,23 +861,23 @@ function mod.owo_m16_barrel(variant_id, type)
 		{id = "owo_m16_barrelshroud_a2", name = "OwO M16a2 Barrel Shroud", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac2" or type, {
-		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_02", name = "OwO Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac2_01", name = "OwO M16 Front Sight shroudac", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac3" or type, {
-		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_03", name = "OwO Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac3_a1", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac4" or type, {
-		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_04", name = "OwO Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac4_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac5" or type, {
-		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_05", name = "OwO Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac5_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac6" or type, {
-		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_06", name = "OwO Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac6_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 
@@ -878,10 +954,6 @@ function mod.owo_m16_barrel(variant_id, type)
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 			}
 		},
-		owo_m16_empty = {
-			model = "", type = "barrelshroud", 
-			mesh_move = false, parent = "receiver"
-		},
 		owo_m16_barrelshroud_a1 = {
 			model = _item_melee.."/grips/hatchet_grip_03", type = "barrelshroud", 
 			mesh_move = false, parent = "receiver"
@@ -917,6 +989,30 @@ function mod.owo_m16_barrel(variant_id, type)
 		},
 		owo_m16_barrelshroudac6_01 = {
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "barrelshroudac6", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_empty = {
+			model = "", type = "barrelshroud", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_empty_02 = {
+			model = "", type = "barrelshroudac2", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_empty_03 = {
+			model = "", type = "barrelshroudac3", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_empty_04 = {
+			model = "", type = "barrelshroudac4", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_empty_05 = {
+			model = "", type = "barrelshroudac5", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_m16_empty_06 = {
+			model = "", type = "barrelshroudac6", 
 			mesh_move = false, parent = "receiver"
 		},
 	})
@@ -973,7 +1069,7 @@ function mod.owo_dreg_gunner_bayonet(variant_id, type)
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
 		{id = "owo_dreg_bayonet_empty", name = "Empty Bayonet", no_randomize = true},
-		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Shroud", no_randomize = true},
+		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Bayonet Hooker Ass", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -1415,6 +1511,7 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 		{id = "owo_gripstock_recon_03", name = "OwO StraightGrip Recon 3"},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac" or type, {
+		{id = "owo_gripstock_grip_empty",  name = "Empty stockac", no_randomize = true},
 		{id = "owo_gripstock_grip_01a",  name = "OwO StraightGrip stockac", no_randomize = true},
 	})
 
@@ -1448,6 +1545,9 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 		owo_gripstock_grip_01a = {
 			model = _item_ranged.."/recievers/stubgun_pistol_receiver_02", type = "stockac", parent = "receiver", 
 			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
+		},
+		owo_gripstock_grip_empty = {
+			model = "", type = "stockac", parent = "receiver", 
 		},
 	})
 end
@@ -2251,10 +2351,10 @@ end
 ]]
 
 -- Magazine: Lasgun Flat
-function mod.owo_lasgun_magazine_flat(variant_id, type)
+function mod.owo_magazine_flat(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_lasgun_magazine_flat_01", name = "OwO Flat Mag (Las) 1"},
-		{id = "owo_lasgun_magazine_flat_au_02", name = "OwO Flat Mag (Autogun) 2"},
+		{id = "owo_autogun_magazine_flat_03", name = "OwO Flat Mag (Autogun) 3"},
 	})
 
 	mod.inject_models(variant_id, {
@@ -2262,7 +2362,7 @@ function mod.owo_lasgun_magazine_flat(variant_id, type)
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
 			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
 		},
-		owo_lasgun_magazine_flat_au_02 = {
+		owo_autogun_magazine_flat_03 = {
 			model = _item_ranged.."/magazines/autogun_rifle_magazine_03", type = "magazine", parent = "receiver", 
 			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
 		},
