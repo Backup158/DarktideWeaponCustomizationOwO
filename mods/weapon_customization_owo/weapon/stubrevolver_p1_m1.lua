@@ -155,16 +155,12 @@ mod.inject_fixes(this_variant, {
     -- Hiding unused attachments
     -- ################
     -- Barrels
-    {   dependencies = { -- "!owo_revolver_shotgun_barrel_base_01", "!owo_revolver_shotgun_barrel_base_09",
-            "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08",
-            -- "!owo_revolver_shotgun_barrel_base_04_l", "!owo_revolver_shotgun_barrel_base_05_l", "!owo_revolver_shotgun_barrel_base_06_l", "!owo_revolver_shotgun_barrel_base_08_l"
+    {   dependencies = { "owo_revolver_shotgun_barrel_04|owo_revolver_shotgun_barrel_05|owo_revolver_shotgun_barrel_06|owo_revolver_shotgun_barrel_08"-- "!owo_revolver_shotgun_barrel_base_04_l", "!owo_revolver_shotgun_barrel_base_05_l", "!owo_revolver_shotgun_barrel_base_06_l", "!owo_revolver_shotgun_barrel_base_08_l"
         },
-            barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}
-        },
+            barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Muzzles
-    {	dependencies = {"!owo_suppressor_01",  "!owo_suppressor_02", 
-        },
+    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02" },
         muzzle_2 = {hide_mesh = { 	{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
 })

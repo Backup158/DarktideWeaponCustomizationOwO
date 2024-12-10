@@ -24,7 +24,7 @@ mod.wc.attachment[this_variant].sightac4 = {}
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
 mod.wc.attachment[this_variant].sightac7 = {}
-mod.wc.attachment[this_variant].sight_secondary_ = {}
+mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 
@@ -157,20 +157,20 @@ mod.inject_fixes(this_variant, {
 			"!receiver_01", "!receiver_02", "!receiver_03", "!receiver_04", "!receiver_05", "!receiver_06", "!receiver_07",
 		},
         sight =             { offset = true, position  = vector3_box(0, 0.05, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_secondary_ =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
     },
 	{   dependencies = { "owo_holosight_01_02|owo_holosight_01_03|owo_holosight_01_02_ps|owo_holosight_01_03_ps",
 			"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
         sight =             { offset = true, position  = vector3_box(0, 0.082, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_secondary_ =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
     },
     {   dependencies = { "owo_holosight_01_02|owo_holosight_01_02_ps" },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.03), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
     {   dependencies = { "owo_holosight_01_03|owo_holosight_01_03_ps" },
-        sight_secondary_ =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.15, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
@@ -197,13 +197,13 @@ mod.inject_fixes(this_variant, {
 			-- "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03|volley_lasgun_receiver_03b",
 		},
         sight =             { offset = true, position  = vector3_box(0, 0.05, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_secondary_ =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
     },
 	{   dependencies = { "owo_holosight_02_02|owo_holosight_02_03",
 			"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
         sight =             { offset = true, position  = vector3_box(0, 0.082, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_secondary_ =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
     },
     {   dependencies = { "owo_holosight_02_02" },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
@@ -260,7 +260,7 @@ mod.inject_fixes(this_variant, {
     },
     --  ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
-        sight_secondary_ =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
+        sight_secondary =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
     --  Aligning sights to crosshair
     --      Aiming with ACOG
@@ -320,7 +320,7 @@ mod.inject_fixes(this_variant, {
             "!owo_holosight_01_02_ps", "!owo_holosight_01_03_ps",
             "!owo_acog_sight_02_01", "!owo_acog_sight_02_02", "!owo_acog_sight_02_ps",
         },
-        sight_secondary_ = { hide_mesh = {{"sight_secondary_", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        sight_secondary = { hide_mesh = {{"sight_secondary_", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 	{   dependencies = { "!owo_holosight_01_02", "!owo_holosight_01_03",
             "!owo_holosight_02_02", "!owo_holosight_02_03",

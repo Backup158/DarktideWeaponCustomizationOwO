@@ -43,7 +43,7 @@ mod.wc.attachment[this_variant].sightac4 = {}
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
 mod.wc.attachment[this_variant].sightac7 = {}
-mod.wc.attachment[this_variant].sight_secondary_ = {}
+mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 
@@ -384,7 +384,7 @@ mod.inject_fixes(this_variant, {
     --      Holo + Magnifier puts the holo a bit more forwards
     {   dependencies = { "owo_holosight_01_02|owo_holosight_01_03|owo_holosight_01_02_ps|owo_holosight_01_03_ps" },
         sight =             { offset = true, position  = vector3_box(0, 0.05, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_secondary_ =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
         sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} }, -- 6 hides housing for sight 1, 5 hides sights 2 and 3
     },
     {   dependencies = { "owo_holosight_01_02|owo_holosight_01_02_ps" },
@@ -392,7 +392,7 @@ mod.inject_fixes(this_variant, {
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.03), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
     {   dependencies = { "owo_holosight_01_03|owo_holosight_01_03_ps" },
-        sight_secondary_ =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
+        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.168, 0.104) },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.15, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
@@ -442,10 +442,10 @@ mod.inject_fixes(this_variant, {
     },
     -- Riser alightment
     {	dependencies = {"owo_pu_scope_01"},
-        sight_secondary_ = {offset = true, position = vector3_box(0, 0.016, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
+        sight_secondary = {offset = true, position = vector3_box(0, 0.016, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
     },
     {	dependencies = {"owo_pu_scope_02"},
-        sight_secondary_ = {offset = true, position = vector3_box(0, -0.036, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.67, 0.4, 0.5 ) },
+        sight_secondary = {offset = true, position = vector3_box(0, -0.036, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.67, 0.4, 0.5 ) },
     },
 
     -- ######
@@ -468,7 +468,7 @@ mod.inject_fixes(this_variant, {
     },
     --  ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
-        sight_secondary_ =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
+        sight_secondary =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
     -- SUSAT
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps" },
@@ -488,7 +488,7 @@ mod.inject_fixes(this_variant, {
     },
     -- SUSAT with red dot
     {   dependencies = { "owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps" },
-            sight_secondary_ =     { offset = true, position  = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
+            sight_secondary =     { offset = true, position  = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
     --  Aligning sights to crosshair
     --      Aiming with main sight
@@ -662,7 +662,7 @@ mod.inject_fixes(this_variant, {
         sightac7 = { hide_mesh = {{"sightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_holosight_sight_secondary__01|owo_pu_scope_riser_01"},
-        sight_secondary_ = { hide_mesh = {{"sight_secondary_", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        sight_secondary = { hide_mesh = {{"sight_secondary_", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_holosight_sight_secondary__helper_01"},
         sight_secondary_ac1 = { hide_mesh = {{"sight_secondary_ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},  
