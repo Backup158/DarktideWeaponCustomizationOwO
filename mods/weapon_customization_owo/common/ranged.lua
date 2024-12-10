@@ -529,8 +529,7 @@ function mod.owo_scab_gunner_muzzle(variant_id, type)
 
 end
 
--- Barrel: Shotgun barrel short
---		Bolt pistol
+-- Barrel: Bolt Pistol Shotgun barrel (short)
 function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 	--[[
 	1,6 dont work, but 2-5 do
@@ -655,7 +654,7 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 	})
 end
 
--- Barrel: Revolver Shotgun barrel shroud
+-- Barrel: Revolver Shotgun Barrel
 function mod.owo_revolver_shotgun_barrel(variant_id, type)
 	--[[ what the FUCK is wrong with barrels 1 and 9
 	]]
@@ -831,7 +830,7 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 end
 
 -- Barrel: Scab Gunner
---		Recon Lasgun
+--		TODO: Fix the fucked up las origin
 function mod.owo_scab_gunner_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
 		{id = "owo_scab_gunner_barrel_01", name = "OwO Scab Gunner Barrel 1"},
@@ -846,8 +845,8 @@ function mod.owo_scab_gunner_barrel(variant_id, type)
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "barrel", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				barrelac = "owo_scab_gunner_barrelac_01"
-			}
+				barrelac = "owo_scab_gunner_barrelac_01",
+			},
 		},
 		owo_scab_gunner_barrelac_empty = {
 			model = "", type = "barrelac", 

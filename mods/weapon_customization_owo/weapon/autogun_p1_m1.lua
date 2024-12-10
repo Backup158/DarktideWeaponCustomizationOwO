@@ -173,6 +173,11 @@ mod.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: CONDOM
 	-- ######
+    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2",
+            "owo_condom_01"
+        },
+        muzzle =    {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
+    },
 	{	dependencies = {"owo_condom_01"},
         muzzle =    {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
         muzzle_2 =   {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
@@ -356,15 +361,10 @@ mod.inject_fixes(this_variant, {
     },
     -- Muzzle Alignment
     {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2",
-            "!owo_suppressor_01", "!owo_suppressor_02",
-            "!owo_condom_01"
+            --"!owo_suppressor_01", "!owo_suppressor_02",
+            --"!owo_condom_01"
         },
         muzzle =            { offset = true,    position = vector3_box(0, 0.11, 0),         rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-    },
-    {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2",
-            "owo_condom_01"
-        },
-        muzzle =    {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
     },
 
     -- ######
@@ -652,22 +652,22 @@ mod.inject_fixes(this_variant, {
     {   dependencies = {"owo_holosight_helper_04|owo_rear_sight_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04"},
         sightac4 = { hide_mesh = {{"sightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05"},
+    {   dependencies = { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01"},
         sightac5 = { hide_mesh = {{"sightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06"},
+    {   dependencies = { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01"},
         sightac6 = { hide_mesh = {{"sightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_m16_sight_helper_07|owo_acog_sight_helper_07"},
         sightac7 = { hide_mesh = {{"sightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_holosight_sight_secondary__01|owo_pu_scope_riser_01"},
-        sight_secondary = { hide_mesh = {{"sight_secondary_", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    {   dependencies = { "owo_holosight_sight_secondary_01|owo_pu_scope_riser_01"},
+        sight_secondary = { hide_mesh = {{"sight_secondary", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_holosight_sight_secondary__helper_01"},
+    {   dependencies = { "owo_holosight_sight_secondary_helper_01"},
         sight_secondary_ac1 = { hide_mesh = {{"sight_secondary_ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},  
     },
-    {   dependencies = { "owo_holosight_sight_secondary__helper_02"},
+    {   dependencies = { "owo_holosight_sight_secondary_helper_02"},
         sight_secondary_ac2 = { hide_mesh = {{"sight_secondary_ac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })

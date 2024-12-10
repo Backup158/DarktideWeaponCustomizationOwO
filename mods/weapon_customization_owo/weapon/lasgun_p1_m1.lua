@@ -77,14 +77,14 @@ mod.inject_fixes(this_variant, {
 	-- SCAB GUNNER MUZZLE
 	-- ######
 	{	dependencies = { "owo_scab_gunner_muzzle_01", 
-			"!owo_scab_gunner_barrel_01"
-		},
-		muzzle = { offset = true,  position = vector3_box(0, -0.025, -0.03),  rotation = vector3_box(0, 0, 0),  scale = vector3_box(1, 1, 1.76 ) },
-	},
-	{	dependencies = { "owo_scab_gunner_muzzle_01", 
 			"owo_scab_gunner_barrel_01"
 		},
 		muzzle = { offset = true,  position = vector3_box(0, 0.033, -0.02),  rotation = vector3_box(0, 0, 0),  scale = vector3_box(1, 1, 1.76 ) },
+	},
+	{	dependencies = { "owo_scab_gunner_muzzle_01", 
+			"!owo_scab_gunner_barrel_01"
+		},
+		muzzle = { offset = true,  position = vector3_box(0, -0.025, -0.03),  rotation = vector3_box(0, 0, 0),  scale = vector3_box(1, 1, 1.76 ) },
 	},
 
 	-- ######
@@ -99,13 +99,11 @@ mod.inject_fixes(this_variant, {
 	-- Hiding unused helpers
 	-- #########################
 	-- Barrels
-	{	dependencies = { "!owo_scab_gunner_barrel_01"},
+	{	dependencies = { "owo_scab_gunner_barrelac_01"},
 		barrelac = { hide_mesh = { 	{"barrelac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	-- Muzzles
-	{	dependencies = {"!owo_suppressor_01",  "!owo_suppressor_02", 
-			"!owo_condom_01"
-		},
+	{	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_condom_helper_01"},
 		muzzle2 = {hide_mesh = { 	{"muzzle2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 })

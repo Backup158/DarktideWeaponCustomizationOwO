@@ -49,12 +49,7 @@ mod.inject_fixes(this_variant, {
     -- ###############
     -- HIDING UNUSED PARTS
     -- ###############
-    {   -- dependencies = {"!owo_bistol_sg_base_01", "!owo_bistol_sg_base_04", "!owo_bistol_sg_base_05", "!owo_bistol_sg_base_06", "!owo_bistol_sg_base_08", "!owo_bistol_sg_base_09",
-        dependencies = {"!owo_bistol_sg_base_04", "!owo_bistol_sg_base_05", 
-            "!owo_bistol_sg_base_06", "!owo_bistol_sg_base_08",
-            "!owo_bistol_sg_base_04_s", "!owo_bistol_sg_base_05_s", 
-            "!owo_bistol_sg_base_06_s", "!owo_bistol_sg_base_08_s",
-        },
+    {   dependencies = {"owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08"},
         barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
