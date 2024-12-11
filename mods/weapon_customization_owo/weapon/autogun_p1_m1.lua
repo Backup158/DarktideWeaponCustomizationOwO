@@ -47,6 +47,8 @@ mod.wc.attachment[this_variant].sightac7 = {}
 mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
+mod.wc.attachment[this_variant].receiverac1 = {}
+mod.wc.attachment[this_variant].receiverac2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -66,11 +68,51 @@ mod.owo_pu_scope(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
 mod.owo_holosight(this_variant, "sight")
 mod.owo_wood_krieg(this_variant, "barrel")
+mod.owo_helbore_mas49(this_variant, "receiver")
+mod.owo_magazine_flat(this_variant, "magazine")
 
 -- ############################################
 -- Inject Fixes
 -- ############################################
 mod.inject_fixes(this_variant, {
+    -- ######
+	-- Receiver: BOLT ACTION HELBORE
+	-- ######
+	{	dependencies = {"owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05"},
+		receiver = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+		receiverac1 = {offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
+		receiverac2 = {offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+	},
+    -- ######
+	-- Receiver: HELBORE MAS-49
+	-- ######
+	{	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05"},
+        receiver = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    },
+    {	dependencies = {"owo_helbore_mas49_01_s"},
+        receiver = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.69, 1, 1 ) },
+    },
+    {	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"},
+        receiverac1 = {offset = true, position = vector3_box(0.031, -0.016, 0.022), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.518, 0.573, 0.545 ) },
+        receiverac2 = {offset = true, position = vector3_box(0.046, 0.18, 0.096), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.755, 0.755, 0.15 ) },
+        stock = {offset = true, position = vector3_box(0, -0.042, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    },
+    {	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s",
+            "hlasgun_grip_01|hlasgun_grip_02|hlasgun_grip_03"
+        },
+        grip = {offset = true, position = vector3_box(0, -0.006, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    },
+
+    -- ######
+	-- Magazine: FLAT
+	-- ######
+	{	dependencies = {"owo_lasgun_magazine_flat_01"},
+		magazine = {offset = true,scale = vector3_box(1, 1, 0.5 ) },
+	},
+	{	dependencies = {"owo_autogun_magazine_flat_03"},
+		magazine = {offset = true, scale = vector3_box(1, 1, 0.6 ) },
+	},
+
     -- ######
     -- DREG GUNNER BARREL
     -- ######
@@ -463,6 +505,10 @@ mod.inject_fixes(this_variant, {
     -- ######
 	-- Sight: SOVIET PU SCOPE
 	-- ######
+    {	dependencies = {"owo_pu_scope_01|owo_pu_scope_02", "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"},
+        sight = 	  {offset = true, position = vector3_box(0, -0.028, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+        sightac1 = {offset = true, position = vector3_box(0, 0.166 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+    },
 	{	dependencies = {"owo_pu_scope_01|owo_pu_scope_02"},
         no_scope_offset =   { position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0)},
@@ -477,6 +523,9 @@ mod.inject_fixes(this_variant, {
         sightac6 = {offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
     },
     -- Riser alightment
+    {	dependencies = {"owo_pu_scope_01", "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"},
+        sight_secondary = {offset = true, position = vector3_box(0, 0.066, 0.096), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
+    },
     {	dependencies = {"owo_pu_scope_01"},
         sight_secondary = {offset = true, position = vector3_box(0, 0.016, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
     },
@@ -676,6 +725,13 @@ mod.inject_fixes(this_variant, {
         barrelshroudac5 = {hide_mesh = {{"barrelshroudac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
         barrelshroudac6 = {hide_mesh = {{"barrelshroudac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
+    -- Receivers
+	{	dependencies = {"owo_bolt_helbore_bolt_01|owo_helbore_mas49_ass"},
+		receiverac1 = {hide_mesh = {     {"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
+	{	dependencies = {"owo_bolt_helbore_bolt_02|owo_helbore_mas49_knob"},
+		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
     -- Magazines
     {   dependencies = { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04"},
         owo_magac1 = { hide_mesh = {{"owo_magac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },

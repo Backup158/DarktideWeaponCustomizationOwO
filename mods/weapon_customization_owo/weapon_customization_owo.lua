@@ -1,4 +1,6 @@
 local mod = get_mod("weapon_customization_owo")
+local wc
+local mt
 
 -- Prints a message to the console log containing the current version number
 mod:info('WeaponCustomizationOwO v1.nya loaded uwu nya :3')
@@ -18,51 +20,55 @@ end
 -- need to get out of weapon_customization_owo/scripts/mods/weapon_customization_owo (YOU ARE HERE)
 -- 4 jumps to get back to main darktide mods folder
 --[[package.path = package.path .. ';../../../../weapon_customization_mt_stuff/?.lua'
-local mtMain = require 'wc_mts'
+--local mtMain = require 'wc_mts'
 if mtMain then
-	mod:info('mt main plugin found uwu nya :3')
-end]]
-
-
----@param to table
----@param items table
-function mod.table_prepend(to, items)
-	for i, item in ipairs(items) do
-			table.insert(to, i, item)
-	end
+	mod:error('mt main plugin found uwu nya :3')
 end
+]]
 
----@param to table
----@param items table
-function mod.table_append(to, items)
-	for i, item in ipairs(items) do
-			table.insert(to, item)
-	end
-end
+--[[ Importing function from MT
+Shit that don't work
+
+directly in ranged.lua
+---------------------------
+mt.inject_fixes(blah)
+get_mod("weapon_customization_mt_stuff").inject_fixes(blah)
+mt:inject_fixes(blah)
+mod.mt.inject_fixes(blah)
+finding mt on all mods loaded in ranged.lua
+
+in here
+-----------------------------
+--mt:inject_models(variant_id, model_tables)			-- model invalid
+--mt.inject_models(variant_id, model_tables)
+--mtlol.inject_models(variant_id, model_tables)
+		-- after creating a var named mtlol, mod:io_dofile("weapon_customization_mt_stuff/wc_mts"). tried both local and global
+
+OK SO LOOKS LIKE YOU NEED TO DO THE mod.mt = mt
+BEFORE USING mod.mt.function()
+	only seems to work on functions outside of on_all_mods_loaded
+]]
 
 function mod.on_all_mods_loaded()
 	-- Need to keep the get_mod here so it works after reload.
 	---@class WeaponCustomizationMod
-	local wc = get_mod("weapon_customization")
+	wc = get_mod("weapon_customization")
 	if not wc then
 		mod:error("Weapon Customization mod required")
 		return
 	end
 	mod.wc = wc
 	--@class WeaponCustomizationMod_MT
-	local mt = get_mod("weapon_customization_mt_stuff")
+	mt = get_mod("weapon_customization_mt_stuff")
     if not mt then
         mod:error("Weapon Customization MT plugin required")
-       return
+       return 
     end
     mod.mt = mt
 
 	local attachment_ids = {}
 	local model_ids = {}
 
-	---@param variant_id VariantID
-	---@param slot AttachmentSlot
-	---@param attachments_table CoreAttachment[]
 	-- Renamed because i was worried about collisions
 	-- 	probably not an actual issue since methods are called with the class name, like class.method
 	-- Functionally the same but I changed the prefix checking in the displayed names so it's OwO instead of MT
@@ -88,9 +94,7 @@ function mod.on_all_mods_loaded()
 			table.insert(attachment_ids[variant_id][slot], attachment.id)
 		end
 	end
-
-	---@param variant_id VariantID
-	---@param model_tables table<AttachmentID,CoreModel>
+	
 	function mod.inject_models(variant_id, model_tables)
 		if not wc.attachment_models[variant_id] then
 			mod:error(string.format("model variant_id [%s] invalid", variant_id))
@@ -99,7 +103,7 @@ function mod.on_all_mods_loaded()
 		table.merge_recursive(wc.attachment_models[variant_id], model_tables)
 
 		model_ids[variant_id] = model_ids[variant_id] or {}
-		mod.table_append(model_ids[variant_id], table.keys(model_tables))
+		mod.mt.table_append(model_ids[variant_id], table.keys(model_tables))
 	end
 
 	---@param variant_id VariantID
@@ -109,7 +113,8 @@ function mod.on_all_mods_loaded()
 			mod:error(string.format("fixes variant_id [%s] invalid", variant_id))
 			return
 		end
-		mod.table_prepend(wc.anchors[variant_id].fixes, fix_tables)
+		mod.mt.table_prepend(wc.anchors[variant_id].fixes, fix_tables)
+		
 	end
 	
 	-- Applies all the fixes you injected into each wepaon
@@ -149,6 +154,6 @@ function mod.on_all_mods_loaded()
 	end
 
 	if missing then
-		mod:error("Attachment or model issues found, see console log")
+		mod:error("Check console log. A-a-attachmeownt ow ***whispers to self*** modew i-issues found >.<")
 	end
 end

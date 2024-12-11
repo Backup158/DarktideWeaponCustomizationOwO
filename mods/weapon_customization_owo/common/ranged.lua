@@ -1,5 +1,7 @@
 local mod = get_mod("weapon_customization_owo")
 local syn = get_mod("weapon_customization_syn_edits")
+local mt = get_mod("weapon_customization_mt_stuff")
+mod.mt = mt			-- you need to do this for some reason. can't just go mt.function() idfk why but WE BALL
 
 -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -18,16 +20,16 @@ local _item_minion = "content/items/weapons/minions"
 --	Where slots is the name of a table containing a list of parts to append to the slot table. This is to follow the same format that the MT Plugin uses (just to keep the code slightly prettier)
 --	<slot> + 's'. unless it's a numbered thing, then it's <slot> + 's' + <number> instead of <slot, including number> + 's'
 -- Syn followed the same formatting for his new attachments
--- Adding to an existing slot: mod.table_append(mod.wc.<slot>s, { <parts> })
+-- Adding to an existing slot: mod.mt.table_append(mod.wc.<slot>s, { <parts> })
 -- 	Slots that already exist in the base mod do not need this. It's handled by the inject_attachments function
 -- I'm not gonna follow that format. I will use <slot> + '_list'
 -- #############################
-mod.table_append(mod.wc.laser_pointers, {
+mod.mt.table_append(mod.wc.laser_pointers, {
 	"owo_grip_laser_01",
 	"owo_grip_laser_02",
 })
 -- MUZZLE
-mod.table_append(mod.wc.muzzle_2s, {
+mod.mt.table_append(mod.wc.muzzle_2s, {
 	"owo_suppressor_helper_empty",
 	"owo_suppressor_helper_01",
 	"owo_suppressor_helper_02",
@@ -36,7 +38,7 @@ mod.table_append(mod.wc.muzzle_2s, {
 })
 -- BARREL
 if syn then
-	mod.table_append(mod.wc.barrelshrouds, {
+	mod.mt.table_append(mod.wc.barrelshrouds, {
 		"owo_dreg_shroud_empty",
 		"owo_dreg_shroud_01",
 		"owo_m16_empty",
@@ -56,29 +58,29 @@ if syn then
 		"owo_bistol_shotgun_barrel_short_06",
 		"owo_bistol_shotgun_barrel_short_08",
 	})
-	mod.table_append(mod.wc.barrelshroudac2s, {
+	mod.mt.table_append(mod.wc.barrelshroudac2s, {
 		"owo_dreg_shroud_empty_02",
 		"owo_dreg_shroudac2_01",
 		"owo_m16_empty_02",
 		"owo_m16_barrelshroudac2_01",
 	})
-	mod.table_append(mod.wc.barrelshroudac3s, {
+	mod.mt.table_append(mod.wc.barrelshroudac3s, {
 		"owo_dreg_shroud_empty_03",
 		"owo_dreg_shroudac3_01",
 		"owo_m16_empty_03",
 		"owo_m16_barrelshroudac3_01",
 	})
-	mod.table_append(mod.wc.barrelshroudac4s, {
+	mod.mt.table_append(mod.wc.barrelshroudac4s, {
 		"owo_dreg_shroud_empty_04",
 		"owo_dreg_shroudac4_01",
 		"owo_m16_empty_04",
 		"owo_m16_barrelshroudac4_01",
 	})
-	mod.table_append(mod.wc.barrelshroudac5s, {
+	mod.mt.table_append(mod.wc.barrelshroudac5s, {
 		"owo_m16_empty_05",
 		"owo_m16_barrelshroudac5_01",
 	})
-	mod.table_append(mod.wc.barrelshroudac6s, {
+	mod.mt.table_append(mod.wc.barrelshroudac6s, {
 		"owo_m16_empty_06",
 		"owo_m16_barrelshroudac6_01",
 	})
@@ -192,7 +194,7 @@ mod.wc.grip2_list = {
 	"owo_fin_grip2_empty",
 	"owo_fin_grip2_01",
 }]]
-mod.table_append(mod.wc.gripacs, {
+mod.mt.table_append(mod.wc.gripacs, {
 	"owo_fin_grip2_empty",
 	"owo_fin_grip2_01",
 })
@@ -274,7 +276,7 @@ mod.wc.sightac4s = {
 }
 ]]
 -- In the MT Plugin, these tables are sightacs#, instead of sightac#s
-mod.table_append(mod.wc.sightacs2, {
+mod.mt.table_append(mod.wc.sightacs2, {
 	"owo_holosight_empty_02",
 	"owo_holosight_helper_02",
 	"owo_rear_sight_empty_02",
@@ -286,7 +288,7 @@ mod.table_append(mod.wc.sightacs2, {
 	"owo_acog_sight_helper_02",
 	"owo_susat_ac2_01",
 })
-mod.table_append(mod.wc.sightacs3, {
+mod.mt.table_append(mod.wc.sightacs3, {
 	"owo_holosight_empty_03",
 	"owo_holosight_helper_03",
 	"owo_rear_sight_empty_03",
@@ -296,7 +298,7 @@ mod.table_append(mod.wc.sightacs3, {
 	"owo_acog_sight_helper_03",
 	"owo_susat_ac3_01",
 })
-mod.table_append(mod.wc.sightacs4, {
+mod.mt.table_append(mod.wc.sightacs4, {
 	"owo_holosight_empty_04",
 	"owo_holosight_helper_04",
 	"owo_rear_sight_empty_04",
@@ -332,9 +334,9 @@ mod.wc.sightac7_list = {
 	"owo_acog_sight_helper_07",
 }
 -- SIGHT_2
---[[mod.table_append(mod.wc.sights_2, { 
+--[[mod.mt.table_append(mod.wc.sights_2, { 
 
-mod.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sight_2 is called
+mod.mt.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sight_2 is called
 	--"owo_reticle_helper_empty",
 	"owo_reticle_helper_01",
 	"owo_reticle_helper_02",
@@ -353,7 +355,7 @@ mod.wc.sight_2s = {
 }
 ]]
 --[[ scope zoom fucked up. figure out later
-mod.table_append(mod.wc.scopes, {
+mod.mt.table_append(mod.wc.scopes, {
 	"lasgun_rifle_elysian_muzzle_01",
 })
 mod.wc.sniper_zoom_levels.lasgun_rifle_elysian_muzzle_01 = 15
@@ -394,7 +396,7 @@ mod.wc.receiverac2_list = {
 	"owo_helbore_mas49_knob",
 }
 -- STOCKS
-mod.table_append(mod.wc.stockacs, {
+mod.mt.table_append(mod.wc.stockacs, {
 	"owo_gripstock_grip_empty",
 	"owo_gripstock_grip_01a",
 })
@@ -431,7 +433,7 @@ function mod.owo_grip_laser(variant_id, type)
 					1 just calling extension and writing text to ui
 					2 specifying position and creates laser_pointer table
 					tried injectign to table (above)
-						mod.table_append(mod.wc.laser_pointers, {
+						mod.mt.table_append(mod.wc.laser_pointers, {
 							"owo_grip_laser_01",
 						})
 						the table is laser_pointers. the name for the table in anchor is laser_pointer (which will throw errors if you try to use that as the inject)
