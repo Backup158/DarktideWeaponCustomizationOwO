@@ -43,6 +43,8 @@ if syn then
 		"owo_m16_barrelshroud_a1",
 		"owo_m16_barrelshroud_a1_02",
 		"owo_m16_barrelshroud_a2",
+		"owo_wood_krieg_empty",
+		"owo_wood_krieg_ac1_01",
 		"owo_revolver_shotgun_barrel_empty",
 		"owo_revolver_shotgun_barrel_04",
 		"owo_revolver_shotgun_barrel_05",
@@ -96,6 +98,8 @@ else
 		--"owo_revolver_shotgun_barrel_08_l",
 		"owo_dreg_shroud_empty",
 		"owo_dreg_shroud_01",
+		"owo_wood_krieg_empty",
+		"owo_wood_krieg_ac1_01",
 		"owo_m16_empty",
 		"owo_m16_barrelshroud_a1",
 		"owo_m16_barrelshroud_a1_02",
@@ -1047,7 +1051,7 @@ function mod.owo_wood_krieg(variant_id, type)
 		{id = "owo_wood_krieg_02", name = "OwO Wooden Helbore 2 (3)"},
 		{id = "owo_wood_krieg_03", name = "OwO Wooden Helbore 3 (7)"},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelac1" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
 		{id = "owo_wood_krieg_empty", name = "Empty Barrel", no_randomize = true},
 		{id = "owo_wood_krieg_ac1_01", name = "OwO Wooden Helbore ac1 1", no_randomize = true},
 	})
@@ -1057,26 +1061,26 @@ function mod.owo_wood_krieg(variant_id, type)
 		owo_wood_krieg_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = "barrel", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac1 = "owo_wood_krieg_ac1_01", }
+			automatic_equip = { barrelshroud = "owo_wood_krieg_ac1_01", }
 		},
 		owo_wood_krieg_02 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = "barrel", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac1 = "owo_wood_krieg_ac1_01", }
+			automatic_equip = { barrelshroud = "owo_wood_krieg_ac1_01", }
 		},
 		owo_wood_krieg_03 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_ml01", type = "barrel", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { barrelac1 = "owo_wood_krieg_ac1_01", }
+			automatic_equip = { barrelshroud = "owo_wood_krieg_ac1_01", }
 		},
 		-- ### Helper Parts ###
 		owo_wood_krieg_ac1_01 = {
-			model = _item_ranged.."/handles/combat_blade_handle_01", type = "barrelac1", 
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = "barrelshroud", 
 			mesh_move = false, parent = "barrel",
 		},
 		-- ### Empty ###
 		owo_wood_krieg_empty = {
-			model = "", type = "barrelac1", 
+			model = "", type = "barrelshroud", 
 			mesh_move = false, parent = "barrel"
 		},
 	})
@@ -1434,6 +1438,7 @@ function mod.owo_helbore_mas49(variant_id, type)
 		{id = "owo_helbore_mas49_03", name = "OwO Helbore MAS-49 3"},
 		--{id = "owo_helbore_mas49_04", name = "OwO Helbore MAS-49 4"}, -- yeah this musket ass mf ain't workin
 		{id = "owo_helbore_mas49_05", name = "OwO Helbore MAS-49 4 (M)"},
+		{id = "owo_helbore_mas49_01_s", name = "OwO MAS-49 Slim 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac1" or type, {
 		{id = "owo_bolt_empty", name = "receiverac1 empty", no_randomize = true},
@@ -1468,6 +1473,11 @@ function mod.owo_helbore_mas49(variant_id, type)
 		},]]
 		owo_helbore_mas49_05 = {
 			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_ml01", type = "receiver", 
+			mesh_move = false,
+			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
+		},
+		owo_helbore_mas49_01_s = {
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_01", type = "receiver", 
 			mesh_move = false,
 			automatic_equip = {receiverac1 = "owo_helbore_mas49_ass", receiverac2 = "owo_helbore_mas49_knob"}
 		},

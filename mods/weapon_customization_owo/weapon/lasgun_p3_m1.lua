@@ -346,7 +346,7 @@ mod.inject_fixes(this_variant, {
 	-- Hiding unused helpers
 	-- #########################
 	{	dependencies = { "owo_scab_gunner_barrelac_01"},
-		barrelac = { hide_mesh = { 	{"barrelac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+		barrelshroud = { hide_mesh = { 	{"barrelac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	{	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_condom_helper_01"},
 		muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},

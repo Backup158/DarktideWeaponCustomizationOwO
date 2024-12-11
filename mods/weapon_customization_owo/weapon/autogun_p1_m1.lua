@@ -64,6 +64,7 @@ mod.owo_m16_sight(this_variant, "sight")
 mod.owo_pu_scope(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
 mod.owo_holosight(this_variant, "sight")
+mod.owo_wood_krieg(this_variant, "barrel")
 
 -- ############################################
 -- Inject Fixes
@@ -372,8 +373,8 @@ mod.inject_fixes(this_variant, {
     -- ######
     -- EOTech
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02|owo_holosight_01_03|owo_holosight_01_01_ps|owo_holosight_01_02_ps|owo_holosight_01_03_ps" },
-        sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
-        sightac2 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
+        sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.256) }, -- scale was 1.25, 0.56, 0.286
+        sightac2 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.256) },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
     },
@@ -570,6 +571,27 @@ mod.inject_fixes(this_variant, {
         bayonetac2 = {offset = true, position = vector3_box(0, 0.06, 0.014), rotation = vector3_box(180, 0, 180), scale = vector3_box(0.25, 0.09, 0.245) },
     },
 
+    -- ######
+	-- Barrel: WOODEN HELBORE
+	-- ######
+	{	dependencies = {"owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03",
+        },
+        barrel = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        barrelshroud = {offset = true, position = vector3_box(0, 0.19, -0.001), rotation = vector3_box(90, 0, 180), scale = vector3_box(0.78, 0.6, 1.188 ) },
+    },
+    -- Regular Helbore bayonets (barrel parent)
+    {   dependencies = {"owo_wood_krieg_01",
+            "autogun_bayonet_01|autogun_bayonet_02"
+        },
+        bayonet = {offset = true,   position = vector3_box(0, 0.504, -0.03),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+    -- 	these barrels are shorter
+    {   dependencies = {"owo_wood_krieg_02|owo_wood_krieg_03",
+            "autogun_bayonet_01|autogun_bayonet_02"
+        },
+        bayonet = {offset = true,   position = vector3_box(0, 0.428, -0.04),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+
     -- ####################################################################################
     -- HIDING HELPERS
     -- By putting it down here, they will only be hidden if the fixes from above are not found
@@ -594,7 +616,7 @@ mod.inject_fixes(this_variant, {
     },
     -- Barrels
     --      a2 barrel doesn't use barrelshroudac3, but that's covered in the function
-    {   dependencies = {"owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2"},
+    {   dependencies = {"owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2|owo_wood_krieg_ac1_01"},
         barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = {"owo_dreg_shroudac2_01|owo_m16_barrelshroudac2_01"},
