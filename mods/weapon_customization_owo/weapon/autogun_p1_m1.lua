@@ -28,14 +28,15 @@ mod.wc.attachment[this_variant].bayonetac1 = {}
 mod.wc.attachment[this_variant].bayonetac2 = {}
 mod.wc.attachment[this_variant].bayonetac3 = {}
 mod.wc.attachment[this_variant].bayonetac4 = {}
-mod.wc.attachment[this_variant].grip2 = {}
-mod.wc.attachment[this_variant].owomagazineac1 = {}
-mod.wc.attachment[this_variant].owomagazineac2 = {}
-mod.wc.attachment[this_variant].owomagazineac3 = {}
-mod.wc.attachment[this_variant].owomagazineac4 = {}
-mod.wc.attachment[this_variant].owomagazineac5 = {}
+
+mod.wc.attachment[this_variant].owo_magac1 = {}
+mod.wc.attachment[this_variant].owo_magac2 = {}
+mod.wc.attachment[this_variant].owo_magac3 = {}
+mod.wc.attachment[this_variant].owo_magac4 = {}
+mod.wc.attachment[this_variant].owo_magac5 = {}
 mod.wc.attachment[this_variant].sightac1 = {}
 --[[ Covered by MT Plugin 
+mod.wc.attachment[this_variant].gripac = {}
 mod.wc.attachment[this_variant].sightac2 = {}
 mod.wc.attachment[this_variant].sightac3 = {}
 mod.wc.attachment[this_variant].sightac4 = {}
@@ -133,7 +134,7 @@ mod.inject_fixes(this_variant, {
     {   dependencies = {"owo_fin_grip_01"},
         grip =  { offset = true,    position = vector3_box(0, 0, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
         -- fin
-        grip2 = { offset = true,    position = vector3_box(0, -0.0715, 0.0195), rotation = vector3_box(145, 0, 0),  scale = vector3_box(0.35, 0.35, 0.165) },
+        gripac = { offset = true,    position = vector3_box(0, -0.0715, 0.0195), rotation = vector3_box(145, 0, 0),  scale = vector3_box(0.35, 0.35, 0.165) },
     },
 
     -- ######
@@ -193,45 +194,79 @@ mod.inject_fixes(this_variant, {
     -- ######
 	-- Magazine: Jungle Mags
 	-- ######
+    -- Straight Mags
+    --  Second mag on the left
+    {   dependencies = { "owo_jungle_mag_01|owo_jungle_mag_02|owo_jungle_mag_03|owo_jungle_mag_01_up|owo_jungle_mag_02_up|owo_jungle_mag_03_up"},
+        magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
+        -- front
+        owo_magac2 =    { offset = true,    position = vector3_box(-0.03, 0.11, -0.15),     rotation = vector3_box(90, 0, 90),      scale = vector3_box(1, 1.74, 0.37) },
+        -- back
+        owo_magac3 =    { offset = true,    position = vector3_box(-0.03, 0., -0.15),       rotation = vector3_box(-90, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
+        -- left
+        owo_magac4 =    { offset = true,    position = vector3_box(-0.094, 0.056, -0.15),   rotation = vector3_box(90, 90, 90),     scale = vector3_box(1, 1.532, 0.37) },
+        -- right
+        owo_magac5 =    { offset = true,    position = vector3_box(0.03, 0.056, -0.15),     rotation = vector3_box(-90, -90, 90),   scale = vector3_box(1, 1.532, 0.37) },
+    },
+    --       v^
     {   dependencies = { "owo_jungle_mag_01|owo_jungle_mag_02|owo_jungle_mag_03"},
-        magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
-        owomagazineac1 =    { offset = true,    position = vector3_box(-0.065, 0.106, -0.27),   rotation = vector3_box(180, 0, 0),      scale = vector3_box(1, 1, 1) },
-        -- front
-        owomagazineac2 =    { offset = true,    position = vector3_box(-0.03, 0.11, -0.15),     rotation = vector3_box(90, 0, 90),      scale = vector3_box(1, 1.74, 0.37) },
-        -- back
-        owomagazineac3 =    { offset = true,    position = vector3_box(-0.03, 0., -0.15),       rotation = vector3_box(-90, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
-        -- left
-        owomagazineac4 =    { offset = true,    position = vector3_box(-0.094, 0.056, -0.15),   rotation = vector3_box(90, 90, 90),     scale = vector3_box(1, 1.532, 0.37) },
-        -- right
-        owomagazineac5 =    { offset = true,    position = vector3_box(0.03, 0.056, -0.15),     rotation = vector3_box(-90, -90, 90),   scale = vector3_box(1, 1.532, 0.37) },
+        owo_magac1 =    { offset = true,    position = vector3_box(-0.065, 0.106, -0.27),   rotation = vector3_box(180, 0, 0),      scale = vector3_box(1, 1, 1) },
     },
+    --      ^^
+    {   dependencies = { "owo_jungle_mag_01_up|owo_jungle_mag_02_up|owo_jungle_mag_03_up"},
+        owo_magac1 =    { offset = true,    position = vector3_box(-0.065, 0.0, -0.08),   rotation = vector3_box(0, 0, 0),      scale = vector3_box(1, 1, 1) },
+    },
+    --  Second mag on the right
+    {   dependencies = { "owo_jungle_mag_01_flip|owo_jungle_mag_02_flip|owo_jungle_mag_03_flip|owo_jungle_mag_01_up_flip|owo_jungle_mag_02_up_flip|owo_jungle_mag_03_up_flip"},
+        magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
+        owo_magac2 =    { offset = true,    position = vector3_box(0.034, 0.11, -0.15),     rotation = vector3_box(90, 0, 90),      scale = vector3_box(1, 1.74, 0.37) },
+        owo_magac3 =    { offset = true,    position = vector3_box(0.034, 0., -0.15),       rotation = vector3_box(-90, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
+        owo_magac4 =    { offset = true,    position = vector3_box(-0.028, 0.056, -0.15),   rotation = vector3_box(90, 90, 90),     scale = vector3_box(1, 1.532, 0.37) },
+        owo_magac5 =    { offset = true,    position = vector3_box(0.095, 0.056, -0.15),    rotation = vector3_box(-90, -90, 90),   scale = vector3_box(1, 1.532, 0.37) },
+    },
+    --      ^v
     {   dependencies = { "owo_jungle_mag_01_flip|owo_jungle_mag_02_flip|owo_jungle_mag_03_flip"},
-        magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
-        owomagazineac1 =    { offset = true,    position = vector3_box(0.065, 0.106, -0.27),    rotation = vector3_box(180, 0, 0),      scale = vector3_box(1, 1, 1) },
-        owomagazineac2 =    { offset = true,    position = vector3_box(0.034, 0.11, -0.15),     rotation = vector3_box(90, 0, 90),      scale = vector3_box(1, 1.74, 0.37) },
-        owomagazineac3 =    { offset = true,    position = vector3_box(0.034, 0., -0.15),       rotation = vector3_box(-90, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
-        owomagazineac4 =    { offset = true,    position = vector3_box(-0.028, 0.056, -0.15),   rotation = vector3_box(90, 90, 90),     scale = vector3_box(1, 1.532, 0.37) },
-        owomagazineac5 =    { offset = true,    position = vector3_box(0.095, 0.056, -0.15),    rotation = vector3_box(-90, -90, 90),   scale = vector3_box(1, 1.532, 0.37) },
+        owo_magac1 =    { offset = true,    position = vector3_box(0.065, 0.106, -0.27),    rotation = vector3_box(180, 0, 0),      scale = vector3_box(1, 1, 1) },
     },
-    {   dependencies = { "owo_jungle_mag_04"},
+    --      ^^
+    {   dependencies = { "owo_jungle_mag_01_up_flip|owo_jungle_mag_02_up_flip|owo_jungle_mag_03_up_flip"},
+        owo_magac1 =    { offset = true,    position = vector3_box(0.061, 0.0, -0.08),    rotation = vector3_box(0, 0, 0),      scale = vector3_box(1, 1, 1) },
+    },
+    -- Curved Mag
+    --  second mag on left
+    {   dependencies = { "owo_jungle_mag_04|owo_jungle_mag_04_up"},
         magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        owomagazineac1 =    { offset = true,    position = vector3_box(-0.065, 0.153, -0.309),  rotation = vector3_box(-170, 0, 0),     scale = vector3_box(1, 1, 1) },
         -- front
-        owomagazineac2 =    { offset = true,    position = vector3_box(-0.032, 0.117, -0.149),  rotation = vector3_box(108, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
+        owo_magac2 =    { offset = true,    position = vector3_box(-0.032, 0.117, -0.149),  rotation = vector3_box(108, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
         -- back
-        owomagazineac3 =    { offset = true,    position = vector3_box(-0.032, 0.016, -0.196),  rotation = vector3_box(-67, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
+        owo_magac3 =    { offset = true,    position = vector3_box(-0.032, 0.016, -0.196),  rotation = vector3_box(-67, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
         -- left
-        owomagazineac4 =    { offset = true,    position = vector3_box(-0.094, 0.0713, -0.171), rotation = vector3_box(120, 90, 90),    scale = vector3_box(1, 1.532, 0.37) },
+        owo_magac4 =    { offset = true,    position = vector3_box(-0.094, 0.0713, -0.171), rotation = vector3_box(120, 90, 90),    scale = vector3_box(1, 1.532, 0.37) },
         -- right
-        owomagazineac5 =    { offset = true,    position = vector3_box(0.03, 0.0647, -0.170),   rotation = vector3_box(45, -90, -165),  scale = vector3_box(1, 1.532, 0.37) },
+        owo_magac5 =    { offset = true,    position = vector3_box(0.03, 0.0647, -0.170),   rotation = vector3_box(45, -90, -165),  scale = vector3_box(1, 1.532, 0.37) },
     },
+    --      v^
+    {   dependencies = { "owo_jungle_mag_04"},
+        owo_magac1 =    { offset = true,    position = vector3_box(-0.065, 0.153, -0.309),  rotation = vector3_box(-170, 0, 0),     scale = vector3_box(1, 1, 1) },
+    },
+    --      ^^
+    {   dependencies = { "owo_jungle_mag_04_up"},
+        owo_magac1 =    { offset = true,    position = vector3_box(-0.065, -0.007, -0.011),  rotation = vector3_box(18, 0, 0),     scale = vector3_box(1, 1, 1) },
+    },
+    --  second mag on right
     {   dependencies = { "owo_jungle_mag_04_flip"},
         magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
-        owomagazineac1 =    { offset = true,    position = vector3_box(0.065, 0.153, -0.309),   rotation = vector3_box(-170, 0, 0),     scale = vector3_box(1, 1, 1) },
-        owomagazineac2 =    { offset = true,    position = vector3_box(0.034, 0.117, -0.149),   rotation = vector3_box(108, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
-        owomagazineac3 =    { offset = true,    position = vector3_box(0.034, 0.016, -0.196),   rotation = vector3_box(-67, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
-        owomagazineac4 =    { offset = true,    position = vector3_box(-0.028, 0.0713, -0.171), rotation = vector3_box(120, 90, 90),    scale = vector3_box(1, 1.532, 0.37) },
-        owomagazineac5 =    { offset = true,    position = vector3_box(0.095, 0.0647, -0.170),  rotation = vector3_box(45, -90, -165),  scale = vector3_box(1, 1.532, 0.37) },
+        owo_magac2 =    { offset = true,    position = vector3_box(0.034, 0.117, -0.149),   rotation = vector3_box(108, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
+        owo_magac3 =    { offset = true,    position = vector3_box(0.034, 0.016, -0.196),   rotation = vector3_box(-67, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
+        owo_magac4 =    { offset = true,    position = vector3_box(-0.028, 0.0713, -0.171), rotation = vector3_box(120, 90, 90),    scale = vector3_box(1, 1.532, 0.37) },
+        owo_magac5 =    { offset = true,    position = vector3_box(0.095, 0.0647, -0.170),  rotation = vector3_box(45, -90, -165),  scale = vector3_box(1, 1.532, 0.37) },
+    },
+    --      ^v
+    {   dependencies = { "owo_jungle_mag_04_flip"},
+        owo_magac1 =    { offset = true,    position = vector3_box(0.065, 0.153, -0.309),   rotation = vector3_box(-170, 0, 0),     scale = vector3_box(1, 1, 1) },
+    },
+    --      ^^
+    {   dependencies = { "owo_jungle_mag_04_up_flip"},
+        owo_magac1 =    { offset = true,    position = vector3_box(0.065, -0.007, -0.011),  rotation = vector3_box(18, 0, 0),     scale = vector3_box(1, 1, 1) },
     },
 
     -- ######
@@ -642,24 +677,24 @@ mod.inject_fixes(this_variant, {
         barrelshroudac6 = {hide_mesh = {{"barrelshroudac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
     -- Magazines
-    {   dependencies = { "owo_jungle_mag_helper_01"},
-        owomagazineac1 = { hide_mesh = {{"owomagazineac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    {   dependencies = { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04"},
+        owo_magac1 = { hide_mesh = {{"owo_magac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_jungle_mag_connector_f_01"},
-        owomagazineac2 = { hide_mesh = {{"owomagazineac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        owo_magac2 = { hide_mesh = {{"owo_magac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_jungle_mag_connector_b_01"},
-        owomagazineac3 = { hide_mesh = {{"owomagazineac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        owo_magac3 = { hide_mesh = {{"owo_magac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_jungle_mag_connector_l_01"},
-        owomagazineac4 = { hide_mesh = {{"owomagazineac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        owo_magac4 = { hide_mesh = {{"owo_magac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_jungle_mag_connector_r_01"},
-        owomagazineac5 = { hide_mesh = {{"owomagazineac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        owo_magac5 = { hide_mesh = {{"owo_magac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     -- Grips
     {   dependencies = {"owo_fin_grip2_01"},
-        grip2 = { hide_mesh = {{"grip2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        gripac = { hide_mesh = {{"gripac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Sights
     {   dependencies = {"owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
