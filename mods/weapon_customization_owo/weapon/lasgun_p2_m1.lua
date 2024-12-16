@@ -386,7 +386,7 @@ mod.inject_fixes(this_variant, {
     },
     --  Aligning sights to crosshair
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02|owo_holosight_01_03"},
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, -0.001, -0.0373), rotation = vector3_box(0, 0, 0)},
     },
     --      Point shooting
     {   dependencies = { "owo_holosight_01_01_ps|owo_holosight_01_02_ps|owo_holosight_01_03_ps" },
@@ -469,7 +469,7 @@ mod.inject_fixes(this_variant, {
 		sightac5 = {offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
 		sightac6 = {offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
 	},
-	-- Riser alightment
+	-- Riser alignment
 	{	dependencies = {"owo_pu_scope_01",},
 		sight_secondary = {offset = true, position = vector3_box(0, 0.104, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
 	},
