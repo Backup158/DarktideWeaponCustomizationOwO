@@ -287,41 +287,82 @@ mod.inject_fixes(this_variant, {
     {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
         sight_secondary =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
-    --		Hiding housing for helper sights
+    -- SUSAT
+    {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps" },
+        -- cylinder thing
+        sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {sightac1 = 1} },
+        -- Rear
+        sightac2 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
+        sightac3 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
+        -- Base
+        sightac4 =       { offset = true, position  = vector3_box(0, 0.07, -0.036), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
+        -- Reticle
+        sightac5 =       { offset = true, position  = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
+        sightac6 =       { offset = true, position  = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
+    },
+    --  Not base recon body
+    {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps",
+			"!receiver_01", "!receiver_02", "!receiver_03", "!receiver_04", "!receiver_05", "!receiver_06", "!receiver_07",
+		},
+        sight =             { offset = true, position  = vector3_box(0, 0.006, 0.163), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    --  Base recon body
+	{   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps",
+			"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
+		},
+        sight =             { offset = true, position  = vector3_box(0, 0.016, 0.221), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    -- SUSAT with red dot
+    {   dependencies = { "owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps" },
+            sight_secondary =     { offset = true, position  = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
+    },
+    --	Hiding housing for helper sights
 	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01"},
 		sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} }, -- 6 hides housing for sight 1, 5 hides sights 2 and 3
     },
-	--		Hiding reticle and housing for helper sights for sights that don't use the sights
+	--	    Hiding reticle and housing for helper sights for sights that don't use the sights
 	{   dependencies = { "owo_acog_sight_01_ps|owo_acog_sight_02_02|owo_acog_sight_02_ps"},
 		sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,5,6}} },
     },
     --  Aligning sights to crosshair
-    --      Aiming with ACOG
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01",
+    --      Aiming with Main Sight
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01|owo_susat_01|owo_susat_02_01",
 			"!receiver_01", "!receiver_02", "!receiver_03", "!receiver_04", "!receiver_05", "!receiver_06", "!receiver_07",
 			-- "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03|volley_lasgun_receiver_03b",
 		},
         scope_offset =      { position = vector3_box(0, 0.04, 0.024), rotation = vector3_box(0, 0, 0)},
     },
-	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01",
+	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01|owo_susat_01|owo_susat_02_01",
 			"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
         scope_offset =      { position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0)},
     },
     --      Aiming with RMR
+    --          not recon receiver
     {   dependencies = { "owo_acog_sight_02_02",
 			"!receiver_01", "!receiver_02", "!receiver_03", "!receiver_04", "!receiver_05", "!receiver_06", "!receiver_07",
 			-- "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03|volley_lasgun_receiver_03b",
 		},
         scope_offset =      { position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0)},
     },
+    {   dependencies = { "owo_susat_02_02",
+			"!receiver_01", "!receiver_02", "!receiver_03", "!receiver_04", "!receiver_05", "!receiver_06", "!receiver_07",
+		},
+        scope_offset =      { position = vector3_box(0, 0.3, -0.0385), rotation = vector3_box(0, 0, 0)},
+    },
+    --          recon receiver
 	{   dependencies = { "owo_acog_sight_02_02",
 			"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
         scope_offset =      { position = vector3_box(0.0002, 0.001, -0.064), rotation = vector3_box(0, 0, 0)},
     },
+    {   dependencies = { "owo_susat_02_02",
+			"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
+		},
+        scope_offset =      { position = vector3_box(0.0002, 0.3, -0.09), rotation = vector3_box(0, 0, 0)},
+    },
     --      Point shooting
-    {   dependencies = { "owo_acog_sight_01_ps|owo_acog_sight_02_ps" },
+    {   dependencies = { "owo_acog_sight_01_ps|owo_acog_sight_02_ps|owo_susat_01_ps|owo_susat_02_ps" },
         scope_offset =      { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0)},
     },
 

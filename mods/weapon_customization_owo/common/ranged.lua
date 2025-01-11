@@ -2211,7 +2211,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 		owo_susat_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = {
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -2221,7 +2221,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 		owo_susat_01_ps = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = {
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -2230,7 +2230,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 		owo_susat_02_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = {
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -2240,7 +2240,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 		owo_susat_02_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = {
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -2250,7 +2250,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 		owo_susat_02_ps = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = {
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
