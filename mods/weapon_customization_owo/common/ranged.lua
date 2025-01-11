@@ -2083,12 +2083,12 @@ function mod.owo_telescopic_sight(variant_id, type)
 		{id = "owo_acog_sight_01", name = "OwO ACOG"},
 		{id = "owo_acog_sight_01_ps", name = "OwO ACOG (Point Shooting)"},
 		{id = "owo_acog_sight_02_01", name = "OwO ACOG + RMR"},
-		{id = "owo_acog_sight_02_02", name = "OwO ACOG + RMR (Top)"},
+		{id = "owo_acog_sight_02_02", name = "OwO ACOG + RMR (Top Aim)"},
 		{id = "owo_acog_sight_02_ps", name = "OwO ACOG + RMR (PS)"},
 		{id = "owo_susat_01", name = "OwO SUSAT"},
 		{id = "owo_susat_01_ps", name = "OwO SUSAT (PS)"},
 		{id = "owo_susat_02_01", name = "OwO SUSAT + Red Dot"},
-		{id = "owo_susat_02_02", name = "OwO SUSAT + Red Dot (Top)"},
+		{id = "owo_susat_02_02", name = "OwO SUSAT + Red Dot (Top Aim)"},
 		{id = "owo_susat_02_ps", name = "OwO SUSAT + Red Dot (PS)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1" or type, {

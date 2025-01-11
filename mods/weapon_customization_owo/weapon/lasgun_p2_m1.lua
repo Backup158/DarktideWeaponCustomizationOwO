@@ -415,6 +415,14 @@ mod.inject_fixes(this_variant, {
     {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02|owo_acog_sight_02_ps" },
         sight_secondary =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
+	--		Hiding housing for helper sights
+	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01"},
+		sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} }, -- 6 hides housing for sight 1, 5 hides sights 2 and 3
+    },
+	--		Hiding reticle and housing for helper sights for sights that don't use the sights
+	{   dependencies = { "owo_acog_sight_01_ps|owo_acog_sight_02_02|owo_acog_sight_02_ps"},
+		sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,5,6}} },
+    },
     -- SUSAT
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps" },
         sight =             { offset = true, position  = vector3_box(0, 0.01, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -538,7 +546,7 @@ mod.inject_fixes(this_variant, {
     {   dependencies = { "owo_acog_sight_helper_07"},
         sightac7 = { hide_mesh = {{"sightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_holosight_sight_secondary_01|owo_pu_scope_riser_01"},
+    {   dependencies = { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01"},
         sight_secondary = { hide_mesh = {{"sight_secondary", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_holosight_sight_secondary_helper_01"},
