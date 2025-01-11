@@ -17,15 +17,6 @@ function mod.load_mod_file(relative_path)
 	mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/"..relative_path)
 end
 
--- need to get out of weapon_customization_owo/scripts/mods/weapon_customization_owo (YOU ARE HERE)
--- 4 jumps to get back to main darktide mods folder
---[[package.path = package.path .. ';../../../../weapon_customization_mt_stuff/?.lua'
---local mtMain = require 'wc_mts'
-if mtMain then
-	mod:error('mt main plugin found uwu nya :3')
-end
-]]
-
 --[[ Importing function from MT
 Shit that don't work
 

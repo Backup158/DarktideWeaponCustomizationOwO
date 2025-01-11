@@ -189,11 +189,6 @@ mod.wc.bayonetac4_list = {
 	"owo_m203_helper_04",
 }
 -- GRIP
---[[mod.wc.add_custom_attachments.grip2 = "grip2_list"
-mod.wc.grip2_list = {
-	"owo_fin_grip2_empty",
-	"owo_fin_grip2_01",
-}]]
 mod.mt.table_append(mod.wc.gripacs, {
 	"owo_fin_grip2_empty",
 	"owo_fin_grip2_01",
@@ -343,24 +338,13 @@ mod.mt.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sig
 	"owo_reticle_helper_03",
 })
 ]]
---[[
--- when placed before MT plugin, this will not allow mt plugin to add to sight_2
--- same with the regular table append wtf?
-mod.wc.add_custom_attachments.sight_2 = "sight_2s"
-mod.wc.sight_2s = {
-	"owo_reticle_helper_empty",
-	"owo_reticle_helper_01",
-	"owo_reticle_helper_02",
-	"owo_reticle_helper_03",
-}
-]]
 --[[ scope zoom fucked up. figure out later
 mod.mt.table_append(mod.wc.scopes, {
 	"lasgun_rifle_elysian_muzzle_01",
 })
 mod.wc.sniper_zoom_levels.lasgun_rifle_elysian_muzzle_01 = 15
 ]]
-mod.wc.add_custom_attachments.sight_secondary = "sight_secondary_list" -- I'm not changing the format just to be grammatically correct
+mod.wc.add_custom_attachments.sight_secondary = "sight_secondary_list"
 mod.wc.sight_secondary_list = {
 	"owo_holosight_empty2",
 	"owo_holosight_sight_secondary_01",
