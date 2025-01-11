@@ -1982,7 +1982,8 @@ function mod.owo_holosight(variant_id, type)
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02"
+				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{"sight", 1}
