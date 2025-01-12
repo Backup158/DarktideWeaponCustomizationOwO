@@ -188,6 +188,21 @@ mod.wc.bayonetac4_list = {
 	"owo_underbarrel_gl_empty_04",
 	"owo_m203_helper_04",
 }
+mod.wc.add_custom_attachments.bayonetac5 = "bayonetac5_list"
+mod.wc.bayonetac5_list = {
+	"owo_underbarrel_shotgun_empty_05",
+	"owo_underbarrel_shotgun_helper_05",
+}
+mod.wc.add_custom_attachments.bayonetac6 = "bayonetac6_list"
+mod.wc.bayonetac6_list = {
+	"owo_underbarrel_shotgun_empty_06",
+	"owo_underbarrel_shotgun_helper_06",
+}
+mod.wc.add_custom_attachments.bayonetac7 = "bayonetac7_list"
+mod.wc.bayonetac7_list = {
+	"owo_underbarrel_shotgun_empty_07",
+	"owo_underbarrel_shotgun_helper_07",
+}
 -- GRIP
 mod.mt.table_append(mod.wc.gripacs, {
 	"owo_fin_grip2_empty",
@@ -1269,6 +1284,121 @@ function mod.owo_underbarrel_gl(variant_id, type)
 			mesh_move = false, parent = "bayonet"
 		},
 		
+	})
+end
+
+-- Bayonet: Underbarrel Shotgun
+function mod.owo_underbarrel_shotgun(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
+		{id = "owo_underbarrel_shotgun_01", name = "OwO Masterkey"},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
+		{id = "owo_underbarrel_shotgun_empty_01", name = "Empty Bayonetac1", no_randomize = true},
+		{id = "owo_underbarrel_shotgun_helper_01", name = "OwO Masterkey ac1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac2" or type, {
+		{id = "owo_underbarrel_shotgun_empty_02", name = "Empty Bayonetac2", no_randomize = true},
+		{id = "owo_underbarrel_shotgun_helper_02", name = "OwO Masterkey ac2", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac3" or type, {
+		{id = "owo_underbarrel_shotgun_empty_03", name = "Empty Bayonetac3", no_randomize = true},
+		{id = "owo_underbarrel_shotgun_helper_03", name = "OwO Masterkey ac3", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac4" or type, {
+		{id = "owo_underbarrel_shotgun_empty_04", name = "Empty Bayonetac4", no_randomize = true},
+		{id = "owo_underbarrel_shotgun_helper_04", name = "OwO Masterkey ac4", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac5" or type, {
+		{id = "owo_underbarrel_shotgun_empty_05", name = "Empty Bayonetac5", no_randomize = true},
+		{id = "owo_underbarrel_shotgun_helper_05", name = "OwO Masterkey ac5", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac6" or type, {
+		{id = "owo_underbarrel_shotgun_empty_06", name = "Empty Bayonetac6", no_randomize = true},
+		{id = "owo_underbarrel_shotgun_helper_06", name = "OwO Masterkey ac6", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac7" or type, {
+		{id = "owo_underbarrel_shotgun_empty_07", name = "Empty Bayonetac6", no_randomize = true},
+		{id = "owo_underbarrel_shotgun_helper_07", name = "OwO Masterkey ac6", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		-- 	Shotgun body + barrel guide
+		owo_underbarrel_shotgun_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "bayonet", 
+			mesh_move = false, parent = "barrel",
+			automatic_equip = { bayonetac1 = "owo_underbarrel_shotgun_helper_01", bayonetac2 = "owo_underbarrel_shotgun_helper_02", 
+				bayonetac3 = "owo_underbarrel_shotgun_helper_03", bayonetac4 = "owo_underbarrel_shotgun_helper_04", 
+				bayonetac5 = "owo_underbarrel_shotgun_helper_05", bayonetac6 = "owo_underbarrel_shotgun_helper_06", 
+				bayonetac7 = "owo_underbarrel_shotgun_helper_07", 
+			}
+		},
+		-- ### Helper Parts ###
+		--	Shotgun Tube
+		owo_underbarrel_shotgun_helper_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_02", type = "bayonetac1", 
+			mesh_move = false, parent = "bayonet"
+		},
+		--	Shotgun Tube 2
+		owo_underbarrel_shotgun_helper_02 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "bayonetac2", 
+			mesh_move = false, parent = "bayonet"
+		},
+		--	Shotgun tube extension
+		owo_underbarrel_shotgun_helper_03 = {
+			--model = _item_melee.."/pommels/axe_pommel_03", type = "bayonetac3", 
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_04", type = "bayonetac3",
+			mesh_move = false, parent = "bayonet"
+		},
+		--	Trigger
+		owo_underbarrel_shotgun_helper_04 = {
+			model = _item_ranged.."/recievers/shotgun_double_barrel_receiver_01", type = "bayonetac4", 
+			mesh_move = false, parent = "bayonet"
+		},
+		-- 	Shotgun trap
+		owo_underbarrel_shotgun_helper_05 = {
+			model = _item_melee.."/heads/axe_head_02", type = "bayonetac5", 
+			mesh_move = false, parent = "bayonet"
+		},
+		-- 	Connector
+		owo_underbarrel_shotgun_helper_06 = {
+			model = _item_ranged.."/underbarrels/boltgun_rifle_underbarrel_01", type = "bayonetac6", 
+			mesh_move = false, parent = "bayonet"
+		},
+		--	Shotgun pump
+		owo_underbarrel_shotgun_helper_07 = {
+			model = _item_ranged.."/underbarrels/shotgun_pump_action_underbarrel_01", type = "bayonetac7", 
+			mesh_move = false, parent = "bayonet"
+		},
+		-- ### Empty ###
+		owo_underbarrel_shotgun_empty_01 = {
+			model = "", type = "bayonetac1", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_underbarrel_shotgun_empty_02 = {
+			model = "", type = "bayonetac2", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_underbarrel_shotgun_empty_03 = {
+			model = "", type = "bayonetac3", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_underbarrel_shotgun_empty_04 = {
+			model = "", type = "bayonetac4", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_underbarrel_shotgun_empty_05 = {
+			model = "", type = "bayonetac5", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_underbarrel_shotgun_empty_06 = {
+			model = "", type = "bayonetac6", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_underbarrel_shotgun_empty_07 = {
+			model = "", type = "bayonetac7", 
+			mesh_move = false, parent = "bayonet"
+		},
 	})
 end
 
