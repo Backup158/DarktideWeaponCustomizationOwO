@@ -174,6 +174,7 @@ mod.inject_fixes(this_variant, {
     },
     --  SUSAT
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps" },
+        sight =             { offset = true, position  = vector3_box(0, 0.006, 0.163), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- cylinder thing
         sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {sightac1 = 1} },
         -- Rear
@@ -184,10 +185,6 @@ mod.inject_fixes(this_variant, {
         -- Reticle
         sightac5 =       { offset = true, position  = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
         sightac6 =       { offset = true, position  = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
-    },
-    {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps",
-		},
-        sight =             { offset = true, position  = vector3_box(0, 0.006, 0.163), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --  SUSAT with red dot
     {   dependencies = { "owo_susat_02_01|owo_susat_02_02|owo_susat_02_ps" },
@@ -208,7 +205,6 @@ mod.inject_fixes(this_variant, {
 		},
         scope_offset =      { position = vector3_box(0.0002, 0.3, -0.063), rotation = vector3_box(0, 0, 0)},
     },
-
     --      Point shooting
     {   dependencies = { "owo_acog_sight_01_ps|owo_acog_sight_02_ps|owo_susat_02_ps" },
         scope_offset =      { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0)},
