@@ -2149,7 +2149,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac7 = "owo_acog_sight_helper_07",
 			},
 			hide_mesh = {
-				{"sight", 6,7}, -- hides just the housing
+				{"sight", 6,7}, -- Hides the housing
 			},
 		},
 		owo_acog_sight_01_ps = {
@@ -2162,7 +2162,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac7 = "owo_acog_sight_helper_07",
 			},
 			hide_mesh = {
-				{"sight", 6,7}, -- hides just the housing
+				{"sight", 1}, -- Hides the reticle
 			},
 		},
 		owo_acog_sight_02_01 = {
@@ -2176,7 +2176,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
 			},
 			hide_mesh = {
-				{"sight", 6,7}, -- hides just the housing
+				{"sight", 6,7}, -- Hides the housing
 			},
 		},
 		owo_acog_sight_02_02 = {
@@ -2190,7 +2190,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
 			},
 			hide_mesh = {
-				{"sight", 6,7}, -- hides just the housing
+				{"sight", 1}, -- hides just the reticle
 			},
 		},
 		owo_acog_sight_02_ps = {
@@ -2204,7 +2204,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
 			},
 			hide_mesh = {
-				{"sight", 6,7}, -- hides just the housing
+				{"sight", 1}, -- hides just the reticle
 			},
 		},
 		-- SUSAT
