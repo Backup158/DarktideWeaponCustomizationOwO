@@ -151,7 +151,7 @@ mod.inject_fixes(this_variant, {
         -- Pump
         bayonetac7 =    {offset = true, position = vector3_box(0, 0.46, -0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.95, 0.7, 0.85 ) },
     },
-    -- m26-MASS
+    -- M26-MASS
     {	dependencies = {"owo_underbarrel_shotgun_02"},
         -- Receiver
         bayonet =       {offset = true, position = vector3_box(0, -0.002, -0.148), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },

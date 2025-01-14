@@ -15,6 +15,13 @@ local this_variant = "lasgun_p3_m1" -- Recon Lasgun
 -- ############################################
 mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to Recons yet
 mod.wc.attachment[this_variant].barrelac = {}
+mod.wc.attachment[this_variant].bayonetac1 = {}
+mod.wc.attachment[this_variant].bayonetac2 = {}
+mod.wc.attachment[this_variant].bayonetac3 = {}
+mod.wc.attachment[this_variant].bayonetac4 = {}
+mod.wc.attachment[this_variant].bayonetac5 = {}
+mod.wc.attachment[this_variant].bayonetac6 = {}
+mod.wc.attachment[this_variant].bayonetac7 = {}
 mod.wc.attachment[this_variant].sightac1 = {}
 --[[ Covered by MT Plugin 
 mod.wc.attachment[this_variant].sightac2 = {}
@@ -36,6 +43,7 @@ mod.owo_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant)
 mod.owo_scab_gunner_muzzle(this_variant)
 mod.owo_scab_gunner_barrel(this_variant)
+mod.owo_underbarrel_shotgun(this_variant, "bayonet")
 mod.owo_condom(this_variant)
 mod.owo_holosight(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
@@ -130,6 +138,69 @@ mod.inject_fixes(this_variant, {
 		barrel = { offset = false,  parent = "receiver",  position = vector3_box(0, 0.16, 0.079),  rotation = vector3_box(0, 0, 0),  scale = vector3_box(1.05, 1.5, 1.)},
 		barrelac = { offset = true,  position = vector3_box(0, 0.11, -0.018),  rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1, 0.885, 1.5)},
 	},
+
+    -- ######
+	-- Bayonet: UNDERBARREL SHOTGUN
+	-- ######
+    -- Masterkey
+    --  Recon Receivers
+    {	dependencies = {"owo_underbarrel_shotgun_01",
+            "receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
+        },
+        -- Shotgun body
+        bayonet =       {offset = true, position = vector3_box(0, -0.0628, -0.184), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        -- Connector, shorter because of hand rest position
+        bayonetac6 =    {offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 0.82, 1.0 ) },
+    },
+    --  Not recon, Syn's Kantrael bodies (uses the same positioning as lasgun_p1_m1 because they're iLas bodies)
+    {	dependencies = {"owo_underbarrel_shotgun_01",
+        },
+        -- Shotgun body
+        bayonet =       {offset = true, position = vector3_box(0, -0.0708, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        -- Connector
+        bayonetac6 =    {offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.6, 1.0 ) },
+    },
+	{	dependencies = {"owo_underbarrel_shotgun_01"},
+        -- Shotgun tube
+        bayonetac1 =    {offset = true, position = vector3_box(0, 0.613, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.2, 1, 1.2 ) },
+        -- Shotgun barrel 2
+        bayonetac2 =    {offset = true, position = vector3_box(0, 0.01, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.675, 0.935 ) },
+        -- Shotgun tube middle extension
+        bayonetac3 =    {offset = true, position = vector3_box(0, 0.42, -0.05), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1.0, 1.0 ) },
+        -- Trigger
+        bayonetac4 =    {offset = true, position = vector3_box(0, 0.036, -0.088), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.85, 0.85 ) },
+        -- Shotgun Trap
+        bayonetac5 =    {offset = true, position = vector3_box(0, 0.06, -0.0818), rotation = vector3_box(-90, 0, -84), scale = vector3_box(0.135, 0.25, 0.365 ) },
+        -- Pump
+        bayonetac7 =    {offset = true, position = vector3_box(0, 0.46, -0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.95, 0.7, 0.85 ) },
+    },
+    -- M26-MASS
+    --  Recon Receivers
+    {	dependencies = {"owo_underbarrel_shotgun_02",
+            "receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
+        },
+        -- Receiver
+        bayonet =       {offset = true, position = vector3_box(0, -0.01, -0.21), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
+    },
+    --  Not recon body
+    {	dependencies = {"owo_underbarrel_shotgun_02"},
+        -- Receiver
+        bayonet =       {offset = true, position = vector3_box(0, -0.002, -0.148), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
+    },
+    {	dependencies = {"owo_underbarrel_shotgun_02"},
+        -- Mag
+        bayonetac1 =    {offset = true, position = vector3_box(0, -0.015, -0.079), rotation = vector3_box(15, 0, 0), scale = vector3_box(1, 1.2, 1 ) },
+        -- Barrel
+        bayonetac2 =    {offset = true, position = vector3_box(0, -0.02, 0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.675, 0.935 ) },
+        -- Muzzle
+        bayonetac3 =    {offset = true, position = vector3_box(0, 0.36, 0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1.0 ) },
+        -- Trigger
+        bayonetac4 =    {offset = true, position = vector3_box(0, -0.044, -0.026), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.85, 1.085 ) },
+        -- Front Connector is too far up on these short ass guns
+        bayonetac5 =    {offset = true, position = vector3_box(0, 0.246, 0.082), rotation = vector3_box(-180, -90, 90), scale = vector3_box(0.75, 0.95, 0.335 ), hide_mesh = {{"bayonetac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        -- Connector
+        bayonetac6 =    {offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1, 1.0 ) },
+    },
 
 	-- ######
     -- Sight: EOTech
@@ -387,6 +458,28 @@ mod.inject_fixes(this_variant, {
 	{	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_condom_helper_01"},
 		muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
 	},
+    -- Bayonet
+    {	dependencies = {"owo_dreg_bayonet_rear_01|owo_bayonet_m7_helper_01|owo_bayonet_seitengewehr_helper_01|owo_bayonet_epee_helper_01|owo_m203_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
+        bayonetac1 = {hide_mesh = {     {"bayonetac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies = {"owo_bayonet_m7_helper_02|owo_bayonet_seitengewehr_helper_02|owo_bayonet_epee_helper_02|owo_m203_helper_02|owo_underbarrel_shotgun_helper_02|owo_underbarrel_shotgun_helper_02_02"},
+        bayonetac2 = {hide_mesh = {     {"bayonetac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies = {"owo_m203_helper_03|owo_underbarrel_shotgun_helper_03|owo_underbarrel_shotgun_helper_03_02"},
+        bayonetac3 = {hide_mesh = {     {"bayonetac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies = {"owo_m203_helper_04|owo_underbarrel_shotgun_helper_04|owo_underbarrel_shotgun_helper_04_02"},
+        bayonetac4 = {hide_mesh = {     {"bayonetac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies = {"owo_underbarrel_shotgun_helper_05|owo_underbarrel_shotgun_helper_05_02"},
+        bayonetac5 = {hide_mesh = {     {"bayonetac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies = {"owo_underbarrel_shotgun_helper_06|owo_underbarrel_shotgun_helper_06_02"},
+        bayonetac6 = {hide_mesh = {     {"bayonetac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies = {"owo_underbarrel_shotgun_helper_07"},
+        bayonetac7 = {hide_mesh = {     {"bayonetac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
 	-- Sights
 	{   dependencies = {"owo_holosight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
         sightac1 = { hide_mesh = {{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
