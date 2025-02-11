@@ -42,7 +42,7 @@ mod.inject_fixes(this_variant, {
         pommelac1 = {offset = true, position = vector3_box(0, 0.015, -0.059), rotation = vector3_box(63, 0, 0), scale = vector3_box(1, 0.69, 0.275 ) },
         pommelac2 = {offset = true, position = vector3_box(0, -0.01, -0.244), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.46, 0.38, 0.55 ) },
     },
-    -- the classic D-handle
+    -- the classic D-ring handle
     {	dependencies = {"owo_shovel_handles_03"},
         pommel = {offset = true, position = vector3_box(-0.012, -0.036, -0.208), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.64, 0.7 ) },
         pommelac1 = {offset = true, position = vector3_box(0.008, 0.047, -0.208), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.6, 0.64, 0.7 ) },
@@ -56,7 +56,7 @@ mod.inject_fixes(this_variant, {
         pommel = {offset = true, position = vector3_box(-0.0, 0.036, -0.208), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.6, 0.64, 0.7 ) },
         pommelac2 = {offset = true, position = vector3_box(0.0, 0.002, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.5, 0.67 ) },
     },
-    -- D-handle chainsword
+    -- D-ring handle chainsword
     {	dependencies = {"owo_shovel_handles_07|owo_shovel_handles_08"},
         -- pommel = {offset = true, position = vector3_box(-0.0, 0.004, -0.194), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.0, 0.8 ) }, -- alt sizing. i think the gap and grip are too big
         pommel = {offset = true, position = vector3_box(-0.0, 0.004, -0.18), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 0.762, 0.8 ) },

@@ -81,19 +81,19 @@ function mod.owo_tacax_spike(variant_id, type)
 end
 
 -- Head: Shovel Handles
---  D-Handle mostly
+--  D-Ring Handle mostly
 --  ~~~~~~~~ Serrated Shovel ~~~~~~~~ this is literally already in the game dumb bitch
 --  ~~~~~~~~ Sheathed Shovel ~~~~~~~~ the straps are too big and the actual bag is too small. straps are part of the bag mesh
 function mod.owo_shovel_handles(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "pommel" or type, {
-		{id = "owo_shovel_handles_01", name = "OwO E-Tool D-Handle (Malnourished)"},
-        {id = "owo_shovel_handles_02", name = "OwO E-Tool D-Handle 1"},
-        {id = "owo_shovel_handles_03", name = "OwO E-Tool D-Handle 2"},
-        {id = "owo_shovel_handles_04", name = "OwO E-Tool D-Handle 2 (1)"},
-        {id = "owo_shovel_handles_05", name = "OwO E-Tool D-Handle 2 (1f)"},
-        --{id = "owo_shovel_handles_06", name = "OwO E-Tool D-Handle 3"}, -- the wrapped grip one
-        {id = "owo_shovel_handles_07", name = "OwO E-Tool D-Handle 3"},
-        {id = "owo_shovel_handles_08", name = "OwO E-Tool D-Handle 4"},
+		{id = "owo_shovel_handles_01", name = "OwO E-Tool D-Ring Handle (Malnourished)"},
+        {id = "owo_shovel_handles_02", name = "OwO E-Tool D-Ring Handle 1"},
+        {id = "owo_shovel_handles_03", name = "OwO E-Tool D-Ring Handle 2"},
+        {id = "owo_shovel_handles_04", name = "OwO E-Tool D-Ring Handle 2 (1)"},
+        {id = "owo_shovel_handles_05", name = "OwO E-Tool D-Ring Handle 2 (1f)"},
+        --{id = "owo_shovel_handles_06", name = "OwO E-Tool D-Ring Handle 3"}, -- the wrapped grip one
+        {id = "owo_shovel_handles_07", name = "OwO E-Tool D-Ring Handle 3"},
+        {id = "owo_shovel_handles_08", name = "OwO E-Tool D-Ring Handle 4"},
 	})
     mod.inject_attachments_owo(variant_id, "pommelac1" or type, {
 		{id = "owo_shovel_handles_ac1_empty", name = "OwO Empty Pommelac1"},
@@ -111,12 +111,12 @@ function mod.owo_shovel_handles(variant_id, type)
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
-        --  Fucked up single /\ D-handle
+        --  Fucked up single /\ D-Ring Handle
         owo_shovel_handles_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "pommel", 
 			mesh_move = false, parent = "grip",
 		},
-        --  Proper /\ D-handle
+        --  Proper /\ D-Ring Handle
         owo_shovel_handles_02 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "pommel", 
 			mesh_move = false, parent = "pommel",
@@ -124,7 +124,7 @@ function mod.owo_shovel_handles(variant_id, type)
                 pommelac2 = "owo_shovel_handles_ac2_01", 
 			},
 		},
-        --  simple D-handle
+        --  simple D-Ring Handle
         owo_shovel_handles_03 = {
 			model = _item_melee.."/grips/power_sword_grip_04", type = "pommel", 
 			mesh_move = false, parent = "grip",
@@ -146,7 +146,7 @@ function mod.owo_shovel_handles(variant_id, type)
                 pommelac2 = "owo_shovel_handles_ac2_02", 
 			},
 		},
-        --  single D-handle, chainsword
+        --  single D-Ring Handle, chainsword
         --owo_shovel_handles_06 = {
 		--	model = _item_melee.."/grips/chain_sword_grip_01", type = "pommel", 
 		--	mesh_move = false, parent = "grip",
