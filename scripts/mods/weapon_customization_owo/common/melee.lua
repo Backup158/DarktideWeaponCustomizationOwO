@@ -29,7 +29,7 @@ mod.wc.pommelac1_list = {
 	"owo_shovel_handles_ac1_empty",
     "owo_shovel_handles_ac1_01",
     "owo_shovel_handles_ac1_02",
-    "owo_shovel_handles_ac1_03",
+    --"owo_shovel_handles_ac1_03",
     "owo_shovel_handles_ac1_04",
     "owo_shovel_handles_ac1_05",
 }
@@ -38,6 +38,9 @@ mod.wc.pommelac2_list = {
 	"owo_shovel_handles_ac2_empty",
     "owo_shovel_handles_ac2_01",
     "owo_shovel_handles_ac2_02",
+    --"owo_shovel_handles_ac1_03",
+    "owo_shovel_handles_ac1_04",
+    "owo_shovel_handles_ac1_05",
 }
 
 -- ############################################
@@ -88,15 +91,15 @@ function mod.owo_shovel_handles(variant_id, type)
         {id = "owo_shovel_handles_03", name = "OwO E-Tool D-Handle 2"},
         {id = "owo_shovel_handles_04", name = "OwO E-Tool D-Handle 2 (1)"},
         {id = "owo_shovel_handles_05", name = "OwO E-Tool D-Handle 2 (1f)"},
-        {id = "owo_shovel_handles_06", name = "OwO E-Tool D-Handle 3"},
-        {id = "owo_shovel_handles_07", name = "OwO E-Tool D-Handle 4"},
-        {id = "owo_shovel_handles_08", name = "OwO E-Tool D-Handle 5"},
+        --{id = "owo_shovel_handles_06", name = "OwO E-Tool D-Handle 3"}, -- the wrapped grip one
+        {id = "owo_shovel_handles_07", name = "OwO E-Tool D-Handle 3"},
+        {id = "owo_shovel_handles_08", name = "OwO E-Tool D-Handle 4"},
 	})
     mod.inject_attachments_owo(variant_id, "pommelac1" or type, {
 		{id = "owo_shovel_handles_ac1_empty", name = "OwO Empty Pommelac1"},
         {id = "owo_shovel_handles_ac1_01", name = "OwO E-Tool'vesa'ac1 1"},
         {id = "owo_shovel_handles_ac1_02", name = "OwO E-Tool'vesa'ac1 2"},
-        {id = "owo_shovel_handles_ac1_03", name = "OwO E-Tool'vesa'ac1 3"},
+        --{id = "owo_shovel_handles_ac1_03", name = "OwO E-Tool'vesa'ac1 3"},
         {id = "owo_shovel_handles_ac1_04", name = "OwO E-Tool'vesa'ac1 4"},
         {id = "owo_shovel_handles_ac1_05", name = "OwO E-Tool'vesa'ac1 5"},
 	})
@@ -144,13 +147,13 @@ function mod.owo_shovel_handles(variant_id, type)
 			},
 		},
         --  single D-handle, chainsword
-        owo_shovel_handles_06 = {
-			model = _item_melee.."/grips/chain_sword_grip_01", type = "pommel", 
-			mesh_move = false, parent = "grip",
-            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_03", 
-                pommelac2 = "owo_shovel_handles_ac2_empty", 
-			},
-		},
+        --owo_shovel_handles_06 = {
+		--	model = _item_melee.."/grips/chain_sword_grip_01", type = "pommel", 
+		--	mesh_move = false, parent = "grip",
+        --    automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_03", 
+        --        pommelac2 = "owo_shovel_handles_ac2_empty", 
+		--	},
+		--},
         owo_shovel_handles_07 = {
 			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommel", 
 			mesh_move = false, parent = "grip",
@@ -174,10 +177,10 @@ function mod.owo_shovel_handles(variant_id, type)
 			model = _item_melee.."/grips/power_sword_grip_04", type = "pommelac1", 
 			mesh_move = false, parent = "grip",
 		},
-        owo_shovel_handles_ac1_03 = {
-			model = _item_melee.."/grips/chain_sword_grip_01", type = "pommelac1", 
-			mesh_move = false, parent = "grip",
-		},
+        --owo_shovel_handles_ac1_03 = {
+		--	model = _item_melee.."/grips/chain_sword_grip_01", type = "pommelac1", 
+		--	mesh_move = false, parent = "grip",
+		--},
         owo_shovel_handles_ac1_04 = {
 			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommelac1", 
 			mesh_move = false, parent = "grip",

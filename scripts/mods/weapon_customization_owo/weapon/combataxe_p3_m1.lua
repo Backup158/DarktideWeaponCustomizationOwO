@@ -29,7 +29,8 @@ mod.owo_shovel_handles(this_variant, "head")
 mod.inject_fixes(this_variant, {
     -- ######
     -- Head: Shovel Handles
-    -- only really aligned for grip2
+    -- ALL of these are only really aligned for shovel_grip_02
+    --  minor gaps for others, really small for ogryn grips
     -- ######
     -- the fucked up mini /\ handle
     {	dependencies = {"owo_shovel_handles_01"},
@@ -56,12 +57,10 @@ mod.inject_fixes(this_variant, {
         pommelac2 = {offset = true, position = vector3_box(0.0, 0.002, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.5, 0.67 ) },
     },
     -- D-handle chainsword
-    {	dependencies = {"owo_shovel_handles_06"},
-        pommel = {offset = false, position = vector3_box(-0.0, 0.004, -0.194), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
-    },
-    {	dependencies = {"owo_shovel_handles_06|owo_shovel_handles_07|owo_shovel_handles_08"},
-        pommel = {offset = true, position = vector3_box(-0.0, 0.004, -0.194), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.0, 0.8 ) },
-        pommelac1 = {offset = true, position = vector3_box(0.00, -0.004, 0), rotation = vector3_box(-90, 0, -180), scale = vector3_box(1, 1, 1 ) },
+    {	dependencies = {"owo_shovel_handles_07|owo_shovel_handles_08"},
+        -- pommel = {offset = true, position = vector3_box(-0.0, 0.004, -0.194), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.0, 0.8 ) }, -- alt sizing. i think the gap and grip are too big
+        pommel = {offset = true, position = vector3_box(-0.0, 0.004, -0.18), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 0.762, 0.8 ) },
+        pommelac1 = {offset = true, position = vector3_box(0.00, -0.004, -0.18), rotation = vector3_box(-90, 0, -180), scale = vector3_box(1, 0.762, 0.8 ) },
     },
 
     -- ####################################################################################
