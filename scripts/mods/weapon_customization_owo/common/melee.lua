@@ -81,7 +81,7 @@ function mod.owo_tacax_spike(variant_id, type)
 end
 
 -- Head: Shovel Handles
---  D-Ring Handle mostly
+--  D-Ring Handle mostly (D-Handle, D-Grip, etc.)
 --  ~~~~~~~~ Serrated Shovel ~~~~~~~~ this is literally already in the game dumb bitch
 --  ~~~~~~~~ Sheathed Shovel ~~~~~~~~ the straps are too big and the actual bag is too small. straps are part of the bag mesh
 function mod.owo_shovel_handles(variant_id, type)
