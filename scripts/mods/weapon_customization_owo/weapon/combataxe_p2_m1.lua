@@ -1,5 +1,4 @@
 local mod = get_mod("weapon_customization_owo")
-local syn = get_mod("weapon_customization_syn_edits")
 
  -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box

@@ -1,7 +1,4 @@
 local mod = get_mod("weapon_customization_owo")
-local syn = get_mod("weapon_customization_syn_edits")
-local mt = get_mod("weapon_customization_mt_stuff")
-mod.mt = mt			-- you need to do this for some reason. can't just go mt.function() idfk why but WE BALL
 
 -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -37,7 +34,7 @@ mod.mt.table_append(mod.wc.muzzle_2s, {
 	"owo_condom_helper_01",
 })
 -- BARREL
-if syn then
+if mod.syn then
 	mod.mt.table_append(mod.wc.barrelshrouds, {
 		"owo_dreg_shroud_empty",
 		"owo_dreg_shroud_01",

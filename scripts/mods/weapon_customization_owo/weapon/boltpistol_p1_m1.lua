@@ -1,5 +1,4 @@
 local mod = get_mod("weapon_customization_owo")
-local syn = get_mod("weapon_customization_syn_edits")
 
  -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -14,7 +13,7 @@ local this_variant = "boltpistol_p1_m1" -- Bolt Pistol
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-if not syn then
+if not mod.syn then
     mod.wc.attachment[this_variant].barrelshroud = {}
 end
 

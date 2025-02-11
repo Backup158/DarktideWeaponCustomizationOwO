@@ -1,7 +1,4 @@
 local mod = get_mod("weapon_customization_owo")
-local syn = get_mod("weapon_customization_syn_edits")
-local mt = get_mod("weapon_customization_mt_stuff")
-mod.mt = mt
 
 -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -10,17 +7,11 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
---mod.wc.anchors[this_variant] = {}
---mod.wc.anchors[this_variant].fixes = {}
-
---mod.wc.anchors.combataxe_p2_m2 = mod.wc.anchors.combataxe_p2_m1
---mod.wc.anchors.combataxe_p2_m3 = mod.wc.anchors.combataxe_p2_m1
-
 -- #############################
 -- Slot Additions
 -- #############################
 -- HEAD ADDITIONS
-if syn then
+if mod.syn then
 	mod.mt.table_append(mod.wc.head2s, {
 		"owo_tacax_spike_helper_empty",
 		"owo_tacax_spike_helper_01",
