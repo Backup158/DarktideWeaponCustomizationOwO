@@ -50,7 +50,7 @@ mod.load_mod_file("weapon/stubrevolver_p1_m1")
 -- mod.load_mod_file("weapon/thunderhammer_2h_p1_m1")
 -- mod.load_mod_file("weapon/combataxe_p1_m1") -- Combat Axe
 mod.load_mod_file("weapon/combataxe_p2_m1") -- Tactical Axe
--- mod.load_mod_file("weapon/combataxe_p3_m1") -- Sapper Shovel
+mod.load_mod_file("weapon/combataxe_p3_m1") -- Sapper Shovel
 -- mod.load_mod_file("weapon/chainsword_2h_p1_m1") -- Heavy Eviscerator
 -- mod.load_mod_file("weapon/chainaxe_p1_m1")
 -- mod.load_mod_file("weapon/chainsword_p1_m1")
