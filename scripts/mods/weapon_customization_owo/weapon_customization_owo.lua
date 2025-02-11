@@ -61,7 +61,7 @@ function mod.on_all_mods_loaded()
 	--@class WeaponCustomization_synedits
 	syn = get_mod("weapon_customization_syn_edits")
     if syn then
-		mod:info("Usew haz Syn's edits :3")
+		mod:info("Uwusa haz Syn's edits :3")
     end
     mod.syn = syn
 
