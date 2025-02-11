@@ -10,6 +10,12 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
+--mod.wc.anchors[this_variant] = {}
+--mod.wc.anchors[this_variant].fixes = {}
+
+--mod.wc.anchors.combataxe_p2_m2 = mod.wc.anchors.combataxe_p2_m1
+--mod.wc.anchors.combataxe_p2_m3 = mod.wc.anchors.combataxe_p2_m1
+
 -- #############################
 -- Slot Additions
 -- #############################
@@ -34,7 +40,7 @@ end
 -- ############################################
 function mod.owo_tacax_spike(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "head" or type, {
-		{id = "owo_tacax_spike_01", name = "OwO Tactical Axehead w/ Spike"},
+		{id = "owo_tacax_spike_01", name = "OwO Spiked Tactical Axe 1"},
 	})
     mod.inject_attachments_owo(variant_id, "head2" or type, {
         {id = "owo_tacax_spike_helper_empty", name = "OwO Empty Head2"},

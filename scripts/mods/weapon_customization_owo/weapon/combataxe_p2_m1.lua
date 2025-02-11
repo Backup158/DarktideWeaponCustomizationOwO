@@ -32,7 +32,7 @@ mod.inject_fixes(this_variant, {
     -- ######
     {	dependencies = {"owo_tacax_spike_01"},
         head = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        head2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        head2 = {offset = true, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
     },
 
     -- ####################################################################################
