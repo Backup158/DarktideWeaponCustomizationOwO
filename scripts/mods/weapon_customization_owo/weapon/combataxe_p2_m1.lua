@@ -28,6 +28,7 @@ mod.owo_tacax_spike(this_variant, "head")
 mod.inject_fixes(this_variant, {
     -- ######
     -- Head: TACAX SPIKE
+    -- for some reason this only applies to p1_m1
     -- ######
     {	dependencies = {"owo_tacax_spike_01"},
         head = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },

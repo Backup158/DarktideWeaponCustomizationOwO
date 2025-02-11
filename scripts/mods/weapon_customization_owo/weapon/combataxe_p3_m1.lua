@@ -31,7 +31,7 @@ mod.inject_fixes(this_variant, {
     -- Head: Shovel Handles
     -- only really aligned for grip2
     -- ######
-    -- the fucked up mini handle
+    -- the fucked up mini /\ handle
     {	dependencies = {"owo_shovel_handles_01"},
         pommel = {offset = true, position = vector3_box(0, 0.012, 0.003), rotation = vector3_box(84, 0, 0), scale = vector3_box(1, 1, 0.488 ) },
     },
@@ -41,6 +41,28 @@ mod.inject_fixes(this_variant, {
         pommelac1 = {offset = true, position = vector3_box(0, 0.015, -0.059), rotation = vector3_box(63, 0, 0), scale = vector3_box(1, 0.69, 0.275 ) },
         pommelac2 = {offset = true, position = vector3_box(0, -0.01, -0.244), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.46, 0.38, 0.55 ) },
     },
+    -- the classic D-handle
+    {	dependencies = {"owo_shovel_handles_03"},
+        pommel = {offset = true, position = vector3_box(-0.012, -0.036, -0.208), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.64, 0.7 ) },
+        pommelac1 = {offset = true, position = vector3_box(0.008, 0.047, -0.208), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.6, 0.64, 0.7 ) },
+        pommelac2 = {offset = true, position = vector3_box(0.014, 0.002, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.5, 0.67 ) },
+    },
+    {	dependencies = {"owo_shovel_handles_04"},
+        pommel = {offset = true, position = vector3_box(-0.0, -0.036, -0.208), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.64, 0.7 ) },
+        pommelac2 = {offset = true, position = vector3_box(0.0, 0.002, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.5, 0.67 ) },
+    },
+    {	dependencies = {"owo_shovel_handles_05"},
+        pommel = {offset = true, position = vector3_box(-0.0, 0.036, -0.208), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.6, 0.64, 0.7 ) },
+        pommelac2 = {offset = true, position = vector3_box(0.0, 0.002, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.5, 0.67 ) },
+    },
+    -- D-handle chainsword
+    {	dependencies = {"owo_shovel_handles_06"},
+        pommel = {offset = false, position = vector3_box(-0.0, 0.004, -0.194), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+    },
+    {	dependencies = {"owo_shovel_handles_06|owo_shovel_handles_07|owo_shovel_handles_08"},
+        pommel = {offset = true, position = vector3_box(-0.0, 0.004, -0.194), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.0, 0.8 ) },
+        pommelac1 = {offset = true, position = vector3_box(0.00, -0.004, 0), rotation = vector3_box(-90, 0, -180), scale = vector3_box(1, 1, 1 ) },
+    },
 
     -- ####################################################################################
     -- HIDING HELPERS
@@ -48,10 +70,10 @@ mod.inject_fixes(this_variant, {
     -- Because they match the main parts first, if there is no match it means the main part is not attached
     -- ####################################################################################
     -- Pommel
-    {	dependencies = {"owo_shovel_handles_ac1_01"},
+    {	dependencies = {"owo_shovel_handles_ac1_01|owo_shovel_handles_ac1_02"},
         pommelac1 = { hide_mesh = {{"pommelac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {	dependencies = {"owo_shovel_handles_ac2_01"},
+    {	dependencies = {"owo_shovel_handles_ac2_01|owo_shovel_handles_ac2_02"},
         pommelac2 = { hide_mesh = {{"pommelac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
