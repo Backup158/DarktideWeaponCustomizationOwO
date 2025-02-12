@@ -1,7 +1,4 @@
 local mod = get_mod("weapon_customization_owo")
-local syn = get_mod("weapon_customization_syn_edits")
-local mt = get_mod("weapon_customization_mt_stuff")
-mod.mt = mt			-- you need to do this for some reason. can't just go mt.function() idfk why but WE BALL
 
 -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -37,7 +34,7 @@ mod.mt.table_append(mod.wc.muzzle_2s, {
 	"owo_condom_helper_01",
 })
 -- BARREL
-if syn then
+if mod.syn then
 	mod.mt.table_append(mod.wc.barrelshrouds, {
 		"owo_dreg_shroud_empty",
 		"owo_dreg_shroud_01",
@@ -225,16 +222,22 @@ mod.wc.owo_magac1_list = {
 	"owo_jungle_mag_helper_02",
 	"owo_jungle_mag_helper_03",
 	"owo_jungle_mag_helper_04",
+	"owo_magazine_magpull_helper_01_empty",
+	"owo_magazine_magpull_helper_01",
 }
 mod.wc.add_custom_attachments.owo_magac2 = "owo_magac2_list"
 mod.wc.owo_magac2_list = {
 	"owo_jungle_mag_empty_02",
 	"owo_jungle_mag_connector_f_01",
+	"owo_magazine_magpull_helper_02_empty",
+	"owo_magazine_magpull_helper_02",
 }
 mod.wc.add_custom_attachments.owo_magac3 = "owo_magac3_list"
 mod.wc.owo_magac3_list = {
 	"owo_jungle_mag_empty_03",
 	"owo_jungle_mag_connector_b_01",
+	"owo_magazine_magpull_helper_03_empty",
+	"owo_magazine_magpull_helper_03",
 }
 mod.wc.add_custom_attachments.owo_magac4 = "owo_magac4_list"
 mod.wc.owo_magac4_list = {
@@ -2994,7 +2997,77 @@ function mod.owo_jungle_mag(variant_id, type)
 	})
 end
 
+-- Magazine: Mag Assists
+--	Magpul magazine assists/pulls
+function mod.owo_magazine_magpull(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+		{id = "owo_magazine_magpull_01", name = "OwO Autogun 1 w/ Mag Assist"},
+		{id = "owo_magazine_magpull_02", name = "OwO Ag2 w/ Mag Assist"},
+		{id = "owo_magazine_magpull_03", name = "OwO Ag3 w/ Mag Assist"},
+		{id = "owo_magazine_magpull_04", name = "OwO Ag4 w/ Mag Assist"},
+	})
+	mod.inject_attachments_owo(variant_id, "owo_magac1" or type, {
+		{id = "owo_magazine_magpull_helper_01_empty", name = "Empty Magac1"},
+		{id = "owo_magazine_magpull_helper_01", name = "OwO Autogun Magpul'vesa 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "owo_magac2" or type, {
+		{id = "owo_magazine_magpull_helper_02_empty", name = "Empty Magac2"},
+		{id = "owo_magazine_magpull_helper_02", name = "OwO Autogun Magpul'vesa 2"},
+	})
+	mod.inject_attachments_owo(variant_id, "owo_magac3" or type, {
+		{id = "owo_magazine_magpull_helper_03_empty", name = "Empty Magac3"},
+		{id = "owo_magazine_magpull_helper_03", name = "OwO Autogun Magpul'vesa 3"},
+	})
 
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_magazine_magpull_01 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = { owo_magac1 = "owo_magazine_magpull_helper_01", owo_magac2 = "owo_magazine_magpull_helper_02", 
+				owo_magac3 = "owo_magazine_magpull_helper_03",
+			},
+		},
+		owo_magazine_magpull_02 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_02", type = "magazine", parent = "receiver", 
+			automatic_equip = { owo_magac1 = "owo_magazine_magpull_helper_01", owo_magac2 = "owo_magazine_magpull_helper_02", 
+				owo_magac3 = "owo_magazine_magpull_helper_03",
+			},
+		},
+		owo_magazine_magpull_03 = {
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_03", type = "magazine", parent = "receiver", 
+			automatic_equip = { owo_magac1 = "owo_magazine_magpull_helper_01", owo_magac2 = "owo_magazine_magpull_helper_02", 
+				owo_magac3 = "owo_magazine_magpull_helper_03",
+			},
+		},
+		owo_magazine_magpull_04 = {
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = { owo_magac1 = "owo_magazine_magpull_helper_01", owo_magac2 = "owo_magazine_magpull_helper_02", 
+				owo_magac3 = "owo_magazine_magpull_helper_03",
+			},
+		},
+		-- ### Helpers ###
+		owo_magazine_magpull_helper_01 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "owo_magac1", parent = "magazine", 
+		},
+		owo_magazine_magpull_helper_02 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "owo_magac2", parent = "owo_magac1", 
+		},
+		owo_magazine_magpull_helper_03 = {
+			model = _item_ranged.."/sights/reflex_sight_01", type = "owo_magac3", parent = "owo_magac2", 
+			hide_mesh = {{"owo_magac3", 1},},
+		},
+		-- ### Empty ###
+		owo_magazine_magpull_helper_01_empty = {
+			model = "", type = "owo_magac1", parent = "magazine", 
+		},
+		owo_magazine_magpull_helper_02_empty = {
+			model = "", type = "owo_magac2", parent = "owo_magac1", 
+		},
+		owo_magazine_magpull_helper_03_empty = {
+			model = "", type = "owo_magac3", parent = "owo_magac2", 
+		},
+	})
+end
 
 
 

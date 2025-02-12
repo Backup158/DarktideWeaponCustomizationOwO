@@ -1,5 +1,4 @@
 local mod = get_mod("weapon_customization_owo")
-local syn = get_mod("weapon_customization_syn_edits")
 
  -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -14,7 +13,7 @@ local this_variant = "boltpistol_p1_m1" -- Bolt Pistol
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-if not syn then
+if not mod.syn then
     mod.wc.attachment[this_variant].barrelshroud = {}
 end
 
@@ -32,7 +31,7 @@ mod.inject_fixes(this_variant, {
     -- Barrel: Short Shotgun
     -- #####
     {   dependencies = {"owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_04_s|owo_bistol_sg_base_05_s|owo_bistol_sg_base_06_s|owo_bistol_sg_base_08_s"},
-        muzzle = {offset = true, position = vector3_box(0, 0.47, 0),scale = vector3_box(1, 1, 1) },
+        muzzle = {offset = true, position = vector3_box(0, 0.47, 0), scale = vector3_box(1, 1, 1) },
     },
     {   --dependencies = {"owo_bistol_sg_base_01|owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_09"},
         dependencies = {"owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08"},

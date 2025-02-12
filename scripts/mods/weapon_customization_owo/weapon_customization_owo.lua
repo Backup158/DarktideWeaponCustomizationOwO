@@ -1,9 +1,11 @@
 local mod = get_mod("weapon_customization_owo")
 local wc
 local mt
+local syn
 
 -- Prints a message to the console log containing the current version number
-mod:info('WeaponCustomizationOwO v1.nya loaded uwu nya :3')
+local mod_version = "1.nya"
+mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 
 -- #########################################
 -- ############### ATTENTION ###############
@@ -56,6 +58,12 @@ function mod.on_all_mods_loaded()
        return 
     end
     mod.mt = mt
+	--@class WeaponCustomization_synedits
+	syn = get_mod("weapon_customization_syn_edits")
+    if syn then
+		mod:info("Uwusa haz Syn's edits :3")
+    end
+    mod.syn = syn
 
 	local attachment_ids = {}
 	local model_ids = {}

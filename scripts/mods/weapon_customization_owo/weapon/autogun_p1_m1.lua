@@ -1,5 +1,4 @@
 local mod = get_mod("weapon_customization_owo")
-local syn = get_mod("weapon_customization_syn_edits")
 
  -- Locals from Weapon Customization plugin template
 local vector3_box = Vector3Box
@@ -14,7 +13,7 @@ local this_variant = "autogun_p1_m1" -- Braced/Infantry/Vigilant Autoguns
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-if not syn then -- these slots already exist in Syn's plugin
+if not mod.syn then -- these slots already exist in Syn's plugin
     mod.wc.attachment[this_variant].barrelshroud = {}
     mod.wc.attachment[this_variant].barrelshroudac = {}
     mod.wc.attachment[this_variant].barrelshroudac2 = {}
@@ -74,6 +73,7 @@ mod.owo_holosight(this_variant, "sight")
 mod.owo_wood_krieg(this_variant, "barrel")
 mod.owo_helbore_mas49(this_variant, "receiver")
 mod.owo_magazine_flat(this_variant, "magazine")
+mod.owo_magazine_magpull(this_variant, "magazine")
 
 -- ############################################
 -- Inject Fixes
@@ -314,6 +314,51 @@ mod.inject_fixes(this_variant, {
     {   dependencies = { "owo_jungle_mag_04_up_flip"},
         owo_magac1 =    { offset = true,    position = vector3_box(0.065, -0.007, -0.011),  rotation = vector3_box(18, 0, 0),     scale = vector3_box(1, 1, 1) },
     },
+
+    -- ######
+	-- Magazine: Mag Pull
+	-- ######
+    {   dependencies = { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03|owo_magazine_magpull_04"},
+        magazine =      { offset = true,    
+            position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0),
+            trigger_move = {"owo_magac1", "owo_magac2", "owo_magac3"}, animation_wait_detach = {"owo_magac3", "owo_magac2", "owo_magac1"},
+        },
+    },
+
+    -- First helper. These need to be explicitly parented to a specific node. 2 is almost at the end
+    --  Straight Mags
+    --      Short
+    {   dependencies = { "owo_magazine_magpull_01"},
+        owo_magac1 =    { offset = false, parent_node = 2,
+            position = vector3_box(0.0, 0.056, -0.180), rotation = vector3_box(90, 0, 90), scale = vector3_box(1.0, 0.44, 0.64), 
+            animation_wait_attach = {"magazine"},
+        },
+    },
+    --      Long
+    {   dependencies = { "owo_magazine_magpull_02"},
+        owo_magac1 =    { offset = false, parent_node = 2,
+            position = vector3_box(0.0, 0.056, -0.180), rotation = vector3_box(90, 0, 90), scale = vector3_box(1.0, 0.44, 0.64), 
+        },
+    },
+    --  The slanted bottom that looks like the 20 round M16 mags
+    {   dependencies = { "owo_magazine_magpull_03"},
+        owo_magac1 =    { offset = false, parent_node = 2,
+            position = vector3_box(0.034, 0.056, -0.17), rotation = vector3_box(104, 0, 90), scale = vector3_box(1.0, 0.44, 0.69),
+        },
+    },
+    --  Curved Mag
+    {   dependencies = { "owo_magazine_magpull_04"},
+        owo_magac1 =    { offset = false, parent_node = 2,
+            position = vector3_box(0.034, 0.088, -0.219), rotation = vector3_box(114, 0, 90), scale = vector3_box(1.0, 0.44, 0.64),
+         },
+    },
+    --  All Mags
+    {   dependencies = { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03|owo_magazine_magpull_04"},
+        
+        owo_magac2 =    { offset = true,    position = vector3_box(0.0, 0.0, 0.0),   rotation = vector3_box(180, 0, 0),     scale = vector3_box(1.0, 1.0, 1.0) },
+        owo_magac3 =    { offset = true,    position = vector3_box(0.0, -0.05, -0.02),   rotation = vector3_box(0, -90, 90),     scale = vector3_box(2.2, 1.27, 1.1) },
+    },
+
 
     -- ######
 	-- Barrel: M16
@@ -808,13 +853,13 @@ mod.inject_fixes(this_variant, {
 		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
     -- Magazines
-    {   dependencies = { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04"},
+    {   dependencies = { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01"},
         owo_magac1 = { hide_mesh = {{"owo_magac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { "owo_jungle_mag_connector_f_01"},
+    {   dependencies = { "owo_jungle_mag_connector_f_01|owo_magazine_magpull_helper_02"},
         owo_magac2 = { hide_mesh = {{"owo_magac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { "owo_jungle_mag_connector_b_01"},
+    {   dependencies = { "owo_jungle_mag_connector_b_01|owo_magazine_magpull_helper_03"},
         owo_magac3 = { hide_mesh = {{"owo_magac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_jungle_mag_connector_l_01"},
