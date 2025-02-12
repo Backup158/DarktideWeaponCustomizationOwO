@@ -154,6 +154,25 @@ else
 		"owo_m16_sight_helper_06",
 	}
 end
+-- FOREGRIP
+mod.mt.table_append(mod.wc.foregrips, {
+	"owo_tactical_foregrip_01",
+})
+mod.wc.add_custom_attachments.foregripac1 = "foregripac1_list"
+mod.wc.foregripac1_list = {
+	"owo_tactical_foregrip_ac1_empty",
+	"owo_tactical_foregrip_ac1_01",
+}
+mod.wc.add_custom_attachments.foregripac2 = "foregripac2_list"
+mod.wc.foregripac2_list = {
+	"owo_tactical_foregrip_ac2_empty",
+	"owo_tactical_foregrip_ac2_01",
+}
+mod.wc.add_custom_attachments.foregripac3 = "foregripac3_list"
+mod.wc.foregripac3_list = {
+	"owo_tactical_foregrip_ac3_empty",
+	"owo_tactical_foregrip_ac3_01",
+}
 -- BAYONET
 mod.wc.add_custom_attachments.bayonetac1 = "bayonetac1_list"
 mod.wc.bayonetac1_list = {
@@ -1105,6 +1124,83 @@ function mod.owo_wood_krieg(variant_id, type)
 		},
 	})
 
+end
+
+-- Foregrip: Tactical Foregrips
+function mod.owo_tactical_foregrip(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "foregrip" or type, {
+		{id = "owo_tactical_foregrip_01", name = "OwO Angled Foregrip (AFG) 1"},
+		{id = "owo_tactical_foregrip_02", name = "OwO AFG 1 Slanted"},
+		{id = "owo_tactical_foregrip_03", name = "OwO AFG 2"},
+		{id = "owo_tactical_foregrip_04", name = "OwO AFG 3"},
+	})
+	mod.inject_attachments_owo(variant_id, "foregripac1" or type, {
+		{id = "owo_tactical_foregrip_ac1_empty", name = "OwO foregripac1 empty"},
+		{id = "owo_tactical_foregrip_ac1_01", name = "OwO AFGac2'vesa 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "foregripac2" or type, {
+		{id = "owo_tactical_foregrip_ac2_empty", name = "OwO foregripac2 empty"},
+		{id = "owo_tactical_foregrip_ac2_01", name = "OwO AFGac2'vesa 1"},
+	})
+	mod.inject_attachments_owo(variant_id, "foregripac3" or type, {
+		{id = "owo_tactical_foregrip_ac3_empty", name = "OwO foregripac3 empty"},
+		{id = "owo_tactical_foregrip_ac3_01", name = "OwO AFGac3'vesa 1"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_tactical_foregrip_01 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_tactical_foregrip_02 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_tactical_foregrip_03 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_tactical_foregrip_04 = {
+			model = _item_ranged.."/grips/plasma_rifle_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { foregripac1 = "owo_tactical_foregrip_ac1_01", foregripac2 = "owo_tactical_foregrip_ac2_01", 
+				foregripac3 = "owo_tactical_foregrip_ac3_01"
+			},
+		},
+		-- ### Helper Parts ###
+		-- AC1
+		--  magpul afg back part 1
+		owo_tactical_foregrip_ac1_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac1", 
+			mesh_move = false, parent = "receiver",
+		},
+		-- AC2
+		-- 	magpul afg back part 2
+		owo_tactical_foregrip_ac2_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac2", 
+			mesh_move = false, parent = "receiver",
+		},
+		-- AC3
+		-- 	magpul afg front
+		owo_tactical_foregrip_ac3_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac3", 
+			mesh_move = false, parent = "receiver",
+		},
+		-- ### Empty ###
+		owo_tactical_foregrip_ac1_empty = {
+			model = "", type = "foregripac1", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_tactical_foregrip_ac2_empty = {
+			model = "", type = "foregripac2", 
+			mesh_move = false, parent = "receiver"
+		},
+		owo_tactical_foregrip_ac3_empty = {
+			model = "", type = "foregripac3", 
+			mesh_move = false, parent = "receiver"
+		},
+	})
 end
 
 -- Bayonet: Dreg Gunner bayonet
