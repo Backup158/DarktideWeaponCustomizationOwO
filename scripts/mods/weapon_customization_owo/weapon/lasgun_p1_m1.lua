@@ -52,7 +52,7 @@ mod.owo_telescopic_sight(this_variant, "sight")
 -- ############################################
 -- Inject Fixes
 -- ############################################
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Magazine: FLAT LASGUN
 	-- ######

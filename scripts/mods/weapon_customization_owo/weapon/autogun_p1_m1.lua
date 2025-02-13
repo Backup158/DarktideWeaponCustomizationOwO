@@ -84,7 +84,7 @@ mod.owo_tactical_foregrip(this_variant, "foregrip")
 -- ############################################
 -- Inject Fixes
 -- ############################################
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Receiver: BOLT ACTION HELBORE
 	-- ######

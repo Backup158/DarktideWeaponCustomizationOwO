@@ -26,7 +26,7 @@ mod.owo_shovel_handles(this_variant, "head")
 -- ############################################
 -- Inject Fixes
 -- ############################################
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Head: Shovel Handles
     -- ALL of these are only really aligned for shovel_grip_02

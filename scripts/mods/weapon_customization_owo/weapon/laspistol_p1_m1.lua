@@ -29,7 +29,7 @@ mod.owo_laspistol_grip_mag(this_variant)
 -- ############################################
 -- Inject Fixes
 -- ############################################
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: SUPPRESSOR
 	-- ######

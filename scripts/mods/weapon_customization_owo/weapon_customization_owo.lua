@@ -36,10 +36,6 @@ in here
 --mt.inject_models(variant_id, model_tables)
 --mtlol.inject_models(variant_id, model_tables)
 		-- after creating a var named mtlol, mod:io_dofile("weapon_customization_mt_stuff/wc_mts"). tried both local and global
-
-OK SO LOOKS LIKE YOU NEED TO DO THE mod.mt = mt
-BEFORE USING mod.mt.function()
-	only seems to work on functions outside of on_all_mods_loaded
 ]]
 
 function mod.on_all_mods_loaded()
@@ -94,6 +90,7 @@ function mod.on_all_mods_loaded()
 		end
 	end
 	
+	-- Since this function directly accesses model_ids, it cannot be imported from MT
 	function mod.inject_models(variant_id, model_tables)
 		if not wc.attachment_models[variant_id] then
 			mod:error(string.format("model variant_id [%s] invalid", variant_id))
@@ -107,6 +104,8 @@ function mod.on_all_mods_loaded()
 
 	---@param variant_id VariantID
 	---@param fix_tables CoreAnchorFix[]
+	--[[
+	-- Imported directly from MT through the files
 	function mod.inject_fixes(variant_id, fix_tables)
 		if not wc.anchors[variant_id] then
 			mod:error(string.format("fixes variant_id [%s] invalid", variant_id))
@@ -115,6 +114,7 @@ function mod.on_all_mods_loaded()
 		mod.mt.table_prepend(wc.anchors[variant_id].fixes, fix_tables)
 		
 	end
+	]]
 	
 	-- Applies all the fixes you injected into each wepaon
 	mod.load_mod_file("files_to_load")

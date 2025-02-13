@@ -25,7 +25,7 @@ mod.owo_tacax_spike(this_variant, "head")
 -- ############################################
 -- Inject Fixes
 -- ############################################
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Head: TACAX SPIKE
     -- for some reason this only applies to p1_m1

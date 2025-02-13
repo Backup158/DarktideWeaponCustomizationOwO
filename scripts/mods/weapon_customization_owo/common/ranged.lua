@@ -3201,7 +3201,7 @@ function mod.owo_<NAME>(variant_id, type)
 	})
 end
 
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
     {   dependencies = {"owo_",
         },
         grip = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
