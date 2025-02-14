@@ -8,9 +8,18 @@ return {
 			mod_localization = "weapon_customization_owo/scripts/mods/weapon_customization_owo/weapon_customization_owo_localization",
 		})
 	end,
+	require = {
+		 "weapon_customization",
+		 "weapon_customization_mt_stuff",
+	},
 	load_after = {
-		"weapon_customization",
-		"for_the_drip",
+		 "weapon_customization",
+		 "for_the_drip",
+		 "weapon_customization_no_gun",
+	},
+	load_before = {
+		"weapon_customization_syn_edits",
+		"weapon_customization_mt_stuff",
 	},
 	packages = {},
 }
