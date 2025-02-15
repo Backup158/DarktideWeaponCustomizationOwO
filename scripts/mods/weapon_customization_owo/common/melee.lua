@@ -84,11 +84,11 @@ end
 --  ~~~~~~~~ Sheathed Shovel ~~~~~~~~ the straps are too big and the actual bag is too small. straps are part of the bag mesh
 function mod.owo_shovel_handles(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "pommel" or type, {
-		{id = "owo_shovel_handles_01", name = "OwO E-Tool (Malnourished)"},
-        {id = "owo_shovel_handles_02", name = "OwO E-Tool 1"},
-        {id = "owo_shovel_handles_03", name = "OwO E-Tool 2"},
-        {id = "owo_shovel_handles_04", name = "OwO E-Tool 2 (1)"},
-        {id = "owo_shovel_handles_05", name = "OwO E-Tool 2 (1f)"},
+		{id = "owo_shovel_handles_01", name = "OwO E-Tool Tri-Fold (Slim)"},
+        {id = "owo_shovel_handles_02", name = "OwO E-Tool Tri-Fold 1"},
+        {id = "owo_shovel_handles_03", name = "OwO E-Tool Tri-Fold 2"},
+        {id = "owo_shovel_handles_04", name = "OwO E-Tool Tri-Fold 2 (1)"},
+        {id = "owo_shovel_handles_05", name = "OwO E-Tool Tri-Fold 2 (1f)"},
         --{id = "owo_shovel_handles_06", name = "OwO E-Tool D-Ring Handle 3"}, -- the wrapped grip one
         {id = "owo_shovel_handles_07", name = "OwO D-Ring Handle 3"},
         {id = "owo_shovel_handles_08", name = "OwO D-Ring Handle 4"},

@@ -409,6 +409,18 @@ mod.wc.sight_secondary_ac2_list = {
 	--"owo_pu_scope2_helper_02",
 }
 -- RECEIVER
+--[[
+mod.wc.add_custom_attachments.poweraura = "powerauras"
+mod.wc.powerauras = {
+}
+
+table.insert(mod.wc.attachment_slots, "poweraura")
+mod:add_global_localize_strings({
+    loc_weapon_cosmetics_customization_poweraura = {
+        en = "Power Aura",
+	},
+})
+]]
 mod.wc.add_custom_attachments.receiverac1 = "receiverac1_list"
 mod.wc.receiverac1_list = {
 	"owo_bolt_grip_empty",
@@ -497,12 +509,14 @@ end
 function mod.owo_suppressor(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
-		{id = "owo_suppressor_02", name = "OwO Suppressor 2"}
+		{id = "owo_suppressor_02", name = "OwO Suppressor 2"},
+		{id = "owo_suppressor_03", name = "OwO PBS-1 Suppressor"},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
 		{id = "owo_suppressor_helper_empty", name = "muzzle_2 Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
-		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true}
+		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true},
+		{id = "owo_suppressor_helper_03", name = "OwO Suppressor'vesa 3", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -518,6 +532,12 @@ function mod.owo_suppressor(variant_id, type)
 				muzzle_2 = "owo_suppressor_helper_02"
 			}
 		},
+		owo_suppressor_03 = {
+			model = _item_ranged.."/barrels/rippergun_rifle_barrel_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			automatic_equip = {
+				muzzle_2 = "owo_suppressor_helper_03"
+			}
+		},
 		owo_suppressor_helper_empty = {
 			model = "", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		},
@@ -526,7 +546,10 @@ function mod.owo_suppressor(variant_id, type)
 		},
 		owo_suppressor_helper_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_2", mesh_move = false, parent = "barrel"
-		}
+		},
+		owo_suppressor_helper_03 = {
+			model = _item_melee.."/pommels/axe_pommel_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
+		},
 	})
 end
 
