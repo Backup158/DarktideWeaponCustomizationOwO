@@ -31,29 +31,51 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: SUPPRESSOR
 	-- ######
-	{	dependencies = { "owo_suppressor_01|owo_suppressor_02",
-            "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08"
+    {   dependencies = {"owo_revolver_shotgun_barrel_base_04",
+            "owo_suppressor_01|owo_suppressor_02"
         },
+        muzzle = {parent = "barrel", parent_node = 9, 
+            position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
+            animation_wait_attach = {"barrel"},
+        },
+        muzzle_2 = {parent = "barrel", parent_node = 9, 
+            position = vector3_box(0, 0.328, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            animation_wait_attach = {"barrel"}, 
+        },	
+    },
+    {   dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
+            "owo_suppressor_01|owo_suppressor_02"
+        },
+        muzzle = {parent = "barrel", parent_node = 9, 
+            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
+            animation_wait_attach = {"barrel"},
+        },
+        muzzle_2 = {parent = "barrel", parent_node = 9, 
+            position = vector3_box(0, 0.236, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
+            animation_wait_attach = {"barrel"}, 
+        },	
+    },
+    {	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
         muzzle = {parent = "barrel", parent_node = 9, offset = false, 
             position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"},
         },
     },
-    {	dependencies = {"owo_suppressor_01",
-            "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08"
-        },
+    {	dependencies = {"owo_suppressor_01"},
         muzzle_2 = {parent = "barrel", parent_node = 9, offset = false, 
             position = vector3_box(0, 0.192, -0.022),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"},
         },	
     },
-    {	dependencies = {"owo_suppressor_02",
-            "!owo_revolver_shotgun_barrel_base_04", "!owo_revolver_shotgun_barrel_base_05", "!owo_revolver_shotgun_barrel_base_06", "!owo_revolver_shotgun_barrel_base_08"
-        },
+    {	dependencies = {"owo_suppressor_02"},
         muzzle_2 = {parent = "barrel", parent_node = 9, offset = false, 
             position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
             animation_wait_attach = {"barrel"},
         },
+    },
+    {	dependencies = { "owo_suppressor_03"},
+        muzzle = { offset = true,   position = vector3_box(0, 0.5, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 = { offset = true,   position = vector3_box(0, 0.3, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
     },
     -- the skinny bayonet. sits on muzzle
     {	dependencies = {"owo_suppressor_01|owo_suppressor_02", 
@@ -97,50 +119,17 @@ mod.mt.inject_fixes(this_variant, {
     },]]
     --      Muzzle handling
     {   dependencies = {"owo_revolver_shotgun_barrel_base_04",
-            "!owo_suppressor_01", "!owo_suppressor_02"
         },
         muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
             position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
             animation_wait_attach = {"barrel"},
         },
         dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
-            "!owo_suppressor_01", "!owo_suppressor_02"
         },
         muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
             position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
             animation_wait_attach = {"barrel"},
         },
-    },
-   --[[ {   dependencies = {"owo_revolver_shotgun_barrel_base_04_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l",
-            "!owo_suppressor_01", "!owo_suppressor_02"
-        },
-        muzzle = {parent = "barrel", position = vector3_box(0, 0.353, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-    },]]
-    --      Suppressor compat
-    {   dependencies = {"owo_revolver_shotgun_barrel_base_04",
-            "owo_suppressor_01|owo_suppressor_02"
-        },
-        muzzle = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
-            animation_wait_attach = {"barrel"},
-        },
-        muzzle_2 = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.328, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
-            animation_wait_attach = {"barrel"}, 
-        },	
-    },
-
-    {   dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
-            "owo_suppressor_01|owo_suppressor_02"
-        },
-        muzzle = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
-            animation_wait_attach = {"barrel"},
-        },
-        muzzle_2 = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.236, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
-            animation_wait_attach = {"barrel"}, 
-        },	
     },
 
     -- #####
@@ -159,7 +148,7 @@ mod.mt.inject_fixes(this_variant, {
             barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Muzzles
-    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02" },
+    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03" },
         muzzle_2 = {hide_mesh = { 	{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
 })
