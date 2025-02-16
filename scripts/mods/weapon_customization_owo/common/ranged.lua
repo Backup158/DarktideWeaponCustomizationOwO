@@ -410,14 +410,14 @@ mod.wc.sight_secondary_ac2_list = {
 }
 -- RECEIVER
 --[[
-mod.wc.add_custom_attachments.poweraura = "powerauras"
-mod.wc.powerauras = {
+mod.wc.add_custom_attachments.receiverac = "receiverac_list"
+mod.wc.receiverac_list = {
 }
 
-table.insert(mod.wc.attachment_slots, "poweraura")
+table.insert(mod.wc.attachment_slots, "receiverac")
 mod:add_global_localize_strings({
-    loc_weapon_cosmetics_customization_poweraura = {
-        en = "Power Aura",
+    loc_weapon_cosmetics_customization_receiverac = {
+        en = "Receiver Attachment",
 	},
 })
 ]]

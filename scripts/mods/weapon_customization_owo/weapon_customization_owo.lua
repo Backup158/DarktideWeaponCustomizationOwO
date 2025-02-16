@@ -11,9 +11,12 @@ mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 -- ############### ATTENTION ###############
 -- #########################################
 -- The rest of this is basically a copy of the core MT plugin file
--- 	Many of the commands executed during on_all_mods_loaded are written directly into that function instead of in their own independent functions
---	wait what if i just call mt.on_all_mods_loaded()...
--- 	
+-- 	Many of the commands executed during on_all_mods_loaded are written directly into that function instead of being in their own independent functions
+--	and the tables are accessed directly, instead of being passed as arguments
+--		passing them as args would be pretty redundant to keep pasting
+--		maybe it'd be callable if it used mod.model_ids 
+--		but that could have the issue of multiple mods adding to the wrong table and sorting making them appear in the wrong orders
+--			probably just something i made up but eh
 -- #########################################
 
 function mod.load_mod_file(relative_path)
@@ -21,7 +24,7 @@ function mod.load_mod_file(relative_path)
 end
 
 function mod.on_all_mods_loaded()
-	-- Need to keep the get_mod here so it works after reload.
+	-- Checks for installed mods. Kept here so it works after reload.
 	---@class WeaponCustomizationMod
 	wc = get_mod("weapon_customization")
 	if not wc then
@@ -29,14 +32,15 @@ function mod.on_all_mods_loaded()
 		return
 	end
 	mod.wc = wc
-	--@class WeaponCustomizationMod_MT
+	---@class WeaponCustomizationMod_MTStuff
 	mt = get_mod("weapon_customization_mt_stuff")
     if not mt then
     	mod:error("Weapon Customization MT plugin required")
     	return 
     end
     mod.mt = mt
-	--@class WeaponCustomization_synedits
+	---@class WeaponCustomization_synedits
+	--		Checking to apply compatibility patches later
 	syn = get_mod("weapon_customization_syn_edits")
     if syn then
 		mod:info("Uwusa haz Syn's edits :3")
