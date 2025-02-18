@@ -512,7 +512,7 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"},
 		{id = "owo_suppressor_03", name = "OwO Suppressor 3 (PBS-1)"},
 		{id = "owo_suppressor_04", name = "OwO Suppressor 4"},
-		
+		{id = "owo_suppressor_05", name = "OwO Suppressor 5"},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
 		{id = "owo_suppressor_helper_empty", name = "muzzle_2 Empty", no_randomize = true},
@@ -544,6 +544,12 @@ function mod.owo_suppressor(variant_id, type)
 		},
 		owo_suppressor_04 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			automatic_equip = {
+				muzzle_2 = "owo_suppressor_helper_04"
+			}
+		},
+		owo_suppressor_05 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
 				muzzle_2 = "owo_suppressor_helper_04"
 			}
