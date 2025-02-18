@@ -510,16 +510,20 @@ function mod.owo_suppressor(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"},
-		{id = "owo_suppressor_03", name = "OwO PBS-1 Suppressor"},
+		{id = "owo_suppressor_03", name = "OwO Suppressor 3 (PBS-1)"},
+		{id = "owo_suppressor_04", name = "OwO Suppressor 4"},
+		
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
 		{id = "owo_suppressor_helper_empty", name = "muzzle_2 Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
 		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true},
 		{id = "owo_suppressor_helper_03", name = "OwO Suppressor'vesa 3", no_randomize = true},
+		{id = "owo_suppressor_helper_04", name = "OwO Suppressor'vesa 4", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
+		-- ### Base Parts ####
 		owo_suppressor_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
@@ -538,9 +542,17 @@ function mod.owo_suppressor(variant_id, type)
 				muzzle_2 = "owo_suppressor_helper_03"
 			}
 		},
+		owo_suppressor_04 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			automatic_equip = {
+				muzzle_2 = "owo_suppressor_helper_04"
+			}
+		},
+		-- ### Empty ###
 		owo_suppressor_helper_empty = {
 			model = "", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		},
+		-- ### Helpers ###
 		owo_suppressor_helper_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		},
@@ -549,6 +561,9 @@ function mod.owo_suppressor(variant_id, type)
 		},
 		owo_suppressor_helper_03 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
+		},
+		owo_suppressor_helper_04 = {
+			model = _item_melee.."/grips/hatchet_grip_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
 		},
 	})
 end

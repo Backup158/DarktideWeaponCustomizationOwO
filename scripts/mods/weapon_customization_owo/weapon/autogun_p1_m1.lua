@@ -235,25 +235,25 @@ mod.mt.inject_fixes(this_variant, {
     },
     -- Braced Autogun barrels
     --  super short
-    {   dependencies = { "barrel_07",
+    {   dependencies = { "barrel_08",
             "owo_suppressor_03"
         },
         muzzle =            { offset = true,    position = vector3_box(0, 0.52, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
-        muzzle_02 =            { offset = true,    position = vector3_box(0, 0.38, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+        muzzle_2 =            { offset = true,    position = vector3_box(0, 0.38, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
     },
     --  short
-    {   dependencies = { "barrel_08|barrel_13|barrel_14|barrel_18|barrel_19|barrel_20",
+    {   dependencies = { "barrel_07|barrel_13|barrel_14|barrel_18|barrel_19|barrel_20",
             "owo_suppressor_03"
         },
         muzzle =            { offset = true,    position = vector3_box(0, 0.63, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
-        muzzle_02 =            { offset = true,    position = vector3_box(0, 0.43, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+        muzzle_2 =            { offset = true,    position = vector3_box(0, 0.43, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
     },
     --  long
     {   dependencies = { "barrel_09|barrel_10",
             "owo_suppressor_03"
         },
         muzzle =            { offset = true,    position = vector3_box(0, 0.83, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
-        muzzle_02 =            { offset = true,    position = vector3_box(0, 0.63, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+        muzzle_2 =            { offset = true,    position = vector3_box(0, 0.63, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
     },
     -- Base case
     {	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
@@ -261,6 +261,9 @@ mod.mt.inject_fixes(this_variant, {
     },
     {	dependencies = { "owo_suppressor_03"},
         muzzle = { offset = true,   position = vector3_box(0, 0.5, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+    },
+    {	dependencies = { "owo_suppressor_04"},
+        muzzle = { offset = true,   position = vector3_box(0, 0.072, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
     },
     -- muzzle 2
     {	dependencies = {"owo_suppressor_01"},
@@ -271,6 +274,9 @@ mod.mt.inject_fixes(this_variant, {
     },
     {	dependencies = { "owo_suppressor_03"},
         muzzle_2 = { offset = true,   position = vector3_box(0, 0.3, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    {	dependencies = { "owo_suppressor_04"},
+        muzzle_2 = { offset = true,   position = vector3_box(0, 0.52, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
     },
     -- the skinny bayonet. sits on muzzle
     {	dependencies = {"owo_suppressor_01|owo_suppressor_02",
