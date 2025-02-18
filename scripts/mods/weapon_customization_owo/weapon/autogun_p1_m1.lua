@@ -80,6 +80,7 @@ mod.owo_helbore_mas49(this_variant, "receiver")
 mod.owo_magazine_flat(this_variant, "magazine")
 mod.owo_magazine_magpull(this_variant, "magazine")
 mod.owo_tactical_foregrip(this_variant, "foregrip")
+mod.owo_tactical_stock(this_variant, "stock")
 
 -- ############################################
 -- Inject Fixes
@@ -391,7 +392,6 @@ mod.mt.inject_fixes(this_variant, {
             trigger_move = {"owo_magac1", "owo_magac2", "owo_magac3"}, animation_wait_detach = {"owo_magac3", "owo_magac2", "owo_magac1"},
         },
     },
-
     -- First helper. These need to be explicitly parented to a specific node. 2 is almost at the end
     --  Straight Mags
     --      Short
@@ -715,6 +715,13 @@ mod.mt.inject_fixes(this_variant, {
     --      Point shooting
     {   dependencies = { "owo_acog_sight_01_ps|owo_acog_sight_02_ps|owo_susat_01_ps|owo_susat_02_ps" },
         scope_offset =      { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), lense_transparency = false},
+    },
+
+    -- ######
+	-- Stock: TACTICAL STOCK
+	-- ######
+    {   dependencies = { "owo_tactical_stock_01" },
+        stock =      { position = vector3_box(0.0, 0.198, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
     },
 
     -- ######

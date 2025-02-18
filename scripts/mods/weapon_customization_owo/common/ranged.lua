@@ -1062,6 +1062,7 @@ function mod.owo_m16_barrel(variant_id, type)
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 			}
 		},
+		-- ### Helper Parts ###
 		owo_m16_barrelshroud_a1 = {
 			model = _item_melee.."/grips/hatchet_grip_03", type = "barrelshroud", 
 			mesh_move = false, parent = "receiver"
@@ -1099,6 +1100,7 @@ function mod.owo_m16_barrel(variant_id, type)
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "barrelshroudac6", 
 			mesh_move = false, parent = "receiver"
 		},
+		-- ### Empty ###
 		owo_m16_empty = {
 			model = "", type = "barrelshroud", 
 			mesh_move = false, parent = "receiver"
@@ -1945,6 +1947,21 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 		-- ### Empty ###
 		owo_gripstock_grip_empty = {
 			model = "", type = "stockac", parent = "receiver", 
+		},
+	})
+end
+
+-- Stock: Tactical Stocks
+function mod.owo_tactical_stock(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "stock" or type, {
+		{id = "owo_tactical_stock_01", name = "OwO Skeletal Stock"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_tactical_stock_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
 		},
 	})
 end
