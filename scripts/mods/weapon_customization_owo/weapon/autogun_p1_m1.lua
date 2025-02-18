@@ -721,7 +721,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- Stock: TACTICAL STOCK
 	-- ######
     {   dependencies = { "owo_tactical_stock_01" },
-        stock =      { position = vector3_box(0.0, 0.198, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
+        stock =      { position = vector3_box(0.0, 0.11, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
     },
 
     -- ######
