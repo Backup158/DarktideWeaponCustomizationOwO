@@ -81,6 +81,7 @@ mod.owo_magazine_flat(this_variant, "magazine")
 mod.owo_magazine_magpull(this_variant, "magazine")
 mod.owo_tactical_foregrip(this_variant, "foregrip")
 mod.owo_tactical_stock(this_variant, "stock")
+mod.owo_heterosexual_foregrip(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -191,7 +192,36 @@ mod.mt.inject_fixes(this_variant, {
     },
 
     -- ######
-    -- DREG GUNNER BAYONET
+    -- Foregrip: HETEROSEXUAL FOREGRIP
+    -- ######
+    --  Ogryn handles
+    {   dependencies = {"owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
+    },
+    --  Dclaw
+    {   dependencies = {"owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
+    },
+    --  Knife
+    {   dependencies = {"owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+    {   dependencies = {"owo_heterosexual_foregrip_knife_06_fat"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
+    },
+    {   dependencies = {"owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
+    },
+    {   dependencies = {"owo_heterosexual_foregrip_knife_06s_fat"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
+    },
+    --  Grip grips
+    {   dependencies = {"owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.375, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+
+    -- ######
+    -- Bayonet: DREG GUNNER BAYONET
     -- ######
     {   dependencies = {"!owo_dreg_barrel_01",
             "owo_dreg_bayonet_01",
@@ -206,7 +236,7 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac1 =  {offset = true,     position = vector3_box(0, 0.8, -0.222), rotation = vector3_box(90, 0, 0),   scale = vector3_box(1, 0.67, 0.115) },
     },
     -- ######
-    -- FIN GRIP
+    -- Grip: FIN GRIP
     -- ######
     {   dependencies = {"owo_fin_grip_01"},
         grip =  { offset = true,    position = vector3_box(0, 0, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
@@ -925,6 +955,9 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies = {"owo_tactical_foregrip_ac2_01"},
         foregripac2 = {hide_mesh = {{"foregripac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = {"owo_tactical_foregrip_ac3_01"},
+        foregripac3 = {hide_mesh = {{"foregripac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Receivers
 	{	dependencies = {"owo_bolt_helbore_bolt_01|owo_helbore_mas49_ass"},

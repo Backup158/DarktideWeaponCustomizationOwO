@@ -1249,6 +1249,305 @@ function mod.owo_tactical_foregrip(variant_id, type)
 	})
 end
 
+-- Foregrip: Heterosexual Foregrips
+function mod.owo_heterosexual_foregrip(variant_id)
+	mod.inject_attachments_owo(variant_id, "foregrip", {
+		{id = "owo_heterosexual_foregrip_grip_01", name = "OwO Straight Grip (SG) 1"},
+		{id = "owo_heterosexual_foregrip_grip_02", name = "OwO SG 2"},
+		{id = "owo_heterosexual_foregrip_grip_03", name = "OwO SG 3"},
+		{id = "owo_heterosexual_foregrip_grip_04", name = "OwO SG 4"},
+		{id = "owo_heterosexual_foregrip_grip_05", name = "OwO SG 5"},
+		{id = "owo_heterosexual_foregrip_grip_06", name = "OwO SG 6"},
+		{id = "owo_heterosexual_foregrip_grip_07", name = "OwO SG 7"},
+		{id = "owo_heterosexual_foregrip_grip_08", name = "OwO SG Brauto 1"},
+		{id = "owo_heterosexual_foregrip_grip_09", name = "OwO SG Brauto 2"},
+		{id = "owo_heterosexual_foregrip_grip_10", name = "OwO SG Brauto 3"},
+		{id = "owo_heterosexual_foregrip_grip_11", name = "OwO SG Brauto 4"},
+		{id = "owo_heterosexual_foregrip_grip_12", name = "OwO SG Brauto 5"},
+		{id = "owo_heterosexual_foregrip_grip_13", name = "OwO SG HHA"},
+		{id = "owo_heterosexual_foregrip_grip_14", name = "OwO StraightGassin Boltussy 1"},
+		{id = "owo_heterosexual_foregrip_grip_15", name = "OwO StraightGassin Boltussy 2"},
+		{id = "owo_heterosexual_foregrip_grip_16", name = "OwO StraightGassin Boltussy 3"},
+		{id = "owo_heterosexual_foregrip_grip_17", name = "OwO StraightGassin Boltussy 4"},
+		{id = "owo_heterosexual_foregrip_grip_18", name = "OwO StraightGassin Boltussy 5"},
+		{id = "owo_heterosexual_foregrip_grip_19", name = "OwO StraightGassin Boltussy 6"},
+		{id = "owo_heterosexual_foregrip_grip_20", name = "OwO StraightGassin Boltussy 7"},
+		{id = "owo_heterosexual_foregrip_grip_21", name = "OwO SG LasPee 1"},
+		{id = "owo_heterosexual_foregrip_grip_22", name = "OwO SG LasPee 2"},
+		{id = "owo_heterosexual_foregrip_grip_23", name = "OwO SG LasPee 3"},
+		{id = "owo_heterosexual_foregrip_grip_24", name = "OwO SG LasPee 4"},
+		{id = "owo_heterosexual_foregrip_grip_25", name = "OwO SG LasPee 5"},
+		{id = "owo_heterosexual_foregrip_grip_26", name = "OwO SG Flamer UTI 1"},
+		{id = "owo_heterosexual_foregrip_grip_27", name = "OwO SG Flamer UTI 2"},
+		{id = "owo_heterosexual_foregrip_grip_28", name = "OwO SG Flamer UTI 3"},
+		{id = "owo_heterosexual_foregrip_grip_29", name = "OwO SG Flamer UTI 4"},
+		{id = "owo_heterosexual_foregrip_knife_01", name = "OwO SG Knife 1"},
+		{id = "owo_heterosexual_foregrip_knife_02", name = "OwO SG Knife 2"},
+		{id = "owo_heterosexual_foregrip_knife_03", name = "OwO SG Knife 3"},
+		{id = "owo_heterosexual_foregrip_knife_04", name = "OwO SG Knife 4"},
+		{id = "owo_heterosexual_foregrip_knife_05", name = "OwO SG Knife 5"},
+		{id = "owo_heterosexual_foregrip_knife_06", name = "OwO SG Knife 6"},
+		{id = "owo_heterosexual_foregrip_knife_06_fat", name = "OwO SG Knife 6 (wide)"},
+		{id = "owo_heterosexual_foregrip_knife_01s", name = "OwO StubbyG Knife 1"},
+		{id = "owo_heterosexual_foregrip_knife_02s", name = "OwO StubbyG Knife 2"},
+		{id = "owo_heterosexual_foregrip_knife_03s", name = "OwO StubbyG Knife 3"},
+		{id = "owo_heterosexual_foregrip_knife_04s", name = "OwO StubbyG Knife 4"},
+		{id = "owo_heterosexual_foregrip_knife_05s", name = "OwO StubbyG Knife 5"},
+		{id = "owo_heterosexual_foregrip_knife_06s", name = "OwO StubbyG Knife 6"},
+		{id = "owo_heterosexual_foregrip_knife_06s_fat", name = "OwO StubbyG Knife 6 (wide)"},
+		{id = "owo_heterosexual_foregrip_01", name = "OwO SG Cleaver 1"},
+		{id = "owo_heterosexual_foregrip_02", name = "OwO SG Cleaver 2"},
+		{id = "owo_heterosexual_foregrip_03", name = "OwO SG Cleaver 3"},
+		{id = "owo_heterosexual_foregrip_04", name = "OwO SG Cleaver 4"},
+		{id = "owo_heterosexual_foregrip_05", name = "OwO SG Cleaver 5"},
+		{id = "owo_heterosexual_foregrip_06", name = "OwO SG Cleaver 6"},
+		{id = "owo_heterosexual_foregrip_07", name = "OwO SG Cleaver 7"},
+		{id = "owo_heterosexual_foregrip_08", name = "OwO SG Cleaver 8"},
+		{id = "owo_heterosexual_foregrip_09", name = "OwO SG DClaw 1"},
+		{id = "owo_heterosexual_foregrip_10", name = "OwO SG DClaw 2"},
+		{id = "owo_heterosexual_foregrip_11", name = "OwO SG DClaw 3"},
+		{id = "owo_heterosexual_foregrip_12", name = "OwO SG DClaw 4"},
+		{id = "owo_heterosexual_foregrip_13", name = "OwO SG DClaw 5"},
+		{id = "owo_heterosexual_foregrip_14", name = "OwO SG DClaw 6"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		-- Grips 
+		owo_heterosexual_foregrip_grip_01 = {
+			model = _item_ranged.."/grips/grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_02 = {
+			model = _item_ranged.."/grips/grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_03 = {
+			model = _item_ranged.."/grips/grip_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_04 = {
+			model = _item_ranged.."/grips/grip_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_05 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_06 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_07 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_08 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_09 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_10 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_11 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_12 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_13 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_14 = {
+			model = _item_ranged.."/grips/boltgun_pistol_grip_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_15 = {
+			model = _item_ranged.."/grips/boltgun_pistol_grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_16 = {
+			model = _item_ranged.."/grips/boltgun_pistol_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_17 = {
+			model = _item_ranged.."/grips/boltgun_rifle_grip_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_18 = {
+			model = _item_ranged.."/grips/boltgun_rifle_grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_19 = {
+			model = _item_ranged.."/grips/boltgun_rifle_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_20 = {
+			model = _item_ranged.."/grips/boltgun_rifle_grip_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_21 = {
+			model = _item_ranged.."/grips/lasgun_pistol_grip_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_22 = {
+			model = _item_ranged.."/grips/lasgun_pistol_grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_23 = {
+			model = _item_ranged.."/grips/lasgun_pistol_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_24 = {
+			model = _item_ranged.."/grips/lasgun_pistol_grip_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_25 = {
+			model = _item_ranged.."/grips/lasgun_pistol_grip_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_26 = {
+			model = _item_ranged.."/grips/flamer_rifle_grip_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_27 = {
+			model = _item_ranged.."/grips/flamer_rifle_grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_28 = {
+			model = _item_ranged.."/grips/flamer_rifle_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_grip_29 = {
+			model = _item_ranged.."/grips/flamer_rifle_grip_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		-- Ogryn
+		owo_heterosexual_foregrip_01 = {
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_02 = {
+			model = _item_ranged.."/handles/combat_blade_handle_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_03 = {
+			model = _item_ranged.."/handles/combat_blade_handle_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_04 = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_05 = {
+			model = _item_ranged.."/handles/combat_blade_handle_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_06 = {
+			model = _item_ranged.."/handles/combat_blade_handle_06", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_07 = {
+			model = _item_ranged.."/handles/combat_blade_handle_07", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_08 = {
+			model = _item_ranged.."/handles/combat_blade_handle_08", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		-- Dclaw
+		owo_heterosexual_foregrip_09 = {
+			model = _item_melee.."/grips/combat_sword_grip_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_10 = {
+			model = _item_melee.."/grips/combat_sword_grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_11 = {
+			model = _item_melee.."/grips/combat_sword_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_12 = {
+			model = _item_melee.."/grips/combat_sword_grip_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_13 = {
+			model = _item_melee.."/grips/combat_sword_grip_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_14 = {
+			model = _item_melee.."/grips/combat_sword_grip_06", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		-- Knife 
+		owo_heterosexual_foregrip_knife_01 = {
+			model = _item_melee.."/grips/combat_knife_grip_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_02 = {
+			model = _item_melee.."/grips/combat_knife_grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_03 = {
+			model = _item_melee.."/grips/combat_knife_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_04 = {
+			model = _item_melee.."/grips/combat_knife_grip_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_05 = {
+			model = _item_melee.."/grips/combat_knife_grip_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_06 = {
+			model = _item_melee.."/grips/combat_knife_grip_06", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_06_fat = {
+			model = _item_melee.."/grips/combat_knife_grip_06", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_01s = {
+			model = _item_melee.."/grips/combat_knife_grip_01", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_02s = {
+			model = _item_melee.."/grips/combat_knife_grip_02", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_03s = {
+			model = _item_melee.."/grips/combat_knife_grip_03", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_04s = {
+			model = _item_melee.."/grips/combat_knife_grip_04", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_05s = {
+			model = _item_melee.."/grips/combat_knife_grip_05", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_06s = {
+			model = _item_melee.."/grips/combat_knife_grip_06", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_heterosexual_foregrip_knife_06s_fat = {
+			model = _item_melee.."/grips/combat_knife_grip_06", type = "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+	})
+end
+
 -- Bayonet: Dreg Gunner bayonet
 --		Brauto/Iag
 function mod.owo_dreg_gunner_bayonet(variant_id, type)
