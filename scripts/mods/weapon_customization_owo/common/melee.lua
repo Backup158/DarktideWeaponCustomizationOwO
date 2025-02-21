@@ -38,9 +38,7 @@ mod.wc.pommelac2_list = {
 	"owo_shovel_handles_ac2_empty",
     "owo_shovel_handles_ac2_01",
     "owo_shovel_handles_ac2_02",
-    --"owo_shovel_handles_ac1_03",
-    "owo_shovel_handles_ac1_04",
-    "owo_shovel_handles_ac1_05",
+    "owo_shovel_handles_ac2_03",
 }
 
 -- ############################################
@@ -86,14 +84,19 @@ end
 --  ~~~~~~~~ Sheathed Shovel ~~~~~~~~ the straps are too big and the actual bag is too small. straps are part of the bag mesh
 function mod.owo_shovel_handles(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "pommel" or type, {
-		{id = "owo_shovel_handles_01", name = "OwO E-Tool D-Ring Handle (Malnourished)"},
-        {id = "owo_shovel_handles_02", name = "OwO E-Tool D-Ring Handle 1"},
-        {id = "owo_shovel_handles_03", name = "OwO E-Tool D-Ring Handle 2"},
-        {id = "owo_shovel_handles_04", name = "OwO E-Tool D-Ring Handle 2 (1)"},
-        {id = "owo_shovel_handles_05", name = "OwO E-Tool D-Ring Handle 2 (1f)"},
+		{id = "owo_shovel_handles_01", name = "OwO E-Tool Tri-Fold (Slim)"},
+        {id = "owo_shovel_handles_02", name = "OwO E-Tool Tri-Fold 1"},
+        {id = "owo_shovel_handles_03", name = "OwO E-Tool Tri-Fold 2"},
+        {id = "owo_shovel_handles_04", name = "OwO E-Tool Tri-Fold 2 (1)"},
+        {id = "owo_shovel_handles_05", name = "OwO E-Tool Tri-Fold 2 (1f)"},
         --{id = "owo_shovel_handles_06", name = "OwO E-Tool D-Ring Handle 3"}, -- the wrapped grip one
-        {id = "owo_shovel_handles_07", name = "OwO E-Tool D-Ring Handle 3"},
-        {id = "owo_shovel_handles_08", name = "OwO E-Tool D-Ring Handle 4"},
+        {id = "owo_shovel_handles_07", name = "OwO D-Ring Handle 3"},
+        {id = "owo_shovel_handles_08", name = "OwO D-Ring Handle 4"},
+		{id = "owo_shovel_handles_09", name = "OwO T-Handle 1"},
+		{id = "owo_shovel_handles_10", name = "OwO T-Handle 2"},
+		{id = "owo_shovel_handles_11", name = "OwO T-Handle 3"},
+		{id = "owo_shovel_handles_12", name = "OwO T-Handle 4"},
+		{id = "owo_shovel_handles_13", name = "OwO T-Handle 5"},
 	})
     mod.inject_attachments_owo(variant_id, "pommelac1" or type, {
 		{id = "owo_shovel_handles_ac1_empty", name = "OwO Empty Pommelac1"},
@@ -107,6 +110,8 @@ function mod.owo_shovel_handles(variant_id, type)
 		{id = "owo_shovel_handles_ac2_empty", name = "OwO Empty Pommelac1"},
         {id = "owo_shovel_handles_ac2_01", name = "OwO E-Tool'vesa'ac2 1"},
         {id = "owo_shovel_handles_ac2_02", name = "OwO E-Tool'vesa'ac2 2"},
+		{id = "owo_shovel_handles_ac2_03", name = "OwO E-Tool'vesa'ac2 3"},
+		{id = "owo_shovel_handles_ac2_04", name = "OwO E-Tool'vesa'ac2 4"},
 	})
 
 	mod.inject_models(variant_id, {
@@ -168,34 +173,94 @@ function mod.owo_shovel_handles(variant_id, type)
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
 			},
 		},
+		-- T-Handle
+		--	Synthetic
+		owo_shovel_handles_09 = {
+			model = _item_melee.."/grips/combat_knife_grip_01", type = "pommel", 
+			mesh_move = false, parent = "grip",
+            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
+                pommelac2 = "owo_shovel_handles_ac2_01", 
+			},
+		},
+		-- 	Wood T
+		owo_shovel_handles_10 = {
+			model = _item_melee.."/grips/combat_knife_grip_01", type = "pommel", 
+			mesh_move = false, parent = "grip",
+            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
+                pommelac2 = "owo_shovel_handles_ac2_03", 
+			},
+		},
+		-- 	Super Wood T
+		owo_shovel_handles_11 = {
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = "pommel", 
+			mesh_move = false, parent = "grip",
+            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
+                pommelac2 = "owo_shovel_handles_ac2_03", 
+			},
+		},
+		--  Wood T Metal end
+		owo_shovel_handles_12 = {
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = "pommel", 
+			mesh_move = false, parent = "grip",
+            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
+                pommelac2 = "owo_shovel_handles_ac2_04", 
+			},
+		},
+		--  Double Metal T
+		owo_shovel_handles_13 = {
+			model = _item_melee.."/grips/chain_axe_grip_01", type = "pommel", 
+			mesh_move = false, parent = "grip",
+            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
+                pommelac2 = "owo_shovel_handles_ac2_04", 
+			},
+		},
         -- ### Helper Parts ###
+		-- AC1
+		--	/\ D-ring2
         owo_shovel_handles_ac1_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "pommelac1", 
 			mesh_move = false, parent = "grip",
 		},
+		--	D-Ring2
         owo_shovel_handles_ac1_02 = {
 			model = _item_melee.."/grips/power_sword_grip_04", type = "pommelac1", 
 			mesh_move = false, parent = "grip",
 		},
+		-- 	Chainsword D-ring wrapped
         --owo_shovel_handles_ac1_03 = {
 		--	model = _item_melee.."/grips/chain_sword_grip_01", type = "pommelac1", 
 		--	mesh_move = false, parent = "grip",
 		--},
+		-- 	Chainsword D-ring
         owo_shovel_handles_ac1_04 = {
 			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommelac1", 
 			mesh_move = false, parent = "grip",
 		},
+		-- 	Chainsword D-ring
         owo_shovel_handles_ac1_05 = {
 			model = _item_melee.."/grips/chain_sword_grip_05", type = "pommelac1", 
 			mesh_move = false, parent = "grip",
 		},
+		-- AC2
+		--	Soft ogryn handle to grip
         owo_shovel_handles_ac2_01 = {
 			model = _item_ranged.."/handles/combat_blade_handle_03", type = "pommelac2", 
 			mesh_move = false, parent = "grip",
 		},
+		--	Soft ogryn handle to pommel
         owo_shovel_handles_ac2_02 = {
 			model = _item_ranged.."/handles/combat_blade_handle_03", type = "pommelac2", 
 			mesh_move = false, parent = "pommel",
+		},
+		-- 	Wood ogryn handle
+		owo_shovel_handles_ac2_03 = {
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = "pommelac2", 
+			mesh_move = false, parent = "grip",
+		},
+		--  Metal handle 
+		owo_shovel_handles_ac2_04 = {
+			model = _item_melee.."/grips/chain_axe_grip_01", type = "pommelac2", 
+			mesh_move = false, parent = "grip",
 		},
         -- ### Empty Parts ###
         owo_shovel_handles_ac1_empty = {

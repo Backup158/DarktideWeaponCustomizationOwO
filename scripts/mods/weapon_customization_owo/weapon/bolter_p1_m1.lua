@@ -24,7 +24,7 @@ mod.owo_california_bolter(this_variant, "receiver")
 -- ############################################
 -- Inject Fixes
 -- ############################################
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
     -- ######
     -- California Bolter receiver main
     -- ######

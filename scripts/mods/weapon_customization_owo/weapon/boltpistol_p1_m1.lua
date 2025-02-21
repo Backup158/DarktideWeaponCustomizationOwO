@@ -26,7 +26,7 @@ mod.owo_bistol_shotgun_barrel_short(this_variant)
 -- ############################################
 -- Inject Fixes
 -- ############################################
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
     -- #####
     -- Barrel: Short Shotgun
     -- #####

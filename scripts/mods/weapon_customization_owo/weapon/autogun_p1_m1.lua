@@ -23,6 +23,11 @@ if not mod.syn then -- these slots already exist in Syn's plugin
     mod.wc.attachment[this_variant].barrelshroudac6 = {}
 end
 mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autoguns yet
+
+mod.wc.attachment[this_variant].foregripac1 = {}
+mod.wc.attachment[this_variant].foregripac2 = {}
+mod.wc.attachment[this_variant].foregripac3 = {}
+
 mod.wc.attachment[this_variant].bayonetac1 = {}
 mod.wc.attachment[this_variant].bayonetac2 = {}
 mod.wc.attachment[this_variant].bayonetac3 = {}
@@ -74,11 +79,14 @@ mod.owo_wood_krieg(this_variant, "barrel")
 mod.owo_helbore_mas49(this_variant, "receiver")
 mod.owo_magazine_flat(this_variant, "magazine")
 mod.owo_magazine_magpull(this_variant, "magazine")
+mod.owo_tactical_foregrip(this_variant, "foregrip")
+mod.owo_tactical_stock(this_variant, "stock")
+mod.owo_heterosexual_foregrip(this_variant)
 
 -- ############################################
 -- Inject Fixes
 -- ############################################
-mod.inject_fixes(this_variant, {
+mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Receiver: BOLT ACTION HELBORE
 	-- ######
@@ -151,16 +159,69 @@ mod.inject_fixes(this_variant, {
         -- hand grip (top)
         barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.153, 0.115),    rotation = vector3_box(180, 0, 0),  scale = vector3_box(2.4, 0.969, 2.85) }, 
         flashlight =        {offset = true,     position = vector3_box(0.096, 0.17, 0.0),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.7, 2.7, 2.7) },
-        muzzle =            {offset = true,     position = vector3_box(0, 1, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.2, 2.2, 2.2) }
+        muzzle =            {offset = true,     position = vector3_box(0, 1, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.2, 2.2, 2.2) },
     },
     -- Helbore bayonets
 	{   dependencies = {"owo_dreg_barrel_01",
             "autogun_bayonet_01|autogun_bayonet_02"
         },
-        bayonet = {offset = true,   position = vector3_box(0, 0.699, -0.095),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.5, 1.7, 3.0) }
+        bayonet = {offset = true,   position = vector3_box(0, 0.699, -0.095),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.5, 1.7, 3.0) },
     },
+
     -- ######
-    -- DREG GUNNER BAYONET
+    -- Foregrip: TACTICAL FOREGRIP
+    -- ######
+    -- skeletal shotgun
+    {   dependencies = {"owo_tactical_foregrip_01"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.605, -0.045),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
+    },
+    -- skeletal shotgun (slant)
+    {   dependencies = {"owo_tactical_foregrip_02"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.545, -0.035),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
+    },
+    -- skeletal brauto (slant)
+    {   dependencies = {"owo_tactical_foregrip_03"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.555, -0.02),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
+    },
+    -- magpul afg triple threat
+    {   dependencies = {"owo_tactical_foregrip_04"},
+        foregrip = {offset = true,   position = vector3_box(-0.0, 0.34, 0.022),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
+        foregripac1 = {offset = true,   position = vector3_box(0.002, 0.415, -0.102),   rotation = vector3_box(0, 90, -40),    scale = vector3_box(0.5, 0.45, 0.2) },
+        foregripac2 = {offset = true,   position = vector3_box(-0.002, 0.415, -0.102),   rotation = vector3_box(-40, -90, 0),    scale = vector3_box(0.5, 0.45, 0.2) },
+        foregripac3 = {offset = true,   position = vector3_box(0, 0.47, -0.060),   rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.5, 0.45, 0.2) },
+    },
+
+    -- ######
+    -- Foregrip: HETEROSEXUAL FOREGRIP
+    -- ######
+    --  Ogryn handles
+    {   dependencies = {"owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
+    },
+    --  Dclaw
+    {   dependencies = {"owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
+    },
+    --  Knife
+    {   dependencies = {"owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+    {   dependencies = {"owo_heterosexual_foregrip_knife_06_fat"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
+    },
+    {   dependencies = {"owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
+    },
+    {   dependencies = {"owo_heterosexual_foregrip_knife_06s_fat"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
+    },
+    --  Grip grips
+    {   dependencies = {"owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29"},
+        foregrip = {offset = true,   position = vector3_box(0, 0.375, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+
+    -- ######
+    -- Bayonet: DREG GUNNER BAYONET
     -- ######
     {   dependencies = {"!owo_dreg_barrel_01",
             "owo_dreg_bayonet_01",
@@ -175,7 +236,7 @@ mod.inject_fixes(this_variant, {
         bayonetac1 =  {offset = true,     position = vector3_box(0, 0.8, -0.222), rotation = vector3_box(90, 0, 0),   scale = vector3_box(1, 0.67, 0.115) },
     },
     -- ######
-    -- FIN GRIP
+    -- Grip: FIN GRIP
     -- ######
     {   dependencies = {"owo_fin_grip_01"},
         grip =  { offset = true,    position = vector3_box(0, 0, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
@@ -186,11 +247,13 @@ mod.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: SUPPRESSOR
 	-- ######
+    -- M16
     {   dependencies = { "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2",
             "owo_suppressor_01|owo_suppressor_02"
         },
         muzzle =            { offset = true,    position = vector3_box(0, 0.11, 0),         rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2) },
     },
+    -- M16
     {	dependencies = {"owo_suppressor_01",
             "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
         },
@@ -201,15 +264,50 @@ mod.inject_fixes(this_variant, {
         },
         muzzle_2 = {offset = true,   position = vector3_box(0, 0.11, 0), rotation = vector3_box(0, 17, 0),   scale = vector3_box(1.2, 1.8, 1.2) }	
     },
+    -- Braced Autogun barrels
+    --  super short
+    {   dependencies = { "barrel_08",
+            "owo_suppressor_03"
+        },
+        muzzle =            { offset = true,    position = vector3_box(0, 0.52, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 =            { offset = true,    position = vector3_box(0, 0.38, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    --  short
+    {   dependencies = { "barrel_07|barrel_13|barrel_14|barrel_18|barrel_19|barrel_20",
+            "owo_suppressor_03"
+        },
+        muzzle =            { offset = true,    position = vector3_box(0, 0.63, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 =            { offset = true,    position = vector3_box(0, 0.43, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    --  long
+    {   dependencies = { "barrel_09|barrel_10",
+            "owo_suppressor_03"
+        },
+        muzzle =            { offset = true,    position = vector3_box(0, 0.83, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 =            { offset = true,    position = vector3_box(0, 0.63, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
     -- Base case
     {	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
         muzzle = { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
     },
+    {	dependencies = { "owo_suppressor_03"},
+        muzzle = { offset = true,   position = vector3_box(0, 0.5, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+    },
+    {	dependencies = { "owo_suppressor_04|owo_suppressor_05"},
+        muzzle = { offset = true,   position = vector3_box(0, 0.072, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+    },
+    -- muzzle 2
     {	dependencies = {"owo_suppressor_01"},
         muzzle_2 = {offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 22, 0),   scale = vector3_box(1.2, 1.8, 1.2) },	
     },
     {	dependencies = {"owo_suppressor_02"},
         muzzle_2 = {offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 17, 0),   scale = vector3_box(1.2, 1.8, 1.2) }
+    },
+    {	dependencies = { "owo_suppressor_03"},
+        muzzle_2 = { offset = true,   position = vector3_box(0, 0.3, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    {	dependencies = { "owo_suppressor_04|owo_suppressor_05"},
+        muzzle_2 = { offset = true,   position = vector3_box(0, 0.52, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
     },
     -- the skinny bayonet. sits on muzzle
     {	dependencies = {"owo_suppressor_01|owo_suppressor_02",
@@ -324,7 +422,6 @@ mod.inject_fixes(this_variant, {
             trigger_move = {"owo_magac1", "owo_magac2", "owo_magac3"}, animation_wait_detach = {"owo_magac3", "owo_magac2", "owo_magac1"},
         },
     },
-
     -- First helper. These need to be explicitly parented to a specific node. 2 is almost at the end
     --  Straight Mags
     --      Short
@@ -651,6 +748,13 @@ mod.inject_fixes(this_variant, {
     },
 
     -- ######
+	-- Stock: TACTICAL STOCK
+	-- ######
+    {   dependencies = { "owo_tactical_stock_01" },
+        stock =      { position = vector3_box(0.0, 0.11, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
+    },
+
+    -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
 	{	dependencies = {"owo_m203"},
@@ -793,7 +897,7 @@ mod.inject_fixes(this_variant, {
     -- Because they match the main parts first, if there is no match it means the main part is not attached
     -- ####################################################################################
     -- Muzzles
-    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_condom_helper_01"},
+    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01"},
         muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Bayonet
@@ -806,7 +910,7 @@ mod.inject_fixes(this_variant, {
     {	dependencies = {"owo_m203_helper_03|owo_underbarrel_shotgun_helper_03|owo_underbarrel_shotgun_helper_03_02"},
         bayonetac3 = {hide_mesh = {     {"bayonetac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
-    {	dependencies = {"owo_m203_helper_04|owo_underbarrel_shotgun_helper_04|owo_underbarrel_shotgun_helper_04_02"},
+    {	dependencies = {"owo_m203_helper_04|owo_underbarrel_shotgun_helper_04"},
         bayonetac4 = {hide_mesh = {     {"bayonetac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
     {	dependencies = {"owo_underbarrel_shotgun_helper_05|owo_underbarrel_shotgun_helper_05_02"},
@@ -844,6 +948,16 @@ mod.inject_fixes(this_variant, {
         barrelshroudac4 = {hide_mesh = {{"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         barrelshroudac5 = {hide_mesh = {{"barrelshroudac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
         barrelshroudac6 = {hide_mesh = {{"barrelshroudac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+    },
+    -- Foregrips
+    {   dependencies = {"owo_tactical_foregrip_ac1_01"},
+        foregripac1 = {hide_mesh = {{"foregripac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = {"owo_tactical_foregrip_ac2_01"},
+        foregripac2 = {hide_mesh = {{"foregripac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = {"owo_tactical_foregrip_ac3_01"},
+        foregripac3 = {hide_mesh = {{"foregripac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Receivers
 	{	dependencies = {"owo_bolt_helbore_bolt_01|owo_helbore_mas49_ass"},
