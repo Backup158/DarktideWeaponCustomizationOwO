@@ -279,6 +279,8 @@ mod.wc.sightac1_list = {
 	"owo_m16_sight_helper_01",
 	"owo_acog_sight_helper_01",
 	"owo_susat_ac1_01",
+	"owo_rear_sight_ak_empty_01",
+	"owo_rear_sight_ak_ac1_01",
 }
 --[[ sightac 2-4 covered by MT. it uses sightac for sightac1 but i hate that naming system so fuck that
 mod.wc.add_custom_attachments.sightac2 = "sightac2s"
@@ -328,6 +330,8 @@ mod.mt.table_append(mod.wc.sightacs2, {
 	"owo_m16_sight_helper_02",
 	"owo_acog_sight_helper_02",
 	"owo_susat_ac2_01",
+	"owo_rear_sight_ak_empty_02",
+	"owo_rear_sight_ak_ac2_01",
 })
 mod.mt.table_append(mod.wc.sightacs3, {
 	"owo_holosight_empty_03",
@@ -484,6 +488,15 @@ function mod.owo_grip_laser(variant_id, type)
 					3 classes/gear_settings.lua and utilities/weapon_templates.lua reference laser_pointer but it's commented out
 						prob before gras implemented the extension file or while testing
 				didnt work
+
+				TLDR
+				wc/extensions/flashlight_extension.lua
+				    can edit existing laser spot_angle to remove flashlight part and keep laser beam
+					add your own laser:
+						add an entry to that table
+						add check for FlashlightExtension.is_laser_pointer
+						maybe? add check in mod.has_flashlight
+						add check in mod.preview_flashlight
 			]]
 			name = "owo_grip_laser_01",
 			model = _item_ranged.."/flashlights/flashlight_05", type = "flashlight", 
@@ -2266,6 +2279,7 @@ function mod.owo_tactical_stock(variant_id, type)
 end
 
 -- Sight: Rear sights with flip up. Ladder Aperture Sights
+--	Helbore style only
 function mod.owo_rear_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
@@ -2355,45 +2369,51 @@ function mod.owo_rear_sight(variant_id, type)
 			}
 		},
 		-- ### Helper Parts ###
-		-- ladder sight select
+		-- ac1
+		-- 	ladder sight select
 		owo_rear_sight_ac1_01 = {
 			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "sightac1", 
 			mesh_move = false, parent = "sight",
 		},
-		-- mas peep
+		-- 	mas peep
 		owo_rear_sight_ac1_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "sightac1", 
 			mesh_move = false, parent = "sight",
 		},
-		-- ladder sight select
+		-- ac2
+		-- 	ladder sight select
 		owo_rear_sight_ac2_01 = {
 			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "sightac2", 
 			mesh_move = false, parent = "sight",
 		},
-		-- mas peep
+		-- 	mas peep
 		owo_rear_sight_ac2_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac2", 
 			mesh_move = false, parent = "sight",
 		},
-		-- mas 49/56 bulgey wulgey (fake)
+		-- 	mas 49/56 bulgey wulgey (fake)
 		owo_rear_sight_ac2_03 = {
 			model = _item_melee.."/heads/power_maul_head_03", type = "sightac2", 
 			mesh_move = false, parent = "sight",
 		},
+		-- ac3
 		owo_rear_sight_ac3_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "sightac3", 
 			mesh_move = false, parent = "sight",
 		},
+		-- ac4
 		owo_rear_sight_ac4_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "sightac4", 
 			mesh_move = false, parent = "sight",
 		},
-		-- mas seat/feet
+		-- ac5
+		-- 	mas seat/feet
 		owo_rear_sight_ac5_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "sightac5", 
 			mesh_move = false, parent = "sight",
 		},
-		-- mas bulgey wulgey (real)
+		-- ac6
+		-- 	mas bulgey wulgey (real)
 		owo_rear_sight_ac6_01 = {
 			model = _item_melee.."/heads/power_maul_head_03", type = "sightac6", 
 			mesh_move = false, parent = "sight",
@@ -2421,6 +2441,97 @@ function mod.owo_rear_sight(variant_id, type)
 		},
 		owo_rear_sight_empty_06 = {
 			model = "", type = "sightac6", 
+			mesh_move = false, parent = "sight"
+		},
+	})
+end
+
+-- Sight: AK Rear Sights
+function mod.owo_rear_sight_ak(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "sight" or type, {
+		{id = "owo_rear_sight_ak_01", name = "OwO AK Adjustable Rear Notch"},
+	})
+	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
+		{id = "owo_rear_sight_ak_empty_01", name = "Empty Sight", no_randomize = true},
+		{id = "owo_rear_sight_ak_ac1_01", name = "AK Range select 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "sightac2" or type, {
+		{id = "owo_rear_sight_ak_empty_02", name = "Empty Sight", no_randomize = true},
+		{id = "owo_rear_sight_ak_ac2_01", name = "AK Range select 2", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "sightac3" or type, {
+		{id = "owo_rear_sight_ak_empty_03", name = "Empty Sight", no_randomize = true},
+		{id = "owo_rear_sight_ak_ac3_01", name = "Rear Aperture 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "sightac4" or type, {
+		{id = "owo_rear_sight_ak_empty_04", name = "Empty Sight", no_randomize = true},
+		{id = "owo_rear_sight_ak_ac4_01", name = "Rear Aperture 2", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "sightac5" or type, {
+		{id = "owo_rear_sight_ak_empty_05", name = "Empty Sight", no_randomize = true},
+		{id = "owo_rear_sight_ak_ac5_01", name = "AK Bottom notch", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		-- Avtomat Kalashnikov
+		--	Ladder for the elevation
+		owo_rear_sight_ak_01 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_01", sightac2 = "owo_rear_sight_ak_ac2_01",
+				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
+				sightac5 = "owo_rear_sight_ak_ac5_01",
+			}
+		},
+		-- ### Helper Parts ###
+		-- ac1
+		--	AK range select
+		owo_rear_sight_ak_ac1_01 = {
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sightac1", 
+			mesh_move = false, parent = "sight",
+		},
+		-- ac2
+		--	AK range select
+		owo_rear_sight_ak_ac2_01 = {
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sightac2", 
+			mesh_move = false, parent = "sight",
+		},
+		-- ac3
+		owo_rear_sight_ak_ac3_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = "sightac3", 
+			mesh_move = false, parent = "sight",
+		},
+		-- ac4
+		owo_rear_sight_ak_ac4_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = "sightac4", 
+			mesh_move = false, parent = "sight",
+		},
+		-- ac5
+		--	ak rear butt
+		owo_rear_sight_ak_ac5_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = "sightac5", 
+			mesh_move = false, parent = "sight",
+		},
+		-- ### Empty ###
+		owo_rear_sight_ak_empty_01 = {
+			model = "", type = "sightac1", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_rear_sight_ak_empty_02 = {
+			model = "", type = "sightac2", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_rear_sight_ak_empty_03 = {
+			model = "", type = "sightac3", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_rear_sight_ak_empty_04 = {
+			model = "", type = "sightac4", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_rear_sight_ak_empty_05 = {
+			model = "", type = "sightac5", 
 			mesh_move = false, parent = "sight"
 		},
 	})

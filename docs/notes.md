@@ -8,6 +8,16 @@ MT Helper Reflex Housing        {"sight_2", 5,6}      6 hides housing for sight 
 1. Make sure the weapon file is in files_to_load
 2. Make sure the parts are declared with something in the main slot
 
+# Scope offsets
+no_scope_offset and scope_offset
+
+position: x, z, y
+    +x moves gun to the right
+    +y moves gun up
+rotation: y, x, z
+    +x put gun offset to the right
+    +y put gun below
+
 # Parts not accept transformations
 setting 'offset = false' makes it literally freeze on the screen, so it doesn't even rotate with the weapon
 
