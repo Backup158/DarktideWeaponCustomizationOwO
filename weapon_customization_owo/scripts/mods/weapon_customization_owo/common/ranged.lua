@@ -2449,7 +2449,8 @@ end
 -- Sight: AK Rear Sights
 function mod.owo_rear_sight_ak(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
-		{id = "owo_rear_sight_ak_01", name = "OwO AK Adjustable Rear Notch"},
+		{id = "owo_rear_sight_ak_01", name = "OwO AK Irons Notch"},
+		{id = "owo_rear_sight_ak_02", name = "OwO AK Irons w/ Dust Cover"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
 		{id = "owo_rear_sight_ak_empty_01", name = "Empty Sight", no_randomize = true},
@@ -2471,6 +2472,10 @@ function mod.owo_rear_sight_ak(variant_id, type)
 		{id = "owo_rear_sight_ak_empty_05", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac5_01", name = "AK Bottom notch", no_randomize = true},
 	})
+	mod.inject_attachments_owo(variant_id, "sightac6" or type, {
+		{id = "owo_rear_sight_ak_empty_06", name = "Empty Sight", no_randomize = true},
+		{id = "owo_rear_sight_ak_ac6_01", name = "AK Dust Cover", no_randomize = true},
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -2482,6 +2487,14 @@ function mod.owo_rear_sight_ak(variant_id, type)
 			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_01", sightac2 = "owo_rear_sight_ak_ac2_01",
 				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
 				sightac5 = "owo_rear_sight_ak_ac5_01",
+			}
+		},
+		owo_rear_sight_ak_02 = {
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_01", sightac2 = "owo_rear_sight_ak_ac2_01",
+				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
+				sightac5 = "owo_rear_sight_ak_ac5_01", sightac6 = "owo_rear_sight_ak_ac6_01",
 			}
 		},
 		-- ### Helper Parts ###
@@ -2513,6 +2526,12 @@ function mod.owo_rear_sight_ak(variant_id, type)
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = "sightac5", 
 			mesh_move = false, parent = "sight",
 		},
+		-- ac6
+		--	ak dust cover
+		owo_rear_sight_ak_ac6_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "sightac6", 
+			mesh_move = false, parent = "sight",
+		},
 		-- ### Empty ###
 		owo_rear_sight_ak_empty_01 = {
 			model = "", type = "sightac1", 
@@ -2532,6 +2551,10 @@ function mod.owo_rear_sight_ak(variant_id, type)
 		},
 		owo_rear_sight_ak_empty_05 = {
 			model = "", type = "sightac5", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_rear_sight_ak_empty_06 = {
+			model = "", type = "sightac6", 
 			mesh_move = false, parent = "sight"
 		},
 	})
