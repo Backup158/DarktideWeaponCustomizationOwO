@@ -2446,7 +2446,7 @@ function mod.owo_rear_sight(variant_id, type)
 	})
 end
 
--- Sight: AK Rear Sights
+-- Sight: Kalashnikov Rear Sights
 function mod.owo_rear_sight_ak(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_rear_sight_ak_01", name = "OwO AK Irons Notch"},
@@ -3591,10 +3591,10 @@ end
 --	Magpul magazine assists/pulls
 function mod.owo_magazine_magpull(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
-		{id = "owo_magazine_magpull_01", name = "OwO Autogun 1 w/ Mag Assist"},
-		{id = "owo_magazine_magpull_02", name = "OwO Ag2 w/ Mag Assist"},
-		{id = "owo_magazine_magpull_03", name = "OwO Ag3 w/ Mag Assist"},
-		{id = "owo_magazine_magpull_04", name = "OwO Ag4 w/ Mag Assist"},
+		{id = "owo_magazine_magpull_01", name = "OwO Magpul 1 (DANGER)"},
+		{id = "owo_magazine_magpull_02", name = "OwO Magpul 2 (DANGER)"},
+		{id = "owo_magazine_magpull_03", name = "OwO Magpul 3 (DANGER)"},
+		{id = "owo_magazine_magpull_04", name = "OwO Magpul 4 (DANGER)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac1" or type, {
 		{id = "owo_magazine_magpull_helper_01_empty", name = "Empty Magac1"},
@@ -3659,7 +3659,30 @@ function mod.owo_magazine_magpull(variant_id, type)
 	})
 end
 
+-- Magazine: AK
+--	Oh fuck the bullets don't move
+--[[
+function mod.owo_magazine_ak(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+		{id = "owo_magazine_ak_01", name = "OwO AK Mag"},
+		{id = "owo_magazine_ak_02", name = "OwO AK Mag Curvy"},
+		{id = "owo_magazine_ak_03", name = "OwO AK Mag Curvy (Extended)"},
+	})
 
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_magazine_ak_01 = {
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", parent = "receiver", 
+		},
+		owo_magazine_ak_02 = {
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", parent = "receiver", 
+		},
+		owo_magazine_ak_03 = {
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", parent = "receiver", 
+		},
+	})
+end
+]]
 
 --[[
 TEMPLATES

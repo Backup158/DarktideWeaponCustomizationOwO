@@ -83,6 +83,7 @@ mod.owo_tactical_foregrip(this_variant, "foregrip")
 mod.owo_tactical_stock(this_variant, "stock")
 mod.owo_heterosexual_foregrip(this_variant)
 mod.owo_rear_sight_ak(this_variant)
+--mod.owo_magazine_ak(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -125,6 +126,21 @@ mod.mt.inject_fixes(this_variant, {
 	{	dependencies = {"owo_autogun_magazine_flat_03"},
 		magazine = {offset = true, scale = vector3_box(1, 1, 0.6 ) },
 	},
+
+    -- ######
+	-- Magazine: AK
+	-- ######
+    --[[
+    {	dependencies = {"owo_magazine_ak_01"},
+        magazine = {offset = true, position = vector3_box(0, 0.0, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    },
+	{	dependencies = {"owo_magazine_ak_02"},
+        magazine = {offset = true, position = vector3_box(0, -0.002, -0.111), rotation = vector3_box(18, 0, 0), scale = vector3_box(1, 1, 0.7 ) },
+    },
+    {	dependencies = {"owo_magazine_ak_03"},
+        magazine = {offset = true, position = vector3_box(0, -0.002, -0.111), rotation = vector3_box(18, 0, 0), scale = vector3_box(1, 1, 1.15 ) },
+    },
+    ]]
 
     -- ######
     -- DREG GUNNER BARREL
@@ -416,6 +432,9 @@ mod.mt.inject_fixes(this_variant, {
 
     -- ######
 	-- Magazine: Mag Pull
+    --  Position transforms decided to not work
+    --  Good thing there's a parent node near the bottom (IT'S THE FINAL BULLET IN THE MAG LMFAO)
+    --      So the magpull moves up while you shoot 
 	-- ######
     {   dependencies = { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03|owo_magazine_magpull_04"},
         magazine =      { offset = true,    
@@ -446,17 +465,21 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Curved Mag
     {   dependencies = { "owo_magazine_magpull_04"},
-        owo_magac1 =    { offset = false, parent_node = 2,
-            position = vector3_box(0.034, 0.088, -0.219), rotation = vector3_box(114, 0, 90), scale = vector3_box(1.0, 0.44, 0.64),
+        owo_magac1 =    { offset = false, parent_node = 6,
+            position = vector3_box(-0.028, 0, 0), rotation = vector3_box(0, 3, 0), scale = vector3_box(1.0, 0.44, 0.64),
          },
     },
     --  All Mags
     {   dependencies = { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03|owo_magazine_magpull_04"},
-        
         owo_magac2 =    { offset = true,    position = vector3_box(0.0, 0.0, 0.0),   rotation = vector3_box(180, 0, 0),     scale = vector3_box(1.0, 1.0, 1.0) },
+    },
+    --  Loop 
+    {   dependencies = { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03"},
         owo_magac3 =    { offset = true,    position = vector3_box(0.0, -0.05, -0.02),   rotation = vector3_box(0, -90, 90),     scale = vector3_box(2.2, 1.27, 1.1) },
     },
-
+    {   dependencies = { "owo_magazine_magpull_04"},
+        owo_magac3 =    { offset = true,    position = vector3_box(0.0, -0.05, -0.02),   rotation = vector3_box(0, -90, 90),     scale = vector3_box(2.2, 1.27, 2.1) },
+    },
 
     -- ######
 	-- Barrel: M16
@@ -752,11 +775,13 @@ mod.mt.inject_fixes(this_variant, {
     -- Sight: Rear Sight
     -- ######
     -- AK
-    --      1 degree up to align with brauto front post
+    --      0.5 degree up to align with brauto front post
+    --      Pushed forwards to hide stock
     {	dependencies = {"owo_rear_sight_ak_01"},
         no_scope_offset =      { position = vector3_box(0, -0.1, 0.007), rotation = vector3_box(0.5, 0, 0)},
         sight =     {offset = true, position = vector3_box(0, 0.19, 0.119), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
     },
+    --      pushed even more forwards to hide receiver not covered by dust cover (aka the part that gets molested by dust)
     {	dependencies = {"owo_rear_sight_ak_02"},
         no_scope_offset =      { position = vector3_box(0, -0.15, 0.002), rotation = vector3_box(0.9, 0, 0)},
         sight =     {offset = true, position = vector3_box(0, 0.19, 0.125), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
