@@ -650,10 +650,9 @@ function mod.owo_scab_gunner_muzzle(variant_id, type)
 end
 
 -- Muzzle: Muzzle Brake
---		First one is Barrett 50 cal
 function mod.owo_muzzle_brake(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
-		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Break 1", no_randomize = true}
+		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Break 50 Cal", no_randomize = true}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
 		{id = "owo_muzzle_brake_helper_01_00", name = "Brake'vesa Empty", no_randomize = true},
@@ -2398,7 +2397,7 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 	})
 end
 
--- Stock: Tactical Stocks
+-- Stock: Tactical Stock
 function mod.owo_tactical_stock(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "stock" or type, {
 		{id = "owo_tactical_stock_01", name = "OwO Skeletal Stock"},
@@ -2408,6 +2407,113 @@ function mod.owo_tactical_stock(variant_id, type)
 		-- ### Base Parts ###
 		owo_tactical_stock_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+	})
+end
+
+-- Stock: Kalashnikov Stock
+function mod.owo_kalash_stock(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "stock" or type, {
+		{id = "owo_kalash_stock_01", name = "OwO Kalashnikov Stock 1"},
+		{id = "owo_kalash_stock_02", name = "OwO Kalashnikov Stock 2"},
+		{id = "owo_kalash_stock_03", name = "OwO Kalashnikov Stock 3"},
+		{id = "owo_kalash_stock_04", name = "OwO Kalashnikov Stock 4"},
+		{id = "owo_kalash_stock_05", name = "OwO Kalashnikov Stock 5"},
+		{id = "owo_kalash_stock_06", name = "OwO Kalashnikov Stock 6"},
+		{id = "owo_kalash_stock_07", name = "OwO Kalashnikov Stock 7"},
+		{id = "owo_kalash_stock_08", name = "OwO Kalashnikov Stock (M)"},
+		{id = "owo_kalash_stock_h_01", name = "OwO Wooden Kalashnikov 1"},
+		{id = "owo_kalash_stock_h_02", name = "OwO Wooden Kalashnikov 2"},
+		{id = "owo_kalash_stock_h_03", name = "OwO Wooden Kalashnikov 2"},
+		{id = "owo_kalash_stock_01c", name = "OwO Compact Kalashnikov 1"},
+		{id = "owo_kalash_stock_02c", name = "OwO Compact Kalashnikov 2"},
+		{id = "owo_kalash_stock_03c", name = "OwO Compact Kalashnikov 3"},
+		{id = "owo_kalash_stock_04c", name = "OwO Compact Kalashnikov 4"},
+		{id = "owo_kalash_stock_05c", name = "OwO Compact Kalashnikov 5"},
+		{id = "owo_kalash_stock_06c", name = "OwO Compact Kalashnikov 6"},
+		{id = "owo_kalash_stock_07c", name = "OwO Compact Kalashnikov 7"},
+		{id = "owo_kalash_stock_08c", name = "OwO Compact Kalashnikov (M)"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_kalash_stock_01 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_02 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_03 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_04 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_05 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_06 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_07 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_08 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		-- Helbore
+		owo_kalash_stock_h_01 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_h_02 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_h_03 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_04", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		-- Shotgun Compact
+		owo_kalash_stock_01c = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_02c = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_03c = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_04c = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_05c = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_06c = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_07c = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_kalash_stock_08c = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = "stock", 
 			mesh_move = false, parent = "receiver",
 		},
 	})

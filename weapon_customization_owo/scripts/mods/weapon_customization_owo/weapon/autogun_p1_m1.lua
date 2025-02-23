@@ -94,6 +94,7 @@ mod.owo_fin_grip(this_variant, "grip")
 mod.owo_tactical_foregrip(this_variant, "foregrip")
 mod.owo_heterosexual_foregrip(this_variant)
 mod.owo_tactical_stock(this_variant, "stock")
+mod.owo_kalash_stock(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -847,6 +848,23 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     {   dependencies = { "owo_tactical_stock_01" },
         stock =      { position = vector3_box(0.0, 0.11, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
+    },
+
+    -- ######
+	-- Stock: Kalash Stock
+	-- ######
+    -- Full
+    --  Shotgun
+    {   dependencies = { "owo_kalash_stock_01|owo_kalash_stock_02|owo_kalash_stock_03|owo_kalash_stock_04|owo_kalash_stock_05|owo_kalash_stock_06|owo_kalash_stock_07|owo_kalash_stock_08" },
+        stock =      { position = vector3_box(0.0, 0.027, 0.085), rotation = vector3_box(-169, 0, -180), scale = vector3_box(1.0, 1.35, 1.0 ) },
+    },
+    --  Helbore
+    {   dependencies = { "owo_kalash_stock_h_01|owo_kalash_stock_h_02|owo_kalash_stock_h_03" },
+        stock =      { position = vector3_box(0.0, 0.158, 0.077), rotation = vector3_box(-172, 0, 180), scale = vector3_box(1.0, 1.4, 1.0 ) },
+    },
+    -- Compact
+    {   dependencies = { "owo_kalash_stock_01c|owo_kalash_stock_02c|owo_kalash_stock_03c|owo_kalash_stock_04c|owo_kalash_stock_05c|owo_kalash_stock_06c|owo_kalash_stock_07c|owo_kalash_stock_08c" },
+        stock =      { position = vector3_box(0.0, -0.01, 0.083), rotation = vector3_box(-165, 0, -180), scale = vector3_box(1.0, 1.0, 1.0 ) },
     },
 
     -- ######
