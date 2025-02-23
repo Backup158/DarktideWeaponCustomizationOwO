@@ -12,11 +12,9 @@ mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 -- #########################################
 -- The rest of this is basically a copy of the core MT plugin file
 -- 	Many of the commands executed during on_all_mods_loaded are written directly into that function instead of being in their own independent functions
---	and the tables are accessed directly, instead of being passed as arguments
+--	and the tables are accessed directly by the function body
 --		passing them as args would be pretty redundant to keep pasting
---		maybe it'd be callable if it used mod.model_ids 
---		but that could have the issue of multiple mods adding to the wrong table and sorting making them appear in the wrong orders
---			probably just something i made up but eh
+--		maybe it'd be callable if the mt plugin wrote it as 'mod.model_ids' but who cares lol
 -- #########################################
 
 function mod.load_mod_file(relative_path)
@@ -28,7 +26,7 @@ function mod.on_all_mods_loaded()
 	---@class WeaponCustomizationMod
 	wc = get_mod("weapon_customization")
 	if not wc then
-		mod:error("Weapon Customization mod required")
+		mod:error("Extended Weapon Customization mod required")
 		return
 	end
 	mod.wc = wc
