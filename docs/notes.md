@@ -3,14 +3,17 @@ There are 15 regions in total, 1-15
 Reflex Sight Housing            {"sight", 6,7}
 Reflex Sight Reticle            {"sight", 1}
 MT Helper Reflex Housing        {"sight_2", 5,6}      6 hides housing for sight 1, 5 hides sights 2 and 3
+Autogun Irons                   {"sight", 2,3,4,5,6} -- one of these is the front rail lol
 
 # Parts not showing up?
 1. Make sure the weapon file is in files_to_load
 2. Make sure the parts are declared with something in the main slot
+3. Make sure the helper is being auto equipped by the main attachment
+4. If a helper part is parented to a part that uses the same mesh, it will not show up
+    Avoid this by parenting to the main mesh's parent and just copying the transforms to put them in the same place
 
 # Scope offsets
 no_scope_offset and scope_offset
-
 position: x, z, y
     +x moves gun to the right
     +y moves gun up
@@ -19,7 +22,13 @@ rotation: y, x, z
     +y put gun below
 
 # Parts not accept transformations
-setting 'offset = false' makes it literally freeze on the screen, so it doesn't even rotate with the weapon
+sometimes setting 'offset = false' makes it literally freeze on the screen, so it doesn't even rotate with the weapon
+can try parenting it to a specific node, but that can cause issues
+    1 we dont have a list of nodes
+    2 the node can move during gameplay
+
+# Bullet trails getting stolen
+This comes from having the main part be a muzzle that matches the actual muzzle that would've been used by the gun
 
 # MT to base
 **Autoguns** autogun_p1_m1.lua
