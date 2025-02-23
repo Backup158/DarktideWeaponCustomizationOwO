@@ -32,7 +32,25 @@ mod.mt.table_append(mod.wc.muzzle_2s, {
 	"owo_suppressor_helper_02",
 	"owo_condom_helper_empty",
 	"owo_condom_helper_01",
+	"owo_muzzle_brake_helper_01_00",
+	"owo_muzzle_brake_helper_01_01",
 })
+--	gonna be consistent with this even though i prefer muzzleac
+mod.wc.add_custom_attachments.muzzle_3 = "muzzle_3_list"
+mod.wc.muzzle_3_list = {
+	"owo_muzzle_brake_helper_02_00",
+	"owo_muzzle_brake_helper_02_01",
+}
+mod.wc.add_custom_attachments.muzzle_4 = "muzzle_4_list"
+mod.wc.muzzle_4_list = {
+	"owo_muzzle_brake_helper_03_00",
+	"owo_muzzle_brake_helper_03_01",
+}
+mod.wc.add_custom_attachments.muzzle_5 = "muzzle_5_list"
+mod.wc.muzzle_5_list = {
+	"owo_muzzle_brake_helper_04_00",
+	"owo_muzzle_brake_helper_04_01",
+}
 -- BARREL
 if mod.syn then
 	mod.mt.table_append(mod.wc.barrelshrouds, {
@@ -627,6 +645,71 @@ function mod.owo_scab_gunner_muzzle(variant_id, type)
 		},
 	})
 
+end
+
+-- Muzzle: Muzzle Brake
+--		First one is Barrett 50 cal
+function mod.owo_muzzle_brake(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
+		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Break 1", no_randomize = true}
+	})
+	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
+		{id = "owo_muzzle_brake_helper_01_00", name = "Brake'vesa Empty", no_randomize = true},
+		{id = "owo_muzzle_brake_helper_01_01", name = "OwO Muzzle Brake'vesa", no_randomize = true}
+	})
+	mod.inject_attachments_owo(variant_id, "muzzle_3" or type, {
+		{id = "owo_muzzle_brake_helper_02_00", name = "Brake'vesa Empty", no_randomize = true},
+		{id = "owo_muzzle_brake_helper_02_01", name = "OwO Muzzle Brake'vesa", no_randomize = true}
+	})
+	mod.inject_attachments_owo(variant_id, "muzzle_4" or type, {
+		{id = "owo_muzzle_brake_helper_03_00", name = "Brake'vesa Empty", no_randomize = true},
+		{id = "owo_muzzle_brake_helper_03_01", name = "OwO Muzzle Brake'vesa", no_randomize = true}
+	})
+	mod.inject_attachments_owo(variant_id, "muzzle_5" or type, {
+		{id = "owo_muzzle_brake_helper_04_00", name = "Brake'vesa Empty", no_randomize = true},
+		{id = "owo_muzzle_brake_helper_04_01", name = "OwO Muzzle Brake'vesa", no_randomize = true}
+	})
+
+	mod.inject_models(variant_id, {
+		owo_muzzle_brake_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_killshot_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			automatic_equip = {
+				muzzle_2 = "owo_muzzle_brake_helper_01_01", muzzle_3 = "owo_muzzle_brake_helper_02_01", 
+				muzzle_4 = "owo_muzzle_brake_helper_03_01", muzzle_5 = "owo_muzzle_brake_helper_04_01", 
+			}
+		},
+		-- ### Helpers ###
+		owo_muzzle_brake_helper_01_00 = {
+			model = "", type = "muzzle_2", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_01_01 = {
+			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_2", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_02_00 = {
+			model = "", type = "muzzle_3", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_02_01 = {
+			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_3", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_03_00 = {
+			model = "", type = "muzzle_4", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_03_01 = {
+			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_4", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_04_00 = {
+			model = "", type = "muzzle_5", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_04_01 = {
+			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_5", mesh_move = false, parent = "muzzle"
+		},
+		--[[owo_muzzle_brake_helper_05_00 = {
+			model = "", type = "muzzle_6", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_05_01 = {
+			model = _item_ranged.."/underbarrels/shotgun_pump_action_underbarrel_01", type = "muzzle_6", mesh_move = false, parent = "muzzle"
+		},]]
+	})
 end
 
 -- Barrel: Bolt Pistol Shotgun barrel (short)
@@ -2447,18 +2530,23 @@ function mod.owo_rear_sight(variant_id, type)
 end
 
 -- Sight: Kalashnikov Rear Sights
+--	I made 1 and 2 before noticing thte range select was already a part in game lmfao
 function mod.owo_rear_sight_ak(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
-		{id = "owo_rear_sight_ak_01", name = "OwO AK Irons Notch"},
+		{id = "owo_rear_sight_ak_01", name = "OwO AK Irons"},
 		{id = "owo_rear_sight_ak_02", name = "OwO AK Irons w/ Dust Cover"},
+		{id = "owo_rear_sight_ak_03", name = "OwO AK Scuffed Irons"},
+		{id = "owo_rear_sight_ak_04", name = "OwO AK Scuffed Irons2"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
 		{id = "owo_rear_sight_ak_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac1_01", name = "AK Range select 1", no_randomize = true},
+		{id = "owo_rear_sight_ak_ac1_02", name = "AK Range select 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2" or type, {
 		{id = "owo_rear_sight_ak_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac2_01", name = "AK Range select 2", no_randomize = true},
+		{id = "owo_rear_sight_ak_ac2_02", name = "AK Range select 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3" or type, {
 		{id = "owo_rear_sight_ak_empty_03", name = "Empty Sight", no_randomize = true},
@@ -2480,8 +2568,31 @@ function mod.owo_rear_sight_ak(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		-- Avtomat Kalashnikov
-		--	Ladder for the elevation
+		--	Using the elevation ladder ALREADY IN THE GAME
 		owo_rear_sight_ak_01 = {
+			model = _item_ranged.."/sights/autogun_rifle_sight_01", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_02", sightac2 = "owo_rear_sight_ak_ac2_02",
+				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
+				sightac5 = "owo_rear_sight_ak_ac5_01",
+			},
+			hide_mesh = {
+				{"sight", 2,3,4,5,6} -- one of these is the front rail lol
+			},
+		},
+		owo_rear_sight_ak_02 = {
+			model = _item_ranged.."/sights/autogun_rifle_sight_01", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_02", sightac2 = "owo_rear_sight_ak_ac2_02",
+				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
+				sightac5 = "owo_rear_sight_ak_ac5_01", sightac6 = "owo_rear_sight_ak_ac6_01",
+			},
+			hide_mesh = {
+				{"sight", 2,3,4,5,6} -- one of these is the front rail lol
+			},
+		},
+		--	Ladder for the elevation
+		owo_rear_sight_ak_03 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_01", sightac2 = "owo_rear_sight_ak_ac2_01",
@@ -2489,7 +2600,7 @@ function mod.owo_rear_sight_ak(variant_id, type)
 				sightac5 = "owo_rear_sight_ak_ac5_01",
 			}
 		},
-		owo_rear_sight_ak_02 = {
+		owo_rear_sight_ak_04 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_01", sightac2 = "owo_rear_sight_ak_ac2_01",
@@ -2504,26 +2615,36 @@ function mod.owo_rear_sight_ak(variant_id, type)
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sightac1", 
 			mesh_move = false, parent = "sight",
 		},
+		owo_rear_sight_ak_ac1_02 = {
+			model = _item_melee.."/grips/hatchet_grip_03", type = "sightac1", 
+			mesh_move = false, parent = "sight",
+		},
 		-- ac2
 		--	AK range select
 		owo_rear_sight_ak_ac2_01 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sightac2", 
 			mesh_move = false, parent = "sight",
 		},
+		owo_rear_sight_ak_ac2_02 = {
+			model = _item_melee.."/grips/hatchet_grip_03", type = "sightac2", 
+			mesh_move = false, parent = "sight",
+		},
 		-- ac3
+		--	AK iron notch
 		owo_rear_sight_ak_ac3_01 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = "sightac3", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac3", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ac4
+		--	AK iron notch
 		owo_rear_sight_ak_ac4_01 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = "sightac4", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac4", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ac5
 		--	ak rear butt
 		owo_rear_sight_ak_ac5_01 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = "sightac5", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac5", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ac6

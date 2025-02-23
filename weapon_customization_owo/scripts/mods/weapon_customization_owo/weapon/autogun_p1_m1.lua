@@ -23,6 +23,9 @@ if not mod.syn then -- these slots already exist in Syn's plugin
     mod.wc.attachment[this_variant].barrelshroudac6 = {}
 end
 mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autoguns yet
+mod.wc.attachment[this_variant].muzzle_3 = {}
+mod.wc.attachment[this_variant].muzzle_4 = {}
+mod.wc.attachment[this_variant].muzzle_5 = {}
 
 mod.wc.attachment[this_variant].foregripac1 = {}
 mod.wc.attachment[this_variant].foregripac2 = {}
@@ -62,28 +65,35 @@ mod.wc.attachment[this_variant].receiverac2 = {}
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_dreg_gunner_barrel(this_variant, "barrel")
-mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
-mod.owo_fin_grip(this_variant, "grip")
-mod.owo_suppressor(this_variant, "muzzle")
-mod.owo_jungle_mag(this_variant, "magazine")
 mod.owo_m16_barrel(this_variant, "barrel")
+mod.owo_wood_krieg(this_variant, "barrel")
+
+mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
 mod.owo_bayonet(this_variant, "bayonet")
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_underbarrel_shotgun(this_variant, "bayonet")
+
+mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_condom(this_variant, "muzzle")
+mod.owo_muzzle_brake(this_variant)
+
+mod.owo_jungle_mag(this_variant, "magazine")
+mod.owo_magazine_flat(this_variant, "magazine")
+mod.owo_magazine_magpull(this_variant, "magazine")
+--mod.owo_magazine_ak(this_variant)
+
 mod.owo_m16_sight(this_variant, "sight")
 mod.owo_pu_scope(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
 mod.owo_holosight(this_variant, "sight")
-mod.owo_wood_krieg(this_variant, "barrel")
-mod.owo_helbore_mas49(this_variant, "receiver")
-mod.owo_magazine_flat(this_variant, "magazine")
-mod.owo_magazine_magpull(this_variant, "magazine")
-mod.owo_tactical_foregrip(this_variant, "foregrip")
-mod.owo_tactical_stock(this_variant, "stock")
-mod.owo_heterosexual_foregrip(this_variant)
 mod.owo_rear_sight_ak(this_variant)
---mod.owo_magazine_ak(this_variant)
+
+mod.owo_helbore_mas49(this_variant, "receiver")
+
+mod.owo_fin_grip(this_variant, "grip")
+mod.owo_tactical_foregrip(this_variant, "foregrip")
+mod.owo_heterosexual_foregrip(this_variant)
+mod.owo_tactical_stock(this_variant, "stock")
 
 -- ############################################
 -- Inject Fixes
@@ -343,6 +353,8 @@ mod.mt.inject_fixes(this_variant, {
     },
 	{	dependencies = {"owo_condom_01"},
         muzzle =    {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
+    },
+    {	dependencies = {"owo_condom_01"},
         muzzle_2 =   {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
     },
     -- the skinny bayonet. sits on muzzle
@@ -350,6 +362,19 @@ mod.mt.inject_fixes(this_variant, {
             "autogun_bayonet_03"
         },
         bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
+    },
+
+    -- ######
+	-- Muzzle: Muzzle Brake
+	-- ######
+	{	dependencies = {"owo_muzzle_brake_01"},
+        muzzle =    {offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 1.0 ) },
+    },
+    {	dependencies = {"owo_muzzle_brake_01"},
+        muzzle_2 =   {offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+        muzzle_3 =   {offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+        muzzle_4 =   {offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+        muzzle_5 =   {offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.7, 0.75, 2.2 ) },
     },
 
     -- ######
@@ -775,18 +800,37 @@ mod.mt.inject_fixes(this_variant, {
     -- Sight: Rear Sight
     -- ######
     -- AK
+    {	dependencies = {"owo_rear_sight_ak_01"},
+        no_scope_offset =      { position = vector3_box(0, -0.1, 0.007), rotation = vector3_box(0.5, 0, 0)},
+        sight =     {offset = true, position = vector3_box(0, 0.24, -0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+        sightac5 = {offset = true, position = vector3_box(0.008, -0.01, 0.005), rotation = vector3_box(-145, 90, 145), scale = vector3_box(0.23, 0.24, 0.25 ) },
+    },
+    {	dependencies = {"owo_rear_sight_ak_02"},
+        no_scope_offset =      { position = vector3_box(0, -0.15, 0.002), rotation = vector3_box(0.9, 0, 0)},
+        sight =     {offset = true, position = vector3_box(0, 0.24, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+        sightac5 = {offset = true, position = vector3_box(0.008, -0.01, 0.003), rotation = vector3_box(-145, 90, 145), scale = vector3_box(0.23, 0.24, 0.25 ) },
+        sightac6 =     {offset = true, position = vector3_box(0.0, 0.0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 1.4, 1.0 ) },
+    },
+    {	dependencies = {"owo_rear_sight_ak_01|owo_rear_sight_ak_02"},
+        sightac1 = {offset = true, position = vector3_box(-0.004, -0.06, 0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.36, 0.36, 0.25 ) },
+        sightac2 = {offset = true, position = vector3_box(0.022, -0.06, 0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.32, 0.32, 0.06 ) },
+        sightac3 = {offset = true, position = vector3_box(0.009, -0.07, 0.0226), rotation = vector3_box(90, 90, 0), scale = vector3_box(0.23, 0.047, 0.22 ) },
+        sightac4 = {offset = true, position = vector3_box(-0.009, -0.07, 0.0226), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.23, 0.047, 0.22 ) },
+        
+    },
+    --   Scuffed
     --      0.5 degree up to align with brauto front post
     --      Pushed forwards to hide stock
-    {	dependencies = {"owo_rear_sight_ak_01"},
+    {	dependencies = {"owo_rear_sight_ak_03"},
         no_scope_offset =      { position = vector3_box(0, -0.1, 0.007), rotation = vector3_box(0.5, 0, 0)},
         sight =     {offset = true, position = vector3_box(0, 0.19, 0.119), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
     },
     --      pushed even more forwards to hide receiver not covered by dust cover (aka the part that gets molested by dust)
-    {	dependencies = {"owo_rear_sight_ak_02"},
+    {	dependencies = {"owo_rear_sight_ak_04"},
         no_scope_offset =      { position = vector3_box(0, -0.15, 0.002), rotation = vector3_box(0.9, 0, 0)},
         sight =     {offset = true, position = vector3_box(0, 0.19, 0.125), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
     },
-    {	dependencies = {"owo_rear_sight_ak_01|owo_rear_sight_ak_02"},
+    {	dependencies = {"owo_rear_sight_ak_03|owo_rear_sight_ak_04"},
         sightac1 = {offset = true, position = vector3_box(0, 0.034, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.38, 4.18 ) },
         --sightac2 = {offset = true, position = vector3_box(-0.008, -0.044, 0.016), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.8, 0.38, 4.18 ) },
         sightac2 = {offset = true, position = vector3_box(0, 0.034, -0.004), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.36, 0.73, 3.48 ) },
@@ -794,7 +838,7 @@ mod.mt.inject_fixes(this_variant, {
         sightac4 = {offset = true, position = vector3_box(-0.05, -0.034, -0.062), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.55, 0.27, 1.34 ) },
         sightac5 = {offset = true, position = vector3_box(-0.008, 0.012, -0.068), rotation = vector3_box(180, 0, 180), scale = vector3_box(1.04, 0.254, 1.62 ) },
     },
-    {	dependencies = {"owo_rear_sight_ak_02"},
+    {	dependencies = {"owo_rear_sight_ak_04"},
         sightac6 =     {offset = true, position = vector3_box(0.126, 0.126, 0.0), rotation = vector3_box(-180, -90, -180), scale = vector3_box(8.23, 2.8, 3.92 ) },
     },
 
@@ -1038,10 +1082,10 @@ mod.mt.inject_fixes(this_variant, {
         gripac = { hide_mesh = {{"gripac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Sights
-    {   dependencies = {"owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_rear_sight_ak_ac1_01|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
+    {   dependencies = {"owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_rear_sight_ak_ac1_01|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
         sightac1 = { hide_mesh = {{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = {"owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_rear_sight_ak_ac2_01|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
+    {   dependencies = {"owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_rear_sight_ak_ac2_01|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
         sightac2 = { hide_mesh = {{"sightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = {"owo_holosight_helper_03|owo_rear_sight_ac3_01|owo_rear_sight_ak_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
@@ -1053,7 +1097,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_rear_sight_ac5_01|owo_rear_sight_ak_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01"},
         sightac5 = { hide_mesh = {{"sightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_rear_sight_ac6_01|owo_rear_sight_ak_ac1_06|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01"},
+    {   dependencies = { "owo_rear_sight_ac6_01|owo_rear_sight_ak_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01"},
         sightac6 = { hide_mesh = {{"sightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_m16_sight_helper_07|owo_acog_sight_helper_07"},
