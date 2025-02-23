@@ -234,6 +234,8 @@ mod.wc.bayonetac5_list = {
 	"owo_underbarrel_shotgun_empty_05",
 	"owo_underbarrel_shotgun_helper_05",
 	"owo_underbarrel_shotgun_helper_05_02",
+	"owo_underbarrel_gl_empty_05",
+	"owo_underbarrel_shotgun_helper_05",
 }
 mod.wc.add_custom_attachments.bayonetac6 = "bayonetac6_list"
 mod.wc.bayonetac6_list = {
@@ -1771,22 +1773,31 @@ end
 function mod.owo_underbarrel_gl(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
 		{id = "owo_m203", name = "OwO M203 Grenade Launcher"},
+		{id = "owo_gp25", name = "OwO GP25 Grenade Launcher"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
 		{id = "owo_underbarrel_gl_empty_01", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_01", name = "OwO M203 ac1", no_randomize = true},
+		{id = "owo_gp25_helper_01", name = "OwO GP25 ac1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac2" or type, {
 		{id = "owo_underbarrel_gl_empty_02", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_02", name = "OwO M203 ac2", no_randomize = true},
+		{id = "owo_gp25_helper_02", name = "OwO GP25 ac2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac3" or type, {
 		{id = "owo_underbarrel_gl_empty_03", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_03", name = "OwO M203 ac3", no_randomize = true},
+		{id = "owo_gp25_helper_03", name = "OwO GP25 ac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac4" or type, {
 		{id = "owo_underbarrel_gl_empty_04", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_04", name = "OwO M203 ac4", no_randomize = true},
+		{id = "owo_gp25_helper_04", name = "OwO GP25 ac4", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac5" or type, {
+		{id = "owo_underbarrel_gl_empty_05", name = "Empty Bayonet", no_randomize = true},
+		{id = "owo_gp25_helper_05", name = "OwO GP25 ac5", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -1798,21 +1809,59 @@ function mod.owo_underbarrel_gl(variant_id, type)
 				bayonetac3 = "owo_m203_helper_03", bayonetac4 = "owo_m203_helper_04", 
 			}
 		},
+		owo_gp25 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "bayonet", 
+			mesh_move = false, parent = "barrel",
+			automatic_equip = { bayonetac1 = "owo_m203_helper_01", bayonetac2 = "owo_gp25_helper_02", 
+				bayonetac3 = "owo_gp25_helper_03", bayonetac4 = "owo_gp25_helper_04", 
+				bayonetac5 = "owo_gp25_helper_05"
+			}
+		},
 		-- ### Helper Parts ###
+		-- ac1
+		--	Barrel 2
 		owo_m203_helper_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_02", type = "bayonetac1", 
 			mesh_move = false, parent = "bayonet"
 		},
+		owo_gp25_helper_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_04", type = "bayonetac1", 
+			mesh_move = false, parent = "bayonet"
+		},
+		-- ac2
+		--	Barrel Texture
 		owo_m203_helper_02 = {
 			model = _item_melee.."/grips/combat_knife_grip_03", type = "bayonetac2", 
 			mesh_move = false, parent = "bayonet"
 		},
+		owo_gp25_helper_02 = {
+			model =_item_melee.."/pommels/hatchet_pommel_03", type = "bayonetac2", 
+			mesh_move = false, parent = "bayonet"
+		},
+		-- ac3
+		--	attacher
 		owo_m203_helper_03 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "bayonetac3", 
 			mesh_move = false, parent = "bayonet"
 		},
+		owo_gp25_helper_03 = {
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "bayonetac3", 
+			mesh_move = false, parent = "bayonet"
+		},
+		-- ac4
+		--	Trigger
 		owo_m203_helper_04 = {
 			model = _item_ranged.."/recievers/shotgun_double_barrel_receiver_01", type = "bayonetac4", 
+			mesh_move = false, parent = "bayonet"
+		},
+		owo_gp25_helper_04 = {
+			model = _item_ranged.."/grips/plasma_rifle_grip_03", type = "bayonetac4", 
+			mesh_move = false, parent = "bayonet"
+		},
+		-- ac5
+		--	grip top
+		owo_gp25_helper_05 = {
+			model = _item_ranged.."/grips/boltgun_pistol_grip_01", type = "bayonetac5", 
 			mesh_move = false, parent = "bayonet"
 		},
 		-- ### Empty ###
@@ -1832,7 +1881,10 @@ function mod.owo_underbarrel_gl(variant_id, type)
 			model = "", type = "bayonetac4", 
 			mesh_move = false, parent = "bayonet"
 		},
-		
+		owo_underbarrel_gl_empty_05 = {
+			model = "", type = "bayonetac5", 
+			mesh_move = false, parent = "bayonet"
+		},
 	})
 end
 
