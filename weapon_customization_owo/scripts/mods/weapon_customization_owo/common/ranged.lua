@@ -635,6 +635,7 @@ end
 
 -- Muzzle: Scab Gunner
 --		Recon Lasgun
+--[[
 function mod.owo_scab_gunner_muzzle(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
 		{id = "owo_scab_gunner_muzzle_01", name = "OwO Scab Gunner Muzzle 1"},
@@ -648,6 +649,7 @@ function mod.owo_scab_gunner_muzzle(variant_id, type)
 	})
 
 end
+]]
 
 -- Muzzle: Muzzle Brake
 function mod.owo_muzzle_brake(variant_id, type)
@@ -1013,8 +1015,10 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 	})
 end
 
+--[[
 -- Barrel: Scab Gunner
 --		TODO: Fix the fucked up las origin
+--		actually fuck it they can just use the one syn made
 function mod.owo_scab_gunner_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
 		{id = "owo_scab_gunner_barrel_01", name = "OwO Scab Gunner Barrel 1"},
@@ -1043,6 +1047,7 @@ function mod.owo_scab_gunner_barrel(variant_id, type)
 	})
 
 end
+]]
 
 -- Barrel: M16 barrels
 -- 		Autoguns

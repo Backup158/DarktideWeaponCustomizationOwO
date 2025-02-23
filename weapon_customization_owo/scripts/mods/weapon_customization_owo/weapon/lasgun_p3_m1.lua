@@ -41,8 +41,8 @@ mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 -- ############################################
 mod.owo_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant)
-mod.owo_scab_gunner_muzzle(this_variant)
-mod.owo_scab_gunner_barrel(this_variant)
+--mod.owo_scab_gunner_muzzle(this_variant)
+--mod.owo_scab_gunner_barrel(this_variant)
 mod.owo_underbarrel_shotgun(this_variant, "bayonet")
 mod.owo_condom(this_variant)
 mod.owo_holosight(this_variant, "sight")
@@ -56,18 +56,14 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Magazine: FLAT LASGUN
 	-- ######
-	{	dependencies = { "owo_lasgun_magazine_flat_01", 
-			"!volley_lasgun_receiver_01",
-			"!volley_lasgun_receiver_02",
-			"!volley_lasgun_receiver_03",
-		},
-		magazine = { offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.75)},
-	},
 	-- trying to align with syn's aquilon barrel
 	{	dependencies = { "owo_lasgun_magazine_flat_01", 
 			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03"
 		},
 		magazine = { offset = true, position = vector3_box(0, 0.05, 0.03), scale = vector3_box(1, 1, 0.5)},
+	},
+    {	dependencies = { "owo_lasgun_magazine_flat_01"},
+		magazine = { offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.75)},
 	},
 
 	-- ######
@@ -111,6 +107,7 @@ mod.mt.inject_fixes(this_variant, {
 		bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
 	},
 
+    --[[
 	-- ######
 	-- SCAB GUNNER MUZZLE
 	-- ######
@@ -124,7 +121,6 @@ mod.mt.inject_fixes(this_variant, {
 		},
 		muzzle = { offset = true,  position = vector3_box(0, 0.033, -0.02),  rotation = vector3_box(0, 0, 0),  scale = vector3_box(1, 1, 1.76)},
 	},
-
 	-- ######
 	-- SCAB GUNNER BARREL
 	-- ######
@@ -146,6 +142,7 @@ mod.mt.inject_fixes(this_variant, {
 		barrel = { offset = false,  parent = "receiver",  position = vector3_box(0, 0.16, 0.079),  rotation = vector3_box(0, 0, 0),  scale = vector3_box(1.05, 1.5, 1.)},
 		barrelac = { offset = true,  position = vector3_box(0, 0.11, -0.018),  rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1, 0.885, 1.5)},
 	},
+    ]]
 
     -- ######
 	-- Bayonet: UNDERBARREL SHOTGUN
