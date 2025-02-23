@@ -633,24 +633,6 @@ function mod.owo_condom(variant_id, type)
 	})
 end
 
--- Muzzle: Scab Gunner
---		Recon Lasgun
---[[
-function mod.owo_scab_gunner_muzzle(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
-		{id = "owo_scab_gunner_muzzle_01", name = "OwO Scab Gunner Muzzle 1"},
-	})
-
-	mod.inject_models(variant_id, {
-		owo_scab_gunner_muzzle_01 = {
-			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle", 
-			mesh_move = false, parent = "barrel",
-		},
-	})
-
-end
-]]
-
 -- Muzzle: Muzzle Brake
 function mod.owo_muzzle_brake(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
@@ -1014,40 +996,6 @@ function mod.owo_dreg_gunner_barrel(variant_id, type)
 		},
 	})
 end
-
---[[
--- Barrel: Scab Gunner
---		TODO: Fix the fucked up las origin
---		actually fuck it they can just use the one syn made
-function mod.owo_scab_gunner_barrel(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		{id = "owo_scab_gunner_barrel_01", name = "OwO Scab Gunner Barrel 1"},
-	})
-	mod.inject_attachments_owo(variant_id, "barrelac" or type, {
-		{id = "owo_scab_gunner_barrelac_empty", name = "OwO Scab Gunner Barrel empty"},
-		{id = "owo_scab_gunner_barrelac_01", name = "OwO Scab Gunner Barrel'vesa 1"},
-	})
-
-	mod.inject_models(variant_id, {
-		owo_scab_gunner_barrel_01 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
-			automatic_equip = {
-				barrelac = "owo_scab_gunner_barrelac_01",
-			},
-		},
-		owo_scab_gunner_barrelac_empty = {
-			model = "", type = "barrelac", 
-			mesh_move = false, parent = "barrel"
-		},
-		owo_scab_gunner_barrelac_01 = {
-			model = _item_melee.."/grips/combat_sword_grip_03", type = "barrelac", 
-			mesh_move = false, parent = "barrel"
-		},
-	})
-
-end
-]]
 
 -- Barrel: M16 barrels
 -- 		Autoguns
