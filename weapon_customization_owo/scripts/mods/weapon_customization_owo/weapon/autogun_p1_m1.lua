@@ -87,6 +87,7 @@ mod.owo_pu_scope(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
 mod.owo_holosight(this_variant, "sight")
 mod.owo_rear_sight_ak(this_variant)
+mod.owo_alt_viewmodel(this_variant)
 
 mod.owo_helbore_mas49(this_variant, "receiver")
 
@@ -642,6 +643,33 @@ mod.mt.inject_fixes(this_variant, {
     },
 
     -- ######
+	-- Sight_2: Alt Viewmodels
+	-- ######
+    --  Doom
+    {   dependencies = { "owo_alt_viewmodel_01" },
+        scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
+    },
+    {   dependencies = { "owo_alt_viewmodel_02" },
+        scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
+    },
+    {   dependencies = { "owo_alt_viewmodel_03" },
+        scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
+    },
+    -- CS:S
+    {   dependencies = { "owo_alt_viewmodel_04" },
+        scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+    },
+    -- Hipfire
+    {   dependencies = { "owo_alt_viewmodel_05" },
+        scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+    },
+
+    -- ######
     -- Sight: Holographic Sights + Magnifier
     -- ######
     -- EOTech
@@ -1112,10 +1140,10 @@ mod.mt.inject_fixes(this_variant, {
         gripac = { hide_mesh = {{"gripac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Sights
-    {   dependencies = {"owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_rear_sight_ak_ac1_01|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
+    {   dependencies = {"owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_rear_sight_ak_ac1_01|owo_rear_sight_ak_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
         sightac1 = { hide_mesh = {{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = {"owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_rear_sight_ak_ac2_01|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
+    {   dependencies = {"owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_rear_sight_ak_ac2_01|owo_rear_sight_ak_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
         sightac2 = { hide_mesh = {{"sightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = {"owo_holosight_helper_03|owo_rear_sight_ac3_01|owo_rear_sight_ak_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},

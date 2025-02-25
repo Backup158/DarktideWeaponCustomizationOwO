@@ -21,12 +21,14 @@ local this_variant = "bolter_p1_m1" -- Spearhead Boltgun
 -- ############################################
 mod.owo_california_bolter(this_variant, "receiver")
 
+mod.owo_alt_viewmodel(this_variant)
+
 -- ############################################
 -- Inject Fixes
 -- ############################################
 mod.mt.inject_fixes(this_variant, {
     -- ######
-    -- California Bolter receiver main
+    -- Receiver: California Bolter receiver
     -- ######
     {   dependencies = { "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08"},
         receiver = { offset = true,  position = vector3_box(0, 0, 0.054), scale = vector3_box(1, 1, 0.64)},    
@@ -52,5 +54,32 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08", 
         },
         grip = { offset = true,  position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.564)}
+    },
+
+    -- ######
+	-- Sight_2: Alt Viewmodels
+	-- ######
+    --  Doom
+    {   dependencies = { "owo_alt_viewmodel_01" },
+        scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
+    },
+    {   dependencies = { "owo_alt_viewmodel_02" },
+        scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
+    },
+    {   dependencies = { "owo_alt_viewmodel_03" },
+        scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
+    },
+    -- CS:S
+    {   dependencies = { "owo_alt_viewmodel_04" },
+        scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+    },
+    -- Hipfire
+    {   dependencies = { "owo_alt_viewmodel_05" },
+        scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
     },
 })

@@ -44,6 +44,8 @@ mod.owo_suppressor(this_variant)
 mod.owo_condom(this_variant)
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_underbarrel_shotgun(this_variant, "bayonet")
+
+mod.owo_alt_viewmodel(this_variant)
 mod.owo_holosight(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
 
@@ -151,6 +153,33 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac5 =    {offset = true, position = vector3_box(0, 0.246, 0.082), rotation = vector3_box(-180, -90, 90), scale = vector3_box(0.75, 0.95, 0.335 ), hide_mesh = {{"bayonetac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
         -- Connector
         bayonetac6 =    {offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1, 1.0 ) },
+    },
+
+    -- ######
+	-- Sight_2: Alt Viewmodels
+	-- ######
+    --  Doom
+    {   dependencies = { "owo_alt_viewmodel_01" },
+        scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
+    },
+    {   dependencies = { "owo_alt_viewmodel_02" },
+        scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
+    },
+    {   dependencies = { "owo_alt_viewmodel_03" },
+        scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
+    },
+    -- CS:S
+    {   dependencies = { "owo_alt_viewmodel_04" },
+        scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+    },
+    -- Hipfire
+    {   dependencies = { "owo_alt_viewmodel_05" },
+        scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
     },
 
 	-- ######

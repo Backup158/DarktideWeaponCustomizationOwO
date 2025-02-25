@@ -399,15 +399,14 @@ mod.wc.sightac7_list = {
 	"owo_acog_sight_helper_07",
 }
 -- SIGHT_2
---[[mod.mt.table_append(mod.wc.sights_2, { 
-
 mod.mt.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sight_2 is called
-	--"owo_reticle_helper_empty",
-	"owo_reticle_helper_01",
-	"owo_reticle_helper_02",
-	"owo_reticle_helper_03",
+	"owo_alt_viewmodel_empty",
+	"owo_alt_viewmodel_01",
+	"owo_alt_viewmodel_02",
+	"owo_alt_viewmodel_03",
+	"owo_alt_viewmodel_04",
+	"owo_alt_viewmodel_05",
 })
-]]
 --[[ scope zoom fucked up. figure out later
 mod.mt.table_append(mod.wc.scopes, {
 	"lasgun_rifle_elysian_muzzle_01",
@@ -3543,6 +3542,46 @@ end
 	})
 end
 ]]
+
+-- Sight_2: Alternative viewmodel
+function mod.owo_alt_viewmodel(variant_id)
+	-- Adding to existing table, where empty sight is already included
+	mod.inject_attachments_owo(variant_id, "sight_2", {
+		{id = "owo_alt_viewmodel_empty", name = "Empty sight_2"},
+		{id = "owo_alt_viewmodel_01", name = "Doom Aim (Low)"},
+		{id = "owo_alt_viewmodel_02", name = "Doom Aim (Close)"},
+		{id = "owo_alt_viewmodel_03", name = "Doom Aim (Low/Close)"},
+		{id = "owo_alt_viewmodel_04", name = "CS:S Zoom"},
+		{id = "owo_alt_viewmodel_05", name = "Hipfire"},
+	})
+
+	mod.inject_models(variant_id, {
+		owo_alt_viewmodel_empty = {
+			model = "", type = "sight_2", 
+			parent = "sight",
+		},
+		owo_alt_viewmodel_01 = {
+			model = "", type = "sight_2", 
+			parent = "sight",
+		},
+		owo_alt_viewmodel_02 = {
+			model = "", type = "sight_2", 
+			parent = "sight",
+		},
+		owo_alt_viewmodel_03 = {
+			model = "", type = "sight_2", 
+			parent = "sight",
+		},
+		owo_alt_viewmodel_04 = {
+			model = "", type = "sight_2", 
+			parent = "sight",
+		},
+		owo_alt_viewmodel_05 = {
+			model = "", type = "sight_2", 
+			parent = "sight",
+		},
+	})
+end
 
 -- Magazine: Flat
 --		Lasgun and Autogun mags
