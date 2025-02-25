@@ -13,6 +13,7 @@ local this_variant = "flamer_p1_m1" -- Flamer
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
+mod.wc.attachment[this_variant].sight_2 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -53,5 +54,10 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_alt_viewmodel_05" },
         scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
         no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+    },
+    -- Point Shooting
+    {   dependencies = { "owo_alt_viewmodel_06" },
+        scope_offset =          { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), lense_transparency = false},
+        no_scope_offset =       { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), lense_transparency = false},
     },
 })
