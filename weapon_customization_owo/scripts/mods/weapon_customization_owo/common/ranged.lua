@@ -3476,6 +3476,7 @@ end
 ]]
 
 -- Sight_2: Alternative viewmodel
+-- 	Avoid on flamer_p1_m1
 function mod.owo_alt_viewmodel(variant_id)
 	-- Adding to existing table, where empty sight is already included
 	mod.inject_attachments_owo(variant_id, "sight_2", {

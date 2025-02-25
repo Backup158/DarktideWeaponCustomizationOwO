@@ -16,7 +16,8 @@ mod.load_mod_file("weapon/autogun_p1_m1") -- Infantry/Braced/Vigilant
 mod.load_mod_file("weapon/autopistol_p1_m1")
 -- mod.load_mod_file("weapon/ogryn_gauntlet_p1_m1")
 -- mod.load_mod_file("weapon/ogryn_rippergun_p1_m1")
--- mod.load_mod_file("weapon/ogryn_heavystubber_p1_m1")
+-- mod.load_mod_file("weapon/ogryn_heavystubber_p1_m1") -- Twin Linked
+-- mod.load_mod_file("weapon/ogryn_heavystubber_p1_m1") -- Single shot
 -- mod.load_mod_file("weapon/ogryn_thumper_p1_m1")
 mod.load_mod_file("weapon/flamer_p1_m1")
 mod.load_mod_file("weapon/plasmagun_p1_m1")
