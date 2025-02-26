@@ -2028,14 +2028,14 @@ end
 ]]
 function mod.owo_california_bolter(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "receiver" or type, {
-		{id = "owo_california_bolter_01", name = "OwO California Bolter 1"},
-		{id = "owo_california_bolter_02", name = "OwO California Bolter 2"},
-		{id = "owo_california_bolter_03", name = "OwO California Bolter 3"},
-		{id = "owo_california_bolter_04", name = "OwO California Bolter 4"},
-		{id = "owo_california_bolter_05", name = "OwO California Bolter 5"},
-		{id = "owo_california_bolter_06", name = "OwO California Bolter 6"},
-		{id = "owo_california_bolter_07", name = "OwO California Bolter 7"},
-		{id = "owo_california_bolter_08", name = "OwO California Bolter 8"},
+		{id = "owo_california_bolter_01", name = "OwO Vertically Challenged Bolter 1"},
+		{id = "owo_california_bolter_02", name = "OwO Vertically Challenged Bolter 2"},
+		{id = "owo_california_bolter_03", name = "OwO Vertically Challenged Bolter 3"},
+		{id = "owo_california_bolter_04", name = "OwO Vertically Challenged Bolter 4"},
+		{id = "owo_california_bolter_05", name = "OwO Vertically Challenged Bolter 5"},
+		{id = "owo_california_bolter_06", name = "OwO Vertically Challenged Bolter 6"},
+		{id = "owo_california_bolter_07", name = "OwO Vertically Challenged Bolter 7"},
+		{id = "owo_california_bolter_08", name = "OwO Vertically Challenged Bolter 8"},
 	})
 	-- 1-7
 	mod.inject_models(variant_id, {
