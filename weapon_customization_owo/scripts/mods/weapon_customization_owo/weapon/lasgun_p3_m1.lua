@@ -46,7 +46,7 @@ mod.owo_condom(this_variant)
 
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_holosight(this_variant, "sight")
-mod.owo_telescopic_sight(this_variant, "sight")
+mod.owo_telescopic_sight(this_variant)
 
 -- ############################################
 -- Inject Fixes
@@ -271,7 +271,7 @@ mod.mt.inject_fixes(this_variant, {
     -- Trijicon ACOG
     --  -------------------------------------------
     --  ACOG only
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top" },
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
         sightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
         sightac2 =       { offset = true, position  = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -283,31 +283,46 @@ mod.mt.inject_fixes(this_variant, {
         -- Cable
         sightac7 =       { offset = true, position  = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
     },
-    --      Recon Body
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
-			"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
-		},
-        sight =             { offset = true, position  = vector3_box(0, 0.138, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-    },
-    --      Non Recon body
+    --      Syn's Hellgun Receivers
 	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
+            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
         },
         sight =             { offset = true, position  = vector3_box(0, 0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        },
+    {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
+            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+        },
+        sight =             { offset = true, position  = vector3_box(0, 0.108, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    --      Else: Recon Body
+    --          Recon rail already put acog forwards
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
+			--"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
+		},
+        sight =             { offset = true, position  = vector3_box(0, 0.138, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --      Sight 2 Adjustment
     --          For whatever fucking reason, the recon body won't apply position transformations to sight_2
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
-            "receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
-        },
-        lens =              {offset = true, parent = "sight", position = vector3_box(0, 0.156, 0.2195), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =            {offset = true, parent = "sight", position = vector3_box(0, 0.038, 0.2195), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =           { offset = false, position  = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-    },
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
+            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
         },
         lens =              {offset = true, parent = "sight", position = vector3_box(0, 0.064, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =            {offset = true, parent = "sight", position = vector3_box(0, -0.052, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =           { offset = true, position  = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
+            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
+        },
+        lens =              {offset = true, parent = "sight", position = vector3_box(0, 0.138, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            {offset = true, parent = "sight", position = vector3_box(0, 0.015, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = true, position  = vector3_box(0, 0.072, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
+            --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
+        },
+        lens =              {offset = true, parent = "sight", position = vector3_box(0, 0.156, 0.2195), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            {offset = true, parent = "sight", position = vector3_box(0, 0.038, 0.2195), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = false, position  = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --  ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top" },
@@ -360,8 +375,14 @@ mod.mt.inject_fixes(this_variant, {
 		},
         scope_offset =      { position = vector3_box(0, -0.03, 0.024), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
+    --          Funnily enough, the forward ones have the same alignment in this case
+    {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1",
+			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+		},
+        scope_offset =      { position = vector3_box(0, -0.03, 0.024), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+    },
     --      Else: Recon Receiver
-	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_susat_01|owo_susat_02",
+	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_susat_01|owo_susat_02|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
 			--"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
         scope_offset =      { position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true},
@@ -378,7 +399,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_susat_02_top",
             "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
 		},
-        scope_offset =      { position = vector3_box(0, 0.3, -0.0385), rotation = vector3_box(0, 0, 0), lense_transparency = false},
+        scope_offset =      { position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },
     --      Else: Recon Receiver
     --          ACOG
