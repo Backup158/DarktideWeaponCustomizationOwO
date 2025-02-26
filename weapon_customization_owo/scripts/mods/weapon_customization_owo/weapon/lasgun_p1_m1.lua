@@ -227,10 +227,11 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Sight: Telescopic Sights
     -- ######
-    -- Trijicon ACOG
+    --  -------------------------------------------
+    --  Trijicon ACOG
+    --  -------------------------------------------
     --  ACOG only
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top" },
-		sight =             { offset = true, position  = vector3_box(0, 0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
         sightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
         sightac2 =       { offset = true, position  = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -242,13 +243,35 @@ mod.mt.inject_fixes(this_variant, {
         -- Cable
         sightac7 =       { offset = true, position  = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
     },
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top" },
+        sight =             { offset = true, position  = vector3_box(0, 0.046, 0.148), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
+        sight =             { offset = true, position  = vector3_box(0, 0.108, 0.148), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    --      Sight 2 Adjustment
+    --          For whatever fucking reason, the recon body won't apply position transformations to sight_2
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
+        },
+        lens =              {offset = true, parent = "sight", position = vector3_box(0, 0.064, 0.0525), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            {offset = true, parent = "sight", position = vector3_box(0, -0.052, 0.0495), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = true, position  = vector3_box(0, 0.0, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
+        },
+        lens =              {offset = true, parent = "sight", position = vector3_box(0, 0.138, 0.0525), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            {offset = true, parent = "sight", position = vector3_box(0, 0.015, 0.0495), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = true, position  = vector3_box(0, 0.072, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
     --  ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top" },
         sight_secondary =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
+    --  -------------------------------------------
     --  SUSAT
+    --  -------------------------------------------
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02|owo_susat_02_top" },
-        sight =             { offset = true, position  = vector3_box(0, 0.006, 0.163), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =             { offset = true, position  = vector3_box(0, 0.006, 0.18), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- cylinder thing
         sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {sightac1 = 1} },
         -- Rear
@@ -259,25 +282,31 @@ mod.mt.inject_fixes(this_variant, {
         -- Reticle
         sightac5 =       { offset = true, position  = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
         sightac6 =       { offset = true, position  = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
+        sightac7 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
+
+        lens =              {offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), data = {lens = 1}},
+	    lens_2 =            {offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
     },
     --  SUSAT with red dot
     {   dependencies = { "owo_susat_02|owo_susat_02_top" },
             sight_secondary =     { offset = true, position  = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
+    --  -------------------------------------------
     --  Aligning sights to crosshair
-    --      Aiming with ACOG
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_susat_02",
-		},
-        scope_offset =      { position = vector3_box(0, 0.04, 0.00), rotation = vector3_box(0, 0, 0)},
+    --  -------------------------------------------
+    --  Aiming with ACOG
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1",},
+        scope_offset =      { position = vector3_box(0, 0.04, -0.018), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
-    --      Aiming with RMR
-    {   dependencies = { "owo_acog_sight_02_top",
-		},
-        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.074), rotation = vector3_box(0, 0, 0)},
+    {   dependencies = { "owo_susat_01|owo_susat_02",},
+        scope_offset =      { position = vector3_box(0, 0.04, -0.016), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
-    {   dependencies = { "owo_susat_02_top",
-		},
-        scope_offset =      { position = vector3_box(0.0002, 0.3, -0.063), rotation = vector3_box(0, 0, 0)},
+    --  Aiming with RMR
+    {   dependencies = { "owo_acog_sight_02_top|owo_acog_sight_02f_top",},
+        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.074), rotation = vector3_box(0, 0, 0), lense_transparency = false},
+    },
+    {   dependencies = { "owo_susat_02_top",},
+        scope_offset =      { position = vector3_box(0.0002, 0.3, -0.079), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },
 
 	-- #########################
@@ -332,7 +361,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_acog_sight_helper_06|owo_susat_ac6_01"},
         sightac6 = { hide_mesh = {{"sightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_acog_sight_helper_07"},
+    {   dependencies = { "owo_acog_sight_helper_07|owo_susat_ac7_01"},
         sightac7 = { hide_mesh = {{"sightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01"},
