@@ -289,6 +289,30 @@ mod.wc.owo_magac5_list = {
 	"owo_jungle_mag_connector_r_01",
 }
 -- SIGHT
+mod.mt.table_append(mod.wc.sights, {
+	"owo_holosight_01_01",
+	"owo_holosight_01_02",
+	"owo_holosight_01_03",
+	"owo_acog_sight_01",
+	"owo_acog_sight_02_01", 
+	"owo_acog_sight_02_02", 
+	"owo_susat_01", 
+	"owo_susat_01_ps", 
+	"owo_susat_02_01", 
+	"owo_susat_02_02",
+})
+mod.mt.table_append(mod.wc.scopes, {
+	"axe_pommel_01",
+	"axe_pommel_02",
+	"axe_pommel_03",
+	"axe_pommel_04",
+})
+-- pommel 1 is 1x
+mod.wc.sniper_zoom_levels.axe_pommel_01 = 50
+mod.wc.sniper_zoom_levels.axe_pommel_02 = 40 	-- 1.25x
+mod.wc.sniper_zoom_levels.axe_pommel_03 = 33 	-- 1.5x
+mod.wc.sniper_zoom_levels.axe_pommel_04 = 29 	-- 1.75x
+
 mod.wc.add_custom_attachments.sightac1 = "sightac1_list"
 mod.wc.sightac1_list = {
 	"owo_holosight_empty_01",
@@ -407,12 +431,6 @@ mod.mt.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sig
 	"owo_alt_viewmodel_04",
 	"owo_alt_viewmodel_05",
 })
---[[ scope zoom fucked up. figure out later
-mod.mt.table_append(mod.wc.scopes, {
-	"lasgun_rifle_elysian_muzzle_01",
-})
-mod.wc.sniper_zoom_levels.lasgun_rifle_elysian_muzzle_01 = 15
-]]
 mod.wc.add_custom_attachments.sight_secondary = "sight_secondary_list"
 mod.wc.sight_secondary_list = {
 	"owo_holosight_empty2",
@@ -3114,16 +3132,20 @@ function mod.owo_telescopic_sight(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_acog_sight_01 = {
-			model = _item_ranged.."/sights/reflex_sight_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
 			mesh_move = false, parent = "",
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+			automatic_equip = { 
+				--lens = "scope_lens_default", lens_2 = "scope_lens_default",
+				lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
+				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 6,7}, -- Hides the housing
+				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_02_01 = {

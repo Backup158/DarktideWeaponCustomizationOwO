@@ -286,7 +286,10 @@ mod.mt.inject_fixes(this_variant, {
     --      Non Recon body
 	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01|owo_acog_sight_02_02",
         },
+        lens =              {offset = true, position = vector3_box(0, 0.064, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            {offset = true, position = vector3_box(0, -0.052, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight =             { offset = true, position  = vector3_box(0, 0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_2 =           { offset = true, position  = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --  ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02_01|owo_acog_sight_02_02" },
@@ -331,7 +334,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_02_01|owo_susat_01|owo_susat_02_01",
 			-- "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03|volley_lasgun_receiver_03b",
 		},
-        scope_offset =      { position = vector3_box(0, 0.04, 0.024), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, 0.04, 0.024), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
     --      Aiming with RMR
     --          Recon Receiver

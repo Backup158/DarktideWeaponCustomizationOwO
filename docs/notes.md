@@ -30,6 +30,27 @@ can try parenting it to a specific node, but that can cause issues
 # Bullet trails getting stolen
 This comes from having the main part be a muzzle that matches the actual muzzle that would've been used by the gun
 
+# Adding scopes
+in Ranged.lua
+1. Declare your scope. Use a base mesh that is NOT a muzzle/barrel, and make it invisible. Let's use axe_pommel_01
+2. auto equip lens1 and lens2 in the attachment declaration
+3. Append the scope name to wc.sights table
+    mod.mt.table_append(mod.wc.sights, {
+        "owo_holosight_01_01",
+    })
+4. Append base mesh to scope table to affect zoom
+    mod.mt.table_append(mod.wc.scopes, {
+        "axe_pommel_01",
+    })
+    NOTE: Syn already used
+        power_sword_grip_02
+        power_sword_grip_03
+5. Set zoom level. zoom = (50/n magnification). ex: 2x mag is (50/2) = 25
+    mod.wc.sniper_zoom_levels.axe_pommel_01 = 15
+in <weapon>.lua
+1. When aligning lenses, add `data = {lens = x}` where x is which lense# it is, lens is lens = 1
+2. In scope_offset, lense_transparency = true to hide lenses
+
 # MT to base
 **Autoguns** autogun_p1_m1.lua
 *IAG*
