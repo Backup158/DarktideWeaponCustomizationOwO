@@ -30,8 +30,9 @@ mod.mt.inject_fixes(this_variant, {
             "2h_power_maul_pommel_03",
             "2h_force_sword_blade_03",
         },
+        blade =     { position = vector3_box(0, 0, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)}, 
         hilt =      { position = vector3_box(0, 0, -0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)}, 
-        grip =      { position = vector3_box(0, 0, .046), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        pommel =    { position = vector3_box(0, 0, 0.078), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        grip =      { position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        pommel =    { position = vector3_box(0, 0, -0.176), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
     },    
 })
