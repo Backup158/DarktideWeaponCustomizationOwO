@@ -32,7 +32,13 @@ This comes from having the main part be a muzzle that matches the actual muzzle 
 
 # Adding scopes
 in Ranged.lua
-1. Declare your scope. Use a base mesh that is NOT a muzzle/barrel, and make it invisible. Let's use axe_pommel_01
+1. Declare your scope
+    Use a base mesh that is NOT a muzzle/barrel (see stolen note)M
+    Make it invisible: 
+        hide_mesh = {
+			{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+		}, 
+    Let's use axe_pommel_01
 2. auto equip lens1 and lens2 in the attachment declaration
 3. Append the scope name to wc.sights table
     mod.mt.table_append(mod.wc.sights, {
