@@ -3070,7 +3070,8 @@ end
 
 -- Sight: Telescopic Sights
 --		Trijicon ACOG (Advanced Combat Optical Gunsight), SUSAT (Small Unit Small Arms)
---		KNOWN BUG: SUSAT on recon body steals the laser (but not the volleygun)
+--		KNOWN BUG: SUSAT on recon/ilas main receiver steals the laser (but not the volleygun)
+--			Thief is the ac2/3, ak muzzles in the back
 function mod.owo_telescopic_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_acog_sight_01", name = "OwO ACOG"},
@@ -3513,7 +3514,7 @@ function mod.owo_pu_scope(variant_id, type)
 		owo_pu_scope_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
 				sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
 				sightac5 = "owo_pu_scope_helper_05", sightac6 = "owo_pu_scope_helper_06",
@@ -3523,7 +3524,7 @@ function mod.owo_pu_scope(variant_id, type)
 		owo_pu_scope_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
 				sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
 				sightac5 = "owo_pu_scope_helper_05", sightac6 = "owo_pu_scope_helper_06",
