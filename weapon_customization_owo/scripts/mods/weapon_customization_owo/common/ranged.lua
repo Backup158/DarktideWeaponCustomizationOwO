@@ -305,7 +305,7 @@ mod.mt.table_append(mod.wc.scopes, {
 	"axe_pommel_03",
 	"axe_pommel_04",
 })
-mod.wc.sniper_zoom_levels.axe_pommel_01 = 50	-- 1x
+mod.wc.sniper_zoom_levels.axe_pommel_01 = 50	-- 1x, though it's more like 0x since it's further back than default
 mod.wc.sniper_zoom_levels.axe_pommel_02 = 40 	-- 1.25x
 mod.wc.sniper_zoom_levels.axe_pommel_03 = 33 	-- 1.5x
 mod.wc.sniper_zoom_levels.axe_pommel_04 = 29 	-- 1.75x
@@ -3645,6 +3645,8 @@ end
 
 -- Sight_2: Alternative viewmodel
 -- 	Avoid on flamer_p1_m1
+-- 	Instead of using empty mesh, use hidden mesh so children can show up
+--	Used for compatibility with Scope lenses (they get parented to sight_2 when sight_1 is hidden)
 function mod.owo_alt_viewmodel(variant_id)
 	-- Adding to existing table, where empty sight is already included
 	mod.inject_attachments_owo(variant_id, "sight_2", {
