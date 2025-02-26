@@ -300,7 +300,7 @@ mod.mt.inject_fixes(this_variant, {
             "receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         lens =              {offset = true, parent = "sight", position = vector3_box(0, 0.156, 0.2195), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =            {offset = true, parent = "sight", position = vector3_box(0, 0.048, 0.2195), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+	    lens_2 =            {offset = true, parent = "sight", position = vector3_box(0, 0.038, 0.2195), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =           { offset = false, position  = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
@@ -318,15 +318,21 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02|owo_susat_02_top" },
         -- cylinder thing
-        sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {lens = 1} },
+        --sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {lens = 1} },
+        sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27)},
         -- Rear
-        sightac2 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
+        --  One is sliiightly further back to prevent z-fighting
+        sightac2 =       { offset = true, position  = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
         sightac3 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
         -- Base
         sightac4 =       { offset = true, position  = vector3_box(0, 0.07, -0.036), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
         -- Reticle
         sightac5 =       { offset = true, position  = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
         sightac6 =       { offset = true, position  = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
+        sightac7 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
+
+        lens =              {offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), data = {lens = 1}},
+	    lens_2 =            {offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
     },
     --      Syn's Hellgun Receivers
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02|owo_susat_02_top",
@@ -342,7 +348,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  SUSAT with red dot
     {   dependencies = { "owo_susat_02|owo_susat_02_top" },
-            sight_secondary =     { offset = true, position  = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
+        sight_secondary =     { offset = true, position  = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
     --  -------------------------------------------
     --  Aligning sights to crosshair
@@ -362,26 +368,30 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Aiming with RMR
     --      Syn's Hellgun Receivers
+    --          ACOG
     {   dependencies = { "owo_acog_sight_02_top",
 			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
 		},
-        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },
+    --          SUSAT
     {   dependencies = { "owo_susat_02_top",
             "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
 		},
-        scope_offset =      { position = vector3_box(0, 0.3, -0.0385), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0, 0.3, -0.0385), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },
     --      Else: Recon Receiver
+    --          ACOG
 	{   dependencies = { "owo_acog_sight_02_top",
 			--"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
-        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },
+    --          SUSAT
     {   dependencies = { "owo_susat_02_top",
 			--"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
-        scope_offset =      { position = vector3_box(0.0002, 0.3, -0.09), rotation = vector3_box(0, 0, 0)},
+        scope_offset =      { position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },
     
     -- ######
@@ -458,7 +468,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_acog_sight_helper_06|owo_susat_ac6_01"},
         sightac6 = { hide_mesh = {{"sightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_acog_sight_helper_07"},
+    {   dependencies = { "owo_acog_sight_helper_07|owo_susat_ac7_01"},
         sightac7 = { hide_mesh = {{"sightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01"},
