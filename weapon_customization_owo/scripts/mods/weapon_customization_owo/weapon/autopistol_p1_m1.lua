@@ -15,6 +15,8 @@ local this_variant = "autopistol_p1_m1" -- Shredder Autopistol
 -- ############################################
 mod.wc.attachment[this_variant].sight_2 = {}
 
+-- stockac covered
+
 -- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
@@ -59,5 +61,40 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_alt_viewmodel_06" },
         scope_offset =          { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), lense_transparency = false},
         no_scope_offset =       { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), lense_transparency = false},
+    },
+
+    -- ######
+	-- Stock: TACTICAL STOCK
+	-- ######
+    --  Skeletal
+    {   dependencies = { "owo_tactical_stock_s_01" },
+        stock =      { position = vector3_box(0.0, 0.11, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
+    },
+    --  Folded
+    {   dependencies = { "owo_tactical_stock_01|owo_tactical_stock_02|owo_tactical_stock_03|owo_tactical_stock_04|owo_tactical_stock_05|owo_tactical_stock_06|owo_tactical_stock_07|owo_tactical_stock_08" },
+        stock =     { position = vector3_box(0.054, -0.092, 0.058), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
+        stockac =   { position = vector3_box(-0.0037, -0.054, 0.059), rotation = vector3_box(90, 0, -90), scale = vector3_box(1, 0.45, 0.3 )}
+    },
+    --  Folded (Left)
+    {   dependencies = { "owo_tactical_stock_01l|owo_tactical_stock_02l|owo_tactical_stock_03l|owo_tactical_stock_04l|owo_tactical_stock_05l|owo_tactical_stock_06l|owo_tactical_stock_07l|owo_tactical_stock_08l" },
+        stock =     { position = vector3_box(-0.05, -0.096, 0.060), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
+        stockac =   { position = vector3_box(0.0023, -0.054, 0.061), rotation = vector3_box(90, 0, 90), scale = vector3_box(1, 0.45, 0.3 )}
+    },
+    --  Floating
+    {   dependencies = { "owo_tactical_stock_f_01|owo_tactical_stock_f_02" },
+        stock =      { position = vector3_box(-0.012, -0.108, 0.064), rotation = vector3_box(0, 0, -176), scale = vector3_box(1, 1.0, 1 ) },
+    },
+    {   dependencies = { "owo_tactical_stock_f_03u" },
+        stock =      { position = vector3_box(0.0, -0.112, 0.0625), rotation = vector3_box(174, 0, 0), scale = vector3_box(2.52, 1.3, 1 ) },
+    },
+
+    -- ####################################################################################
+    -- HIDING HELPERS
+    -- By putting it down here, they will only be hidden if the fixes from above are not found
+    -- Because they match the main parts first, if there is no match it means the main part is not attached
+    -- ####################################################################################
+    -- Stocks
+    {   dependencies = {"owo_tactical_stockac_01"},
+        stockac = { hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
