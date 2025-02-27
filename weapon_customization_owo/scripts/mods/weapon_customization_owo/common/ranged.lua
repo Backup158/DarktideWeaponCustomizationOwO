@@ -2367,13 +2367,169 @@ end
 -- Stock: Tactical Stock
 function mod.owo_tactical_stock(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "stock" or type, {
-		{id = "owo_tactical_stock_01", name = "OwO Skeletal Stock"},
+		{id = "owo_tactical_stock_s_01", name = "OwO Skeletal Stock"},
+		{id = "owo_tactical_stock_f_01", name = "OwO Folded 1 (Natural)"},
+		{id = "owo_tactical_stock_f_02", name = "OwO Folded 2 (Natural)"},
+		{id = "owo_tactical_stock_f_03u", name = "OwO Folded 3 (Natural, Under)"},
+		{id = "owo_tactical_stock_01", name = "OwO Folded Stock 1"},
+		{id = "owo_tactical_stock_02", name = "OwO Folded Stock 2"},
+		{id = "owo_tactical_stock_03", name = "OwO Folded Stock 3"},
+		{id = "owo_tactical_stock_04", name = "OwO Folded Stock 4"},
+		{id = "owo_tactical_stock_05", name = "OwO Folded Stock 5"},
+		{id = "owo_tactical_stock_06", name = "OwO Folded Stock 6"},
+		{id = "owo_tactical_stock_07", name = "OwO Folded Stock 7"},
+		{id = "owo_tactical_stock_08", name = "OwO Folded Stock 8"},
+		{id = "owo_tactical_stock_01l", name = "OwO Folded 1 (Left)"},
+		{id = "owo_tactical_stock_02l", name = "OwO Folded 2 (Left)"},
+		{id = "owo_tactical_stock_03l", name = "OwO Folded 3 (Left)"},
+		{id = "owo_tactical_stock_04l", name = "OwO Folded 4 (Left)"},
+		{id = "owo_tactical_stock_05l", name = "OwO Folded 5 (Left)"},
+		{id = "owo_tactical_stock_06l", name = "OwO Folded 6 (Left)"},
+		{id = "owo_tactical_stock_07l", name = "OwO Folded 7 (Left)"},
+		{id = "owo_tactical_stock_08l", name = "OwO Folded 8 (Left)"},
+	})
+	mod.inject_attachments_owo(variant_id, "stockac" or type, {
+		{id = "owo_tactical_stockac_00",  name = "Empty stockac", no_randomize = true},
+		{id = "owo_tactical_stockac_01",  name = "Folding stock'vesa", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
+		owo_tactical_stock_s_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_tactical_stock_f_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_tactical_stock_f_02 = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_tactical_stock_f_03u = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
+		},
 		owo_tactical_stock_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_02 = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_03 = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_04 = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_05 = {
+			model = _item_ranged.."/stocks/stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_06 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_07 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_08 = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_05", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_01l = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_02l = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_03l = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_04l = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_05l = {
+			model = _item_ranged.."/stocks/stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_06l = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_07l = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		owo_tactical_stock_08l = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_05", type = "stock", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = {
+				stockac = "owo_tactical_stockac_01",
+			},
+		},
+		-- ### Helper Parts ###
+		owo_tactical_stockac_00 = {
+			model = "", type = "stockac", 
+			mesh_move = false, parent = "receiver",
+		},
+		owo_tactical_stockac_01 = {
+			model = _item_melee.."/grips/2h_chain_sword_grip_02", type = "stockac", 
 			mesh_move = false, parent = "receiver",
 		},
 	})
@@ -4083,6 +4239,9 @@ end
 ]]
 
 --[[
+-- #############################################################################################################
+-- #############################################################################################################
+-- #############################################################################################################
 TEMPLATES
 mod.wc.add_custom_attachments.KUMQUAT = "KUMQUATs"
 mod.wc.KUMQUATs = {
