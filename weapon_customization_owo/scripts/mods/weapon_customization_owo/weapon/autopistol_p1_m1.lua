@@ -15,18 +15,70 @@ local this_variant = "autopistol_p1_m1" -- Shredder Autopistol
 -- ############################################
 mod.wc.attachment[this_variant].sight_2 = {}
 
--- stockac covered
+--if not mod.syn then
+mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autopistol yet, though syn has it commented out
+--end
+
+-- Covered by MT plugin
+-- mod.wc.attachment[this_variant].stockac = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+mod.owo_suppressor(this_variant)
+
+mod.owo_tactical_stock(this_variant)
+
 mod.owo_alt_viewmodel(this_variant)
 
 -- ############################################
 -- Inject Fixes
 -- ############################################
 mod.mt.inject_fixes(this_variant, {
+    
+    -- ######
+	-- Muzzle: SUPPRESSOR
+	-- ######
+    --  Default autopistol barrel patches
+    {	dependencies = { "owo_suppressor_03",
+            "barrel_01|barrel_02|barrel_03|barrel_04|barrel_05"
+        },
+        muzzle = { offset = true,   position = vector3_box(0, 0.286, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 = { offset = true,   position = vector3_box(0, 0.088, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    {	dependencies = { "owo_suppressor_04|owo_suppressor_05",
+            "barrel_01|barrel_02|barrel_03|barrel_04|barrel_05"
+        },
+        muzzle = { offset = true,   position = vector3_box(0, 0.084, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+        muzzle_2 = { offset = true,   position = vector3_box(0, 0.194, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    },
+    -- Base case
+    {	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
+        muzzle = { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+    },
+    {	dependencies = { "owo_suppressor_03"},
+        muzzle = { offset = true,   position = vector3_box(0, 0.5, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 = { offset = true,   position = vector3_box(0, 0.3, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    {	dependencies = { "owo_suppressor_04|owo_suppressor_05"},
+        muzzle = { offset = true,   position = vector3_box(0, 0.072, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+        muzzle_2 = { offset = true,   position = vector3_box(0, 0.52, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    },
+    -- muzzle 2
+    {	dependencies = {"owo_suppressor_01"},
+        muzzle_2 = {offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 22, 0),   scale = vector3_box(1.2, 1.8, 1.2) },	
+    },
+    {	dependencies = {"owo_suppressor_02"},
+        muzzle_2 = {offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 17, 0),   scale = vector3_box(1.2, 1.8, 1.2) }
+    },
+    -- the skinny bayonet. sits on muzzle
+    {	dependencies = {"owo_suppressor_01|owo_suppressor_02",
+            "autogun_bayonet_03"
+        },
+        bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85) },
+    },
+
     -- ######
 	-- Sight_2: Alt Viewmodels
 	-- ######
@@ -93,6 +145,10 @@ mod.mt.inject_fixes(this_variant, {
     -- By putting it down here, they will only be hidden if the fixes from above are not found
     -- Because they match the main parts first, if there is no match it means the main part is not attached
     -- ####################################################################################
+    -- Muzzles
+    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01"},
+        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
     -- Stocks
     {   dependencies = {"owo_tactical_stockac_01"},
         stockac = { hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
