@@ -11,10 +11,9 @@ mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 -- ############### ATTENTION ###############
 -- #########################################
 -- The rest of this is basically a copy of the core MT plugin file
--- 	Many of the commands executed during on_all_mods_loaded are written directly into that function instead of being in their own independent functions
---	and the tables are accessed directly by the function body
---		passing them as args would be pretty redundant to keep pasting
---		maybe it'd be callable if the mt plugin wrote it as 'mod.model_ids' but who cares lol
+-- 	When possible, I called functions directly from the MT plugin to reuse code with minimal copy-pasting
+--	Otherwise, many of the commands executed during on_all_mods_loaded are written directly into that function
+--	In other cases, the tables the function references are ones created directly in the function body
 -- #########################################
 
 function mod.load_mod_file(relative_path)
@@ -48,8 +47,9 @@ function mod.on_all_mods_loaded()
 	local attachment_ids = {}
 	local model_ids = {}
 
-	-- Renamed because i was worried about collisions
-	-- 		not an actual issue since methods are called with the class name, like class.method
+	-- Renamed because initially I was worried about collisions
+	-- 		Not an actual issue since methods are called with the class name, like class.method
+	--		so mod.inject_attachments is different from mod.mt.inject_attachments
 	-- Functionally the same but I changed the prefix checking in the displayed names so it's OwO instead of MT
 	function mod.inject_attachments_owo(variant_id, slot, attachments_table)
 		if not wc.attachment[variant_id] then
@@ -97,7 +97,6 @@ function mod.on_all_mods_loaded()
 			return
 		end
 		mod.mt.table_prepend(wc.anchors[variant_id].fixes, fix_tables)
-		
 	end
 	]]
 	
