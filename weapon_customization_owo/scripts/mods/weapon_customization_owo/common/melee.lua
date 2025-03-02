@@ -23,6 +23,8 @@ else
 		"owo_tacax_spike_helper_01",
 	}
 end
+-- BODY
+
 -- POMMEL
 mod.wc.add_custom_attachments.pommelac1 = "pommelac1_list"
 mod.wc.pommelac1_list = {
@@ -78,7 +80,42 @@ function mod.owo_tacax_spike(variant_id, type)
 	})
 end
 
--- Head: Shovel Handles
+-- Body: Rapier Blades
+function mod.owo_rapier_blade(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "body" or type, {
+		{id = "owo_rapier_blade_01", name = "OwO Rapier Blade 1"},
+		{id = "owo_rapier_blade_02", name = "OwO Rapier Blade 2"},
+		{id = "owo_rapier_blade_03", name = "OwO Rapier Blade 3"},
+		{id = "owo_rapier_blade_04", name = "OwO Rapier Blade 4"},
+		{id = "owo_rapier_blade_05", name = "OwO Rapier Blade 5"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_rapier_blade_01 = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_rapier_blade_02 = {
+			model = _item_melee.."/blades/combat_knife_blade_06", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_rapier_blade_03 = {
+			model = _item_melee.."/blades/force_sword_blade_01", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_rapier_blade_04 = {
+			model = _item_melee.."/blades/force_sword_blade_03", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_rapier_blade_05 = {
+			model = _item_melee.."/blades/force_sword_blade_04", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+	})
+end
+
+-- Pommel: Shovel Handles
 --  D-Ring Handle mostly (D-Handle, D-Grip, etc.)
 --  ~~~~~~~~ Serrated Shovel ~~~~~~~~ this is literally already in the game dumb bitch
 --  ~~~~~~~~ Sheathed Shovel ~~~~~~~~ the straps are too big and the actual bag is too small. straps are part of the bag mesh
@@ -273,3 +310,4 @@ function mod.owo_shovel_handles(variant_id, type)
 		},
 	})
 end
+
