@@ -22,6 +22,7 @@ rotation: y, x, z
     +y put gun below
 
 # Parts not accept transformations
+Restart the game
 sometimes setting 'offset = false' makes it literally freeze on the screen, so it doesn't even rotate with the weapon
 can try parenting it to a specific node, but that can cause issues
     1 we dont have a list of nodes

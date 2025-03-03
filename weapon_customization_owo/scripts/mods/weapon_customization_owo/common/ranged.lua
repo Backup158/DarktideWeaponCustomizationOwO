@@ -290,7 +290,7 @@ mod.wc.owo_magac5_list = {
 }
 -- SIGHT
 mod.mt.table_append(mod.wc.sights, {
-	"owo_holosight_01_02",
+	"owo_holosight_01_02_z1",
 	"owo_acog_sight_01",
 	"owo_acog_sight_02", 
 	"owo_acog_sight_02_top", 
@@ -1862,7 +1862,8 @@ end
 --		Knight's Armament Company Masterkey, M26-MASS (Modular Accessory Shotgun System)
 function mod.owo_underbarrel_shotgun(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
-		{id = "owo_underbarrel_shotgun_01", name = "OwO Masterkey"},
+		{id = "owo_underbarrel_shotgun_01_02", name = "OwO Masterkey"},
+		{id = "owo_underbarrel_shotgun_01", name = "OwO Masterkey (THICC)"},
 		{id = "owo_underbarrel_shotgun_02", name = "OwO M26-MASS"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
@@ -1903,6 +1904,15 @@ function mod.owo_underbarrel_shotgun(variant_id, type)
 		-- ### Base Parts ###
 		-- 	Shotgun body + barrel guide
 		owo_underbarrel_shotgun_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "bayonet", 
+			mesh_move = false, parent = "barrel",
+			automatic_equip = { bayonetac1 = "owo_underbarrel_shotgun_helper_01", bayonetac2 = "owo_underbarrel_shotgun_helper_02", 
+				bayonetac3 = "owo_underbarrel_shotgun_helper_03", bayonetac4 = "owo_underbarrel_shotgun_helper_04", 
+				bayonetac5 = "owo_underbarrel_shotgun_helper_05", bayonetac6 = "owo_underbarrel_shotgun_helper_06", 
+				bayonetac7 = "owo_underbarrel_shotgun_helper_07", 
+			}
+		},
+		owo_underbarrel_shotgun_01_02 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "bayonet", 
 			mesh_move = false, parent = "barrel",
 			automatic_equip = { bayonetac1 = "owo_underbarrel_shotgun_helper_01", bayonetac2 = "owo_underbarrel_shotgun_helper_02", 
@@ -3093,8 +3103,9 @@ end
 function mod.owo_holosight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_holosight_01_01", name = "OwO EOTech"},
-		{id = "owo_holosight_01_02", name = "OwO EOTech + Magnifier (1.25x)"},
-		{id = "owo_holosight_01_03", name = "OwO EOTech + Magnifier (Side)"},
+		{id = "owo_holosight_01_02_z1", name = "OwO EOTech+Magnifier (1.25x)"},
+		{id = "owo_holosight_01_02_z2", name = "OwO EOTech+Magnifier (1.75x)"},
+		{id = "owo_holosight_01_03", name = "OwO EOTech+Magnifier (Side)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
 		{id = "owo_holosight_empty_01", name = "Empty Sight", no_randomize = true},
@@ -3141,7 +3152,7 @@ function mod.owo_holosight(variant_id, type)
 				{"sight", 1}
 			},
 		},
-		owo_holosight_01_02 = {
+		owo_holosight_01_02_z1 = {
 			--model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sight",
 			mesh_move = false, parent = "",
@@ -3153,6 +3164,19 @@ function mod.owo_holosight(variant_id, type)
 			},
 			hide_mesh = {
 				--{"sight", 1}
+				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+			},
+		},
+		owo_holosight_01_02_z2 = {
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight",
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
+				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
+				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sight_2 = "reflex_scopehelper_01",
+			},
+			hide_mesh = {
 				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
@@ -3519,7 +3543,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				{"sight_2", 1,5,6},
 			},
 		},
-		owo_susat_02 = {
+		owo_susat_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
