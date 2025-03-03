@@ -45,19 +45,23 @@ mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 mod.owo_helbore_gripstock_recon(this_variant)
 mod.owo_magazine_flat(this_variant)
 mod.owo_lasgun_magazine_rear(this_variant)
-mod.owo_suppressor(this_variant)
+
 mod.owo_wood_krieg(this_variant)
-mod.owo_bayonet(this_variant)
+
+mod.owo_suppressor(this_variant)
 mod.owo_condom(this_variant)
-mod.owo_bolt_action(this_variant)
-mod.owo_rear_sight(this_variant)
+
+mod.owo_bayonet(this_variant)
 mod.owo_underbarrel_gl(this_variant)
-mod.owo_pu_scope(this_variant)
+
+mod.owo_bolt_action(this_variant)
 mod.owo_helbore_mas49(this_variant)
 
 mod.owo_alt_viewmodel(this_variant)
+mod.owo_rear_sight(this_variant)
 mod.owo_holosight(this_variant)
 mod.owo_telescopic_sight(this_variant)
+mod.owo_pu_scope(this_variant)
 
 -- ############################################
 -- Inject Fixes

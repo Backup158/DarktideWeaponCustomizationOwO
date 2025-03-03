@@ -77,23 +77,25 @@ mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_condom(this_variant, "muzzle")
 mod.owo_muzzle_brake(this_variant)
 
-mod.owo_jungle_mag(this_variant, "magazine")
 mod.owo_magazine_flat(this_variant, "magazine")
+mod.owo_jungle_mag(this_variant, "magazine")
 mod.owo_magazine_magpull(this_variant, "magazine")
 --mod.owo_magazine_ak(this_variant)
 
-mod.owo_m16_sight(this_variant, "sight")
-mod.owo_pu_scope(this_variant, "sight")
-mod.owo_telescopic_sight(this_variant, "sight")
-mod.owo_holosight(this_variant, "sight")
-mod.owo_rear_sight_ak(this_variant)
 mod.owo_alt_viewmodel(this_variant)
+mod.owo_m16_sight(this_variant, "sight")
+mod.owo_rear_sight_ak(this_variant)
+mod.owo_holosight(this_variant, "sight")
+mod.owo_telescopic_sight(this_variant, "sight")
+mod.owo_pu_scope(this_variant, "sight")
 
 mod.owo_helbore_mas49(this_variant, "receiver")
 
 mod.owo_fin_grip(this_variant, "grip")
+
 mod.owo_tactical_foregrip(this_variant, "foregrip")
 mod.owo_heterosexual_foregrip(this_variant)
+
 mod.owo_tactical_stock(this_variant, "stock")
 mod.owo_kalash_stock(this_variant)
 

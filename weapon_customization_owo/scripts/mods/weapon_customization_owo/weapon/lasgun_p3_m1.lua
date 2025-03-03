@@ -41,8 +41,9 @@ mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 -- ############################################
 mod.owo_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant)
-mod.owo_underbarrel_shotgun(this_variant, "bayonet")
 mod.owo_condom(this_variant)
+
+mod.owo_underbarrel_shotgun(this_variant, "bayonet")
 
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_holosight(this_variant, "sight")
