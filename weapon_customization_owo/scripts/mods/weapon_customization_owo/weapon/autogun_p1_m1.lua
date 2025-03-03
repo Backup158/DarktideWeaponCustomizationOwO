@@ -700,7 +700,6 @@ mod.mt.inject_fixes(this_variant, {
     
         lens =              {offset = false, parent = "sight", position = vector3_box(0, -0.048, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
 	    lens_2 =            {offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.03), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
-
     },
     {   dependencies = { "owo_holosight_01_03" },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
@@ -708,7 +707,6 @@ mod.mt.inject_fixes(this_variant, {
     
         lens =              {offset = false, parent = "sight", position = vector3_box(0.042, -0.048, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.52), data = {lens = 1}},
 	    lens_2 =            {offset = false, parent = "sight", position = vector3_box(0.042, -0.12, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.52), data = {lens = 2}},
-
     },
     --  -------------------------------------------
     --  Aligning sights to crosshair
@@ -813,7 +811,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  SUSAT
     --  -------------------------------------------
-    {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02|owo_susat_02_top" },
+    {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
         sight =             { offset = true, position  = vector3_box(0, -0.06, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- cylinder thing
         sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {sightac1 = 1} },
@@ -839,7 +837,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Aligning sights to crosshair
     --  -------------------------------------------
     --      Aiming with main sight
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_susat_01|owo_susat_02|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1" },
+    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1" },
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0235), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
     --      Aiming with RMR on ACOG

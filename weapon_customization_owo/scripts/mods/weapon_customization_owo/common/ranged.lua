@@ -304,11 +304,15 @@ mod.mt.table_append(mod.wc.scopes, {
 	"axe_pommel_02",
 	"axe_pommel_03",
 	"axe_pommel_04",
+	"axe_pommel_05",
+	"axe_pommel_06",
 })
-mod.wc.sniper_zoom_levels.axe_pommel_01 = 50	-- 1x, though it's more like 0x since it's further back than default
-mod.wc.sniper_zoom_levels.axe_pommel_02 = 40 	-- 1.25x
-mod.wc.sniper_zoom_levels.axe_pommel_03 = 33 	-- 1.5x
-mod.wc.sniper_zoom_levels.axe_pommel_04 = 29 	-- 1.75x
+mod.wc.sniper_zoom_levels.axe_pommel_01 = 50	-- Literally no zoom, same as hipfire.
+mod.wc.sniper_zoom_levels.axe_pommel_02 = 40 	-- 1x, this is around default
+mod.wc.sniper_zoom_levels.axe_pommel_03 = 33 	-- 1.25x
+mod.wc.sniper_zoom_levels.axe_pommel_04 = 27 	-- 1.5x
+mod.wc.sniper_zoom_levels.axe_pommel_05 = 22 	-- 1.75x
+mod.wc.sniper_zoom_levels.axe_pommel_06 = 20 	-- 2x
 
 mod.wc.add_custom_attachments.sightac1 = "sightac1_list"
 mod.wc.sightac1_list = {
@@ -3089,7 +3093,7 @@ end
 function mod.owo_holosight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_holosight_01_01", name = "OwO EOTech"},
-		{id = "owo_holosight_01_02", name = "OwO EOTech + Magnifier"},
+		{id = "owo_holosight_01_02", name = "OwO EOTech + Magnifier (1.25x)"},
 		{id = "owo_holosight_01_03", name = "OwO EOTech + Magnifier (Side)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
@@ -3138,7 +3142,8 @@ function mod.owo_holosight(variant_id, type)
 			},
 		},
 		owo_holosight_01_02 = {
-			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+			--model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sight",
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
@@ -3147,7 +3152,8 @@ function mod.owo_holosight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1}
+				--{"sight", 1}
+				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
 		owo_holosight_01_03 = {
@@ -3230,19 +3236,21 @@ end
 --			Thief is the ac2/3, ak muzzles in the back
 function mod.owo_telescopic_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
-		{id = "owo_acog_sight_01f", name = "OwO ACOG"},
-		{id = "owo_acog_sight_01", name = "OwO ACOG (Backwards)"},
+		{id = "owo_acog_sight_01f", name = "OwO ACOG (1.25x)"},
+		{id = "owo_acog_sight_01", name = "OwO ACOG (Backwards, 1.25x)"},
 		{id = "owo_acog_sight_01f_z1", name = "OwO ACOG (1.75x)"},
 		{id = "owo_acog_sight_01_z1", name = "OwO ACOG (B, 1.75x)"},
-		{id = "owo_acog_sight_02f", name = "OwO ACOG/RMR Combo"},
-		{id = "owo_acog_sight_02", name = "OwO ACOG/RMR (B)"},
+		{id = "owo_acog_sight_02f", name = "OwO ACOG/RMR Combo (1.25x)"},
+		{id = "owo_acog_sight_02", name = "OwO ACOG/RMR (B, 1.25x)"},
 		{id = "owo_acog_sight_02f_z1", name = "OwO ACOG/RMR (1.75x)"},
 		{id = "owo_acog_sight_02_z1", name = "OwO ACOG/RMR (B, 1.75x)"},
 		{id = "owo_acog_sight_02f_top", name = "OwO ACOG/RMR (RDS Aim)"},
 		{id = "owo_acog_sight_02_top", name = "OwO ACOG/RMR (B, RDS)"},
-		{id = "owo_susat_01", name = "OwO SUSAT"},
+		{id = "owo_susat_01", name = "OwO SUSAT (1.25x)"},
+		{id = "owo_susat_01_z1", name = "OwO SUSAT (1.75x)"},
 		{id = "owo_susat_01_ps", name = "OwO SUSAT (Point Shooting)"},
-		{id = "owo_susat_02", name = "OwO SUSAT + Red Dot"},
+		{id = "owo_susat_02", name = "OwO SUSAT + Red Dot (1.25x)"},
+		{id = "owo_susat_02_z1", name = "OwO SUSAT + RDS (1.75x)"},
 		{id = "owo_susat_02_top", name = "OwO SUSAT + RDS (RDS Aim)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
@@ -3295,7 +3303,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_acog_sight_01 = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3310,7 +3318,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_01f = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3325,7 +3333,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_01_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_04", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3340,7 +3348,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_01f_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_04", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3355,7 +3363,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_02 = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3371,7 +3379,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_02f = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3387,7 +3395,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_02_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_04", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3403,7 +3411,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_02f_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_04", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3419,7 +3427,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_02_top = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_02", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3435,7 +3443,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_02f_top = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_02", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -3452,7 +3460,22 @@ function mod.owo_telescopic_sight(variant_id, type)
 		},
 		-- SUSAT
 		owo_susat_01 = {
-			model = _item_melee.."/pommels/axe_pommel_04", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
+				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
+				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
+				sightac7 = "owo_susat_ac7_01", sight_2 = "reflex_scopehelper_01",
+			},
+			hide_mesh = {
+				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{"sight_2", 1,5,6},
+			},
+		},
+		owo_susat_01_z1 = {
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
@@ -3481,7 +3504,23 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_susat_02 = {
-			model = _item_melee.."/pommels/axe_pommel_04", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
+				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
+				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
+				sight_secondary = "owo_acog_sight_sight_secondary_01",
+				sightac7 = "owo_susat_ac7_01", sight_2 = "reflex_scopehelper_01",
+			},
+			hide_mesh = {
+				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{"sight_2", 1,5,6},
+			},
+		},
+		owo_susat_02 = {
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
@@ -3497,7 +3536,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_susat_02_top = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 

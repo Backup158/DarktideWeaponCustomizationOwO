@@ -31,7 +31,7 @@ can try parenting it to a specific node, but that can cause issues
 This comes from having the main part be a muzzle that matches the actual muzzle that would've been used by the gun
     NEVEFUCKING MIND??!?!? I USED A BRAUTO MUZZLE (in AC2!!!) ON A RECON AND IT STILL STOLE IT?!?!?
 
-# Adding scopes
+# Adding scopes with zoom
 in Ranged.lua
 1. Declare your scope
     Use a base mesh that is NOT a muzzle/barrel (see stolen note)M
