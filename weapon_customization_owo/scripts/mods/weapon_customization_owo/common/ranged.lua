@@ -290,7 +290,7 @@ mod.wc.owo_magac5_list = {
 }
 -- SIGHT
 mod.mt.table_append(mod.wc.sights, {
-	"owo_holosight_01_03",
+	"owo_holosight_01_02",
 	"owo_acog_sight_01",
 	"owo_acog_sight_02", 
 	"owo_acog_sight_02_top", 
@@ -3140,7 +3140,7 @@ function mod.owo_holosight(variant_id, type)
 		owo_holosight_01_02 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			mesh_move = false, parent = "",
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3153,7 +3153,7 @@ function mod.owo_holosight(variant_id, type)
 		owo_holosight_01_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			mesh_move = false, parent = "",
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",

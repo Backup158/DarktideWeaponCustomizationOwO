@@ -430,7 +430,7 @@ mod.mt.inject_fixes(this_variant, {
 		sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.148, 0.104) },
 	},
     {   dependencies = { "owo_holosight_01_02" },
-        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.154, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.03), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     },
     {   dependencies = { "owo_holosight_01_03" },

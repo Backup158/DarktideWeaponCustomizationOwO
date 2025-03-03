@@ -695,18 +695,29 @@ mod.mt.inject_fixes(this_variant, {
         sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.148, 0.104) },
     },
     {   dependencies = { "owo_holosight_01_02" },
-        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.15, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.154, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.03), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+    
+        lens =              {offset = false, parent = "sight", position = vector3_box(0, -0.048, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
+	    lens_2 =            {offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.03), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
+
     },
     {   dependencies = { "owo_holosight_01_03" },
-        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.15, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+    
+        lens =              {offset = false, parent = "sight", position = vector3_box(0.042, -0.048, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.52), data = {lens = 1}},
+	    lens_2 =            {offset = false, parent = "sight", position = vector3_box(0.042, -0.12, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.52), data = {lens = 2}},
+
     },
     --  -------------------------------------------
     --  Aligning sights to crosshair
     --  -------------------------------------------
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02|owo_holosight_01_03"},
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0)},
+    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02"},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+    },
+    {   dependencies = { "owo_holosight_01_03"},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },
 
     -- ######
