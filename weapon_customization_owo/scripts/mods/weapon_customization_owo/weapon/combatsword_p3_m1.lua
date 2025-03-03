@@ -26,6 +26,8 @@ mod.owo_rapier_blade(this_variant)
 -- ############################################
 mod.mt.inject_fixes(this_variant, {
     -- Body: Rapier Blade
+    --  Why did I choose 5 blades with wildly different proportions
+    --  Just love making more work for myself eh
     -- MT Combat knife grip patch
     {   dependencies = {"owo_rapier_blade_01",
             "knife_mt_grip_01|knife_mt_grip_02|knife_mt_grip_03|knife_mt_grip_04|knife_mt_grip_05|knife_mt_grip_06|knife_mt_grip_07"
