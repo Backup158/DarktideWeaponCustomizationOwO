@@ -60,6 +60,7 @@ in <weapon>.lua
 2. In scope_offset, lense_transparency = true to hide lenses
 
 # MT to base
+See Spreadsheet
 **Autoguns** autogun_p1_m1.lua
 *IAG*
 iagun_barrel_01|iagun_barrel_02|iagun_barrel_03|iagun_barrel_04|iagun_barrel_05|iagun_barrel_06|-----
