@@ -15,7 +15,9 @@ local this_variant = "lasgun_p2_m1" -- Helbore Lasgun
 -- ############################################
 mod.wc.attachment[this_variant].stockac = {} -- MT didn't add this to Helbore yet
 mod.wc.attachment[this_variant].stockac2 = {} -- MT didn't add this to Helbore yet
-mod.wc.attachment[this_variant].rearmag = {}
+if not mod.syn then
+	mod.wc.attachment[this_variant].rearmag = {}
+end
 mod.wc.attachment[this_variant].muzzle_2 = {} -- MT didn't add this to Helbore yet
 mod.wc.attachment[this_variant].barrelshroud = {}	-- Syn didn't add this to Helbore yet
 mod.wc.attachment[this_variant].bayonetac1 = {}
