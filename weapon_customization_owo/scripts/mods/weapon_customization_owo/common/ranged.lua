@@ -1017,7 +1017,6 @@ end
 
 -- Barrel: M16 barrels
 -- 		Autoguns
--- 		I stole this from Syn's Aquilon Barrel (barrel and shroud are near identical lmao)
 function mod.owo_m16_barrel(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
 		{id = "owo_m16_barrel_a1", name = "OwO M16a1 Barrel 1"},
@@ -1058,6 +1057,7 @@ function mod.owo_m16_barrel(variant_id, type)
 	})
 
 	mod.inject_models(variant_id, {
+		-- ### Main Parts ###
 		owo_m16_barrel_a1 = {
 			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
 			mesh_move = false, parent = "receiver",
@@ -2475,7 +2475,7 @@ function mod.owo_tactical_stock(variant_id, type)
 			},
 		},
 		owo_tactical_stock_08 = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_05", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = "stock", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
@@ -2531,7 +2531,7 @@ function mod.owo_tactical_stock(variant_id, type)
 			},
 		},
 		owo_tactical_stock_08l = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_05", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = "stock", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
@@ -3015,7 +3015,7 @@ function mod.owo_m16_sight(variant_id, type)
 		-- ### Base Parts ###
 		owo_m16_sight_01  = {
 			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = "sight", 
-			mesh_move = false, parent = 'receiver', hide_mesh = {{"sight", 1}}, -- hiding the stock. i stole this from MT
+			mesh_move = false, parent = 'receiver', hide_mesh = {{"sight", 1}}, -- hiding the stock. I stole this from MT
 			automatic_equip = { sightac1 = "owo_m16_sight_helper_01", sightac2 = "owo_m16_sight_helper_02", 
 				sightac3 = "owo_m16_sight_helper_03", 
 				sightac4 = "owo_m16_sight_helper_04", sightac5 = "owo_m16_sight_helper_05", 
@@ -3255,7 +3255,7 @@ function mod.owo_holosight(variant_id, type)
 end
 
 -- Sight: Telescopic Sights
---		Trijicon ACOG (Advanced Combat Optical Gunsight), SUSAT (Small Unit Small Arms)
+--		Trijicon ACOG (Advanced Combat Optical Gunsight), SUSAT (Small Unit Small Arms, Trilux - L9A1)
 --		KNOWN BUG: SUSAT on recon/ilas main receiver steals the laser (but not the volleygun)
 --			Thief is the ac2/3, ak muzzles in the back
 function mod.owo_telescopic_sight(variant_id, type)
@@ -3863,7 +3863,7 @@ end
 ]]
 
 -- Sight_2: Alternative viewmodel
--- 	Avoid on flamer_p1_m1
+-- 	Avoid on flamer_p1_m1 (and prob brauto)
 -- 	Instead of using empty mesh, use hidden mesh so children can show up
 --	Used for compatibility with Scope lenses (they get parented to sight_2 when sight_1 is hidden)
 function mod.owo_alt_viewmodel(variant_id)
