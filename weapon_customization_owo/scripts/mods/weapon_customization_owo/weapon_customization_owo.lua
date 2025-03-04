@@ -65,6 +65,7 @@ function mod.on_all_mods_loaded()
 		attachment_ids[variant_id][slot] = attachment_ids[variant_id][slot] or {}
 
 		for _, attachment in ipairs(attachments_table) do
+			--mod:info("'"..string.sub(attachment.name, 1, 4).."' is being looked at,,,")
 			if not string.sub(attachment.name, 1, 4) == "OwO " then
 				attachment.name = "OwO "..attachment.name
 			end

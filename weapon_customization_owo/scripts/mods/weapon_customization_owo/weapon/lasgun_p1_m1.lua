@@ -113,16 +113,28 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
-	{	dependencies = {"owo_m203"},
+    --  -------------------------------------------
+	--	M203
+	--  -------------------------------------------
+	--	M203 Default
+    {	dependencies = {"owo_m203"},
         bayonet =       {offset = true, position = vector3_box(0, -0.0172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    --	M203 Helpers
+	{	dependencies = {"owo_m203"},
         bayonetac1 =    {offset = true, position = vector3_box(0, 0.138, 0.), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
         bayonetac2 =    {offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
         bayonetac3 =    {offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
         bayonetac4 =    {offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
     },
+    --  -------------------------------------------
+	--	GP25
+	--  -------------------------------------------
+	--	GP25 Default
     {	dependencies = {"owo_gp25"},
         bayonet =       {offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
+    --	GP25 Helpers
     {	dependencies = {"owo_gp25"},
         bayonetac1 =    {offset = true, position = vector3_box(0, -0.022, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.875, 1, 0.875 ) },
         bayonetac2 =    {offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(90, 0, 180), scale = vector3_box(1.1, 1.1, 1.3 ) },
@@ -134,7 +146,10 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL SHOTGUN
 	-- ######
-    -- Masterkey
+    --  -------------------------------------------
+    --  Masterkey
+    --  -------------------------------------------
+    --  THICC
     {	dependencies = {"owo_underbarrel_shotgun_01"},
         -- Shotgun body
         bayonet =       {offset = true, position = vector3_box(0, -0.0708, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
@@ -143,6 +158,7 @@ mod.mt.inject_fixes(this_variant, {
         -- Shotgun body
         bayonet =       {offset = true, position = vector3_box(0, -0.0708, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
+    --  Masterkey Helpers
 	{	dependencies = {"owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_02"},
         -- Shotgun tube
         bayonetac1 =    {offset = true, position = vector3_box(0, 0.613, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.2, 1, 1.2 ) },
@@ -159,10 +175,16 @@ mod.mt.inject_fixes(this_variant, {
         -- Pump
         bayonetac7 =    {offset = true, position = vector3_box(0, 0.46, -0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.95, 0.7, 0.85 ) },
     },
-    -- M26-MASS
+    --  -------------------------------------------
+    --  M26-MASS
+    --  -------------------------------------------
+    --  M26-MASS Default
     {	dependencies = {"owo_underbarrel_shotgun_02"},
         -- Receiver
         bayonet =       {offset = true, position = vector3_box(0, -0.002, -0.148), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
+    },
+    --  M26-MASS Helpers
+    {	dependencies = {"owo_underbarrel_shotgun_02"},
         -- Mag
         bayonetac1 =    {offset = true, position = vector3_box(0, -0.015, -0.079), rotation = vector3_box(15, 0, 0), scale = vector3_box(1, 1.2, 1 ) },
         -- Barrel
@@ -212,7 +234,9 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Sight: Holographic Sights + Magnifier
     -- ######
-    -- EOTech
+    --  -------------------------------------------
+    --  EOTech
+    --  -------------------------------------------
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03" },
         sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
         sightac2 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
@@ -247,7 +271,9 @@ mod.mt.inject_fixes(this_variant, {
         lens =              {offset = false, parent = "sight", position = vector3_box(0.042, -0.048, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
 	    lens_2 =            {offset = false, parent = "sight", position = vector3_box(0.042, -0.12, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
     },
+    --  -------------------------------------------
     --  Aligning sights to crosshair
+    --  -------------------------------------------
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2"},
         scope_offset =      { position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },

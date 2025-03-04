@@ -192,7 +192,9 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Bayonet: HISTORICAL PACK
     -- ######
-	-- M7
+	--  -------------------------------------------
+	-- 	M7
+	--  -------------------------------------------
 	-- 	Helbores
 	-- 		Ultra shorty flintlock helbore
 	{   dependencies = {"owo_bayonet_m7_01",
@@ -202,7 +204,7 @@ mod.mt.inject_fixes(this_variant, {
 	},
 	--		Medium Helbore barrels, Short bottom
 	{   dependencies = {"owo_bayonet_m7_01",
-			"barrel_09|barrel_12|barrel_13|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b",
+			"barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b",
 		},
         bayonet = {offset = true, position = vector3_box(0, 0.415, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
     },
@@ -212,7 +214,7 @@ mod.mt.inject_fixes(this_variant, {
 		},
 		bayonet = {offset = true, position = vector3_box(0, 0.435, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
 	},
-	-- 		Regular long Helbore barrels
+	-- 		Long Helbore barrels
 	{   dependencies = {"owo_bayonet_m7_01",
 			"barrel_10|barrel_20|hlasgun_barrel_02|owo_wood_krieg_01|owo_wood_krieg_03",
 		},
@@ -246,7 +248,9 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac1 = {offset = true, position = vector3_box(0, 0.002, -0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         bayonetac2 = {offset = true, position = vector3_box(0, -0.012, -0.002), rotation = vector3_box(0, 90, 180), scale = vector3_box(0.25, 0.825, 0.25) },
     },
-	-- Seitengewehr 98
+	--  -------------------------------------------
+	-- 	Seitengewehr 98
+	--  -------------------------------------------
 	-- 	Helbores
 	-- 		Ultra shorty flintlock helbore
 	{   dependencies = {"owo_bayonet_seitengewehr",
@@ -256,9 +260,9 @@ mod.mt.inject_fixes(this_variant, {
 	},
 	--		Medium Helbore barrels, short bottom
 	{   dependencies = {"owo_bayonet_seitengewehr",
-			"barrel_09|barrel_12|barrel_13|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b",
+			"barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b",
 		},
-        bayonet = {offset = true, position = vector3_box(0, 0.415, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
+        bayonet = {offset = true, position = vector3_box(0, 0.415, -0.044), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
 	-- 		Medium Helbore barrels
 	{   dependencies = {"owo_bayonet_seitengewehr",
@@ -266,11 +270,11 @@ mod.mt.inject_fixes(this_variant, {
 		},
 		bayonet = {offset = true, position = vector3_box(0, 0.435, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
 	},
-	-- 		Regular long Helbore barrels
+	-- 		Long Helbore barrels
 	{   dependencies = {"owo_bayonet_seitengewehr",
 			"barrel_10|barrel_20|hlasgun_barrel_02|owo_wood_krieg_01|owo_wood_krieg_03",
 		},
-        bayonet = {offset = true, position = vector3_box(0, 0.575, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
+        bayonet = {offset = true, position = vector3_box(0, 0.47, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
 	-- 	Infantry Lasgun Barrels
 	-- 		Short Lasgun
@@ -291,6 +295,24 @@ mod.mt.inject_fixes(this_variant, {
 		},
         bayonet = {offset = true, position = vector3_box(0, 0.235, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
+	-- 	MT Iag
+	--		Short
+	--			VIAG5 is shorter, but relatively they're the same for bayonet
+	{   dependencies = {"owo_bayonet_seitengewehr",
+			"iagun_barrel_01|iagun_barrel_02|iagun_barrel_04|iagun_barrel_06",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.394, -0.05), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
+    },
+	{   dependencies = {"owo_bayonet_seitengewehr",
+			"iagun_barrel_03",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.47, -0.05), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
+    },
+	{   dependencies = {"owo_bayonet_seitengewehr",
+			"iagun_barrel_05",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.408, -0.05), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
+    },
 	-- 	Default
     {   dependencies = {"owo_bayonet_seitengewehr"},
         bayonet = {offset = true, position = vector3_box(0, 0.575, -0.048), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
@@ -300,11 +322,70 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac1 = {offset = true, position = vector3_box(0, 0.002, -0.036), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.46, 0.25) },
         bayonetac2 = {offset = true, position = vector3_box(0, 0, -0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.6, 0.2) },
     },
-	-- Épée baïonnette modèle 1886 Lebel
+	--  -------------------------------------------
+	-- 	Épée baïonnette modèle 1886 Lebel
+	--  -------------------------------------------
+	-- 	Helbores
+	-- 		Ultra shorty flintlock helbore
 	{   dependencies = {"owo_bayonet_epee",
-            "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03"
-        },
-        bayonet = {offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+			"barrel_19",
+		},
+		bayonet = {offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+	},
+	--		Medium Helbore barrels, short bottom
+	{   dependencies = {"owo_bayonet_epee",
+			"barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.316, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+	-- 		Medium Helbore barrels
+	{   dependencies = {"owo_bayonet_epee",
+			"barrel_11|hlasgun_barrel_03|owo_wood_krieg_02",
+		},
+		bayonet = {offset = true, position = vector3_box(0, 0.368, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+	},
+	-- 		Long Helbore barrels
+	{   dependencies = {"owo_bayonet_epee",
+			"barrel_10|barrel_20|hlasgun_barrel_02|owo_wood_krieg_01|owo_wood_krieg_03",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.462, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+	-- 	Infantry Lasgun Barrels
+	-- 		Short Lasgun
+	{   dependencies = {"owo_bayonet_epee",
+			"barrel_03|ilasgun_barrel_03",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.146, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+	--		Medium/Long iLas
+	{   dependencies = {"owo_bayonet_epee",
+			"barrel_01|barrel_02|barrel_04|barrel_05|barrel_06|barrel_07|barrel_08|barrel_021|ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.224, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+	-- 	Recon
+	{   dependencies = {"owo_bayonet_epee",
+			"barrel_14|barrel_15|barrel_16|barrel_17|barrel_18|rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.12, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+	-- 	MT Iag
+	--		Short
+	--			VIAG5 is shorter, but relatively they're the same for bayonet
+	{   dependencies = {"owo_bayonet_epee",
+			"iagun_barrel_01|iagun_barrel_02|iagun_barrel_04|iagun_barrel_06",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.068, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+	{   dependencies = {"owo_bayonet_epee",
+			"iagun_barrel_03",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.098, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+    },
+	{   dependencies = {"owo_bayonet_epee",
+			"iagun_barrel_05",
+		},
+        bayonet = {offset = true, position = vector3_box(0, 0.114, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
     },
 	--	Default Epee
     {   dependencies = {"owo_bayonet_epee"},
@@ -319,16 +400,28 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
+	--  -------------------------------------------
+	--	M203
+	--  -------------------------------------------
+	--	M203 Default
 	{	dependencies = {"owo_m203"},
 		bayonet = {offset = true, position = vector3_box(0, -0.172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+	},
+	--	M203 Helpers
+	{	dependencies = {"owo_m203"},
 		bayonetac1 = {offset = true, position = vector3_box(0, 0.138, 0.), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
 		bayonetac2 = {offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
 		bayonetac3 = {offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
 		bayonetac4 = {offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
 	},
+	--  -------------------------------------------
+	--	GP25
+	--  -------------------------------------------
+	--	GP25 Default
 	{	dependencies = {"owo_gp25"},
         bayonet =       {offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
+	--	GP25 Helpers
     {	dependencies = {"owo_gp25"},
         bayonetac1 =    {offset = true, position = vector3_box(0, -0.022, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.875, 1, 0.875 ) },
         bayonetac2 =    {offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(90, 0, 180), scale = vector3_box(1.1, 1.1, 1.3 ) },
@@ -372,7 +465,9 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Sight: REAR APERTURE SIGHTS
 	-- ######
-	-- U notch ladder sights
+	--  -------------------------------------------
+	-- 	U notch ladder sights
+	--  -------------------------------------------
 	{	dependencies = {"owo_rear_sight_01",},
 		no_scope_offset =   { position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0)},
 		scope_offset =      { position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0)},
@@ -390,7 +485,9 @@ mod.mt.inject_fixes(this_variant, {
 		sightac3 = {offset = true, position = vector3_box(-0.012, 0.012, -0.088), rotation = vector3_box(0, 90, -90), scale = vector3_box(0.55, 0.7, 0.42 ) },
 		sightac4 = {offset = true, position = vector3_box(-0.012, 0.012, 0.088), rotation = vector3_box(0, 90, 90), scale = vector3_box(0.55, 0.7, 0.42 ) },
 	},
-	-- MAS49 irons
+	--  -------------------------------------------
+	-- 	MAS49 irons
+	--  -------------------------------------------
 	{	dependencies = {"owo_rear_sight_o_00|owo_rear_sight_o_01|owo_rear_sight_o_02|owo_rear_sight_o_03",},
 		no_scope_offset =   { position = vector3_box(0, 0, -0.0062), rotation = vector3_box(0, 0, 0)},
 		scope_offset =      { position = vector3_box(0, 0, -0.0062), rotation = vector3_box(0, 0, 0)},
@@ -420,7 +517,9 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Sight: Holographic Sights + Magnifier
     -- ######
-    -- EOTech
+	--  -------------------------------------------
+    -- 	EOTech
+	--  -------------------------------------------
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03" },
         sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
         sightac2 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
@@ -452,7 +551,9 @@ mod.mt.inject_fixes(this_variant, {
         lens =              {offset = false, parent = "sight", position = vector3_box(0.042, -0.048, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.52), data = {lens = 1}},
 	    lens_2 =            {offset = false, parent = "sight", position = vector3_box(0.042, -0.12, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.52), data = {lens = 2}},
 	},
+	--  -------------------------------------------
     --  Aligning sights to crosshair
+	--  -------------------------------------------
 	{   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2"},
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
