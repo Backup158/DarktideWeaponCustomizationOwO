@@ -132,7 +132,7 @@ mod.mt.inject_fixes(this_variant, {
 	--  -------------------------------------------
 	--	GP25 Default
     {	dependencies = {"owo_gp25"},
-        bayonet =       {offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
+        bayonet =       {offset = true, position = vector3_box(0, -0.072, -0.134), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
     --	GP25 Helpers
     {	dependencies = {"owo_gp25"},
@@ -152,11 +152,11 @@ mod.mt.inject_fixes(this_variant, {
     --  THICC
     {	dependencies = {"owo_underbarrel_shotgun_01"},
         -- Shotgun body
-        bayonet =       {offset = true, position = vector3_box(0, -0.0708, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        bayonet =       {offset = true, position = vector3_box(0, -0.013, -0.15), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
     {	dependencies = {"owo_underbarrel_shotgun_01_02"},
         -- Shotgun body
-        bayonet =       {offset = true, position = vector3_box(0, -0.0708, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
+        bayonet =       {offset = true, position = vector3_box(0, -0.013, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --  Masterkey Helpers
 	{	dependencies = {"owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_02"},
@@ -181,7 +181,7 @@ mod.mt.inject_fixes(this_variant, {
     --  M26-MASS Default
     {	dependencies = {"owo_underbarrel_shotgun_02"},
         -- Receiver
-        bayonet =       {offset = true, position = vector3_box(0, -0.002, -0.148), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
+        bayonet =       {offset = true, position = vector3_box(0, 0.07, -0.17), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
     --  M26-MASS Helpers
     {	dependencies = {"owo_underbarrel_shotgun_02"},

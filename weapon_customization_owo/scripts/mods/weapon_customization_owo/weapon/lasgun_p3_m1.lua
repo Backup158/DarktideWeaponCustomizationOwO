@@ -43,7 +43,8 @@ mod.owo_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant)
 mod.owo_condom(this_variant)
 
-mod.owo_underbarrel_shotgun(this_variant, "bayonet")
+mod.owo_underbarrel_gl(this_variant)
+mod.owo_underbarrel_shotgun(this_variant)
 
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_holosight(this_variant, "sight")
@@ -107,6 +108,53 @@ mod.mt.inject_fixes(this_variant, {
 		},
 		bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
 	},
+
+    -- ######
+	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
+	-- ######
+    --  -------------------------------------------
+	--	M203
+	--  -------------------------------------------
+	--  Syn's Volleygun Receivers
+    {	dependencies = {"owo_m203",
+            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
+        },
+        bayonet =       {offset = true, position = vector3_box(0, -0.0172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    --	M203 Default
+    {	dependencies = {"owo_m203",
+        },
+        bayonet =       {offset = true, position = vector3_box(0, -0.0172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    --	M203 Helpers
+	{	dependencies = {"owo_m203"},
+        bayonetac1 =    {offset = true, position = vector3_box(0, 0.138, 0.), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        bayonetac2 =    {offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
+        bayonetac3 =    {offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
+        bayonetac4 =    {offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
+    },
+    --  -------------------------------------------
+	--	GP25
+	--  -------------------------------------------
+	--  Syn's Volleygun Receivers
+    {	dependencies = {"owo_gp25",
+            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
+        },
+        bayonet =       {offset = true, position = vector3_box(0, -0.072, -0.134), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
+    },
+    --	GP25 Default
+    {	dependencies = {"owo_gp25",
+        },
+        bayonet =       {offset = true, position = vector3_box(0, -0.072, -0.134), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
+    },
+    --	GP25 Helpers
+    {	dependencies = {"owo_gp25"},
+        bayonetac1 =    {offset = true, position = vector3_box(0, -0.022, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.875, 1, 0.875 ) },
+        bayonetac2 =    {offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(90, 0, 180), scale = vector3_box(1.1, 1.1, 1.3 ) },
+        bayonetac3 =    {offset = true, position = vector3_box(0, 0.06, 0.03), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 0.566, 0.21 ) },
+        bayonetac4 =    {offset = true, position = vector3_box(0, 0.142, 0.004), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 0.6, 0.35 ) },
+        bayonetac5 =    {offset = true, position = vector3_box(0, 0.158, -0.012), rotation = vector3_box(-173, 0, 0), scale = vector3_box(0.6, 0.7, 0.7 ) },
+    },
 
     -- ######
 	-- Bayonet: UNDERBARREL SHOTGUN
@@ -520,7 +568,7 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies = {"owo_m203_helper_03|owo_gp25_helper_03|owo_underbarrel_shotgun_helper_03|owo_underbarrel_shotgun_helper_03_02"},
         bayonetac3 = {hide_mesh = {     {"bayonetac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
-    {	dependencies = {"owo_m203_helper_04|owo_gp25_helper_05|owo_underbarrel_shotgun_helper_04|owo_underbarrel_shotgun_helper_04_02"},
+    {	dependencies = {"owo_m203_helper_04|owo_gp25_helper_04|owo_underbarrel_shotgun_helper_04"},
         bayonetac4 = {hide_mesh = {     {"bayonetac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
     {	dependencies = {"owo_gp25_helper_05|owo_underbarrel_shotgun_helper_05|owo_underbarrel_shotgun_helper_05_02"},
