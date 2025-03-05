@@ -140,12 +140,12 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies = {"owo_gp25",
             "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
         },
-        bayonet =       {offset = true, position = vector3_box(0, -0.072, -0.134), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
+        bayonet =       {offset = true, position = vector3_box(0, 0.112, -0.134), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
     --	GP25 Default
     {	dependencies = {"owo_gp25",
         },
-        bayonet =       {offset = true, position = vector3_box(0, -0.072, -0.134), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
+        bayonet =       {offset = true, position = vector3_box(0, 0.018, -0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
     --	GP25 Helpers
     {	dependencies = {"owo_gp25"},
@@ -162,7 +162,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Masterkey
     --  -------------------------------------------
-    --  Not recon, Syn's Kantrael bodies (uses the same positioning as lasgun_p1_m1 because they're iLas bodies)
+    --  Syn's Volleygun/Kantrael bodies (uses the same positioning as lasgun_p1_m1 because they're iLas bodies)
     --      THICC
     {	dependencies = {"owo_underbarrel_shotgun_01",
             "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
