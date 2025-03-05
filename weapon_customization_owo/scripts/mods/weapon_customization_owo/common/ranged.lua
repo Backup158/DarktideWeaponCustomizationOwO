@@ -4297,7 +4297,7 @@ function mod.owo_magazine_magpull(variant_id, type)
 end
 
 -- Magazine: AK
---	Oh fuck the bullets don't move
+--	Oh fuck the bullets don't move if i only move the mag
 --[[
 function mod.owo_magazine_ak(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
@@ -4305,17 +4305,46 @@ function mod.owo_magazine_ak(variant_id, type)
 		{id = "owo_magazine_ak_02", name = "OwO AK Mag Curvy"},
 		{id = "owo_magazine_ak_03", name = "OwO AK Mag Curvy (Extended)"},
 	})
+	mod.inject_attachments_owo(variant_id, "owo_magac1" or type, {
+		{id = "owo_magazine_ak_ac1_00", name = "OwO AK Mag'vesa Empty"},
+		{id = "owo_magazine_ak_ac1_01", name = "OwO AK Mag'vesa"},
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_magazine_ak_01 = {
 			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = {
+				owo_magac1 = "owo_magazine_ak_ac1_01",
+			},
+			hide_mesh = {
+				--{"magazine", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		owo_magazine_ak_02 = {
 			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = {
+				owo_magac1 = "owo_magazine_ak_ac1_01",
+			},
+			hide_mesh = {
+				--{"magazine", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		owo_magazine_ak_03 = {
 			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = {
+				owo_magac1 = "owo_magazine_ak_ac1_01",
+			},
+			hide_mesh = {
+				--{"magazine", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		-- ### Helper Parts ###
+		owo_magazine_ak_ac1_00 = {
+			model = "", type = "owo_magac1", parent = "magazine", 
+		},
+		owo_magazine_ak_ac1_01 = {
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "owo_magac1", parent = "magazine", 
 		},
 	})
 end

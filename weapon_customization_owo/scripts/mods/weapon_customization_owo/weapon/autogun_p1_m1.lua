@@ -135,7 +135,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- Magazine: FLAT
 	-- ######
 	{	dependencies = {"owo_lasgun_magazine_flat_01"},
-		magazine = {offset = true,scale = vector3_box(1, 1, 0.5 ) },
+		magazine = {offset = true, scale = vector3_box(1, 1, 0.5 ) },
 	},
 	{	dependencies = {"owo_autogun_magazine_flat_03"},
 		magazine = {offset = true, scale = vector3_box(1, 1, 0.6 ) },
@@ -145,16 +145,19 @@ mod.mt.inject_fixes(this_variant, {
 	-- Magazine: AK
 	-- ######
     --[[
+    {   dependencies = {"owo_magazine_ak_01|owo_magazine_ak_02|owo_magazine_ak_03"},
+        magazine = {offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ), trigger_move = {"owo_magac1"}, animation_wait_detach = {"owo_magac1"}, },
+    },
     {	dependencies = {"owo_magazine_ak_01"},
-        magazine = {offset = true, position = vector3_box(0, 0.0, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        owo_magac1 = {offset = false, position = vector3_box(0, 0.0, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ), animation_wait_attach = {"magazine"}, },
     },
 	{	dependencies = {"owo_magazine_ak_02"},
-        magazine = {offset = true, position = vector3_box(0, -0.002, -0.111), rotation = vector3_box(18, 0, 0), scale = vector3_box(1, 1, 0.7 ) },
+        owo_magac1 = {offset = false, position = vector3_box(0, 0.05, -0.04), rotation = vector3_box(18, 0, 0), scale = vector3_box(1, 1, 0.7 ), animation_wait_attach = {"magazine"}, },
     },
     {	dependencies = {"owo_magazine_ak_03"},
-        magazine = {offset = true, position = vector3_box(0, -0.002, -0.111), rotation = vector3_box(18, 0, 0), scale = vector3_box(1, 1, 1.15 ) },
+        owo_magac1 = {offset = false, position = vector3_box(0, -0.002, -0.111), rotation = vector3_box(18, 0, 0), scale = vector3_box(1, 1, 1.15 ), animation_wait_attach = {"magazine"}, },
     },
-    ]]
+    ]] 
 
     -- ######
     -- DREG GUNNER BARREL
@@ -1231,7 +1234,7 @@ mod.mt.inject_fixes(this_variant, {
 		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
     -- Magazines
-    {   dependencies = { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01"},
+    {   dependencies = { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01|owo_magazine_ak_ac1_01"},
         owo_magac1 = { hide_mesh = {{"owo_magac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_jungle_mag_connector_f_01|owo_magazine_magpull_helper_02"},
