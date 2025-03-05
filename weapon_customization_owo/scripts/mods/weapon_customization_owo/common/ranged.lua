@@ -1765,7 +1765,7 @@ end
 function mod.owo_underbarrel_gl(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
 		{id = "owo_m203", name = "OwO M203 Grenade Launcher"},
-		{id = "owo_gp25", name = "OwO GP25 Grenade Launcher"},
+		{id = "owo_gp25", name = "OwO GP-25 Grenade Launcher"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
 		{id = "owo_underbarrel_gl_empty_01", name = "Empty Bayonet", no_randomize = true},
