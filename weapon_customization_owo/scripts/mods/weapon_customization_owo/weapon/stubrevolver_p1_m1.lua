@@ -35,26 +35,26 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     --  Doom
     {   dependencies = { "owo_alt_viewmodel_01" },
-        scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
+        scope_offset =         { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), lense_transparency = false },
+        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), lense_transparency = false,  },
     },
     {   dependencies = { "owo_alt_viewmodel_02" },
-        scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
+        scope_offset =         { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), lense_transparency = false, },
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), lense_transparency = false, },
     },
     {   dependencies = { "owo_alt_viewmodel_03" },
-        scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
+        scope_offset =         { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0), lense_transparency = false, },
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0), lense_transparency = false, },
     },
     -- CS:S
     {   dependencies = { "owo_alt_viewmodel_04" },
-        scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        scope_offset =         { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
+        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
     },
     -- Hipfire
     {   dependencies = { "owo_alt_viewmodel_05" },
-        scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        scope_offset =         { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
+        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
     },
 
     -- ######
@@ -145,7 +145,7 @@ mod.mt.inject_fixes(this_variant, {
         Not doing until i figure out the positioning issue bug
     {   dependencies = {"owo_revolver_shotgun_barrel_base_04_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l",
         },
-        barrel = {offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        barrel = { offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
         barrelshroud = {parent = "barrel", parent_node = 9, offset = false, 
             position = vector3_box(0, 0.116, -0.02), scale = vector3_box(0.8, 0.615, 0.865)
         },

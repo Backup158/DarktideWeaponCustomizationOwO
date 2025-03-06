@@ -37,26 +37,26 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     --  Doom
     {   dependencies = { "owo_alt_viewmodel_01" },
-        scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0)},
+        scope_offset =         { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), lense_transparency = false },
+        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), lense_transparency = false,  },
     },
     {   dependencies = { "owo_alt_viewmodel_02" },
-        scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0)},
+        scope_offset =         { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), lense_transparency = false, },
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), lense_transparency = false, },
     },
     {   dependencies = { "owo_alt_viewmodel_03" },
-        scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0)},
+        scope_offset =         { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0), lense_transparency = false, },
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0), lense_transparency = false, },
     },
     -- CS:S
     {   dependencies = { "owo_alt_viewmodel_04" },
-        scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        scope_offset =         { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
+        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
     },
     -- Hipfire
     {   dependencies = { "owo_alt_viewmodel_05" },
-        scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
-        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0)},
+        scope_offset =         { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
+        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
     },
 
     -- ######
@@ -66,10 +66,10 @@ mod.mt.inject_fixes(this_variant, {
         muzzle = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },
     },
     {	dependencies = {"owo_suppressor_01"},
-        muzzle_2 = {offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },	
+        muzzle_2 = { offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },	
     },
     {	dependencies = {"owo_suppressor_02"},
-        muzzle_2 = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ) }
+        muzzle_2 = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ) }
     },
     {	dependencies = { "owo_suppressor_03"},
         muzzle = { offset = true,   position = vector3_box(0, 0.5, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
@@ -83,43 +83,43 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies = {"owo_suppressor_01|owo_suppressor_02", 
             "autogun_bayonet_03"
         },
-        bayonet = {offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ) },
+        bayonet = { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ) },
     },
     -- ######
 	-- Magazine: FLAT MAG
 	-- ######
     {   dependencies = {"owo_lasgun_magazine_flat_01"},
-        magazine = {offset = true, scale = vector3_box(1, 1, 0.5)},
+        magazine = { offset = true, scale = vector3_box(1, 1, 0.5)},
     },
 
     -- ######
     -- Receiver: Grip Mag
     -- ######
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03"},
-        receiver = {offset = true, position = vector3_box(0, 0, 0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        receiver = { offset = true, position = vector3_box(0, 0, 0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
         -- None of my transformations are working im gonna kill someone
         -- and receiverac1 is stealing mag anims lmaoooo
         -- SETTING OFFSET TO FALSE FIXED IT. lets this take over from default? it would stretch this time but wouldn't move (unlike shotgun which didn't stretch either)
-        receiverac1 = {offset = false, position = vector3_box(0, 0.136, 0.022), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.33, 0.38)},
+        receiverac1 = { offset = false, position = vector3_box(0, 0.136, 0.022), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.33, 0.38)},
         -- trigger already aligned. reuse as hammer? on a las weapon lmao
-        -- receiverac2 = {offset = true, position = vector3_box(0, -0.04, -0.07), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.2, 0.2, 0.033)},
+        -- receiverac2 = { offset = true, position = vector3_box(0, -0.04, -0.07), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.2, 0.2, 0.033)},
         receiverac2 = {hide_mesh = { 	{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-        magazine = {offset = true, position = vector3_box(0, -0.115, -0.031), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.85, 0.5, 1)},
-        grip = {offset = true,position = vector3_box(0, 0.0, -0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1, 1)},
+        magazine = { offset = true, position = vector3_box(0, -0.115, -0.031), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.85, 0.5, 1)},
+        grip = { offset = true,position = vector3_box(0, 0.0, -0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1, 1)},
     },
     --  MT Irons
     -- offsets are already set, so these just get overwritten unless this goes before them in the load order :skull:
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "lasgun_sight_01",
         },
-        --no_scope_offset = {offset = true, position = vector3_box(-0.058, -0.5, -0.063), rotation = vector3_box(0, 29, 0)},
-        no_scope_offset = {offset = true, position = vector3_box(-0.055, -0.5, -0.063), rotation = vector3_box(0, 29, 0)},
+        --no_scope_offset = { offset = true, position = vector3_box(-0.058, -0.5, -0.063), rotation = vector3_box(0, 29, 0)},
+        no_scope_offset = { offset = true, position = vector3_box(-0.055, -0.5, -0.063), rotation = vector3_box(0, 29, 0)},
     },
     -- Syn's aquilon scope alignment
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "aquilon_scope_01|aquilon_scope_01a|aquilon_scope_02|aquilon_scope_02a"
         },
-        scope_offset = {offset = true, position = vector3_box(-0.035, -0.5, -0.053), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
+        scope_offset = { offset = true, position = vector3_box(-0.035, -0.5, -0.053), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
     },
     -- other sights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
@@ -127,28 +127,28 @@ mod.mt.inject_fixes(this_variant, {
             --"!lasgun_sight_01"
         },
         -- rotated to be straight in first person
-        no_scope_offset = {offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0)},
-        scope_offset = {offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
+        no_scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0)},
+        scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
     },
     
     -- Normal flashlights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "!owo_grip_laser_01", "!owo_grip_laser_02",
         },
-        flashlight = {offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},
+        flashlight = { offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},
     },
     -- trigger flashlights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "owo_grip_laser_01|owo_grip_laser_02"
         },
-        flashlight = {offset = true,  position = vector3_box(-0.024, 0.072, -0.057), scale = vector3_box(0.75, 0.425, 0.588)},
+        flashlight = { offset = true,  position = vector3_box(-0.024, 0.072, -0.057), scale = vector3_box(0.75, 0.425, 0.588)},
     },
     
     -- ######
 	-- Flashlight: LASER GRIP
 	-- ######
     {   dependencies = {"owo_grip_laser_01|owo_grip_laser_02"},
-        flashlight = {offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(0.75, 0.425, 0.588)},
+        flashlight = { offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(0.75, 0.425, 0.588)},
     },
 
     -- #########################

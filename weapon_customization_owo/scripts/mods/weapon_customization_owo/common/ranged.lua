@@ -4433,7 +4433,7 @@ end
 mod.mt.inject_fixes(this_variant, {
     {   dependencies = {"owo_",
         },
-        grip = {offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+        grip = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
     },
 })
 ]]
