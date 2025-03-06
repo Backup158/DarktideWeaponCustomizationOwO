@@ -130,19 +130,19 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0)},
         scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true },
     },
-    
-    -- Normal flashlights
-    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
-            "!owo_grip_laser_01", "!owo_grip_laser_02",
-        },
-        flashlight = { offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},
-    },
-    -- trigger flashlights
+    -- Flashlights
+    --      Trigger flashlights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "owo_grip_laser_01|owo_grip_laser_02"
         },
         flashlight = { offset = true,  position = vector3_box(-0.024, 0.072, -0.057), scale = vector3_box(0.75, 0.425, 0.588)},
     },
+    --      Normal flashlights
+    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
+        },
+        flashlight = { offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},
+    },
+    
     
     -- ######
 	-- Flashlight: LASER GRIP

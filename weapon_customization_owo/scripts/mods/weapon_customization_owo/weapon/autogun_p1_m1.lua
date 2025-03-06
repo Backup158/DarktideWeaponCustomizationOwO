@@ -120,6 +120,17 @@ local _short_braced_autogun_all_barrels = _short_braced_autogun_barrels.."|".._s
 local _long_braced_autogun_barrels = "barrel_09|barrel_10"
 local _long_braced_autogun_mt_barrels = "bagun_barrel_03|bagun_barrel_04"
 local _long_braced_autogun_all_barrels = _long_braced_autogun_barrels.."|".._long_braced_autogun_mt_barrels
+local _short_infantry_autogun_barrels = "barrel_04"
+local _short_infantry_autogun_mt_barrels = "iagun_barrel_04"
+local _short_infantry_autogun_all_barrels = _short_infantry_autogun_barrels.."|".._short_infantry_autogun_mt_barrels
+local _medium_infantry_autogun_barrels = "barrel_01|barrel_02|barrel_06|barrel_21"
+local _medium_infantry_autogun_mt_barrels = "iagun_barrel_01|iagun_barrel_02|iagun_barrel_06"
+local _medium_infantry_autogun_all_barrels = _medium_infantry_autogun_barrels.."|".._medium_infantry_autogun_mt_barrels
+local _long_infantry_autogun_barrels = "barrel_03|barrel_05"
+local _long_infantry_autogun_mt_barrels = "iagun_barrel_03|iagun_barrel_05"
+local _long_infantry_autogun_all_barrels = _long_infantry_autogun_barrels.."|".._long_infantry_autogun_mt_barrels
+local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
+local _long_infantry_lasgun_mt_barrels = "ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08"
 
 local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06"
 local _owo_all_holographic_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss"
@@ -797,7 +808,8 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { _owo_all_holographic_sights },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
-        rail =           { offset = true, position  = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8) },
+        
+        rail =           { offset = true, position  = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), automatic_equip = { rail = "rail_01"}, },
     },
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03" },
         sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },

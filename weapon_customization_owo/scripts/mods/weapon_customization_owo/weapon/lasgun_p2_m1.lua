@@ -78,6 +78,19 @@ local _owo_magnifier_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_
 local _owo_magnifier_aligned_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss"
 local _owo_magnifier_side_holographic_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
 
+local _super_short_helbore_barrels = "barrel_19"
+local _medium_short_helbore_barrels = "barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b"-- Medium length, short bottom
+local _medium_medium_helbore_barrels = "barrel_11|hlasgun_barrel_03"
+local _long_helbore_barrels = "barrel_10|barrel_20|hlasgun_barrel_02"
+local _short_infantry_lasgun_barrels = "barrel_03|ilasgun_barrel_03"
+local _long_infantry_lasgun_barrels = "barrel_01|barrel_02|barrel_04|barrel_05|barrel_06|barrel_07|barrel_08|barrel_21|ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08"
+local _recon_lasgun_barrels = "barrel_14|barrel_15|barrel_16|barrel_17|barrel_18"
+local _recon_lasgun_mt_barrels = "rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05"
+local _recon_lasgun_all_barrels = _recon_lasgun_barrels.."|".._recon_lasgun_mt_barrels
+local _short_infantry_autogun_mt_barrels = "iagun_barrel_04"
+local _medium_infantry_autogun_mt_barrels = "iagun_barrel_01|iagun_barrel_02|iagun_barrel_06"
+local _long_infantry_autogun_mt_barrels = "iagun_barrel_03|iagun_barrel_05"
+
 mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Receiver: BOLT ACTION HELBORE
@@ -210,25 +223,25 @@ mod.mt.inject_fixes(this_variant, {
 	-- 	Helbores
 	-- 		Ultra shorty flintlock helbore
 	{   dependencies = {"owo_bayonet_m7_01",
-			"barrel_19",
+			_super_short_helbore_barrels,
 		},
 		bayonet = { offset = true, position = vector3_box(0, 0.335, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
 	},
 	--		Medium Helbore barrels, Short bottom
 	{   dependencies = {"owo_bayonet_m7_01",
-			"barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b",
+			_medium_short_helbore_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.415, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
     },
 	-- 		Medium Helbore barrels, medium bottom
 	{   dependencies = {"owo_bayonet_m7_01",
-			"barrel_11|hlasgun_barrel_03|owo_wood_krieg_02",
+			_medium_medium_helbore_barrels.."|owo_wood_krieg_02",
 		},
 		bayonet = { offset = true, position = vector3_box(0, 0.435, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
 	},
 	-- 		Long Helbore barrels
 	{   dependencies = {"owo_bayonet_m7_01",
-			"barrel_10|barrel_20|hlasgun_barrel_02|owo_wood_krieg_01|owo_wood_krieg_03",
+			_long_helbore_barrels.."|owo_wood_krieg_01|owo_wood_krieg_03",
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.566, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
     },
@@ -266,44 +279,44 @@ mod.mt.inject_fixes(this_variant, {
 	-- 	Helbores
 	-- 		Ultra shorty flintlock helbore
 	{   dependencies = {"owo_bayonet_seitengewehr",
-			"barrel_19",
+			_super_short_helbore_barrels,
 		},
 		bayonet = { offset = true, position = vector3_box(0, 0.335, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
 	},
 	--		Medium Helbore barrels, short bottom
 	{   dependencies = {"owo_bayonet_seitengewehr",
-			"barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b",
+			_medium_short_helbore_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.415, -0.044), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
 	-- 		Medium Helbore barrels
 	{   dependencies = {"owo_bayonet_seitengewehr",
-			"barrel_11|hlasgun_barrel_03|owo_wood_krieg_02",
+			_medium_medium_helbore_barrels.."|owo_wood_krieg_02",
 		},
 		bayonet = { offset = true, position = vector3_box(0, 0.435, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
 	},
 	-- 		Long Helbore barrels
 	{   dependencies = {"owo_bayonet_seitengewehr",
-			"barrel_10|barrel_20|hlasgun_barrel_02|owo_wood_krieg_01|owo_wood_krieg_03",
+			_long_helbore_barrels.."|owo_wood_krieg_01|owo_wood_krieg_03",
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.47, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
 	-- 	Infantry Lasgun Barrels
 	-- 		Short Lasgun
 	{   dependencies = {"owo_bayonet_seitengewehr",
-			"barrel_03|ilasgun_barrel_03",
+			_short_infantry_lasgun_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.25, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
 	--		Medium/Long iLas
 	{   dependencies = {"owo_bayonet_seitengewehr",
-			"barrel_01|barrel_02|barrel_04|barrel_05|barrel_06|barrel_07|barrel_08|barrel_021|ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08",
+			_long_infantry_lasgun_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.326, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
 	-- 	Recon
 	{   dependencies = {"owo_bayonet_seitengewehr",
-			"barrel_14|barrel_15|barrel_16|barrel_17|barrel_18|rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05",
+			_recon_lasgun_all_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.235, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
@@ -340,44 +353,44 @@ mod.mt.inject_fixes(this_variant, {
 	-- 	Helbores
 	-- 		Ultra shorty flintlock helbore
 	{   dependencies = {"owo_bayonet_epee",
-			"barrel_19",
+			_super_short_helbore_barrels,
 		},
 		bayonet = { offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
 	},
 	--		Medium Helbore barrels, short bottom
 	{   dependencies = {"owo_bayonet_epee",
-			"barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b",
+			_medium_short_helbore_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.316, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
     },
 	-- 		Medium Helbore barrels
 	{   dependencies = {"owo_bayonet_epee",
-			"barrel_11|hlasgun_barrel_03|owo_wood_krieg_02",
+			_medium_medium_helbore_barrels.."|owo_wood_krieg_02",
 		},
 		bayonet = { offset = true, position = vector3_box(0, 0.368, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
 	},
 	-- 		Long Helbore barrels
 	{   dependencies = {"owo_bayonet_epee",
-			"barrel_10|barrel_20|hlasgun_barrel_02|owo_wood_krieg_01|owo_wood_krieg_03",
+			_long_helbore_barrels.."|owo_wood_krieg_01|owo_wood_krieg_03",
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.462, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
     },
 	-- 	Infantry Lasgun Barrels
 	-- 		Short Lasgun
 	{   dependencies = {"owo_bayonet_epee",
-			"barrel_03|ilasgun_barrel_03",
+			_short_infantry_lasgun_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.146, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
     },
 	--		Medium/Long iLas
 	{   dependencies = {"owo_bayonet_epee",
-			"barrel_01|barrel_02|barrel_04|barrel_05|barrel_06|barrel_07|barrel_08|barrel_021|ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08",
+			_long_infantry_lasgun_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.224, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
     },
 	-- 	Recon
 	{   dependencies = {"owo_bayonet_epee",
-			"barrel_14|barrel_15|barrel_16|barrel_17|barrel_18|rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05",
+			_recon_lasgun_all_barrels,
 		},
         bayonet = { offset = true, position = vector3_box(0, 0.12, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
     },

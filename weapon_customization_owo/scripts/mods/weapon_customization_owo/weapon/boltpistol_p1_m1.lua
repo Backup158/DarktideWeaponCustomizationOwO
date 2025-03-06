@@ -114,7 +114,8 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { _owo_all_holographic_sights },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
-        rail =           { offset = true, position  = vector3_box(0, 0.012, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8) },
+        
+        rail =           { offset = true, position  = vector3_box(0, 0.012, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 0.8), automatic_equip = { rail = "rail_01"}, },
     },
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03" },
         sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
