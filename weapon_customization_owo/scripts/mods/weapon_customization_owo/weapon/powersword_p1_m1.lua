@@ -1,0 +1,58 @@
+local mod = get_mod("weapon_customization_owo")
+
+ -- Locals from Weapon Customization plugin template
+local vector3_box = Vector3Box
+local _item = "content/items/weapons/player"
+local _item_ranged = _item.."/ranged"
+local _item_melee = _item.."/melee"
+local _item_minion = "content/items/weapons/minions"
+
+local this_variant = "powersword_p1_m1" -- Power Sword
+
+-- ############################################
+-- Add Custom Attachments
+-- Makes new tables for attachment anchors
+-- ############################################
+--[[ Covered Parts
+weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:13:                mod.wc.attachment[this_variant].bladeshroud = {}
+weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:14:                mod.wc.attachment[this_variant].bladeshroudac = {}
+weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:15:                mod.wc.attachment[this_variant].bladeshroudac2 = {}
+weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:16:                mod.wc.attachment[this_variant].bladeshroudac10 = {}
+weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:17:                mod.wc.attachment[this_variant].bladeshroudac11 = {}
+weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:18:                mod.wc.attachment[this_variant].bladeshroudac12 = {}
+weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:19:                mod.wc.attachment[this_variant].bladeshroudac13 = {}
+]]
+
+-- ############################################
+-- Injection Calls: attachments and models
+-- from ranged.lua and melee.lua
+-- ############################################
+mod.owo_slim_psword(this_variant)
+
+-- ############################################
+-- Inject Fixes
+-- ############################################
+mod.mt.inject_fixes(this_variant, {
+    --  Slim Power Sword
+    --      Hilt Patches
+    {   dependencies = {"owo_slim_psword_01|owo_slim_psword_02|owo_slim_psword_03|owo_slim_psword_04|owo_slim_psword_05|owo_slim_psword_06|owo_slim_psword_07|owo_slim_psword_08",
+            "power_sword_grip_01|power_sword_grip_02|power_sword_grip_03|power_sword_grip_04|power_sword_grip_05|power_sword_grip_06",
+        },
+        hilt = {position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+    },
+    {   dependencies = {"owo_slim_psword_01|owo_slim_psword_02|owo_slim_psword_03|owo_slim_psword_04|owo_slim_psword_05|owo_slim_psword_06|owo_slim_psword_07|owo_slim_psword_08"},
+        hilt = {position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+        blade = {position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 1, 1)},
+    },
+    --  Thin Power Sword
+    --      Hilt Patches
+    {   dependencies = {"owo_slim_psword_01t|owo_slim_psword_02t|owo_slim_psword_03t|owo_slim_psword_04t|owo_slim_psword_05t|owo_slim_psword_06t|owo_slim_psword_07t|owo_slim_psword_08t",
+            "power_sword_grip_01|power_sword_grip_02|power_sword_grip_03|power_sword_grip_04|power_sword_grip_05|power_sword_grip_06",
+        },
+        hilt = {position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+    },
+    {   dependencies = {"owo_slim_psword_01t|owo_slim_psword_02t|owo_slim_psword_03t|owo_slim_psword_04t|owo_slim_psword_05t|owo_slim_psword_06t|owo_slim_psword_07t|owo_slim_psword_08t"},
+        hilt = {position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+        blade = {position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.9, 0.65, 1)},
+    },
+})

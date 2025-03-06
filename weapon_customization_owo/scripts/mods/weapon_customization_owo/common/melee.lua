@@ -23,8 +23,21 @@ else
 		"owo_tacax_spike_helper_01",
 	}
 end
--- BODY
-
+-- BLADE
+--[[
+if mod.syn then
+	mod.mt.table_append(mod.wc.bladeshrouds, {
+		--"owo_slim_psword_helper_00",
+		--"owo_slim_psword_helper_01",
+	})
+else 
+	mod.wc.add_custom_attachments.bladeshroud = "bladeshrouds"
+	mod.wc.bladeshrouds = {
+		--"owo_slim_psword_helper_00",
+		--"owo_slim_psword_helper_01",
+	}
+end
+]]
 -- POMMEL
 mod.wc.add_custom_attachments.pommelac1 = "pommelac1_list"
 mod.wc.pommelac1_list = {
@@ -111,6 +124,96 @@ function mod.owo_rapier_blade(variant_id, type)
 		owo_rapier_blade_05 = {
 			model = _item_melee.."/blades/force_sword_blade_04", type = "body", 
 			mesh_move = false, parent = "grip",
+		},
+	})
+end
+
+-- Blade: Slim Power Sword
+function mod.owo_slim_psword(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "blade" or type, {
+		{id = "owo_slim_psword_01", name = "OwO Slim PSword 1"},
+		{id = "owo_slim_psword_02", name = "OwO Slim PSword 2"},
+		{id = "owo_slim_psword_03", name = "OwO Slim PSword 3"},
+		--{id = "owo_slim_psword_04", name = "OwO Slim PSword 4"},
+		{id = "owo_slim_psword_05", name = "OwO Slim PSword 4 (5)"},
+		{id = "owo_slim_psword_06", name = "OwO Slim PSword 5 (6)"},
+		{id = "owo_slim_psword_07", name = "OwO Slim PSword 6 (7)"},
+		{id = "owo_slim_psword_08", name = "OwO Slim PSword 7 (M)"},
+		{id = "owo_slim_psword_01t", name = "OwO Thin PSword 1"},
+		{id = "owo_slim_psword_02t", name = "OwO Thin PSword 2"},
+		{id = "owo_slim_psword_03t", name = "OwO Thin PSword 3"},
+		--{id = "owo_slim_psword_04t", name = "OwO Slim PSword 4"},
+		{id = "owo_slim_psword_05t", name = "OwO Thin PSword 4 (5)"},
+		{id = "owo_slim_psword_06t", name = "OwO Thin PSword 5 (6)"},
+		{id = "owo_slim_psword_07t", name = "OwO Thin PSword 6 (7)"},
+		{id = "owo_slim_psword_08t", name = "OwO Thin PSword 7 (M)"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_slim_psword_01 = {
+			model = _item_melee.."/blades/power_sword_blade_01", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_02 = {
+			model = _item_melee.."/blades/power_sword_blade_02", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_03 = {
+			model = _item_melee.."/blades/power_sword_blade_03", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		--owo_slim_psword_04 = {
+		--	model = _item_melee.."/blades/power_sword_blade_04", type = "blade", 
+		--	mesh_move = false, parent = "hilt",
+		--},
+		owo_slim_psword_05 = {
+			model = _item_melee.."/blades/power_sword_blade_06", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_06 = {
+			model = _item_melee.."/blades/power_sword_blade_06", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_07 = {
+			model = _item_melee.."/blades/power_sword_blade_07", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_08 = {
+			model = _item_melee.."/blades/power_sword_blade_ml01", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_01t = {
+			model = _item_melee.."/blades/power_sword_blade_01", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_02t = {
+			model = _item_melee.."/blades/power_sword_blade_02", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_03t = {
+			model = _item_melee.."/blades/power_sword_blade_03", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		--owo_slim_psword_04t = {
+		--	model = _item_melee.."/blades/power_sword_blade_04", type = "blade", 
+		--	mesh_move = false, parent = "hilt",
+		--},
+		owo_slim_psword_05t = {
+			model = _item_melee.."/blades/power_sword_blade_06", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_06t = {
+			model = _item_melee.."/blades/power_sword_blade_06", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_07t = {
+			model = _item_melee.."/blades/power_sword_blade_07", type = "blade", 
+			mesh_move = false, parent = "hilt",
+		},
+		owo_slim_psword_08t = {
+			model = _item_melee.."/blades/power_sword_blade_ml01", type = "blade", 
+			mesh_move = false, parent = "hilt",
 		},
 	})
 end

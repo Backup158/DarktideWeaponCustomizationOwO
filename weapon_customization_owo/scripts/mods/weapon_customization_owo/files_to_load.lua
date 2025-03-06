@@ -38,7 +38,7 @@ mod.load_mod_file("weapon/stubrevolver_p1_m1")
 -- mod.load_mod_file("weapon/combatsword_p1_m1") -- Catachan "Devil's Claw" Sword
 -- mod.load_mod_file("weapon/combatsword_p2_m1") -- Heavy Sword?
 mod.load_mod_file("weapon/combatsword_p3_m1") -- Duelling Sword
--- mod.load_mod_file("weapon/powersword_p1_m1") -- Power Sword
+mod.load_mod_file("weapon/powersword_p1_m1") -- Power Sword
 -- mod.load_mod_file("weapon/powersword_2h_p1_m1") -- Relic Blade
 -- mod.load_mod_file("weapon/forcesword_p1_m1") -- Force Sword
 -- mod.load_mod_file("weapon/forcesword_2h_p1_m1") -- Force Greatsword
