@@ -33,31 +33,40 @@ This comes from having the main part be a muzzle that matches the actual muzzle 
     NEVEFUCKING MIND??!?!? I USED A BRAUTO MUZZLE (in AC2!!!) ON A RECON AND IT STILL STOLE IT?!?!?
 
 # Adding scopes with zoom
-in Ranged.lua
+## In Ranged.lua
 1. Declare your scope
-    Use a base mesh that is NOT a muzzle/barrel (see stolen note)M
-    Make it invisible: 
+    1. Use a base mesh that is NOT a muzzle/barrel. This is to reduce the risk of it stealing muzzle flashes.
+    2. Make it invisible: 
+    ```
         hide_mesh = {
 			{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 		}, 
-    Let's use axe_pommel_01
-2. auto equip lens1 and lens2 in the attachment declaration
-3. Append the scope name to wc.sights table
-    mod.mt.table_append(mod.wc.sights, {
-        "owo_holosight_01_01",
-    })
-4. Append base mesh to scope table to affect zoom
-    mod.mt.table_append(mod.wc.scopes, {
-        "axe_pommel_01",
-    })
-    NOTE: Syn already used
+	```
+    For OwO, I used `_item_melee.."/pommels/axe_pommel_01"` to 5. 
+	NOTE: Syn already used
         power_sword_grip_02
         power_sword_grip_03
-5. Set zoom level. zoom = (50/n magnification). ex: 2x mag is (50/2) = 25
-    mod.wc.sniper_zoom_levels.axe_pommel_01 = 15
-in <weapon>.lua
-1. When aligning lenses, add `data = {lens = x}` where x is which lense# it is, lens is lens = 1
-2. In scope_offset, lense_transparency = true to hide lenses
+2.  In the attachment declaration's `automatic_equip` table, choose a lens1 and a lens2
+	`lens = "scope_lens_02", lens_2 = "scope_lens_2_02"`
+3. Append the scope's `attachment.id` to `wc.sights` table
+```
+	mod.mt.table_append(mod.wc.sights, {
+        "owo_holosight_01_01",
+    })
+```
+4. Append base mesh to scope table to affect zoom
+```
+	mod.mt.table_append(mod.wc.scopes, {
+        "axe_pommel_01",
+    })
+```
+5. Set zoom level. zoom = ~(40/n magnification). ex: 2x mag is (40/2) = 20
+    `mod.wc.sniper_zoom_levels.axe_pommel_01 = 15`
+## In <weapon_variant>.lua
+5. When aligning lenses, add `data = {lens = x}` where x is which lense# it is, lens is lens = 1
+6. In scope_offset, lense_transparency = true to hide lenses
+	By default, this is set to false
+	However, setting it to false doesn't seem to let you not hide lenses
 
 # MT to base
 See Spreadsheet
