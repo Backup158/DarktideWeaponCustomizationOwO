@@ -312,14 +312,10 @@ mod.mt.table_append(mod.wc.sights, {
 	"owo_acog_sight_02", 
 	"owo_acog_sight_02f_z1", 
 	"owo_acog_sight_02_z1",
-	"owo_acog_sight_02f_top", 
-	"owo_acog_sight_02_top",
 	"owo_susat_01", 
 	"owo_susat_01_z1", 
-	"owo_susat_01_ps",
 	"owo_susat_02",
 	"owo_susat_02_z1",
-	"owo_susat_02_top",
 })
 mod.mt.table_append(mod.wc.scopes, {
 	"axe_pommel_01",
