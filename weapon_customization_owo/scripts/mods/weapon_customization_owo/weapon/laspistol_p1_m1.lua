@@ -119,7 +119,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "aquilon_scope_01|aquilon_scope_01a|aquilon_scope_02|aquilon_scope_02a"
         },
-        scope_offset = { offset = true, position = vector3_box(-0.035, -0.5, -0.053), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
+        scope_offset = { offset = true, position = vector3_box(-0.035, -0.5, -0.053), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true },
     },
     -- other sights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
@@ -128,7 +128,7 @@ mod.mt.inject_fixes(this_variant, {
         },
         -- rotated to be straight in first person
         no_scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0)},
-        scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true},
+        scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true },
     },
     
     -- Normal flashlights

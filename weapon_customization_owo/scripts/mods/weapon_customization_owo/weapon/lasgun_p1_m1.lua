@@ -299,7 +299,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Aligning sights to crosshair
     --  -------------------------------------------
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2"},
-        scope_offset =      { position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies = { "owo_holosight_01_03|owo_holosight_01_03ss" },
         scope_offset =      { position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0), lense_transparency = false },
@@ -385,10 +385,10 @@ mod.mt.inject_fixes(this_variant, {
     --      Aiming with main sight
     --          Backwards
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1" },
-        scope_offset =      { position = vector3_box(0, 0.04, -0.018), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, 0.04, -0.018), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies = { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1" },
-        scope_offset =      { position = vector3_box(0, 0.04, -0.016), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, 0.04, -0.016), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Aiming with RMR on ACOG
     {   dependencies = { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },

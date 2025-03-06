@@ -866,10 +866,10 @@ mod.mt.inject_fixes(this_variant, {
     --  Aligning sights to crosshair
     --  -------------------------------------------
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_01ss" },
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0193), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss" },
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.018), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.018), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies = { "owo_holosight_01_03|owo_holosight_01_03ss" },
         scope_offset =      { position = vector3_box(0, -0.0001, -0.018), rotation = vector3_box(0, 0, 0), lense_transparency = false },
@@ -959,20 +959,20 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1",
             "receiver_02|receiver_04|receiver_05|receiver_09|receiver_11",
         },
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.026), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.026), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Others
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1" },
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0257), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0257), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Forwards (Default)
     {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1",
             "receiver_02|receiver_04|receiver_05|receiver_09|receiver_11",
         },
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0258), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0258), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1" },
-        scope_offset =      { position = vector3_box(0, -0.0001, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        scope_offset =      { position = vector3_box(0, -0.0001, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  Aiming with RMR on ACOG
     {   dependencies = { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
@@ -996,8 +996,8 @@ mod.mt.inject_fixes(this_variant, {
         sightac7 = { offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
 	{	dependencies = {"owo_pu_scope_01|owo_pu_scope_02"},
-        no_scope_offset =   { position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true},
-        scope_offset =      { position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+        no_scope_offset =   { position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true },
 
         lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.162, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 1}},
 	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
