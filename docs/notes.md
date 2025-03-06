@@ -6,31 +6,34 @@ MT Helper Reflex Housing        {"sight_2", 5,6}      6 hides housing for sight 
 Autogun Irons                   {"sight", 2,3,4,5,6} -- one of these is the front rail lol
 
 # Parts not showing up?
-1. Make sure the weapon file is in files_to_load
+1. Make sure the weapon file is in `files_to_load.lua`
 2. Make sure the parts are declared with something in the main slot
 3. Make sure the helper is being auto equipped by the main attachment
 4. If a helper part is parented to a part that uses the same mesh, it will not show up
     Avoid this by parenting to the main mesh's parent and just copying the transforms to put them in the same place
 
 # Scope offsets
-no_scope_offset and scope_offset
+Set `no_scope_offset` or `scope_offset`, depending on if the attachment's base mesh is in `wc.scopes` table
+These transformations move **the gun**. Use Crosshair Remap (Continued) to see the aiming point, then move the gun based on that.
 position: x, z, y
     +x moves gun to the right
     +y moves gun up
+	+z moves gun forwards
 rotation: y, x, z
     +x put gun offset to the right
     +y put gun below
 
 # Parts not accept transformations
-Restart the game
-sometimes setting 'offset = false' makes it literally freeze on the screen, so it doesn't even rotate with the weapon
-can try parenting it to a specific node, but that can cause issues
-    1 we dont have a list of nodes
-    2 the node can move during gameplay
+1. Restart the game
+2. sometimes setting 'offset = false' makes it literally freeze on the screen, so it doesn't even rotate with the weapon
+3. can try parenting it to a specific node, but that can cause issues
+    1. we dont have a list of nodes
+    2. the node can move during gameplay. Key example being the final bullet of autogun magazines moving up as you shoot.
 
 # Bullet trails getting stolen
 This comes from having the main part be a muzzle that matches the actual muzzle that would've been used by the gun
     NEVEFUCKING MIND??!?!? I USED A BRAUTO MUZZLE (in AC2!!!) ON A RECON AND IT STILL STOLE IT?!?!?
+It also doesn't even need to match the gun. The autogun muzzles were stealing lasgun shots, and vice versa (SUSAT and Underbarrel GLs, respectively). 
 
 # Adding scopes with zoom
 ## In Ranged.lua
@@ -60,7 +63,10 @@ This comes from having the main part be a muzzle that matches the actual muzzle 
         "axe_pommel_01",
     })
 ```
-5. Set zoom level. zoom = ~(40/n magnification). ex: 2x mag is (40/2) = 20
+5. Set zoom level
+	50 zoom is no zoom. Same FOV as hipfire. 40 is around the same as default ADS.
+	zoom = ~(40/n magnification)
+		ex: 2x mag is (40/2) = 20
     `mod.wc.sniper_zoom_levels.axe_pommel_01 = 15`
 ## In <weapon_variant>.lua
 5. When aligning lenses, add `data = {lens = x}` where x is which lense# it is, lens is lens = 1
