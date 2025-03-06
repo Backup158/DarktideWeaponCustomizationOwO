@@ -14,7 +14,7 @@ Autogun Irons                   {"sight", 2,3,4,5,6} -- one of these is the fron
 
 # Scope offsets
 Set `no_scope_offset` or `scope_offset`, depending on if the attachment's base mesh is in `wc.scopes` table
-These transformations move **the gun**. Use Crosshair Remap (Continued) to see the aiming point, then move the gun based on that.
+These transformations move **the gun**. Use Crosshair Remap (Continued) to see the aiming point, then move the gun based on that. See [my Modding Tools cheat sheet](moddingtoolsCheatSheet.png).
 position: x, z, y
     +x moves gun to the right
     +y moves gun up
