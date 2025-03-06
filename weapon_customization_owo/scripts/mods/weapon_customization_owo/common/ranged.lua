@@ -3778,6 +3778,10 @@ function mod.owo_pu_scope(variant_id, type)
 		{id = "owo_pu_scope_empty_06", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_06", name = "PU Scope'vesa", no_randomize = true},
 	})
+	mod.inject_attachments_owo(variant_id, "sightac7" or type, {
+		{id = "owo_pu_scope_empty_07", name = "Empty Scope", no_randomize = true},
+		{id = "owo_pu_scope_helper_07", name = "PU Scope'vesa", no_randomize = true},
+	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary" or type, {
 		{id = "owo_pu_scope_empty2", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_riser_01", name = "PU Scope Riser", no_randomize = true},
@@ -3794,24 +3798,33 @@ function mod.owo_pu_scope(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_pu_scope_01 = {
-			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
 				sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
 				sightac5 = "owo_pu_scope_helper_05", sightac6 = "owo_pu_scope_helper_06",
-				sight_secondary = "owo_pu_scope_riser_01"
-			}
+				sightac7 = "owo_pu_scope_helper_07",
+				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "reflex_scopehelper_01",
+			},
+			hide_mesh = {
+				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}, 
+				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}, 
+			},
 		},
 		owo_pu_scope_02 = {
-			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
 				sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
 				sightac5 = "owo_pu_scope_helper_05", sightac6 = "owo_pu_scope_helper_06",
-				sight_secondary = "owo_pu_scope_riser_01"
-			}
+				sightac7 = "owo_pu_scope_helper_07",
+				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "reflex_scopehelper_01",
+			},
+			hide_mesh = {
+				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		-- ### Helper Parts ###
 		owo_pu_scope_helper_01 = {
@@ -3838,6 +3851,11 @@ function mod.owo_pu_scope(variant_id, type)
 		},
 		owo_pu_scope_helper_06 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "sightac6", 
+			mesh_move = false, parent = "sight"
+		},
+		-- Scope again
+		owo_pu_scope_helper_07 = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac7", 
 			mesh_move = false, parent = "sight"
 		},
 		-- Riser
@@ -3882,6 +3900,10 @@ function mod.owo_pu_scope(variant_id, type)
 		},
 		owo_pu_scope_empty_06 = {
 			model = "", type = "sightac6", 
+			mesh_move = false, parent = "sight"
+		},
+		owo_pu_scope_empty_07 = {
+			model = "", type = "sightac7", 
 			mesh_move = false, parent = "sight"
 		},
 		owo_pu_scope_empty2 = {
