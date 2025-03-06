@@ -74,6 +74,13 @@ It also doesn't even need to match the gun. The autogun muzzles were stealing la
 	By default, this is set to false
 	However, setting it to false doesn't seem to let you not hide lenses
 
+# Making Parts follow animations
+## When the parent already exists
+For the main part (which all the helpers follow):
+1. Set offset = false
+2. set parent to the moving part
+3. specify parent_node
+For revolver, it would be `offset = false, parent = "barrel", parent_node = 9,`
 # MT to base
 See Spreadsheet
 **Autoguns** autogun_p1_m1.lua

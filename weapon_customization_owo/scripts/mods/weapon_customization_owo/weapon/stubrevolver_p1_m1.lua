@@ -88,19 +88,19 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Sight Helpers
     {   dependencies = { _owo_all_holographic_sights },
-        sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
-        sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
-        
         rail =           { offset = true, position  = vector3_box(0, 0.018, 0.112), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 0.8), automatic_equip = { rail = "rail_01"}, },
+
+        sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154),},
+        sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314),},
     },
     {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03" },
-        sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
-        sightac2 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
+        sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286),},
+        sightac2 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286),},
     },
     --      Short Variant
     {   dependencies = { "owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss" },
-        sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.366, 0.256) },
-        sightac2 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.366, 0.256) },
+        sightac1 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.366, 0.256),},
+        sightac2 =       { offset = true, position  = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.366, 0.256),},
     },
     --  Main Sight body
     --      Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
@@ -110,7 +110,7 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { _owo_no_magnifier_holographic_sights },
-        sight =             { offset = true, position  = vector3_box(0, 0, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        sight =             { offset = false, parent = "barrel", parent_node = 9, position  = vector3_box(0, 0, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3),},
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
@@ -121,27 +121,31 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { _owo_magnifier_holographic_sights },
-        sight =             { offset = true, position  = vector3_box(0, 0.13, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        sight =             { offset = false, parent = "barrel", parent_node = 9, position  = vector3_box(0, 0.13, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3),},
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     
-        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
+        sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104),},
     },
     --  Magnifier
     --      Aligned
     {   dependencies = { _owo_magnifier_aligned_holographic_sights },
-        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.154, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.154, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61),},
+        sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61),},
     
-        lens =              { offset = false, parent = "sight", position = vector3_box(0, -0.048, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
-	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
+        lens =              { offset = false, parent = "sight", position = vector3_box(0, -0.048, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), 
+            data = {lens = 1},},
+	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), 
+            data = {lens = 2},},
     },
     --      Side
     {   dependencies = { _owo_magnifier_side_holographic_sights },
-        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        sight_secondary_ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61),},
+        sight_secondary_ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61),},
     
-        lens =              { offset = false, parent = "sight", position = vector3_box(0.042, -0.048, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.52), data = {lens = 1}},
-	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0.042, -0.12, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.52), data = {lens = 2}},
+        lens =              { offset = false, parent = "sight", position = vector3_box(0.042, -0.048, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.52), 
+            data = {lens = 1},},
+	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0.042, -0.12, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.52), 
+            data = {lens = 2},},
     },
     --  -------------------------------------------
     --  Aligning sights to crosshair
@@ -171,8 +175,8 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
-        sight =             { offset = true, position  = vector3_box(0, 0.074, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =           { offset = true, position  = vector3_box(0, -0.046, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =             { offset = true, position  = vector3_box(0, 0.074, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
+        sight_2 =           { offset = true, position  = vector3_box(0, -0.046, 0.132), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --      Main sight and reticle (backwards)
     --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
@@ -182,54 +186,59 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top" },
-        sight =             { offset = true, position  = vector3_box(0, 074, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =           { offset = true, position  = vector3_box(0, -0.046, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =             { offset = true, position  = vector3_box(0, 074, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
+        sight_2 =           { offset = true, position  = vector3_box(0, -0.046, 0.132), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --      Sight Helpers
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
-        sightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
-        sightac2 =       { offset = true, position  = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sightac3 =       { offset = true, position  = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
+        sightac1 =       { offset = true, position  = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3),},
+        sightac2 =       { offset = true, position  = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
+        sightac3 =       { offset = true, position  = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1),},
         -- Base
-        sightac4 =       { offset = true, position  = vector3_box(0, -0.018, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
+        sightac4 =       { offset = true, position  = vector3_box(0, -0.018, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56),},
         -- Knobs
-        sightac5 =       { offset = true, position  = vector3_box(0, -0.01, 0.061), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24) },
-        sightac6 =       { offset = true, position  = vector3_box(0.028, -0.014, 0.034), rotation = vector3_box(-180, -90, -180), scale = vector3_box(0.45, 0.45, 0.12) },
+        sightac5 =       { offset = true, position  = vector3_box(0, -0.01, 0.061), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24),},
+        sightac6 =       { offset = true, position  = vector3_box(0.028, -0.014, 0.034), rotation = vector3_box(-180, -90, -180), scale = vector3_box(0.45, 0.45, 0.12),},
         -- Cable
-        sightac7 =       { offset = true, position  = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
+        sightac7 =       { offset = true, position  = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525),},
     
         -- For whatever fucking reason, the recon body won't apply position transformations to lenses
         -- These are the same for forwards and backwards
-        lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.026, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.026, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), 
+            data = {lens = 1},},
+	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), 
+            data = {lens = 2},},
     },
     --  ACOG with RMR on top
     {   dependencies = { "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
-        sight_secondary =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
+        sight_secondary =       { offset = true, position  = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1),},
     },
     --  -------------------------------------------
     --  SUSAT
     --  -------------------------------------------
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
-        sight =             { offset = true, position  = vector3_box(0, -0.06, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =             { offset = true, position  = vector3_box(0, 0.008, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
         -- cylinder thing
-        sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {sightac1 = 1} },
+        sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), 
+            data = {sightac1 = 1},},
         -- Rear
-        sightac2 =       { offset = true, position  = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
-        sightac3 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
+        sightac2 =       { offset = true, position  = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36),},
+        sightac3 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36),},
         -- Base
-        sightac4 =       { offset = true, position  = vector3_box(0, 0.07, -0.036), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
+        sightac4 =       { offset = true, position  = vector3_box(0, 0.07, -0.036), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56),},
         -- Reticle
-        sightac5 =       { offset = true, position  = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
-        sightac6 =       { offset = true, position  = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
-        sightac7 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
+        sightac5 =       { offset = true, position  = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09),},
+        sightac6 =       { offset = true, position  = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09),},
+        sightac7 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0),},
 
-        lens =              { offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), data = {lens = 1}},
-	    lens_2 =            { offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        lens =              { offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), 
+            data = {lens = 1},},
+	    lens_2 =            { offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), 
+            data = {lens = 2},},
     },
     -- SUSAT with red dot
     {   dependencies = { "owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
-        sight_secondary =     { offset = true, position  = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
+        sight_secondary =     { offset = true, position  = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1),},
     },
     --  -------------------------------------------
     --  Aligning sights to crosshair
@@ -241,20 +250,20 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      ACOG Backwards
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1" },
-        scope_offset =      { position = vector3_box(0, -0.0, -0.0257), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { position = vector3_box(0, -0.0, -0.0528), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      SUSAT
     {   dependencies = { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1",
         },
-        scope_offset =      { position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { position = vector3_box(0, 0.0, -0.05), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  Aiming with RMR on ACOG
     {   dependencies = { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
-        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.100), rotation = vector3_box(0, 0, 0), lense_transparency = false },
+        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.127), rotation = vector3_box(0, 0, 0), lense_transparency = false },
     },
     --  Aiming with RMR on SUSAT
     {   dependencies = { "owo_susat_02_top" },
-        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), lense_transparency = false },
+        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.112), rotation = vector3_box(0, 0, 0), lense_transparency = false },
     },
 
     -- ######
@@ -264,43 +273,29 @@ mod.mt.inject_fixes(this_variant, {
             "owo_suppressor_01|owo_suppressor_02"
         },
         muzzle = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
-            animation_wait_attach = {"barrel"},
-        },
+            position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),},
         muzzle_2 = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.328, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
-            animation_wait_attach = {"barrel"}, 
-        },	
+            position = vector3_box(0, 0.328, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
     },
     {   dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
             "owo_suppressor_01|owo_suppressor_02"
         },
         muzzle = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),
-            animation_wait_attach = {"barrel"},
-        },
+            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),},
         muzzle_2 = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.236, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
-            animation_wait_attach = {"barrel"}, 
-        },	
+            position = vector3_box(0, 0.236, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
     },
     {	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
         muzzle = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
-            animation_wait_attach = {"barrel"},
-        },
+            position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},
     },
     {	dependencies = {"owo_suppressor_01"},
         muzzle_2 = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, -0.022),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
-            animation_wait_attach = {"barrel"},
-        },	
+            position = vector3_box(0, 0.192, -0.022),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
     },
     {	dependencies = {"owo_suppressor_02"},
         muzzle_2 = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),
-            animation_wait_attach = {"barrel"},
-        },
+            position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},
     },
     {	dependencies = { "owo_suppressor_03"},
         muzzle = { offset = true,   position = vector3_box(0, 0.5, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
@@ -315,9 +310,7 @@ mod.mt.inject_fixes(this_variant, {
             "autogun_bayonet_03"
         },
         bayonet = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ),
-            animation_wait_attach = {"barrel"},
-        },
+            position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ),},
     },
 
     -- #####
@@ -331,13 +324,11 @@ mod.mt.inject_fixes(this_variant, {
         barrel = { offset = true, mesh_move = false, 
             position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
             rotation_node = 2,
-            trigger_move = {"muzzle", "rail", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "rail", "muzzle"},
+            trigger_move = {"muzzle", "rail", "sight", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "sight", "rail", "muzzle"},
         },
         -- Offset is false so it can be reparented to barrel on load, which lets it follow the animation
         barrelshroud = {parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
-            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.460, 0.815),
-            animation_wait_attach = {"barrel"},
-        },
+            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.460, 0.815),},
         emblem_left = {position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
         emblem_right = {position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
     },
@@ -354,15 +345,11 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = {"owo_revolver_shotgun_barrel_base_04",
         },
         muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
-            position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
-            animation_wait_attach = {"barrel"},
-        },
+            position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
         dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
         },
         muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
-            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
-            animation_wait_attach = {"barrel"},
-        },
+            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
     },
 
     -- #####
