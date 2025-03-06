@@ -31,9 +31,9 @@ mod.wc.attachment[this_variant].receiverac1 = {}
 mod.wc.attachment[this_variant].receiverac2 = {}
 mod.wc.attachment[this_variant].sightac1 = {}
 --[[ covered by MT plugin
-mod.wc.attachment[this_variant].sightac2 = {}
-mod.wc.attachment[this_variant].sightac3 = {}
-mod.wc.attachment[this_variant].sightac4 = {}
+--mod.wc.attachment[this_variant].sightac2 = {}
+--mod.wc.attachment[this_variant].sightac3 = {}
+--mod.wc.attachment[this_variant].sightac4 = {}
 ]]
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
@@ -71,6 +71,13 @@ mod.owo_pu_scope(this_variant)
 -- ############################################
 -- Inject Fixes
 -- ############################################
+local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06"
+local _owo_all_holographic_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss"
+local _owo_no_magnifier_holographic_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
+local _owo_magnifier_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss"
+local _owo_magnifier_aligned_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss"
+local _owo_magnifier_side_holographic_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
+
 mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Receiver: BOLT ACTION HELBORE
@@ -582,7 +589,7 @@ mod.mt.inject_fixes(this_variant, {
     -- 	EOTech
 	--  -------------------------------------------
 	--  Sight Helpers
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss" },
+    {   dependencies = { _owo_all_holographic_sights },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
     },
@@ -597,23 +604,23 @@ mod.mt.inject_fixes(this_variant, {
     },
 	--  Main Sight body
     --      Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-	{   dependencies = { "owo_holosight_01_01|owo_holosight_01_01ss",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
+	{   dependencies = { _owo_no_magnifier_holographic_sights,
+            _alternative_viewmodels_sight_2s,
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_01ss" },
+    {   dependencies = { _owo_no_magnifier_holographic_sights },
         sight =             { offset = true, position  = vector3_box(0, 0.03, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
 	--      	Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-	{   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
+	{   dependencies = { _owo_magnifier_holographic_sights,
+            _alternative_viewmodels_sight_2s,
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss" },
+    {   dependencies = { _owo_magnifier_holographic_sights },
         sight =             { offset = true, position  = vector3_box(0, 0.1, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
 	
@@ -621,7 +628,7 @@ mod.mt.inject_fixes(this_variant, {
 	},
 	--  Magnifier
     --      Aligned
-    {   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss" },
+    {   dependencies = { _owo_magnifier_aligned_holographic_sights },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.154, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     
@@ -629,7 +636,7 @@ mod.mt.inject_fixes(this_variant, {
 	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
 	},
 	--		Side
-    {   dependencies = { "owo_holosight_01_03|owo_holosight_01_03ss" },
+    {   dependencies = { _owo_magnifier_side_holographic_sights },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     
@@ -642,7 +649,7 @@ mod.mt.inject_fixes(this_variant, {
 	{   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2"},
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies = { "owo_holosight_01_03|owo_holosight_01_03ss" },
+    {   dependencies = { _owo_magnifier_side_holographic_sights },
         scope_offset =      { position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = false },
     },
 
@@ -666,7 +673,7 @@ mod.mt.inject_fixes(this_variant, {
         sightac7 =       { offset = true, position  = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
     },
 	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
+            _alternative_viewmodels_sight_2s,
         },
         sight_2 =           { offset = true, position  = vector3_box(0, -0.066, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
@@ -678,7 +685,7 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { offset = true, position  = vector3_box(0, -0.066, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
 	{   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
+            _alternative_viewmodels_sight_2s,
         },
         sight_2 =           { offset = true, position  = vector3_box(0, -0.066, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },

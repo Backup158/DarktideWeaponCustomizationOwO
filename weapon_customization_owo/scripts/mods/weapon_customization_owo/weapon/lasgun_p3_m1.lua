@@ -24,9 +24,9 @@ mod.wc.attachment[this_variant].bayonetac6 = {}
 mod.wc.attachment[this_variant].bayonetac7 = {}
 mod.wc.attachment[this_variant].sightac1 = {}
 --[[ Covered by MT Plugin 
-mod.wc.attachment[this_variant].sightac2 = {}
-mod.wc.attachment[this_variant].sightac3 = {}
-mod.wc.attachment[this_variant].sightac4 = {}
+--mod.wc.attachment[this_variant].sightac2 = {}
+--mod.wc.attachment[this_variant].sightac3 = {}
+--mod.wc.attachment[this_variant].sightac4 = {}
 ]]
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
@@ -53,6 +53,14 @@ mod.owo_telescopic_sight(this_variant)
 -- ############################################
 -- Inject Fixes
 -- ############################################
+local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06"
+local _syn_volleygun_receivers = "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
+local _owo_all_holographic_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss"
+local _owo_no_magnifier_holographic_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
+local _owo_magnifier_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss"
+local _owo_magnifier_aligned_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss"
+local _owo_magnifier_side_holographic_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
+
 mod.mt.inject_fixes(this_variant, {
 
 	-- ######
@@ -60,7 +68,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- trying to align with syn's aquilon barrel
 	{	dependencies = { "owo_lasgun_magazine_flat_01", 
-			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03",
+			_syn_volleygun_receivers,
 		},
 		magazine = { offset = true, position = vector3_box(0, 0.05, 0.03), scale = vector3_box(1, 1, 0.5)},
 	},
@@ -117,7 +125,7 @@ mod.mt.inject_fixes(this_variant, {
 	--  -------------------------------------------
 	--  Syn's Volleygun Receivers
     {	dependencies = {"owo_m203",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
         },
         bayonet =       { offset = true, position = vector3_box(0, -0.0172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
@@ -138,7 +146,7 @@ mod.mt.inject_fixes(this_variant, {
 	--  -------------------------------------------
 	--  Syn's Volleygun Receivers
     {	dependencies = {"owo_gp25",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
         },
         bayonet =       { offset = true, position = vector3_box(0, 0.112, -0.134), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
@@ -165,7 +173,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Syn's Volleygun/Kantrael bodies (uses the same positioning as lasgun_p1_m1 because they're iLas bodies)
     --      THICC
     {	dependencies = {"owo_underbarrel_shotgun_01",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
         },
         -- Shotgun body
         bayonet =       { offset = true, position = vector3_box(0, -0.0708, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
@@ -174,7 +182,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Smaller Masterkey
     {	dependencies = {"owo_underbarrel_shotgun_01_02",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
         },
         -- Shotgun body
         bayonet =       { offset = true, position = vector3_box(0, -0.0708, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
@@ -220,7 +228,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Syn's Volleygun Receivers
     {	dependencies = {"owo_underbarrel_shotgun_02",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
         },
         -- Receiver
         bayonet =       { offset = true, position = vector3_box(0, -0.002, -0.148), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
@@ -287,7 +295,7 @@ mod.mt.inject_fixes(this_variant, {
     --  EOTech
     --  -------------------------------------------
     --  EOTech
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss" },
+    {   dependencies = { _owo_all_holographic_sights },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
     },
@@ -302,26 +310,26 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Syn's Hellgun Receivers
     --          Alt vm patch
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_01ss",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03|volley_lasgun_receiver_03b",
+    {   dependencies = { _owo_no_magnifier_holographic_sights,
+            _alternative_viewmodels_sight_2s,
+            _syn_volleygun_receivers,
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_01ss",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03|volley_lasgun_receiver_03b",
+    {   dependencies = { _owo_no_magnifier_holographic_sights,
+            _syn_volleygun_receivers,
         },
         sight =             { offset = true, position  = vector3_box(0, 0, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
     },
     --      Else, Recon Receiver
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_01ss",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
+    {   dependencies = { _owo_no_magnifier_holographic_sights,
+            _alternative_viewmodels_sight_2s,
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_01ss",
+    {   dependencies = { _owo_no_magnifier_holographic_sights,
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         sight =             { offset = true, position  = vector3_box(0, 0.032, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
@@ -329,36 +337,36 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     --          Syn's Hellgun Receivers
-    {   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03|volley_lasgun_receiver_03b",
+    {   dependencies = { _owo_magnifier_holographic_sights,
+    _syn_volleygun_receivers,
         },
         sight =             { offset = true, position  = vector3_box(0, 0.11, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
     },
     --          Else, Recon Receiver
-    {   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss",
+    {   dependencies = { _owo_magnifier_holographic_sights,
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         sight =             { offset = true, position  = vector3_box(0, 0.16, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
     },
     -- Magnifier Alignment
-    {   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
+    {   dependencies = { _owo_magnifier_holographic_sights,
+            _alternative_viewmodels_sight_2s,
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss",
+    {   dependencies = { _owo_magnifier_holographic_sights,
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
-    {   dependencies = { "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss" },
+    {   dependencies = { _owo_magnifier_aligned_holographic_sights },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.154, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     
         lens =              { offset = false, parent = "sight", position = vector3_box(0, -0.048, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
 	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
     },
-    {   dependencies = { "owo_holosight_01_03|owo_holosight_01_03ss" },
+    {   dependencies = { _owo_magnifier_side_holographic_sights },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     
@@ -369,13 +377,13 @@ mod.mt.inject_fixes(this_variant, {
     --  Aligning sights to crosshair
     --  -------------------------------------------
     --      Syn's Hellgun Receivers
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss",
-			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03|volley_lasgun_receiver_03b",
+    {   dependencies = { _owo_all_holographic_sights,
+			_syn_volleygun_receivers,
 		},
         scope_offset =      { position = vector3_box(0, -0.0004, 0.0305), rotation = vector3_box(0, 0, 0)},
     },
     --      Recon Receiver
-    {   dependencies = { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss",
+    {   dependencies = { _owo_all_holographic_sights,
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         scope_offset =      { position = vector3_box(0, -0.0007, -0.0293), rotation = vector3_box(0, 0, 0)},
@@ -402,12 +410,12 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Syn's Hellgun Receivers
 	{   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
         },
         sight =             { offset = true, position  = vector3_box(0, 0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
         },
         sight =             { offset = true, position  = vector3_box(0, 0.108, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
@@ -421,21 +429,21 @@ mod.mt.inject_fixes(this_variant, {
     --      Sight 2 Adjustment
     --          For whatever fucking reason, the recon body won't apply position transformations to sight_2
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
+            _syn_volleygun_receivers,
+            _alternative_viewmodels_sight_2s,
         },
         sight_2 =           { offset = true, position  = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
         },
         lens =              { offset = true, parent = "sight", position = vector3_box(0, 0.064, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =            { offset = true, parent = "sight", position = vector3_box(0, -0.052, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =           { offset = true, position  = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
-            "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06",
+            _syn_volleygun_receivers,
+            _alternative_viewmodels_sight_2s,
         },
         sight_2 =           { offset = false, position  = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
@@ -473,7 +481,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Syn's Hellgun Receivers
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_02|owo_susat_02_top",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
 		},
         sight =             { offset = true, position  = vector3_box(0, 0.006, 0.163), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
@@ -493,17 +501,17 @@ mod.mt.inject_fixes(this_variant, {
     --  Aiming with Main Sight
     --      Syn's Hellgun Receivers
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1",
-			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+			_syn_volleygun_receivers,
 		},
         scope_offset =      { position = vector3_box(0, -0.03, 0.024), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1",
-			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+			_syn_volleygun_receivers,
 		},
         scope_offset =      { position = vector3_box(0, -0.03, 0.024), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies = { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1",
-			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+			_syn_volleygun_receivers,
 		},
         scope_offset =      { position = vector3_box(0, -0.03, 0.024), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
@@ -527,13 +535,13 @@ mod.mt.inject_fixes(this_variant, {
     --      Syn's Hellgun Receivers
     --          ACOG
     {   dependencies = { "owo_acog_sight_02_top|owo_acog_sight_02f_top",
-			"volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+			_syn_volleygun_receivers,
 		},
         scope_offset =      { position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },
     --          SUSAT
     {   dependencies = { "owo_susat_02_top",
-            "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b",
+            _syn_volleygun_receivers,
 		},
         scope_offset =      { position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), lense_transparency = false},
     },

@@ -14,13 +14,14 @@ local this_variant = "powersword_p1_m1" -- Power Sword
 -- Makes new tables for attachment anchors
 -- ############################################
 --[[ Covered Parts
-weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:13:                mod.wc.attachment[this_variant].bladeshroud = {}
-weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:14:                mod.wc.attachment[this_variant].bladeshroudac = {}
-weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:15:                mod.wc.attachment[this_variant].bladeshroudac2 = {}
-weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:16:                mod.wc.attachment[this_variant].bladeshroudac10 = {}
-weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:17:                mod.wc.attachment[this_variant].bladeshroudac11 = {}
-weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:18:                mod.wc.attachment[this_variant].bladeshroudac12 = {}
-weapon_customization_syn_edits/weapon/powersword_p1_m1.lua:19:                mod.wc.attachment[this_variant].bladeshroudac13 = {}
+-- By Syn
+--mod.wc.attachment[this_variant].bladeshroud = {}
+--mod.wc.attachment[this_variant].bladeshroudac = {}
+--mod.wc.attachment[this_variant].bladeshroudac2 = {}
+--mod.wc.attachment[this_variant].bladeshroudac10 = {}
+--mod.wc.attachment[this_variant].bladeshroudac11 = {}
+--mod.wc.attachment[this_variant].bladeshroudac12 = {}
+--mod.wc.attachment[this_variant].bladeshroudac13 = {}
 ]]
 
 -- ############################################
