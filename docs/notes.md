@@ -72,7 +72,7 @@ It also doesn't even need to match the gun. The autogun muzzles were stealing la
 5. When aligning lenses, add `data = {lens = x}` where x is which lense# it is, lens is lens = 1
 6. In scope_offset, lense_transparency = true to hide lenses
 	By default, this is set to false
-	However, setting it to false doesn't seem to let you not hide lenses
+	However, setting it to false doesn't seem to let you not hide lenses. This is actually controlled by the wc.sights table.
 
 # Making Parts follow animations
 ## When the parent already exists
