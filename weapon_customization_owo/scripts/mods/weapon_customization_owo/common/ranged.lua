@@ -863,18 +863,19 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 	--[[ what the FUCK is wrong with barrels 1 and 9
 	]]
 	mod.inject_attachments_owo(variant_id, "barrel" or type, {
-		--{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel 1 (1)"},
-		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel 1 (4)"},
-		{id = "owo_revolver_shotgun_barrel_base_05", name = "OwO Shotgun Barrel 2 (5)"},
-		{id = "owo_revolver_shotgun_barrel_base_06", name = "OwO Shotgun Barrel 3 (6)"},
+		--{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel (1)"},
+		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel (4)"},
+		{id = "owo_revolver_shotgun_barrel_base_04b", name = "OwO Shotgun Barrel (4b)"},
+		{id = "owo_revolver_shotgun_barrel_base_05", name = "OwO Shotgun Barrel (5)"},
+		{id = "owo_revolver_shotgun_barrel_base_06", name = "OwO Shotgun Barrel (6)"},
 		-- barrel 7 with the skulls is too squished
-		{id = "owo_revolver_shotgun_barrel_base_08", name = "OwO SG 4 (8)"},
-		--{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel 6 (9)"},
-		{id = "owo_revolver_shotgun_barrel_base_04_l", name = "OwO SG Long 1 (4)"},
-		{id = "owo_revolver_shotgun_barrel_base_05_l", name = "OwO SG Long 2 (5)"},
-		{id = "owo_revolver_shotgun_barrel_base_06_l", name = "OwO SG Long 3 (6)"},
-		{id = "owo_revolver_shotgun_barrel_base_08_l", name = "OwO SG Long 4 (8)"},
-		
+		{id = "owo_revolver_shotgun_barrel_base_08", name = "OwO Shotgun Barrel (8)"},
+		--{id = "owo_revolver_shotgun_barrel_base_09", name = "OwO Shotgun Barrel (9)"},
+		{id = "owo_revolver_shotgun_barrel_base_04_l", name = "OwO SG Long (4)"},
+		{id = "owo_revolver_shotgun_barrel_base_04b_l", name = "OwO SG Long (4b)"},
+		{id = "owo_revolver_shotgun_barrel_base_05_l", name = "OwO SG Long (5)"},
+		{id = "owo_revolver_shotgun_barrel_base_06_l", name = "OwO SG Long (6)"},
+		{id = "owo_revolver_shotgun_barrel_base_08_l", name = "OwO SG Long (8)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
 		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelshroud"},
@@ -888,6 +889,7 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 	})
 
 	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
 		--[[owo_revolver_shotgun_barrel_base_01 = {
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_01"},
@@ -896,6 +898,10 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
 			-- this was in wc/weapon_attachments/stub.lua and i thought it'd fix the animation issue but no fuck me im just too desperate
 			-- angle = -.5, move = vector3_box(0, -2, 0), remove = vector3_box(0, .1, 0),
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
+		},
+		owo_revolver_shotgun_barrel_base_04b = {
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
 		},
 		owo_revolver_shotgun_barrel_base_05 = {
@@ -918,6 +924,10 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
 		},
+		owo_revolver_shotgun_barrel_base_04b_l = {
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
+		},
 		owo_revolver_shotgun_barrel_base_05_l = {
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_05"},
@@ -930,7 +940,7 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_08"},
 		},
-		
+		-- ### Helper Parts ###
 		owo_revolver_shotgun_barrel_empty = {
 			model = "", type = "barrelshroud", parent = "barrel",
 		},

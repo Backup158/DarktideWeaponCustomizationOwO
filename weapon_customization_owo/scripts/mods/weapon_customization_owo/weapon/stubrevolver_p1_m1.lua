@@ -52,6 +52,9 @@ local _owo_magnifier_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_
 local _owo_magnifier_aligned_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss"
 local _owo_magnifier_side_holographic_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
 
+local _owo_short_shotgun_barrels_for_muzzles = "owo_revolver_shotgun_barrel_base_04b|owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08"
+local _owo_long_shotgun_barrels_for_muzzles = "owo_revolver_shotgun_barrel_base_04b_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l"
+
 mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Sight_2: Alt Viewmodels
@@ -269,41 +272,33 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: SUPPRESSOR
 	-- ######
-    {   dependencies = {"owo_revolver_shotgun_barrel_base_04",
-            "owo_suppressor_01|owo_suppressor_02"
-        },
-        muzzle = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),},
-        muzzle_2 = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.328, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
+    --  -------------------------------------------
+    --  Can inside a Can
+    --  -------------------------------------------
+    {   dependencies = {"owo_revolver_shotgun_barrel_base_04", "owo_suppressor_01|owo_suppressor_02", },
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),},
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.328, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
     },
-    {   dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
-            "owo_suppressor_01|owo_suppressor_02"
-        },
-        muzzle = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),},
-        muzzle_2 = {parent = "barrel", parent_node = 9, 
-            position = vector3_box(0, 0.236, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
+    {   dependencies = { _owo_short_shotgun_barrels_for_muzzles, "owo_suppressor_01|owo_suppressor_02", },
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),},
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.236, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
+    },
+    {   dependencies = { "owo_revolver_shotgun_barrel_base_04_l", "owo_suppressor_01|owo_suppressor_02", },
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.478, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),},
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.478, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
+    },
+    {   dependencies = { _owo_long_shotgun_barrels_for_muzzles, "owo_suppressor_01|owo_suppressor_02", },
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.352, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2),},
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.352, -0.02),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
     },
     {	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
-        muzzle = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},
     },
     {	dependencies = {"owo_suppressor_01"},
-        muzzle_2 = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, -0.022),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.192, -0.022),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},	
     },
     {	dependencies = {"owo_suppressor_02"},
-        muzzle_2 = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},
-    },
-    {	dependencies = { "owo_suppressor_03"},
-        muzzle = { offset = true,   position = vector3_box(0, 0.5, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
-        muzzle_2 = { offset = true,   position = vector3_box(0, 0.3, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
-    },
-    {	dependencies = { "owo_suppressor_04|owo_suppressor_05"},
-        muzzle = { offset = true,   position = vector3_box(0, 0.072, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
-        muzzle_2 = { offset = true,   position = vector3_box(0, 0.52, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false, position = vector3_box(0, 0.192, -0.022), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ),},
     },
     -- the skinny bayonet. sits on muzzle
     {	dependencies = {"owo_suppressor_01|owo_suppressor_02", 
@@ -312,50 +307,119 @@ mod.mt.inject_fixes(this_variant, {
         bayonet = {parent = "barrel", parent_node = 9, offset = false, 
             position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ),},
     },
+    --  -------------------------------------------
+    --  PBS-1
+    --  -------------------------------------------
+    {	dependencies = { "owo_revolver_shotgun_barrel_base_04", "owo_suppressor_03"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.58, -0.018),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.382, -0.018),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    {	dependencies = { _owo_short_shotgun_barrels_for_muzzles, "owo_suppressor_03"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.474, -0.018),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.274, -0.018),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    {	dependencies = { "owo_revolver_shotgun_barrel_base_04_l", "owo_suppressor_03"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.71, -0.018),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.514, -0.018),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    {	dependencies = { _owo_long_shotgun_barrels_for_muzzles, "owo_suppressor_03"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.578, -0.018),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.384, -0.018),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    {	dependencies = { "owo_suppressor_03"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.5, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.3, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+    },
+    --  -------------------------------------------
+    --  Can on a Knob
+    --  -------------------------------------------
+    {	dependencies = { "owo_revolver_shotgun_barrel_base_04", "owo_suppressor_04|owo_suppressor_05"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.432, -0.016),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.47, -0.016),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    },
+    {	dependencies = { _owo_short_shotgun_barrels_for_muzzles, "owo_suppressor_04|owo_suppressor_05"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.328, -0.016),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.366, -0.016),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    },
+    {	dependencies = { "owo_revolver_shotgun_barrel_base_04_l", "owo_suppressor_04|owo_suppressor_05"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.58, -0.016),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.616, -0.016),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    },
+    {	dependencies = { _owo_long_shotgun_barrels_for_muzzles, "owo_suppressor_04|owo_suppressor_05"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.38, -0.016),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.482, -0.016),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    },
+    {	dependencies = { "owo_suppressor_04|owo_suppressor_05"},
+        muzzle =    { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.072, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+        muzzle_2 =  { parent = "barrel", parent_node = 9, offset = false,   position = vector3_box(0, 0.52, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    },
+    
 
     -- #####
     -- Barrel: Shotgun Extension
     -- offset false/true. doesn't change pos either way. does change scale.
+    -- barrel_04 is bigger than the others. 04b is that one chopped down to fit the others (the woke left have gone after our shotgun barrels)
     -- #####
-    {   dependencies = {"owo_revolver_shotgun_barrel_base_04|owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
-        },
+    --  Normal Barrels
+    {   dependencies = { "owo_revolver_shotgun_barrel_base_04|owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08", },
         -- trigger move is used in wc/weapon_attachments/WEAPON.lua
         -- monkey see monkey do :3
-        barrel = { offset = true, mesh_move = false, 
-            position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
-            rotation_node = 2,
+        barrel =        { offset = true, mesh_move = false, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), rotation_node = 2,
             trigger_move = {"muzzle", "rail", "sight", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "sight", "rail", "muzzle"},
         },
         -- Offset is false so it can be reparented to barrel on load, which lets it follow the animation
-        barrelshroud = {parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
-            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.460, 0.815),},
-        emblem_left = {position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
-        emblem_right = {position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
+        barrelshroud =  { parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
+            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.460, 0.815),
+        },
+        emblem_left =   { position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
+        emblem_right =  { position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
     },
-   --      Long barrel
-        --Not doing until i figure out the positioning issue bug
-    {   dependencies = {"owo_revolver_shotgun_barrel_base_04_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l",
+    {   dependencies = {"owo_revolver_shotgun_barrel_base_04b", },
+        barrel =        { offset = true, mesh_move = false, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), rotation_node = 2, trigger_move = {"muzzle", "rail", "sight", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "sight", "rail", "muzzle"}, },
+        barrelshroud =  { parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
+            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.330, 0.815),
         },
-        barrel = { offset = true, mesh_move = false, 
-            position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
-            rotation_node = 2,
-            trigger_move = {"muzzle", "rail", "sight", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "sight", "rail", "muzzle"},
-        },
-        barrelshroud = {parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
-            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.660, 0.815),},
-        emblem_left = {position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
-        emblem_right = {position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
+        emblem_left =   { position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
+        emblem_right =  { position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
     },
     --      Muzzle handling
     {   dependencies = {"owo_revolver_shotgun_barrel_base_04",
         },
-        muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
+        muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", offset = false,
             position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
     },
-    {    dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
-        },
-        muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
+    {   dependencies = { _owo_short_shotgun_barrels_for_muzzles, },
+        muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", offset = false,
             position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
+    },
+   --  Long barrels
+   {    dependencies = { "owo_revolver_shotgun_barrel_base_04_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l", },
+        barrel = { offset = true, mesh_move = false, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), rotation_node = 2, trigger_move = {"muzzle", "rail", "sight", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "sight", "rail", "muzzle"}, },
+        barrelshroud = {parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
+            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.660, 0.815),
+        },
+        emblem_left = {position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
+        emblem_right = {position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
+    },
+    {   dependencies = {"owo_revolver_shotgun_barrel_base_04b_l", },
+        barrel = { offset = true, mesh_move = false, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), rotation_node = 2, trigger_move = {"muzzle", "rail", "sight", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "sight", "rail", "muzzle"},
+        },
+        barrelshroud = {parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
+            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.46, 0.815),
+        },
+        emblem_left = {position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
+        emblem_right = {position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
+    },
+    --      Muzzles
+    {   dependencies = {"owo_revolver_shotgun_barrel_base_04_l", },
+        muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", offset = false,
+            position = vector3_box(0, 0.476, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
+        },
+    },
+    {   dependencies = { _owo_long_shotgun_barrels_for_muzzles, },
+        muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", offset = false,
+            position = vector3_box(0, 0.346, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
+        },
     },
 
     -- #####
