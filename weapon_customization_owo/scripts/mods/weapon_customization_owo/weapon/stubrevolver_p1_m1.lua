@@ -88,7 +88,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Sight Helpers
     {   dependencies = { _owo_all_holographic_sights },
-        rail =           { offset = true, position  = vector3_box(0, 0.018, 0.112), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 0.8), automatic_equip = { rail = "rail_01"}, },
+        rail =           { offset = false, parent = "barrel", parent_node = 9, position  = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.85, 0.8), automatic_equip = { rail = "rail_01"}, },
 
         sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154),},
         sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314),},
@@ -332,21 +332,27 @@ mod.mt.inject_fixes(this_variant, {
         emblem_left = {position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
         emblem_right = {position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
     },
-   --[[ --      Long barrel
-        Not doing until i figure out the positioning issue bug
+   --      Long barrel
+        --Not doing until i figure out the positioning issue bug
     {   dependencies = {"owo_revolver_shotgun_barrel_base_04_l|owo_revolver_shotgun_barrel_base_05_l|owo_revolver_shotgun_barrel_base_06_l|owo_revolver_shotgun_barrel_base_08_l",
         },
-        barrel = { offset = true, position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        barrelshroud = {parent = "barrel", parent_node = 9, offset = false, 
-            position = vector3_box(0, 0.116, -0.02), scale = vector3_box(0.8, 0.615, 0.865)
+        barrel = { offset = true, mesh_move = false, 
+            position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),
+            rotation_node = 2,
+            trigger_move = {"muzzle", "rail", "sight", "barrelshroud", "muzzle_2"}, animation_wait_detach = {"muzzle_2", "barrelshroud", "sight", "rail", "muzzle"},
         },
-    },]]
+        barrelshroud = {parent = "barrel", parent_node = 9, offset = false, mesh_move = false, 
+            position = vector3_box(0, 0.026, -0.022), scale = vector3_box(0.722, 0.660, 0.815),},
+        emblem_left = {position = vector3_box(-0.021, 0.159, .0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(.65, -.65, .65)},
+        emblem_right = {position = vector3_box(0.021, 0.159, .0315), rotation = vector3_box(0, 0, 0), scale = vector3_box(.65, .65, .65)},
+    },
     --      Muzzle handling
     {   dependencies = {"owo_revolver_shotgun_barrel_base_04",
         },
         muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
             position = vector3_box(0, 0.328, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
-        dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
+    },
+    {    dependencies = {"owo_revolver_shotgun_barrel_base_05|owo_revolver_shotgun_barrel_base_06|owo_revolver_shotgun_barrel_base_08",
         },
         muzzle = {parent = "barrel", parent_node = 9, parent = "barrel", 
             position = vector3_box(0, 0.236, -0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
