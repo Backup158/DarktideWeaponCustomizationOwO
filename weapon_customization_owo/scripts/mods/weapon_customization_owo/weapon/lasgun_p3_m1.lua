@@ -261,31 +261,31 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     --  Doom
     {   dependencies = { "owo_alt_viewmodel_01" },
-        scope_offset =         { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), lense_transparency = false, },
-        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), lense_transparency = false, },
+        scope_offset =         { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), },
+        no_scope_offset =      { position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), },
     },
     {   dependencies = { "owo_alt_viewmodel_02" },
-        scope_offset =         { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), lense_transparency = false, },
-        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), lense_transparency = false, },
+        scope_offset =         { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), },
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), },
     },
     {   dependencies = { "owo_alt_viewmodel_03" },
-        scope_offset =         { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0), lense_transparency = false, },
-        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0), lense_transparency = false, },
+        scope_offset =         { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0), },
+        no_scope_offset =      { position = vector3_box(0, -0.2, -0.15), rotation = vector3_box(7, 0, 0), },
     },
     -- CS:S
     {   dependencies = { "owo_alt_viewmodel_04" },
-        scope_offset =         { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
-        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
+        scope_offset =         { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =      { position = vector3_box(0.45, 0.35, -0.15), rotation = vector3_box(0, 0, 0), },
     },
     -- Hipfire
     {   dependencies = { "owo_alt_viewmodel_05" },
-        scope_offset =         { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
-        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0), lense_transparency = false, },
+        scope_offset =         { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =      { position = vector3_box(0.25, 0.35, -0.15), rotation = vector3_box(0, 0, 0), },
     },
     -- Point Shooting
     {   dependencies = { "owo_alt_viewmodel_06" },
-        scope_offset =          { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), lense_transparency = false },
-        no_scope_offset =       { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), lense_transparency = false },
+        scope_offset =          { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0),  },
+        no_scope_offset =       { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0),  },
     },
 
     -- ######
@@ -537,26 +537,26 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_acog_sight_02_top|owo_acog_sight_02f_top",
 			_syn_volleygun_receivers,
 		},
-        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0), lense_transparency = false},
+        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0), },
     },
     --          SUSAT
     {   dependencies = { "owo_susat_02_top",
             _syn_volleygun_receivers,
 		},
-        scope_offset =      { position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), lense_transparency = false},
+        scope_offset =      { position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), },
     },
     --      Else: Recon Receiver
     --          ACOG
 	{   dependencies = { "owo_acog_sight_02_top|owo_acog_sight_02f_top",
 			--"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
-        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), lense_transparency = false},
+        scope_offset =      { position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
     },
     --          SUSAT
     {   dependencies = { "owo_susat_02_top",
 			--"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
 		},
-        scope_offset =      { position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), lense_transparency = false},
+        scope_offset =      { position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
     },
     
     -- ######
