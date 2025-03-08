@@ -1,9 +1,18 @@
 # Hide Mesh Values
+```
+hide_mesh = {
+	{"<slot>", <mesh numbers>},
+	{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+},
+```
 There are 15 regions in total, 1-15
-Reflex Sight Housing            {"sight", 6,7}
-Reflex Sight Reticle            {"sight", 1}
-MT Helper Reflex Housing        {"sight_2", 5,6}      6 hides housing for sight 1, 5 hides sights 2 and 3
-Autogun Irons                   {"sight", 2,3,4,5,6} -- one of these is the front rail lol
+
+| Part                     | Hide Codes             | Notes                                                             |
+| ------------------------ | ---------------------- | ----------------------------------------------------------------- |
+| Reflex Sight Housing     | `{"sight", 6,7}`       |                                                                   |
+| Reflex Sight Reticle     | `{"sight", 1}`         | Sometimes doesn't hide the "glass part" around the reticle        |
+| MT Helper Reflex Housing | `{"sight_2", 5,6}`     | 6 hides housing for sight 1<br>5 hides housing for sights 2 and 3 |
+| Autogun Irons            | `{"sight", 2,3,4,5,6}` | one of these is the front rail lol                                |
 
 # Parts not showing up?
 1. Make sure the weapon file is in `files_to_load.lua`
@@ -18,17 +27,16 @@ These transformations move **the gun**. Use Crosshair Remap (Continued) to see t
 position: x, z, y
     +x moves gun to the right
     +y moves gun up
-	+z moves gun forwards
+    +z moves gun forwards
 rotation: y, x, z
-    +x put gun offset to the right
-    +y put gun below
-
+	+x put gun offset to the right
+	+y put gun below
 # Parts not accept transformations
 1. Restart the game
-2. sometimes setting 'offset = false' makes it literally freeze on the screen, so it doesn't even rotate with the weapon
-3. can try parenting it to a specific node, but that can cause issues
-    1. we dont have a list of nodes
-    2. the node can move during gameplay. Key example being the final bullet of autogun magazines moving up as you shoot.
+2. Sometimes setting `offset = false` makes it literally freeze on the screen, so it doesn't even rotate with the weapon
+3. Can try parenting it to a specific node, with some caveats
+    1. We don't have a convenient list of nodes
+    2. The node can move during gameplay. Key example being the final bullet of autogun magazines moving up as you shoot.
 
 # Bullet trails getting stolen
 This comes from having the main part be a muzzle that matches the actual muzzle that would've been used by the gun
@@ -77,30 +85,56 @@ It also doesn't even need to match the gun. The autogun muzzles were stealing la
 # Making Parts follow animations
 ## When the parent already exists
 For the main part (which all the helpers follow):
-1. Set offset = false
-2. set parent to the moving part
-3. specify parent_node
+1. Set `offset = false`. I guess re-parenting is part of the animation process
+2. Set parent to the moving part
+3. Specify parent_node
 For revolver, it would be `offset = false, parent = "barrel", parent_node = 9,`
-# MT to base
-See Spreadsheet
-**Autoguns** autogun_p1_m1.lua
-*IAG*
-iagun_barrel_01|iagun_barrel_02|iagun_barrel_03|iagun_barrel_04|iagun_barrel_05|iagun_barrel_06|-----
-barrel_01|barrel_02|barrel_03|barrel_04|barrel_05|barrel_06|barrel_21
-*Brauto*
-bagun_barrel_01|bagun_barrel_02|bagun_barrel_03|bagun_barrel_04|bagun_barrel_05|bagun_barrel_06|bagun_barrel_07|bagun_barrel_08|-----
-barrel_07|barrel_08|barrel_09|barrel_10|barrel_13|barrel_14|barrel_18|barrel_19|barrel_20
-*Headhunter*
-hagun_barrel_01|hagun_barrel_02|hagun_barrel_03|hagun_barrel_04|-----
-barrel_11|barrel_12|barrel_15|barrel_16|barrel_22
-**Lasguns** common_lasgun.lua
-*iLas*
-ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_03|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08|----
-barrel_01|barrel_02|barrel_03|barrel_04|barrel_05|barrel_06|barrel_07|barrel_08|barrel_21
-*Helbore*
-hlasgun_barrel_01|hlasgun_barrel_02|hlasgun_barrel_03|hlasgun_barrel_04|hlasgun_barrel_05|----|----|----
-    hlasgun_barrel_05 has a variant hlasgun_barrel_05b
-barrel_09|barrel_10|barrel_11|barrel_12|barrel_13|barrel_19|barrel_20|barrel_22
-*Recon*
-rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05
-barrel_14|barrel_15|barrel_16|barrel_17|barrel_18
+# Creating a New  Attachment Slot
+**In the <common/category>.lua**
+1. First, check if it exists already
+	1. If it doesn't, fill up a table for it. Be sure to make the first entry the empty/default one. EWC auto equips the first one for every weapon.
+		```
+		mod.wc.add_custom_attachments.SLOT = "SLOT_list"
+		mod.wc.SLOT_list = {
+			"attachment_default",
+			"attachment_01",
+			"attachment_02",
+		}
+		```
+	2. If it does, find out what the original SLOT_list is called. The base and other plugins tend to call these "**SLOT**s" but sometimes the "s" follows proper grammatical rules, such as with bipods. I don't do this. 
+		```
+		mod.table_append(mod.wc.SLOT_list, {
+			"attachment_01",
+		})
+		```
+	3. To make it a compatibility patch, use `get_mod` to see if the mod exists. Because this returns a bool, you can use it as a condition for an if statement
+		```
+		if PLUGIN then 
+			-- append to table PLUGIN created
+		else
+			-- create slot
+			-- write out your slot's list
+		end
+		```
+2. \[OPTIONAL\] To make it visible, give it a localization. The slot won't show up until you actually add attachments to it. E.g. if you create a BLADEBULGE and declare the slot, but only inject attachments to it for the Chain Axe, only the Chain Axe's customization menu will have options for it.
+	```
+	table.insert(mod.wc.attachment_slots, "SLOT")
+	mod:add_global_localize_strings({
+		loc_weapon_cosmetics_customization_SLOT = {
+			en = "SLOT NAME",
+		},
+	})
+	```
+**In the <weapon_variant>**
+3. Check if slot exists for this weapon in particular.
+	`grep -Rn "SLOT = {}"` is very helpful here
+	1. If it does not exist yet, declare an empty table for it
+	   `mod.wc.attachment[this_variant].SLOT = {}`
+	2. If it does, don't do anything
+	3. You can make a patch as above, but slightly modified
+		```
+		if not PLUGIN then 
+			-- create empty table for slot
+		end
+		```
+4. Inject the attachments and fixes as you wish

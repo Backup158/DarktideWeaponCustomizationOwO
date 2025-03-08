@@ -55,6 +55,23 @@ mod.wc.pommelac2_list = {
     "owo_shovel_handles_ac2_02",
     "owo_shovel_handles_ac2_03",
 }
+-- frontguard
+mod.wc.add_custom_attachments.frontguard = "frontguard_list"
+mod.wc.frontguard_list = {
+	"owo_trench_dagger_finger_guard_default",
+	"owo_trench_dagger_finger_guard_01",
+	"owo_trench_dagger_finger_guard_02",
+	"owo_trench_dagger_finger_guard_03",
+	"owo_trench_dagger_finger_guard_04",
+	"owo_trench_dagger_finger_guard_05",
+	"owo_trench_dagger_finger_guard_06",
+}
+table.insert(mod.wc.attachment_slots, "frontguard")
+mod:add_global_localize_strings({
+    loc_weapon_cosmetics_customization_frontguard = {
+        en = "Front Guard",
+	},
+})
 
 -- ############################################
 -- Injection Definitions
@@ -129,6 +146,7 @@ function mod.owo_rapier_blade(variant_id, type)
 end
 
 -- Blade: Slim Power Sword
+--	Blade 4 doesn't exist
 function mod.owo_slim_psword(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "blade" or type, {
 		{id = "owo_slim_psword_01", name = "OwO Slim PSword 1"},
@@ -214,6 +232,52 @@ function mod.owo_slim_psword(variant_id, type)
 		owo_slim_psword_08t = {
 			model = _item_melee.."/blades/power_sword_blade_ml01", type = "blade", 
 			mesh_move = false, parent = "hilt",
+		},
+	})
+end
+
+-- Frontguard: Trench Dagger
+--	Guards 1,2,6 SOMETIMES don't attach
+function mod.owo_trench_dagger_guard(variant_id, type)
+    mod.inject_attachments_owo(variant_id, "frontguard" or type, {
+        {id = "owo_trench_dagger_finger_guard_default", name = "Default"},
+		{id = "owo_trench_dagger_finger_guard_01", name = "OwO Trench Dagger Guard 1"},
+		{id = "owo_trench_dagger_finger_guard_02", name = "OwO Trench Dagger Guard 2"},
+		{id = "owo_trench_dagger_finger_guard_03", name = "OwO Trench Dagger Guard 3"},
+		{id = "owo_trench_dagger_finger_guard_04", name = "OwO Trench Dagger Guard 4"},
+		{id = "owo_trench_dagger_finger_guard_05", name = "OwO Trench Dagger Guard 5"},
+		{id = "owo_trench_dagger_finger_guard_06", name = "OwO Trench Dagger Guard 6"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_trench_dagger_finger_guard_default = {
+			model = "", type = "frontguard", 
+			mesh_move = false, parent = "grip"
+		},
+		owo_trench_dagger_finger_guard_01 = {
+			model = _item_melee.."/grips/combat_blade_grip_01", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_02 = {
+			model = _item_melee.."/grips/combat_blade_grip_02", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_03 = {
+			model = _item_melee.."/grips/combat_blade_grip_04", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_04 = {
+			model = _item_melee.."/grips/combat_blade_grip_05", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_05 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_06 = {
+			model = _item_melee.."/grips/combat_blade_grip_08", type = "frontguard", 
+			mesh_move = false, parent = "grip",
 		},
 	})
 end

@@ -34,7 +34,7 @@ mod.load_mod_file("weapon/stubrevolver_p1_m1")
 --#endregion ranged
 
 --#region #### Melee #####
--- mod.load_mod_file("weapon/combatknife_p1_m1") -- Combat Blade
+mod.load_mod_file("weapon/combatknife_p1_m1") -- Combat Blade
 -- mod.load_mod_file("weapon/combatsword_p1_m1") -- Catachan "Devil's Claw" Sword
 -- mod.load_mod_file("weapon/combatsword_p2_m1") -- Heavy Sword?
 mod.load_mod_file("weapon/combatsword_p3_m1") -- Duelling Sword
