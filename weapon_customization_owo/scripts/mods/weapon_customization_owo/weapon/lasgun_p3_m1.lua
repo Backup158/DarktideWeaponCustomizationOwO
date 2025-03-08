@@ -330,14 +330,14 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  M26-MASS
     --  -------------------------------------------
-    --  Syn's Volleygun Receivers
+    --      Syn's Volleygun Receivers
     {	dependencies =  { "owo_underbarrel_shotgun_02",
             _syn_volleygun_receivers,
         },
         -- Receiver
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.25, -0.088), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
-    --  Recon Receivers
+    --      Recon Receivers
     {	dependencies =  { "owo_underbarrel_shotgun_02",
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },

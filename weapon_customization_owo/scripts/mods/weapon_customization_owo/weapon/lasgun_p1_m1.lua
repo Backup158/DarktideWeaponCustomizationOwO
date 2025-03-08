@@ -217,7 +217,7 @@ mod.mt.inject_fixes(this_variant, {
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.054), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --      Default
-    --          Normal?
+    --          Normal
     {	dependencies = {"owo_underbarrel_shotgun_01_01"},
         -- Shotgun body
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.060), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
