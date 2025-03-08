@@ -209,7 +209,7 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 0.82, 1.0 ) },
     },
     --  Masterkey Helpers
-	{	dependencies = {"owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_02"},
+	{	dependencies = {"owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"},
         -- Shotgun tube
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.613, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.2, 1, 1.2 ) },
         -- Shotgun barrel 2

@@ -1891,8 +1891,9 @@ end
 --		Knight's Armament Company Masterkey, M26-MASS (Modular Accessory Shotgun System)
 function mod.owo_underbarrel_shotgun(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
-		{id = "owo_underbarrel_shotgun_01_02", name = "OwO Masterkey"},
+		{id = "owo_underbarrel_shotgun_01_01", name = "OwO Masterkey"},
 		{id = "owo_underbarrel_shotgun_01", name = "OwO Masterkey (THICC)"},
+		{id = "owo_underbarrel_shotgun_01_02", name = "OwO Masterkey (Mini)"},
 		{id = "owo_underbarrel_shotgun_02", name = "OwO M26-MASS"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
@@ -1933,6 +1934,15 @@ function mod.owo_underbarrel_shotgun(variant_id, type)
 		-- ### Base Parts ###
 		-- 	Shotgun body + barrel guide
 		owo_underbarrel_shotgun_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "bayonet", 
+			mesh_move = false, parent = "barrel",
+			automatic_equip = { bayonetac1 = "owo_underbarrel_shotgun_helper_01", bayonetac2 = "owo_underbarrel_shotgun_helper_02", 
+				bayonetac3 = "owo_underbarrel_shotgun_helper_03", bayonetac4 = "owo_underbarrel_shotgun_helper_04", 
+				bayonetac5 = "owo_underbarrel_shotgun_helper_05", bayonetac6 = "owo_underbarrel_shotgun_helper_06", 
+				bayonetac7 = "owo_underbarrel_shotgun_helper_07", 
+			}
+		},
+		owo_underbarrel_shotgun_01_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "bayonet", 
 			mesh_move = false, parent = "barrel",
 			automatic_equip = { bayonetac1 = "owo_underbarrel_shotgun_helper_01", bayonetac2 = "owo_underbarrel_shotgun_helper_02", 
