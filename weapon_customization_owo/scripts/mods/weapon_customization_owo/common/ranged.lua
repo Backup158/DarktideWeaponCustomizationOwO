@@ -304,6 +304,7 @@ end
 mod.mt.table_append(mod.wc.sights, {
 	"owo_holosight_01_02_z1",
 	"owo_holosight_01_02_z2",
+	"owo_holosight_01_02ss",
 	"owo_acog_sight_01f",
 	"owo_acog_sight_01", 
 	"owo_acog_sight_01f_z1",
