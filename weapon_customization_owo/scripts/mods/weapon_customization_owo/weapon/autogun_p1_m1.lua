@@ -137,11 +137,17 @@ local _medium_infantry_autogun_all_barrels = _medium_infantry_autogun_barrels.."
 local _long_infantry_autogun_barrels = "barrel_03|barrel_05"
 local _long_infantry_autogun_mt_barrels = "iagun_barrel_03|iagun_barrel_05"
 local _long_infantry_autogun_all_barrels = _long_infantry_autogun_barrels.."|".._long_infantry_autogun_mt_barrels
+local _short_vigilant_autogun_barrels = "barrel_12|hagun_barrel_02"
+local _long_vigilant_autogun_barrels = "barrel_11|barrel_15|barrel_16|barrel_22"
+local _long_vigilant_autogun_mt_barrels = "hagun_barrel_01|hagun_barrel_03|hagun_barrel_04"
+local _long_vigilant_autogun_all_barrels = _long_vigilant_autogun_barrels.."|".._long_vigilant_autogun_mt_barrels
+
 local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
 local _long_infantry_lasgun_mt_barrels = "ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08"
-
 local _mt_laspistol_barrels = "lpistol_barrel_01|lpistol_barrel_02|lpistol_barrel_03|lpistol_barrel_04|lpistol_barrel_05|lpistol_barrel_06|lpistol_barrel_07"
-local _mt_all_autopistol_barrels = "apistol_barrel_01|apistol_barrel_02|apistol_barrel_03|apistol_barrel_04|apistol_barrel_05"
+local _recon_lasgun_mt_barrels = "rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05"
+
+local _mt_autopistol_barrels = "apistol_barrel_01|apistol_barrel_02|apistol_barrel_03|apistol_barrel_04|apistol_barrel_05"
 local _mt_twin_stubber_barrels = "stubber_barrel_01|stubber_barrel_02|stubber_barrel_03|stubber_barrel_04|stubber_barrel_05"
 local _mt_single_stubber_barrels = "singlestubber_barrel_01|singlestubber_barrel_02|singlestubber_barrel_03"
 local _mt_combat_shotgun_barrels = "shot_barrel_01|shot_barrel_02|shot_barrel_03|shot_barrel_04|shot_barrel_07|shot_barrel_08|shot_barrel_09"
@@ -160,6 +166,8 @@ local _syn_pulse_barrels = "SWSMPR_barrel_01|SWSMPR_barrel_02|SWSMPR_barrel_03|S
 local _syn_hellgun_barrels = "syn_heavybarrel_01|syn_heavybarrel_02|syn_heavybarrel_03|syn_hellgun_barrel_01|syn_hellgun_barrel_02"
 local _syn_carbine_barrels = "syn_carbine_barrel_01|syn_carbine_barrel_02|syn_carbine_barrel_03|syn_carbine_barrel_04|syn_carbine_barrel_05"
 local _syn_aquilon_barrels = "syn_aquilonbarrel_01|syn_aquilonbarrel_01a|syn_aquilonbarrel_02|syn_aquilonbarrel_02a"
+local _syn_heavy_barrels = "syn_heavybarrel_01|syn_heavybarrel_02|syn_heavybarrel_03"
+local _syn_thompson_barrels = "syn_thompson_barrel_01|syn_thompson_barrel_02"
 
 mod.mt.inject_fixes(this_variant, {
     -- ######
@@ -1098,24 +1106,128 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
-	{	dependencies = {"owo_m203"},
+    --  -------------------------------------------
+    --  M203
+    --  -------------------------------------------
+    {	dependencies =  { "owo_m203", _short_infantry_autogun_all_barrels},
+        bayonet =       { offset = true, position = vector3_box(0, -0.064, -0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _medium_infantry_autogun_all_barrels.."|".._long_infantry_autogun_all_barrels},
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _super_short_braced_autogun_all_barrels.."|".._short_braced_autogun_all_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _long_braced_autogun_all_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.242, -0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _short_vigilant_autogun_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.272, -0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _long_vigilant_autogun_all_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _short_infantry_lasgun_mt_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.016, -0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _long_infantry_lasgun_mt_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.084, -0.128), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _recon_lasgun_mt_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.044, -0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_laspistol_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.142), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_combat_shotgun_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.296, -0.132), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_autopistol_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.142), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", "longlasgun_barrel_01" },
+        bayonet =       { offset = true, position = vector3_box(0, -0.088, -0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_db_shotgun_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.184, -0.084), rotation = vector3_box(0, 0, 0), scale = vector3_box(2, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_plasma_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.22, -0.18), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.47, 1.5, 1.67 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_flamer_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.118, -0.192), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.5, 1.5, 1.43 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_bolter_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.178, -0.18), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.6, 0.75, 1.6 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_backwards_bolter_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.178, -0.18), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.6, 0.75, 1.6 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_twin_stubber_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.402, -0.536), rotation = vector3_box(0, 0, 0), scale = vector3_box(4, 3, 4 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_single_stubber_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.326, -0.222), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.6, 2.5, 2.6 ) },
+    },
+    {	dependencies =  { "owo_m203", _mt_ripper_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.202, -0.212), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 1.5, 2.5 ) },
+    },
+    {	dependencies =  { "owo_m203", "exitus_barrel_01" },
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.142), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _syn_helbore_sniper_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.116, -0.476), rotation = vector3_box(0, 0, 0), scale = vector3_box(3.3, 1.5, 3.3 ) },
+    },
+    {	dependencies =  { "owo_m203", _syn_carry_sniper_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.116, -0.488), rotation = vector3_box(0, 0, 0), scale = vector3_box(3.3, 1.5, 3.3 ) },
+    },
+    {	dependencies =  { "owo_m203", "ilasgun_double_barrel_01" },
+        bayonet =       { offset = true, position = vector3_box(0, -0.116, -0.158), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _syn_heavy_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.098), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _syn_m41a_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, 0.34, -0.142), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.25, 3, 1 ) },
+    },
+    --TODO
+    {	dependencies =  { "owo_m203", _syn_carbine_barrels },
         bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
-    {	dependencies = {"owo_m203"},
+    {	dependencies =  { "owo_m203", _syn_thompson_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", "syn_daewook11_barrel_01" },
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203", _syn_pulse_barrels },
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    -- rotary
+    -- q3 mg
+    -- aquilon
+
+	{	dependencies =  { "owo_m203" },
+        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    --  Helpers
+    {	dependencies =  { "owo_m203"},
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.138, 0.), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
         bayonetac2 =    { offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
         bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
         bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
     },
-    {	dependencies = {"owo_gp25",
-            _long_braced_autogun_all_barrels,
-        },
+    --  -------------------------------------------
+    --  GP-25
+    --  -------------------------------------------
+    {	dependencies =  { "owo_gp25", _long_braced_autogun_all_barrels },
         bayonet =       { offset = true, position = vector3_box(0, -0.294, -0.106), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
-    {	dependencies = {"owo_gp25"},
+    {	dependencies =  { "owo_gp25"},
         bayonet =       { offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
-    {	dependencies = {"owo_gp25"},
+    --  Helpers
+    {	dependencies =  { "owo_gp25"},
         bayonetac1 =    { offset = true, position = vector3_box(0, -0.022, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.875, 1, 0.875 ) },
         bayonetac2 =    { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(90, 0, 180), scale = vector3_box(1.1, 1.1, 1.3 ) },
         bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.03), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 0.566, 0.21 ) },
@@ -1129,6 +1241,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Masterkey
     --  -------------------------------------------
+    --      A bit lower
     {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, "owo_underbarrel_shotgun_01_01"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
@@ -1184,7 +1297,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Masterkey Helpers
     --      Connector patches
-    {	dependencies =  { _mt_laspistol_barrels.."|".._mt_all_autopistol_barrels, _owo_masterkey_bayonets},
+    {	dependencies =  { _mt_laspistol_barrels.."|".._mt_autopistol_barrels, _owo_masterkey_bayonets},
         bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.28, 1.0 ) },
     },
     {	dependencies =  { _mt_single_stubber_barrels.."|".._mt_ripper_barrels, _owo_masterkey_bayonets},
@@ -1239,7 +1352,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  M26-MASS Helpers
     --      Connector Patches
-    {	dependencies =  { _mt_laspistol_barrels.."|".._mt_all_autopistol_barrels, "owo_underbarrel_shotgun_02"},
+    {	dependencies =  { _mt_laspistol_barrels.."|".._mt_autopistol_barrels, "owo_underbarrel_shotgun_02"},
         bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 0.6, 1.0 ) },
     },
     {	dependencies =  { _mt_single_stubber_barrels.."|".._mt_ripper_barrels, "owo_underbarrel_shotgun_02"},
