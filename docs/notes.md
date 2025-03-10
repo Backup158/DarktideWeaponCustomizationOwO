@@ -90,7 +90,7 @@ For the main part (which all the helpers follow):
 3. Specify parent_node
 For revolver, it would be `offset = false, parent = "barrel", parent_node = 9,`
 # Creating a New  Attachment Slot
-**In the <common/category>.lua**
+**In the <common/category>.lua** (if you want to apply it to multiple weapons)
 1. First, check if it exists already
 	1. If it doesn't, fill up a table for it. Be sure to make the first entry the empty/default one. EWC auto equips the first one for every weapon.
 		```
