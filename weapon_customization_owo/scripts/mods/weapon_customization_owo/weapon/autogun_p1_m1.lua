@@ -175,6 +175,8 @@ local _syn_heavy_barrels = "syn_heavybarrel_01|syn_heavybarrel_02|syn_heavybarre
 local _syn_thompson_barrels = "syn_thompson_barrel_01|syn_thompson_barrel_02"
 local _syn_rotary_barrels = "rotary_barrel_01|rotary_barrel_01a|rotary_barrel_01b|rotary_barrel_01c"
 local _syn_q3_barrels = "q3_machinegun_barrel_01|q3_machinegun_barrel_01a"
+local _syn_canis_barrels = "syn_vescanis_barrel_01|syn_vescanis_barrel_02"
+local _syn_gauss_barrels = "syn_gk8gauss_barrel_01|syn_gk8gauss_barrel_02"
 
 mod.mt.inject_fixes(this_variant, {
     -- ######
@@ -1345,7 +1347,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Default
     {	dependencies =  { "owo_gp25"},
-        bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.5, -0.056), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
+        bayonet =       { offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
     --  Helpers
     {	dependencies =  { "owo_gp25"},
