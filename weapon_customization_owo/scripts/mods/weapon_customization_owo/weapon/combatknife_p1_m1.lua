@@ -14,6 +14,9 @@ local this_variant = "combatknife_p1_m1" -- Combat Blade
 -- Makes new tables for attachment anchors
 -- ############################################
 mod.wc.attachment[this_variant].frontguard = {}
+mod.wc.attachment[this_variant].frontguardac1 = {}
+mod.wc.attachment[this_variant].frontguardac2 = {}
+mod.wc.attachment[this_variant].frontguardac3 = {}
 if not mod.syn then
 	mod.wc.attachment[this_variant].bladeshroud = {}
 end
@@ -30,6 +33,7 @@ mod.owo_historical_blade(this_variant)
 -- Inject Fixes
 -- ############################################
 local _owo_finger_guards = "owo_trench_dagger_finger_guard_01|owo_trench_dagger_finger_guard_02|owo_trench_dagger_finger_guard_03|owo_trench_dagger_finger_guard_04|owo_trench_dagger_finger_guard_05|owo_trench_dagger_finger_guard_06"
+local _owo_trench_dagger_finger_guard_knuckles = "owo_trench_dagger_finger_guard_knuckles_01|owo_trench_dagger_finger_guard_knuckles_02|owo_trench_dagger_finger_guard_knuckles_03|owo_trench_dagger_finger_guard_knuckles_04"
 local _owo_tactical_tanto_blades = "owo_historical_blade_tanto_01|owo_historical_blade_tanto_02|owo_historical_blade_tanto_03|owo_historical_blade_tanto_04|owo_historical_blade_tanto_05|owo_historical_blade_tanto_06"
 
 local _mt_falchion_grips = "falchion_mt_grip_01|falchion_mt_grip_02|falchion_mt_grip_03|falchion_mt_grip_04|falchion_mt_grip_05"
@@ -69,6 +73,21 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { _owo_finger_guards },
         frontguard =    { offset = true, position = vector3_box(0, 0, 0.064), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.36, 0.36, 0.36 ), },
     },
+    --  -------------------------------------------
+    --  Knuckle Dusters
+    --  -------------------------------------------
+    {   dependencies =  { _mt_falchion_grips, _owo_trench_dagger_finger_guard_knuckles },
+        frontguard =    { offset = true, position = vector3_box(0, 0.004, 0.076), rotation = vector3_box(10, 0, 0), scale = vector3_box(0.26, 0.2, 0.14 ), },
+        frontguardac1 = { offset = true, position = vector3_box(0, 0.01, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.26, 0.2, 0.14 ), },
+        frontguardac2 = { offset = true, position = vector3_box(0, 0.01, -0.012), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.26, 0.2, 0.14 ), },
+        frontguardac3 = { offset = true, position = vector3_box(0, 0.006, -0.052), rotation = vector3_box(-10, 0, 0), scale = vector3_box(0.26, 0.2, 0.14 ), },
+    },
+    {   dependencies =  { _owo_trench_dagger_finger_guard_knuckles },
+        frontguard =    { offset = true, position = vector3_box(0, 0.004, 0.064), rotation = vector3_box(10, 0, 0), scale = vector3_box(0.12, 0.16, 0.07 ), },
+        frontguardac1 = { offset = true, position = vector3_box(0, 0.009, 0.042), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.12, 0.16, 0.07 ), },
+        frontguardac2 = { offset = true, position = vector3_box(0, 0.008, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.12, 0.16, 0.07 ), },
+        frontguardac3 = { offset = true, position = vector3_box(0, 0.004, -0.01), rotation = vector3_box(-10, 0, 0), scale = vector3_box(0.12, 0.16, 0.07 ), },
+    },
     
     -- ######
     -- Blade: Historical Pack
@@ -76,31 +95,31 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Trench Spike
     --  -------------------------------------------
-    {   dependencies =  { _mt_falchion_grips, "owo_historical_blade_01" },
+    {   dependencies =  { _mt_falchion_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.014, 0.0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.75, 1.25 ), },
     },
-    {   dependencies =  { _mt_sabre_grips, "owo_historical_blade_01" },
+    {   dependencies =  { _mt_sabre_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.35, 1.0 ), },
     },
-    {   dependencies =  { _mt_dclaw_grips, "owo_historical_blade_01" },
+    {   dependencies =  { _mt_dclaw_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.01, 0.026), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.25, 1.0 ), },
     },
-    {   dependencies =  { _mt_combat_axe_grips, "owo_historical_blade_01" },
+    {   dependencies =  { _mt_combat_axe_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.008, 0.076), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 2.65, 0.8 ), },
     },
-    {   dependencies =  { _mt_tactical_axe_grips, "owo_historical_blade_01" },
+    {   dependencies =  { _mt_tactical_axe_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.012, 0.032), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 1.75, 0.8 ), },
     },
-    {   dependencies =  { _mt_eviscerator_grips, "owo_historical_blade_01" },
+    {   dependencies =  { _mt_eviscerator_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.01, 0.034), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.85, 1.5, 0.85 ), },
     },
-    {   dependencies =  { _mt_chain_sword_grips, "owo_historical_blade_01" },
+    {   dependencies =  { _mt_chain_sword_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.85, 1.2, 0.85 ), },
     },
-    {   dependencies =  { _mt_ogryn_grips, "owo_historical_blade_01" },
+    {   dependencies =  { _mt_ogryn_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.028, 0.036), rotation = vector3_box(90, 0, 0), scale = vector3_box(2.0, 2.3, 2.15 ), },
     },
-    {   dependencies =  { "owo_historical_blade_01" },
+    {   dependencies =  { "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.85, 1.0, 0.85 ), },
     },
     --  -------------------------------------------
@@ -174,7 +193,18 @@ mod.mt.inject_fixes(this_variant, {
     -- By putting it down here, they will only be hidden if the fixes from above are not found
     -- Because they match the main parts first, if there is no match it means the main part is not attached
     -- ####################################################################################
+    -- Blade Shrouds
     {	dependencies =  { "owo_historical_blade_helper_gerber|owo_historical_blade_helper_karambit"},
         bladeshroud =   { hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- Finger Guard
+    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac1"},
+        frontguardac1 = { hide_mesh = {{"frontguardac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac2"},
+        frontguardac2 = { hide_mesh = {{"frontguardac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac3"},
+        frontguardac3 = { hide_mesh = {{"frontguardac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })

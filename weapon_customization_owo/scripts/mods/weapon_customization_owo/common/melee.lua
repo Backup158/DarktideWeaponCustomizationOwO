@@ -70,6 +70,21 @@ mod:add_global_localize_strings({
         en = "Front Guard",
 	},
 })
+mod.wc.add_custom_attachments.frontguardac1 = "frontguardac1_list"
+mod.wc.frontguardac1_list = {
+	"owo_trench_dagger_finger_guard_helper_ac1_default",
+	"owo_trench_dagger_finger_guard_helper_ac1",
+}
+mod.wc.add_custom_attachments.frontguardac2 = "frontguardac2_list"
+mod.wc.frontguardac2_list = {
+	"owo_trench_dagger_finger_guard_helper_ac2_default",
+	"owo_trench_dagger_finger_guard_helper_ac2",
+}
+mod.wc.add_custom_attachments.frontguardac3 = "frontguardac3_list"
+mod.wc.frontguarda3_list = {
+	"owo_trench_dagger_finger_guard_helper_ac3_default",
+	"owo_trench_dagger_finger_guard_helper_ac3",
+}
 
 -- ############################################
 -- Injection Definitions
@@ -83,7 +98,7 @@ function mod.owo_tacax_spike(variant_id, type)
 	})
     mod.inject_attachments_owo(variant_id, "head2" or type, {
         {id = "owo_tacax_spike_helper_empty", name = "OwO Empty Head2"},
-		{id = "owo_tacax_spike_helper_01", name = "OwO Tacax'vesa 1"},
+		{id = "owo_tacax_spike_helper_01", name = "OwO Tacax'vesa 1", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -147,7 +162,7 @@ end
 --	Trench Spike: M1917
 function mod.owo_historical_blade(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "body" or type, {
-		{id = "owo_historical_blade_01", name = "OwO Trench Dagger Spike"},
+		{id = "owo_historical_blade_trench_spike", name = "OwO Trench Dagger Spike"},
 		{id = "owo_historical_blade_02", name = "OwO Gerber Mk II"},
 		{id = "owo_historical_blade_karambit", name = "OwO Karambit Blade"},
 		{id = "owo_historical_blade_karambit_f", name = "OwO Karambit Blade (Flip)"},
@@ -163,13 +178,13 @@ function mod.owo_historical_blade(variant_id, type)
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroud" or type, {
 		{id = "owo_historical_blade_helper_default", name = "Empty"},
-		{id = "owo_historical_blade_helper_gerber", name = "OwO Gerber'vesa"},
-		{id = "owo_historical_blade_helper_karambit", name = "OwO Karambit'vesa"},
+		{id = "owo_historical_blade_helper_gerber", name = "OwO Gerber'vesa", no_randomize = true},
+		{id = "owo_historical_blade_helper_karambit", name = "OwO Karambit'vesa", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
-		owo_historical_blade_01 = {
+		owo_historical_blade_trench_spike = {
 			model = _item_ranged.."/bayonets/bayonet_03", type = "body", 
 			mesh_move = false, parent = "grip",
 		},
@@ -354,6 +369,22 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 		{id = "owo_trench_dagger_finger_guard_04", name = "OwO Trench Dagger Guard 4"},
 		{id = "owo_trench_dagger_finger_guard_05", name = "OwO Trench Dagger Guard 5"},
 		{id = "owo_trench_dagger_finger_guard_06", name = "OwO Trench Dagger Guard 6"},
+		{id = "owo_trench_dagger_finger_guard_knuckles_01", name = "OwO Knuckle Dusters 1"},
+		{id = "owo_trench_dagger_finger_guard_knuckles_02", name = "OwO Knuckle Dusters 2"},
+		{id = "owo_trench_dagger_finger_guard_knuckles_03", name = "OwO Knuckle Dusters 3"},
+		{id = "owo_trench_dagger_finger_guard_knuckles_04", name = "OwO Knuckle Dusters 4"},
+	})
+	mod.inject_attachments_owo(variant_id, "frontguardac1" or type, {
+        {id = "owo_trench_dagger_finger_guard_helper_ac1_default", name = "Default"},
+		{id = "owo_trench_dagger_finger_guard_helper_ac1", name = "OwO Knuckle'vesa", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "frontguardac2" or type, {
+        {id = "owo_trench_dagger_finger_guard_helper_ac2_default", name = "Default"},
+		{id = "owo_trench_dagger_finger_guard_helper_ac2", name = "OwO Knuckle'vesa", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "frontguardac3" or type, {
+        {id = "owo_trench_dagger_finger_guard_helper_ac3_default", name = "Default"},
+		{id = "owo_trench_dagger_finger_guard_helper_ac3", name = "OwO Knuckle'vesa", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -386,6 +417,67 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 			model = _item_melee.."/grips/combat_blade_grip_08", type = "frontguard", 
 			mesh_move = false, parent = "grip",
 		},
+		owo_trench_dagger_finger_guard_knuckles_01 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1_default",
+				frontguardac2 = "owo_trench_dagger_finger_guard_helper_ac2_default",
+				frontguardac3 = "owo_trench_dagger_finger_guard_helper_ac3_default",
+			},
+		},
+		owo_trench_dagger_finger_guard_knuckles_02 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
+				frontguardac2 = "owo_trench_dagger_finger_guard_helper_ac2_default",
+				frontguardac3 = "owo_trench_dagger_finger_guard_helper_ac3_default",
+			},
+		},
+		owo_trench_dagger_finger_guard_knuckles_03 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
+				frontguardac2 = "owo_trench_dagger_finger_guard_helper_ac2",
+				frontguardac3 = "owo_trench_dagger_finger_guard_helper_ac3_default",
+			},
+		},
+		owo_trench_dagger_finger_guard_knuckles_04 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
+				frontguardac2 = "owo_trench_dagger_finger_guard_helper_ac2",
+				frontguardac3 = "owo_trench_dagger_finger_guard_helper_ac3",
+			},
+		},
+		-- ### Helper Parts ###
+		owo_trench_dagger_finger_guard_helper_ac1_default = {
+			model = "", type = "frontguardac1", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_helper_ac1 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguardac1", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_helper_ac2_default = {
+			model = "", type = "frontguardac2", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_helper_ac2 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguardac2", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_helper_ac3_default = {
+			model = "", type = "frontguardac3", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_trench_dagger_finger_guard_helper_ac3 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguardac3", 
+			mesh_move = false, parent = "grip",
+		},
 	})
 end
 
@@ -411,18 +503,18 @@ function mod.owo_shovel_handles(variant_id, type)
 	})
     mod.inject_attachments_owo(variant_id, "pommelac1" or type, {
 		{id = "owo_shovel_handles_ac1_empty", name = "OwO Empty Pommelac1"},
-        {id = "owo_shovel_handles_ac1_01", name = "OwO E-Tool'vesa'ac1 1"},
-        {id = "owo_shovel_handles_ac1_02", name = "OwO E-Tool'vesa'ac1 2"},
-        --{id = "owo_shovel_handles_ac1_03", name = "OwO E-Tool'vesa'ac1 3"},
-        {id = "owo_shovel_handles_ac1_04", name = "OwO E-Tool'vesa'ac1 4"},
-        {id = "owo_shovel_handles_ac1_05", name = "OwO E-Tool'vesa'ac1 5"},
+        {id = "owo_shovel_handles_ac1_01", name = "OwO E-Tool'vesa'ac1 1", no_randomize = true},
+        {id = "owo_shovel_handles_ac1_02", name = "OwO E-Tool'vesa'ac1 2", no_randomize = true},
+        --{id = "owo_shovel_handles_ac1_03", name = "OwO E-Tool'vesa'ac1 3", no_randomize = true},
+        {id = "owo_shovel_handles_ac1_04", name = "OwO E-Tool'vesa'ac1 4", no_randomize = true},
+        {id = "owo_shovel_handles_ac1_05", name = "OwO E-Tool'vesa'ac1 5", no_randomize = true},
 	})
     mod.inject_attachments_owo(variant_id, "pommelac2" or type, {
 		{id = "owo_shovel_handles_ac2_empty", name = "OwO Empty Pommelac1"},
-        {id = "owo_shovel_handles_ac2_01", name = "OwO E-Tool'vesa'ac2 1"},
-        {id = "owo_shovel_handles_ac2_02", name = "OwO E-Tool'vesa'ac2 2"},
-		{id = "owo_shovel_handles_ac2_03", name = "OwO E-Tool'vesa'ac2 3"},
-		{id = "owo_shovel_handles_ac2_04", name = "OwO E-Tool'vesa'ac2 4"},
+        {id = "owo_shovel_handles_ac2_01", name = "OwO E-Tool'vesa'ac2 1", no_randomize = true},
+        {id = "owo_shovel_handles_ac2_02", name = "OwO E-Tool'vesa'ac2 2", no_randomize = true},
+		{id = "owo_shovel_handles_ac2_03", name = "OwO E-Tool'vesa'ac2 3", no_randomize = true},
+		{id = "owo_shovel_handles_ac2_04", name = "OwO E-Tool'vesa'ac2 4", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
