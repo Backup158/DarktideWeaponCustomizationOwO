@@ -14,6 +14,9 @@ local this_variant = "combatknife_p1_m1" -- Combat Blade
 -- Makes new tables for attachment anchors
 -- ############################################
 mod.wc.attachment[this_variant].frontguard = {}
+if not mod.syn then
+	mod.wc.attachment[this_variant].bladeshroud = {}
+end
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -27,6 +30,8 @@ mod.owo_historical_blade(this_variant)
 -- Inject Fixes
 -- ############################################
 local _owo_finger_guards = "owo_trench_dagger_finger_guard_01|owo_trench_dagger_finger_guard_02|owo_trench_dagger_finger_guard_03|owo_trench_dagger_finger_guard_04|owo_trench_dagger_finger_guard_05|owo_trench_dagger_finger_guard_06"
+local _owo_tactical_tanto_blades = "owo_historical_blade_tanto_01|owo_historical_blade_tanto_02|owo_historical_blade_tanto_03|owo_historical_blade_tanto_04|owo_historical_blade_tanto_05|owo_historical_blade_tanto_06"
+
 local _mt_falchion_grips = "falchion_mt_grip_01|falchion_mt_grip_02|falchion_mt_grip_03|falchion_mt_grip_04|falchion_mt_grip_05"
 local _mt_sabre_grips = "sabre_mt_grip_01|sabre_mt_grip_02|sabre_mt_grip_03|sabre_mt_grip_04|sabre_mt_grip_05"
 local _mt_dclaw_grips = "combat_sword_mt_grip_01|combat_sword_mt_grip_02|combat_sword_mt_grip_03|combat_sword_mt_grip_04|combat_sword_mt_grip_05|combat_sword_mt_grip_06"
@@ -64,6 +69,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { _owo_finger_guards },
         frontguard =    { offset = true, position = vector3_box(0, 0, 0.064), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.36, 0.36, 0.36 ), },
     },
+    
     -- ######
     -- Blade: Historical Pack
     -- ######
@@ -96,5 +102,79 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =  { "owo_historical_blade_01" },
         body =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.85, 1.0, 0.85 ), },
+    },
+    --  -------------------------------------------
+    --  Gerber Mk II
+    --  -------------------------------------------
+    {   dependencies =  { _mt_falchion_grips, "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 1.75, 1.5 ), },
+    },
+    {   dependencies =  { _mt_sabre_grips, "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 1.35, 1.15 ), },
+    },
+    {   dependencies =  { _mt_dclaw_grips, "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, -0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 1.25, 1.15 ), },
+    },
+    {   dependencies =  { _mt_combat_axe_grips, "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.2), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1.75 ), },
+    },
+    {   dependencies =  { _mt_tactical_axe_grips, "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.16), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1.4 ), },
+    },
+    {   dependencies =  { _mt_eviscerator_grips, "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.146), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1 ), },
+    },
+    {   dependencies =  { _mt_chain_sword_grips, "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.094), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.2, 1 ), },
+    },
+    {   dependencies =  { _mt_ogryn_grips, "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.158), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.0, 2.3, 1.5 ), },
+    },
+    {   dependencies =  { "owo_historical_blade_02" },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1 ), },
+    },
+    {   dependencies =  { "owo_historical_blade_02" },
+        bladeshroud =   { offset = true, position = vector3_box(0.0, 0.001, 0.042), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.04, 0.2, 0.30 ), },
+    },
+    --  -------------------------------------------
+    --  Karambit
+    --  -------------------------------------------
+    {   dependencies =  { "owo_historical_blade_karambit" },
+        body =          { offset = true, position = vector3_box(0, -0.0, -0.014), rotation = vector3_box(9, 0, 180), scale = vector3_box(0.4, 0.188, 0.14 ), },
+        bladeshroud =   { offset = true, position = vector3_box(0, -0.0246, 0.049), rotation = vector3_box(-48, 0, 180), scale = vector3_box(0.18, 0.1, 0.078 ), },
+    },
+    {   dependencies =  { "owo_historical_blade_karambit_f" },
+        body =          { offset = true, position = vector3_box(0, -0.0, -0.014), rotation = vector3_box(-9, 0, 0), scale = vector3_box(0.4, 0.188, 0.14 ), },
+        bladeshroud =   { offset = true, position = vector3_box(0, 0.0246, 0.049), rotation = vector3_box(48, 0, 0), scale = vector3_box(0.18, 0.1, 0.078 ), },
+    },
+    {   dependencies =  { "owo_historical_blade_karambit_s" },
+        body =          { offset = true, position = vector3_box(0, 0.003, -0.005), rotation = vector3_box(9, 0, 180), scale = vector3_box(0.4, 0.13, 0.084 ), },
+        bladeshroud =   { offset = true, position = vector3_box(0, -0.0157, 0.03), rotation = vector3_box(-48, 0, 180), scale = vector3_box(0.18, 0.054, 0.058 ), },
+    },
+    {   dependencies =  { "owo_historical_blade_karambit_sf" },
+        body =          { offset = true, position = vector3_box(0, 0.003, -0.005), rotation = vector3_box(-9, 0, 0), scale = vector3_box(0.4, 0.13, 0.084 ), },
+        bladeshroud =   { offset = true, position = vector3_box(0, 0.017, 0.031), rotation = vector3_box(48, 0, 0), scale = vector3_box(0.18, 0.054, 0.058 ), },
+    },
+    --  -------------------------------------------
+    --  Tactical Tanto
+    --  -------------------------------------------
+    {   dependencies =  { _owo_tactical_tanto_blades },
+        body =          { offset = true, position = vector3_box(0, -0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.35, 0.35, 0.19 ), },
+    },
+    --  -------------------------------------------
+    --  Tactical Box Cutter
+    --  -------------------------------------------
+    {   dependencies =  { "owo_historical_blade_box_cutter" },
+        body =          { offset = true, position = vector3_box(0, -0.0, -0.094), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.35, 0.19 ), },
+    },
+
+
+    -- ####################################################################################
+    -- HIDING HELPERS
+    -- By putting it down here, they will only be hidden if the fixes from above are not found
+    -- Because they match the main parts first, if there is no match it means the main part is not attached
+    -- ####################################################################################
+    {	dependencies =  { "owo_historical_blade_helper_gerber|owo_historical_blade_helper_karambit"},
+        bladeshroud =   { hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })

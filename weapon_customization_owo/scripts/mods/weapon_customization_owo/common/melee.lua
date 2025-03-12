@@ -24,20 +24,18 @@ else
 	}
 end
 -- BLADE
---[[
 if mod.syn then
 	mod.mt.table_append(mod.wc.bladeshrouds, {
-		--"owo_slim_psword_helper_00",
-		--"owo_slim_psword_helper_01",
+		"owo_historical_blade_helper_default",
+		"owo_historical_blade_helper_gerber",
 	})
 else 
 	mod.wc.add_custom_attachments.bladeshroud = "bladeshrouds"
 	mod.wc.bladeshrouds = {
-		--"owo_slim_psword_helper_00",
-		--"owo_slim_psword_helper_01",
+		"owo_historical_blade_helper_default",
+		"owo_historical_blade_helper_gerber",
 	}
 end
-]]
 -- POMMEL
 mod.wc.add_custom_attachments.pommelac1 = "pommelac1_list"
 mod.wc.pommelac1_list = {
@@ -146,14 +144,27 @@ function mod.owo_rapier_blade(variant_id, type)
 end
 
 -- Body: Historical/Tactical Blades
---	Trench Dagger 1: M1917
+--	Trench Spike: M1917
 function mod.owo_historical_blade(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "body" or type, {
-		{id = "owo_historical_blade_01", name = "OwO Trench Dagger Spike 1"},
-		{id = "owo_historical_blade_02", name = "OwO Rapier Blade 2"},
-		{id = "owo_historical_blade_03", name = "OwO Rapier Blade 3"},
-		{id = "owo_historical_blade_04", name = "OwO Rapier Blade 4"},
-		{id = "owo_historical_blade_05", name = "OwO Rapier Blade 5"},
+		{id = "owo_historical_blade_01", name = "OwO Trench Dagger Spike"},
+		{id = "owo_historical_blade_02", name = "OwO Gerber Mk II"},
+		{id = "owo_historical_blade_karambit", name = "OwO Karambit Blade"},
+		{id = "owo_historical_blade_karambit_f", name = "OwO Karambit Blade (Flip)"},
+		{id = "owo_historical_blade_karambit_s", name = "OwO Karambit Blade (Small)"},
+		{id = "owo_historical_blade_karambit_sf", name = "OwO Karambit Blade (S/F)"},
+		{id = "owo_historical_blade_tanto_01", name = "OwO Tactical Tanto 1"},
+		{id = "owo_historical_blade_tanto_02", name = "OwO Tactical Tanto 2"},
+		{id = "owo_historical_blade_tanto_03", name = "OwO Tactical Tanto 3"},
+		{id = "owo_historical_blade_tanto_04", name = "OwO Tactical Tanto 4"},
+		{id = "owo_historical_blade_tanto_05", name = "OwO Tactical Tanto 5"},
+		{id = "owo_historical_blade_tanto_06", name = "OwO Tactical Tanto 6"},
+		{id = "owo_historical_blade_box_cutter", name = "OwO Box Cutter"},
+	})
+	mod.inject_attachments_owo(variant_id, "bladeshroud" or type, {
+		{id = "owo_historical_blade_helper_default", name = "Empty"},
+		{id = "owo_historical_blade_helper_gerber", name = "OwO Gerber'vesa"},
+		{id = "owo_historical_blade_helper_karambit", name = "OwO Karambit'vesa"},
 	})
 
 	mod.inject_models(variant_id, {
@@ -163,19 +174,79 @@ function mod.owo_historical_blade(variant_id, type)
 			mesh_move = false, parent = "grip",
 		},
 		owo_historical_blade_02 = {
-			model = _item_melee.."/blades/combat_knife_blade_06", type = "body", 
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "body", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_historical_blade_helper_gerber",
+			},
+		},
+		owo_historical_blade_karambit_f = {
+			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_historical_blade_helper_karambit",
+			},
+		},
+		owo_historical_blade_karambit_s = {
+			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_historical_blade_helper_karambit",
+			},
+		},
+		owo_historical_blade_karambit_sf = {
+			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_historical_blade_helper_karambit",
+			},
+		},
+		owo_historical_blade_tanto_01 = {
+			model = _item_melee.."/blades/combat_sword_blade_01", type = "body", 
 			mesh_move = false, parent = "grip",
 		},
-		owo_historical_blade_03 = {
-			model = _item_melee.."/blades/force_sword_blade_01", type = "body", 
+		owo_historical_blade_tanto_02 = {
+			model = _item_melee.."/blades/combat_sword_blade_02", type = "body", 
 			mesh_move = false, parent = "grip",
 		},
-		owo_historical_blade_04 = {
-			model = _item_melee.."/blades/force_sword_blade_03", type = "body", 
+		owo_historical_blade_tanto_03 = {
+			model = _item_melee.."/blades/combat_sword_blade_03", type = "body", 
 			mesh_move = false, parent = "grip",
 		},
-		owo_historical_blade_05 = {
-			model = _item_melee.."/blades/force_sword_blade_04", type = "body", 
+		owo_historical_blade_tanto_04 = {
+			model = _item_melee.."/blades/combat_sword_blade_04", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_historical_blade_tanto_05 = {
+			model = _item_melee.."/blades/combat_sword_blade_05", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_historical_blade_tanto_06 = {
+			model = _item_melee.."/blades/combat_sword_blade_06", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+		owo_historical_blade_karambit = {
+			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_historical_blade_helper_karambit",
+			},
+		},
+		owo_historical_blade_box_cutter = {
+			model = _item_melee.."/blades/combat_sword_blade_01", type = "body", 
+			mesh_move = false, parent = "grip",
+		},
+		-- ### Helper Parts ###
+		owo_historical_blade_helper_default = {
+			model = "", type = "bladeshroud", 
+			mesh_move = false, parent = "body",
+		},
+		owo_historical_blade_helper_gerber = {
+			model = _item_melee.."/blades/combat_blade_blade_06", type = "bladeshroud", 
+			mesh_move = false, parent = "body",
+		},
+		owo_historical_blade_helper_karambit = {
+			model = _item_melee.."/blades/combat_blade_blade_05", type = "bladeshroud", 
 			mesh_move = false, parent = "grip",
 		},
 	})
