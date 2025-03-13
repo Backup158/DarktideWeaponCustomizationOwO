@@ -657,13 +657,12 @@ mod.mt.inject_fixes(this_variant, {
         sightac2 =      { offset = true, position  = vector3_box(0.00, -0.018, 0.004), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
         sightac3 =      { offset = true, position  = vector3_box(0, -0.032, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.05, 0.666, 0.884) },
         sightac4 =      { offset = true, position  = vector3_box(0, -0.004, 0.004), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
-        
     },
     --  -------------------------------------------
     --  Aligning sights to crosshair
     --  -------------------------------------------
     {   dependencies =      { "owo_holosight_02_01|owo_holosight_02_01ss" },
-        scope_offset =      { position = vector3_box(0, -0.0, -0.0044), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { position = vector3_box(0, -0.0, -0.0064), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2"},
         scope_offset =      { position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0), lense_transparency = true },
