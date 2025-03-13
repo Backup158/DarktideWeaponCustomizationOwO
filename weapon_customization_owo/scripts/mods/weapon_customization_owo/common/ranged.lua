@@ -304,7 +304,7 @@ end
 mod.mt.table_append(mod.wc.sights, {
 	"owo_holosight_01_02_z1",
 	"owo_holosight_01_02_z2",
-	"owo_holosight_01_02ss",
+	"owo_holosight_01_02ss_z1",
 	"owo_acog_sight_01f",
 	"owo_acog_sight_01", 
 	"owo_acog_sight_01f_z1",
@@ -3147,7 +3147,8 @@ function mod.owo_holosight(variant_id, type)
 		{id = "owo_holosight_01_02_z2", name = "OwO EOTech+Magnifier (1.75x)"},
 		{id = "owo_holosight_01_03", name = "OwO EOTech+Magnifier (Side)"},
 		{id = "owo_holosight_01_01ss", name = "OwO EOTech (Short)"},
-		{id = "owo_holosight_01_02ss", name = "OwO EOTech + M (Short)"},
+		{id = "owo_holosight_01_02ss_z1", name = "OwO EOTech + M (Short, 1.25x)"},
+		{id = "owo_holosight_01_02ss_z2", name = "OwO EOTech + M (Short, 1.75x)"},
 		{id = "owo_holosight_01_03ss", name = "OwO EOTech + M/s (Short)"},
 		{id = "owo_holosight_02_01", name = "OwO Razor Sight"},
 		{id = "owo_holosight_02_01ss", name = "OwO Razor Sight (Short)"},
@@ -3251,8 +3252,22 @@ function mod.owo_holosight(variant_id, type)
 				{"sight", 1}
 			},
 		},
-		owo_holosight_01_02ss = {
-			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+		owo_holosight_01_02ss_z1 = {
+			--model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
+			mesh_move = false, parent = "",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
+				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
+				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sight_2 = "reflex_scopehelper_01",
+			},
+			hide_mesh = {
+				{"sight", 1}
+			},
+		},
+		owo_holosight_01_02ss_z2 = {
+			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
