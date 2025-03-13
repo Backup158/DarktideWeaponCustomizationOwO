@@ -55,8 +55,8 @@ mod.owo_telescopic_sight(this_variant)
 -- ############################################
 local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06"
 local _syn_volleygun_receivers = "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
-local _owo_all_holographic_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss"
-local _owo_no_magnifier_holographic_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
+local _owo_all_eotech_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss"
+local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
 local _owo_magnifier_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss"
 local _owo_magnifier_aligned_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss"
 local _owo_magnifier_side_holographic_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
@@ -632,7 +632,7 @@ mod.mt.inject_fixes(this_variant, {
     --  EOTech
     --  -------------------------------------------
     --  EOTech
-    {   dependencies = { _owo_all_holographic_sights },
+    {   dependencies = { _owo_all_eotech_sights },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
     },
@@ -647,26 +647,26 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Syn's Hellgun Receivers
     --          Alt vm patch
-    {   dependencies = { _owo_no_magnifier_holographic_sights,
+    {   dependencies = { _owo_no_magnifier_eotech_sights,
             _alternative_viewmodels_sight_2s,
             _syn_volleygun_receivers,
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { _owo_no_magnifier_holographic_sights,
+    {   dependencies = { _owo_no_magnifier_eotech_sights,
             _syn_volleygun_receivers,
         },
         sight =             { offset = true, position  = vector3_box(0, 0, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
     },
     --      Else, Recon Receiver
-    {   dependencies = { _owo_no_magnifier_holographic_sights,
+    {   dependencies = { _owo_no_magnifier_eotech_sights,
             _alternative_viewmodels_sight_2s,
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { _owo_no_magnifier_holographic_sights,
+    {   dependencies = { _owo_no_magnifier_eotech_sights,
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         sight =             { offset = true, position  = vector3_box(0, 0.032, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
@@ -714,13 +714,13 @@ mod.mt.inject_fixes(this_variant, {
     --  Aligning sights to crosshair
     --  -------------------------------------------
     --      Syn's Hellgun Receivers
-    {   dependencies = { _owo_all_holographic_sights,
+    {   dependencies = { _owo_all_eotech_sights,
 			_syn_volleygun_receivers,
 		},
         scope_offset =      { position = vector3_box(0, -0.0004, 0.0305), rotation = vector3_box(0, 0, 0)},
     },
     --      Recon Receiver
-    {   dependencies = { _owo_all_holographic_sights,
+    {   dependencies = { _owo_all_eotech_sights,
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         scope_offset =      { position = vector3_box(0, -0.0007, -0.0293), rotation = vector3_box(0, 0, 0)},
@@ -964,7 +964,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = {"owo_holosight_helper_02|owo_pu_scope_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
         sightac2 = { hide_mesh = {{"sightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = {"owo_holosight_helper_03|owo_pu_scope_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
+    {   dependencies = {"owo_holosight_helper_03|owo_holosight_helper_03_02|owo_pu_scope_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
         sightac3 = { hide_mesh = {{"sightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = {"owo_holosight_helper_04|owo_pu_scope_helper_04|owo_acog_sight_helper_04"},

@@ -72,8 +72,8 @@ mod.owo_pu_scope(this_variant)
 -- Inject Fixes
 -- ############################################
 local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06"
-local _owo_all_holographic_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss"
-local _owo_no_magnifier_holographic_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
+local _owo_all_eotech_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss|owo_holosight_01_03ss"
+local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
 local _owo_magnifier_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss|owo_holosight_01_03ss"
 local _owo_magnifier_aligned_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss"
 local _owo_magnifier_side_holographic_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
@@ -905,7 +905,7 @@ mod.mt.inject_fixes(this_variant, {
     -- 	EOTech
 	--  -------------------------------------------
 	--  Sight Helpers
-    {   dependencies = { _owo_all_holographic_sights },
+    {   dependencies = { _owo_all_eotech_sights },
         sightac3 =       { offset = true, position  = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =       { offset = true, position  = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
     },
@@ -920,12 +920,12 @@ mod.mt.inject_fixes(this_variant, {
     },
 	--  Main Sight body
     --      Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-	{   dependencies = { _owo_no_magnifier_holographic_sights,
+	{   dependencies = { _owo_no_magnifier_eotech_sights,
             _alternative_viewmodels_sight_2s,
         },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { _owo_no_magnifier_holographic_sights },
+    {   dependencies = { _owo_no_magnifier_eotech_sights },
         sight =             { offset = true, position  = vector3_box(0, 0.03, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     },
@@ -1149,7 +1149,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = {"owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_pu_scope_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
         sightac2 = { hide_mesh = {{"sightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = {"owo_rear_sight_ac3_01|owo_holosight_helper_03|owo_rear_sight_ac3_01|owo_pu_scope_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
+    {   dependencies = {"owo_rear_sight_ac3_01|owo_holosight_helper_03|owo_holosight_helper_03_02|owo_rear_sight_ac3_01|owo_pu_scope_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
         sightac3 = { hide_mesh = {{"sightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = {"owo_rear_sight_ac4_01|owo_holosight_helper_04|owo_rear_sight_ac4_01|owo_pu_scope_helper_04|owo_acog_sight_helper_04"},
