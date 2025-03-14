@@ -57,9 +57,9 @@ local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel
 local _syn_volleygun_receivers = "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
 local _owo_all_eotech_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss_z1|owo_holosight_01_03ss"
 local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
-local _owo_magnifier_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss_z1|owo_holosight_01_03ss"
-local _owo_magnifier_aligned_holographic_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
-local _owo_magnifier_side_holographic_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
+local _owo_magnifier_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss_z1|owo_holosight_01_03ss"
+local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
+local _owo_magnifier_side_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
 
 local _super_short_helbore_barrels = "barrel_19"
 local _medium_short_helbore_barrels = "barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b"-- Medium length, short bottom
@@ -669,30 +669,30 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     --          Syn's Hellgun Receivers
-    {   dependencies =      { _owo_magnifier_holographic_sights, _syn_volleygun_receivers, },
+    {   dependencies =      { _owo_magnifier_eotech_sights, _syn_volleygun_receivers, },
         sight =             { offset = true, position  = vector3_box(0, 0.11, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
     },
     --          Else, Recon Receiver
-    {   dependencies =      { _owo_magnifier_holographic_sights, --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
+    {   dependencies =      { _owo_magnifier_eotech_sights, --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         sight =             { offset = true, position  = vector3_box(0, 0.16, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
     },
     -- Magnifier Alignment
-    {   dependencies =      { _owo_magnifier_holographic_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies =      { _owo_magnifier_eotech_sights, _alternative_viewmodels_sight_2s, },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies =      { _owo_magnifier_holographic_sights, },
+    {   dependencies =      { _owo_magnifier_eotech_sights, },
         sight_2 =           { parent = "sight", position  = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =         { offset = true, position  = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
-    {   dependencies =      { _owo_magnifier_aligned_holographic_sights },
+    {   dependencies =      { _owo_magnifier_aligned_eotech_sights },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0, -0.154, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0, -0.0162, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     
         lens =              { offset = false, parent = "sight", position = vector3_box(0, -0.048, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
 	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
     },
-    {   dependencies =      { _owo_magnifier_side_holographic_sights },
+    {   dependencies =      { _owo_magnifier_side_eotech_sights },
         sight_secondary_ac1 =      { offset = true, position  = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
         sight_secondary_ac2 =      { offset = true, position  = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
     
@@ -712,7 +712,7 @@ mod.mt.inject_fixes(this_variant, {
         sightac2 =      { offset = true, position  = vector3_box(0.00, -0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.4, 0.286) },
     },
     {   dependencies =  { "owo_holosight_02_01|owo_holosight_02_01ss", _syn_volleygun_receivers },
-        sight =         { offset = true, position  = vector3_box(0, 0.06, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        sight =         { offset = true, position  = vector3_box(0, 0.03, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_2 =       { parent = "sight", position  = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     },
     {   dependencies =  { "owo_holosight_02_01|owo_holosight_02_01ss" },
@@ -739,10 +739,10 @@ mod.mt.inject_fixes(this_variant, {
         },
         scope_offset =      { position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
     },
-    {   dependencies =      { _owo_magnifier_aligned_holographic_sights, },
+    {   dependencies =      { _owo_magnifier_aligned_eotech_sights, },
         scope_offset =      { position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
-    {   dependencies =      { _owo_magnifier_side_holographic_sights, },
+    {   dependencies =      { _owo_magnifier_side_eotech_sights, },
         scope_offset =      { position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
     },
     {   dependencies =      { "owo_holosight_02_01|owo_holosight_02_01ss" },
