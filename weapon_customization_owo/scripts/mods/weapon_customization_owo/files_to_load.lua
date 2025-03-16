@@ -51,7 +51,7 @@ mod.load_mod_file("weapon/powersword_p1_m1") -- Power Sword
 -- mod.load_mod_file("weapon/powermaul_2h_p1_m1") -- Crusher
 -- mod.load_mod_file("weapon/powermaul_p1_m1") -- Shock Maul
 -- mod.load_mod_file("weapon/thunderhammer_2h_p1_m1")
--- mod.load_mod_file("weapon/combataxe_p1_m1") -- Combat Axe
+mod.load_mod_file("weapon/combataxe_p1_m1") -- Combat Axe
 mod.load_mod_file("weapon/combataxe_p2_m1") -- Tactical Axe
 mod.load_mod_file("weapon/combataxe_p3_m1") -- Sapper Shovel
 -- mod.load_mod_file("weapon/chainsword_2h_p1_m1") -- Heavy Eviscerator

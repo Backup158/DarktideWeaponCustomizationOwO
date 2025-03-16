@@ -585,7 +585,7 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_05", name = "OwO Suppressor 5"},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
-		{id = "owo_suppressor_helper_empty", name = "muzzle_2 Empty", no_randomize = true},
+		{id = "owo_suppressor_helper_empty", name = "Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
 		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true},
 		{id = "owo_suppressor_helper_03", name = "OwO Suppressor'vesa 3", no_randomize = true},
@@ -1059,29 +1059,29 @@ function mod.owo_m16_barrel(variant_id, type)
 		{id = "owo_m16_barrel_n_a2", name = "OwO M16a2 Barrel (No Post)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
-		{id = "owo_m16_empty", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a1", name = "OwO M16a1 Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a1_02", name = "OwO M16a2 Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a2", name = "OwO M16a2 Barrel Shroud", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac2" or type, {
-		{id = "owo_m16_empty_02", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_02", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac2_01", name = "OwO M16 Front Sight shroudac", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac3" or type, {
-		{id = "owo_m16_empty_03", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_03", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac3_a1", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac4" or type, {
-		{id = "owo_m16_empty_04", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_04", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac4_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac5" or type, {
-		{id = "owo_m16_empty_05", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_05", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac5_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac6" or type, {
-		{id = "owo_m16_empty_06", name = "OwO Empty Barrel Shroud", no_randomize = true},
+		{id = "owo_m16_empty_06", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac6_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 
@@ -1814,7 +1814,7 @@ function mod.owo_underbarrel_gl(variant_id, type)
 			automatic_equip = { bayonetac1 = "owo_m203_helper_01", bayonetac2 = "owo_gp25_helper_02", 
 				bayonetac3 = "owo_gp25_helper_03", bayonetac4 = "owo_gp25_helper_04", 
 				bayonetac5 = "owo_gp25_helper_05"
-			}
+			},
 		},
 		-- ### Helper Parts ###
 		-- ac1

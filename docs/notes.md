@@ -37,12 +37,22 @@ rotation: y, x, z
 3. Can try parenting it to a specific node, with some caveats
     1. We don't have a convenient list of nodes
     2. The node can move during gameplay. Key example being the final bullet of autogun magazines moving up as you shoot.
+    
+| Base Mesh          | Node | What Node Is               |
+| ------------------ | ---- | -------------------------- |
+| Shovel Heads       | 8    |                            |
+| Tacax Heads        |      |                            |
+| Shovel Grips       | 7    |                            |
+| Autogun Mags (1-3) | 2    | The final bullet or spring |
+| Autogun Mag (4)    | 6    | The final bullet or spring |
 
-# Bullet trails getting stolen
+
+# Muzzle flash origin getting stolen
+FIRST OF ALL! Make sure that you have a muzzle on in the first place. The MT No Muzzle option uses an empty mesh, so there's no point to latch onto the muzzle flash. This makes it go somewhere else, such as the barrel origin (which is usually in the middle of the gun). Use the invisible muzzle option instead.
+
 This comes from having the main part be a muzzle that matches the actual muzzle that would've been used by the gun
     NEVEFUCKING MIND??!?!? I USED A BRAUTO MUZZLE (in AC2!!!) ON A RECON AND IT STILL STOLE IT?!?!?
 It also doesn't even need to match the gun. The autogun muzzles were stealing lasgun shots, and vice versa (SUSAT and Underbarrel GLs, respectively). 
-
 # Adding scopes with zoom
 ## In Ranged.lua
 1. Declare your scope
@@ -138,3 +148,6 @@ For revolver, it would be `offset = false, parent = "barrel", parent_node = 9,`
 		end
 		```
 4. Inject the attachments and fixes as you wish
+
+# Other Fucky Wucky Thingies to Note
+Tactical axe's `attachment_models` table is incorrectly defined in `weapon_customization_anchors.lua`. Marks 2 and 3 copy over the tables from 

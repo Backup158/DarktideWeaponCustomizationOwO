@@ -12,13 +12,13 @@ local _item_minion = "content/items/weapons/minions"
 -- #############################
 -- HEAD
 if mod.syn then
-	mod.mt.table_append(mod.wc.head2s, {
+	mod.mt.table_append(mod.wc.bladeshrouds, {
 		"owo_tacax_spike_helper_empty",
 		"owo_tacax_spike_helper_01",
 	})
 else 
-	mod.wc.add_custom_attachments.head2 = "head2s"
-	mod.wc.head2s = {
+	mod.wc.add_custom_attachments.bladeshroud = "bladeshrouds"
+	mod.wc.bladeshrouds = {
 		"owo_tacax_spike_helper_empty",
 		"owo_tacax_spike_helper_01",
 	}
@@ -95,9 +95,15 @@ mod.wc.frontguarda3_list = {
 function mod.owo_tacax_spike(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "head" or type, {
 		{id = "owo_tacax_spike_01", name = "OwO Spiked Tactical Axe 1"},
+		{id = "owo_tacax_spike_02", name = "OwO Spiked Tactical Axe 2"},
+		{id = "owo_tacax_spike_03", name = "OwO Spiked Tactical Axe 3"},
+		{id = "owo_tacax_spike_04", name = "OwO Spiked Tactical Axe 4"},
+		{id = "owo_tacax_spike_05", name = "OwO Spiked Tactical Axe 5"},
+		{id = "owo_tacax_spike_06", name = "OwO Spiked Tactical Axe 6"},
+		{id = "owo_tacax_spike_07", name = "OwO Spiked Tactical Axe 7 (M)"},
 	})
-    mod.inject_attachments_owo(variant_id, "head2" or type, {
-        {id = "owo_tacax_spike_helper_empty", name = "OwO Empty Head2"},
+    mod.inject_attachments_owo(variant_id, "bladeshroud" or type, {
+        {id = "owo_tacax_spike_helper_empty", name = "Empty bladeshroud"},
 		{id = "owo_tacax_spike_helper_01", name = "OwO Tacax'vesa 1", no_randomize = true},
 	})
 
@@ -107,18 +113,60 @@ function mod.owo_tacax_spike(variant_id, type)
 			model = _item_melee.."/heads/hatchet_head_01", type = "head", 
 			mesh_move = false, parent = "grip",
 			automatic_equip = {
-				head2 = "owo_tacax_spike_helper_01",
+				bladeshroud = "owo_tacax_spike_helper_01",
+			},
+		},
+		owo_tacax_spike_02 = {
+			model = _item_melee.."/heads/hatchet_head_02", type = "head", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_tacax_spike_helper_01",
+			},
+		},
+		owo_tacax_spike_03 = {
+			model = _item_melee.."/heads/hatchet_head_03", type = "head", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_tacax_spike_helper_01",
+			},
+		},
+		owo_tacax_spike_04 = {
+			model = _item_melee.."/heads/hatchet_head_04", type = "head", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_tacax_spike_helper_01",
+			},
+		},
+		owo_tacax_spike_05 = {
+			model = _item_melee.."/heads/hatchet_head_05", type = "head", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_tacax_spike_helper_01",
+			},
+		},
+		owo_tacax_spike_06 = {
+			model = _item_melee.."/heads/hatchet_head_06", type = "head", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_tacax_spike_helper_01",
+			},
+		},
+		owo_tacax_spike_07 = {
+			model = _item_melee.."/heads/hatchet_head_ml01", type = "head", 
+			mesh_move = false, parent = "grip",
+			automatic_equip = {
+				bladeshroud = "owo_tacax_spike_helper_01",
 			},
 		},
 		-- ### Helper Parts ###
 		owo_tacax_spike_helper_01 = {
-			model = _item_melee.."/heads/axe_head_03", type = "head2", 
-			mesh_move = false, parent = "head",
+			model = _item_melee.."/heads/axe_head_03", type = "bladeshroud", 
+			mesh_move = false, parent = "grip",
 		},
 		-- ### Empty ###
 		owo_tacax_spike_helper_empty = {
-			model = "", type = "head2", 
-			mesh_move = false, parent = "head"
+			model = "", type = "bladeshroud", 
+			mesh_move = false, parent = "grip"
 		},
 	})
 end
@@ -502,7 +550,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		{id = "owo_shovel_handles_13", name = "OwO T-Handle 5"},
 	})
     mod.inject_attachments_owo(variant_id, "pommelac1" or type, {
-		{id = "owo_shovel_handles_ac1_empty", name = "OwO Empty Pommelac1"},
+		{id = "owo_shovel_handles_ac1_empty", name = "Empty Pommelac1"},
         {id = "owo_shovel_handles_ac1_01", name = "OwO E-Tool'vesa'ac1 1", no_randomize = true},
         {id = "owo_shovel_handles_ac1_02", name = "OwO E-Tool'vesa'ac1 2", no_randomize = true},
         --{id = "owo_shovel_handles_ac1_03", name = "OwO E-Tool'vesa'ac1 3", no_randomize = true},
@@ -510,7 +558,7 @@ function mod.owo_shovel_handles(variant_id, type)
         {id = "owo_shovel_handles_ac1_05", name = "OwO E-Tool'vesa'ac1 5", no_randomize = true},
 	})
     mod.inject_attachments_owo(variant_id, "pommelac2" or type, {
-		{id = "owo_shovel_handles_ac2_empty", name = "OwO Empty Pommelac1"},
+		{id = "owo_shovel_handles_ac2_empty", name = "Empty Pommelac1"},
         {id = "owo_shovel_handles_ac2_01", name = "OwO E-Tool'vesa'ac2 1", no_randomize = true},
         {id = "owo_shovel_handles_ac2_02", name = "OwO E-Tool'vesa'ac2 2", no_randomize = true},
 		{id = "owo_shovel_handles_ac2_03", name = "OwO E-Tool'vesa'ac2 3", no_randomize = true},
