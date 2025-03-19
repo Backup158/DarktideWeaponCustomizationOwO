@@ -3684,7 +3684,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_susat_02_top = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_02", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
@@ -3708,7 +3708,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 		-- 	SUSAT: cylinder thing
 		owo_susat_ac1_01 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sightac1", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = "sightac4"
 		},
 		-- AC2, 3
 		-- 	ACOG: Rear of scope
