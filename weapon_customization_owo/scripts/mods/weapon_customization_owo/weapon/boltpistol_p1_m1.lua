@@ -76,6 +76,10 @@ local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01
 local _owo_magnifier_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_02ss_z1|owo_holosight_01_03ss"
 local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
 local _owo_magnifier_side_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
+-- "owo_bistol_sg_base_01|owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_09"
+local _owo_short_bistol_shotgun_barrels = "owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08"
+local _owo_super_short_bistol_shotgun_barrels = "owo_bistol_sg_base_04_s|owo_bistol_sg_base_05_s|owo_bistol_sg_base_06_s|owo_bistol_sg_base_08_s"
+local _owo_all_bistol_shotgun_barrels = _owo_short_bistol_shotgun_barrels.."|".._owo_super_short_bistol_shotgun_barrels
 
 mod.mt.inject_fixes(this_variant, {
     -- ######
@@ -237,7 +241,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { "owo_susat_01|owo_susat_01_ps|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
         sight =         { offset = true, position  = vector3_box(0, -0.03, 0.16), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- cylinder thing
-        sightac1 =      { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {sightac1 = 1} },
+        sightac1 =      { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27) },
         -- Rear
         sightac2 =      { offset = true, position  = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
         sightac3 =      { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
@@ -280,16 +284,18 @@ mod.mt.inject_fixes(this_variant, {
     -- #####
     -- Barrel: Short Shotgun
     -- #####
-    {   dependencies =  { "owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_04_s|owo_bistol_sg_base_05_s|owo_bistol_sg_base_06_s|owo_bistol_sg_base_08_s"},
+    -- Muzzle Patches
+    {   dependencies =  { _owo_all_bistol_shotgun_barrels },
         muzzle =        { offset = true, position = vector3_box(0, 0.47, 0), scale = vector3_box(1, 1, 1) },
     },
-    {   --dependencies = {"owo_bistol_sg_base_01|owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08|owo_bistol_sg_base_09"},
-        dependencies =  { "owo_bistol_sg_base_04|owo_bistol_sg_base_05|owo_bistol_sg_base_06|owo_bistol_sg_base_08"},
+    --  Barrel
+    --      Short
+    {   dependencies =  { _owo_short_bistol_shotgun_barrels },
         barrel =        { offset = true,  position = vector3_box(0, 0.162, 0.012), scale = vector3_box(1, 1, 1) },
         barrelshroud =  { offset = true,  position = vector3_box(0, -0.144, 0.002), scale = vector3_box(1.328, 0.33, 0.9) },
     },
-    -- Super Shorty
-    {   dependencies =  { "owo_bistol_sg_base_04_s|owo_bistol_sg_base_05_s|owo_bistol_sg_base_06_s|owo_bistol_sg_base_08_s"},
+    --      Super Shorty
+    {   dependencies =  { _owo_super_short_bistol_shotgun_barrels },
         barrel =        { offset = true,  position = vector3_box(0, 0.098, 0.012), scale = vector3_box(1, 1, 1) },
         barrelshroud =  { offset = true,  position = vector3_box(0, -0.082, 0.002), scale = vector3_box(1.328, 0.178, 0.9) },
     },

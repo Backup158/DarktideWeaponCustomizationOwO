@@ -9,20 +9,6 @@ local _item_minion = "content/items/weapons/minions"
 
 local this_variant = "combataxe_p2_m1" -- Tactical Axe
 
---[[
--- This resets the anchors for all 3 variants, which will wipe out any fixes by plugins loaded below this
-mod.wc.anchors[this_variant] = {}
-mod.wc.anchors[this_variant].fixes = {}
---  Trying these on their own didn't change anything
-mod.wc.anchors.combataxe_p2_m2 = mod.wc.anchors.combataxe_p2_m1
-mod.wc.anchors.combataxe_p2_m3 = mod.wc.anchors.combataxe_p2_m1
--- neither these. afaik, this_variant is the name of the weapon file in the original ewc plugin, so these two won't exist (hence the nil error)
-mod.wc.attachment[combataxe_p2_m2].bladeshroud = {}
-mod.wc.attachment[combataxe_p2_m3].bladeshroud = {}
-mod.owo_tacax_spike(combataxe_p2_m2, "head")
-mod.owo_tacax_spike(combataxe_p2_m3, "head")
-]]
-
 -- ############################################
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors

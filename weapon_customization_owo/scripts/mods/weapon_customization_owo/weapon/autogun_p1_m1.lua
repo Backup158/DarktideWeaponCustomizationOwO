@@ -551,39 +551,39 @@ mod.mt.inject_fixes(this_variant, {
     -- First helper. These need to be explicitly parented to a specific node. 2 is almost at the end
     --  Straight Mags
     --      Short
-    {   dependencies = { "owo_magazine_magpull_01"},
+    {   dependencies =  { "owo_magazine_magpull_01"},
         owo_magac1 =    { offset = false, parent_node = 2,
             position = vector3_box(0.0, 0.056, -0.180), rotation = vector3_box(90, 0, 90), scale = vector3_box(1.0, 0.44, 0.64), 
             animation_wait_attach = {"magazine"},
         },
     },
     --      Long
-    {   dependencies = { "owo_magazine_magpull_02"},
+    {   dependencies =  { "owo_magazine_magpull_02"},
         owo_magac1 =    { offset = false, parent_node = 2,
             position = vector3_box(0.0, 0.056, -0.180), rotation = vector3_box(90, 0, 90), scale = vector3_box(1.0, 0.44, 0.64), 
         },
     },
     --  The slanted bottom that looks like the 20 round M16 mags
-    {   dependencies = { "owo_magazine_magpull_03"},
+    {   dependencies =  { "owo_magazine_magpull_03"},
         owo_magac1 =    { offset = false, parent_node = 2,
             position = vector3_box(0.034, 0.056, -0.17), rotation = vector3_box(104, 0, 90), scale = vector3_box(1.0, 0.44, 0.69),
         },
     },
     --  Curved Mag
-    {   dependencies = { "owo_magazine_magpull_04"},
+    {   dependencies =  { "owo_magazine_magpull_04"},
         owo_magac1 =    { offset = false, parent_node = 6,
             position = vector3_box(-0.028, 0, 0), rotation = vector3_box(0, 3, 0), scale = vector3_box(1.0, 0.44, 0.64),
          },
     },
     --  All Mags
-    {   dependencies = { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03|owo_magazine_magpull_04"},
+    {   dependencies =  { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03|owo_magazine_magpull_04"},
         owo_magac2 =    { offset = true,    position = vector3_box(0.0, 0.0, 0.0),   rotation = vector3_box(180, 0, 0),     scale = vector3_box(1.0, 1.0, 1.0) },
     },
     --  Loop 
-    {   dependencies = { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03"},
+    {   dependencies =  { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03"},
         owo_magac3 =    { offset = true,    position = vector3_box(0.0, -0.05, -0.02),   rotation = vector3_box(0, -90, 90),     scale = vector3_box(2.2, 1.27, 1.1) },
     },
-    {   dependencies = { "owo_magazine_magpull_04"},
+    {   dependencies =  { "owo_magazine_magpull_04"},
         owo_magac3 =    { offset = true,    position = vector3_box(0.0, -0.05, -0.02),   rotation = vector3_box(0, -90, 90),     scale = vector3_box(2.2, 1.27, 2.1) },
     },
 
@@ -593,31 +593,29 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Brautos
     --  -------------------------------------------
-    {   dependencies = { _m16_all_barrels, _braced_autogun_receivers, },
+    {   dependencies =      { _m16_all_barrels, _braced_autogun_receivers, },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1)},
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0.03),       rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
     },
-    {   dependencies = { _m16a1_01_barrels, _braced_autogun_receivers, },
+    {   dependencies =      { _m16a1_01_barrels, _braced_autogun_receivers, },
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.305, 0.066),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1.47, 2.748, 1.63) },
         barrelshroudac3 =   { offset = true,    position = vector3_box(0, 0.589, -0.024),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.884, 1.45, 0.5) },
     },
-    {   dependencies = { _m16a1_02_barrels, _braced_autogun_receivers, },
+    {   dependencies =      { _m16a1_02_barrels, _braced_autogun_receivers, },
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.305, 0.064),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1.9, 2.388, 1.07) },
-        barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { _m16a2_barrels, _braced_autogun_receivers, },
+    {   dependencies =      { _m16a2_barrels, _braced_autogun_receivers, },
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.305, 0.064),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(2.188, 2.388, 1.5) },
-        barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     --  Front Posts
-    {   dependencies = { _m16_normal_post_barrels, _braced_autogun_receivers, },
+    {   dependencies =      { _m16_normal_post_barrels, _braced_autogun_receivers, },
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.072),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.26, 0.27, 0.47) },
         barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.642, 0.126),    rotation = vector3_box(0, 0, 180), scale = vector3_box(0.020, 0.085, 0.1) },
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.128),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
         barrelshroudac6 =   { offset = true,    position = vector3_box(-0.003, 0.642, 0.128),    rotation = vector3_box(0, 0, -90), scale = vector3_box(2.36, 0.03, 0.022) },
     },
-    {   dependencies = { _m16_tall_post_barrels, _braced_autogun_receivers, },
+    {   dependencies =      { _m16_tall_post_barrels, _braced_autogun_receivers, },
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.106),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.26, 0.488, 0.47) },
         barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.64, 0.158),    rotation = vector3_box(0, 0, 180), scale = vector3_box(0.020, 0.085, 0.1) },
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.160),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
@@ -626,31 +624,31 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Headhunters (Vigilants)
     --  -------------------------------------------
-    {   dependencies = { _m16_all_barrels, _vigilant_autogun_receivers, },
+    {   dependencies =      { _m16_all_barrels, _vigilant_autogun_receivers, },
         barrel =            { offset = true,    position = vector3_box(0, 0.3, -0.02),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0.00, -0.01, -0.032), scale = vector3_box(1, 1, 1)},
     },
-    {   dependencies = { _m16a1_01_barrels, _vigilant_autogun_receivers, },
+    {   dependencies =      { _m16a1_01_barrels, _vigilant_autogun_receivers, },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
         barrelshroud =      { offset = true, position = vector3_box(0, 0.393, 0.056), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.47, 2.388, 1.67) },
         barrelshroudac3 =   { offset = true, position = vector3_box(0, 0.685, -0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.884, 1.45, 0.5) },
     },
-    {   dependencies = { _m16a1_02_barrels, _vigilant_autogun_receivers, },
+    {   dependencies =      { _m16a1_02_barrels, _vigilant_autogun_receivers, },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1)},
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.375, 0.054),    rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.9, 2.388, 1.07) },
     },
-    {   dependencies = { _m16a2_barrels, _vigilant_autogun_receivers, },
+    {   dependencies =      { _m16a2_barrels, _vigilant_autogun_receivers, },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.395, 0.054),    rotation = vector3_box(-90, 0, 0), scale = vector3_box(2.188, 2.388, 1.5) },
     },
     -- Front Posts
-    {   dependencies = { _m16_normal_post_barrels, _vigilant_autogun_receivers, },
+    {   dependencies =      { _m16_normal_post_barrels, _vigilant_autogun_receivers, },
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.072),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.26, 0.27, 0.47) },
         barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.642, 0.126),    rotation = vector3_box(0, 0, 180), scale = vector3_box(0.020, 0.085, 0.1) },
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.128),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
         barrelshroudac6 =   { offset = true,    position = vector3_box(-0.003, 0.642, 0.128),    rotation = vector3_box(0, 0, -90), scale = vector3_box(2.36, 0.03, 0.022) },
     },
-    {   dependencies = { _m16_tall_post_barrels, _vigilant_autogun_receivers, },
+    {   dependencies =      { _m16_tall_post_barrels, _vigilant_autogun_receivers, },
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.106),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.26, 0.488, 0.47) },
         barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.64, 0.158),    rotation = vector3_box(0, 0, 180), scale = vector3_box(0.020, 0.085, 0.1) },
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.160),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
@@ -660,35 +658,33 @@ mod.mt.inject_fixes(this_variant, {
     --  Infantry Autoguns and others
     --  -------------------------------------------
     --  Barrels
-    {   dependencies = { _m16_all_barrels, },
+    {   dependencies =      { _m16_all_barrels, },
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0, 0.082, -0.02), scale = vector3_box(0.5, 0.5, 0.5)},
     },
     --      A1 1 barrel is the only one with a sloped grip at the bottom
-    {   dependencies = { _m16a1_01_barrels, },
+    {   dependencies =      { _m16a1_01_barrels, },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1)},
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.066),     rotation = vector3_box(-90, 0, 0),  scale = vector3_box(1.47, 2.748, 1.63) },
         barrelshroudac3 =   { offset = true,    position = vector3_box(0, 0.667, -0.024),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.884, 1.45, 0.5) },
     },
     --      A1 2 Barrel is the single knife grip
-    {   dependencies = { _m16a1_02_barrels, },
+    {   dependencies =      { _m16a1_02_barrels, },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.9, 2.388, 1.07) },
-        barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
-    {   dependencies = { _m16a2_barrels, },
+    {   dependencies =      { _m16a2_barrels, },
         flashlight =        { offset = false,   position = vector3_box(0.036, 0.406, 0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
         barrelshroud =      { offset = true,    position = vector3_box(0, 0.397, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(2.188, 2.388, 1.5) },
-        barrelshroudac3 =   {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
     --  Front Posts
-    {   dependencies = { _m16_normal_post_barrels, },
+    {   dependencies =      { _m16_normal_post_barrels, },
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.092),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.26, 0.27, 0.47) },
         barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.642, 0.146),    rotation = vector3_box(0, 0, 180), scale = vector3_box(0.020, 0.085, 0.1) },
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.148),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
         barrelshroudac6 =   { offset = true,    position = vector3_box(-0.003, 0.642, 0.148),    rotation = vector3_box(0, 0, -90), scale = vector3_box(2.36, 0.03, 0.022) },
     },
-    {   dependencies = { _m16_tall_post_barrels, },
+    {   dependencies =      { _m16_tall_post_barrels, },
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0.74, 0.096),    rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.26, 0.329, 0.47) },
         barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.64, 0.152),    rotation = vector3_box(0, 0, 180), scale = vector3_box(0.020, 0.085, 0.1) },
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.154),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
@@ -698,7 +694,7 @@ mod.mt.inject_fixes(this_variant, {
     --  All
     --  -------------------------------------------
     -- Muzzle Alignment
-    {   dependencies = { _m16_all_barrels, },
+    {   dependencies =      { _m16_all_barrels, },
         muzzle =            { offset = true,    position = vector3_box(0, 0.11, 0),         rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
 
@@ -990,7 +986,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_susat_01|owo_susat_01_ps|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
         sight =             { offset = true, position  = vector3_box(0, -0.06, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- cylinder thing
-        sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {sightac1 = 1} },
+        sightac1 =       { offset = true, position  = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27) },
         -- Rear
         sightac2 =       { offset = true, position  = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
         sightac3 =       { offset = true, position  = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
@@ -1617,7 +1613,6 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac7 = {hide_mesh = {     {"bayonetac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
     -- Barrels
-    --      a2 barrel doesn't use barrelshroudac3, but that's covered in the function
     {   dependencies = {"owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2|owo_wood_krieg_ac1_01"},
         barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
@@ -1636,13 +1631,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = {"owo_m16_barrelshroudac6_01"},
         barrelshroudac6 = {hide_mesh = {{"barrelshroudac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
     },
-    --      No post versions
-    {   dependencies = {"owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"},
-        barrelshroudac2 = {hide_mesh = {{"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-        barrelshroudac4 = {hide_mesh = {{"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-        barrelshroudac5 = {hide_mesh = {{"barrelshroudac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-        barrelshroudac6 = {hide_mesh = {{"barrelshroudac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-    },
+
     -- Foregrips
     {   dependencies = {"owo_tactical_foregrip_ac1_01"},
         foregripac1 = {hide_mesh = {{"foregripac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
@@ -1667,8 +1656,11 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies = { "owo_jungle_mag_connector_f_01|owo_magazine_magpull_helper_02"},
         owo_magac2 = { hide_mesh = {{"owo_magac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies = { "owo_jungle_mag_connector_b_01|owo_magazine_magpull_helper_03"},
+    {   dependencies = { "owo_jungle_mag_connector_b_01"},
         owo_magac3 = { hide_mesh = {{"owo_magac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
+    {   dependencies = { "owo_magazine_magpull_helper_03"},
+        owo_magac3 = { hide_mesh = {{"owo_magac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = {magazine = "owo_magazine_magpull_helper_03_empty"}},
     },
     {   dependencies = { "owo_jungle_mag_connector_l_01"},
         owo_magac4 = { hide_mesh = {{"owo_magac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },

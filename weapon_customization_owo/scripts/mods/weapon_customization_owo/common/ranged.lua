@@ -1139,25 +1139,21 @@ function mod.owo_m16_barrel(variant_id, type)
 		},
 		owo_m16_barrel_n_a1 = {
 			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver", hide_mesh = {{'barrelshroudac2', 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
+			mesh_move = false, parent = "receiver", 
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
-				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
-				barrelshroudac3 = "owo_m16_barrelshroudac3_a1"
+				barrelshroudac3 = "owo_m16_barrelshroudac3_a1",
 			}
 		},
 		owo_m16_barrel_n_a2 = {
 			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver", hide_mesh = {{'barrelshroudac2', 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
+			mesh_move = false, parent = "receiver",
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
-				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 			}
 		},
 		owo_m16_barrel_n_a1_02 = {
 			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver", hide_mesh = {{'barrelshroudac2', 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
-			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
-				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
-			}
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02", }
 		},
 		-- ### Helper Parts ###
 		owo_m16_barrelshroud_a1 = {
@@ -3688,7 +3684,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_susat_02_top = {
-			model = _item_melee.."/pommels/axe_pommel_02", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
@@ -4358,10 +4354,10 @@ end
 --	Magpul magazine assists/pulls
 function mod.owo_magazine_magpull(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
-		{id = "owo_magazine_magpull_01", name = "OwO Magpul 1 (DANGER)"},
-		{id = "owo_magazine_magpull_02", name = "OwO Magpul 2 (DANGER)"},
-		{id = "owo_magazine_magpull_03", name = "OwO Magpul 3 (DANGER)"},
-		{id = "owo_magazine_magpull_04", name = "OwO Magpul 4 (DANGER)"},
+		{id = "owo_magazine_magpull_01", name = "OwO Magpul 1"},
+		{id = "owo_magazine_magpull_02", name = "OwO Magpul 2"},
+		{id = "owo_magazine_magpull_03", name = "OwO Magpul 3"},
+		{id = "owo_magazine_magpull_04", name = "OwO Magpul 4"},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac1" or type, {
 		{id = "owo_magazine_magpull_helper_01_empty", name = "Empty Magac1"},

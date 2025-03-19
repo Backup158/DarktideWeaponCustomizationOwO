@@ -88,8 +88,11 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Magazine: FLAT MAG
 	-- ######
-    {   dependencies = {"owo_lasgun_magazine_flat_01"},
-        magazine = { offset = true, scale = vector3_box(1, 1, 0.5)},
+    {   dependencies =  { "owo_lasgun_magazine_flat_01" },
+        magazine =      { offset = true, scale = vector3_box(1, 1, 0.5)},
+    },
+    {   dependencies =  { "owo_autogun_magazine_flat_03" },
+        magazine =      { offset = true, rotation = vector3_box(14, 0, 0), scale = vector3_box(1, 1, 0.45), hide_mesh = {{"magazine", 1,2,3,4,5,6,7,8,9,10}}, },
     },
 
     -- ######
@@ -108,7 +111,7 @@ mod.mt.inject_fixes(this_variant, {
         grip = { offset = true,position = vector3_box(0, 0.0, -0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1, 1)},
     },
     --  MT Irons
-    -- offsets are already set, so these just get overwritten unless this goes before them in the load order :skull:
+    -- offsets are already set, so these just get overwritten unless this goes before them in the load order
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "lasgun_sight_01",
         },
@@ -123,8 +126,6 @@ mod.mt.inject_fixes(this_variant, {
     },
     -- other sights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
-            --"!aquilon_scope_01", "!aquilon_scope_01a", "!aquilon_scope_02", "!aquilon_scope_02a",
-            --"!lasgun_sight_01"
         },
         -- rotated to be straight in first person
         no_scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0)},
@@ -156,7 +157,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- #########################
     -- Muzzles
     {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01"},
-        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty"}, },
     },
     -- Receivers
     {	dependencies = {"owo_laspistol_grip_mag_helper_01"},
