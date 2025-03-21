@@ -721,11 +721,9 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { "owo_holosight_02_01|owo_holosight_02_01ss" },
         sight =         { offset = true, position  = vector3_box(0, 0.052, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { offset = true, parent = "sight", position  = vector3_box(0, -0.02, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-        
         sightac1 =      { offset = true, position  = vector3_box(-0.002, -0.018, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.292) },
         sightac2 =      { offset = true, position  = vector3_box(0.00, -0.018, 0.004), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
         sightac3 =      { offset = true, position  = vector3_box(0, -0.032, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.05, 0.666, 0.884) },
-        --sightac4 =      { offset = true, position  = vector3_box(0, -0.004, 0.004), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
         sightac4 =      { offset = true, position  = vector3_box(0, -0.002, 0.002), rotation = vector3_box(90, -90, 180), scale = vector3_box(0.98, 0.24, 0.16) },
     },
     --  -------------------------------------------
