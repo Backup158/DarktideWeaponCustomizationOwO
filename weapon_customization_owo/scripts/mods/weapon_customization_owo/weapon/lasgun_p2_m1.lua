@@ -964,7 +964,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Patch for alt sights
     {   dependencies =  { "owo_holosight_02_01|owo_holosight_02_01ss", _alternative_viewmodels_sight_2s, },
-        sight_2 =       { parent = "sight", position  = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        sight_2 =       { parent = "sight", position  = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  Short Variant
     {   dependencies =  { "owo_holosight_02_01ss" },
@@ -972,8 +972,8 @@ mod.mt.inject_fixes(this_variant, {
         sightac2 =      { offset = true, position  = vector3_box(0.00, -0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.4, 0.286) },
     },
     {   dependencies =  { "owo_holosight_02_01|owo_holosight_02_01ss" },
-        sight =         { offset = true, position  = vector3_box(0, 0.06, 0.104), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_2 =       { parent = "sight", position  = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
+        sight =         { offset = true, position  = vector3_box(0, 0.06, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_2 =       { parent = "sight", position  = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
         
         sightac1 =      { offset = true, position  = vector3_box(-0.002, -0.018, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.292) },
         sightac2 =      { offset = true, position  = vector3_box(0.00, -0.018, 0.004), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
@@ -984,7 +984,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Aligning sights to crosshair
 	--  -------------------------------------------
     {   dependencies =      { "owo_holosight_02_01|owo_holosight_02_01ss" },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0343), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
 	{   dependencies =      { _owo_no_magnifier_eotech_sights },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
