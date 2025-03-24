@@ -3404,7 +3404,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
 		{id = "owo_acog_sight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_01", name = "OwO ACOG'vesa sight container 1", no_randomize = true},
-		{id = "owo_susat_ac1_01", name = "SUSAT'vesa cylinder thing", no_randomize = true},
+		{id = "owo_susat_ac1_01", name = "SUSAT'vesa Cylinder thing", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2" or type, {
 		{id = "owo_acog_sight_empty_02", name = "Empty Sight", no_randomize = true},
@@ -3705,7 +3705,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "sightac1", 
 			mesh_move = false, parent = "sight"
 		},
-		-- 	SUSAT: cylinder thing
+		-- 	SUSAT: Cylinder thing
 		owo_susat_ac1_01 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sightac1", 
 			mesh_move = false, parent = "sightac4"
