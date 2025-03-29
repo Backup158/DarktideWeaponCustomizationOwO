@@ -13,12 +13,16 @@ local this_variant = "lasgun_p2_m1" -- Helbore Lasgun
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].stockac = {} -- MT didn't add this to Helbore yet
-mod.wc.attachment[this_variant].stockac2 = {} -- MT didn't add this to Helbore yet
 if not mod.syn then
+    mod.wc.attachment[this_variant].stockac = {} -- MT didn't add this to Helbore yet but Syn did
+    mod.wc.attachment[this_variant].stockac2 = {} -- MT didn't add this to Helbore yet but Syn did
 	mod.wc.attachment[this_variant].rearmag = {}
+    mod.wc.attachment[this_variant].muzzle_2 = {} -- MT didn't add this to Helbore yet but Syn did
 end
-mod.wc.attachment[this_variant].muzzle_2 = {} -- MT didn't add this to Helbore yet
+mod.wc.attachment[this_variant].muzzle_3 = {}
+mod.wc.attachment[this_variant].muzzle_4 = {}
+mod.wc.attachment[this_variant].muzzle_5 = {}
+
 mod.wc.attachment[this_variant].barrelshroud = {}	-- Syn didn't add this to Helbore yet
 mod.wc.attachment[this_variant].bayonetac1 = {}
 mod.wc.attachment[this_variant].bayonetac2 = {}
@@ -47,6 +51,7 @@ mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_helbore_gripstock_recon(this_variant)
+mod.owo_helbore_gripstock_50(this_variant)
 mod.owo_magazine_flat(this_variant)
 mod.owo_lasgun_magazine_rear(this_variant)
 
@@ -54,6 +59,7 @@ mod.owo_wood_krieg(this_variant)
 
 mod.owo_suppressor(this_variant)
 mod.owo_condom(this_variant)
+mod.owo_muzzle_brake(this_variant)
 
 mod.owo_bayonet(this_variant)
 mod.owo_underbarrel_gl(this_variant)
@@ -79,6 +85,7 @@ local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosig
 local _owo_magnifier_side_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
 
+-- hlasgun from MT plugin. I autocombined them here because fuck you
 local _super_short_helbore_barrels = "barrel_19"
 local _medium_short_helbore_barrels = "barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b"-- Medium length, short bottom
 local _medium_medium_helbore_barrels = "barrel_11|hlasgun_barrel_03"
@@ -155,10 +162,32 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Stock: STRAIGHT GRIP AND RECON STOCK
 	-- ######
-	{	dependencies = {"owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03"},
-		stock = { offset = true, position = vector3_box(0, -0.04, 0.065), scale = vector3_box(1, 1.15, 0.85 ) },
-		stockac = { offset = true, position = vector3_box(0, 0.02, 0),scale = vector3_box(1, 1, 1 ) },
+	{	dependencies =  { "owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03" },
+		stock =         { offset = true, position = vector3_box(0, -0.04, 0.065), scale = vector3_box(1, 1.15, 0.85 ) },
+		stockac =       { offset = true, position = vector3_box(0, 0.02, 0),scale = vector3_box(1, 1, 1 ) },
 	},
+
+    -- ######
+	-- Stock: Straight Grip and Barrett M82 Stock
+	-- ######
+    {	dependencies =  { "owo_gripstock_50_01|owo_gripstock_50_02|owo_gripstock_50_03" },
+		stock =         { offset = true, position = vector3_box(0, -0.03, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.25, 1.5, 1.25 ) },
+		stockac =       { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.67, 1 ) },
+    },
+    {	dependencies =  { "owo_gripstock_50_01" },
+		--stockac2 =      { offset = true, position = vector3_box(0.5, -0.28, -0.037), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.45, 0.5, 0.6 ) },
+        stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -0.07, -0.33), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.6, 0.75, 0.8 ) },
+	},
+    {	dependencies =  { "owo_gripstock_50_02" },
+		stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -0.07, -0.3), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.6, 0.75, 0.8 ) },
+	},
+    --  For this rotation, moving (+0, +x, +x) is equal to moving forwards
+    {	dependencies =  { "owo_gripstock_50_03" },
+        --stockac2 =      { offset = true, position = vector3_box(0.0, -0.66, -0.047), rotation = vector3_box(-125, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
+		--stockac2 =      { offset = false, position = vector3_box(0.0, -0.66, -0.047), rotation = vector3_box(-125, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
+        stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -1.05, -1.054), rotation = vector3_box(-120, 0, 180), scale = vector3_box(0.1, 0.15, 0.2 ) },
+    },
+	
 
 	-- ######
 	-- Magazine: FLAT
@@ -225,6 +254,40 @@ mod.mt.inject_fixes(this_variant, {
 		},
 		bayonet = { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
 	},
+
+    -- ######
+	-- Muzzle: Muzzle Brake
+	-- ######
+    {	dependencies =  { "owo_muzzle_brake_01|owo_muzzle_brake_02|owo_muzzle_brake_03", _medium_medium_helbore_barrels },
+        muzzle =        { offset = true, position = vector3_box(0, 0.102, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 1.0 ) },
+    },
+    {	dependencies =  { "owo_muzzle_brake_01|owo_muzzle_brake_02|owo_muzzle_brake_03", _long_helbore_barrels },
+        muzzle =        { offset = true, position = vector3_box(0, 0.13, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 1.0 ) },
+    },
+	{	dependencies =  { "owo_muzzle_brake_01|owo_muzzle_brake_02|owo_muzzle_brake_03", _all_infantry_autogun_mt_barrels },
+        muzzle =        { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 1.0 ) },
+    },
+    {	dependencies =  { "owo_muzzle_brake_01|owo_muzzle_brake_02|owo_muzzle_brake_03", _mt_single_stubber_barrels },
+        muzzle =        { offset = true, position = vector3_box(0, 1.25, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1.0, 2.5 ) },
+    },
+    {	dependencies =  { "owo_muzzle_brake_01" },
+        muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.3, 1.5 ) },
+        muzzle_3 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.3, 1.5 ) },
+        muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.3, 1.5 ) },
+        muzzle_5 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.3, 1.5 ) },
+    },
+    {	dependencies =  { "owo_muzzle_brake_02" },
+        muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.5, 2.2 ) },
+        muzzle_3 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.5, 2.2 ) },
+        muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.5, 2.2 ) },
+        muzzle_5 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.5, 2.2 ) },
+    },
+    {	dependencies =  { "owo_muzzle_brake_03" },
+        muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+        muzzle_3 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+        muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+        muzzle_5 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+    },
 	
 	-- ######
 	-- Barrel: WOODEN HELBORE
@@ -1124,14 +1187,26 @@ mod.mt.inject_fixes(this_variant, {
 	-- #########################
 	-- Hiding unused helpers
 	-- #########################
-	-- Gripstock
-	{	dependencies = {"owo_gripstock_grip_01a"},
-		stockac = {hide_mesh = {	{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+	-- Stock
+	{	dependencies = {"owo_gripstock_grip_01a|owo_gripstock_50_ac_01"},
+		stockac = {hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+	},
+    {	dependencies = {"owo_gripstock_50_ac2_01|owo_gripstock_50_ac2_02|owo_gripstock_50_ac2_03"},
+		stockac2 = {hide_mesh = {{"stockac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
 	},
 	-- Muzzle
-	{	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01"},
-		muzzle_2 = { hide_mesh = {     {"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	{	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01|owo_muzzle_brake_helper_01_01"},
+		muzzle_2 = { hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
+    {	dependencies =  { "owo_muzzle_brake_helper_02_01"},
+        muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_brake_helper_02_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_03_01"},
+        muzzle_4 = {hide_mesh = {{"muzzle_4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_4 = "owo_muzzle_brake_helper_03_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
+        muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
+    },
 	-- Rear Mag
 	{	dependencies = {"owo_lasgun_magazine_rear_child_01"},
 		rearmag = {hide_mesh = {     {"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},

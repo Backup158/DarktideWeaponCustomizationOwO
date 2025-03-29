@@ -502,6 +502,13 @@ mod.wc.receiverac2_list = {
 mod.mt.table_append(mod.wc.stockacs, {
 	"owo_gripstock_grip_empty",
 	"owo_gripstock_grip_01a",
+	"owo_gripstock_50_ac_empty",
+	"owo_gripstock_50_ac_01",
+})
+mod.mt.table_append(mod.wc.stockac2s, {
+	"owo_gripstock_50_ac2_empty",
+	"owo_gripstock_50_ac2_01",
+	"owo_gripstock_50_ac2_02",
 })
 
 -- ############################################
@@ -671,11 +678,12 @@ function mod.owo_condom(variant_id, type)
 end
 
 -- Muzzle: Muzzle Brake
+--	AMR brake based on Barrett M82
 function mod.owo_muzzle_brake(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
-		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Brake 50 Caliber", no_randomize = true},
-		{id = "owo_muzzle_brake_02", name = "OwO Muzzle Brake 50 (Big)", no_randomize = true},
-		{id = "owo_muzzle_brake_03", name = "OwO Muzzle Brake 50 (BIG)", no_randomize = true},
+		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Brake AMR", no_randomize = true},
+		{id = "owo_muzzle_brake_02", name = "OwO Muzzle Brake AMR (Big)", no_randomize = true},
+		{id = "owo_muzzle_brake_03", name = "OwO Muzzle Brake AMR (BIG)", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
 		{id = "owo_muzzle_brake_helper_01_00", name = "Brake'vesa Empty", no_randomize = true},
@@ -2425,6 +2433,71 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 		-- ### Empty ###
 		owo_gripstock_grip_empty = {
 			model = "", type = "stockac", parent = "receiver", 
+		},
+	})
+end
+
+-- Stock: Barret 50 Cal Gripstock
+function mod.owo_helbore_gripstock_50(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "stock" or type, {
+		{id = "owo_gripstock_50_01", name = "OwO Barrett M82 Stock+Grip 1"},
+		{id = "owo_gripstock_50_02", name = "OwO Barrett M82 Stock+Grip 2"},
+		{id = "owo_gripstock_50_03", name = "OwO Barrett M82 Stock+Grip 3"},
+	})
+	mod.inject_attachments_owo(variant_id, "stockac" or type, {
+		{id = "owo_gripstock_50_ac_empty",  name = "Empty stockac", no_randomize = true},
+		{id = "owo_gripstock_50_ac_01",  name = "OwO StraightGrip50 stockac", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "stockac2" or type, {
+		{id = "owo_gripstock_50_ac2_empty",  name = "Empty stockac2", no_randomize = true},
+		{id = "owo_gripstock_50_ac2_01",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
+		{id = "owo_gripstock_50_ac2_02",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
+		{id = "owo_gripstock_50_ac2_03",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+	    owo_gripstock_50_01 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_50_ac_01", stockac2 = "owo_gripstock_50_ac2_01",
+			},
+		},
+		owo_gripstock_50_02 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_50_ac_01", stockac2 = "owo_gripstock_50_ac2_02",
+			},
+		},
+		owo_gripstock_50_03 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_50_ac_01", stockac2 = "owo_gripstock_50_ac2_03",
+			},
+		},
+		-- ### Helper Parts ###
+		-- AC1: Grip
+		owo_gripstock_50_ac_empty = {
+			model = "", type = "stockac", parent = "stock", 
+		},
+		owo_gripstock_50_ac_01 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = "stockac", parent = "stock",
+		},
+		-- AC2: Stock loop fuckass thing
+		owo_gripstock_50_ac2_empty = {
+			model = "", type = "stockac2", parent = "stock", 
+		},
+		--		Something about chain sword grips is making it not attach. The trigger perhaps?
+		--			Issue arises with grip {2, 3, 4, 6, 7, 9}
+		owo_gripstock_50_ac2_01 = {
+			model = _item_melee.."/grips/chain_sword_grip_05", type = "stockac2", parent = "stock",
+		},
+		owo_gripstock_50_ac2_02 = {
+			model = _item_melee.."/grips/chain_sword_grip_08", type = "stockac2", parent = "stock",
+		},
+		owo_gripstock_50_ac2_03 = {
+			model = _item_ranged.."/recievers/rippergun_rifle_receiver_01", type = "stockac2", parent = "stock",
+			hide_mesh = {{"stockac2", 1,2,3,5,67,8,9,10,11,12,13,14,15}}
 		},
 	})
 end

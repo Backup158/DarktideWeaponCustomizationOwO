@@ -7,12 +7,16 @@ hide_mesh = {
 ```
 There are 15 regions in total, 1-15
 
-| Part                     | Hide Codes             | Notes                                                             |
-| ------------------------ | ---------------------- | ----------------------------------------------------------------- |
-| Reflex Sight Housing     | `{"sight", 6,7}`       |                                                                   |
-| Reflex Sight Reticle     | `{"sight", 1}`         | Sometimes doesn't hide the "glass part" around the reticle        |
-| MT Helper Reflex Housing | `{"sight_2", 5,6}`     | 6 hides housing for sight 1<br>5 hides housing for sights 2 and 3 |
-| Autogun Irons            | `{"sight", 2,3,4,5,6}` | one of these is the front rail lol                                |
+| Part                     | Hide Codes                              | Notes                                                             |
+| ------------------------ | --------------------------------------- | ----------------------------------------------------------------- |
+| Reflex Sight Housing     | `{"sight", 6,7}`                        |                                                                   |
+| Reflex Sight Reticle     | `{"sight", 1}`                          | Sometimes doesn't hide the "glass part" around the reticle        |
+| MT Helper Reflex Housing | `{"sight_2", 5,6}`                      | 6 hides housing for sight 1<br>5 hides housing for sights 2 and 3 |
+| Autogun Irons            | `{"sight", 2,3,4,5,6}`                  | one of these is the front rail lol                                |
+| Chainsword Trigger       | ----                                    | One whole thing                                                   |
+| Rippergun Body           | `{"stockac2", 7,8,9,10,11,12,13,14,15}` | one of these lol                                                  |
+| Rippergun Body           | `{"stockac2", 4}`                       | most of the body                                                  |
+| Rippergun Body           | `{"stockac2", 5,6}`                     | trigger                                                           |
 
 # Parts not showing up?
 1. Make sure the weapon file is in `files_to_load.lua`
@@ -32,8 +36,10 @@ rotation: y, x, z
 	+x put gun offset to the right
 	+y put gun below
 # Parts not accept transformations
-1. Restart the game
+1. Restart the game instead of spam reloading
 2. Sometimes setting `offset = false` makes it literally freeze on the screen, so it doesn't even rotate with the weapon
+	1. if you set offset to false, parent it to another slot
+	2. the following transformation can end up cursed, but still possible (much bigger changes than expected)
 3. Can try parenting it to a specific node, with some caveats
     1. We don't have a convenient list of nodes
     2. The node can move during gameplay. Key example being the final bullet of autogun magazines moving up as you shoot.
