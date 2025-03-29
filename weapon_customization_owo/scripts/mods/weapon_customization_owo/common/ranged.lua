@@ -2497,7 +2497,7 @@ function mod.owo_helbore_gripstock_50(variant_id, type)
 		},
 		owo_gripstock_50_ac2_03 = {
 			model = _item_ranged.."/recievers/rippergun_rifle_receiver_01", type = "stockac2", parent = "stock",
-			hide_mesh = {{"stockac2", 1,2,3,5,67,8,9,10,11,12,13,14,15}}
+			hide_mesh = {{"stockac2", 5,6}}
 		},
 	})
 end

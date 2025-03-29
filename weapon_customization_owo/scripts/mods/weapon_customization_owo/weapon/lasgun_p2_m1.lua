@@ -185,7 +185,7 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { "owo_gripstock_50_03" },
         --stockac2 =      { offset = true, position = vector3_box(0.0, -0.66, -0.047), rotation = vector3_box(-125, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
 		--stockac2 =      { offset = false, position = vector3_box(0.0, -0.66, -0.047), rotation = vector3_box(-125, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
-        stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -1.05, -1.054), rotation = vector3_box(-120, 0, 180), scale = vector3_box(0.1, 0.15, 0.2 ) },
+        stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -1.195, -1.078), rotation = vector3_box(-120, 0, 180), scale = vector3_box(0.1, 0.14, 0.2 ) },
     },
 	
 
