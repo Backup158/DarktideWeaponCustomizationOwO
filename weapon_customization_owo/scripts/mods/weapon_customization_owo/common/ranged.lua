@@ -502,13 +502,13 @@ mod.wc.receiverac2_list = {
 mod.mt.table_append(mod.wc.stockacs, {
 	"owo_gripstock_grip_empty",
 	"owo_gripstock_grip_01a",
-	"owo_gripstock_50_ac_empty",
-	"owo_gripstock_50_ac_01",
+	"owo_gripstock_amr_ac_empty",
+	"owo_gripstock_amr_ac_01",
 })
 mod.mt.table_append(mod.wc.stockac2s, {
-	"owo_gripstock_50_ac2_empty",
-	"owo_gripstock_50_ac2_01",
-	"owo_gripstock_50_ac2_02",
+	"owo_gripstock_amr_ac2_empty",
+	"owo_gripstock_amr_ac2_01",
+	"owo_gripstock_amr_ac2_02",
 })
 
 -- ############################################
@@ -2604,66 +2604,132 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 end
 
 -- Stock: Barret 50 Cal Gripstock
-function mod.owo_helbore_gripstock_50(variant_id, type)
+function mod.owo_helbore_gripstock_amr(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "stock" or type, {
-		{id = "owo_gripstock_50_01", name = "OwO Barrett M82 Stock+Grip 1"},
-		{id = "owo_gripstock_50_02", name = "OwO Barrett M82 Stock+Grip 2"},
-		{id = "owo_gripstock_50_03", name = "OwO Barrett M82 Stock+Grip 3"},
+		{id = "owo_gripstock_amr_01", name = "OwO Barrett M82 Stock+Grip 1"},
+		{id = "owo_gripstock_amr_02", name = "OwO Barrett M82 Stock+Grip 2"},
+		{id = "owo_gripstock_amr_03", name = "OwO Barrett M82 Stock+Grip 3"},
+		{id = "owo_gripstock_amr_04", name = "OwO Barrett M82 Stock+Grip 4"},
+		{id = "owo_gripstock_amr_05", name = "OwO Barrett M82 Stock+Grip 5"},
+		{id = "owo_gripstock_amr_06", name = "OwO Barrett M82 Stock+Grip 6"},
+		{id = "owo_gripstock_amr_07", name = "OwO Barrett M82 Stock+Grip 7"},
+		{id = "owo_gripstock_amr_08", name = "OwO Barrett M82 Stock+Grip 8"},
+		{id = "owo_gripstock_amr_09", name = "OwO Barrett M82 Stock+Grip 9"},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac" or type, {
-		{id = "owo_gripstock_50_ac_empty",  name = "Empty stockac", no_randomize = true},
-		{id = "owo_gripstock_50_ac_01",  name = "OwO StraightGrip50 stockac", no_randomize = true},
+		{id = "owo_gripstock_amr_ac_empty",  name = "Empty stockac", no_randomize = true},
+		{id = "owo_gripstock_amr_ac_01",  name = "OwO StraightGrip50 stockac", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac2" or type, {
-		{id = "owo_gripstock_50_ac2_empty",  name = "Empty stockac2", no_randomize = true},
-		{id = "owo_gripstock_50_ac2_01",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
-		{id = "owo_gripstock_50_ac2_02",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
-		{id = "owo_gripstock_50_ac2_03",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_empty",  name = "Empty stockac2", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_01",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_02",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_03",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_04",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_05",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_06",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_07",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_08",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_09",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
-	    owo_gripstock_50_01 = {
+	    owo_gripstock_amr_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
 			automatic_equip = {
-				stockac = "owo_gripstock_50_ac_01", stockac2 = "owo_gripstock_50_ac2_01",
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_01",
 			},
 		},
-		owo_gripstock_50_02 = {
+		owo_gripstock_amr_02 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
 			automatic_equip = {
-				stockac = "owo_gripstock_50_ac_01", stockac2 = "owo_gripstock_50_ac2_02",
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_02",
 			},
 		},
-		owo_gripstock_50_03 = {
+		owo_gripstock_amr_03 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
 			automatic_equip = {
-				stockac = "owo_gripstock_50_ac_01", stockac2 = "owo_gripstock_50_ac2_03",
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_03",
+			},
+		},
+		owo_gripstock_amr_04 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_04",
+			},
+		},
+		owo_gripstock_amr_05 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_05",
+			},
+		},
+		owo_gripstock_amr_06 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_06",
+			},
+		},
+		owo_gripstock_amr_07 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_07",
+			},
+		},
+		owo_gripstock_amr_08 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_08",
+			},
+		},
+		owo_gripstock_amr_09 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			automatic_equip = {
+				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_09",
 			},
 		},
 		-- ### Helper Parts ###
 		-- AC1: Grip
-		owo_gripstock_50_ac_empty = {
+		owo_gripstock_amr_ac_empty = {
 			model = "", type = "stockac", parent = "stock", 
 		},
-		owo_gripstock_50_ac_01 = {
+		owo_gripstock_amr_ac_01 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = "stockac", parent = "stock",
 		},
 		-- AC2: Stock loop fuckass thing
-		owo_gripstock_50_ac2_empty = {
+		owo_gripstock_amr_ac2_empty = {
 			model = "", type = "stockac2", parent = "stock", 
 		},
 		--		Something about chain sword grips is making it not attach. The trigger perhaps?
 		--			Issue arises with grip {2, 3, 4, 6, 7, 9}
-		owo_gripstock_50_ac2_01 = {
+		owo_gripstock_amr_ac2_01 = {
 			model = _item_melee.."/grips/chain_sword_grip_05", type = "stockac2", parent = "stock",
 		},
-		owo_gripstock_50_ac2_02 = {
+		owo_gripstock_amr_ac2_02 = {
 			model = _item_melee.."/grips/chain_sword_grip_08", type = "stockac2", parent = "stock",
 		},
-		owo_gripstock_50_ac2_03 = {
+		owo_gripstock_amr_ac2_03 = {
 			model = _item_ranged.."/recievers/rippergun_rifle_receiver_01", type = "stockac2", parent = "stock",
 			hide_mesh = {{"stockac2", 5,6}}
+		},
+		owo_gripstock_amr_ac2_04 = {
+			model = _item_melee.."/grips/combat_blade_grip_01", type = "stockac2", parent = "stock",
+		},
+		owo_gripstock_amr_ac2_05 = {
+			model = _item_melee.."/grips/combat_blade_grip_02", type = "stockac2", parent = "stock",
+		},
+		owo_gripstock_amr_ac2_06 = {
+			model = _item_melee.."/grips/combat_blade_grip_04", type = "stockac2", parent = "stock",
+		},
+		owo_gripstock_amr_ac2_07 = {
+			model = _item_melee.."/grips/combat_blade_grip_05", type = "stockac2", parent = "stock",
+		},
+		owo_gripstock_amr_ac2_08 = {
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "stockac2", parent = "stock",
+		},
+		owo_gripstock_amr_ac2_09 = {
+			model = _item_melee.."/grips/combat_blade_grip_08", type = "stockac2", parent = "stock",
 		},
 	})
 end
@@ -3634,7 +3700,7 @@ function mod.owo_holosight(variant_id, type)
 end
 
 -- Sight: Telescopic Sights
---		Trijicon ACOG (Advanced Combat Optical Gunsight), SUSAT (Small Unit Small Arms, Trilux - L9A1)
+--		Trijicon ACOG (Advanced Combat Optical Gunsight), SUSAT (Small Unit Small Arms, Trilux - L9A1), Night Vision 1 (Sightmark Wraith HD), Night Vision 2 (Sightmark Photon XT)
 --		KNOWN BUG: SUSAT on recon/ilas main receiver steals the laser (but not the volleygun)
 --			Thief is the ac2/3, ak muzzles in the back
 function mod.owo_telescopic_sight(variant_id, type)
@@ -3655,6 +3721,10 @@ function mod.owo_telescopic_sight(variant_id, type)
 		{id = "owo_susat_02", name = "OwO SUSAT + Red Dot (1.25x)"},
 		{id = "owo_susat_02_z1", name = "OwO SUSAT + RDS (1.75x)"},
 		{id = "owo_susat_02_top", name = "OwO SUSAT + RDS (RDS Aim)"},
+		--{id = "owo_nv_01", name = "OwO Night Vision Scope 1"},
+		--{id = "owo_nv_01_ir", name = "OwO Night Vision 1 + Infrared"},
+		--{id = "owo_nv_02", name = "OwO Night Vision Scope 2"},
+		--{id = "owo_nv_02_ir", name = "OwO Night Vision 2 + IR"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
 		{id = "owo_acog_sight_empty_01", name = "Empty Sight", no_randomize = true},

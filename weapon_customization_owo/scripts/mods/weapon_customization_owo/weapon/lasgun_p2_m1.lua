@@ -52,7 +52,7 @@ mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_helbore_gripstock_recon(this_variant)
-mod.owo_helbore_gripstock_50(this_variant)
+mod.owo_helbore_gripstock_amr(this_variant)
 mod.owo_magazine_flat(this_variant)
 mod.owo_lasgun_magazine_rear(this_variant)
 
@@ -172,23 +172,29 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Stock: Straight Grip and Barrett M82 Stock
 	-- ######
-    {	dependencies =  { "owo_gripstock_50_01|owo_gripstock_50_02|owo_gripstock_50_03" },
+    {	dependencies =  { "owo_gripstock_amr_01|owo_gripstock_amr_02|owo_gripstock_amr_03|owo_gripstock_amr_04|owo_gripstock_amr_05|owo_gripstock_amr_06|owo_gripstock_amr_07|owo_gripstock_amr_08|owo_gripstock_amr_09" },
 		stock =         { offset = true, position = vector3_box(0, -0.03, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.25, 1.5, 1.25 ) },
 		stockac =       { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.67, 1 ) },
     },
-    {	dependencies =  { "owo_gripstock_50_01" },
+    {	dependencies =  { "owo_gripstock_amr_01" },
 		--stockac2 =      { offset = true, position = vector3_box(0.5, -0.28, -0.037), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.45, 0.5, 0.6 ) },
         stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -0.07, -0.33), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.6, 0.75, 0.8 ) },
 	},
-    {	dependencies =  { "owo_gripstock_50_02" },
+    {	dependencies =  { "owo_gripstock_amr_02" },
 		stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -0.07, -0.3), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.6, 0.75, 0.8 ) },
 	},
     --  For this rotation, moving (+0, +x, +x) is equal to moving forwards
-    {	dependencies =  { "owo_gripstock_50_03" },
+    {	dependencies =  { "owo_gripstock_amr_03" },
         --stockac2 =      { offset = true, position = vector3_box(0.0, -0.66, -0.047), rotation = vector3_box(-125, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
 		--stockac2 =      { offset = false, position = vector3_box(0.0, -0.66, -0.047), rotation = vector3_box(-125, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
         stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -1.195, -1.078), rotation = vector3_box(-120, 0, 180), scale = vector3_box(0.1, 0.14, 0.2 ) },
     },
+    {	dependencies =  { "owo_gripstock_amr_04|owo_gripstock_amr_07|owo_gripstock_amr_08|owo_gripstock_amr_09" },
+		stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, 0.037, -0.373), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.25, 0.35, 0.45 ) },
+	},
+    {	dependencies =  { "owo_gripstock_amr_05|owo_gripstock_amr_06" },
+		stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, 0.037, -0.4), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.25, 0.35, 0.45 ) },
+	},
 	
 
 	-- ######
@@ -1231,10 +1237,10 @@ mod.mt.inject_fixes(this_variant, {
 	-- Hiding unused helpers
 	-- #########################
 	-- Stock
-	{	dependencies = {"owo_gripstock_grip_01a|owo_gripstock_50_ac_01"},
+	{	dependencies = {"owo_gripstock_grip_01a|owo_gripstock_amr_ac_01"},
 		stockac = {hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
 	},
-    {	dependencies = {"owo_gripstock_50_ac2_01|owo_gripstock_50_ac2_02|owo_gripstock_50_ac2_03"},
+    {	dependencies = {"owo_gripstock_amr_ac2_01|owo_gripstock_amr_ac2_02|owo_gripstock_amr_ac2_03|owo_gripstock_amr_ac2_04|owo_gripstock_amr_ac2_05|owo_gripstock_amr_ac2_06|owo_gripstock_amr_ac2_07|owo_gripstock_amr_ac2_08|owo_gripstock_amr_ac2_09"},
 		stockac2 = {hide_mesh = {{"stockac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
 	},
 	-- Muzzle
