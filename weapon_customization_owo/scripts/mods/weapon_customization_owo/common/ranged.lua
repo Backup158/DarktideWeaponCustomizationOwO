@@ -673,27 +673,43 @@ end
 -- Muzzle: Muzzle Brake
 function mod.owo_muzzle_brake(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
-		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Break 50 Cal", no_randomize = true}
+		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Brake 50 Caliber", no_randomize = true},
+		{id = "owo_muzzle_brake_02", name = "OwO Muzzle Brake 50 (Big)", no_randomize = true},
+		{id = "owo_muzzle_brake_03", name = "OwO Muzzle Brake 50 (BIG)", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
 		{id = "owo_muzzle_brake_helper_01_00", name = "Brake'vesa Empty", no_randomize = true},
-		{id = "owo_muzzle_brake_helper_01_01", name = "OwO Muzzle Brake'vesa", no_randomize = true}
+		{id = "owo_muzzle_brake_helper_01_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_3" or type, {
 		{id = "owo_muzzle_brake_helper_02_00", name = "Brake'vesa Empty", no_randomize = true},
-		{id = "owo_muzzle_brake_helper_02_01", name = "OwO Muzzle Brake'vesa", no_randomize = true}
+		{id = "owo_muzzle_brake_helper_02_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_4" or type, {
 		{id = "owo_muzzle_brake_helper_03_00", name = "Brake'vesa Empty", no_randomize = true},
-		{id = "owo_muzzle_brake_helper_03_01", name = "OwO Muzzle Brake'vesa", no_randomize = true}
+		{id = "owo_muzzle_brake_helper_03_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_5" or type, {
 		{id = "owo_muzzle_brake_helper_04_00", name = "Brake'vesa Empty", no_randomize = true},
-		{id = "owo_muzzle_brake_helper_04_01", name = "OwO Muzzle Brake'vesa", no_randomize = true}
+		{id = "owo_muzzle_brake_helper_04_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		owo_muzzle_brake_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
+			automatic_equip = {
+				muzzle_2 = "owo_muzzle_brake_helper_01_01", muzzle_3 = "owo_muzzle_brake_helper_02_01", 
+				muzzle_4 = "owo_muzzle_brake_helper_03_01", muzzle_5 = "owo_muzzle_brake_helper_04_01", 
+			}
+		},
+		owo_muzzle_brake_02 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_killshot_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			automatic_equip = {
+				muzzle_2 = "owo_muzzle_brake_helper_01_01", muzzle_3 = "owo_muzzle_brake_helper_02_01", 
+				muzzle_4 = "owo_muzzle_brake_helper_03_01", muzzle_5 = "owo_muzzle_brake_helper_04_01", 
+			}
+		},
+		owo_muzzle_brake_03 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_killshot_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
 				muzzle_2 = "owo_muzzle_brake_helper_01_01", muzzle_3 = "owo_muzzle_brake_helper_02_01", 
