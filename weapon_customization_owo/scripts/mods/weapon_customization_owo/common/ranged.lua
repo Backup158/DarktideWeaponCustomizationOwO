@@ -1289,6 +1289,172 @@ function mod.owo_wood_krieg(variant_id, type)
 
 end
 
+-- Barrel: Plasma Helbore
+function mod.owo_plasma_krieg(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+		{id = "owo_plasma_krieg_01f", name = "OwO Plasma Helbore 1 (2)"},
+		{id = "owo_plasma_krieg_02f", name = "OwO Plasma Helbore 2 (3)"},
+		{id = "owo_plasma_dmr_01", name = "OwO Plasma Lasgun 1"},
+		{id = "owo_plasma_dmr_02", name = "OwO Plasma Lasgun 2"},
+		{id = "owo_plasma_dmr_01f", name = "OwO Plasma Lasgun 1 Flip"},
+		{id = "owo_plasma_dmr_02f", name = "OwO Plasma Lasgun 2f"},
+		{id = "owo_plasma_sniper_01", name = "OwO Plasma Sniper 1"},
+		{id = "owo_plasma_sniper_02", name = "OwO Plasma Sniper 2"},
+		{id = "owo_plasma_sniper_03", name = "OwO Plasma Sniper 3"},
+		{id = "owo_plasma_sniper_04", name = "OwO Plasma Sniper 4"},
+		{id = "owo_plasma_sniper_05", name = "OwO Plasma Sniper 5"},
+		{id = "owo_plasma_sniper_06", name = "OwO Plasma Sniper 6"},
+		{id = "owo_plasma_sniper_07", name = "OwO Plasma Sniper 7"},
+		{id = "owo_plasma_sniper_08", name = "OwO Plasma Sniper 8"},
+		{id = "owo_plasma_sniper_09", name = "OwO Plasma Sniper 9"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
+		{id = "owo_plasma_krieg_ac0_empty", name = "Empty Barrel", no_randomize = true},
+		{id = "owo_plasma_krieg_ac0_01", name = "OwO Plasma Helbore ac0 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac" or type, {
+		{id = "owo_plasma_krieg_ac1_empty", name = "Empty Barrelac", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_01", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_02", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_03", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_04", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_05", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_06", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_07", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_08", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_09", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_plasma_krieg_01f = {
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
+		},
+		owo_plasma_krieg_02f = {
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
+		},
+		owo_plasma_dmr_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
+		},
+		owo_plasma_dmr_02 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_05", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
+		},
+		owo_plasma_dmr_01f = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
+		},
+		owo_plasma_dmr_02f = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_05", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
+		},
+		owo_plasma_sniper_01 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_01", }
+		},
+		owo_plasma_sniper_02 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_02", }
+		},
+		owo_plasma_sniper_03 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_03", }
+		},
+		owo_plasma_sniper_04 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_04", }
+		},
+		owo_plasma_sniper_05 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_05", }
+		},
+		owo_plasma_sniper_06 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_06", }
+		},
+		owo_plasma_sniper_07 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_07", }
+		},
+		owo_plasma_sniper_08 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_08", }
+		},
+		owo_plasma_sniper_09 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_09", }
+		},
+		-- ### Helper Parts ###
+		owo_plasma_krieg_ac0_empty = {
+			model = "", type = "barrelshroud", 
+			mesh_move = false, parent = "barrel"
+		},
+		owo_plasma_krieg_ac0_01 = {
+			model = _item_ranged.."/barrels/plasma_rifle_barrel_01", type = "barrelshroud", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_empty = {
+			model = "", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel"
+		},
+		owo_plasma_krieg_ac1_01 = {
+			model = _item_ranged.."/underbarrels/shotgun_rifle_underbarrel_01", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_02 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_03 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_04 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_05 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_06 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_07", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_07 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_08 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+		owo_plasma_krieg_ac1_09 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_ml01", type = "barrelshroudac", 
+			mesh_move = false, parent = "barrel",
+		},
+	})
+
+end
+
 -- Foregrip: Tactical Foregrips
 function mod.owo_tactical_foregrip(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "foregrip" or type, {

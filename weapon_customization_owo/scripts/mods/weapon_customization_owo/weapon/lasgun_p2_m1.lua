@@ -18,12 +18,13 @@ if not mod.syn then
     mod.wc.attachment[this_variant].stockac2 = {} -- MT didn't add this to Helbore yet but Syn did
 	mod.wc.attachment[this_variant].rearmag = {}
     mod.wc.attachment[this_variant].muzzle_2 = {} -- MT didn't add this to Helbore yet but Syn did
+    mod.wc.attachment[this_variant].barrelshroud = {}
+    mod.wc.attachment[this_variant].barrelshroudac = {}
 end
 mod.wc.attachment[this_variant].muzzle_3 = {}
 mod.wc.attachment[this_variant].muzzle_4 = {}
 mod.wc.attachment[this_variant].muzzle_5 = {}
 
-mod.wc.attachment[this_variant].barrelshroud = {}	-- Syn didn't add this to Helbore yet
 mod.wc.attachment[this_variant].bayonetac1 = {}
 mod.wc.attachment[this_variant].bayonetac2 = {}
 mod.wc.attachment[this_variant].bayonetac3 = {}
@@ -56,6 +57,7 @@ mod.owo_magazine_flat(this_variant)
 mod.owo_lasgun_magazine_rear(this_variant)
 
 mod.owo_wood_krieg(this_variant)
+mod.owo_plasma_krieg(this_variant)
 
 mod.owo_suppressor(this_variant)
 mod.owo_condom(this_variant)
@@ -308,6 +310,47 @@ mod.mt.inject_fixes(this_variant, {
             "autogun_bayonet_01|autogun_bayonet_02"
         },
         bayonet = { offset = true,   position = vector3_box(0, 0.428, -0.04),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+
+    -- ######
+	-- Barrel: PLASMA HELBORE
+	-- ######
+    {	dependencies =      { "owo_plasma_krieg_01f|owo_plasma_krieg_02f|owo_plasma_dmr_01|owo_plasma_dmr_01f|owo_plasma_dmr_02|owo_plasma_dmr_02f|owo_plasma_sniper_01|owo_plasma_sniper_02|owo_plasma_sniper_03|owo_plasma_sniper_04|owo_plasma_sniper_05|owo_plasma_sniper_06|owo_plasma_sniper_07|owo_plasma_sniper_08|owo_plasma_sniper_09", },
+		barrel =            { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+	},
+    {	dependencies =      { "owo_plasma_krieg_01f", },
+		barrelshroud =      { offset = true, position = vector3_box(0, 0.242, -0.027), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 1.0, 0.69 ) },
+	},
+    {	dependencies =      { "owo_plasma_krieg_02f", },
+		barrelshroud =      { offset = true, position = vector3_box(0, 0.17, -0.029), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 0.72, 0.69 ) },
+	},
+    {	dependencies =      { "owo_plasma_dmr_01", },
+		barrelshroud =      { offset = true, position = vector3_box(0, 0.032, -0.033), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.95, 0.55, 0.69 ) },
+	},
+    {	dependencies =      { "owo_plasma_dmr_01f", },
+		barrelshroud =      { offset = true, position = vector3_box(0, 0.196, -0.033), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.8, 0.67, 0.69 ) },
+	},
+    {	dependencies =      { "owo_plasma_dmr_02", },
+		barrelshroud =      { offset = true, position = vector3_box(0, 0.034, -0.033), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.72, 0.35, 0.69 ) },
+	},
+    {	dependencies =      { "owo_plasma_dmr_02f", },
+		barrelshroud =      { offset = true, position = vector3_box(0, 0.118, -0.033), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.72, 0.35, 0.69 ) },
+	},
+    {	dependencies =      { "owo_plasma_sniper_01", },
+        barrelshroud =      { offset = true, position = vector3_box(0, 0.032, -0.029), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.83, 0.95, 0.69 ) },
+		barrelshroudac =    { offset = true, position = vector3_box(0, 0.084, -0.081), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.49, 0.88 ) },
+	},
+    {	dependencies =      { "owo_plasma_sniper_02|owo_plasma_sniper_03|owo_plasma_sniper_04|owo_plasma_sniper_05|owo_plasma_sniper_06|owo_plasma_sniper_07|owo_plasma_sniper_08|owo_plasma_sniper_09", },
+        barrelshroud =      { offset = true, position = vector3_box(0, 0.336, -0.029), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.83, 1.3, 0.69 ) },
+		barrelshroudac =    { offset = true, position = vector3_box(0, 0.202, -0.005), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.42, 1 ) },
+	},
+	-- Regular Helbore bayonets (barrel parent)
+	{   dependencies =      { "owo_plasma_krieg_01f", "autogun_bayonet_01|autogun_bayonet_02" },
+		bayonet =           { offset = true,   position = vector3_box(0, 0.504, -0.03),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.1, 1.15, 0.66) },
+    },
+	-- 	these barrels are shorter
+	{   dependencies =      { "owo_plasma_krieg_02f", "autogun_bayonet_01|autogun_bayonet_02", },
+        bayonet =           { offset = true,   position = vector3_box(0, 0.428, -0.04),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
 
 	-- ######
@@ -1212,8 +1255,11 @@ mod.mt.inject_fixes(this_variant, {
 		rearmag = {hide_mesh = {     {"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	-- Barrels
-	{	dependencies = {"owo_wood_krieg_ac1_01",},
+	{	dependencies = {"owo_wood_krieg_ac1_01|owo_plasma_krieg_ac0_01",},
 		barrelshroud = {hide_mesh = {     {"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
+    {	dependencies = {"owo_plasma_krieg_ac1_01|owo_plasma_krieg_ac1_02|owo_plasma_krieg_ac1_03|owo_plasma_krieg_ac1_04|owo_plasma_krieg_ac1_05|owo_plasma_krieg_ac1_06|owo_plasma_krieg_ac1_07|owo_plasma_krieg_ac1_08|owo_plasma_krieg_ac1_09",},
+		barrelshroudac = {hide_mesh = {     {"barrelshroudac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
 	-- Bayonet
 	{	dependencies = {"owo_dreg_bayonet_rear_01|owo_bayonet_m7_helper_01|owo_bayonet_seitengewehr_helper_01|owo_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
