@@ -1122,22 +1122,27 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Magnifier
     --      Aligned
-    {   dependencies = { _owo_magnifier_aligned_vortex_sights },
-        sight_secondary_ac1 =      { offset = true, position = vector3_box(0, -0.194, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        sight_secondary_ac2 =      { offset = true, position = vector3_box(0, -0.0562, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        lens =              { offset = false, parent = "sight", position = vector3_box(0, -0.088, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 1}},
-	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.16, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 2}},
+    {   dependencies =          { _owo_magnifier_aligned_vortex_sights },
+        sight_secondary_ac1 =   { offset = true, position = vector3_box(0, -0.194, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        sight_secondary_ac2 =   { offset = true, position = vector3_box(0, -0.0562, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        lens =                  { offset = false, parent = "sight", position = vector3_box(0, -0.088, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 1}},
+	    lens_2 =                { offset = false, parent = "sight", position = vector3_box(0, -0.16, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 2}},
 	},
 	--		Side
-    {   dependencies = { _owo_magnifier_side_vortex_sights },
-        sight_secondary_ac1 =      { offset = true, position = vector3_box(0.042, -0.194, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        sight_secondary_ac2 =      { offset = true, position = vector3_box(0.042, -0.0562, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        lens =              { offset = false, parent = "sight", position = vector3_box(0.042, -0.088, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 1}},
-	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0.042, -0.16, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 2}},
+    {   dependencies =          { _owo_magnifier_side_vortex_sights },
+        sight_secondary_ac1 =   { offset = true, position = vector3_box(0.042, -0.194, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        sight_secondary_ac2 =   { offset = true, position = vector3_box(0.042, -0.0562, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
+        lens =                  { offset = false, parent = "sight", position = vector3_box(0.042, -0.088, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 1}},
+	    lens_2 =                { offset = false, parent = "sight", position = vector3_box(0.042, -0.16, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 2}},
 	},
 	--  -------------------------------------------
     --  Aligning sights to crosshair
 	--  -------------------------------------------
+    -- Vortex Razor
+    {   dependencies =      { _owo_all_vortex_sights },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+    },
+    --[[
     {   dependencies =      { _owo_no_magnifier_vortex_sights },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
@@ -1147,6 +1152,8 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { _owo_magnifier_side_vortex_sights },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
+    ]]
+    -- EOTech
 	{   dependencies =      { _owo_no_magnifier_eotech_sights },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },

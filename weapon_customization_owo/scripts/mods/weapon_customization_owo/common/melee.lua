@@ -317,6 +317,8 @@ end
 
 -- Blade: Slim Power Sword
 --	Blade 4 doesn't exist
+--	Slim is just less thicc but keeps how wide it is
+--	Thin reduces both
 function mod.owo_slim_psword(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "blade" or type, {
 		{id = "owo_slim_psword_01", name = "OwO Slim PSword 1"},
