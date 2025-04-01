@@ -2560,20 +2560,45 @@ function mod.owo_fin_grip(variant_id, type)
 	})
 end
 
--- Stock: Straight Grip and Recon Stock
-function mod.owo_helbore_gripstock_recon(variant_id,type)
+-- Stock: Straight Grip and Stock
+--	Recon
+--	Anti-Material Rifle (AMR, Barrett M82 style)
+function mod.owo_helbore_gripstock(variant_id,type)
 	mod.inject_attachments_owo(variant_id, "stock" or type, {
 		{id = "owo_gripstock_recon_01", name = "OwO StraightGrip Recon 1"},
 		{id = "owo_gripstock_recon_02", name = "OwO StraightGrip Recon 2"},
 		{id = "owo_gripstock_recon_03", name = "OwO StraightGrip Recon 3"},
+		{id = "owo_gripstock_amr_01", name = "OwO AMR Stock+Grip 1"},
+		{id = "owo_gripstock_amr_02", name = "OwO AMR Stock+Grip 2"},
+		{id = "owo_gripstock_amr_03", name = "OwO AMR Stock+Grip 3"},
+		{id = "owo_gripstock_amr_04", name = "OwO AMR Stock+Grip 4"},
+		{id = "owo_gripstock_amr_05", name = "OwO AMR Stock+Grip 5"},
+		{id = "owo_gripstock_amr_06", name = "OwO AMR Stock+Grip 6"},
+		{id = "owo_gripstock_amr_07", name = "OwO AMR Stock+Grip 7"},
+		{id = "owo_gripstock_amr_08", name = "OwO AMR Stock+Grip 8"},
+		{id = "owo_gripstock_amr_09", name = "OwO AMR Stock+Grip 9"},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac" or type, {
 		{id = "owo_gripstock_grip_empty",  name = "Empty stockac", no_randomize = true},
 		{id = "owo_gripstock_grip_01a",  name = "OwO StraightGrip stockac", no_randomize = true},
+		{id = "owo_gripstock_amr_ac_01",  name = "OwO StraightGrip50 stockac", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "stockac2" or type, {
+		{id = "owo_gripstock_amr_ac2_empty",  name = "Empty stockac2", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_01",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_02",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_03",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_04",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_05",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_06",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_07",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_08",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
+		{id = "owo_gripstock_amr_ac2_09",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
+		--	Recon
 	    owo_gripstock_recon_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_01", type = "stock", parent = "receiver", 
 			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0),
@@ -2595,50 +2620,7 @@ function mod.owo_helbore_gripstock_recon(variant_id,type)
 				stockac = "owo_gripstock_grip_01a",
 			},
 		},
-		-- ### Helper Parts ###
-		owo_gripstock_grip_01a = {
-			model = _item_ranged.."/recievers/stubgun_pistol_receiver_02", type = "stockac", parent = "receiver", 
-			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
-		},
-		-- ### Empty ###
-		owo_gripstock_grip_empty = {
-			model = "", type = "stockac", parent = "receiver", 
-		},
-	})
-end
-
--- Stock: Barret 50 Cal Gripstock
-function mod.owo_helbore_gripstock_amr(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "stock" or type, {
-		{id = "owo_gripstock_amr_01", name = "OwO Barrett M82 Stock+Grip 1"},
-		{id = "owo_gripstock_amr_02", name = "OwO Barrett M82 Stock+Grip 2"},
-		{id = "owo_gripstock_amr_03", name = "OwO Barrett M82 Stock+Grip 3"},
-		{id = "owo_gripstock_amr_04", name = "OwO Barrett M82 Stock+Grip 4"},
-		{id = "owo_gripstock_amr_05", name = "OwO Barrett M82 Stock+Grip 5"},
-		{id = "owo_gripstock_amr_06", name = "OwO Barrett M82 Stock+Grip 6"},
-		{id = "owo_gripstock_amr_07", name = "OwO Barrett M82 Stock+Grip 7"},
-		{id = "owo_gripstock_amr_08", name = "OwO Barrett M82 Stock+Grip 8"},
-		{id = "owo_gripstock_amr_09", name = "OwO Barrett M82 Stock+Grip 9"},
-	})
-	mod.inject_attachments_owo(variant_id, "stockac" or type, {
-		{id = "owo_gripstock_amr_ac_empty",  name = "Empty stockac", no_randomize = true},
-		{id = "owo_gripstock_amr_ac_01",  name = "OwO StraightGrip50 stockac", no_randomize = true},
-	})
-	mod.inject_attachments_owo(variant_id, "stockac2" or type, {
-		{id = "owo_gripstock_amr_ac2_empty",  name = "Empty stockac2", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_01",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_02",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_03",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_04",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_05",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_06",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_07",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_08",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
-		{id = "owo_gripstock_amr_ac2_09",  name = "OwO StraightGrip50 stockac2 4", no_randomize = true},
-	})
-
-	mod.inject_models(variant_id, {
-		-- ### Base Parts ###
+		-- 	AMR
 	    owo_gripstock_amr_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
 			automatic_equip = {
@@ -2695,8 +2677,12 @@ function mod.owo_helbore_gripstock_amr(variant_id, type)
 		},
 		-- ### Helper Parts ###
 		-- AC1: Grip
-		owo_gripstock_amr_ac_empty = {
-			model = "", type = "stockac", parent = "stock", 
+		owo_gripstock_grip_empty = {
+			model = "", type = "stockac", parent = "receiver", 
+		},
+		owo_gripstock_grip_01a = {
+			model = _item_ranged.."/recievers/stubgun_pistol_receiver_02", type = "stockac", parent = "receiver", 
+			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
 		},
 		owo_gripstock_amr_ac_01 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = "stockac", parent = "stock",
@@ -4508,6 +4494,89 @@ function mod.owo_magazine_flat(variant_id, type)
 	})
 end
 
+-- Magazine: Plasma
+--		Intended for Helbore since mt added plasma mags to some already?
+function mod.owo_plasma_mag(variant_id, type)
+	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+		{id = "owo_plasma_mag_01", name = "OwO Plasma Mag 1"},
+		{id = "owo_plasma_mag_02", name = "OwO Plasma Mag 2"},
+		{id = "owo_plasma_mag_03", name = "OwO Plasma Mag 3"},
+		{id = "owo_plasma_mag_04", name = "OwO Plasma Mag 4"},
+		{id = "owo_plasma_melta_mag_01", name = "OwO Melta Mag (Plasma 3)"},
+		{id = "owo_plasma_mag_01ss", name = "OwO Plasma Mag 1 (SS)"},
+		{id = "owo_plasma_mag_02ss", name = "OwO Plasma Mag 2 (SS)"},
+		{id = "owo_plasma_mag_03ss", name = "OwO Plasma Mag 3 (SS)"},
+		{id = "owo_plasma_mag_04ss", name = "OwO Plasma Mag 4 (SS)"},
+		{id = "owo_plasma_melta_mag_01ss", name = "OwO Melta Mag (SS)"},
+	})
+	mod.inject_attachments_owo(variant_id, "magac" or type, {
+		{id = "owo_plasma_mag_helper_00", name = "Empty magac"},
+		{id = "owo_plasma_mag_helper_01", name = "OwO Plasma Mag Helper 1", no_randomize = true},
+		{id = "owo_plasma_mag_helper_02", name = "OwO Plasma Mag Helper 2", no_randomize = true},
+		{id = "owo_plasma_mag_helper_03", name = "OwO Plasma Mag Helper 3", no_randomize = true},
+		{id = "owo_plasma_mag_helper_04", name = "OwO Plasma Mag Helper 4", no_randomize = true},
+		{id = "owo_plasma_melta_mag_helper_01", name = "OwO Melta Mag Helper (Plasma 3)", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_plasma_mag_01 = {
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_01", type = "magazine", parent = "receiver", 
+		},
+		owo_plasma_mag_02 = {
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_02", type = "magazine", parent = "receiver", 
+		},
+		owo_plasma_mag_03 = {
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_03", type = "magazine", parent = "receiver", 
+		},
+		owo_plasma_mag_04 = {
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_04", type = "magazine", parent = "receiver", 
+		},
+		owo_plasma_melta_mag_01 = {
+			model = _item_ranged.."/magazines/melta_gun_magazine_01", type = "magazine", parent = "receiver", 
+		},
+		owo_plasma_mag_01ss = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = { magac = "owo_plasma_mag_helper_01", },
+		},
+		owo_plasma_mag_02ss = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = { magac = "owo_plasma_mag_helper_02", },
+		},
+		owo_plasma_mag_03ss = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = { magac = "owo_plasma_mag_helper_03", },
+		},
+		owo_plasma_mag_04ss = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = { magac = "owo_plasma_mag_helper_04", },
+		},
+		owo_plasma_melta_mag_01ss = {
+			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			automatic_equip = { magac = "owo_plasma_melta_mag_helper_01", },
+		},
+		-- ### Helper Parts ###
+		owo_plasma_mag_helper_00 = {
+			model = "", type = "magac", parent = "magazine", 
+		},
+		owo_plasma_mag_helper_01 = {
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_01", type = "magac", parent = "magazine", 
+		},
+		owo_plasma_mag_helper_02 = {
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_02", type = "magac", parent = "magazine", 
+		},
+		owo_plasma_mag_helper_03 = {
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_03", type = "magac", parent = "magazine", 
+		},
+		owo_plasma_mag_helper_04 = {
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_04", type = "magac", parent = "magazine", 
+		},
+		owo_plasma_melta_mag_helper_01 = {
+			model = _item_ranged.."/magazines/melta_gun_magazine_01", type = "magac", parent = "magazine", 
+		},
+	})
+end
+
 -- Magazine: Rear Lasgun 
 --		For Straight Grip and Recon Stock
 -- 		I stole this from Syn
@@ -4835,7 +4904,7 @@ function mod.owo_magazine_magpull(variant_id, type)
 end
 
 -- Magazine: AK
---	Oh fuck the bullets don't move if i only move the mag
+--	Oh fuck the bullets don't move if I only move the mag
 --[[
 function mod.owo_magazine_ak(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {

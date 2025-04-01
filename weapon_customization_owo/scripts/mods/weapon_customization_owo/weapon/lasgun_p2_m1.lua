@@ -24,7 +24,7 @@ end
 mod.wc.attachment[this_variant].muzzle_3 = {}
 mod.wc.attachment[this_variant].muzzle_4 = {}
 mod.wc.attachment[this_variant].muzzle_5 = {}
-
+mod.wc.attachment[this_variant].magac = {} -- MT didn't add this to Helbore yet
 mod.wc.attachment[this_variant].bayonetac1 = {}
 mod.wc.attachment[this_variant].bayonetac2 = {}
 mod.wc.attachment[this_variant].bayonetac3 = {}
@@ -51,10 +51,10 @@ mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
-mod.owo_helbore_gripstock_recon(this_variant)
-mod.owo_helbore_gripstock_amr(this_variant)
+mod.owo_helbore_gripstock(this_variant)
 mod.owo_magazine_flat(this_variant)
 mod.owo_lasgun_magazine_rear(this_variant)
+mod.owo_plasma_mag(this_variant)
 
 mod.owo_wood_krieg(this_variant)
 mod.owo_plasma_krieg(this_variant)
@@ -168,20 +168,24 @@ mod.mt.inject_fixes(this_variant, {
 	},
 
 	-- ######
-	-- Stock: STRAIGHT GRIP AND RECON STOCK
+	-- Stock: STRAIGHT GRIP AND STOCK
 	-- ######
+    --  -------------------------------------------
+    --  Recon
+    --  -------------------------------------------
 	{	dependencies =  { "owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03" },
 		stock =         { offset = true, position = vector3_box(0, -0.04, 0.065), scale = vector3_box(1, 1.15, 0.85 ) },
 		stockac =       { offset = true, position = vector3_box(0, 0.02, 0),scale = vector3_box(1, 1, 1 ) },
 	},
-
-    -- ######
-	-- Stock: Straight Grip and Barrett M82 Stock
-	-- ######
+    --  -------------------------------------------
+    --  AMR
+    --  -------------------------------------------
+    --  Stock and Grip
     {	dependencies =  { "owo_gripstock_amr_01|owo_gripstock_amr_02|owo_gripstock_amr_03|owo_gripstock_amr_04|owo_gripstock_amr_05|owo_gripstock_amr_06|owo_gripstock_amr_07|owo_gripstock_amr_08|owo_gripstock_amr_09" },
 		stock =         { offset = true, position = vector3_box(0, -0.03, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.25, 1.5, 1.25 ) },
 		stockac =       { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.67, 1 ) },
     },
+    --  Rear Handle options
     {	dependencies =  { "owo_gripstock_amr_01" },
 		--stockac2 =      { offset = true, position = vector3_box(0.5, -0.28, -0.037), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.45, 0.5, 0.6 ) },
         stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -0.07, -0.33), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.6, 0.75, 0.8 ) },
@@ -206,11 +210,11 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Magazine: FLAT
 	-- ######
-	{	dependencies = {"owo_lasgun_magazine_flat_01"},
-		magazine = { offset = true,scale = vector3_box(1, 1, 0.5 ) },
+	{	dependencies =  { "owo_lasgun_magazine_flat_01"},
+		magazine =      { offset = true,scale = vector3_box(1, 1, 0.5 ) },
 	},
-	{	dependencies = {"owo_autogun_magazine_flat_03"},
-		magazine = { offset = true, scale = vector3_box(1, 1, 0.6 ) },
+	{	dependencies =  { "owo_autogun_magazine_flat_03"},
+		magazine =      { offset = true, scale = vector3_box(1, 1, 0.6 ) },
 	},
 
 	-- ######
@@ -227,6 +231,19 @@ mod.mt.inject_fixes(this_variant, {
 		magazine = { offset = true, position = vector3_box(.0, .0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.7 ) },
 		rearmag = { offset = true, position = vector3_box(.0, -0.23, 0.035), rotation = vector3_box(0, 0, 0), scale = vector3_box(0, 0, 0 ) },
 	},
+
+    -- ######
+	-- Magazine: Plasma
+	-- ######
+    {	dependencies =  { "owo_plasma_mag_01|owo_plasma_mag_02|owo_plasma_mag_03|owo_plasma_mag_04|owo_plasma_melta_mag_01" },
+        magazine =         { offset = true, position = vector3_box(-0.0, 0.06, -0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+		--magazine =      { offset = true, scale = vector3_box(1, 1, 0.5 ) },
+    },
+    {	dependencies =  { "owo_plasma_mag_01ss|owo_plasma_mag_02ss|owo_plasma_mag_03ss|owo_plasma_mag_04ss|owo_plasma_melta_mag_01ss" },
+        magazine =      { offset = true, scale = vector3_box(1, 1, 0.5 ) },
+        magac =         { offset = true, position = vector3_box(-0.003, 0.05, -0.085), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 2), },
+        --magac =         { offset = false, position = vector3_box(-0.003, 0.05, -0.085), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 2), },
+    },
 
 	-- ######
 	-- Muzzle: SUPPRESSOR
@@ -1289,7 +1306,10 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
         muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
     },
-	-- Rear Mag
+	-- Magazine
+    {	dependencies =  { "owo_plasma_mag_helper_01|owo_plasma_mag_helper_02|owo_plasma_mag_helper_03|owo_plasma_mag_helper_04|owo_plasma_melta_mag_helper_01" },
+		magac = {hide_mesh = {{"magac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
 	{	dependencies = {"owo_lasgun_magazine_rear_child_01"},
 		rearmag = {hide_mesh = {     {"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
 	},
