@@ -14,6 +14,8 @@ return {
 	},
 	load_after = {
 		 "weapon_customization",
+		 "for_the_drip",
+		 "weapon_customization_no_gun",
 	},
 	load_before = {
 		"weapon_customization_syn_edits",

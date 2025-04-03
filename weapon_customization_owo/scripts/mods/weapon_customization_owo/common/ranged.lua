@@ -2489,15 +2489,16 @@ function mod.owo_laspistol_grip_mag(variant_id)
 		{id = "owo_laspistol_grip_mag_03", name = "OwO Chunky Slide 3 (M)"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
-		{id = "owo_laspistol_grip_mag_helper_empty", name = "Empty Receiverac1"},
-		{id = "owo_laspistol_grip_mag_helper_01", name = "OwO Pistol Receiverac"},
+		{id = "owo_laspistol_grip_mag_helper_empty", name = "Empty Receiverac1", no_randomize = true},
+		{id = "owo_laspistol_grip_mag_helper_01", name = "OwO Pistol Receiverac", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac2", {
-		{id = "owo_laspistol_grip_mag_helper_empty", name = "Empty Receiverac2"},
-		{id = "owo_laspistol_grip_mag_helper2_01", name = "OwO Pistol Trigger"},
+		{id = "owo_laspistol_grip_mag_helper2_empty", name = "Empty Receiverac2", no_randomize = true},
+		{id = "owo_laspistol_grip_mag_helper2_01", name = "OwO Pistol Trigger", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
 		owo_laspistol_grip_mag_01 = {
 			model = _item_ranged.."/recievers/lasgun_rifle_receiver_01", type = "receiver", mesh_move = false,
 			automatic_equip = {
@@ -2516,11 +2517,15 @@ function mod.owo_laspistol_grip_mag(variant_id)
 				receiverac1 = "owo_laspistol_grip_mag_helper_01", receiverac2 = "owo_laspistol_grip_mag_helper2_01"
 			}
 		},
+		-- ### Helper Parts ###
 		owo_laspistol_grip_mag_helper_empty = {
 			model = "", type = "receiverac1", parent = "receiver", mesh_move = false,
 		},
 		owo_laspistol_grip_mag_helper_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = "receiver", mesh_move = false,
+		},
+		owo_laspistol_grip_mag_helper2_empty = {
+			model = "", type = "receiverac2", parent = "receiver", mesh_move = false,
 		},
 		owo_laspistol_grip_mag_helper2_01 = {
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "receiverac2", parent = "receiver", mesh_move = false,

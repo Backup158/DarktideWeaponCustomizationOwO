@@ -157,13 +157,13 @@ mod.mt.inject_fixes(this_variant, {
 	-- #########################
     -- Muzzles
     {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01"},
-        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty"}, },
+        muzzle_2 = {automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty" }, hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, },
     },
     -- Receivers
     {	dependencies = {"owo_laspistol_grip_mag_helper_01"},
-        receiverac1 = {hide_mesh = { 	{"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+        receiverac1 = {automatic_equip = { receiverac1="owo_laspistol_grip_mag_helper_empty" }, hide_mesh = {{"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
-    {	dependencies = {"owo_laspistol_grip_mag_helper_012"},
-        receiverac2 = {hide_mesh = { 	{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    {	dependencies = {"owo_laspistol_grip_mag_helper2_01"},
+        receiverac2 = {automatic_equip = { receiverac2="owo_laspistol_grip_mag_helper2_empty" },hide_mesh = {{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
