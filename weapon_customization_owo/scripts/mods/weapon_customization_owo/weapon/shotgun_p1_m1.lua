@@ -25,6 +25,7 @@ mod.wc.attachment[this_variant].foregrip = {}
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
 mod.owo_empty_foregrip(this_variant)
@@ -42,7 +43,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     --{   dependencies =      { "owo_alt_viewmodel_empty" },
     --    scope_offset =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0)},
-    --    no_scope_offset =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0)},
+    --    no_scope_offset =   { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0)},
     --},
     --  Doom
     {   dependencies =      { "owo_alt_viewmodel_01" },
@@ -204,6 +205,10 @@ mod.mt.inject_fixes(this_variant, {
     -- By putting it down here, they will only be hidden if the fixes from above are not found
     -- Because they match the main parts first, if there is no match it means the main part is not attached
     -- ####################################################################################
+    -- Muzzles
+    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01"},
+		muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty"}, },
+	},
     -- Stocks
     {   dependencies =  { "owo_tactical_stockac_01"},
         stockac = { hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},

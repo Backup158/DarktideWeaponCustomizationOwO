@@ -49,6 +49,7 @@ mod.owo_condom(this_variant)
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_underbarrel_shotgun(this_variant, "bayonet")
 
+mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_holosight(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
@@ -69,6 +70,10 @@ local _owo_magnifier_aligned_vortex_sights = "owo_holosight_02_02_z1|owo_holosig
 local _owo_magnifier_side_vortex_sights = "owo_holosight_02_03|owo_holosight_02_03ss"
 local _owo_magnifier_vortex_sights = _owo_magnifier_aligned_vortex_sights.."|".._owo_magnifier_side_vortex_sights
 local _owo_all_vortex_sights = _owo_no_magnifier_vortex_sights.."|".._owo_magnifier_vortex_sights
+local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
+local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top"
+local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
+
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
 
 local _super_short_helbore_barrels = "barrel_19"
@@ -580,8 +585,8 @@ mod.mt.inject_fixes(this_variant, {
     },
     -- Point Shooting
     {   dependencies =      { "owo_alt_viewmodel_06" },
-        scope_offset =          { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0),  },
-        no_scope_offset =      { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0),  },
+        scope_offset =          { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), },
+        no_scope_offset =   { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), },
     },
 
 	-- ######
@@ -704,7 +709,7 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_magnifier_side_eotech_sights },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0),  },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0), },
     },
 
 	-- ######
@@ -792,11 +797,13 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Aiming with RMR on ACOG
     {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
-        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.0915), rotation = vector3_box(0, 0, 0),  },
+        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.0915), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.0915), rotation = vector3_box(0, 0, 0), },
     },
     --      Aiming with RMR on SUSAT
     {   dependencies =      { "owo_susat_02_top" },
-        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.079), rotation = vector3_box(0, 0, 0),  },
+        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.079), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.3, -0.079), rotation = vector3_box(0, 0, 0), },
     },
 
     -- ######

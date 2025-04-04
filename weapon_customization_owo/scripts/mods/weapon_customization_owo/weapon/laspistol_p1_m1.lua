@@ -26,6 +26,7 @@ mod.owo_magazine_flat(this_variant)
 mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_laspistol_grip_mag(this_variant)
 
+mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
 -- ############################################

@@ -3819,49 +3819,49 @@ function mod.owo_telescopic_sight(variant_id, type)
 		--{id = "owo_nv_02", name = "OwO Night Vision Scope 2"},
 		--{id = "owo_nv_02_ir", name = "OwO Night Vision 2 + IR"},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac1", {
 		{id = "owo_acog_sight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_01", name = "OwO ACOG'vesa sight container 1", no_randomize = true},
 		{id = "owo_susat_ac1_01", name = "SUSAT'vesa Cylinder thing", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac2" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac2", {
 		{id = "owo_acog_sight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_02", name = "OwO ACOG'vesa rear sight container 1", no_randomize = true},
 		{id = "owo_susat_ac2_01", name = "SUSAT'vesa rear scope 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac3" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac3", {
 		{id = "owo_acog_sight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_03", name = "OwO ACOG'vesa rear sight container 2", no_randomize = true},
 		{id = "owo_susat_ac3_01", name = "SUSAT'vesa rear scope 2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac4" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac4", {
 		{id = "owo_acog_sight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_04", name = "OwO ACOG'vesa Base", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac5" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac5", {
 		{id = "owo_acog_sight_empty_05", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_05", name = "OwO ACOG'vesa Knob", no_randomize = true},
 		{id = "owo_susat_ac5_01", name = "SUSAT'vesa reticle 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac6" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac6", {
 		{id = "owo_acog_sight_empty_06", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_06", name = "OwO ACOG'vesa Knob", no_randomize = true},
 		{id = "owo_susat_ac6_01", name = "SUSAT'vesa reticle 2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac7" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac7", {
 		{id = "owo_acog_sight_empty_07", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_07", name = "ACOG'vesa Cable", no_randomize = true},
 		{id = "owo_susat_ac7_01", name = "SUSAT'vesa Front Scope 2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sight_secondary" or type, {
+	mod.inject_attachments_owo(variant_id, "sight_secondary", {
 		{id = "owo_acog_sight_empty2", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_sight_secondary_01", name = "OwO ACOG RMR", no_randomize = true},
 	})
-	--[[mod.inject_attachments_owo(variant_id, "sight_secondary_ac1" or type, {
+	--[[mod.inject_attachments_owo(variant_id, "sight_secondary_ac1", {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_sight_secondary_helper_01", name = "OwO ACOG Magnifier 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2" or type, {
+	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2", {
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_sight_secondary_helper_02", name = "OwO ACOG Magnifier 2", no_randomize = true},
 	})]]
@@ -3993,7 +3993,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_acog_sight_02_top = {
-			model = _item_melee.."/pommels/axe_pommel_02", type = "sight", 
+			model = _item_melee.."/full/force_staff_full_02", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -4001,15 +4001,15 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
 				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
-				{"sight_2", 5,6},
+				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
 		owo_acog_sight_02f_top = {
-			model = _item_melee.."/pommels/axe_pommel_02", type = "sight", 
+			model = _item_melee.."/full/force_staff_full_02", type = "sight", 
 			mesh_move = false, parent = "",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
@@ -4017,11 +4017,11 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
 				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
-				{"sight_2", 5,6},
+				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
 		-- SUSAT
@@ -4056,7 +4056,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_susat_01_ps = {
-			model = _item_melee.."/pommels/axe_pommel_01", type = "sight", 
+			model = _item_melee.."/full/force_staff_full_01", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
@@ -4102,18 +4102,18 @@ function mod.owo_telescopic_sight(variant_id, type)
 			},
 		},
 		owo_susat_02_top = {
-			model = _item_melee.."/pommels/axe_pommel_02", type = "sight", 
+			model = _item_melee.."/full/force_staff_full_01", type = "sight", 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sightac7 = "owo_susat_ac7_01", sight_2 = "reflex_scopehelper_01",
+				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
 				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
-				{"sight_2", 1,5,6},
+				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
 		-- ### Helper Parts ###
@@ -4391,6 +4391,19 @@ function mod.owo_pu_scope(variant_id, type)
 		},
 	})
 	
+end
+
+-- Sight_2: Invisible
+function mod.owo_reticle_helper(variant_id)
+	mod.inject_attachments_owo(variant_id, "sight_2", {
+		{id = "owo_reticle_helper_invisible", name = "Invisible sight_2"},
+	})
+	mod.inject_models(variant_id, {
+		owo_reticle_helper_invisible = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sight_2", 
+			parent = "sight", hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
+		},
+	})
 end
 
 -- Sight_2: Reticle only

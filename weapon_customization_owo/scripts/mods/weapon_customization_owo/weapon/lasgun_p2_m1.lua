@@ -70,6 +70,7 @@ mod.owo_underbarrel_shotgun(this_variant)
 mod.owo_bolt_action(this_variant)
 mod.owo_helbore_mas49(this_variant)
 
+mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_rear_sight(this_variant)
 mod.owo_holosight(this_variant)
@@ -91,6 +92,10 @@ local _owo_magnifier_aligned_vortex_sights = "owo_holosight_02_02_z1|owo_holosig
 local _owo_magnifier_side_vortex_sights = "owo_holosight_02_03|owo_holosight_02_03ss"
 local _owo_magnifier_vortex_sights = _owo_magnifier_aligned_vortex_sights.."|".._owo_magnifier_side_vortex_sights
 local _owo_all_vortex_sights = _owo_no_magnifier_vortex_sights.."|".._owo_magnifier_vortex_sights
+local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
+local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top"
+local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
+
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
 
 -- hlasgun from MT plugin. I autocombined them here because fuck you
@@ -955,7 +960,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Doom
     {   dependencies =      { "owo_alt_viewmodel_01" },
         scope_offset =      { offset = true, position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), },
-        no_scope_offset =      { offset = true, position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0, 0.2, -0.25), rotation = vector3_box(7, 0, 0), },
     },
     {   dependencies =      { "owo_alt_viewmodel_02" },
         scope_offset =      { offset = true, position = vector3_box(0, -0.2, -0.05), rotation = vector3_box(2, 0, 0), },
@@ -977,8 +982,8 @@ mod.mt.inject_fixes(this_variant, {
     },
 	-- Point Shooting
     {   dependencies =      { "owo_alt_viewmodel_06" },
-        scope_offset =          { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0),  },
-        no_scope_offset =      { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0),  },
+        scope_offset =          { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), },
+        no_scope_offset =   { position = vector3_box(-0.04, 0.26, -0.163), rotation = vector3_box(0, -19, 0), },
     },
 
 	-- ######
@@ -1161,7 +1166,7 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_magnifier_side_eotech_sights },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0),  },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), },
     },
 
 	-- ######
@@ -1241,46 +1246,48 @@ mod.mt.inject_fixes(this_variant, {
 	--  -------------------------------------------
 	--      Aiming with main sight
     --          Backwards
-    {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1" },
+    {   dependencies =      { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1" },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0435), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Forwards (Default)
-    {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1" },
+    {   dependencies =      { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1" },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0435), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-	{   dependencies = { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1" },
+	{   dependencies =      { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1" },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0405), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Aiming with RMR on ACOG
-    {   dependencies = { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
-        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.1175), rotation = vector3_box(0, 0, 0),  },
+    {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
+        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.1175), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.1175), rotation = vector3_box(0, 0, 0), },
     },
     --      Aiming with RMR on SUSAT
-    {   dependencies = { "owo_susat_02_top" },
-        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.1035), rotation = vector3_box(0, 0, 0),  },
+    {   dependencies =      { "owo_susat_02_top" },
+        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.1035), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.1035), rotation = vector3_box(0, 0, 0), },
     },
 
 	-- ######
 	-- Sight: SOVIET PU SCOPE
 	-- ######
-	{	dependencies = {"owo_pu_scope_01|owo_pu_scope_02",},
-		no_scope_offset =   { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-		scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-
-		lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.162, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 1}},
-	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-
-		sight = 	  { offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+	{	dependencies =      {"owo_pu_scope_01|owo_pu_scope_02",},
+		sight =             { offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
 		-- Sight body
-		sightac1 = { offset = true, position = vector3_box(0, 0.192 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
-		sightac7 = { offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+		sightac1 =          { offset = true, position = vector3_box(0, 0.192 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+		sightac7 =          { offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 		-- Crosshair
-		sightac2 = { offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
-		sightac3 = { offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
-		sightac4 = { offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+		sightac2 =          { offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+		sightac3 =          { offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+		sightac4 =          { offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
 		-- Knobs
-		sightac5 = { offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
-		sightac6 = { offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
+		sightac5 =          { offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
+		sightac6 =          { offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
+        -- Lens
+        lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.162, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 1}},
+	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+		-- Aligning to Crosshair
+        --no_scope_offset =   { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+		scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
 	},
 	-- Riser alignment
 	{	dependencies = {"owo_pu_scope_01",},
