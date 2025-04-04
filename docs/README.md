@@ -47,6 +47,9 @@ Parts are prefixed with `OwO` in the customization menu.
 > 
 > &emsp; Description
 
+<details>
+  <summary>Full List of Parts</summary>
+
 ## Muzzles
 
 - **Suppressors**: Infantry/Braced/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Combat Shotguns, Quickdraw Stub Revolvers  \
@@ -87,12 +90,17 @@ Parts are prefixed with `OwO` in the customization menu.
 &emsp; ﻿﻿Based on US M7 Bayonet, German Seitengewehr 98, and French Épée-Baïonnette Modèle 1888
 - **Underbarrel Grenade Launchers**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
 &emsp; ﻿﻿Based on M203 and GP25
+
 > [!WARNING]
+> 
 > ﻿KNOWN ISSUE: Both variants will steal muzzle flashes from infantry autoguns
+
 - **Underbarrel Shotguns**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
 &emsp; ﻿﻿Based on the Knight's Armament Company Masterkey and the M26-MASS (Modular Accessory Shotgun System)  \
 &emsp; ﻿﻿Masterkey includes smaller and larger variants
+
 > [!WARNING]
+> 
 > ﻿KNOWN ISSUE: Both variants sometimes steal muzzle flashes from bullet-based weapons
 
 ## Receivers
@@ -104,11 +112,12 @@ These can get super janky when using non-default parts so watch out.
 - **MAS-49 Helbore Receivers**: Helbore Lasguns  \
 &emsp; ﻿﻿Makes the rear blockier and metallic... er
 - **Massive Slide**: Heavy Laspistols  \
-&emsp; ﻿﻿(WIP) Makes the top a giant slide. Moves magazine inside the grip (with a little bulge :3). Be warned when using this because I only spent an hour before deciding I didn't care enough.
-> [!WARNING]
-> ﻿KNOWN ISSUE: Has a random magazine in first person
-
+&emsp; ﻿﻿(WIP) Makes the top a giant slide. Moves magazine inside the grip (with a little bulge :3). Be warned when using this because I only spent an hour before deciding I didn't care enough.  \
 &emsp; ﻿﻿Fallout 4 10mm lookin ass mf
+
+> [!WARNING]
+> 
+> ﻿KNOWN ISSUE: Has a random magazine in first person
 
 ## Sights
 - Sight_2, **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers  \
@@ -139,9 +148,10 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿Versions to aim through the main sight and the red dot (top).  \
 &emsp; ﻿Sight aligned with M16 Barrels (Tall)  \
 &emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
+
 > [!WARNING]
-> KNOWN ISSUE: SUSATs will steal the lasers from lasguns.
 > 
+> KNOWN ISSUE: SUSATs will steal the lasers from lasguns.
 
 - **Soviet PU Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; ﻿﻿Uses German #1 style reticle. The one that looks like a T
@@ -172,10 +182,13 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿Two magazines taped together. It has options for the extra mag to be on the left/right and flipped or not.
 - **Mag Assists**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; ﻿﻿Based on the Magpul magazine pulls
+
 > [!NOTE]
+> 
 > These things are absolutely cursed and only exist by sticking to the final bullet in the magazine. This means the magpul will move as you shoot the gun lmfao.
 >
 > Due for a rework but I kinda don't care rn.
+
 - **Plasma Magazines**: Helbore Lasguns  \
 &emsp; ﻿﻿Literally just the magazines from the plasmagun.  \
 &emsp; ﻿﻿Variants for just being stuck directly into the receiver and for being attached to a smaller magazine (which doesn't work in-game but shows up in previews)
@@ -183,7 +196,9 @@ These can get super janky when using non-default parts so watch out.
 ## Flashlights
 - **Trigger Guard Laser**: Heavy Laspistols, Quickdraw Stub Revolvers  \
 &emsp; (WIP) Moves the laser pointer in front of the trigger guard.
+
 > [!NOTE]
+> 
 ﻿> The lasers will NOT work unless you modify files in weapon customization manually. By default, they appear as flashlights. I'll try and see if there's a better way of doing this.
 
 ## Heads
@@ -208,6 +223,7 @@ These can get super janky when using non-default parts so watch out.
 ## Pommels
 - **Shovel Handles**: Sapper Shovels  \
 &emsp; ﻿﻿D-Ring handles and T-Handles mostly based on E-Tools
+
 > [!WARNING]
 > ﻿KNOWN ISSUE: Note that these only work on some head/grip combinations, and it's different for each pommel.
 > 
@@ -216,7 +232,9 @@ These can get super janky when using non-default parts so watch out.
 ## Front Guard
 - **Front Guard**: Combat Blades  \
 ﻿&emsp; ﻿New slot. Curved hilt in front of the grip to protect your fingers.  \
-&emsp; ﻿﻿Includes knuckle duster variants, where you have 1-4 small guards in front. 
+&emsp; ﻿﻿Includes knuckle duster variants, where you have 1-4 small guards in front.
+
+</details>
 
 # FAQ
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
