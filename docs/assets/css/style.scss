@@ -13,12 +13,12 @@
     --color-collapsible-content-background: #3f6391;
     --color-clicked-button-background: #ccc;
 }
-/* Conditional styling */
+/* Conditional styling 
 @media (prefers-color-scheme: light) {
-    /* Re-assign previous variables */
+    /* Re-assign previous variables 
     :root {
         --color-text: rgb(0, 0, 0);
-        --color-background: rgb(255, 254, 205); /* Kinda piss colored */
+        --color-background: rgb(255, 254, 205); /* Kinda piss colored 
         --color-collapsible-content-background: #f1f1f1;
     }
 }
