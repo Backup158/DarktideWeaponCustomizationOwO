@@ -1459,6 +1459,19 @@ function mod.owo_plasma_krieg(variant_id, type)
 
 end
 
+-- Foregrip: Empty Foregrip
+function mod.owo_empty_foregrip(variant_id, type)
+	mod.inject_attachments_owo(variant_id, type or "foregrip", {
+		{id = "owo_foregrip_empty", name = "Empty Foregrip"},
+	})
+	mod.inject_models(variant_id, {
+		owo_foregrip_empty = {
+			model = "", type = type or "foregrip", 
+			mesh_move = false, parent = "receiver",
+		},
+	})
+end
+
 -- Foregrip: Tactical Foregrips
 function mod.owo_tactical_foregrip(variant_id, type)
 	mod.inject_attachments_owo(variant_id, "foregrip" or type, {
