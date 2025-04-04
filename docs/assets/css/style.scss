@@ -3,6 +3,7 @@
 @import "{{ site.theme }}";
 /* "{{ site.theme }}" = Your theme name */
 /* Eg: @import 'jekyll-theme-cayman'; */
+/* https://github.com/pages-themes/slate/blob/master/_sass/jekyll-theme-slate.scss */
 
 /* Your css rules goes after this */
 /* Dark Mode */
@@ -24,6 +25,11 @@
 }
 /* Assign variables to page color and background */
 body {
-    color: var(--color-text);
-    background-color: var(--color-background);
+  box-sizing: border-box;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-size: 16px;
+  font-family: Faustina, Garamond, serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
