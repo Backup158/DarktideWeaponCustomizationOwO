@@ -1,5 +1,5 @@
 url: "https://backup158.github.io/DarktideWeaponCustomizationOwO" # the base hostname & protocol for your site
-title: Darktide Weapon Customization OwO
-description: Documentation for the Warhammer 40,000: Darktide mod Ostracized without Objection (OwO), an add-on to Extended Weapon Customization
-theme: jekyll-theme-slate
+title: "Darktide Weapon Customization OwO"
+description: "Documentation for the Warhammer 40,000: Darktide mod Ostracized without Objection (OwO), an add-on to Extended Weapon Customization"
+theme: 'jekyll-theme-slate'
 markdown: GFM
