@@ -1,0 +1,29 @@
+---
+---
+@import 'jekyll-theme-slate';
+/* "{{ site.theme }}" = Your theme name */
+/* Eg: @import 'jekyll-theme-cayman'; */
+
+/* Your css rules goes after this */
+/* Dark Mode */
+/* Globals for text and background color. Defaults to Dark */
+:root {
+    --color-text: rgb(255, 255, 255);
+    --color-background: rgb(27, 40, 56);
+    --color-collapsible-content-background: #3f6391;
+    --color-clicked-button-background: #ccc;
+}
+/* Conditional styling */
+@media (prefers-color-scheme: light) {
+    /* Re-assign previous variables */
+    :root {
+        --color-text: rgb(0, 0, 0);
+        --color-background: rgb(255, 254, 205); /* Kinda piss colored */
+        --color-collapsible-content-background: #f1f1f1;
+    }
+}
+/* Assign variables to page color and background */
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
