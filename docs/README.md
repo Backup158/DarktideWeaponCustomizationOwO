@@ -1,3 +1,6 @@
+# README Notice
+This readme is mostly outdated in terms of which parts are available. It's too much hassle to go between BBCode and Markdown.
+
 # OwO? What is this?
 Addon plugin for the Extended Weapon Customization mod for *Warhammer 40,000: Darktide*. Adds various parts, typically inspired by history. Intended mainly for use in screenshots, with in-game performance secondary to appearances. 
 
