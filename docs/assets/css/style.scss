@@ -24,19 +24,19 @@ $color-clicked-button-background: #ccc;
 }
 /* Assign variables to page color and background */
 body {
-  box-sizing: border-box;
   color: $color-text;
   background: $color-background;
-  font-size: 16px;
+  font-size: 24px;
   font-family: Faustina, Garamond, serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+}
+
+/* Title colors for Dark theme */
+h1, h2, h3, h4, h5, h6 {
+  color:$color-text;
+  font-family: Faustina, Garamond, serif;
 }
 
 .inner {
-  position:relative;
   max-width:80%;
   background: $color-background;
-  padding:20px 10px;
-  margin:0 auto
 }
