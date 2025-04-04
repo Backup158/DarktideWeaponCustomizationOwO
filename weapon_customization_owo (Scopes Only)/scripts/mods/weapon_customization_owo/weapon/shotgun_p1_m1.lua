@@ -15,8 +15,6 @@ local this_variant = "shotgun_p1_m1" -- Combat Shotgun
 -- ############################################
 if not mod.syn then
     mod.wc.attachment[this_variant].sight_2 = {}
-    mod.wc.attachment[this_variant].stock_2 = {}
-    mod.wc.attachment[this_variant].stockac = {}
 end
 
 -- ############################################
@@ -24,8 +22,6 @@ end
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_alt_viewmodel(this_variant)
-mod.owo_heterosexual_foregrip(this_variant, "stock") -- Reusing my foregrips list as the regular stock/grip
-mod.owo_tactical_stock(this_variant, "stock_2")
 
 -- ############################################
 -- Inject Fixes

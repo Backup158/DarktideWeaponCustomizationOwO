@@ -588,14 +588,14 @@ end
 
 -- Muzzle: Suppressor
 function mod.owo_suppressor(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
+	mod.inject_attachments_owo(variant_id, type or "muzzle", {
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"},
 		{id = "owo_suppressor_03", name = "OwO Suppressor 3 (PBS-1)"},
 		{id = "owo_suppressor_04", name = "OwO Suppressor 4"},
 		{id = "owo_suppressor_05", name = "OwO Suppressor 5"},
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
+	mod.inject_attachments_owo(variant_id, "muzzle_2", {
 		{id = "owo_suppressor_helper_empty", name = "Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
 		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true},
@@ -657,10 +657,10 @@ end
 
 -- Muzzle: Lasgun Condom
 function mod.owo_condom(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
+	mod.inject_attachments_owo(variant_id, type or "muzzle", {
 		{id = "owo_condom_01", name = "OwO Lasbarrel Condom", no_randomize = true}
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
+	mod.inject_attachments_owo(variant_id, "muzzle_2", {
 		{id = "owo_condom_helper_empty", name = "Condom'vesa Empty", no_randomize = true},
 		{id = "owo_condom_helper_01", name = "OwO Condom'vesa", no_randomize = true}
 	})
@@ -684,24 +684,24 @@ end
 -- Muzzle: Muzzle Brake
 --	AMR brake based on Barrett M82
 function mod.owo_muzzle_brake(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "muzzle" or type, {
+	mod.inject_attachments_owo(variant_id, type or "muzzle", {
 		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Brake AMR", no_randomize = true},
 		{id = "owo_muzzle_brake_02", name = "OwO Muzzle Brake AMR (Big)", no_randomize = true},
 		{id = "owo_muzzle_brake_03", name = "OwO Muzzle Brake AMR (BIG)", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle_2" or type, {
+	mod.inject_attachments_owo(variant_id, "muzzle_2", {
 		{id = "owo_muzzle_brake_helper_01_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_01_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle_3" or type, {
+	mod.inject_attachments_owo(variant_id, "muzzle_3", {
 		{id = "owo_muzzle_brake_helper_02_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_02_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle_4" or type, {
+	mod.inject_attachments_owo(variant_id, "muzzle_4", {
 		{id = "owo_muzzle_brake_helper_03_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_03_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "muzzle_5" or type, {
+	mod.inject_attachments_owo(variant_id, "muzzle_5", {
 		{id = "owo_muzzle_brake_helper_04_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_04_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
@@ -770,7 +770,7 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 		what the FUCK?
 	
 	]]
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+	mod.inject_attachments_owo(variant_id, type or "barrel", {
 		--{id = "owo_bistol_sg_base_01", name = "OwO Shotgun Shorty 1"},
 		{id = "owo_bistol_sg_base_04", name = "OwO Shotgun Shorty 1 (4)"},
 		{id = "owo_bistol_sg_base_05", name = "OwO Shotgun Shorty 2 (5)"},
@@ -782,7 +782,7 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 		{id = "owo_bistol_sg_base_06_s", name = "OwO Sg Super Shorty 3 (6)"},
 		{id = "owo_bistol_sg_base_08_s", name = "OwO Sg Super Shorty 4 (8)"},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
 		{id = "owo_bistol_shotgun_barrel_short_empty", name = "Empty Barrel Shroud", no_randomize = true},
 		--{id = "owo_bistol_shotgun_barrel_short_01", name = "OwO Shotgun Shorty 1", no_randomize = true},
 		{id = "owo_bistol_shotgun_barrel_short_04", name = "OwO Shotgun Shorty 2", no_randomize = true},
@@ -891,7 +891,7 @@ end
 function mod.owo_revolver_shotgun_barrel(variant_id, type)
 	--[[ what the FUCK is wrong with barrels 1 and 9
 	]]
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+	mod.inject_attachments_owo(variant_id, type or "barrel", {
 		--{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel (1)"},
 		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel (4)"},
 		{id = "owo_revolver_shotgun_barrel_base_04b", name = "OwO Shotgun Barrel (4b)"},
@@ -906,7 +906,7 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 		{id = "owo_revolver_shotgun_barrel_base_06_l", name = "OwO SG Long (6)"},
 		{id = "owo_revolver_shotgun_barrel_base_08_l", name = "OwO SG Long (8)"},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
 		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelshroud"},
 		--{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1 (1)"},
 		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 1 (4)"},
@@ -996,7 +996,7 @@ end
 
 -- Barrel: Dreg Gunner barrel
 function mod.owo_dreg_gunner_barrel(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+	mod.inject_attachments_owo(variant_id, type or "barrel", {
 		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
@@ -1075,7 +1075,7 @@ end
 -- Barrel: M16 barrels
 -- 		Autoguns
 function mod.owo_m16_barrel(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+	mod.inject_attachments_owo(variant_id, type or "barrel", {
 		{id = "owo_m16_barrel_a1", name = "OwO M16a1 Barrel 1"},
 		{id = "owo_m16_barrel_a1_02", name = "OwO M16a1 Barrel 2"},
 		{id = "owo_m16_barrel_a2", name = "OwO M16a2 Barrel"},
@@ -1086,7 +1086,7 @@ function mod.owo_m16_barrel(variant_id, type)
 		{id = "owo_m16_barrel_n_a1_02", name = "OwO M16a1 Barrel (No Post) 2"},
 		{id = "owo_m16_barrel_n_a2", name = "OwO M16a2 Barrel (No Post)"},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
 		{id = "owo_m16_empty", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a1", name = "OwO M16a1 Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a1_02", name = "OwO M16a2 Barrel Shroud", no_randomize = true},
@@ -1252,12 +1252,12 @@ end
 
 -- Barrel: Wooden Helbore
 function mod.owo_wood_krieg(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+	mod.inject_attachments_owo(variant_id, type or "barrel", {
 		{id = "owo_wood_krieg_01", name = "OwO Wooden Helbore 1 (2)"},
 		{id = "owo_wood_krieg_02", name = "OwO Wooden Helbore 2 (3)"},
 		{id = "owo_wood_krieg_03", name = "OwO Wooden Helbore 3 (7)"},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
 		{id = "owo_wood_krieg_empty", name = "Empty Barrel", no_randomize = true},
 		{id = "owo_wood_krieg_ac1_01", name = "OwO Wooden Helbore ac1 1", no_randomize = true},
 	})
@@ -1295,7 +1295,7 @@ end
 
 -- Barrel: Plasma Helbore
 function mod.owo_plasma_krieg(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "barrel" or type, {
+	mod.inject_attachments_owo(variant_id, type or "barrel", {
 		{id = "owo_plasma_krieg_01f", name = "OwO Plasma Helbore 1 (2)"},
 		{id = "owo_plasma_krieg_02f", name = "OwO Plasma Helbore 2 (3)"},
 		{id = "owo_plasma_dmr_01", name = "OwO Plasma Lasgun 1"},
@@ -1312,7 +1312,7 @@ function mod.owo_plasma_krieg(variant_id, type)
 		{id = "owo_plasma_sniper_08", name = "OwO Plasma Sniper 8"},
 		{id = "owo_plasma_sniper_09", name = "OwO Plasma Sniper 9"},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroud" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
 		{id = "owo_plasma_krieg_ac0_empty", name = "Empty Barrel", no_randomize = true},
 		{id = "owo_plasma_krieg_ac0_01", name = "OwO Plasma Helbore ac0 1", no_randomize = true},
 	})
@@ -1537,8 +1537,9 @@ function mod.owo_tactical_foregrip(variant_id, type)
 end
 
 -- Foregrip: Heterosexual Foregrips
-function mod.owo_heterosexual_foregrip(variant_id)
-	mod.inject_attachments_owo(variant_id, "foregrip", {
+function mod.owo_heterosexual_foregrip(variant_id, type)
+	current_main_type = type or "foregrip"
+	mod.inject_attachments_owo(variant_id, current_main_type, {
 		{id = "owo_heterosexual_foregrip_grip_01", name = "OwO Straight Grip (SG) 1"},
 		{id = "owo_heterosexual_foregrip_grip_02", name = "OwO SG 2"},
 		{id = "owo_heterosexual_foregrip_grip_03", name = "OwO SG 3"},
@@ -1602,234 +1603,234 @@ function mod.owo_heterosexual_foregrip(variant_id)
 		-- ### Base Parts ###
 		-- Grips 
 		owo_heterosexual_foregrip_grip_01 = {
-			model = _item_ranged.."/grips/grip_02", type = "foregrip", 
+			model = _item_ranged.."/grips/grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_02 = {
-			model = _item_ranged.."/grips/grip_03", type = "foregrip", 
+			model = _item_ranged.."/grips/grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_03 = {
-			model = _item_ranged.."/grips/grip_04", type = "foregrip", 
+			model = _item_ranged.."/grips/grip_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_04 = {
-			model = _item_ranged.."/grips/grip_05", type = "foregrip", 
+			model = _item_ranged.."/grips/grip_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_05 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_06 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_02", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_07 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_03", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_08 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_ak_01", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_09 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_ak_02", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_10 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_ak_03", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_11 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_ak_04", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_12 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_ak_05", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_ak_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_13 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = "foregrip", 
+			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_14 = {
-			model = _item_ranged.."/grips/boltgun_pistol_grip_01", type = "foregrip", 
+			model = _item_ranged.."/grips/boltgun_pistol_grip_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_15 = {
-			model = _item_ranged.."/grips/boltgun_pistol_grip_02", type = "foregrip", 
+			model = _item_ranged.."/grips/boltgun_pistol_grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_16 = {
-			model = _item_ranged.."/grips/boltgun_pistol_grip_03", type = "foregrip", 
+			model = _item_ranged.."/grips/boltgun_pistol_grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_17 = {
-			model = _item_ranged.."/grips/boltgun_rifle_grip_01", type = "foregrip", 
+			model = _item_ranged.."/grips/boltgun_rifle_grip_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_18 = {
-			model = _item_ranged.."/grips/boltgun_rifle_grip_02", type = "foregrip", 
+			model = _item_ranged.."/grips/boltgun_rifle_grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_19 = {
-			model = _item_ranged.."/grips/boltgun_rifle_grip_03", type = "foregrip", 
+			model = _item_ranged.."/grips/boltgun_rifle_grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_20 = {
-			model = _item_ranged.."/grips/boltgun_rifle_grip_04", type = "foregrip", 
+			model = _item_ranged.."/grips/boltgun_rifle_grip_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_21 = {
-			model = _item_ranged.."/grips/lasgun_pistol_grip_01", type = "foregrip", 
+			model = _item_ranged.."/grips/lasgun_pistol_grip_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_22 = {
-			model = _item_ranged.."/grips/lasgun_pistol_grip_02", type = "foregrip", 
+			model = _item_ranged.."/grips/lasgun_pistol_grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_23 = {
-			model = _item_ranged.."/grips/lasgun_pistol_grip_03", type = "foregrip", 
+			model = _item_ranged.."/grips/lasgun_pistol_grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_24 = {
-			model = _item_ranged.."/grips/lasgun_pistol_grip_04", type = "foregrip", 
+			model = _item_ranged.."/grips/lasgun_pistol_grip_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_25 = {
-			model = _item_ranged.."/grips/lasgun_pistol_grip_05", type = "foregrip", 
+			model = _item_ranged.."/grips/lasgun_pistol_grip_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_26 = {
-			model = _item_ranged.."/grips/flamer_rifle_grip_01", type = "foregrip", 
+			model = _item_ranged.."/grips/flamer_rifle_grip_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_27 = {
-			model = _item_ranged.."/grips/flamer_rifle_grip_02", type = "foregrip", 
+			model = _item_ranged.."/grips/flamer_rifle_grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_28 = {
-			model = _item_ranged.."/grips/flamer_rifle_grip_03", type = "foregrip", 
+			model = _item_ranged.."/grips/flamer_rifle_grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_grip_29 = {
-			model = _item_ranged.."/grips/flamer_rifle_grip_04", type = "foregrip", 
+			model = _item_ranged.."/grips/flamer_rifle_grip_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		-- Ogryn
 		owo_heterosexual_foregrip_01 = {
-			model = _item_ranged.."/handles/combat_blade_handle_01", type = "foregrip", 
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_02 = {
-			model = _item_ranged.."/handles/combat_blade_handle_02", type = "foregrip", 
+			model = _item_ranged.."/handles/combat_blade_handle_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_03 = {
-			model = _item_ranged.."/handles/combat_blade_handle_03", type = "foregrip", 
+			model = _item_ranged.."/handles/combat_blade_handle_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_04 = {
-			model = _item_ranged.."/handles/combat_blade_handle_04", type = "foregrip", 
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_05 = {
-			model = _item_ranged.."/handles/combat_blade_handle_05", type = "foregrip", 
+			model = _item_ranged.."/handles/combat_blade_handle_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_06 = {
-			model = _item_ranged.."/handles/combat_blade_handle_06", type = "foregrip", 
+			model = _item_ranged.."/handles/combat_blade_handle_06", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_07 = {
-			model = _item_ranged.."/handles/combat_blade_handle_07", type = "foregrip", 
+			model = _item_ranged.."/handles/combat_blade_handle_07", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_08 = {
-			model = _item_ranged.."/handles/combat_blade_handle_08", type = "foregrip", 
+			model = _item_ranged.."/handles/combat_blade_handle_08", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		-- Dclaw
 		owo_heterosexual_foregrip_09 = {
-			model = _item_melee.."/grips/combat_sword_grip_01", type = "foregrip", 
+			model = _item_melee.."/grips/combat_sword_grip_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_10 = {
-			model = _item_melee.."/grips/combat_sword_grip_02", type = "foregrip", 
+			model = _item_melee.."/grips/combat_sword_grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_11 = {
-			model = _item_melee.."/grips/combat_sword_grip_03", type = "foregrip", 
+			model = _item_melee.."/grips/combat_sword_grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_12 = {
-			model = _item_melee.."/grips/combat_sword_grip_04", type = "foregrip", 
+			model = _item_melee.."/grips/combat_sword_grip_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_13 = {
-			model = _item_melee.."/grips/combat_sword_grip_05", type = "foregrip", 
+			model = _item_melee.."/grips/combat_sword_grip_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_14 = {
-			model = _item_melee.."/grips/combat_sword_grip_06", type = "foregrip", 
+			model = _item_melee.."/grips/combat_sword_grip_06", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		-- Knife 
 		owo_heterosexual_foregrip_knife_01 = {
-			model = _item_melee.."/grips/combat_knife_grip_01", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_02 = {
-			model = _item_melee.."/grips/combat_knife_grip_02", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_03 = {
-			model = _item_melee.."/grips/combat_knife_grip_03", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_04 = {
-			model = _item_melee.."/grips/combat_knife_grip_04", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_05 = {
-			model = _item_melee.."/grips/combat_knife_grip_05", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_06 = {
-			model = _item_melee.."/grips/combat_knife_grip_06", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_06", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_06_fat = {
-			model = _item_melee.."/grips/combat_knife_grip_06", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_06", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_01s = {
-			model = _item_melee.."/grips/combat_knife_grip_01", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_02s = {
-			model = _item_melee.."/grips/combat_knife_grip_02", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_03s = {
-			model = _item_melee.."/grips/combat_knife_grip_03", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_04s = {
-			model = _item_melee.."/grips/combat_knife_grip_04", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_04", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_05s = {
-			model = _item_melee.."/grips/combat_knife_grip_05", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_06s = {
-			model = _item_melee.."/grips/combat_knife_grip_06", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_06", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_heterosexual_foregrip_knife_06s_fat = {
-			model = _item_melee.."/grips/combat_knife_grip_06", type = "foregrip", 
+			model = _item_melee.."/grips/combat_knife_grip_06", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 	})
@@ -1838,7 +1839,7 @@ end
 -- Bayonet: Dreg Gunner bayonet
 --		Brauto/Iag
 function mod.owo_dreg_gunner_bayonet(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
+	mod.inject_attachments_owo(variant_id, type or "bayonet", {
 		{id = "owo_dreg_bayonet_empty", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner Bayonet"},
 
@@ -1877,18 +1878,18 @@ end
 -- Bayonet: M7, Seitengewehr 98 (Butcher's Blade), Épée Baïonnette 1886
 --		Autoguns, Helbores
 function mod.owo_bayonet(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
+	mod.inject_attachments_owo(variant_id, type or "bayonet", {
 		{id = "owo_bayonet_m7_01", name = "OwO M7 Bayonet"},
 		{id = "owo_bayonet_seitengewehr", name = "OwO Seitengewehr 98"},
 		{id = "owo_bayonet_epee", name = "OwO Épée Baïonnette 1886"},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac1", {
 		{id = "owo_bayonet_empty_01", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_bayonet_m7_helper_01", name = "M7 Bayonet Grip", no_randomize = true},
 		{id = "owo_bayonet_seitengewehr_helper_01", name = "Seitengewehr Grip", no_randomize = true},
 		{id = "owo_bayonet_epee_helper_01", name = "Epee Grip", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac2" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac2", {
 		{id = "owo_bayonet_empty_02", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_bayonet_m7_helper_02", name = "M7 Bayonet Lug", no_randomize = true},
 		{id = "owo_bayonet_seitengewehr_helper_02", name = "Seitengewehr Grip bulge", no_randomize = true},
@@ -1960,31 +1961,31 @@ end
 
 -- Bayonet: Underbarrel Grenade Launcher
 function mod.owo_underbarrel_gl(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
+	mod.inject_attachments_owo(variant_id, type or "bayonet", {
 		{id = "owo_m203", name = "OwO M203 Grenade Launcher"},
 		{id = "owo_gp25", name = "OwO GP-25 Grenade Launcher"},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac1", {
 		{id = "owo_underbarrel_gl_empty_01", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_01", name = "OwO M203 ac1", no_randomize = true},
 		{id = "owo_gp25_helper_01", name = "OwO GP25 ac1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac2" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac2", {
 		{id = "owo_underbarrel_gl_empty_02", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_02", name = "OwO M203 ac2", no_randomize = true},
 		{id = "owo_gp25_helper_02", name = "OwO GP25 ac2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac3" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac3", {
 		{id = "owo_underbarrel_gl_empty_03", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_03", name = "OwO M203 ac3", no_randomize = true},
 		{id = "owo_gp25_helper_03", name = "OwO GP25 ac3", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac4" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac4", {
 		{id = "owo_underbarrel_gl_empty_04", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_04", name = "OwO M203 ac4", no_randomize = true},
 		{id = "owo_gp25_helper_04", name = "OwO GP25 ac4", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac5" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac5", {
 		{id = "owo_underbarrel_gl_empty_05", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_gp25_helper_05", name = "OwO GP25 ac5", no_randomize = true},
 	})
@@ -2080,37 +2081,37 @@ end
 -- Bayonet: Underbarrel Shotgun
 --		Knight's Armament Company Masterkey, M26-MASS (Modular Accessory Shotgun System)
 function mod.owo_underbarrel_shotgun(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "bayonet" or type, {
+	mod.inject_attachments_owo(variant_id, type or "bayonet", {
 		{id = "owo_underbarrel_shotgun_01_01", name = "OwO Masterkey"},
 		{id = "owo_underbarrel_shotgun_01", name = "OwO Masterkey (THICC)"},
 		{id = "owo_underbarrel_shotgun_01_02", name = "OwO Masterkey (Mini)"},
 		{id = "owo_underbarrel_shotgun_02", name = "OwO M26-MASS"},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac1" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac1", {
 		{id = "owo_underbarrel_shotgun_empty_01", name = "Empty Bayonetac1", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_01", name = "OwO Masterkey ac1", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_01_02", name = "OwO MASS ac1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac2" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac2", {
 		{id = "owo_underbarrel_shotgun_empty_02", name = "Empty Bayonetac2", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_02", name = "OwO Masterkey ac2", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_02_02", name = "OwO MASS ac2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac3" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac3", {
 		{id = "owo_underbarrel_shotgun_empty_03", name = "Empty Bayonetac3", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_03", name = "OwO Masterkey ac3", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_03_02", name = "OwO MASS ac3", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac4" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac4", {
 		{id = "owo_underbarrel_shotgun_empty_04", name = "Empty Bayonetac4", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_04", name = "OwO Masterkey ac4", no_randomize = true}, -- Trigger
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac5" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac5", {
 		{id = "owo_underbarrel_shotgun_empty_05", name = "Empty Bayonetac5", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_05", name = "OwO Masterkey ac5", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_05_02", name = "OwO MASS ac5", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac6" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac6", {
 		{id = "owo_underbarrel_shotgun_empty_06", name = "Empty Bayonetac6", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_06", name = "OwO Masterkey ac6", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_06_02", name = "OwO MASS ac6", no_randomize = true},
@@ -2535,10 +2536,10 @@ end
 
 -- Grip: Fin Grip
 function mod.owo_fin_grip(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "grip" or type, {
+	mod.inject_attachments_owo(variant_id, type or "grip", {
 		{id = "owo_fin_grip_01", name = "OwO Fin Grip 1"},
 	})
-	mod.inject_attachments_owo(variant_id, "gripac" or type, {
+	mod.inject_attachments_owo(variant_id, "gripac", {
 		{id = "owo_fin_grip2_empty", name = "OwO Fin Grip empty", no_randomize = true},
 		{id = "owo_fin_grip2_01", name = "OwO Fin Grip'vesa 1", no_randomize = true},
 	})
@@ -2569,7 +2570,7 @@ end
 --	Recon
 --	Anti-Material Rifle (AMR, Barrett M82 style)
 function mod.owo_helbore_gripstock(variant_id,type)
-	mod.inject_attachments_owo(variant_id, "stock" or type, {
+	mod.inject_attachments_owo(variant_id, type or "stock", {
 		{id = "owo_gripstock_recon_01", name = "OwO StraightGrip Recon 1"},
 		{id = "owo_gripstock_recon_02", name = "OwO StraightGrip Recon 2"},
 		{id = "owo_gripstock_recon_03", name = "OwO StraightGrip Recon 3"},
@@ -2731,7 +2732,7 @@ end
 
 -- Stock: Tactical Stock
 function mod.owo_tactical_stock(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "stock" or type, {
+	mod.inject_attachments_owo(variant_id, type or "stock", {
 		{id = "owo_tactical_stock_s_01", name = "OwO Skeletal Stock"},
 		{id = "owo_tactical_stock_f_01", name = "OwO Folded 1 (Natural)"},
 		{id = "owo_tactical_stock_f_02", name = "OwO Folded 2 (Natural)"},
@@ -2753,136 +2754,137 @@ function mod.owo_tactical_stock(variant_id, type)
 		{id = "owo_tactical_stock_07l", name = "OwO Folded 7 (Left)"},
 		{id = "owo_tactical_stock_08l", name = "OwO Folded 8 (Left)"},
 	})
-	mod.inject_attachments_owo(variant_id, "stockac" or type, {
+	mod.inject_attachments_owo(variant_id, "stockac", {
 		{id = "owo_tactical_stockac_00",  name = "Empty stockac", no_randomize = true},
 		{id = "owo_tactical_stockac_01",  name = "Folding stock'vesa", no_randomize = true},
 	})
+	current_main_type = type or "stock" 
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_tactical_stock_s_01 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_tactical_stock_f_01 = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_tactical_stock_f_02 = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_tactical_stock_f_03u = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		owo_tactical_stock_01 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_02 = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_03 = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_04 = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_05 = {
-			model = _item_ranged.."/stocks/stock_01", type = "stock", 
+			model = _item_ranged.."/stocks/stock_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_06 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_07 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_08 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_01l = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_02l = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_03l = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_04l = {
-			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_05l = {
-			model = _item_ranged.."/stocks/stock_01", type = "stock", 
+			model = _item_ranged.."/stocks/stock_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_06l = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_07l = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
 			},
 		},
 		owo_tactical_stock_08l = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = "stock", 
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_main_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
 				stockac = "owo_tactical_stockac_01",
@@ -2902,7 +2904,7 @@ end
 
 -- Stock: Kalashnikov Stock
 function mod.owo_kalash_stock(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "stock" or type, {
+	mod.inject_attachments_owo(variant_id, type or "stock", {
 		{id = "owo_kalash_stock_01", name = "OwO Kalashnikov Stock 1"},
 		{id = "owo_kalash_stock_02", name = "OwO Kalashnikov Stock 2"},
 		{id = "owo_kalash_stock_03", name = "OwO Kalashnikov Stock 3"},
