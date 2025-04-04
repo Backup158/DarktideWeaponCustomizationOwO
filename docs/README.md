@@ -1,31 +1,46 @@
-# README Notice
-This readme is mostly outdated in terms of which parts are available. It's too much hassle to go between BBCode and Markdown.
-
 # OwO? What is this?
-Addon plugin for the Extended Weapon Customization mod for *Warhammer 40,000: Darktide*. Adds various parts, typically inspired by history. Intended mainly for use in screenshots, with in-game performance secondary to appearances. 
+Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots. 
 
-**!!!!!**
+> [!WARNING] 
+> Expect alignment issues and performance drops, especially when piled onto a heavy load order. A responsible mod author would spend the time making sure these parts are optimized and are compatibly aligned with all the other pieces. It ain't me.
+> 
+> I've also noticed hitches when opening the inventory/weapon customization menu and on startup.
+> 
+> You have been warned!
 
-**Expect issues and _noticable_ performance drops. A responsible mod author would spend the time making sure these parts are compatibly aligned with all the other pieces and optimized. I ain't that kind of author.**
+Because of misaligned sights, I recommend using [Crosshair Remap (Continued)](https://www.nexusmods.com/warhammer40kdarktide/mods/253) as a workaround. Error 2001/2014s when entering the Mourningstar can be kinda avoided by directly accessing the mission board through [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) or some other equivalent, but it won't save you from getting disconnected at the start of a mission. I've only had trouble connecting at the start; once you're in, you're probably in until the end.
 
-I've gotten a lot more Error 2014s once I added this. You have been warned!
-
-**!!!!!**
-
-Report alignment issues and I might fix it if I'm not busy (rotting in bed).
+Report alignment issues and I might fix it if I'm not busy (lying umder blamket ^u^). 
 
 Parts are prefixed with `OwO`.
 
-# Requirements
+# Installation
+## Requirements
 [MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) by Grasmann
 
 [Extended Weapon Customization](https://www.nexusmods.com/warhammer40kdarktide/mods/277) by Grasmann
 
-[The Syndonai Edits Weapon Customization Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/290) by Syndonai
-
 [MT Weapon Customization Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/276) by Random Account/MT607
 
-Install per instructions on the [DMF Documentation](https://dmf-docs.darkti.de/#/installing-mods)
+Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
+## Load Order
+Place this below weapon customization and above the MT plugin and the Syn's edits plugin. Only the **bolded** files are necessary.
+
+> **﻿weapon_customization**
+> 
+> for_the_drip
+> 
+> weapon_customization_no_gun
+> 
+> **weapon_customization_owo**
+> 
+> weapon_customization_syn_edits
+> 
+> **weapon_customization_mt_stuff**
+
+If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunch of errors and I will laugh at you for not reading the description. You'll also miss out on the 2 times I aligned something involving the other plugins' parts.
+> [!NOTE]
+> To AML users: Due to (what I believe to be) limitations with AML, load order can be inconsistent and throw errors. Trying to find a workaround at the moment.
 
 # ***Notices youw pawts*** (Parts I added)
 Part: Weapons available
