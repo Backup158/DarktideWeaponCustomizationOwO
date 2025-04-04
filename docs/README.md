@@ -135,13 +135,14 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿﻿ACOG doesn't have bullet drop compensation crosshair ticks.  \
 &emsp; ﻿&emsp; ﻿Uses the default Darktide reflex pictures, equipped through sight_2 options.  \
 &emsp; ﻿&emsp; ﻿Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.  \
-&emsp; ﻿﻿﻿SUSAT uses the German post, obelisk-shaped reticle.
-﻿> [!WARNING]
-> KNOWN ISSUE: These will steal the lasers from lasguns.
-
+&emsp; ﻿﻿﻿SUSAT uses the German post, obelisk-shaped reticle.  \
 &emsp; ﻿﻿Versions to aim through the main sight and the red dot (top).  \
 &emsp; ﻿Sight aligned with M16 Barrels (Tall)  \
 &emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
+> [!WARNING]
+> KNOWN ISSUE: SUSATs will steal the lasers from lasguns.
+> 
+
 - **Soviet PU Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; ﻿﻿Uses German #1 style reticle. The one that looks like a T
 
@@ -171,7 +172,7 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿Two magazines taped together. It has options for the extra mag to be on the left/right and flipped or not.
 - **Mag Assists**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; ﻿﻿Based on the Magpul magazine pulls
-> [!Note]
+> [!NOTE]
 > These things are absolutely cursed and only exist by sticking to the final bullet in the magazine. This means the magpul will move as you shoot the gun lmfao.
 >
 > Due for a rework but I kinda don't care rn.
