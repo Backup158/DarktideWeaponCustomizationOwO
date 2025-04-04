@@ -4032,7 +4032,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
-				sightac7 = "owo_susat_ac7_01", sight_2 = "reflex_scopehelper_01",
+				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
 				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4047,7 +4047,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
-				sightac7 = "owo_susat_ac7_01", sight_2 = "reflex_scopehelper_01",
+				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
 				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4077,7 +4077,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sightac7 = "owo_susat_ac7_01", sight_2 = "reflex_scopehelper_01",
+				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
 				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4093,7 +4093,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sightac7 = "owo_susat_ac7_01", sight_2 = "reflex_scopehelper_01",
+				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
 				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},

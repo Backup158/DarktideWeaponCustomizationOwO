@@ -103,7 +103,7 @@ mod.owo_kalash_stock(this_variant)
 -- ############################################
 -- Inject Fixes
 -- ############################################
-local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06"
+local _owo_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06|owo_reticle_helper_invisible"
 local _owo_all_eotech_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss_z1|owo_holosight_01_03ss"
 local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
 local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
@@ -431,10 +431,8 @@ mod.mt.inject_fixes(this_variant, {
         muzzle_2 =      { offset = true,   position = vector3_box(0, 0.52, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
     },
     -- the skinny bayonet. sits on muzzle
-    {	dependencies = { "owo_suppressor_01|owo_suppressor_02",
-            "autogun_bayonet_03"
-        },
-        bayonet = { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85) },
+    {	dependencies =  { "owo_suppressor_01|owo_suppressor_02", "autogun_bayonet_03" },
+        bayonet =       { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85) },
     },
 
     -- ######
@@ -449,10 +447,8 @@ mod.mt.inject_fixes(this_variant, {
         muzzle_2 =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
     },
     -- the skinny bayonet. sits on muzzle
-    {	dependencies =  { "owo_condom_01",
-            "autogun_bayonet_03"
-        },
-        bayonet = { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
+    {	dependencies =  { "owo_condom_01", "autogun_bayonet_03" },
+        bayonet =       { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
     },
 
     -- ######
@@ -877,7 +873,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Main Sight body
     --      Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
     {   dependencies =  { _owo_no_magnifier_eotech_sights,
-            _alternative_viewmodels_sight_2s,
+            _owo_sight_2s,
         },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
@@ -888,7 +884,7 @@ mod.mt.inject_fixes(this_variant, {
     --      Holo + Magnifier puts the holo a bit more forwards
     --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
     {   dependencies =      { _owo_magnifier_eotech_sights,
-            _alternative_viewmodels_sight_2s,
+            _owo_sight_2s,
         },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
@@ -919,7 +915,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Vortex Razor
     --  -------------------------------------------
     --  Patch for alt sights
-    {   dependencies =  { _owo_all_vortex_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies =  { _owo_all_vortex_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  Short Variant
@@ -991,7 +987,7 @@ mod.mt.inject_fixes(this_variant, {
     --  ACOG only
     --      Main sight and reticle
     --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-    {   dependencies =  { _owo_forwards_acog_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies =  { _owo_forwards_acog_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =  { _owo_forwards_acog_sights },
@@ -1000,7 +996,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Main sight and reticle (backwards)
     --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-    {   dependencies =  { _owo_backwards_acog_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies =  { _owo_backwards_acog_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =  { _owo_backwards_acog_sights },

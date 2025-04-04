@@ -46,7 +46,7 @@ mod.owo_telescopic_sight(this_variant, "sight")
 -- ############################################
 -- Inject Fixes
 -- ############################################
-local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06"
+local _owo_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06|owo_reticle_helper_invisible"
 local _owo_all_eotech_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss_z1|owo_holosight_01_03ss"
 local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
 local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
@@ -116,7 +116,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Main Sight body
     --      Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-    {   dependencies = { _owo_no_magnifier_eotech_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies = { _owo_no_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { _owo_no_magnifier_eotech_sights },
@@ -125,7 +125,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-    {   dependencies = { _owo_magnifier_eotech_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies = { _owo_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies = { _owo_magnifier_eotech_sights },
@@ -155,7 +155,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Vortex Razor
     --  -------------------------------------------
     --  Patch for alt sights
-    {   dependencies =  { _owo_all_vortex_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies =  { _owo_all_vortex_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  Short Variant
@@ -229,7 +229,7 @@ mod.mt.inject_fixes(this_variant, {
     --      Main sight and reticle
     --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
     {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
-            _alternative_viewmodels_sight_2s,
+            _owo_sight_2s,
         },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
@@ -240,7 +240,7 @@ mod.mt.inject_fixes(this_variant, {
     --      Main sight and reticle (backwards)
     --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
-            _alternative_viewmodels_sight_2s,
+            _owo_sight_2s,
         },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },

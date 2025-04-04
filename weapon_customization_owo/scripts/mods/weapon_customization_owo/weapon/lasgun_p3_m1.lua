@@ -54,7 +54,7 @@ mod.owo_telescopic_sight(this_variant)
 -- ############################################
 -- Inject Fixes
 -- ############################################
-local _alternative_viewmodels_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06"
+local _owo_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06|owo_reticle_helper_invisible"
 local _syn_volleygun_receivers = "volley_lasgun_receiver_01|volley_lasgun_receiver_02|volley_lasgun_receiver_03|volley_lasgun_receiver_01b|volley_lasgun_receiver_02b|volley_lasgun_receiver_03b"
 local _owo_all_eotech_sights = "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03|owo_holosight_01_01ss|owo_holosight_01_02ss_z1|owo_holosight_01_03ss"
 local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
@@ -658,7 +658,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Syn's Hellgun Receivers
     --          Alt vm patch
-    {   dependencies =      { _owo_no_magnifier_eotech_sights, _alternative_viewmodels_sight_2s, _syn_volleygun_receivers, },
+    {   dependencies =      { _owo_no_magnifier_eotech_sights, _owo_sight_2s, _syn_volleygun_receivers, },
         sight_2 =           { parent = "sight", position = vector3_box(0, 0, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =      { _owo_no_magnifier_eotech_sights, _syn_volleygun_receivers, },
@@ -666,7 +666,7 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { parent = "sight", position = vector3_box(0, 0, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     },
     --      Else, Recon Receiver
-    {   dependencies =      { _owo_no_magnifier_eotech_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies =      { _owo_no_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, 0, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =      { _owo_no_magnifier_eotech_sights, },
@@ -683,7 +683,7 @@ mod.mt.inject_fixes(this_variant, {
         sight =             { offset = true, position = vector3_box(0, 0.16, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
     },
     -- Magnifier Alignment
-    {   dependencies =      { _owo_magnifier_eotech_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies =      { _owo_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =      { _owo_magnifier_eotech_sights, },
@@ -706,7 +706,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Vortex Razor
     --  -------------------------------------------
     --  Patch for alt sights
-    {   dependencies =  { _owo_all_vortex_sights, _alternative_viewmodels_sight_2s, },
+    {   dependencies =  { _owo_all_vortex_sights, _owo_sight_2s, },
         sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  Short Variant
@@ -818,8 +818,11 @@ mod.mt.inject_fixes(this_variant, {
     },
      -- For whatever fucking reason, the recon body won't apply position transformations to sight_2
     --      Syn's Hellgun Receivers
-    {   dependencies =  { _owo_forwards_acog_sights, _syn_volleygun_receivers, _alternative_viewmodels_sight_2s, },
-        sight_2 =       { offset = false, position = vector3_box(0, 0.058, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    {   dependencies =  { _owo_forwards_acog_sights, _syn_volleygun_receivers, _owo_sight_2s, },
+        lens =          { offset = true, parent = "sight", position = vector3_box(0, 0.028, 0.0285), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+        lens_2 =        { offset = true, parent = "sight", position = vector3_box(0, -0.1, 0.0300), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        --sight_2 =       { offset = false, position = vector3_box(0, 0.058, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        sight_2 =       { offset = false, position = vector3_box(0, -0.05, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
 	{   dependencies =  { _owo_forwards_acog_sights, _syn_volleygun_receivers, },
         sight =         { offset = true, position = vector3_box(0, 0.108, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -828,7 +831,7 @@ mod.mt.inject_fixes(this_variant, {
 	    lens_2 =        { offset = true, parent = "sight", position = vector3_box(0, 0.006, 0.0540), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =       { offset = true, position = vector3_box(0, 0.058, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
-    {   dependencies =  { _owo_backwards_acog_sights, _syn_volleygun_receivers, _alternative_viewmodels_sight_2s, },
+    {   dependencies =  { _owo_backwards_acog_sights, _syn_volleygun_receivers, _owo_sight_2s, },
         sight_2 =       { offset = true, position = vector3_box(0, 0.0, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =  { _owo_backwards_acog_sights, _syn_volleygun_receivers, },
@@ -836,7 +839,7 @@ mod.mt.inject_fixes(this_variant, {
         rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), automatic_equip = { rail = "rail_01"}, },
         lens =          { offset = true, parent = "sight", position = vector3_box(0, 0.064, 0.0505), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =        { offset = true, parent = "sight", position = vector3_box(0, -0.052, 0.0540), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =       { offset = true, position = vector3_box(0, 0.0, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_2 =       { offset = true, position = vector3_box(0, 0.0, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --      Else: Recon Body
     --          Recon rail already put acog forwards
@@ -897,7 +900,7 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.002), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", _syn_volleygun_receivers, },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.024), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.013), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Else: Recon Receiver
 	{   dependencies =      { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1",},
@@ -914,23 +917,23 @@ mod.mt.inject_fixes(this_variant, {
     --      Syn's Hellgun Receivers
     --          ACOG
     {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top", _syn_volleygun_receivers, },
-        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0), },
+        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.073), rotation = vector3_box(0, 0, 0), },
     },
     --          SUSAT
     {   dependencies =      { "owo_susat_02_top", _syn_volleygun_receivers, },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), },
-        no_scope_offset =   { offset = true, position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), },
+        --scope_offset =      { offset = true, position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0, 0.2, -0.05), rotation = vector3_box(0, 0, 0), },
     },
     --      Else: Recon Receiver
     --          ACOG
 	{   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top", },
-        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
+        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
     },
     --          SUSAT
     {   dependencies =      { "owo_susat_02_top", },
-        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
+        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
     },
     
