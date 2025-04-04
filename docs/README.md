@@ -225,6 +225,7 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿D-Ring handles and T-Handles mostly based on E-Tools
 
 > [!WARNING]
+> 
 > ﻿KNOWN ISSUE: Note that these only work on some head/grip combinations, and it's different for each pommel.
 > 
 > Shovels are cursed (not really I'm just a lazy bitch).
