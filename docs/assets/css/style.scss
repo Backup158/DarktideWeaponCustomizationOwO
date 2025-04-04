@@ -8,12 +8,11 @@
 /* Your css rules goes after this */
 /* Dark Mode */
 /* Globals for text and background color. Defaults to Dark */
-:root {
-    --color-text: rgb(255, 255, 255);
-    --color-background: rgb(27, 40, 56);
-    --color-collapsible-content-background: #3f6391;
-    --color-clicked-button-background: #ccc;
-}
+$color-text: rgb(255, 255, 255);
+$color-background: rgb(27, 40, 56);
+$color-collapsible-content-background: #3f6391;
+$color-clicked-button-background: #ccc;
+
 /* Conditional styling 
 @media (prefers-color-scheme: light) {
     /* Re-assign previous variables 
@@ -26,8 +25,8 @@
 /* Assign variables to page color and background */
 body {
   box-sizing: border-box;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: $color-text;
+  background: $color-background;
   font-size: 16px;
   font-family: Faustina, Garamond, serif;
   line-height: 1.5;
