@@ -32,3 +32,11 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
+
+.inner {
+  position:relative;
+  max-width:80%;
+  background: $color-background;
+  padding:20px 10px;
+  margin:0 auto
+}
