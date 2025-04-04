@@ -81,64 +81,66 @@ Parts are prefixed with `OwO` in the customization menu.
 &emsp; ﻿﻿Foregrips perpendicular to the barrel, which will clip with your off hand (this is why the MT plugin uses slanted foregrips).
 
 ## Bayonets
-- **Dreg Gunner Bayonet**: Infantry/Braced/Vigilant Autoguns
+- **Dreg Gunner Bayonet**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; ﻿﻿Only really aligned with the Dreg Gunner Barrel
-- **Historical Pack**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns.
+- **Historical Pack**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns.  \
 &emsp; ﻿﻿Based on US M7 Bayonet, German Seitengewehr 98, and French Épée-Baïonnette Modèle 1888
-- **Underbarrel Grenade Launchers**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns
+- **Underbarrel Grenade Launchers**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
 &emsp; ﻿﻿Based on M203 and GP25
 > [!WARNING]
 > ﻿KNOWN ISSUE: Both variants will steal muzzle flashes from infantry autoguns
-- **Underbarrel Shotguns**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns
-&emsp; ﻿﻿Based on the Knight's Armament Company Masterkey and the M26-MASS (Modular Accessory Shotgun System)
+- **Underbarrel Shotguns**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
+&emsp; ﻿﻿Based on the Knight's Armament Company Masterkey and the M26-MASS (Modular Accessory Shotgun System)  \
 &emsp; ﻿﻿Masterkey includes smaller and larger variants
 > [!WARNING]
 > ﻿KNOWN ISSUE: Both variants sometimes steal muzzle flashes from bullet-based weapons
 
 ## Receivers
 These can get super janky when using non-default parts so watch out.
-- **Vertically Challenged Bolter Receiver**: Spearhead Boltgun
+- **Vertically Challenged Bolter Receiver**: Spearhead Boltgun  \
 &emsp; ﻿Makes the gun and magazine vertically shorter. This one is just janky all around. Use with the 'Cadia' Complaint grips from the MT plugin.
-- **Bolt Action Helbore Receivers**: Helbore Lasguns
+- **Bolt Action Helbore Receivers**: Helbore Lasguns  \
 &emsp; ﻿﻿Adds a grip to the back to mimic a bolt
-- **MAS-49 Helbore Receivers**: Helbore Lasguns
+- **MAS-49 Helbore Receivers**: Helbore Lasguns  \
 &emsp; ﻿﻿Makes the rear blockier and metallic... er
-- **Massive Slide**: Heavy Laspistols
+- **Massive Slide**: Heavy Laspistols  \
 &emsp; ﻿﻿(WIP) Makes the top a giant slide. Moves magazine inside the grip (with a little bulge :3). Be warned when using this because I only spent an hour before deciding I didn't care enough.
 > [!WARNING]
 > ﻿KNOWN ISSUE: Has a random magazine in first person
-﻿Fallout 4 10mm lookin ass mf
+
+&emsp; ﻿﻿Fallout 4 10mm lookin ass mf
 
 ## Sights
-- Sight_2, **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers
-&emsp; ﻿﻿Equipped in the helper sight section, these change how you hold the gun while ADSing, but keeping the physical appearance of the scope on your gun.
+- Sight_2, **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers  \
+&emsp; ﻿﻿Equipped in the helper sight section, these change how you hold the gun while ADSing, but keeping the physical appearance of the scope on your gun.  \
 &emsp; ﻿﻿Point Shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim
-- **Ladder Aperture Sights**: Helbore Lasguns
-&emsp; ﻿﻿Based on WWI style iron sights. No front posts though so good luck aiming with just the U notch.
+- **Ladder Aperture Sights**: Helbore Lasguns  \
+&emsp; ﻿﻿Based on WWI style iron sights. No front posts though so good luck aiming with just the U notch.  \
 &emsp; ﻿﻿Includes very shoddily made MAS49 inspired sights. These look ugly as sin since the receiver is so wide and I'm too lazy to resize them.
-- **AK Irons**: Infantry/Braced/Vigilant Autoguns
-&emsp; ﻿﻿Adjustable rear notch sight
-&emsp; ﻿﻿Aligned for the long Braced Autogun barrel with the Infantry/Braced receiver
+- **AK Irons**: Infantry/Braced/Vigilant Autoguns  \
+&emsp; ﻿﻿Adjustable rear notch sight  \
+&emsp; ﻿﻿Aligned for the long Braced Autogun barrel with the Infantry/Braced receiver  \
 &emsp; ﻿﻿Includes variant with dust cover (that I wish I could make wider). I also left two scuffed variants that I made before I realize there was already an elevation ladder in the game lmao.
 - **M16 Carry Handle Irons**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; ﻿﻿Sight aligned with M16 Barrels (Tall). Versions with and without the rear elevation wheel since I don't think a1's have them.
-- **Holographic Sights with Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Snubnosed Revolvers
-&emsp; ﻿﻿Based on EOTech HWS and Vortex Razor AMG.
-&emsp; ﻿﻿Adds standalone holographic sight, holo with magnifier to the side, and holo with magnifier lined up (with options for 2 zoom levels).
-&emsp; ﻿﻿﻿You can choose all 3 sight pictures by using the sight_2 options from the MT Plugin.
-&emsp; ﻿﻿﻿Holo with magnifier lined up includes variants for zoom.
-﻿﻿&emsp; ﻿Includes short variant that doesn't clip with the receiver, but blocks more of the sight picture.
+- **Holographic Sights with Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Snubnosed Revolvers  \
+&emsp; ﻿﻿Based on EOTech HWS and Vortex Razor AMG.  \
+&emsp; ﻿﻿Adds standalone holographic sight, holo with magnifier to the side, and holo with magnifier lined up (with options for 2 zoom levels).  \
+&emsp; ﻿﻿﻿You can choose all 3 sight pictures by using the sight_2 options from the MT Plugin.  \
+&emsp; ﻿﻿﻿Holo with magnifier lined up includes variants for zoom.  \
+﻿﻿&emsp; ﻿Includes short variant that doesn't clip with the receiver, but blocks more of the sight picture.  \
 &emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
-- **Telescopic Sights with Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Snubnosed Revolvers
-&emsp; ﻿﻿Adds standalone ACOG sight and SUSAT sight. Includes variants for different zoom and with RDS stacked on top.
-&emsp; ﻿﻿﻿ACOG doesn't have bullet drop compensation crosshair ticks.
-&emsp; ﻿&emsp; ﻿Uses the default Darktide reflex pictures, equipped through sight_2 options.
-&emsp; ﻿&emsp; ﻿Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.
+- **Telescopic Sights with Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Snubnosed Revolvers  \
+&emsp; ﻿﻿Adds standalone ACOG sight and SUSAT sight. Includes variants for different zoom and with RDS stacked on top.  \
+&emsp; ﻿﻿﻿ACOG doesn't have bullet drop compensation crosshair ticks.  \
+&emsp; ﻿&emsp; ﻿Uses the default Darktide reflex pictures, equipped through sight_2 options.  \
+&emsp; ﻿&emsp; ﻿Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.  \
 &emsp; ﻿﻿﻿SUSAT uses the German post, obelisk-shaped reticle.
-﻿>[!WARNING]
+﻿> [!WARNING]
 > KNOWN ISSUE: These will steal the lasers from lasguns.
-&emsp; ﻿﻿Versions to aim through the main sight and the red dot (top).
-&emsp; ﻿Sight aligned with M16 Barrels (Tall)
+
+&emsp; ﻿﻿Versions to aim through the main sight and the red dot (top).  \
+&emsp; ﻿Sight aligned with M16 Barrels (Tall)  \
 &emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
 - **Soviet PU Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; ﻿﻿Uses German #1 style reticle. The one that looks like a T
@@ -178,10 +180,9 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿Variants for just being stuck directly into the receiver and for being attached to a smaller magazine (which doesn't work in-game but shows up in previews)
 
 ## Flashlights
-- **Trigger Guard Laser**: Heavy Laspistols, Quickdraw Stub Revolvers
-> [!INFORMATION]
-> ﻿(WIP) Moves the laser pointer in front of the trigger guard.
-> 
+- **Trigger Guard Laser**: Heavy Laspistols, Quickdraw Stub Revolvers  \
+&emsp; (WIP) Moves the laser pointer in front of the trigger guard.
+> [!NOTE]
 ﻿> The lasers will NOT work unless you modify files in weapon customization manually. By default, they appear as flashlights. I'll try and see if there's a better way of doing this.
 
 ## Heads
