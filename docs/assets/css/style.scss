@@ -40,6 +40,8 @@ body {
 /* Title colors for Dark theme */
 h1, h2, h3, h4, h5, h6 {
   color:var(--color-text);
+  font-weight: 800;
+  font-stretch: expanded;
   font-family: Faustina, Garamond, serif;
 }
 
@@ -133,4 +135,19 @@ a:link {
 }
 a:visited {
   color: var(--color-hyperlink-clicked);
+}
+
+/* List Indicator */
+ul li {
+  list-style-position: outside;
+  list-style-type: "> ";
+}
+
+/* Markdown Banner Backgrounds */
+/* To kinda match the banner type's color. More for dark but it's good enough for light so I'm not changing it. */
+div .markdown-alert-warning {
+  background-color: #754A08;
+}
+div .markdown-alert-note {
+  background-color: #405882;
 }

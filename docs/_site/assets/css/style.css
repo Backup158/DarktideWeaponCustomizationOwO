@@ -272,7 +272,7 @@ Small Device Styles
 /* Your css rules goes after this */
 /* Dark Mode */
 /* Globals for text and background color. Defaults to Dark */
-:root { --color-text: rgb(255, 255, 255); --color-background: rgb(27, 40, 56); --color-collapsible-content-background: #3f6391; --color-blockquote-text: #EBEBEB; --color-blockquote-background: #3C597D; }
+:root { --color-text: rgb(255, 255, 255); --color-background: rgb(27, 40, 56); --color-collapsible-content-background: #3f6391; --color-blockquote-text: #EBEBEB; --color-blockquote-background: #3C597D; --color-hyperlink: #86d37a; --color-hyperlink-clicked: #e18bbc; }
 
 /* Conditional styling */
 @media (prefers-color-scheme: light) { /* Re-assign previous variables */
@@ -281,7 +281,7 @@ Small Device Styles
 body { color: var(--color-text); background: var(--color-background); font-size: 24px; font-family: Faustina, Garamond, serif; }
 
 /* Title colors for Dark theme */
-h1, h2, h3, h4, h5, h6 { color: var(--color-text); font-family: Faustina, Garamond, serif; }
+h1, h2, h3, h4, h5, h6 { color: var(--color-text); font-weight: 800; font-stretch: expanded; font-family: Faustina, Garamond, serif; }
 
 /* Makes outer background match inner */
 #main_content_wrap { max-width: 100%; background: var(--color-background); }
@@ -318,3 +318,17 @@ pre { width: 80%; margin-left: 48px; }
 /* Removes img decoration */
 /* color doesn't matter */
 img { border: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; -ms-box-shadow: none; }
+
+/* Hyperlink Colors */
+a:link { color: var(--color-hyperlink); }
+
+a:visited { color: var(--color-hyperlink-clicked); }
+
+/* List Indicator */
+ul li { list-style-position: outside; list-style-type: "> "; }
+
+/* Markdown Banner Backgrounds */
+/* To kinda match the banner type's color. More for dark but it's good enough for light so I'm not changing it. */
+div .markdown-alert-warning { background-color: #754A08; }
+
+div .markdown-alert-note { background-color: #405882; }
