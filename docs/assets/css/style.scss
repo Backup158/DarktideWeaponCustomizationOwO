@@ -14,6 +14,8 @@
   --color-collapsible-content-background: #3f6391;
   --color-blockquote-text: #EBEBEB;
   --color-blockquote-background: #3C597D;
+  --color-hyperlink: #86d37a;
+  --color-hyperlink-clicked: #e18bbc;
 }
 
 /* Conditional styling */
@@ -123,4 +125,12 @@ img {
   -moz-box-shadow:none;
   -o-box-shadow:none;
   -ms-box-shadow:none;
+}
+
+/* Hyperlink Colors */
+a {
+  color: var(--color-hyperlink);
+}
+a:visited {
+  color: var(--color-hyperlink-clicked);
 }
