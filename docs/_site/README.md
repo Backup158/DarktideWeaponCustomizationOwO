@@ -48,8 +48,7 @@ If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunc
 # ***Notices youw pawts*** (Parts I added)
 
 The list is hosted externally.  
-&emsp; If you're viewing this through GitHub Pages, use this [relative link to the list](parts_added.html)  
-&emsp; If you're not, but still want to see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html)  
+&emsp; To see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html)  
 &emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
 
 # FAQ
