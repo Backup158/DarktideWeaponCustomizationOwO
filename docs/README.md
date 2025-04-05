@@ -42,9 +42,9 @@ If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunc
 
 # ***Notices youw pawts*** (Parts I added)
 
-See [parts added page](parts_added.html) (Click this link if you're viewing this through GitHub Pages)
+The list is hosted external. [Go you're viewing this through GitHub Pages](parts_added.html)
 
-Directly from the repository, [GitHub Markdown version](parts_added.md)
+To se the regular GitHub Markdown version, [go directly to the repository](parts_added.md)
 
 # FAQ
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
