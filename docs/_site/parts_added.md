@@ -1,3 +1,5 @@
+[![Repo](https://custom-icon-badges.demolab.com/badge/Repository_Home-blue.svg?logo=repo)](/ "OwO Repository Homepage from GitHub Pages")
+
 # ***Notices youw pawts*** (Parts I added)
 Parts are prefixed with `OwO` in the customization menu.
 

@@ -1,6 +1,6 @@
-[![NexusLink](https://img.shields.io/badge/Page_on-NexusMods-orange)](https://www.nexusmods.com/warhammer40kdarktide/mods/429 "Mod page hosted on Nexus Mods")
+[![NexusLink](https://img.shields.io/badge/Nexus_Mods-gray?logo=nexusmods)](https://www.nexusmods.com/warhammer40kdarktide/mods/429 "Mod page hosted on Nexus Mods")
 [![Discord](https://custom-icon-badges.demolab.com/discord/819650821314052106?color=7289DA&logo=comments&label=Discord&logoColor=white)](https://discord.gg/rKYWtaDx4D "Darktide Modders")
-[![DiscordThread](https://img.shields.io/badge/Discord_Thread-7289da)](https://discord.com/channels/1048312349867646996/1356536292891951105 "Thread in the Darktide Modders Discord")
+[![DiscordThread](https://img.shields.io/badge/Discord_Thread-7289da?logo=discord)](https://discord.com/channels/1048312349867646996/1356536292891951105 "Thread in the Darktide Modders Discord")
 
 # OwO? What is this?
 Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots. 
