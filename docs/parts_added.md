@@ -143,7 +143,7 @@ These can get super janky when using non-default parts so watch out.
 > [!NOTE]
 > 
 > These things are absolutely cursed and only exist by sticking to the final bullet in the magazine. This means the magpul will move as you shoot the gun lmfao.
->
+> \
 > Due for a rework but I kinda don't care rn.
 
 - **Plasma Magazines**: Helbore Lasguns  \
@@ -157,9 +157,8 @@ These can get super janky when using non-default parts so watch out.
 > [!NOTE]
 > 
 > The lasers will NOT work unless you modify files in weapon customization manually.
->
+> \
 > By default, they appear as flashlights. I'll try and see if there's a better way of doing this.
-> 
  
 ## Melee
 
@@ -189,7 +188,7 @@ These can get super janky when using non-default parts so watch out.
 > [!WARNING]
 > 
 > ﻿KNOWN ISSUE: Note that these only work on some head/grip combinations, and it's different for each pommel.
-> 
+> \
 > Shovels are cursed (not really I'm just a lazy bitch).
 
 ### Front Guard

@@ -62,7 +62,9 @@
 <h1 id="owo-what-is-this">OwO? What is this?</h1>
 <p>Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots.</p>
 <div class='markdown-alert markdown-alert-warning'><p class='markdown-alert-title'><svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg> Warning</p><p>Expect alignment issues and performance drops, especially when piled onto a heavy load order. A responsible mod author would spend the time making sure these parts are optimized and are compatibly aligned with all the other pieces. It ain't me.
+<br />
 I've also noticed hitches when opening the inventory/weapon customization menu and on startup.
+<br />
 You have been warned!</p>
 </div>
 <p>Because of misaligned sights, I recommend using <a href="https://www.nexusmods.com/warhammer40kdarktide/mods/253">Crosshair Remap (Continued)</a> as a workaround. Error 2001/2014s when entering the Mourningstar can be kinda avoided by directly accessing the mission board through <a href="https://www.nexusmods.com/warhammer40kdarktide/mods/89">Psych Ward</a> or some other equivalent, but it won't save you from getting disconnected at the start of a mission. I've only had trouble connecting at the start; once you're in, you're probably in until the end.</p>
@@ -133,8 +135,7 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 <li><strong>When I use the scopes in game, they glitch out and are impossible to aim with!</strong></li>
 </ol>
 <p>  This is a consequence of the mesh streamer system. You can avoid it by disabling it in <code>&lt;Darktide&gt;\bundle\application_settings\settings_common.ini</code> but this will likely have disastrous consequences for your FPS. See the spoiler for more details.</p>
-<details>
-  <summary>Mesh streamer issues</summary>
+<details> <summary>Mesh streamer issues</summary>
 <p>The mesh streamer basically makes it so your computer only renders things in high quality if it's close and visible, so it won't use up as many resources on, for example, a Scab Shooter's helmet 70 meters away. Sometimes, it'll set your sights as low priority, so you'll be aiming through a garbled mess throughout the match. This tends to happen more for users with AMD GPUs, which includes me lol.</p>
 <p>By disabling it, you guarantee that the game won't eat up your weapons. This also means the game is rendering every detail at full quality, even the small things far away.</p>
 <pre><code>﻿mesh_streamer_settings = {

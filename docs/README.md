@@ -6,10 +6,11 @@
 Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots. 
 
 > [!WARNING] 
+> 
 > Expect alignment issues and performance drops, especially when piled onto a heavy load order. A responsible mod author would spend the time making sure these parts are optimized and are compatibly aligned with all the other pieces. It ain't me.
-> 
+> \
 > I've also noticed hitches when opening the inventory/weapon customization menu and on startup.
-> 
+> \
 > You have been warned!
 
 Because of misaligned sights, I recommend using [Crosshair Remap (Continued)](https://www.nexusmods.com/warhammer40kdarktide/mods/253) as a workaround. Error 2001/2014s when entering the Mourningstar can be kinda avoided by directly accessing the mission board through [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) or some other equivalent, but it won't save you from getting disconnected at the start of a mission. I've only had trouble connecting at the start; once you're in, you're probably in until the end.
@@ -93,8 +94,7 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 6) **When I use the scopes in game, they glitch out and are impossible to aim with!**
 
 &emsp; This is a consequence of the mesh streamer system. You can avoid it by disabling it in `<Darktide>\bundle\application_settings\settings_common.ini` but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
-<details>
-  <summary>Mesh streamer issues</summary>
+<details> <summary>Mesh streamer issues</summary>
   
 The mesh streamer basically makes it so your computer only renders things in high quality if it's close and visible, so it won't use up as many resources on, for example, a Scab Shooter's helmet 70 meters away. Sometimes, it'll set your sights as low priority, so you'll be aiming through a garbled mess throughout the match. This tends to happen more for users with AMD GPUs, which includes me lol.
 
