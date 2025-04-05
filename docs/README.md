@@ -82,7 +82,7 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 
 5) **My scope/bayonet is stealing the muzzle flash from my gun!**
    
-&emsp; yeah :( I'll fix that eventually  \
+&emsp; Yeah :( I'll fix that eventually  \
 &emsp; Oh, and also make sure you aren't using a "No muzzle" option for the muzzle. You need to use "Invisible muzzle" for that (That's part of Syn's plugin. May add that myself for people who don't use that).
 
 6) **When I use the scopes in game, they glitch out and are impossible to aim with!**
@@ -100,6 +100,8 @@ By disabling it, you guarantee that the game won't eat up your weapons. This als
     disable = true
 }
 ```
+
+![MeshStreamerScopeIssue](https://imgur.com/YbDzrfE.png)
   
 ##
 
@@ -112,6 +114,9 @@ By disabling it, you guarantee that the game won't eat up your weapons. This als
   <summary>Pic</summary>
   
 From the Lexicanum, sourced from Imperial Armour vol 3?
+
+![ElysianWeapons](https://wh40k.lexicanum.com/mediawiki/images/e/e5/Elysian_Drop_Troop_Weapons.jpg)
+
 ##
 </details>
 
@@ -158,6 +163,7 @@ From the Lexicanum, sourced from Imperial Armour vol 3?
 &emsp; Maybe. Leave a picture and the attachment's name in the posts or the Discord thread, and I'll think about it.
 Keep in mind that I can only use parts already in the game, and I'm not the most creative person.
 
+![AshleyNVG](https://imgur.com/bRoL8OH.png)
 
 <details>
   <summary>>:3</summary>
