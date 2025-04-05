@@ -301,11 +301,13 @@ details { border-style: solid; border-width: 1px; border-radius: 15px; backgroun
 
 details p { padding-left: 24px; margin-right: 12px; }
 
-details code { padding-left: 48px; }
+details pre code { /* Code block only */ padding-left: 48px; }
 
 details li { list-style-position: inside; padding-left: 18px; }
 
-/* Block quote coloring */
+details ul li { list-style-position: inside; padding-left: 52px; }
+
+/* Block quote coloring and spacing */
 blockquote { color: var(--color-blockquote-text); background: var(--color-blockquote-background); border-radius: 10px; padding-top: 8px; padding-bottom: 16px; }
 
 blockquote p { padding-top: 0px; padding-bottom: 0px; }
@@ -314,4 +316,5 @@ blockquote p { padding-top: 0px; padding-bottom: 0px; }
 pre { width: 80%; margin-left: 48px; }
 
 /* Removes img decoration */
-img { border: 0px solid #ebebeb; box-shadow: 0 0 0px #ebebeb; -webkit-box-shadow: 0 0 0px #ebebeb; -moz-box-shadow: 0 0 0px #ebebeb; -o-box-shadow: 0 0 0px #ebebeb; -ms-box-shadow: 0 0 0px #ebebeb; }
+/* color doesn't matter */
+img { border: none; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; -ms-box-shadow: none; }

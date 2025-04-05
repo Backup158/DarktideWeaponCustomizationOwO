@@ -83,15 +83,19 @@ details p {
   padding-left:24px;
   margin-right:12px;
 }
-details code {
+details pre code { /* Code block only */
   padding-left:48px;
 }
 details li {
   list-style-position: inside;
   padding-left:18px;
 }
+details ul li { 
+  list-style-position: inside; 
+  padding-left: 52px; 
+}
 
-/* Block quote coloring */
+/* Block quote coloring and spacing */
 blockquote {
   color: var(--color-blockquote-text);
   background: var(--color-blockquote-background);
@@ -111,11 +115,12 @@ pre {
 }
 
 /* Removes img decoration */
+/* color doesn't matter */
 img {
-  border:0px solid #ebebeb;
-  box-shadow:0 0 0px #ebebeb;
-  -webkit-box-shadow:0 0 0px #ebebeb;
-  -moz-box-shadow:0 0 0px #ebebeb;
-  -o-box-shadow:0 0 0px #ebebeb;
-  -ms-box-shadow:0 0 0px #ebebeb
+  border:none;
+  box-shadow:none;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  -o-box-shadow:none;
+  -ms-box-shadow:none;
 }
