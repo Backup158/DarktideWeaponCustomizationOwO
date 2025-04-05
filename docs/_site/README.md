@@ -42,9 +42,10 @@ If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunc
 
 # ***Notices youw pawts*** (Parts I added)
 
-The list is hosted external. [Go you're viewing this through GitHub Pages](parts_added.html)
-
-To se the regular GitHub Markdown version, [go directly to the repository](parts_added.md)
+The list is hosted externally.  
+&emsp; If you're viewing this through GitHub Pages, use this [relative link to the list](parts_added.html)  
+&emsp; If you're not, but still want to see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html)  
+&emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
 
 # FAQ
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
@@ -111,7 +112,7 @@ By disabling it, you guarantee that the game won't eat up your weapons. This als
 
 &emsp; It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.
 <details>
-  <summary>Pic</summary>
+  <summary>Elysian Drop Troop Weapons</summary>
   
 From the Lexicanum, sourced from Imperial Armour vol 3?
 
@@ -122,12 +123,19 @@ From the Lexicanum, sourced from Imperial Armour vol 3?
 
 8) **How am I supposed to aim with the Alternative Viewmodels if I'm not using the scope?**
 
-&emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, see the [FAQ in my hidden viewmodels mod](https://www.nexusmods.com/warhammer40kdarktide/mods/461) because I'm too lazy to copy and paste more than I already have.
+&emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, be sure to turn off EWC's options that disable crosshairs and lasers while aiming
+
+<details> <summary>EWC Mod Options</summary>
+
+![ewc_disable_settings](https://imgur.com/lcmwq8t.png)
+</details>
+
+FAQs involving technical details about requirements and performance:
 
 <details>
-  <summary>Going a bit into the technical details here</summary>
+  <summary>Technical details</summary>
   
-9) **Why is performance so bad?**
+9) **Why can the performance get bad?**
 
 &emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches.
 
@@ -138,9 +146,9 @@ From the Lexicanum, sourced from Imperial Armour vol 3?
 10) **Ok but can I do anything about this?**
 
 &emsp; Aside from the workarounds I posted in the main description, there's some small things but no silver bullets.
-  - Disable raytracing in your user_settings.config file. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch rtxgi_scale.
-  - Turn off Visible Equipment in the EWC mod options
-  - For out of memory crashes, apply the lua heap memory increase band-aid fix (--lua-heap-mb-size 2048 in the Steam launch options)
+  - Disable raytracing in your `user_settings.config file`. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch `rtxgi_scale`.
+  - Turn off 'Visible Equipment' in the EWC mod options
+  - For out of memory crashes, apply the lua heap memory increase band-aid fix (`--lua-heap-mb-size 2048` in the Steam launch options)
   - If you crash at the end of missions, try setting locked packages to 'Always' in the EWC mod options (which will make performance worse but hopefully lessen crashes). Didn't help with disconnects but YMMV.
 
 11) **Why does this require the MT plugin?**

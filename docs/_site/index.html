@@ -5,7 +5,7 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=b4a2882a3871aa8a1991755d8e68b7457044a4dc">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=1bf3261aa830dcb7a511d743b387323786e1bbb5">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>OwO? What is this? | Darktide Mod: Weapon Customization - OwO</title>
@@ -84,8 +84,10 @@ You have been warned!</p>
 <div class='markdown-alert markdown-alert-note'><p class='markdown-alert-title'><svg class="octicon octicon-info" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg> Note</p><p>To AML users: Due to (what I believe to be) limitations with AML, load order can be inconsistent and throw errors. Trying to find a workaround at the moment.</p>
 </div>
 <h1 id="emstrongnotices-youw-pawtsstrongem-parts-i-added"><em><strong>Notices youw pawts</strong></em> (Parts I added)</h1>
-<p>The list is hosted external. <a href="parts_added.html">Go you're viewing this through GitHub Pages</a></p>
-<p>To se the regular GitHub Markdown version, <a href="/parts_added.html">go directly to the repository</a></p>
+<p>The list is hosted externally.<br />
+  If you're viewing this through GitHub Pages, use this <a href="parts_added.html">relative link to the list</a><br />
+  If you're not, but still want to see it on GitHub Pages, go <a href="https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html">directly to the GitHub Pages list</a><br />
+  To see the regular GitHub Markdown version, go <a href="/parts_added.html">directly to the repository</a></p>
 <h1 id="faq">FAQ</h1>
 <ol>
 <li><strong>THE GAME STARTED AND I GOT A BUNCH OF ERRORS!</strong></li>
@@ -144,7 +146,7 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 </ol>
 <p>  It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.</p>
 <details>
-  <summary>Pic</summary>
+  <summary>Elysian Drop Troop Weapons</summary>
 <p>From the Lexicanum, sourced from Imperial Armour vol 3?</p>
 <p><img src="https://wh40k.lexicanum.com/mediawiki/images/e/e5/Elysian_Drop_Troop_Weapons.jpg" alt="ElysianWeapons" /></p>
 <h2 id="section-2"></h2>
@@ -152,11 +154,15 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 <ol start="8">
 <li><strong>How am I supposed to aim with the Alternative Viewmodels if I'm not using the scope?</strong></li>
 </ol>
-<p>  You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, see the <a href="https://www.nexusmods.com/warhammer40kdarktide/mods/461">FAQ in my hidden viewmodels mod</a> because I'm too lazy to copy and paste more than I already have.</p>
+<p>  You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, be sure to turn off EWC's options that disable crosshairs and lasers while aiming</p>
+<details> <summary>EWC Mod Options</summary>
+<p><img src="https://imgur.com/lcmwq8t.png" alt="ewc_disable_settings" /></p>
+</details>
+<p>FAQs involving technical details about requirements and performance:</p>
 <details>
-  <summary>Going a bit into the technical details here</summary>
+  <summary>Technical details</summary>
 <ol start="9">
-<li><strong>Why is performance so bad?</strong></li>
+<li><strong>Why can the performance get bad?</strong></li>
 </ol>
 <p>  EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches.</p>
 <p>  Error 2014 comes from your game taking too long to respond to the server; with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you &gt;:3).</p>
@@ -166,9 +172,9 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 </ol>
 <p>  Aside from the workarounds I posted in the main description, there's some small things but no silver bullets.</p>
 <ul>
-<li>Disable raytracing in your user_settings.config file. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch rtxgi_scale.</li>
-<li>Turn off Visible Equipment in the EWC mod options</li>
-<li>For out of memory crashes, apply the lua heap memory increase band-aid fix (--lua-heap-mb-size 2048 in the Steam launch options)</li>
+<li>Disable raytracing in your <code>user_settings.config file</code>. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch <code>rtxgi_scale</code>.</li>
+<li>Turn off 'Visible Equipment' in the EWC mod options</li>
+<li>For out of memory crashes, apply the lua heap memory increase band-aid fix (<code>--lua-heap-mb-size 2048</code> in the Steam launch options)</li>
 <li>If you crash at the end of missions, try setting locked packages to 'Always' in the EWC mod options (which will make performance worse but hopefully lessen crashes). Didn't help with disconnects but YMMV.</li>
 </ul>
 <ol start="11">

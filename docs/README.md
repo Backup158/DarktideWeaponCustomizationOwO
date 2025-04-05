@@ -42,9 +42,10 @@ If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunc
 
 # ***Notices youw pawts*** (Parts I added)
 
-The list is hosted externally. If you're viewing this through GitHub Pages, go [directly to the GitHub Pages side](parts_added.html)
-
-To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
+The list is hosted externally.  
+&emsp; If you're viewing this through GitHub Pages, use this [relative link to the list](parts_added.html)  
+&emsp; If you're not, but still want to see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html)  
+&emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
 
 # FAQ
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
@@ -125,13 +126,16 @@ From the Lexicanum, sourced from Imperial Armour vol 3?
 &emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, be sure to turn off EWC's options that disable crosshairs and lasers while aiming
 
 <details> <summary>EWC Mod Options</summary>
+
 ![ewc_disable_settings](https://imgur.com/lcmwq8t.png)
 </details>
 
+FAQs involving technical details about requirements and performance:
+
 <details>
-  <summary>Going a bit into the technical details here</summary>
+  <summary>Technical details</summary>
   
-9) **Why is performance so bad?**
+9) **Why can the performance get bad?**
 
 &emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches.
 
@@ -142,9 +146,9 @@ From the Lexicanum, sourced from Imperial Armour vol 3?
 10) **Ok but can I do anything about this?**
 
 &emsp; Aside from the workarounds I posted in the main description, there's some small things but no silver bullets.
-  - Disable raytracing in your user_settings.config file. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch rtxgi_scale.
-  - Turn off Visible Equipment in the EWC mod options
-  - For out of memory crashes, apply the lua heap memory increase band-aid fix (--lua-heap-mb-size 2048 in the Steam launch options)
+  - Disable raytracing in your `user_settings.config file`. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch `rtxgi_scale`.
+  - Turn off 'Visible Equipment' in the EWC mod options
+  - For out of memory crashes, apply the lua heap memory increase band-aid fix (`--lua-heap-mb-size 2048` in the Steam launch options)
   - If you crash at the end of missions, try setting locked packages to 'Always' in the EWC mod options (which will make performance worse but hopefully lessen crashes). Didn't help with disconnects but YMMV.
 
 11) **Why does this require the MT plugin?**

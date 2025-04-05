@@ -306,7 +306,7 @@ details li { list-style-position: inside; padding-left: 18px; }
 /* Block quote coloring */
 blockquote { color: #EBEBEB; background: #3C597D; border-radius: 10px; padding-top: 8px; padding-bottom: 16px; }
 
-blockquote p { padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px; }
+blockquote p { padding-top: 0px; padding-bottom: 0px; }
 
 /* Shrinks pre background sizes (used with code blocks) */
 pre { width: 80%; margin-left: 48px; }
