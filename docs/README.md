@@ -42,9 +42,9 @@ If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunc
 
 # ***Notices youw pawts*** (Parts I added)
 
-The list is hosted external. [Go you're viewing this through GitHub Pages](parts_added.html)
+The list is hosted externally. If you're viewing this through GitHub Pages, go [directly to the GitHub Pages side](parts_added.html)
 
-To se the regular GitHub Markdown version, [go directly to the repository](parts_added.md)
+To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
 
 # FAQ
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
@@ -111,7 +111,7 @@ By disabling it, you guarantee that the game won't eat up your weapons. This als
 
 &emsp; It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.
 <details>
-  <summary>Pic</summary>
+  <summary>Elysian Drop Troop Weapons</summary>
   
 From the Lexicanum, sourced from Imperial Armour vol 3?
 
@@ -122,7 +122,11 @@ From the Lexicanum, sourced from Imperial Armour vol 3?
 
 8) **How am I supposed to aim with the Alternative Viewmodels if I'm not using the scope?**
 
-&emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, see the [FAQ in my hidden viewmodels mod](https://www.nexusmods.com/warhammer40kdarktide/mods/461) because I'm too lazy to copy and paste more than I already have.
+&emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, be sure to turn off EWC's options that disable crosshairs and lasers while aiming
+
+<details> <summary>EWC Mod Options</summary>
+![ewc_disable_settings](https://imgur.com/lcmwq8t.png)
+</details>
 
 <details>
   <summary>Going a bit into the technical details here</summary>

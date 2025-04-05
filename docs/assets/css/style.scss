@@ -91,6 +91,12 @@ blockquote {
   color: #EBEBEB;
   background:#3C597D;
   border-radius: 10px;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+blockquote p {
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 /* Shrinks pre background sizes (used with code blocks) */
