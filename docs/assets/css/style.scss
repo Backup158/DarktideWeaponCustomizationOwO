@@ -59,3 +59,20 @@ h1, h2, h3, h4, h5, h6 {
 footer.inner {
   background: #212121;
 }
+
+/* Borders and background for collapsible content */
+summary {
+  border-style:solid;
+  border-width:1px;
+  border-radius:15px;
+  padding: 8px 8px 8px 30px;
+}
+details {
+  border-style:solid;
+  border-width:1px;
+  border-radius:15px;
+  background: $color-collapsible-content-background;
+}
+details p {
+  padding-left: 18px;
+}
