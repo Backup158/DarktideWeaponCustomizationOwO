@@ -92,8 +92,8 @@ blockquote {
   border-radius: 10px;
 }
 
-/* Shrinks code blocks */
-pre, code {
+/* Shrinks pre background sizes (used with code blocks) */
+pre {
   width: 80%;
   margin-left: 48px;
 }
