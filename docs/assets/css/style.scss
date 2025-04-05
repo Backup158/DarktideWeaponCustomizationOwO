@@ -36,12 +36,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Faustina, Garamond, serif;
 }
 
+/* Makes outer background match inner */
+#main_content_wrap {
+  max-width: 100%;
+  background: $color-background;
+}
 .inner {
   max-width:80%;
   background: $color-background;
 }
 
-#header_wrap {
+/* Restores header background color to black */
+#header_wrap .inner {
   background: #212121;
   background: -moz-linear-gradient(top, #373737, #212121);
   background: -webkit-linear-gradient(top, #373737, #212121);
