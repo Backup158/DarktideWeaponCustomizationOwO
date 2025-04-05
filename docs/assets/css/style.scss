@@ -74,5 +74,12 @@ details {
   background: $color-collapsible-content-background;
 }
 details p {
-  padding-left: 18px;
+  padding-left:24px;
+}
+details code {
+  padding-left:48px;
+}
+details li {
+  list-style-position: inside;
+  padding-left:18px
 }
