@@ -4,4 +4,5 @@ description: "Information about the Extended Weapon Customization mod's add-on p
 theme: 'jekyll-theme-slate'
 plugins: 
   - jekyll-gfm-admonitions
+  - jekyll-optional-front-matter
 markdown: GFM
