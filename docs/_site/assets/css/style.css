@@ -272,19 +272,21 @@ Small Device Styles
 /* Your css rules goes after this */
 /* Dark Mode */
 /* Globals for text and background color. Defaults to Dark */
-/* Conditional styling 
-@media (prefers-color-scheme: light) { /* Re-assign previous variables  :root { --color-text: rgb(0, 0, 0); --color-background: rgb(255, 254, 205); /* Kinda piss colored  --color-collapsible-content-background: #f1f1f1; }
-}
+:root { --color-text: rgb(255, 255, 255); --color-background: rgb(27, 40, 56); --color-collapsible-content-background: #3f6391; --color-blockquote-text: #EBEBEB; --color-blockquote-background: #3C597D; }
+
+/* Conditional styling */
+@media (prefers-color-scheme: light) { /* Re-assign previous variables */
+  :root { --color-text: rgb(0, 0, 0); --color-background: rgb(255, 254, 205); /* Kinda piss colored */ --color-collapsible-content-background: #f1f1f1; --color-blockquote-text: #4b4b4b; --color-blockquote-background: rgb(206, 205, 149); } }
 /* Assign variables to page color and background */
-body { color: white; background: #1b2838; font-size: 24px; font-family: Faustina, Garamond, serif; }
+body { color: var(--color-text); background: var(--color-background); font-size: 24px; font-family: Faustina, Garamond, serif; }
 
 /* Title colors for Dark theme */
-h1, h2, h3, h4, h5, h6 { color: white; font-family: Faustina, Garamond, serif; }
+h1, h2, h3, h4, h5, h6 { color: var(--color-text); font-family: Faustina, Garamond, serif; }
 
 /* Makes outer background match inner */
-#main_content_wrap { max-width: 100%; background: #1b2838; }
+#main_content_wrap { max-width: 100%; background: var(--color-background); }
 
-.inner { max-width: 80%; background: #1b2838; }
+.inner { max-width: 80%; background: var(--color-background); }
 
 /* Restores header background color to dark gray gradient */
 #header_wrap .inner { background: #212121; background: -moz-linear-gradient(top, #373737, #212121); background: -webkit-linear-gradient(top, #373737, #212121); background: -ms-linear-gradient(top, #373737, #212121); background: -o-linear-gradient(top, #373737, #212121); background: linear-gradient(to top, #373737, #212121); }
@@ -295,7 +297,7 @@ footer.inner { background: #212121; }
 /* Borders and background for collapsible content */
 summary { border-style: solid; border-width: 1px; border-radius: 15px; padding: 8px 8px 8px 30px; }
 
-details { border-style: solid; border-width: 1px; border-radius: 15px; background: #3f6391; margin-bottom: 24px; }
+details { border-style: solid; border-width: 1px; border-radius: 15px; background: var(--color-collapsible-content-background); margin-bottom: 24px; }
 
 details p { padding-left: 24px; margin-right: 12px; }
 
@@ -304,7 +306,7 @@ details code { padding-left: 48px; }
 details li { list-style-position: inside; padding-left: 18px; }
 
 /* Block quote coloring */
-blockquote { color: #EBEBEB; background: #3C597D; border-radius: 10px; padding-top: 8px; padding-bottom: 16px; }
+blockquote { color: var(--color-blockquote-text); background: var(--color-blockquote-background); border-radius: 10px; padding-top: 8px; padding-bottom: 16px; }
 
 blockquote p { padding-top: 0px; padding-bottom: 0px; }
 

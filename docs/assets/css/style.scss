@@ -8,42 +8,47 @@
 /* Your css rules goes after this */
 /* Dark Mode */
 /* Globals for text and background color. Defaults to Dark */
-$color-text: rgb(255, 255, 255);
-$color-background: rgb(27, 40, 56);
-$color-collapsible-content-background: #3f6391;
-$color-clicked-button-background: #ccc;
+:root {
+  --color-text: rgb(255, 255, 255);
+  --color-background: rgb(27, 40, 56);
+  --color-collapsible-content-background: #3f6391;
+  --color-blockquote-text: #EBEBEB;
+  --color-blockquote-background: #3C597D;
+}
 
-/* Conditional styling 
+/* Conditional styling */
 @media (prefers-color-scheme: light) {
-    /* Re-assign previous variables 
+    /* Re-assign previous variables */
     :root {
         --color-text: rgb(0, 0, 0);
-        --color-background: rgb(255, 254, 205); /* Kinda piss colored 
+        --color-background: rgb(255, 254, 205); /* Kinda piss colored */
         --color-collapsible-content-background: #f1f1f1;
+        --color-blockquote-text: #4b4b4b;
+        --color-blockquote-background: rgb(206, 205, 149);
     }
 }
 /* Assign variables to page color and background */
 body {
-  color: $color-text;
-  background: $color-background;
+  color: var(--color-text);
+  background: var(--color-background);
   font-size: 24px;
   font-family: Faustina, Garamond, serif;
 }
 
 /* Title colors for Dark theme */
 h1, h2, h3, h4, h5, h6 {
-  color:$color-text;
+  color:var(--color-text);
   font-family: Faustina, Garamond, serif;
 }
 
 /* Makes outer background match inner */
 #main_content_wrap {
   max-width: 100%;
-  background: $color-background;
+  background: var(--color-background);
 }
 .inner {
   max-width:80%;
-  background: $color-background;
+  background: var(--color-background);
 }
 
 /* Restores header background color to dark gray gradient */
@@ -71,7 +76,7 @@ details {
   border-style:solid;
   border-width:1px;
   border-radius:15px;
-  background: $color-collapsible-content-background;
+  background: var(--color-collapsible-content-background);
   margin-bottom: 24px;
 }
 details p {
@@ -88,8 +93,8 @@ details li {
 
 /* Block quote coloring */
 blockquote {
-  color: #EBEBEB;
-  background:#3C597D;
+  color: var(--color-blockquote-text);
+  background: var(--color-blockquote-background);
   border-radius: 10px;
   padding-top: 8px;
   padding-bottom: 16px;
