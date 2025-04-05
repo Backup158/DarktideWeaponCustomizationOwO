@@ -51,6 +51,7 @@ jobs:
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-artifact@v4
+        path: "/_site"
 
   # Deployment job
   deploy:
