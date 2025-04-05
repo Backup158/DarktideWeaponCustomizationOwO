@@ -72,7 +72,7 @@ details {
   border-width:1px;
   border-radius:15px;
   background: $color-collapsible-content-background;
-  padding-bottom: 8px;
+  margin-bottom: 24px;
 }
 details p {
   padding-left:24px;
@@ -83,4 +83,11 @@ details code {
 details li {
   list-style-position: inside;
   padding-left:18px
+}
+
+/* Block quote coloring */
+blockquote {
+  color: #EBEBEB;
+  background:#3C597D;
+  border-radius: 10px;
 }
