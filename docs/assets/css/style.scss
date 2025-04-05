@@ -91,3 +91,9 @@ blockquote {
   background:#3C597D;
   border-radius: 10px;
 }
+
+/* Shrinks code blocks */
+pre, code {
+  width: 80%;
+  margin-left: 48px;
+}
