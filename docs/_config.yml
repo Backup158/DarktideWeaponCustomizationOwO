@@ -1,4 +1,5 @@
 url: "https://backup158.github.io/DarktideWeaponCustomizationOwO" # the base hostname & protocol for your site
 title: "Darktide Mod: Weapon Customization - OwO"
+description: "Information about the Extended Weapon Customization mod's add-on plugin Ostracized without Objection"
 theme: 'jekyll-theme-slate'
 markdown: GFM
