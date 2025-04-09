@@ -95,14 +95,14 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿Includes variant with dust cover (that I wish I could make wider). I also left two scuffed variants that I made before I realize there was already an elevation ladder in the game lmao.
 - **M16 Carry Handle Irons**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; ﻿﻿Sight aligned with M16 Barrels (Tall). Versions with and without the rear elevation wheel since I don't think a1's have them.
-- **Holographic Sights with Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Snubnosed Revolvers  \
+- **Holographic Sights with Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
 &emsp; ﻿﻿Based on EOTech HWS and Vortex Razor AMG.  \
 &emsp; ﻿﻿Adds standalone holographic sight, holo with magnifier to the side, and holo with magnifier lined up (with options for 2 zoom levels).  \
 &emsp; ﻿﻿﻿You can choose all 3 sight pictures by using the sight_2 options from the MT Plugin.  \
 &emsp; ﻿﻿﻿Holo with magnifier lined up includes variants for zoom.  \
 ﻿﻿&emsp; ﻿Includes short variant that doesn't clip with the receiver, but blocks more of the sight picture.  \
 &emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
-- **Telescopic Sights with Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Snubnosed Revolvers  \
+- **Telescopic Sights with Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
 &emsp; ﻿﻿Adds standalone ACOG sight and SUSAT sight. Includes variants for different zoom and with RDS stacked on top.  \
 &emsp; ﻿﻿﻿ACOG doesn't have bullet drop compensation crosshair ticks.  \
 &emsp; ﻿&emsp; ﻿Uses the default Darktide reflex pictures, equipped through sight_2 options.  \
@@ -128,13 +128,17 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿Recon stocks with revolver grips are based on Elysian Drop Troop sniper lasguns.  \
 &emsp; ﻿﻿Anti-materiel rifle stocks are based on the Barrett M82 with the rear grip.  \
 &emsp; ﻿﻿These will clip into your hands during regular use, which why the other plugins use slanted grips
-- **Tactical Stocks**: Braced/Infantry/Vigilant Autoguns, Autopistols, Infantry Lasguns, Bolter, Bolt Pistol  \
+- **Tactical Stocks**: Braced/Infantry/Vigilant Autoguns, Autopistols, Infantry Lasguns, Bolter, Bolt Pistol, Combat Shotguns,   \
 &emsp; ﻿﻿﻿Skeletal stock  \
 &emsp; ﻿﻿﻿Folded stocks: Stock attached to a hinge and folded to the left or right  \
 &emsp; ﻿﻿﻿Folded stocks (natural): Stocks with hinges built-in. Folded left/right/under
 - **Kalashnikov Stocks**: Braced/Infantry/Vigilant Autoguns  \
 &emsp; ﻿Bigger stocks rotated to resemble the stocks on Kalashnikov rifles  \
 &emsp; ﻿﻿﻿Includes compact variants for shotgun stocks
+- **Straight Grip**: Combat Shotguns  \
+&emsp; Same choices and Straight Foregrips but as a stock
+- Stock_2, **Big Stocks**: Combat Shotguns  \
+&emsp; Rifle stocks sized up
 
 ### Magazines
 - **Flat Magazines**: Infantry/Helbore/Recon Lasguns  \
