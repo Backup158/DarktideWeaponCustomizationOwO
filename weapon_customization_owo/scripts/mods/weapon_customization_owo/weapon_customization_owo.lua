@@ -44,6 +44,12 @@ function mod.on_all_mods_loaded()
     end
     mod.syn = syn
 
+	-- Reload Callback
+	mod.wc.register_definition_callback(function()
+		mod.load_mod_file("files_to_load")
+		mod:echo("weapon attachment wewoad :3")
+	end)
+
 	local attachment_ids = {}
 	local model_ids = {}
 
@@ -101,7 +107,7 @@ function mod.on_all_mods_loaded()
 	end
 	]]
 	
-	-- Applies all the fixes you injected into each wepaon
+	-- Applies all the fixes you injected into each weapon
 	mod.load_mod_file("files_to_load")
 
 	-- Basic id validation

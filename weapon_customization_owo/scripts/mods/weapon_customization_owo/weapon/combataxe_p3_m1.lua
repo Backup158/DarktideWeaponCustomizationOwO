@@ -67,8 +67,8 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     {	dependencies = {"owo_shovel_handles_07|owo_shovel_handles_08"},
         -- pommel = { offset = true, position = vector3_box(-0.0, 0.004, -0.194), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.0, 0.8 ) }, -- alt sizing. i think the gap and grip are too big
-        pommel = { offset = true, position = vector3_box(-0.0, 0.00, -0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.35, 0.25, 0.5 ) },
-        pommelac1 = { offset = true, position = vector3_box(0.00, -0.00, -0.18), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.35, 0.25, 0.5 ) },
+        pommel = { offset = true, position = vector3_box(-0.0, 0.00, -0.15), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 0.5, 0.5 ) },
+        pommelac1 = { offset = true, position = vector3_box(0.00, -0.00, -0.15), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.8, 0.5, 0.5 ) },
     },
     --  -------------------------------------------
     --  T-Handle (Ogryn pommelac2)
