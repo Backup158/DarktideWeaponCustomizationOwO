@@ -543,10 +543,10 @@ function mod.owo_shovel_handles(variant_id, type)
         {id = "owo_shovel_handles_04", name = "OwO D-Ring Handle 1 (1)"},
         {id = "owo_shovel_handles_05", name = "OwO D-Ring Handle 1 (1f)"},
         --{id = "owo_shovel_handles_06", name = "OwO E-Tool D-Ring Handle 3"}, -- the wrapped grip one
-        {id = "owo_shovel_handles_07", name = "OwO D-Ring Handle 2"},
+		{id = "owo_shovel_handles_07b", name = "OwO D-Ring Handle 2"},
+        {id = "owo_shovel_handles_07", name = "OwO D-Ring Handle 2 (Small)"},
         {id = "owo_shovel_handles_08", name = "OwO D-Ring Handle 3"},
-		{id = "owo_shovel_handles_07b", name = "OwO D-Ring Handle 2 (Big)"},
-        {id = "owo_shovel_handles_08b", name = "OwO D-Ring Handle 3 (Big)"},
+        {id = "owo_shovel_handles_08b", name = "OwO D-Ring Handle 3 (Small)"},
 		{id = "owo_shovel_handles_09", name = "OwO T-Handle 1"},
 		{id = "owo_shovel_handles_10", name = "OwO T-Handle 2"},
 		{id = "owo_shovel_handles_11", name = "OwO T-Handle 3"},
