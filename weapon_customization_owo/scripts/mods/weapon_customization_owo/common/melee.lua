@@ -543,8 +543,10 @@ function mod.owo_shovel_handles(variant_id, type)
         {id = "owo_shovel_handles_04", name = "OwO D-Ring Handle 1 (1)"},
         {id = "owo_shovel_handles_05", name = "OwO D-Ring Handle 1 (1f)"},
         --{id = "owo_shovel_handles_06", name = "OwO E-Tool D-Ring Handle 3"}, -- the wrapped grip one
-        {id = "owo_shovel_handles_07", name = "OwO D-Ring Handle 3"},
-        {id = "owo_shovel_handles_08", name = "OwO D-Ring Handle 4"},
+        {id = "owo_shovel_handles_07", name = "OwO D-Ring Handle 2"},
+        {id = "owo_shovel_handles_08", name = "OwO D-Ring Handle 3"},
+		{id = "owo_shovel_handles_07b", name = "OwO D-Ring Handle 2 (Big)"},
+        {id = "owo_shovel_handles_08b", name = "OwO D-Ring Handle 3 (Big)"},
 		{id = "owo_shovel_handles_09", name = "OwO T-Handle 1"},
 		{id = "owo_shovel_handles_10", name = "OwO T-Handle 2"},
 		{id = "owo_shovel_handles_11", name = "OwO T-Handle 3"},
@@ -613,6 +615,20 @@ function mod.owo_shovel_handles(variant_id, type)
 		--	},
 		--},
         owo_shovel_handles_07 = {
+			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommel", 
+			mesh_move = false, parent = "grip",
+            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_04", 
+                pommelac2 = "owo_shovel_handles_ac2_empty", 
+			},
+		},
+        owo_shovel_handles_08b = {
+			model = _item_melee.."/grips/chain_sword_grip_05", type = "pommel", 
+			mesh_move = false, parent = "grip",
+            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_05", 
+                pommelac2 = "owo_shovel_handles_ac2_empty", 
+			},
+		},
+		owo_shovel_handles_07b = {
 			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommel", 
 			mesh_move = false, parent = "grip",
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_04", 

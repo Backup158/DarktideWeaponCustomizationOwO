@@ -70,6 +70,11 @@ mod.mt.inject_fixes(this_variant, {
         pommel = { offset = true, position = vector3_box(-0.0, 0.00, -0.15), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 0.5, 0.5 ) },
         pommelac1 = { offset = true, position = vector3_box(0.00, -0.00, -0.15), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.8, 0.5, 0.5 ) },
     },
+    --  Big
+    {	dependencies = {"owo_shovel_handles_07b|owo_shovel_handles_08b"},
+        pommel = { offset = true, position = vector3_box(-0.0, 0.00, -0.175), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 0.8, 0.75 ) },
+        pommelac1 = { offset = true, position = vector3_box(0.00, -0.00, -0.175), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.8, 0.8, 0.75 ) },
+    },
     --  -------------------------------------------
     --  T-Handle (Ogryn pommelac2)
     --  -------------------------------------------
