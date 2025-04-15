@@ -5,6 +5,7 @@ return {
 		en = "Weapon Customization - OwO (Ostracized without Objection)",
 		["zh-cn"] = "武器自定义扩展 - OwO（Ostracized without Objection）",
 		ru = "Настройка оружия - OwO (Ой мне так нравится мм долбиться в задницу)",
+		-- ru = "Настройка оружия - пизда",
 	},
 	mod_description = {
 		en = "Weapon Customization plugin adding various parts, typically inspired by historical and tacticool weapons.",
