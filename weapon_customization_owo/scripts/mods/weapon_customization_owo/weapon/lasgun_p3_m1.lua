@@ -833,14 +833,14 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =       { offset = true, position = vector3_box(0, 0.058, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     {   dependencies =  { _owo_backwards_acog_sights, _syn_volleygun_receivers, _owo_sight_2s, },
-        sight_2 =       { offset = true, position = vector3_box(0, 0.0, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        sight_2 =       { offset = true, position = vector3_box(0, 0.0, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =  { _owo_backwards_acog_sights, _syn_volleygun_receivers, },
         sight =         { offset = true, position = vector3_box(0, 0.046, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), automatic_equip = { rail = "rail_01"}, },
         lens =          { offset = true, parent = "sight", position = vector3_box(0, 0.064, 0.0505), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =        { offset = true, parent = "sight", position = vector3_box(0, -0.052, 0.0540), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =       { offset = true, position = vector3_box(0, 0.0, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_2 =       { offset = true, position = vector3_box(0, 0.0, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --      Else: Recon Body
     --          Recon rail already put acog forwards
