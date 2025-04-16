@@ -845,6 +845,11 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Else: Recon Body
     --          Recon rail already put acog forwards
+    {   dependencies =  { _owo_all_acog_sights, _owo_sight_2s,},
+        lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.024, 0.0300), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, -0.098, 0.0300), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =       { offset = false, position = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
     {   dependencies =  { _owo_all_acog_sights, },
         sight =         { offset = true, position = vector3_box(0, 0.138, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.156, 0.2195), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
