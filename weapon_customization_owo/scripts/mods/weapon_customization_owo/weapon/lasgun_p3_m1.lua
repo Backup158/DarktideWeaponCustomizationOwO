@@ -870,7 +870,7 @@ mod.mt.inject_fixes(this_variant, {
         sight =         { offset = true, position = vector3_box(0, 0.016, 0.221), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- Cylinder thing
         --sightac1 =      { offset = true, position = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {lens = 1} },
-        sightac1 =      { offset = true, position = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27)},
+        sightac1 =      { offset = true, position = vector3_box(0, -0.11, 0.136), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 2.76, 1.92)},
         -- Rear
         --  One is sliiightly further back to prevent z-fighting
         sightac2 =      { offset = true, position = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
