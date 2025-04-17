@@ -1,3 +1,10 @@
+# 2024-04-17
+v1.7.2
+Fixed missing point shooting code
+Fixed unaligned alternative viewmodels for recon
+Added Simplified Chinese localization (thanks RinAnarchy!)
+Added reload callback for EWC 2024-04-08
+
 # 2025-04-06
 v1.7.1
 Added
