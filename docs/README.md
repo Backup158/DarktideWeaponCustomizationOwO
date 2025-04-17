@@ -197,10 +197,11 @@ Powdered deer penis
 
 :3c
 
-**No, seriously, you made this page in November 2024.**
+**No, seriously, you made this page in *November 2024*.**
 
 :3c
 Ok but really it's [this](https://en.wikipedia.org/wiki/Perfect_is_the_enemy_of_good). At least now that it's public, I can be held accountable for being a sack of lazy bones.
+
 **What a shitty FAQ. You didn't even answer half the questions.**
 
 :3c
