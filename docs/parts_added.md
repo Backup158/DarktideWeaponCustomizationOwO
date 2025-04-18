@@ -144,13 +144,16 @@ These can get super janky when using non-default parts so watch out.
 
 ### Magazines
 - **Flat Magazines**: Infantry/Helbore/Recon Lasguns  \
+&emsp; Lasgun magazine and slanted bottom autogun magazine.  \
 &emsp; Bottom is flush with the bottom of the magazine mouth thing on the receiver.
 - **Recon Rear Magazines**: Helbore Lasguns  \
 &emsp; For use with the Elysian grip-stock.
 - **Jungle Magazines**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; Two magazines taped together. It has options for the extra mag to be on the left/right and flipped or not.
+&emsp; Two magazines taped together  \
+&emsp; &emsp; Variants for each autogun magazine  \
+&emsp; &emsp; Each variant has options for the extra mag to be on the left/right and flipped/rightside up.
 - **Mag Assists**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; Based on the Magpul magazine pulls
+&emsp; Based on the Magpul magazine pulls (the Magpul magpulls)
 
 > [!NOTE]
 > 
