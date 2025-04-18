@@ -70,10 +70,10 @@ Parts are prefixed with `OwO` in the customization menu.
 These can get super janky when using non-default parts so watch out.
 - **Vertically Challenged Bolter Receiver**: Spearhead Boltgun  \
 &emsp; ﻿Makes the gun and magazine vertically shorter. This one is just janky all around. Use with the 'Cadia' Complaint grips from the MT plugin.
-- **Bolt Action Helbore Receivers**: Helbore Lasguns  \
+- **Bolt Action Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; ﻿﻿Adds a grip to the back to mimic a bolt
-- **MAS-49 Helbore Receivers**: Helbore Lasguns  \
-&emsp; ﻿﻿Makes the rear blockier and metallic... er
+- **MAS-49 Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
+&emsp; ﻿﻿Makes the rear blockier and metallic... er (it's the dovetail rail)  \
 - **Massive Slide**: Heavy Laspistols  \
 &emsp; ﻿﻿(WIP) Makes the top a giant slide. Moves magazine inside the grip (with a little bulge :3). Be warned when using this because I only spent an hour before deciding I didn't care enough.  \
 &emsp; ﻿﻿Fallout 4 10mm lookin ass mf
