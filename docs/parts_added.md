@@ -162,7 +162,7 @@ These can get super janky when using non-default parts so watch out.
 > Due for a rework but I kinda don't care rn.
 
 - **Plasma Magazines**: Helbore Lasguns  \
-&emsp; Literally just the magazines from the plasmagun.  \
+&emsp; Literally just the magazines from the plasma gun.  \
 &emsp; Variants for just being stuck directly into the receiver and for being attached to a smaller magazine (which doesn't work in-game but shows up in previews)
 
 ### Flashlights
@@ -198,7 +198,7 @@ Spike on the back of the tactical axe head. Fills in the holes in the blades.
 
 ### Pommels
 - **Shovel Handles**: Sapper Shovels  \
-&emsp; D-Ring handles and T-Handles mostly based on E-Tools
+&emsp; D-Ring handles and T-Handles, primarily based on contemporary military E-Tools
 
 > [!WARNING]
 > 
