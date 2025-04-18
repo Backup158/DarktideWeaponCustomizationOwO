@@ -17,126 +17,126 @@ Parts are prefixed with `OwO` in the customization menu.
 
 - **Suppressors**: Infantry/Braced/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Combat Shotguns, Quickdraw Stub Revolvers  \
   &emsp; 1 and 2 are generic suppressors  \
-  &emsp; ﻿3 is based on the PBS-1  \
-  &emsp; ﻿4 and 5 are different generic suppressors, but they're bigger and more metallic
+  &emsp; 3 is based on the PBS-1  \
+  &emsp; 4 and 5 are different generic suppressors, but they're bigger and more metallic
 - **Lasgun Condom**: Infantry/Braced/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
-﻿  &emsp; To cover up the heat discoloring. Aligned for Helbore-based barrels.
+  &emsp; To cover up the heat discoloring. Aligned for Helbore-based barrels.
 - **Muzzle Brake**: Infantry/Braced/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
-  &emsp; ﻿Anti-Materiel Rifle muzzle brake based on the Barrett M82. Use it with the MT Single Stubber barrels.
+  &emsp; Anti-Materiel Rifle muzzle brake based on the Barrett M82. Use it with the MT Single Stubber barrels.
 
 ### Barrels
 - **Dreg Gunner Barrel**: Braced/Infantry/Vigilant Autoguns
 - **M16 Barrels**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; 2 versions based on the a1. 1 on the a2. The a1 variants are very scuffed lol.  \
-&emsp; ﻿Regular variants are aligned with EOTech holographic sights. By aligned, I mean the front post is aligned with the reticle. Kinda like absolute cowitnessing but without the rear sight (so not really cowitness lol). Pretend you have a rear flip sight flipped down, I guess.  \
-&emsp; ﻿Tall variants are aligned with the telescopic and M16 carryhandle sights.  \
-&emsp; ﻿No post variants have no front post. The front post blocks most other sights, so I recommend using these for those.
+&emsp; Regular variants are aligned with EOTech holographic sights. By aligned, I mean the front post is aligned with the reticle. Kinda like absolute cowitnessing but without the rear sight (so not really cowitness lol). Pretend you have a rear flip sight flipped down, I guess.  \
+&emsp; Tall variants are aligned with the telescopic and M16 carryhandle sights.  \
+&emsp; No post variants have no front post. The front post blocks most other sights, so I recommend using these for those.
 - **Wooden Helbore Barrels**: Helbore Lasguns  \
-&emsp; ﻿﻿MAS inspired
+&emsp; MAS inspired
 - **Plasma Rifle Barrels**: Helbore Lasguns  \
-&emsp; ﻿﻿Rectangular plasma rifle barrel.
+&emsp; Rectangular plasma rifle barrel.
 - **Short Shotgun Barrels**: Bolt Pistol  \
-&emsp; ﻿Short variants that extend the barrel a little. Super short variants extend it a little less (wow such detail).
+&emsp; Short variants that extend the barrel a little. Super short variants extend it a little less (wow such detail).
 - **Shotgun Barrel Extension**: Snubnosed Revolver  \
-&emsp; ﻿﻿Short and long variants. Short fits typical revolver barrel length. Long goes a bit beyond that.
+&emsp; Short and long variants. Short fits typical revolver barrel length. Long goes a bit beyond that.
 
 ### Foregrips
 - **Tactical Foregrips**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Angled foregrips, mostly like the iconic Magpul one
+&emsp; Angled foregrips, mostly like the iconic Magpul one
 - **Straight Foregrips**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Foregrips perpendicular to the barrel, which will clip with your off hand (this is why the MT plugin uses slanted foregrips).
+&emsp; Foregrips perpendicular to the barrel, which will clip with your off hand (this is why the MT plugin uses slanted foregrips).
 
 ### Bayonets
 - **Dreg Gunner Bayonet**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Only really aligned with the Dreg Gunner Barrel
+&emsp; Only really aligned with the Dreg Gunner Barrel
 - **Historical Pack**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns.  \
-&emsp; ﻿﻿Based on US M7 Bayonet, German Seitengewehr 98, and French Épée-Baïonnette Modèle 1888
+&emsp; Based on US M7 Bayonet, German Seitengewehr 98, and French Épée-Baïonnette Modèle 1888
 - **Underbarrel Grenade Launchers**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
-&emsp; ﻿﻿Based on M203 and GP25
+&emsp; Based on M203 and GP25
 
 > [!WARNING]
 > 
-> ﻿KNOWN ISSUE: Both variants will steal muzzle flashes from infantry autoguns
+> KNOWN ISSUE: Both variants will steal muzzle flashes from infantry autoguns
 
 - **Underbarrel Shotguns**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
-&emsp; ﻿﻿Based on the Knight's Armament Company Masterkey and the M26-MASS (Modular Accessory Shotgun System)  \
-&emsp; ﻿﻿Masterkey includes smaller and larger variants
+&emsp; Based on the Knight's Armament Company Masterkey and the M26-MASS (Modular Accessory Shotgun System)  \
+&emsp; Masterkey includes smaller and larger variants
 
 > [!WARNING]
 > 
-> ﻿KNOWN ISSUE: Both variants sometimes steal muzzle flashes from bullet-based weapons
+> KNOWN ISSUE: Both variants sometimes steal muzzle flashes from bullet-based weapons
 
 ### Receivers
 These can get super janky when using non-default parts so watch out.
 - **Vertically Challenged Bolter Receiver**: Spearhead Boltgun  \
-&emsp; ﻿Makes the gun and magazine vertically shorter. This one is just janky all around. Use with the 'Cadia' Complaint grips from the MT plugin.
+&emsp; Makes the gun and magazine vertically shorter. This one is just janky all around. Use with the 'Cadia' Complaint grips from the MT plugin.
 - **Bolt Action Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
-&emsp; ﻿﻿Adds a grip to the back to mimic a bolt
+&emsp; Adds a grip to the back to mimic a bolt
 - **MAS-49 Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
-&emsp; ﻿﻿Makes the rear blockier and metallic... er (it's the dovetail rail)  \
+&emsp; Makes the rear blockier and metallic... er (it's the dovetail rail)  \
 - **Massive Slide**: Heavy Laspistols  \
-&emsp; ﻿﻿(WIP) Makes the top a giant slide. Moves magazine inside the grip (with a little bulge :3). Be warned when using this because I only spent an hour before deciding I didn't care enough.  \
-&emsp; ﻿﻿Fallout 4 10mm lookin ass mf
+&emsp; (WIP) Makes the top a giant slide. Moves magazine inside the grip (with a little bulge :3). Be warned when using this because I only spent an hour before deciding I didn't care enough.  \
+&emsp; Fallout 4 10mm lookin ass mf
 
 > [!WARNING]
 > 
-> ﻿KNOWN ISSUE: Has a random magazine in first person
+> KNOWN ISSUE: Has a random magazine in first person
 
 ### Sights
 - Sight_2, **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers  \
-&emsp; ﻿﻿Point shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim  \
-&emsp; ﻿﻿Equipped in the helper sight section  \
+&emsp; Point shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim  \
+&emsp; Equipped in the helper sight section  \
 &emsp; These change how you hold the gun while ADSing while keeping the physical appearance of the scope on your gun.
 - **Ladder Aperture Sights**: Helbore Lasguns  \
-&emsp; ﻿﻿Based on WWI style iron sights. No front posts though so good luck aiming with just the U notch.  \
-&emsp; ﻿﻿Includes very shoddily made MAS49 inspired sights. These look ugly as sin since the receiver is so wide and I'm too lazy to resize them.
+&emsp; Based on WWI style iron sights. No front posts though so good luck aiming with just the U notch.  \
+&emsp; Includes very shoddily made MAS49 inspired sights. These look ugly as sin since the receiver is so wide and I'm too lazy to resize them.
 - **AK Irons**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Adjustable rear notch sight  \
-&emsp; ﻿﻿Aligned for the long Braced Autogun barrel with the Infantry/Braced receiver  \
-&emsp; ﻿﻿Includes variant with dust cover (that I wish I could make wider). I also left two scuffed variants that I made before I realize there was already an elevation ladder in the game lmao.
+&emsp; Adjustable rear notch sight  \
+&emsp; Aligned for the long Braced Autogun barrel with the Infantry/Braced receiver  \
+&emsp; Includes variant with dust cover (that I wish I could make wider). I also left two scuffed variants that I made before I realize there was already an elevation ladder in the game lmao.
 - **M16 Carry Handle Irons**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Sight aligned with M16 Barrels (Tall). Versions with and without the rear elevation wheel since I don't think a1's have them.
+&emsp; Sight aligned with M16 Barrels (Tall). Versions with and without the rear elevation wheel since I don't think a1's have them.
 - **Holographic Sights with Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
-&emsp; ﻿﻿Based on EOTech HWS and Vortex Razor AMG.  \
-&emsp; ﻿﻿Adds standalone holographic sight, holo with magnifier to the side, and holo with magnifier lined up (with options for 2 zoom levels).  \
-&emsp; ﻿﻿﻿You can choose all 3 sight pictures by using the sight_2 options from the MT Plugin.  \
-&emsp; ﻿﻿﻿Holo with magnifier lined up includes variants for zoom.  \
-﻿﻿&emsp; ﻿Includes short variants that doesn't clip with the receiver, but blocks more of the sight picture.  \
-&emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
+&emsp; Based on EOTech HWS and Vortex Razor AMG.  \
+&emsp; Adds standalone holographic sight, holo with magnifier to the side, and holo with magnifier lined up (with options for 2 zoom levels).  \
+&emsp; You can choose all 3 sight pictures by using the sight_2 options from the MT Plugin.  \
+&emsp; Holo with magnifier lined up includes variants for zoom.  \
+&emsp; Includes short variants that doesn't clip with the receiver, but blocks more of the sight picture.  \
+&emsp; Supports the Volleygun receivers from Syn's Edits.
 - **Telescopic Sights with Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
-&emsp; ﻿﻿Adds ACOG sight and SUSAT sight. Includes variants for different zoom and with RDS stacked on top.  \
-&emsp; ﻿&emsp; ﻿Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.  \
-&emsp; ﻿&emsp; Includes variants to aim through the main sight and the red dot (top).  \
-&emsp; ﻿﻿﻿ACOG doesn't have bullet drop compensation crosshair ticks.  \
-&emsp; ﻿&emsp; ﻿Uses the default Darktide reflex pictures, equipped through sight_2 options.  \
-&emsp; ﻿﻿﻿SUSAT uses the German post, obelisk-shaped reticle.  \
-&emsp; ﻿Sights are aligned with M16 Barrels (Tall)  \
-&emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
+&emsp; Adds ACOG sight and SUSAT sight. Includes variants for different zoom and with RDS stacked on top.  \
+&emsp; &emsp; Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.  \
+&emsp; &emsp; Includes variants to aim through the main sight and the red dot (top).  \
+&emsp; ACOG doesn't have bullet drop compensation crosshair ticks.  \
+&emsp; &emsp; Uses the default Darktide reflex pictures, equipped through sight_2 options.  \
+&emsp; SUSAT uses the German post, obelisk-shaped reticle.  \
+&emsp; Sights are aligned with M16 Barrels (Tall)  \
+&emsp; Supports the Volleygun receivers from Syn's Edits.
 
 > [!WARNING]
 > 
 > KNOWN ISSUE: SUSATs will steal the lasers from lasguns and shotguns (???).
 
 - **Soviet PU Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
-&emsp; ﻿﻿Uses German #1 style reticle. The one that looks like a T
+&emsp; Uses German #1 style reticle. The one that looks like a T
 
 ### Grips
 - **Fin Grips**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Grip with a wedge sticking out the back to avoid having a grip that "protrudes conspicuously beneath the action of the weapon."  \
+&emsp; Grip with a wedge sticking out the back to avoid having a grip that "protrudes conspicuously beneath the action of the weapon."  \
 &emsp; In compliance with Cadian Penal Code section 30515
 
 ### Stocks
 - **Straight Grip and Stock**: Helbore Lasguns  \
-&emsp; ﻿﻿Recon stocks with revolver grips, based on Elysian Drop Troop sniper lasguns.  \
-&emsp; ﻿﻿Anti-materiel rifle stocks, based on the Barrett M82 with the rear grip.  \
-&emsp; ﻿﻿These will clip into your hands during regular use, which why the other plugins use slanted grips
+&emsp; Recon stocks with revolver grips, based on Elysian Drop Troop sniper lasguns.  \
+&emsp; Anti-materiel rifle stocks, based on the Barrett M82 with the rear grip.  \
+&emsp; These will clip into your hands during regular use, which why the other plugins use slanted grips
 - **Tactical Stocks**: Braced/Infantry/Vigilant Autoguns, Autopistols, Infantry Lasguns, Bolter, Bolt Pistol, Combat Shotguns   \
-&emsp; ﻿﻿﻿Skeletal stock  \
-&emsp; ﻿﻿﻿Folded stocks: Stock attached to a hinge and folded to the left or right  \
-&emsp; ﻿﻿﻿Folded stocks (natural): Stocks with hinges built-in. Folded left/right/under
+&emsp; Skeletal stock  \
+&emsp; Folded stocks: Stock attached to a hinge and folded to the left or right  \
+&emsp; Folded stocks (natural): Stocks with hinges built-in. Folded left/right/under
 - **Kalashnikov Stocks**: Braced/Infantry/Vigilant Autoguns  \
-&emsp; ﻿Bigger stocks rotated to resemble the stocks on Kalashnikov rifles  \
-&emsp; ﻿﻿﻿Includes compact variants for shotgun stocks
+&emsp; Bigger stocks rotated to resemble the stocks on Kalashnikov rifles  \
+&emsp; Includes compact variants for shotgun stocks
 - **Straight Grip**: Combat Shotguns  \
 &emsp; Same choices and Straight Foregrips but as a stock
 - Stock_2, **Big Stocks**: Combat Shotguns  \
@@ -144,13 +144,13 @@ These can get super janky when using non-default parts so watch out.
 
 ### Magazines
 - **Flat Magazines**: Infantry/Helbore/Recon Lasguns  \
-﻿&emsp; ﻿Bottom is flush with the bottom of the magazine mouth thing on the receiver.
+&emsp; Bottom is flush with the bottom of the magazine mouth thing on the receiver.
 - **Recon Rear Magazines**: Helbore Lasguns  \
-&emsp; ﻿﻿For use with the Elysian grip-stock.
+&emsp; For use with the Elysian grip-stock.
 - **Jungle Magazines**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Two magazines taped together. It has options for the extra mag to be on the left/right and flipped or not.
+&emsp; Two magazines taped together. It has options for the extra mag to be on the left/right and flipped or not.
 - **Mag Assists**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Based on the Magpul magazine pulls
+&emsp; Based on the Magpul magazine pulls
 
 > [!NOTE]
 > 
@@ -159,8 +159,8 @@ These can get super janky when using non-default parts so watch out.
 > Due for a rework but I kinda don't care rn.
 
 - **Plasma Magazines**: Helbore Lasguns  \
-&emsp; ﻿﻿Literally just the magazines from the plasmagun.  \
-&emsp; ﻿﻿Variants for just being stuck directly into the receiver and for being attached to a smaller magazine (which doesn't work in-game but shows up in previews)
+&emsp; Literally just the magazines from the plasmagun.  \
+&emsp; Variants for just being stuck directly into the receiver and for being attached to a smaller magazine (which doesn't work in-game but shows up in previews)
 
 ### Flashlights
 - **Trigger Guard Laser**: Heavy Laspistols, Quickdraw Stub Revolvers  \
@@ -176,34 +176,34 @@ These can get super janky when using non-default parts so watch out.
 
 ### Heads
 - **Tactical Axe Spike**: Combat/Tactical Axes  \
-﻿Spike on the back of the tactical axe head. Fills in the holes in the blades.
+Spike on the back of the tactical axe head. Fills in the holes in the blades.
 
 ### Body
 - **Rapier Blade**: Dueling Swords  \
-&emsp; ﻿﻿Thin, straight blades
+&emsp; Thin, straight blades
 - **Historical Knives**: Combat Blades  \
-&emsp; ﻿Based on the M1917 Trench Dagger, Gerber Mk II, Indonesian karambits, and tanto blades.  \
-&emsp; ﻿﻿﻿Karambits come in regular/short and curved forwards/backwards (and they're all very scuffed lol)  \
-﻿﻿&emsp; ﻿Tantos are basically the MT Combat Sword blades but skinnier and shorter, so I didn't bother aligning them outside the default case.
+&emsp; Based on the M1917 Trench Dagger, Gerber Mk II, Indonesian karambits, and tanto blades.  \
+&emsp; Karambits come in regular/short and curved forwards/backwards (and they're all very scuffed lol)  \
+&emsp; Tantos are basically the MT Combat Sword blades but skinnier and shorter, so I didn't bother aligning them outside the default case.
 
 ### Blades
 - **Thin Power Sword**: Power Swords  \
-&emsp; ﻿﻿1h Power Sword blades scaled down  \
-&emsp; ﻿﻿﻿&emsp; ﻿Slim: Less thick, but same width and height  \
-&emsp; ﻿&emsp; ﻿﻿﻿Thin: Less thick and wide, but same height  \
-&emsp; ﻿﻿Also halves the thickness of whatever hilt you equipped
+&emsp; 1h Power Sword blades scaled down  \
+&emsp; &emsp; Slim: Less thick, but same width and height  \
+&emsp; &emsp; Thin: Less thick and wide, but same height  \
+&emsp; Also halves the thickness of whatever hilt you equipped
 
 ### Pommels
 - **Shovel Handles**: Sapper Shovels  \
-&emsp; ﻿﻿D-Ring handles and T-Handles mostly based on E-Tools
+&emsp; D-Ring handles and T-Handles mostly based on E-Tools
 
 > [!WARNING]
 > 
-> ﻿KNOWN ISSUE: Note that these only work on some head/grip combinations, and it's different for each pommel.
+> KNOWN ISSUE: Note that these only work on some head/grip combinations, and it's different for each pommel.
 > \
 > Shovels are cursed (not really I'm just a lazy bitch).
 
 ### Front Guard
 - **Front Guard**: Combat Blades  \
-﻿&emsp; ﻿New slot. Curved hilt in front of the grip to protect your fingers.  \
-&emsp; ﻿﻿Includes knuckle duster variants, where you have 1-4 small guards in front.
+&emsp; New slot. Curved hilt in front of the grip to protect your fingers.  \
+&emsp; Includes knuckle duster variants, where you have 1-4 small guards in front.
