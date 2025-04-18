@@ -84,7 +84,8 @@ These can get super janky when using non-default parts so watch out.
 
 ### Sights
 - Sight_2, **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers  \
-&emsp; ﻿﻿Equipped in the helper sight section, these change how you hold the gun while ADSing, but keeping the physical appearance of the scope on your gun.  \
+&emsp; ﻿﻿Equipped in the helper sight section  \
+&emsp; These change how you hold the gun while ADSing while keeping the physical appearance of the scope on your gun.  \
 &emsp; ﻿﻿Point Shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim
 - **Ladder Aperture Sights**: Helbore Lasguns  \
 &emsp; ﻿﻿Based on WWI style iron sights. No front posts though so good luck aiming with just the U notch.  \
