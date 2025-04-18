@@ -84,9 +84,9 @@ These can get super janky when using non-default parts so watch out.
 
 ### Sights
 - Sight_2, **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers  \
+&emsp; ﻿﻿Point shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim  \
 &emsp; ﻿﻿Equipped in the helper sight section  \
-&emsp; These change how you hold the gun while ADSing while keeping the physical appearance of the scope on your gun.  \
-&emsp; ﻿﻿Point Shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim
+&emsp; These change how you hold the gun while ADSing while keeping the physical appearance of the scope on your gun.
 - **Ladder Aperture Sights**: Helbore Lasguns  \
 &emsp; ﻿﻿Based on WWI style iron sights. No front posts though so good luck aiming with just the U notch.  \
 &emsp; ﻿﻿Includes very shoddily made MAS49 inspired sights. These look ugly as sin since the receiver is so wide and I'm too lazy to resize them.
@@ -101,35 +101,36 @@ These can get super janky when using non-default parts so watch out.
 &emsp; ﻿﻿Adds standalone holographic sight, holo with magnifier to the side, and holo with magnifier lined up (with options for 2 zoom levels).  \
 &emsp; ﻿﻿﻿You can choose all 3 sight pictures by using the sight_2 options from the MT Plugin.  \
 &emsp; ﻿﻿﻿Holo with magnifier lined up includes variants for zoom.  \
-﻿﻿&emsp; ﻿Includes short variant that doesn't clip with the receiver, but blocks more of the sight picture.  \
+﻿﻿&emsp; ﻿Includes short variants that doesn't clip with the receiver, but blocks more of the sight picture.  \
 &emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
 - **Telescopic Sights with Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
-&emsp; ﻿﻿Adds standalone ACOG sight and SUSAT sight. Includes variants for different zoom and with RDS stacked on top.  \
+&emsp; ﻿﻿Adds ACOG sight and SUSAT sight. Includes variants for different zoom and with RDS stacked on top.  \
+&emsp; ﻿&emsp; ﻿Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.  \
+&emsp; ﻿&emsp; Includes variants to aim through the main sight and the red dot (top).  \
 &emsp; ﻿﻿﻿ACOG doesn't have bullet drop compensation crosshair ticks.  \
 &emsp; ﻿&emsp; ﻿Uses the default Darktide reflex pictures, equipped through sight_2 options.  \
-&emsp; ﻿&emsp; ﻿Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.  \
 &emsp; ﻿﻿﻿SUSAT uses the German post, obelisk-shaped reticle.  \
-&emsp; ﻿﻿Versions to aim through the main sight and the red dot (top).  \
-&emsp; ﻿Sight aligned with M16 Barrels (Tall)  \
+&emsp; ﻿Sights are aligned with M16 Barrels (Tall)  \
 &emsp; ﻿﻿Supports the Volleygun receivers from Syn's Edits.
 
 > [!WARNING]
 > 
-> KNOWN ISSUE: SUSATs will steal the lasers from lasguns.
+> KNOWN ISSUE: SUSATs will steal the lasers from lasguns and shotguns (???).
 
 - **Soviet PU Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; ﻿﻿Uses German #1 style reticle. The one that looks like a T
 
 ### Grips
 - **Fin Grips**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; ﻿﻿Pistol grip with a wedge out the back that kinda clips into the stock.
+&emsp; ﻿﻿Grip with a wedge sticking out the back to avoid having a grip that "protrudes conspicuously beneath the action of the weapon."  \
+&emsp; In compliance with Cadian Penal Code section 30515
 
 ### Stocks
 - **Straight Grip and Stock**: Helbore Lasguns  \
-&emsp; ﻿﻿Recon stocks with revolver grips are based on Elysian Drop Troop sniper lasguns.  \
-&emsp; ﻿﻿Anti-materiel rifle stocks are based on the Barrett M82 with the rear grip.  \
+&emsp; ﻿﻿Recon stocks with revolver grips, based on Elysian Drop Troop sniper lasguns.  \
+&emsp; ﻿﻿Anti-materiel rifle stocks, based on the Barrett M82 with the rear grip.  \
 &emsp; ﻿﻿These will clip into your hands during regular use, which why the other plugins use slanted grips
-- **Tactical Stocks**: Braced/Infantry/Vigilant Autoguns, Autopistols, Infantry Lasguns, Bolter, Bolt Pistol, Combat Shotguns,   \
+- **Tactical Stocks**: Braced/Infantry/Vigilant Autoguns, Autopistols, Infantry Lasguns, Bolter, Bolt Pistol, Combat Shotguns   \
 &emsp; ﻿﻿﻿Skeletal stock  \
 &emsp; ﻿﻿﻿Folded stocks: Stock attached to a hinge and folded to the left or right  \
 &emsp; ﻿﻿﻿Folded stocks (natural): Stocks with hinges built-in. Folded left/right/under
