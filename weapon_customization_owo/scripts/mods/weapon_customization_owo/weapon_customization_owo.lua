@@ -44,14 +44,19 @@ function mod.on_all_mods_loaded()
     end
     mod.syn = syn
 
-	-- Reload Callback
-	mod.wc.register_definition_callback(function()
-		mod.load_mod_file("files_to_load")
-		mod:echo("weapon attachment wewoad :3")
-	end)
-
 	local attachment_ids = {}
 	local model_ids = {}
+	local debug = mod:get("debug_mode")
+	local discord = mod:get("discord_mode")
+
+	if discord then
+		-- Reload Callback
+		--	Reinject fixes
+		mod.wc.register_definition_callback(function()
+			mod.load_mod_file("files_to_load")
+			mod:info("weapon attachment wewoad :3")
+		end)
+	end
 
 	-- Renamed because initially I was worried about collisions
 	-- 		Not an actual issue since methods are called with the class name, like class.method
@@ -71,10 +76,12 @@ function mod.on_all_mods_loaded()
 		attachment_ids[variant_id][slot] = attachment_ids[variant_id][slot] or {}
 
 		for _, attachment in ipairs(attachments_table) do
-			--mod:info("'"..string.sub(attachment.name, 1, 4).."' is being looked at,,,")
-			if not string.sub(attachment.name, 1, 4) == "OwO " then
-				attachment.name = "OwO "..attachment.name
-			end
+			-- I'm just going to add the prefix manually so I can choose which ones don't have the prefix
+			--if debug then mod:info("Checking substring: '"..string.sub(attachment.name, 1, 4).."'") end
+			--if not string.sub(attachment.name, 1, 4) == "OwO " then
+			--	attachment.name = "OwO "..attachment.name
+			--	if debug then mod:info("New name: "..attachment.name) end
+			--end
 
 			table.insert(wc.attachment[variant_id][slot], attachment)
 			table.insert(attachment_ids[variant_id][slot], attachment.id)

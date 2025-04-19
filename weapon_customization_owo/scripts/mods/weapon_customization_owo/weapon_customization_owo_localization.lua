@@ -22,7 +22,13 @@ local localizations = {
 		en = "OwO Mode",
 	},
 	owo_mode_description = {
-		en = "UwUified descriptions on the mod options page >:3 Requires a game restart/reload to apply.",
+		en = "UwUified descriptions on the mod options page >:3\nRequires a game restart/reload to apply.",
+	},
+	discord_mode = {
+		en = "EWC Discord Release Compatibility"
+	},
+	discord_mode_description = {
+		en = "Has no effect on which parts are available.\nEnables developer features that are only available in the EWC beta releases in the Darktide Modders Discord."
 	},
 }
 

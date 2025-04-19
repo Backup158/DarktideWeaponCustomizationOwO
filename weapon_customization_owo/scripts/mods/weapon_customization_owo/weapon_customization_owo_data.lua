@@ -1,7 +1,7 @@
 local mod = get_mod("weapon_customization_owo")
 
 local finalWidgets = {}
-local widgetsToggleableToAdd = {"debug_mode", "owo_mode"}
+local widgetsToggleableToAdd = {"debug_mode", "owo_mode", "discord_mode"}
 -- Appends a toggleable option for a new widget
 local function addWidget(name)
     -- Write at (table size) + 1, ie inserting at the tail
