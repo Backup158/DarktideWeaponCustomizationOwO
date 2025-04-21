@@ -20,27 +20,29 @@ local localizations = {
 	},
 	owo_mode = {
 		en = "OwO Mode",
+		--en = "OwO",
 	},
 	owo_mode_description = {
 		en = "UwUified descriptions on the mod options page >:3\nRequires a game restart/reload to apply.",
+		--en = ">:3",
 	},
 	discord_mode = {
 		en = "EWC Discord Release Compatibility"
 	},
 	discord_mode_description = {
-		en = "Has no effect on which parts are available.\nEnables developer features that are only available in the EWC beta releases in the Darktide Modders Discord."
+		en = "Has no effect on which parts are available.\nEnables developer features that are only available in the EWC beta releases in the Darktide Modders Discord.\nRequires a game restart/reload to apply."
 	},
 }
 
---[[if mod:get("owo_mode") then
-	localizations[mod_name][en] = "Weapon Customization - OwO (O-ostwacized *runs away* without Objection >w<)"
-	localizations[mod_description][en] = "Weapon Customization plugin adding vawious pawts, typicawwy inspiwed >w< by *whispers to self* histowicaw and tacticoow weapons."
-	localizations[mod_description][ru] = "У меня в арсенале всего одна маленькая анальная пробка, так что мне явно нужно еще много времени, чтобы научиться комфортно принимать член"
-	localizations[debug_mode][en] = "Debug M-m-mode *walks away*"
-	localizations[debug_mode_description][en] = "V-Vewbose pwinting"
-	localizations[owo_mode][en] = "OwO Mode"
-	localizations[owo_mode_description][en] = "UwUified ;;w;; descwiptions on the x3 mod options *whispers to self* page *twerks* >:3 Wequiwes a game westawt/wewoad (・`ω´・) to *looks at you* apply."
-end]]
+if mod:get("owo_mode") then
+	localizations["mod_name"]["en"] = "Weapon Customization - OwO (O-ostwacized *runs away* without Objection >w<)"
+	localizations["mod_description"]["en"] = "Weapon Customization plugin adding vawious pawts, typicawwy inspiwed >w< by *whispers to self* histowicaw and tacticoow weapons."
+	localizations["mod_description"]["ru"] = "У меня в арсенале всего одна маленькая анальная пробка, так что мне явно нужно еще много времени, чтобы научиться комфортно принимать член"
+	localizations["debug_mode"]["en"] = "Debug M-m-mode *walks away*"
+	localizations["debug_mode_description"]["en"] = "V-Vewbose pwinting"
+	localizations["owo_mode"]["en"] = "OwO Mode"
+	localizations["owo_mode_description"]["en"] = "UwUified ;;w;; descwiptions on the x3 mod options *whispers to self* page *twerks* >:3 Wequiwes a game westawt/wewoad (・`ω´・) to *looks at you* apply."
+end
 
 return localizations
 
