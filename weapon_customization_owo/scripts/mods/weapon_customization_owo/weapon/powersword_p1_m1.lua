@@ -46,7 +46,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =  { _owo_slim_psword_blades },
         hilt = {position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        blade = {position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 1, 1)},
+        blade = {position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 1)},
     },
     --  Thin Power Sword
     --      Hilt Patches
@@ -55,6 +55,6 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =  { _owo_thin_psword_blades },
         hilt = {position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        blade = {position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.9, 0.65, 1)},
+        blade = {position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 0.65, 1)},
     },
 })
