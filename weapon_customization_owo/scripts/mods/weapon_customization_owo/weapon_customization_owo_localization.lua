@@ -25,6 +25,7 @@ local localizations = {
 	owo_mode_description = {
 		en = "UwUified descriptions on the mod options page >:3\nRequires a game restart/reload to apply.",
 		--en = ">:3",
+		ru = "гей порно с обезьянами и с энди",
 	},
 	discord_mode = {
 		en = "EWC Discord Release Compatibility"
