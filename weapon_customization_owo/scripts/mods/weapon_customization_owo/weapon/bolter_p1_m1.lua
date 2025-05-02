@@ -14,18 +14,17 @@ local this_variant = "bolter_p1_m1" -- Spearhead Boltgun
 -- Makes new tables for attachment anchors
 -- ############################################
 mod.wc.attachment[this_variant].sightac1 = {}
---[[ Covered by MT Plugin 
+-- Covered by MT Plugin 
 --mod.wc.attachment[this_variant].sightac3 = {}
 --mod.wc.attachment[this_variant].sightac4 = {}
 --mod.wc.attachment[this_variant].sightac2 = {}
-]]
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
 mod.wc.attachment[this_variant].sightac7 = {}
 mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
---[[ Also covered by MT Plugin
+-- Also covered by MT Plugin
 --mod.wc.attachment[this_variant].sight_2 = {}
 --mod.wc.attachment[this_variant].carryhandle = {}
 --mod.wc.attachment[this_variant].gripac = {}
@@ -33,7 +32,6 @@ mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 --mod.wc.attachment[this_variant].stockac2 = {}
 --mod.wc.attachment[this_variant].sightac = {}
 --mod.wc.attachment[this_variant].accessory = {}
-]]
 
 -- ############################################
 -- Injection Calls: attachments and models

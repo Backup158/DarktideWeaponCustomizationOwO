@@ -25,11 +25,10 @@ mod.wc.attachment[this_variant].bayonetac6 = {}
 mod.wc.attachment[this_variant].bayonetac7 = {}
 mod.wc.attachment[this_variant].barrelac = {}
 mod.wc.attachment[this_variant].sightac1 = {}
---[[ Covered by MT Plugin 
+-- Covered by MT Plugin 
 --mod.wc.attachment[this_variant].sightac2 = {}
 --mod.wc.attachment[this_variant].sightac3 = {}
 --mod.wc.attachment[this_variant].sightac4 = {}
-]]
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
 mod.wc.attachment[this_variant].sightac7 = {}

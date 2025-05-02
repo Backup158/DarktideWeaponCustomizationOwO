@@ -13,8 +13,7 @@ local this_variant = "powersword_p1_m1" -- Power Sword
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
---[[ Covered Parts
--- By Syn
+-- Covered by Syn
 --mod.wc.attachment[this_variant].bladeshroud = {}
 --mod.wc.attachment[this_variant].bladeshroudac = {}
 --mod.wc.attachment[this_variant].bladeshroudac2 = {}
@@ -22,7 +21,6 @@ local this_variant = "powersword_p1_m1" -- Power Sword
 --mod.wc.attachment[this_variant].bladeshroudac11 = {}
 --mod.wc.attachment[this_variant].bladeshroudac12 = {}
 --mod.wc.attachment[this_variant].bladeshroudac13 = {}
-]]
 
 -- ############################################
 -- Injection Calls: attachments and models

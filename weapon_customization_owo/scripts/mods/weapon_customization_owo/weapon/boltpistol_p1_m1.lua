@@ -17,42 +17,16 @@ if not mod.syn then
     mod.wc.attachment[this_variant].barrelshroud = {}
 end
 mod.wc.attachment[this_variant].sightac1 = {}
---[[ Covered by MT Plugin 
-mod.wc.attachment[this_variant].sightac2 = {}
-mod.wc.attachment[this_variant].sightac3 = {}
-mod.wc.attachment[this_variant].sightac4 = {}
-]]
+-- Covered by MT Plugin 
+-- mod.wc.attachment[this_variant].sightac2 = {}
+-- mod.wc.attachment[this_variant].sightac3 = {}
+-- mod.wc.attachment[this_variant].sightac4 = {}
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
 mod.wc.attachment[this_variant].sightac7 = {}
 mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
---[[ Covered by other plugins
--- MT
-mod.wc.attachment[this_variant]. sight_2 = {}
-mod.wc.attachment[this_variant].carryhandle = {}
-mod.wc.attachment[this_variant].gripac = {}
-mod.wc.attachment[this_variant].stockac = {}
-mod.wc.attachment[this_variant].stockac2 = {}
-mod.wc.attachment[this_variant].sightac = {}
-mod.wc.attachment[this_variant].sightac2 = {}
-mod.wc.attachment[this_variant].sightac3 = {}
-mod.wc.attachment[this_variant].sightac4 = {}
-mod.wc.attachment[this_variant].accessory = {}
--- Syn
-mod.wc.attachment[this_variant].synservoskull = {}
-mod.wc.attachment[this_variant].barrelshroud = {}
-mod.wc.attachment[this_variant].barrelshroudac = {}
-mod.wc.attachment[this_variant].barrelshroudac2 = {}
-mod.wc.attachment[this_variant].receiver_special_07 = {}
-mod.wc.attachment[this_variant].receiver_special_08 = {}
-mod.wc.attachment[this_variant].receiver_special_09 = {}
-mod.wc.attachment[this_variant].receiver_special_10 = {}
-mod.wc.attachment[this_variant].receiver_special_11 = {}
-mod.wc.attachment[this_variant].receiver_special_12 = {}
-]]
-
 
 -- ############################################
 -- Injection Calls: attachments and models
