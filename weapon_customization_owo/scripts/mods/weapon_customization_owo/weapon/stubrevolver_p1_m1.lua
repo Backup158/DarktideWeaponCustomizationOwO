@@ -17,11 +17,11 @@ mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to r
 mod.wc.attachment[this_variant].barrelshroud = {} -- MT and Syn didn't add this to revolver yet
 
 mod.wc.attachment[this_variant].sightac1 = {}
---[[ Covered by MT Plugin 
-mod.wc.attachment[this_variant].sightac2 = {}
-mod.wc.attachment[this_variant].sightac3 = {}
-mod.wc.attachment[this_variant].sightac4 = {}
-]]
+-- mod.wc.attachment[this_variant].sightac2 = {} -- Covered by MT Plugin 
+-- mod.wc.attachment[this_variant].sightac3 = {} -- Covered by MT Plugin 
+if not mod.syn then
+    mod.wc.attachment[this_variant].sightac4 = {}
+end
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
 mod.wc.attachment[this_variant].sightac7 = {}
