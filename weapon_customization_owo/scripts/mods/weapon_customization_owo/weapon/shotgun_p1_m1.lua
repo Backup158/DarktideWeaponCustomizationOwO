@@ -19,14 +19,13 @@ if not mod.syn then
     mod.wc.attachment[this_variant].sightac3 = {}
     mod.wc.attachment[this_variant].sightac4 = {}
 
+    -- Inject empty stock_2 for default
     mod.wc.attachment[this_variant].stock_2 = {}
-    mod.inject_attachments_owo(this_variant, "stock_2", {
-		{id = "owo_stock_02_empty", name = "None"},
-	})
-    mod.inject_models(this_variant, {
-        owo_stock_02_empty = { model = "", type = "stock_2", parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_00", }, },
-    })
+    mod.inject_attachments_owo(this_variant, "stock_2", { {id = "owo_stock_02_empty", name = "None"}, })
+    mod.inject_models(this_variant, { owo_stock_02_empty = { model = "", type = "stock_2", parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_00", }, }, })
     mod.wc.attachment[this_variant].stockac = {}
+
+    mod.wc.attachment[this_variant].shotgun_p1_m1.muzzle_2 = {}
 end
 mod.wc.attachment[this_variant].foregrip = {}
 mod.wc.attachment[this_variant].foregripac1 = {}
