@@ -1,11 +1,13 @@
 # 2024-04-17
 v1.7.2
-Fixed missing point shooting code
-Fixed unaligned alternative viewmodels for recon
-Resized slim psword blades because I forgot to actually slim them down 
-Added Simplified Chinese localization (thanks RinAnarchy!)
-Added reload callback for EWC 2024-04-08
-    Bundled this into the Toggle Discord Mode
+Added Features:
+- Simplified Chinese localization (thanks RinAnarchy!)
+- Reload callback for EWC 2024-04-08
+    - Bundled this into the Toggle Discord Mode
+Fixes:
+- Missing point shooting code for Revolver
+- Unaligned scope lenses using alternative viewmodels for recon
+- Resized slim psword blades because I forgot to actually slim them down 
 
 # 2025-04-06
 v1.7.1
