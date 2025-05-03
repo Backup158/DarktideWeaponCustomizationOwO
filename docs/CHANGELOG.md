@@ -2,12 +2,16 @@
 v1.7.2
 Added Features:
 - Simplified Chinese localization (thanks RinAnarchy!)
+- Russian "localization"
+- Additional (joke) mod options
+    - Debug mode, OwO mode, and Discord Release mode
 - Reload callback for EWC 2024-04-08
-    - Bundled this into the Toggle Discord Mode
+    - Bundled this into the Discord Release Mode
 Fixes:
 - Missing point shooting code for Revolver
 - Unaligned scope lenses using alternative viewmodels for recon
 - Resized slim psword blades because I forgot to actually slim them down 
+- Missing attachment slot declarations for people not using Syn's edits
 
 # 2025-04-06
 v1.7.1
