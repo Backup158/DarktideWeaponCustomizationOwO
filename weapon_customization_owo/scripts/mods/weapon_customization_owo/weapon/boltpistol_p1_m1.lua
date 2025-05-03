@@ -15,6 +15,8 @@ local this_variant = "boltpistol_p1_m1" -- Bolt Pistol
 -- ############################################
 if not mod.syn then
     mod.wc.attachment[this_variant].barrelshroud = {}
+
+    mod.wc.attachment[this_variant].sight_2 = {}
 end
 mod.wc.attachment[this_variant].sightac1 = {}
 -- Covered by MT Plugin 
