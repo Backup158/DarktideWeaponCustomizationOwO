@@ -46,7 +46,7 @@ if mod:get("owo_mode") then
 	localizations["debug_mode_description"]["en"] = "V-Vewbose pwinting"
 	localizations["owo_mode"]["en"] = "OwO Mode"
 	localizations["owo_mode_description"]["en"] = "UwUified ;;w;; descwiptions on the x3 mod options *whispers to self* page *twerks* >:3 Wequiwes a game westawt/wewoad (・`ω´・) to *looks at you* apply."
-	localizations["discord_mode_description"]["ru"] = "Меня заставили стать котом. Помогите Как выйти из этого порочного круга"
+	localizations["discord_mode_description"]["ru"] = "Меня заставили стать котом. Помогите Как выйти из этого порочного круга."
 end
 
 return localizations
