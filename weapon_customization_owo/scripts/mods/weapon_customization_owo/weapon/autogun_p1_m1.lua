@@ -486,8 +486,8 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Straight Mags
     --  Second mag on the left
-    {   dependencies = { "owo_jungle_mag_01|owo_jungle_mag_02|owo_jungle_mag_03|owo_jungle_mag_01_up|owo_jungle_mag_02_up|owo_jungle_mag_03_up"},
-        magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
+    {   dependencies =  { "owo_jungle_mag_01|owo_jungle_mag_02|owo_jungle_mag_03|owo_jungle_mag_01_up|owo_jungle_mag_02_up|owo_jungle_mag_03_up"},
+        magazine =      { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
         -- front
         owo_magac2 =    { offset = true,    position = vector3_box(-0.03, 0.11, -0.15),     rotation = vector3_box(90, 0, 90),      scale = vector3_box(1, 1.74, 0.37) },
         -- back
@@ -498,33 +498,33 @@ mod.mt.inject_fixes(this_variant, {
         owo_magac5 =    { offset = true,    position = vector3_box(0.03, 0.056, -0.15),     rotation = vector3_box(-90, -90, 90),   scale = vector3_box(1, 1.532, 0.37) },
     },
     --       v^
-    {   dependencies = { "owo_jungle_mag_01|owo_jungle_mag_02|owo_jungle_mag_03"},
+    {   dependencies =  { "owo_jungle_mag_01|owo_jungle_mag_02|owo_jungle_mag_03"},
         owo_magac1 =    { offset = true,    position = vector3_box(-0.065, 0.106, -0.27),   rotation = vector3_box(180, 0, 0),      scale = vector3_box(1, 1, 1) },
     },
     --      ^^
-    {   dependencies = { "owo_jungle_mag_01_up|owo_jungle_mag_02_up|owo_jungle_mag_03_up"},
+    {   dependencies =  { "owo_jungle_mag_01_up|owo_jungle_mag_02_up|owo_jungle_mag_03_up"},
         owo_magac1 =    { offset = true,    position = vector3_box(-0.065, 0.0, -0.08),   rotation = vector3_box(0, 0, 0),      scale = vector3_box(1, 1, 1) },
     },
     --  Second mag on the right
-    {   dependencies = { "owo_jungle_mag_01_flip|owo_jungle_mag_02_flip|owo_jungle_mag_03_flip|owo_jungle_mag_01_up_flip|owo_jungle_mag_02_up_flip|owo_jungle_mag_03_up_flip"},
-        magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
+    {   dependencies =  { "owo_jungle_mag_01_flip|owo_jungle_mag_02_flip|owo_jungle_mag_03_flip|owo_jungle_mag_01_up_flip|owo_jungle_mag_02_up_flip|owo_jungle_mag_03_up_flip"},
+        magazine =      { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
         owo_magac2 =    { offset = true,    position = vector3_box(0.034, 0.11, -0.15),     rotation = vector3_box(90, 0, 90),      scale = vector3_box(1, 1.74, 0.37) },
         owo_magac3 =    { offset = true,    position = vector3_box(0.034, 0., -0.15),       rotation = vector3_box(-90, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
         owo_magac4 =    { offset = true,    position = vector3_box(-0.028, 0.056, -0.15),   rotation = vector3_box(90, 90, 90),     scale = vector3_box(1, 1.532, 0.37) },
         owo_magac5 =    { offset = true,    position = vector3_box(0.095, 0.056, -0.15),    rotation = vector3_box(-90, -90, 90),   scale = vector3_box(1, 1.532, 0.37) },
     },
     --      ^v
-    {   dependencies = { "owo_jungle_mag_01_flip|owo_jungle_mag_02_flip|owo_jungle_mag_03_flip"},
+    {   dependencies =  { "owo_jungle_mag_01_flip|owo_jungle_mag_02_flip|owo_jungle_mag_03_flip"},
         owo_magac1 =    { offset = true,    position = vector3_box(0.065, 0.106, -0.27),    rotation = vector3_box(180, 0, 0),      scale = vector3_box(1, 1, 1) },
     },
     --      ^^
-    {   dependencies = { "owo_jungle_mag_01_up_flip|owo_jungle_mag_02_up_flip|owo_jungle_mag_03_up_flip"},
+    {   dependencies =  { "owo_jungle_mag_01_up_flip|owo_jungle_mag_02_up_flip|owo_jungle_mag_03_up_flip"},
         owo_magac1 =    { offset = true,    position = vector3_box(0.061, 0.0, -0.08),    rotation = vector3_box(0, 0, 0),      scale = vector3_box(1, 1, 1) },
     },
     -- Curved Mag
     --  second mag on left
-    {   dependencies = { "owo_jungle_mag_04|owo_jungle_mag_04_up"},
-        magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    {   dependencies =  { "owo_jungle_mag_04|owo_jungle_mag_04_up"},
+        magazine =      { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- front
         owo_magac2 =    { offset = true,    position = vector3_box(-0.032, 0.117, -0.149),  rotation = vector3_box(108, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
         -- back
@@ -535,27 +535,27 @@ mod.mt.inject_fixes(this_variant, {
         owo_magac5 =    { offset = true,    position = vector3_box(0.03, 0.0647, -0.170),   rotation = vector3_box(45, -90, -165),  scale = vector3_box(1, 1.532, 0.37) },
     },
     --      v^
-    {   dependencies = { "owo_jungle_mag_04"},
+    {   dependencies =  { "owo_jungle_mag_04"},
         owo_magac1 =    { offset = true,    position = vector3_box(-0.065, 0.153, -0.309),  rotation = vector3_box(-170, 0, 0),     scale = vector3_box(1, 1, 1) },
     },
     --      ^^
-    {   dependencies = { "owo_jungle_mag_04_up"},
+    {   dependencies =  { "owo_jungle_mag_04_up"},
         owo_magac1 =    { offset = true,    position = vector3_box(-0.065, -0.007, -0.011),  rotation = vector3_box(18, 0, 0),     scale = vector3_box(1, 1, 1) },
     },
     --  second mag on right
-    {   dependencies = { "owo_jungle_mag_04_flip"},
-        magazine =          { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
+    {   dependencies =  { "owo_jungle_mag_04_flip"},
+        magazine =      { offset = true,    position = vector3_box(0, 0, 0),                rotation = vector3_box(0, 0, 0),        scale = vector3_box(1, 1, 1) },
         owo_magac2 =    { offset = true,    position = vector3_box(0.034, 0.117, -0.149),   rotation = vector3_box(108, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
         owo_magac3 =    { offset = true,    position = vector3_box(0.034, 0.016, -0.196),   rotation = vector3_box(-67, 0, 90),     scale = vector3_box(1, 1.74, 0.37) },
         owo_magac4 =    { offset = true,    position = vector3_box(-0.028, 0.0713, -0.171), rotation = vector3_box(120, 90, 90),    scale = vector3_box(1, 1.532, 0.37) },
         owo_magac5 =    { offset = true,    position = vector3_box(0.095, 0.0647, -0.170),  rotation = vector3_box(45, -90, -165),  scale = vector3_box(1, 1.532, 0.37) },
     },
     --      ^v
-    {   dependencies = { "owo_jungle_mag_04_flip"},
+    {   dependencies =  { "owo_jungle_mag_04_flip"},
         owo_magac1 =    { offset = true,    position = vector3_box(0.065, 0.153, -0.309),   rotation = vector3_box(-170, 0, 0),     scale = vector3_box(1, 1, 1) },
     },
     --      ^^
-    {   dependencies = { "owo_jungle_mag_04_up_flip"},
+    {   dependencies =  { "owo_jungle_mag_04_up_flip"},
         owo_magac1 =    { offset = true,    position = vector3_box(0.065, -0.007, -0.011),  rotation = vector3_box(18, 0, 0),     scale = vector3_box(1, 1, 1) },
     },
 
@@ -565,7 +565,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Good thing there's a parent node near the bottom (IT'S THE FINAL BULLET IN THE MAG LMFAO)
     --      So the magpull moves up while you shoot 
 	-- ######
-    {   dependencies = { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03|owo_magazine_magpull_04"},
+    {   dependencies =  { "owo_magazine_magpull_01|owo_magazine_magpull_02|owo_magazine_magpull_03|owo_magazine_magpull_04"},
         magazine =      { offset = true,    
             position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0),
             trigger_move = {"owo_magac1", "owo_magac2", "owo_magac3"}, animation_wait_detach = {"owo_magac3", "owo_magac2", "owo_magac1"},
