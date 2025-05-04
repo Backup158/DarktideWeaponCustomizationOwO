@@ -1,4 +1,10 @@
-# 2024-04-17
+# 2025-05-04
+v1.7.3
+Added:
+- Underbarrel GL and SG to bolter
+- Restored load order rules for AML update
+
+# 2025-04-17
 v1.7.2
 Added Features:
 - Simplified Chinese localization (thanks RinAnarchy!)
