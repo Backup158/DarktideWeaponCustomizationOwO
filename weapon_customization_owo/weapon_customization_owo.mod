@@ -9,11 +9,13 @@ return {
 		})
 	end,
 	require = {
-		 "weapon_customization",
-		 "weapon_customization_mt_stuff",
+		"weapon_customization",
+		"weapon_customization_mt_stuff",
 	},
 	load_after = {
-		 "weapon_customization",
+		"weapon_customization",
+		"for_the_drip",
+		"weapon_customization_no_gun",
 	},
 	load_before = {
 		"weapon_customization_syn_edits",
