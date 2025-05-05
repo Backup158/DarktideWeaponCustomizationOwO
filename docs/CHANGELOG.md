@@ -2,6 +2,8 @@
 v1.7.3
 Added:
 - Underbarrel GL and SG to bolter
+- Slim DClaw blades to (formerly) slim psword blades
+- Slim Blades to DClaw
 - Restored load order rules for AML update
 
 # 2025-04-17
