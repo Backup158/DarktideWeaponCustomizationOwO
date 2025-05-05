@@ -147,7 +147,7 @@ FAQs involving technical details about requirements and performance:
   
 9) **Why can the performance get bad?**
 
-&emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches.
+&emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches and in the inventory.
 
 &emsp; Error 2014 comes from your game taking too long to respond to the server; with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you >:3).
 
@@ -174,7 +174,8 @@ FAQs involving technical details about requirements and performance:
 
 13) **XYZ part is historically inaccurate!**
 
-&emsp; Yeah could be. My sources mostly start at Wikipedia articles, old forum posts, and random people posting videos themselves shooting things. Everything I made was based on some picture I saw, which may not have necessarily reflected the majority. If you could include some sources for me to throw into my Darktide mod autism folder to review later, I'll try and make an attachment like it. Though if it's something like a knob being 2 cm off, you can just edit the mod yourself lol. I made a [guide](https://backup158.github.io/Darktide_EWC_Edits.html) for that.
+&emsp; Yeah could be. My sources mostly start at Wikipedia articles, old forum posts, and random people posting videos themselves shooting things. Everything I made was based on some picture I saw, which may not have necessarily reflected the majority. If you could include some sources for me to throw into my Darktide mod autism folder to review later, I'll try and make an attachment like it. Though if it's something like a knob being 2 cm off, you can just edit the mod yourself lol. I made a [guide](https://backup158.github.io/Darktide_EWC_Edits.html) for that.  \
+&emsp; Also keep in mind that the way iron sights work on a screen is not how they work in real life. Authentic peep sights are nearly impossible to use in games.
 
 14) **Can you add XYZ?**
 
