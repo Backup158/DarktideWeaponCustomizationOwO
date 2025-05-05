@@ -97,10 +97,10 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 6) **When I use the scopes in game, they glitch out and are impossible to aim with!**
 
 &emsp; This is a consequence of the mesh streamer system. You can avoid it by:  \
-&emsp;&emsp; a) increasing the Mesh Quality in the Options menu  \
+&emsp;&emsp; a) Increasing the Mesh Quality in the Options menu  \
 &emsp;&emsp; ![MeshQualitySetting](https://imgur.com/mR2GsjV.png)  \
-&emsp;&emsp; b) disabling it in `<Darktide>\bundle\application_settings\settings_common.ini` but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
-<details> <summary>Mesh streamer issues</summary>
+&emsp;&emsp; b) Completely disabling it in `<Darktide>\bundle\application_settings\settings_common.ini`, but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
+<details> <summary>Disabling the mesh streamer</summary>
   
 The mesh streamer basically makes it so your computer only renders things in high quality if it's close and visible, so it won't use up as many resources on, for example, a Scab Shooter's helmet 70 meters away. Sometimes, it'll set your sights as low priority, so you'll be aiming through a garbled mess throughout the match. This tends to happen more for users with AMD GPUs, which includes me lol.
 
@@ -124,7 +124,7 @@ mesh_streamer_settings = {
 <details>
   <summary>Elysian Drop Troop Weapons</summary>
   
-From the Lexicanum, sourced from Imperial Armour vol 3?
+From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on Kastorel-Novem*, pg. 93
 
 ![ElysianWeapons](https://wh40k.lexicanum.com/mediawiki/images/e/e5/Elysian_Drop_Troop_Weapons.jpg)
 
