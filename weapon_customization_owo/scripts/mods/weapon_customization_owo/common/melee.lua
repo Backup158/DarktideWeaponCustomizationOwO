@@ -172,8 +172,11 @@ function mod.owo_tacax_spike(variant_id, type)
 end
 
 -- Body: Rapier Blades
-function mod.owo_rapier_blade(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "body" or type, {
+function mod.owo_rapier_blade(variant_id, type, parent)
+	current_type = type or "body"
+	current_parent = parent or "grip"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_rapier_blade_01", name = "OwO Rapier Blade 1"},
 		{id = "owo_rapier_blade_02", name = "OwO Rapier Blade 2"},
 		{id = "owo_rapier_blade_03", name = "OwO Rapier Blade 3"},
@@ -184,24 +187,24 @@ function mod.owo_rapier_blade(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_rapier_blade_01 = {
-			model = _item_melee.."/blades/combat_knife_blade_03", type = "body", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/blades/combat_knife_blade_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_rapier_blade_02 = {
-			model = _item_melee.."/blades/combat_knife_blade_06", type = "body", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/blades/combat_knife_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_rapier_blade_03 = {
-			model = _item_melee.."/blades/force_sword_blade_01", type = "body", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/blades/force_sword_blade_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_rapier_blade_04 = {
-			model = _item_melee.."/blades/force_sword_blade_03", type = "body", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/blades/force_sword_blade_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_rapier_blade_05 = {
-			model = _item_melee.."/blades/force_sword_blade_04", type = "body", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/blades/force_sword_blade_04", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 	})
 end
@@ -315,12 +318,15 @@ function mod.owo_historical_blade(variant_id, type)
 	})
 end
 
--- Blade: Slim Power Sword
+-- Blade: Slim Blades
 --	Blade 4 doesn't exist
 --	Slim is just less thicc but keeps how wide it is
 --	Thin reduces both
-function mod.owo_slim_psword(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "blade" or type, {
+function mod.owo_slim_blade(variant_id, type, parent)
+	current_type = type or "blade"
+	current_parent = parent or "hilt"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_slim_psword_01", name = "OwO Slim PSword 1"},
 		{id = "owo_slim_psword_02", name = "OwO Slim PSword 2"},
 		{id = "owo_slim_psword_03", name = "OwO Slim PSword 3"},
@@ -337,73 +343,138 @@ function mod.owo_slim_psword(variant_id, type)
 		{id = "owo_slim_psword_06t", name = "OwO Thin PSword 5"},
 		{id = "owo_slim_psword_07t", name = "OwO Thin PSword 6"},
 		{id = "owo_slim_psword_08t", name = "OwO Thin PSword 7 (M)"},
+		{id = "owo_slim_dclaw_01", name = "OwO Slim DClaw 1"},
+		{id = "owo_slim_dclaw_02", name = "OwO Slim DClaw 2"},
+		{id = "owo_slim_dclaw_03", name = "OwO Slim DClaw 3"},
+		{id = "owo_slim_dclaw_04", name = "OwO Slim DClaw 4"},
+		{id = "owo_slim_dclaw_05", name = "OwO Slim DClaw 5"},
+		{id = "owo_slim_dclaw_06", name = "OwO Slim DClaw 6"},
+		{id = "owo_slim_dclaw_07", name = "OwO Slim DClaw 7"},
+		{id = "owo_slim_dclaw_08", name = "OwO Slim DClaw 8 (M)"},
+		{id = "owo_slim_dclaw_01g", name = "OwO Slim DClaw 1 grip"},
+		{id = "owo_slim_dclaw_02g", name = "OwO Slim DClaw 2 grip"},
+		{id = "owo_slim_dclaw_03g", name = "OwO Slim DClaw 3 grip"},
+		{id = "owo_slim_dclaw_04g", name = "OwO Slim DClaw 4 grip"},
+		{id = "owo_slim_dclaw_05g", name = "OwO Slim DClaw 5 grip"},
+		{id = "owo_slim_dclaw_06g", name = "OwO Slim DClaw 6 grip"},
+		{id = "owo_slim_dclaw_07g", name = "OwO Slim DClaw 7 grip"},
+		{id = "owo_slim_dclaw_08g", name = "OwO Slim DClaw (M) grip"},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_slim_psword_01 = {
-			model = _item_melee.."/blades/power_sword_blade_01", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_02 = {
-			model = _item_melee.."/blades/power_sword_blade_02", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_03 = {
-			model = _item_melee.."/blades/power_sword_blade_03", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		--owo_slim_psword_04 = {
-		--	model = _item_melee.."/blades/power_sword_blade_04", type = "blade", 
-		--	mesh_move = false, parent = "hilt",
+		--	model = _item_melee.."/blades/power_sword_blade_04", type = current_type, 
+		--	mesh_move = false, parent = current_parent,
 		--},
 		owo_slim_psword_05 = {
-			model = _item_melee.."/blades/power_sword_blade_06", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_06 = {
-			model = _item_melee.."/blades/power_sword_blade_06", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_07 = {
-			model = _item_melee.."/blades/power_sword_blade_07", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_08 = {
-			model = _item_melee.."/blades/power_sword_blade_ml01", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_ml01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_01t = {
-			model = _item_melee.."/blades/power_sword_blade_01", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_02t = {
-			model = _item_melee.."/blades/power_sword_blade_02", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_03t = {
-			model = _item_melee.."/blades/power_sword_blade_03", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		--owo_slim_psword_04t = {
-		--	model = _item_melee.."/blades/power_sword_blade_04", type = "blade", 
-		--	mesh_move = false, parent = "hilt",
+		--	model = _item_melee.."/blades/power_sword_blade_04", type = current_type, 
+		--	mesh_move = false, parent = current_parent,
 		--},
 		owo_slim_psword_05t = {
-			model = _item_melee.."/blades/power_sword_blade_06", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_06t = {
-			model = _item_melee.."/blades/power_sword_blade_06", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_07t = {
-			model = _item_melee.."/blades/power_sword_blade_07", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_slim_psword_08t = {
-			model = _item_melee.."/blades/power_sword_blade_ml01", type = "blade", 
-			mesh_move = false, parent = "hilt",
+			model = _item_melee.."/blades/power_sword_blade_ml01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		-- Devil's Claw
+		owo_slim_dclaw_01 = {
+			model = _item_melee.."/blades/combat_sword_blade_01", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_02 = {
+			model = _item_melee.."/blades/combat_sword_blade_02", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_03 = {
+			model = _item_melee.."/blades/combat_sword_blade_03", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_04 = {
+			model = _item_melee.."/blades/combat_sword_blade_04", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_05 = {
+			model = _item_melee.."/blades/combat_sword_blade_05", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_06 = {
+			model = _item_melee.."/blades/combat_sword_blade_06", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_07 = {
+			model = _item_melee.."/blades/combat_sword_blade_07", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_08 = {
+			model = _item_melee.."/blades/combat_sword_blade_ml01", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_01g = {
+			model = _item_melee.."/blades/combat_sword_blade_01", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_02g = {
+			model = _item_melee.."/blades/combat_sword_blade_02", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_03g = {
+			model = _item_melee.."/blades/combat_sword_blade_03", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_04g = {
+			model = _item_melee.."/blades/combat_sword_blade_04", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_05g = {
+			model = _item_melee.."/blades/combat_sword_blade_05", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_06g = {
+			model = _item_melee.."/blades/combat_sword_blade_06", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_07g = {
+			model = _item_melee.."/blades/combat_sword_blade_07", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_slim_dclaw_08g = {
+			model = _item_melee.."/blades/combat_sword_blade_ml01", type = current_type, mesh_move = false, parent = current_parent,
 		},
 	})
 end
