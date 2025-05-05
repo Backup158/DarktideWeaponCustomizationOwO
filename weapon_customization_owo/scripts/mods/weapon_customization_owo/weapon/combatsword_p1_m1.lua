@@ -144,19 +144,11 @@ mod.mt.inject_fixes(this_variant, {
     -- Body: Thin Blades
     -- ######
     --  Slim Power Sword
-    --      Hilt Patches
-    {   dependencies =  { _owo_slim_psword_blades, _power_sword_grips },
-        grip = {position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-    },
     {   dependencies =  { _owo_slim_psword_blades },
         grip = {position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
         body = {position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 1)},
     },
     --  Thin Power Sword
-    --      Hilt Patches
-    {   dependencies =  { _owo_thin_psword_blades, _power_sword_grips },
-        grip =  { position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-    },
     {   dependencies =  { _owo_thin_psword_blades },
         grip =  { position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
         body =  { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 0.65, 1)},
