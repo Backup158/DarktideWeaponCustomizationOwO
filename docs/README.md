@@ -9,9 +9,11 @@ Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various part
 
 > [!WARNING] 
 > 
-> Expect alignment issues and performance drops, especially when piled onto a heavy load order. A responsible mod author would spend the time making sure these parts are optimized and are compatibly aligned with all the other pieces. It ain't me.
+> Expect performance drops, especially when piled onto a heavy load order. Some attachments are made of a lot of parts, which takes more resources to process.
 > \
-> I've also noticed hitches when opening the inventory/weapon customization menu and on startup.
+> Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
+> \
+> Attachments may be not be aligned with parts from other plugins.
 > \
 > You have been warned!
 
@@ -45,7 +47,7 @@ Place this below weapon customization and above the MT plugin and the Syn's edit
 
 If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunch of errors and I will laugh at you for not reading the description. You'll also miss out on the 2 times I aligned something involving the other plugins' parts.
 > [!NOTE]
-> To AML users: Due to (what I believe to be) limitations with AML, load order can be inconsistent and throw errors. Trying to find a workaround at the moment.
+> To AML users: Versions prior to `aml-25.05.04` have issues with following these load order rules. Make sure you have updated AML!
 
 # ***Notices youw pawts*** (Parts I added)
 
@@ -94,7 +96,10 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 
 6) **When I use the scopes in game, they glitch out and are impossible to aim with!**
 
-&emsp; This is a consequence of the mesh streamer system. You can avoid it by disabling it in `<Darktide>\bundle\application_settings\settings_common.ini` but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
+&emsp; This is a consequence of the mesh streamer system. You can avoid it by:  \
+&emsp;&emsp; a) increasing the Mesh Quality in the Options menu  \
+&emsp;&emsp; ![MeshQualitySetting](https://imgur.com/mR2GsjV.png)  \
+&emsp;&emsp; b) disabling it in `<Darktide>\bundle\application_settings\settings_common.ini` but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
 <details> <summary>Mesh streamer issues</summary>
   
 The mesh streamer basically makes it so your computer only renders things in high quality if it's close and visible, so it won't use up as many resources on, for example, a Scab Shooter's helmet 70 meters away. Sometimes, it'll set your sights as low priority, so you'll be aiming through a garbled mess throughout the match. This tends to happen more for users with AMD GPUs, which includes me lol.
@@ -102,7 +107,7 @@ The mesh streamer basically makes it so your computer only renders things in hig
 By disabling it, you guarantee that the game won't eat up your weapons. This also means the game is rendering every detail at full quality, even the small things far away.
   
 ```
-﻿mesh_streamer_settings = {
+mesh_streamer_settings = {
     disable = true
 }
 ```
