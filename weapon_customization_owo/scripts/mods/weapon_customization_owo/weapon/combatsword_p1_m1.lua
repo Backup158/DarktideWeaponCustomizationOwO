@@ -31,6 +31,8 @@ local _owo_slim_dclaw_blades = "owo_slim_dclaw_01|owo_slim_dclaw_02|owo_slim_dcl
 local _owo_slim_dclaw_g_blades = "owo_slim_dclaw_01g|owo_slim_dclaw_02g|owo_slim_dclaw_03g|owo_slim_dclaw_04g|owo_slim_dclaw_05g|owo_slim_dclaw_06g|owo_slim_dclaw_07g|owo_slim_dclaw_08g"
 local _owo_slim_all_dclaw_blades = _owo_slim_dclaw_blades.."|".._owo_slim_dclaw_g_blades
 
+--local _mt_falchion_grips = "falchion_mt_grip_01|falchion_mt_grip_02|falchion_mt_grip_03|falchion_mt_grip_04|falchion_mt_grip_05"
+
 mod.mt.inject_fixes(this_variant, {
     -- Body: Rapier Blade
     --  Why did I choose 5 blades with wildly different proportions
@@ -160,14 +162,12 @@ mod.mt.inject_fixes(this_variant, {
         body =  { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 0.65, 1)},
     },
     -- Slim DClaw
-    --  MT Falchion
-
     --  Default
     {   dependencies =  { _owo_slim_dclaw_g_blades },
         grip =  { position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        body =  { position = vector3_box(0, 0, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.75, 1)},
+        body =  { position = vector3_box(0, 0, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.75, 1)},
     },
     {   dependencies =  { _owo_slim_all_dclaw_blades },
-        body =  { position = vector3_box(0, 0, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.75, 1)},
+        body =  { position = vector3_box(0, 0, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.75, 1)},
     },
 })
