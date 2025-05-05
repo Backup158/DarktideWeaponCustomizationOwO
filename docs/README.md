@@ -31,9 +31,9 @@ Report alignment issues and I might fix it if I'm not busy (lying umder blamket 
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
 ## Load Order
-Place this below weapon customization and above the MT plugin and the Syn's edits plugin. Only the **bolded** files are necessary.
+Place this BELOW the base Weapon Customization mod and ABOVE the MT plugin and the Syn's edits plugin. Only the **bolded** files are necessary.
 
-> **﻿weapon_customization**
+> **weapon_customization**
 > 
 > for_the_drip
 > 
