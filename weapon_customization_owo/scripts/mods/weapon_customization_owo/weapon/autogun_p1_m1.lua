@@ -267,12 +267,12 @@ mod.mt.inject_fixes(this_variant, {
         barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.012),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24)}, 
     },
     --  Dreg Gunner Helpers
-	{   dependencies =  { "owo_dreg_barrel_01"},
-        -- inner barrel
-        -- outer barrel with front post
+	{   dependencies =  { "owo_dreg_barrel_01" },
+        -- barrel: inner barrel
+        -- barrelshroud: outer barrel with front post
         -- bayonet lug
         barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0, -0.115),       rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 2.45, 0.8) }, 
-        -- hand grip for long receiver
+        -- hand grip to extend receiver
         barrelshroudac3 =   { offset = true,    position = vector3_box(0, 0, -0.215),       rotation = vector3_box(0, 0, 0),    scale = vector3_box(2, 1.5, 2.5) }, 
         -- hand grip (top)
         barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.153, 0.115),    rotation = vector3_box(180, 0, 0),  scale = vector3_box(2.4, 0.969, 2.85) }, 
