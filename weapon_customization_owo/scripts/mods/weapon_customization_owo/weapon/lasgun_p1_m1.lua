@@ -138,7 +138,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- Muzzle: SUPPRESSOR
 	-- ######
     --  Vigilant barrels
-    {   dependencies =  { _owo_all_suppressor_muzzles, _all_mt_vigilant_autogun_barrels },
+    {   dependencies =  { _owo_all_suppressor_muzzles, _all_vigilant_autogun_mt_barrels },
         muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
     --  MT Autopistol
