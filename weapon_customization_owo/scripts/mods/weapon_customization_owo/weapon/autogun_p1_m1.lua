@@ -150,12 +150,13 @@ local _long_infantry_autogun_barrels = "barrel_03|barrel_05"
 local _long_infantry_autogun_mt_barrels = "iagun_barrel_03|iagun_barrel_05"
 local _long_infantry_autogun_all_barrels = _long_infantry_autogun_barrels.."|".._long_infantry_autogun_mt_barrels
 local _short_vigilant_autogun_barrels = "barrel_12|hagun_barrel_02"
+local _short_vigilant_autogun_mt_barrels = "hagun_barrel_02"
 local _long_vigilant_autogun_barrels = "barrel_11|barrel_15|barrel_16|barrel_22"
 local _long_vigilant_autogun_mt_barrels = "hagun_barrel_01|hagun_barrel_03|hagun_barrel_04"
 local _long_vigilant_autogun_all_barrels = _long_vigilant_autogun_barrels.."|".._long_vigilant_autogun_mt_barrels
 local _all_default_vigilant_autogun_barrels = _short_vigilant_autogun_barrels.."|".._long_vigilant_autogun_barrels
-local _all_mt_vigilant_autogun_barrels = _long_vigilant_autogun_mt_barrels
-local _all_all_vigilant_autogun_barrels = _all_default_vigilant_autogun_barrels.."|".._all_mt_vigilant_autogun_barrels
+local _all_vigilant_autogun_mt_barrels = _short_vigilant_autogun_mt_barrels.."|".._long_vigilant_autogun_mt_barrels
+local _all_all_vigilant_autogun_barrels = _all_default_vigilant_autogun_barrels.."|".._all_vigilant_autogun_mt_barrels
 
 local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
 local _long_infantry_lasgun_mt_barrels = "ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08"
@@ -193,6 +194,153 @@ local _syn_q3_barrels = "q3_machinegun_barrel_01|q3_machinegun_barrel_01a"
 local _syn_canis_barrels = "syn_vescanis_barrel_01|syn_vescanis_barrel_02"
 local _syn_gauss_barrels = "syn_gk8gauss_barrel_01|syn_gk8gauss_barrel_02"
 
+-- ####################################################################################
+-- HIDING HELPERS
+-- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
+-- Because they match the main parts first, if there is no match it means the main part is not attached
+-- ####################################################################################
+mod.mt.inject_fixes(this_variant, {
+    -- Muzzles
+    {	dependencies =  { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01|owo_muzzle_brake_helper_01_01"},
+        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04"},
+        muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_brake_helper_02_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_03_01"},
+        muzzle_4 = {hide_mesh = {{"muzzle_4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_4 = "owo_muzzle_brake_helper_03_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
+        muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
+    },
+    -- Bayonet
+    {	dependencies =  { "owo_dreg_bayonet_rear_01|owo_bayonet_m7_helper_01|owo_bayonet_seitengewehr_helper_01|owo_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
+        bayonetac1 = {hide_mesh = {     {"bayonetac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies =  { "owo_bayonet_m7_helper_02|owo_bayonet_seitengewehr_helper_02|owo_bayonet_epee_helper_02|owo_m203_helper_02|owo_gp25_helper_02|owo_underbarrel_shotgun_helper_02|owo_underbarrel_shotgun_helper_02_02"},
+        bayonetac2 = {hide_mesh = {     {"bayonetac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies =  { "owo_m203_helper_03|owo_gp25_helper_03|owo_underbarrel_shotgun_helper_03|owo_underbarrel_shotgun_helper_03_02"},
+        bayonetac3 = {hide_mesh = {     {"bayonetac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies =  { "owo_m203_helper_04|owo_gp25_helper_04|owo_underbarrel_shotgun_helper_04"},
+        bayonetac4 = {hide_mesh = {     {"bayonetac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies =  { "owo_gp25_helper_05|owo_underbarrel_shotgun_helper_05|owo_underbarrel_shotgun_helper_05_02"},
+        bayonetac5 = {hide_mesh = {     {"bayonetac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies =  { "owo_underbarrel_shotgun_helper_06|owo_underbarrel_shotgun_helper_06_02"},
+        bayonetac6 = {hide_mesh = {     {"bayonetac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    {	dependencies =  { "owo_underbarrel_shotgun_helper_07"},
+        bayonetac7 = {hide_mesh = {     {"bayonetac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+    },
+    -- Barrels
+    {   dependencies =  { "owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2|owo_wood_krieg_ac1_01"},
+        barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies =  { "owo_dreg_shroudac2_01|owo_m16_barrelshroudac2_01"},
+        barrelshroudac2 = {hide_mesh = {{"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+    },
+    {   dependencies =  { "owo_dreg_shroudac3_01|owo_m16_barrelshroudac3_01"},
+        barrelshroudac3 = {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+    },
+    {   dependencies =  { "owo_dreg_shroudac2_01|owo_m16_barrelshroudac4_01"},
+        barrelshroudac4 = {hide_mesh = {{"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+    },
+    {   dependencies =  { "owo_m16_barrelshroudac5_01"},
+        barrelshroudac5 = {hide_mesh = {{"barrelshroudac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+    },
+    {   dependencies =  { "owo_m16_barrelshroudac6_01"},
+        barrelshroudac6 = {hide_mesh = {{"barrelshroudac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
+    },
+    -- Foregrips
+    {   dependencies =  { "owo_tactical_foregrip_ac1_01"},
+        foregripac1 = {hide_mesh = {{"foregripac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies =  { "owo_tactical_foregrip_ac2_01"},
+        foregripac2 = {hide_mesh = {{"foregripac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies =  { "owo_tactical_foregrip_ac3_01"},
+        foregripac3 = {hide_mesh = {{"foregripac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- Receivers
+	{	dependencies =  { "owo_bolt_helbore_bolt_01|owo_helbore_mas49_ass"},
+		receiverac1 = {hide_mesh = {     {"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
+	{	dependencies =  { "owo_bolt_helbore_bolt_02|owo_helbore_mas49_knob"},
+		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+	},
+    -- Magazines
+    {   dependencies = { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01|owo_magazine_ak_ac1_01"},
+        owo_magac1 = { hide_mesh = {{"owo_magac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
+    {   dependencies = { "owo_jungle_mag_connector_f_01|owo_magazine_magpull_helper_02"},
+        owo_magac2 = { hide_mesh = {{"owo_magac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
+    {   dependencies = { "owo_jungle_mag_connector_b_01"},
+        owo_magac3 = { hide_mesh = {{"owo_magac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
+    {   dependencies = { "owo_magazine_magpull_helper_03"},
+        owo_magac3 = { hide_mesh = {{"owo_magac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = {magazine = "owo_magazine_magpull_helper_03_empty"}},
+    },
+    {   dependencies = { "owo_jungle_mag_connector_l_01"},
+        owo_magac4 = { hide_mesh = {{"owo_magac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
+    {   dependencies = { "owo_jungle_mag_connector_r_01"},
+        owo_magac5 = { hide_mesh = {{"owo_magac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
+    -- Grips
+    {   dependencies =  { "owo_fin_grip2_01"},
+        gripac = { hide_mesh = {{"gripac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- Sights
+    {   dependencies =  { "owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_rear_sight_ak_ac1_01|owo_rear_sight_ak_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
+        sightac1 = { hide_mesh = {{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies =  { "owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_rear_sight_ak_ac2_01|owo_rear_sight_ak_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
+        sightac2 = { hide_mesh = {{"sightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies =  { "owo_holosight_helper_03|owo_holosight_helper_03_02|owo_rear_sight_ac3_01|owo_rear_sight_ak_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
+        sightac3 = { hide_mesh = {{"sightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies =  { "owo_holosight_helper_04|owo_rear_sight_ac4_01|owo_rear_sight_ak_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04"},
+        sightac4 = { hide_mesh = {{"sightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = { "owo_rear_sight_ac5_01|owo_rear_sight_ak_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01"},
+        sightac5 = { hide_mesh = {{"sightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = { "owo_rear_sight_ac6_01|owo_rear_sight_ak_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01"},
+        sightac6 = { hide_mesh = {{"sightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = { "owo_m16_sight_helper_07|owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07"},
+        sightac7 = { hide_mesh = {{"sightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01"},
+        sight_secondary = { hide_mesh = {{"sight_secondary", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {   dependencies = { "owo_holosight_sight_secondary_helper_01"},
+        sight_secondary_ac1 = { hide_mesh = {{"sight_secondary_ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},  
+    },
+    {   dependencies = { "owo_holosight_sight_secondary_helper_02"},
+        sight_secondary_ac2 = { hide_mesh = {{"sight_secondary_ac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- Stocks
+    {   dependencies =  { "owo_tactical_stockac_01"},
+        stockac = { hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+})
+
+-- #################
+-- Universal Fixes
+-- These are shared among multiple weapons but are the same each time
+-- Up here so the custom fixes are ahead of the generic cases
+-- #################
+mod.fixes_owo_suppressors(this_variant)
+
+-- #################
+-- Custom Fixes
+-- #################
 mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Receiver: BOLT ACTION HELBORE
@@ -365,69 +513,16 @@ mod.mt.inject_fixes(this_variant, {
 
     -- ######
 	-- Muzzle: SUPPRESSOR
+    -- Autogun Exclusive parts
 	-- ######
     --  Vigilant barrels
     {   dependencies =  { _owo_all_suppressor_muzzles, _all_all_vigilant_autogun_barrels },
         muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
-    --  MT Autopistol
-    {   dependencies =  { _owo_all_suppressor_muzzles, _mt_autopistol_barrels },
-        muzzle =        { offset = true,   position = vector3_box(0, -0.02, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
-    },
-    --  MT Twink Stubbers have no muzzles
-    --  MT Single Stubbers
-    {	dependencies =  { _owo_all_suppressor_muzzles, _mt_single_stubber_barrels },
-        muzzle =        { offset = true,   position = vector3_box(0, 0.78, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.3, 1.4, 2.3) },
-    },
-    --  MT Bolter
-    {	dependencies =  { _owo_all_suppressor_muzzles, _mt_bolter_barrels },
-        muzzle =        { offset = true,   position = vector3_box(0, 0.165, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.7, 0.4, 1.7) },
-    },
-    --  MT Backwards Bolter
-    {	dependencies =  { _owo_all_suppressor_muzzles, _mt_backwards_bolter_barrels },
-        muzzle =        { offset = true,   position = vector3_box(0, 0.01, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.7, -0.65, 1.7) },
-    },
-    --  MT Ripper
-    {	dependencies =  { _owo_all_suppressor_muzzles, _mt_ripper_barrels },
-        muzzle =        { offset = true,   position = vector3_box(0, 0.56, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.6, 2, 2.6) },
-    },
-    --  Syn Exitus
-    {	dependencies =  { _owo_all_suppressor_muzzles, "exitus_barrel_01" },
-        muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
-    },
-    -- Not doing quake because i'm lazy
-    -- Syn SWS Pulse barrel has 3 barrels and I'm not choosing one
     --  OwO Dreg Gunner
     {	dependencies =  { _owo_all_suppressor_muzzles, "owo_dreg_barrel_01" },
         muzzle =        { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.8, 2.2, 2.8) },
     },
-    --  -------------------------------------------
-    --  Double cans
-    --  -------------------------------------------
-    {	dependencies =  { "owo_suppressor_01" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 22, 0),   scale = vector3_box(1.2, 1.8, 1.2) },	
-        muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
-    },
-    {	dependencies =  { "owo_suppressor_02" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 17, 0),   scale = vector3_box(1.2, 1.8, 1.2) },
-        muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
-    },
-    --  -------------------------------------------
-    --  PBS-1
-    --  -------------------------------------------
-    -- Default
-    {	dependencies =  { "owo_suppressor_03" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0.055, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
-        muzzle_3 =      { offset = true,   position = vector3_box(0, 0.265, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
-    },
-    --  -------------------------------------------
-    --  Can and Seat
-    --  -------------------------------------------
-    {	dependencies =  { "owo_suppressor_04|owo_suppressor_05" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0.13, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
-        muzzle_3 =      { offset = true,   position = vector3_box(0, 0.086, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
-    },
-    
 
     -- ######
 	-- Muzzle: CONDOM
@@ -1567,147 +1662,10 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.025, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.1, 1.35, 0.6) },
         bayonetac2 =    { offset = true, position = vector3_box(0, 0.06, 0.014), rotation = vector3_box(180, 0, 180), scale = vector3_box(0.25, 0.09, 0.245) },
     },
-
-    
-
-    -- ####################################################################################
-    -- HIDING HELPERS
-    -- By putting it down here, they will only be hidden if the fixes from above are not found
-    -- Because they match the main parts first, if there is no match it means the main part is not attached
-    -- ####################################################################################
-    -- Muzzles
-    {	dependencies =  { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01|owo_muzzle_brake_helper_01_01"},
-        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty"}, },
-    },
-    {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04"},
-        muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_brake_helper_02_00"}, },
-    },
-    {	dependencies =  { "owo_muzzle_brake_helper_03_01"},
-        muzzle_4 = {hide_mesh = {{"muzzle_4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_4 = "owo_muzzle_brake_helper_03_00"}, },
-    },
-    {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
-        muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
-    },
-    -- Bayonet
-    {	dependencies =  { "owo_dreg_bayonet_rear_01|owo_bayonet_m7_helper_01|owo_bayonet_seitengewehr_helper_01|owo_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
-        bayonetac1 = {hide_mesh = {     {"bayonetac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-    },
-    {	dependencies =  { "owo_bayonet_m7_helper_02|owo_bayonet_seitengewehr_helper_02|owo_bayonet_epee_helper_02|owo_m203_helper_02|owo_gp25_helper_02|owo_underbarrel_shotgun_helper_02|owo_underbarrel_shotgun_helper_02_02"},
-        bayonetac2 = {hide_mesh = {     {"bayonetac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-    },
-    {	dependencies =  { "owo_m203_helper_03|owo_gp25_helper_03|owo_underbarrel_shotgun_helper_03|owo_underbarrel_shotgun_helper_03_02"},
-        bayonetac3 = {hide_mesh = {     {"bayonetac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-    },
-    {	dependencies =  { "owo_m203_helper_04|owo_gp25_helper_04|owo_underbarrel_shotgun_helper_04"},
-        bayonetac4 = {hide_mesh = {     {"bayonetac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-    },
-    {	dependencies =  { "owo_gp25_helper_05|owo_underbarrel_shotgun_helper_05|owo_underbarrel_shotgun_helper_05_02"},
-        bayonetac5 = {hide_mesh = {     {"bayonetac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-    },
-    {	dependencies =  { "owo_underbarrel_shotgun_helper_06|owo_underbarrel_shotgun_helper_06_02"},
-        bayonetac6 = {hide_mesh = {     {"bayonetac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-    },
-    {	dependencies =  { "owo_underbarrel_shotgun_helper_07"},
-        bayonetac7 = {hide_mesh = {     {"bayonetac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-    },
-    -- Barrels
-    {   dependencies =  { "owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2|owo_wood_krieg_ac1_01"},
-        barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies =  { "owo_dreg_shroudac2_01|owo_m16_barrelshroudac2_01"},
-        barrelshroudac2 = {hide_mesh = {{"barrelshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-    },
-    {   dependencies =  { "owo_dreg_shroudac3_01|owo_m16_barrelshroudac3_01"},
-        barrelshroudac3 = {hide_mesh = {{"barrelshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-    },
-    {   dependencies =  { "owo_dreg_shroudac2_01|owo_m16_barrelshroudac4_01"},
-        barrelshroudac4 = {hide_mesh = {{"barrelshroudac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-    },
-    {   dependencies =  { "owo_m16_barrelshroudac5_01"},
-        barrelshroudac5 = {hide_mesh = {{"barrelshroudac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-    },
-    {   dependencies =  { "owo_m16_barrelshroudac6_01"},
-        barrelshroudac6 = {hide_mesh = {{"barrelshroudac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, 
-    },
-    -- Foregrips
-    {   dependencies =  { "owo_tactical_foregrip_ac1_01"},
-        foregripac1 = {hide_mesh = {{"foregripac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies =  { "owo_tactical_foregrip_ac2_01"},
-        foregripac2 = {hide_mesh = {{"foregripac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies =  { "owo_tactical_foregrip_ac3_01"},
-        foregripac3 = {hide_mesh = {{"foregripac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    -- Receivers
-	{	dependencies =  { "owo_bolt_helbore_bolt_01|owo_helbore_mas49_ass"},
-		receiverac1 = {hide_mesh = {     {"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-	},
-	{	dependencies =  { "owo_bolt_helbore_bolt_02|owo_helbore_mas49_knob"},
-		receiverac2 = {hide_mesh = {     {"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-	},
-    -- Magazines
-    {   dependencies = { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01|owo_magazine_ak_ac1_01"},
-        owo_magac1 = { hide_mesh = {{"owo_magac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
-    {   dependencies = { "owo_jungle_mag_connector_f_01|owo_magazine_magpull_helper_02"},
-        owo_magac2 = { hide_mesh = {{"owo_magac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
-    {   dependencies = { "owo_jungle_mag_connector_b_01"},
-        owo_magac3 = { hide_mesh = {{"owo_magac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
-    {   dependencies = { "owo_magazine_magpull_helper_03"},
-        owo_magac3 = { hide_mesh = {{"owo_magac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = {magazine = "owo_magazine_magpull_helper_03_empty"}},
-    },
-    {   dependencies = { "owo_jungle_mag_connector_l_01"},
-        owo_magac4 = { hide_mesh = {{"owo_magac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
-    {   dependencies = { "owo_jungle_mag_connector_r_01"},
-        owo_magac5 = { hide_mesh = {{"owo_magac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
-    -- Grips
-    {   dependencies =  { "owo_fin_grip2_01"},
-        gripac = { hide_mesh = {{"gripac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    -- Sights
-    {   dependencies =  { "owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_rear_sight_ak_ac1_01|owo_rear_sight_ak_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
-        sightac1 = { hide_mesh = {{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies =  { "owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_rear_sight_ak_ac2_01|owo_rear_sight_ak_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
-        sightac2 = { hide_mesh = {{"sightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies =  { "owo_holosight_helper_03|owo_holosight_helper_03_02|owo_rear_sight_ac3_01|owo_rear_sight_ak_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
-        sightac3 = { hide_mesh = {{"sightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies =  { "owo_holosight_helper_04|owo_rear_sight_ac4_01|owo_rear_sight_ak_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04"},
-        sightac4 = { hide_mesh = {{"sightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies = { "owo_rear_sight_ac5_01|owo_rear_sight_ak_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01"},
-        sightac5 = { hide_mesh = {{"sightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies = { "owo_rear_sight_ac6_01|owo_rear_sight_ak_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01"},
-        sightac6 = { hide_mesh = {{"sightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies = { "owo_m16_sight_helper_07|owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07"},
-        sightac7 = { hide_mesh = {{"sightac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies = { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01"},
-        sight_secondary = { hide_mesh = {{"sight_secondary", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {   dependencies = { "owo_holosight_sight_secondary_helper_01"},
-        sight_secondary_ac1 = { hide_mesh = {{"sight_secondary_ac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},  
-    },
-    {   dependencies = { "owo_holosight_sight_secondary_helper_02"},
-        sight_secondary_ac2 = { hide_mesh = {{"sight_secondary_ac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    -- Stocks
-    {   dependencies =  { "owo_tactical_stockac_01"},
-        stockac = { hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
 })
 
 -- #################
--- Universal Fixes
+-- Sight Fixes
 -- These are shared among multiple weapons but are the same each time
 -- Down here so prepend puts it before everything else
 -- #################

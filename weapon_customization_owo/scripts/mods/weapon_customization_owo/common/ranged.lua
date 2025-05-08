@@ -693,6 +693,67 @@ function mod.owo_suppressor(variant_id, type)
 		},
 	})
 end
+function mod.fixes_owo_suppressors(variant_id)
+	mod.mt.inject_fixes(variant_id, {
+		--  Vigilant barrels
+		{   dependencies =  { _owo_all_suppressor_muzzles, _all_vigilant_autogun_mt_barrels },
+			muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+		},
+		 --  MT Autopistol
+		{   dependencies =  { _owo_all_suppressor_muzzles, _mt_autopistol_barrels },
+			muzzle =        { offset = true,   position = vector3_box(0, -0.02, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+		},
+		--  MT Twink Stubbers have no muzzles
+		--  MT Single Stubbers
+		{	dependencies =  { _owo_all_suppressor_muzzles, _mt_single_stubber_barrels },
+			muzzle =        { offset = true,   position = vector3_box(0, 0.78, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.3, 1.4, 2.3) },
+		},
+		--  MT Bolter
+		{	dependencies =  { _owo_all_suppressor_muzzles, _mt_bolter_barrels },
+			muzzle =        { offset = true,   position = vector3_box(0, 0.165, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.7, 0.4, 1.7) },
+		},
+		--  MT Backwards Bolter
+		{	dependencies =  { _owo_all_suppressor_muzzles, _mt_backwards_bolter_barrels },
+			muzzle =        { offset = true,   position = vector3_box(0, 0.01, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.7, -0.65, 1.7) },
+		},
+		--  MT Ripper
+		{	dependencies =  { _owo_all_suppressor_muzzles, _mt_ripper_barrels },
+			muzzle =        { offset = true,   position = vector3_box(0, 0.56, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.6, 2, 2.6) },
+		},
+		--  Syn Exitus
+		{	dependencies =  { _owo_all_suppressor_muzzles, "exitus_barrel_01" },
+			muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+		},
+		-- Not doing Quake barrel because that looks like a pain in the ass and I'm lazy
+		-- Syn SWS Pulse barrel has 3 barrels and I'm not choosing one
+		--  -------------------------------------------
+		--  Double cans
+		--  -------------------------------------------
+		{	dependencies =  { "owo_suppressor_01" },
+			muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 22, 0),   scale = vector3_box(1.2, 1.8, 1.2) },	
+			muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+		},
+		{	dependencies =  { "owo_suppressor_02" },
+			muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 17, 0),   scale = vector3_box(1.2, 1.8, 1.2) },
+			muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+		},
+		--  -------------------------------------------
+		--  PBS-1
+		--  -------------------------------------------
+		-- Default
+		{	dependencies =  { "owo_suppressor_03" },
+			muzzle_2 =      { offset = true,   position = vector3_box(0, 0.055, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+			muzzle_3 =      { offset = true,   position = vector3_box(0, 0.265, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+		},
+		--  -------------------------------------------
+		--  Can and Seat
+		--  -------------------------------------------
+		{	dependencies =  { "owo_suppressor_04|owo_suppressor_05" },
+			muzzle_2 =      { offset = true,   position = vector3_box(0, 0.13, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+			muzzle_3 =      { offset = true,   position = vector3_box(0, 0.086, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+		},
+	})
+end
 
 -- Muzzle: Lasgun Condom
 function mod.owo_condom(variant_id, type)
