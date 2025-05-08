@@ -5371,6 +5371,17 @@ mod.mt.inject_fixes(this_variant, {
     },
 })
 
+-- ############################################
+-- Define Variables for Fixes
+-- ############################################
+
+-- ########
+-- For This Variant Only
+-- ########
+
+-- ############################################
+-- Inject Fixes
+-- ############################################
 -- #################
 -- HIDING HELPERS
 -- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
