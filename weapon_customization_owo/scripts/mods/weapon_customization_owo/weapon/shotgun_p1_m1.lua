@@ -40,6 +40,7 @@ mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 
+mod.wc.attachment[this_variant].muzzle_3 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models

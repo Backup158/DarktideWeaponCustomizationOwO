@@ -602,55 +602,94 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_helper_03", name = "OwO Suppressor'vesa 3", no_randomize = true},
 		{id = "owo_suppressor_helper_04", name = "OwO Suppressor'vesa 4", no_randomize = true},
 	})
+	mod.inject_attachments_owo(variant_id, "muzzle_3", {
+		{id = "owo_suppressor_helper_empty", name = "Empty", no_randomize = true},
+		{id = "owo_suppressor_helper_02_01", name = "OwO Suppressor'vesa2 1", no_randomize = true},
+		{id = "owo_suppressor_helper_02_02", name = "OwO Suppressor'vesa2 2", no_randomize = true},
+		{id = "owo_suppressor_helper_02_03", name = "OwO Suppressor'vesa2 3", no_randomize = true},
+		{id = "owo_suppressor_helper_02_04", name = "OwO Suppressor'vesa2 4", no_randomize = true},
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ####
+		-- Using invisible placeholder 
 		owo_suppressor_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = "owo_suppressor_helper_01"
-			}
+				muzzle_2 = "owo_suppressor_helper_01", muzzle_3 = "owo_suppressor_helper_02_01",
+			},
+			hide_mesh = {
+				{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		owo_suppressor_02 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = "owo_suppressor_helper_02"
-			}
+				muzzle_2 = "owo_suppressor_helper_02", muzzle_3 = "owo_suppressor_helper_02_02",
+			},
+			hide_mesh = {
+				{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		owo_suppressor_03 = {
-			model = _item_ranged.."/barrels/rippergun_rifle_barrel_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = "owo_suppressor_helper_03"
-			}
+				muzzle_2 = "owo_suppressor_helper_03", muzzle_3 = "owo_suppressor_helper_02_03",
+			},
+			hide_mesh = {
+				{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		owo_suppressor_04 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = "owo_suppressor_helper_04"
-			}
+				muzzle_2 = "owo_suppressor_helper_04", muzzle_3 = "owo_suppressor_helper_02_01",
+			},
+			hide_mesh = {
+				{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		owo_suppressor_05 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
-				muzzle_2 = "owo_suppressor_helper_04"
-			}
-		},
-		-- ### Empty ###
-		owo_suppressor_helper_empty = {
-			model = "", type = "muzzle_2", mesh_move = false, parent = "barrel"
+				muzzle_2 = "owo_suppressor_helper_04", muzzle_3 = "owo_suppressor_helper_02_04",
+			},
+			hide_mesh = {
+				{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		-- ### Helpers ###
+		-- muzzle_2
+		owo_suppressor_helper_empty = {
+			model = "", type = "muzzle_2", mesh_move = false, parent = "muzzle"
+		},
 		owo_suppressor_helper_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = "muzzle"
 		},
 		owo_suppressor_helper_02 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_2", mesh_move = false, parent = "barrel"
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_2", mesh_move = false, parent = "muzzle"
 		},
 		owo_suppressor_helper_03 = {
-			model = _item_melee.."/pommels/axe_pommel_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
+			model = _item_melee.."/pommels/axe_pommel_03", type = "muzzle_2", mesh_move = false, parent = "muzzle"
 		},
 		owo_suppressor_helper_04 = {
-			model = _item_melee.."/grips/hatchet_grip_03", type = "muzzle_2", mesh_move = false, parent = "barrel"
+			model = _item_melee.."/grips/hatchet_grip_03", type = "muzzle_2", mesh_move = false, parent = "muzzle"
+		},
+		-- muzzle_3
+		owo_suppressor_helper_02_empty = {
+			model = "", type = "muzzle_3", mesh_move = false, parent = "muzzle"
+		},
+		owo_suppressor_helper_02_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_3", mesh_move = false, parent = "muzzle",
+		},
+		owo_suppressor_helper_02_02 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_3", mesh_move = false, parent = "muzzle",
+		},
+		owo_suppressor_helper_02_03 = {
+			model = _item_ranged.."/barrels/rippergun_rifle_barrel_03", type = "muzzle_3", mesh_move = false, parent = "muzzle",
+		},
+		owo_suppressor_helper_02_04 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle_3", mesh_move = false, parent = "muzzle",
 		},
 	})
 end

@@ -14,6 +14,7 @@ local this_variant = "stubrevolver_p1_m1" -- Quickdraw Stub Revolver
 -- Makes new tables for attachment anchors
 -- ############################################
 mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to revolver yet
+mod.wc.attachment[this_variant].muzzle_3 = {}
 mod.wc.attachment[this_variant].barrelshroud = {} -- MT and Syn didn't add this to revolver yet
 
 mod.wc.attachment[this_variant].sightac1 = {}

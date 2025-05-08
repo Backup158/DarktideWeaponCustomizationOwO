@@ -18,6 +18,7 @@ mod.wc.attachment[this_variant].sight_2 = {}
 --if not mod.syn then
 mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autopistol yet, though syn has it commented out
 --end
+mod.wc.attachment[this_variant].muzzle_3 = {}
 
 -- Covered by MT plugin
 -- mod.wc.attachment[this_variant].stockac = {}
