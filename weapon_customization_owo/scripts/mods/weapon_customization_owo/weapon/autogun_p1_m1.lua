@@ -153,6 +153,9 @@ local _short_vigilant_autogun_barrels = "barrel_12|hagun_barrel_02"
 local _long_vigilant_autogun_barrels = "barrel_11|barrel_15|barrel_16|barrel_22"
 local _long_vigilant_autogun_mt_barrels = "hagun_barrel_01|hagun_barrel_03|hagun_barrel_04"
 local _long_vigilant_autogun_all_barrels = _long_vigilant_autogun_barrels.."|".._long_vigilant_autogun_mt_barrels
+local _all_default_vigilant_autogun_barrels = _short_vigilant_autogun_barrels.."|".._long_vigilant_autogun_barrels
+local _all_mt_vigilant_autogun_barrels = _long_vigilant_autogun_mt_barrels
+local _all_all_vigilant_autogun_barrels = _all_default_vigilant_autogun_barrels.."|".._all_mt_vigilant_autogun_barrels
 
 local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
 local _long_infantry_lasgun_mt_barrels = "ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08"
@@ -363,9 +366,13 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: SUPPRESSOR
 	-- ######
-    --  Short: Vigilant barrels and MT Autopistol
-    {   dependencies =  { _owo_all_suppressor_muzzles, _long_vigilant_autogun_barrels },
+    --  Vigilant barrels
+    {   dependencies =  { _owo_all_suppressor_muzzles, _all_all_vigilant_autogun_barrels },
         muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+    --  MT Autopistol
+    {   dependencies =  { _owo_all_suppressor_muzzles, _mt_autopistol_barrels },
+        muzzle =        { offset = true,   position = vector3_box(0, -0.02, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
     --  MT Twink Stubbers have no muzzles
     --  MT Single Stubbers
@@ -388,6 +395,12 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { _owo_all_suppressor_muzzles, "exitus_barrel_01" },
         muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
+    -- Not doing quake because i'm lazy
+    -- Syn SWS Pulse barrel has 3 barrels and I'm not choosing one
+    --  OwO Dreg Gunner
+    {	dependencies =  { _owo_all_suppressor_muzzles, "owo_dreg_barrel_01" },
+        muzzle =        { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.8, 2.2, 2.8) },
+    },
     --  -------------------------------------------
     --  Double cans
     --  -------------------------------------------
@@ -404,7 +417,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     -- Default
     {	dependencies =  { "owo_suppressor_03" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0.065, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+        muzzle_2 =      { offset = true,   position = vector3_box(0, 0.055, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
         muzzle_3 =      { offset = true,   position = vector3_box(0, 0.265, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
     },
     --  -------------------------------------------
