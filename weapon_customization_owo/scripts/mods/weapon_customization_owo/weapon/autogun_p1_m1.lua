@@ -251,23 +251,18 @@ mod.mt.inject_fixes(this_variant, {
     -- DREG GUNNER BARREL
     -- ######
     -- Iag
-    {   dependencies =  { "owo_dreg_barrel_01",
-            _infantry_autogun_receivers,
-        },
+    --  meshauto_01 is the MT Autogun Custom
+    {   dependencies =  { "owo_dreg_barrel_01", _infantry_autogun_receivers.."|meshauto_01", },
         barrel =        { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
         barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
     },
     -- Brautos
-    {   dependencies =  { "owo_dreg_barrel_01",
-            _braced_autogun_receivers,
-        },
+    {   dependencies =  { "owo_dreg_barrel_01", _braced_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, 0.025),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
         barrelshroud =  { offset = true,    position = vector3_box(0, 0, 0.025),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
     },
     -- Headhunters
-    {   dependencies =  { "owo_dreg_barrel_01",
-            _vigilant_autogun_receivers,
-        },
+    {   dependencies =  { "owo_dreg_barrel_01", _vigilant_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, -0.012),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
         barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.012),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24)}, 
     },
@@ -285,9 +280,7 @@ mod.mt.inject_fixes(this_variant, {
         muzzle =            { offset = true,     position = vector3_box(0, 1, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.2, 2.2, 2.2) },
     },
     -- Helbore bayonets
-	{   dependencies =  { "owo_dreg_barrel_01",
-            "autogun_bayonet_01|autogun_bayonet_02"
-        },
+	{   dependencies =  { "owo_dreg_barrel_01", "autogun_bayonet_01|autogun_bayonet_02" },
         bayonet = { offset = true,   position = vector3_box(0, 0.699, -0.095),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.5, 1.7, 3.0) },
     },
 
