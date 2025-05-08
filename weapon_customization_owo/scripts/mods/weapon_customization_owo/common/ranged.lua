@@ -603,7 +603,7 @@ function mod.owo_suppressor(variant_id, type)
 		{id = "owo_suppressor_helper_04", name = "OwO Suppressor'vesa 4", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_3", {
-		{id = "owo_suppressor_helper_empty", name = "Empty", no_randomize = true},
+		{id = "owo_suppressor_helper_02_empty", name = "Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_02_01", name = "OwO Suppressor'vesa2 1", no_randomize = true},
 		{id = "owo_suppressor_helper_02_02", name = "OwO Suppressor'vesa2 2", no_randomize = true},
 		{id = "owo_suppressor_helper_02_03", name = "OwO Suppressor'vesa2 3", no_randomize = true},
