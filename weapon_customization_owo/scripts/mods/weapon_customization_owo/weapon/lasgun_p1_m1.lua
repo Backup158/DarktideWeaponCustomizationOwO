@@ -76,6 +76,7 @@ local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_a
 local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
 
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
+local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
 
 local _super_short_helbore_barrels = "barrel_19"
 local _medium_short_helbore_barrels = "barrel_09|barrel_12|barrel_13|barrel_22|hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b"-- Medium length, short bottom
@@ -133,32 +134,96 @@ mod.mt.inject_fixes(this_variant, {
 		magazine = { offset = true, scale = vector3_box(1, 1, 0.6 ) },
 	},
 
-	-- ######
+    -- ######
 	-- Muzzle: SUPPRESSOR
 	-- ######
-	{	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
-		muzzle = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },
-	},
-	{	dependencies = {"owo_suppressor_01"},
-		muzzle_2 = { offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },	
-	},
-	{	dependencies = {"owo_suppressor_02"},
-		muzzle_2 = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ) }
-	},
-    {	dependencies = { "owo_suppressor_03"},
-        muzzle =            { offset = true,    position = vector3_box(0, 0.52, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
-        muzzle_02 =            { offset = true,    position = vector3_box(0, 0.38, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
-	},
-    {	dependencies = { "owo_suppressor_04|owo_suppressor_05"},
-        muzzle = { offset = true,   position = vector3_box(0, 0.072, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
-        muzzle_2 = { offset = true,   position = vector3_box(0, 0.52, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    --  Vigilant barrels
+    {   dependencies =  { _owo_all_suppressor_muzzles, _all_mt_vigilant_autogun_barrels },
+        muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
-	-- the skinny bayonet. sits on muzzle
-	{	dependencies = {"owo_suppressor_01|owo_suppressor_02", 
-			"autogun_bayonet_03"
-		},
-		bayonet = { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ) },
-	},
+    --  MT Autopistol
+    {   dependencies =  { _owo_all_suppressor_muzzles, _mt_autopistol_barrels },
+        muzzle =        { offset = true,   position = vector3_box(0, -0.02, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+    --  MT Twink Stubbers have no muzzles
+    --  MT Single Stubbers
+    {	dependencies =  { _owo_all_suppressor_muzzles, _mt_single_stubber_barrels },
+        muzzle =        { offset = true,   position = vector3_box(0, 0.78, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.3, 1.4, 2.3) },
+    },
+    --  MT Bolter
+    {	dependencies =  { _owo_all_suppressor_muzzles, _mt_bolter_barrels },
+        muzzle =        { offset = true,   position = vector3_box(0, 0.165, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.7, 0.4, 1.7) },
+    },
+    --  MT Backwards Bolter
+    {	dependencies =  { _owo_all_suppressor_muzzles, _mt_backwards_bolter_barrels },
+        muzzle =        { offset = true,   position = vector3_box(0, 0.01, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.7, -0.65, 1.7) },
+    },
+    --  MT Ripper
+    {	dependencies =  { _owo_all_suppressor_muzzles, _mt_ripper_barrels },
+        muzzle =        { offset = true,   position = vector3_box(0, 0.56, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.6, 2, 2.6) },
+    },
+    --  Syn Exitus
+    {	dependencies =  { _owo_all_suppressor_muzzles, "exitus_barrel_01" },
+        muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+    -- Not doing quake because i'm lazy
+    -- Syn SWS Pulse barrel has 3 barrels and I'm not choosing one
+    --  OwO Dreg Gunner
+    {	dependencies =  { _owo_all_suppressor_muzzles, "owo_dreg_barrel_01" },
+        muzzle =        { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.8, 2.2, 2.8) },
+    },
+    --  -------------------------------------------
+    --  Double cans
+    --  -------------------------------------------
+    {	dependencies =  { "owo_suppressor_01" },
+        muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 22, 0),   scale = vector3_box(1.2, 1.8, 1.2) },	
+        muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+    },
+    {	dependencies =  { "owo_suppressor_02" },
+        muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 17, 0),   scale = vector3_box(1.2, 1.8, 1.2) },
+        muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+    },
+    --  -------------------------------------------
+    --  PBS-1
+    --  -------------------------------------------
+    -- Default
+    {	dependencies =  { "owo_suppressor_03" },
+        muzzle_2 =      { offset = true,   position = vector3_box(0, 0.055, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+        muzzle_3 =      { offset = true,   position = vector3_box(0, 0.265, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+    },
+    --  -------------------------------------------
+    --  Can and Seat
+    --  -------------------------------------------
+    {	dependencies =  { "owo_suppressor_04|owo_suppressor_05" },
+        muzzle_2 =      { offset = true,   position = vector3_box(0, 0.13, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+        muzzle_3 =      { offset = true,   position = vector3_box(0, 0.086, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+    },
+	---- ######
+	---- Muzzle: SUPPRESSOR
+	---- ######
+	--{	dependencies = { "owo_suppressor_01|owo_suppressor_02"},
+	--	muzzle = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },
+	--},
+	--{	dependencies = {"owo_suppressor_01"},
+	--	muzzle_2 = { offset = true, position = vector3_box(0, 0, 0),rotation = vector3_box(0, 22, 0), scale = vector3_box(1.2, 1.8, 1.2 ) },	
+	--},
+	--{	dependencies = {"owo_suppressor_02"},
+	--	muzzle_2 = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.2, 1.8, 1.2 ) }
+	--},
+    --{	dependencies = { "owo_suppressor_03"},
+    --    muzzle =            { offset = true,    position = vector3_box(0, 0.52, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
+    --    muzzle_02 =            { offset = true,    position = vector3_box(0, 0.38, 0),   rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
+	--},
+    --{	dependencies = { "owo_suppressor_04|owo_suppressor_05"},
+    --    muzzle = { offset = true,   position = vector3_box(0, 0.072, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+    --    muzzle_2 = { offset = true,   position = vector3_box(0, 0.52, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
+    --},
+	---- the skinny bayonet. sits on muzzle
+	--{	dependencies = {"owo_suppressor_01|owo_suppressor_02", 
+	--		"autogun_bayonet_03"
+	--	},
+	--	bayonet = { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.5, 0.85 ) },
+	--},
 
 	-- ######
 	-- Muzzle: CONDOM
