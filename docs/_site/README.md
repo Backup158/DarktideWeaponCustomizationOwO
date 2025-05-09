@@ -3,15 +3,18 @@
 [![DiscordThread](https://img.shields.io/badge/Discord_Thread-7289da?logo=discord)](https://discord.com/channels/1048312349867646996/1356536292891951105 "Thread in the Darktide Modders Discord")
 [![ThisPageDirect](https://img.shields.io/badge/This_Page_(Direct)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/README.md "README when displayed directly on the repository.")
 [![ThisPagePages](https://img.shields.io/badge/This_Page_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/ "README when displayed on GitHub Pages")
+[![Changelog](https://img.shields.io/badge/Changelog-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](CHANGELOG.md "Changelog")
 
 # OwO? What is this?
 Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots. 
 
 > [!WARNING] 
 > 
-> Expect alignment issues and performance drops, especially when piled onto a heavy load order. A responsible mod author would spend the time making sure these parts are optimized and are compatibly aligned with all the other pieces. It ain't me.
+> Expect performance drops, especially when piled onto a heavy load order. Some attachments are made of a lot of parts, which takes more resources to process.
 > \
-> I've also noticed hitches when opening the inventory/weapon customization menu and on startup.
+> Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
+> \
+> Attachments may be not be aligned with parts from other plugins.
 > \
 > You have been warned!
 
@@ -29,9 +32,9 @@ Report alignment issues and I might fix it if I'm not busy (lying umder blamket 
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
 ## Load Order
-Place this below weapon customization and above the MT plugin and the Syn's edits plugin. Only the **bolded** files are necessary.
+Place this BELOW the base Weapon Customization mod and ABOVE the MT plugin and the Syn's edits plugin. Only the **bolded** files are necessary.
 
-> **﻿weapon_customization**
+> **weapon_customization**
 > 
 > for_the_drip
 > 
@@ -45,7 +48,7 @@ Place this below weapon customization and above the MT plugin and the Syn's edit
 
 If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunch of errors and I will laugh at you for not reading the description. You'll also miss out on the 2 times I aligned something involving the other plugins' parts.
 > [!NOTE]
-> To AML users: Due to (what I believe to be) limitations with AML, load order can be inconsistent and throw errors. Trying to find a workaround at the moment.
+> To AML users: Versions prior to `aml-25.05.04` have issues with following these load order rules. Make sure you have updated AML!
 
 # ***Notices youw pawts*** (Parts I added)
 
@@ -58,7 +61,7 @@ The list is hosted externally.
 
 &emsp; HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA
 
-&emsp; *ahem* Make sure you put this above the MT/Syn plugins. Also make sure you have their latest full releases (just the ones on Nexus). If that doesn't fix it, drop a [console log](https://dmf-docs.darkti.de/#/faqs?id=how-do-i-report-mod-errors) in the posts. I probably messed up in that case so sorry for laughing so hard.
+&emsp; *ahem* Make sure you put this above the MT/Syn plugins. Also make sure you have their latest full releases (just the ones on Nexus). If that doesn't fix it, drop a [console log](https://dmf-docs.darkti.de/#/faqs?id=how-do-i-report-mod-errors) in the Nexus posts or the Discord thread. I probably messed up in that case so sorry for laughing at you.
 
 2) **This mod gave me a backend error!**
 
@@ -94,15 +97,18 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 
 6) **When I use the scopes in game, they glitch out and are impossible to aim with!**
 
-&emsp; This is a consequence of the mesh streamer system. You can avoid it by disabling it in `<Darktide>\bundle\application_settings\settings_common.ini` but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
-<details> <summary>Mesh streamer issues</summary>
+&emsp; This is a consequence of the mesh streamer system. You can avoid it by:  \
+&emsp;&emsp; a) Increasing the Mesh Quality in the Options menu  \
+&emsp;&emsp; ![MeshQualitySetting](https://imgur.com/mR2GsjV.png)  \
+&emsp;&emsp; b) Completely disabling it in `<Darktide>\bundle\application_settings\settings_common.ini`, but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
+<details> <summary>Disabling the mesh streamer</summary>
   
 The mesh streamer basically makes it so your computer only renders things in high quality if it's close and visible, so it won't use up as many resources on, for example, a Scab Shooter's helmet 70 meters away. Sometimes, it'll set your sights as low priority, so you'll be aiming through a garbled mess throughout the match. This tends to happen more for users with AMD GPUs, which includes me lol.
 
 By disabling it, you guarantee that the game won't eat up your weapons. This also means the game is rendering every detail at full quality, even the small things far away.
   
 ```
-﻿mesh_streamer_settings = {
+mesh_streamer_settings = {
     disable = true
 }
 ```
@@ -119,7 +125,7 @@ By disabling it, you guarantee that the game won't eat up your weapons. This als
 <details>
   <summary>Elysian Drop Troop Weapons</summary>
   
-From the Lexicanum, sourced from Imperial Armour vol 3?
+From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on Kastorel-Novem*, pg. 93
 
 ![ElysianWeapons](https://wh40k.lexicanum.com/mediawiki/images/e/e5/Elysian_Drop_Troop_Weapons.jpg)
 
@@ -142,7 +148,7 @@ FAQs involving technical details about requirements and performance:
   
 9) **Why can the performance get bad?**
 
-&emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches.
+&emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches and in the inventory.
 
 &emsp; Error 2014 comes from your game taking too long to respond to the server; with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you >:3).
 
@@ -169,7 +175,12 @@ FAQs involving technical details about requirements and performance:
 
 13) **XYZ part is historically inaccurate!**
 
-&emsp; Yeah could be. My sources mostly start at Wikipedia articles, old forum posts, and random people posting videos themselves shooting things. Everything I made was based on some picture I saw, which may not have necessarily reflected the majority. If you could include some sources for me to throw into my Darktide mod autism folder to review later, I'll try and make an attachment like it. Though if it's something like a knob being 2 cm off, you can just edit the mod yourself lol. I made a [guide](https://backup158.github.io/Darktide_EWC_Edits.html) for that.
+&emsp; Yeah could be. My sources mostly start at Wikipedia articles, old forum posts, and random people posting videos themselves shooting things. Everything I made was based on some picture I saw, which may not have necessarily reflected the majority. If you could include some sources for me to throw into my Darktide mod autism folder\* to review later, I'll try and make an attachment like it. Though if it's something like a knob being 2 cm off, you can just edit the mod yourself lol. I made a [guide](https://backup158.github.io/Darktide_EWC_Edits.html) for that.  \
+&emsp; Also keep in mind that the way iron sights work on a screen is not how they work in real life. Authentic peep sights are nearly impossible to use in games.
+
+\*No joke that's what I call it lmao
+
+![DarktideModAutism](https://imgur.com/cguqJNq.png)
 
 14) **Can you add XYZ?**
 
@@ -197,10 +208,11 @@ Powdered deer penis
 
 :3c
 
-**No, seriously, you made this page in November 2024.**
+**No, seriously, you made this page in *November 2024*.**
 
 :3c
 Ok but really it's [this](https://en.wikipedia.org/wiki/Perfect_is_the_enemy_of_good). At least now that it's public, I can be held accountable for being a sack of lazy bones.
+
 **What a shitty FAQ. You didn't even answer half the questions.**
 
 :3c
