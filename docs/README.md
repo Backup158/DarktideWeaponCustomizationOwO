@@ -176,11 +176,15 @@ FAQs involving technical details about requirements and performance:
 13) **XYZ part is historically inaccurate!**
 
 &emsp; Yeah could be. My sources mostly start at Wikipedia articles, old forum posts, and random people posting videos themselves shooting things. Everything I made was based on some picture I saw, which may not have necessarily reflected the majority. If you could include some sources for me to throw into my Darktide mod autism folder\* to review later, I'll try and make an attachment like it. Though if it's something like a knob being 2 cm off, you can just edit the mod yourself lol. I made a [guide](https://backup158.github.io/Darktide_EWC_Edits.html) for that.  \
-&emsp; Also keep in mind that the way iron sights work on a screen is not how they work in real life. Authentic peep sights are nearly impossible to use in games.
+&emsp; Also keep in mind that the way iron sights work on a screen is not how they work in real life. Authentic peep sights are nearly impossible to use in games, even though they work IRL.
 
-\*No joke that's what I call it lmao
+<details>
+  <summary>*</summary>
+&emsp; No joke that's what I call it lmao
 
-![DarktideModAutism](https://imgur.com/cguqJNq.png)
+&emsp; ![DarktideModAutism](https://imgur.com/cguqJNq.png)
+##
+</details>
 
 14) **Can you add XYZ?**
 
