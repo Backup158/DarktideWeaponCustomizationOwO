@@ -30,7 +30,7 @@ mod.owo_trench_dagger_guard(this_variant)
 mod.owo_historical_blade(this_variant)
 
 -- ############################################
--- Inject Fixes
+-- Define Variables for Fixes
 -- ############################################
 local _owo_finger_guards = "owo_trench_dagger_finger_guard_01|owo_trench_dagger_finger_guard_02|owo_trench_dagger_finger_guard_03|owo_trench_dagger_finger_guard_04|owo_trench_dagger_finger_guard_05|owo_trench_dagger_finger_guard_06"
 local _owo_trench_dagger_finger_guard_knuckles = "owo_trench_dagger_finger_guard_knuckles_01|owo_trench_dagger_finger_guard_knuckles_02|owo_trench_dagger_finger_guard_knuckles_03|owo_trench_dagger_finger_guard_knuckles_04"
@@ -44,7 +44,44 @@ local _mt_tactical_axe_grips = "hatchet_mt_grip_01|hatchet_mt_grip_02|hatchet_mt
 local _mt_eviscerator_grips = "2h_chain_sword_mt_grip_01|2h_chain_sword_mt_grip_02|2h_chain_sword_mt_grip_03|2h_chain_sword_mt_grip_04"
 local _mt_chain_sword_grips = "chain_sword_mt_grip_01|chain_sword_mt_grip_02|chain_sword_mt_grip_03|chain_sword_mt_grip_04|chain_sword_mt_grip_05|chain_sword_mt_grip_06|chain_sword_mt_grip_07|chain_sword_mt_grip_08"
 local _mt_ogryn_grips = "ogrynbladehandle_01|ogrynbladehandle_02|ogrynbladehandle_03|ogrynbladehandle_04|ogrynbladehandle_05|ogrynbladehandle_06"
+-- ########
+-- For This Variant Only
+-- ########
 
+-- ############################################
+-- Inject Fixes
+-- ############################################
+-- #################
+-- HIDING HELPERS
+-- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
+-- Because they match the main parts first, if there is no match it means the main part is not attached
+-- #################
+mod.mt.inject_fixes(this_variant, {
+    -- Blade Shrouds
+    {	dependencies =  { "owo_historical_blade_helper_gerber|owo_historical_blade_helper_karambit"},
+        bladeshroud =   { hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- Finger Guard
+    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac1"},
+        frontguardac1 = { hide_mesh = {{"frontguardac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac2"},
+        frontguardac2 = { hide_mesh = {{"frontguardac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac3"},
+        frontguardac3 = { hide_mesh = {{"frontguardac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+})
+
+-- #################
+-- Universal Fixes
+-- These are shared among multiple weapons but are the same each time
+-- Up here so the custom fixes are ahead of the generic cases
+-- #################
+
+-- #################
+-- Custom Fixes
+-- #################
 mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Front Guards
@@ -185,26 +222,5 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     {   dependencies =  { "owo_historical_blade_box_cutter" },
         body =          { offset = true, position = vector3_box(0, -0.0, -0.094), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.35, 0.19 ), },
-    },
-
-
-    -- ####################################################################################
-    -- HIDING HELPERS
-    -- By putting it down here, they will only be hidden if the fixes from above are not found
-    -- Because they match the main parts first, if there is no match it means the main part is not attached
-    -- ####################################################################################
-    -- Blade Shrouds
-    {	dependencies =  { "owo_historical_blade_helper_gerber|owo_historical_blade_helper_karambit"},
-        bladeshroud =   { hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    -- Finger Guard
-    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac1"},
-        frontguardac1 = { hide_mesh = {{"frontguardac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac2"},
-        frontguardac2 = { hide_mesh = {{"frontguardac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac3"},
-        frontguardac3 = { hide_mesh = {{"frontguardac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })

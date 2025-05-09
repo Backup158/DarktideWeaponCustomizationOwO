@@ -22,8 +22,34 @@ local this_variant = "combatsword_p3_m1" -- Dueling Sword
 mod.owo_rapier_blade(this_variant)
 
 -- ############################################
+-- Define Variables for Fixes
+-- ############################################
+
+-- ########
+-- For This Variant Only
+-- ########
+
+-- ############################################
 -- Inject Fixes
 -- ############################################
+-- #################
+-- HIDING HELPERS
+-- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
+-- Because they match the main parts first, if there is no match it means the main part is not attached
+-- #################
+--mod.mt.inject_fixes(this_variant, {
+    
+--})
+
+-- #################
+-- Universal Fixes
+-- These are shared among multiple weapons but are the same each time
+-- Up here so the custom fixes are ahead of the generic cases
+-- #################
+
+-- #################
+-- Custom Fixes
+-- #################
 mod.mt.inject_fixes(this_variant, {
     -- Body: Rapier Blade
     --  Why did I choose 5 blades with wildly different proportions

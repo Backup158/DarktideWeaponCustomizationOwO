@@ -24,8 +24,40 @@ mod.wc.attachment[this_variant].pommelac2 = {}
 mod.owo_shovel_handles(this_variant, "head")
 
 -- ############################################
+-- Define Variables for Fixes
+-- ############################################
+
+-- ########
+-- For This Variant Only
+-- ########
+
+-- ############################################
 -- Inject Fixes
 -- ############################################
+-- #################
+-- HIDING HELPERS
+-- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
+-- Because they match the main parts first, if there is no match it means the main part is not attached
+-- #################
+mod.mt.inject_fixes(this_variant, {
+    -- Pommel
+    {	dependencies = {"owo_shovel_handles_ac1_01|owo_shovel_handles_ac1_02|owo_shovel_handles_ac1_03|owo_shovel_handles_ac1_04|owo_shovel_handles_ac1_05"},
+        pommelac1 = { hide_mesh = {{"pommelac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {	dependencies = {"owo_shovel_handles_ac2_01|owo_shovel_handles_ac2_02|owo_shovel_handles_ac2_03|owo_shovel_handles_ac2_04"},
+        pommelac2 = { hide_mesh = {{"pommelac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+})
+
+-- #################
+-- Universal Fixes
+-- These are shared among multiple weapons but are the same each time
+-- Up here so the custom fixes are ahead of the generic cases
+-- #################
+
+-- #################
+-- Custom Fixes
+-- #################
 mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Head: Shovel Handles
@@ -114,18 +146,5 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { "owo_shovel_handles_13"},
         pommel =        { offset = true, position = vector3_box(-0.0, 0.00, -0.128), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 0.4 ) },
         pommelac2 =     { offset = true, position = vector3_box(0.00, -0.018, -0.162), rotation = vector3_box(-90, 0, -180), scale = vector3_box(1.0, 1.0, 0.65 ) },
-    },
-
-    -- ####################################################################################
-    -- HIDING HELPERS
-    -- By putting it down here, they will only be hidden if the fixes from above are not found
-    -- Because they match the main parts first, if there is no match it means the main part is not attached
-    -- ####################################################################################
-    -- Pommel
-    {	dependencies = {"owo_shovel_handles_ac1_01|owo_shovel_handles_ac1_02|owo_shovel_handles_ac1_03|owo_shovel_handles_ac1_04|owo_shovel_handles_ac1_05"},
-        pommelac1 = { hide_mesh = {{"pommelac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {	dependencies = {"owo_shovel_handles_ac2_01|owo_shovel_handles_ac2_02|owo_shovel_handles_ac2_03|owo_shovel_handles_ac2_04"},
-        pommelac2 = { hide_mesh = {{"pommelac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
