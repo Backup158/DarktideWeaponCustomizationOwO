@@ -30,11 +30,20 @@ mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 
+mod.wc.attachment[this_variant].muzzle_2 = {}
+mod.wc.attachment[this_variant].muzzle_3 = {}
+mod.wc.attachment[this_variant].muzzle_4 = {}
+mod.wc.attachment[this_variant].muzzle_5 = {}
+mod.wc.attachment[this_variant].muzzle_6 = {}
+
 -- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_bistol_shotgun_barrel_short(this_variant)
+
+mod.owo_suppressor(this_variant, "muzzle")
+mod.owo_muzzle_brake(this_variant)
 
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
@@ -64,6 +73,48 @@ local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_a
 local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
 
+local _short_braced_autogun_mt_barrels = "bagun_barrel_01|bagun_barrel_05|bagun_barrel_06|bagun_barrel_07|bagun_barrel_08"
+local _long_braced_autogun_mt_barrels = "bagun_barrel_03|bagun_barrel_04"
+local _short_infantry_autogun_mt_barrels = "iagun_barrel_04"
+local _medium_infantry_autogun_mt_barrels = "iagun_barrel_01|iagun_barrel_02|iagun_barrel_06"
+local _long_infantry_autogun_mt_barrels = "iagun_barrel_03|iagun_barrel_05"
+local _short_vigilant_autogun_mt_barrels = "hagun_barrel_02"
+local _long_vigilant_autogun_mt_barrels = "hagun_barrel_01|hagun_barrel_03|hagun_barrel_04"
+local _all_vigilant_autogun_mt_barrels = _short_vigilant_autogun_mt_barrels.."|".._long_vigilant_autogun_mt_barrels
+local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
+local _long_infantry_lasgun_mt_barrels = "ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08"
+local _mt_laspistol_barrels = "lpistol_barrel_01|lpistol_barrel_02|lpistol_barrel_03|lpistol_barrel_04|lpistol_barrel_05|lpistol_barrel_06|lpistol_barrel_07"
+local _medium_short_helbore_mt_barrels = "hlasgun_barrel_01|hlasgun_barrel_04|hlasgun_barrel_05|hlasgun_barrel_05b" -- Medium length, short bottom
+local _medium_medium_helbore_mt_barrels = "hlasgun_barrel_03"
+local _long_helbore_mt_barrels = "hlasgun_barrel_02"
+local _all_helbore_mt_barrels = _medium_short_helbore_mt_barrels.."|".._medium_medium_helbore_mt_barrels.."|".._long_helbore_mt_barrels
+local _mt_recon_lasgun_barrels = "rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05"
+local _mt_autopistol_barrels = "apistol_barrel_01|apistol_barrel_02|apistol_barrel_03|apistol_barrel_04|apistol_barrel_05"
+local _mt_twin_stubber_barrels = "stubber_barrel_01|stubber_barrel_02|stubber_barrel_03|stubber_barrel_04|stubber_barrel_05"
+local _mt_single_stubber_barrels = "singlestubber_barrel_01|singlestubber_barrel_02|singlestubber_barrel_03"
+local _mt_combat_shotgun_barrels = "shot_barrel_01|shot_barrel_02|shot_barrel_03|shot_barrel_04|shot_barrel_07|shot_barrel_08|shot_barrel_09"
+local _mt_db_shotgun_barrels = "dbshot_barrel_01|dbshot_barrel_02|dbshot_barrel_03"
+local _mt_plasma_barrels = "plas_barrel_01|plas_barrel_02|plas_barrel_03"
+local _mt_flamer_barrels = "flamer_barrel_01|flamer_barrel_02|flamer_barrel_03|flamer_barrel_04|flamer_barrel_05|flamer_barrel_06"
+local _mt_bolter_barrels = "bolter_barrel_01|bolter_barrel_02|bolter_barrel_03|bolter_barrel_04"
+local _mt_backwards_bolter_barrels = "fbolter_barrel_01|fbolter_barrel_02|fbolter_barrel_03|fbolter_barrel_04"
+local _mt_ripper_barrels = "ripper_barrel_01|ripper_barrel_02|ripper_barrel_03|ripper_barrel_04|ripper_barrel_05|ripper_barrel_06"
+
+local _syn_m41a_barrels = "syn_m41a_barrel_01|syn_m41a_barrel_02|syn_m41a_barrel_03|syn_m41a_barrel_04|syn_m41a_barrel_05|syn_m41a_barrel_06|syn_m41a_barrel_07|syn_m41a_barrel_08"
+local _syn_helbore_sniper_barrels = "helbore_sniper_barrel_01|helbore_sniper_barrel_02|helbore_sniper_barrel_03|helbore_sniper_barrel_04|helbore_sniper_barrel_05|helbore_sniper_barrel_05b"
+local _syn_carry_sniper_barrels = "cleaver_sniper_barrel_01|cleaver_sniper_barrel_02|cleaver_sniper_barrel_04|cleaver_sniper_barrel_05|cleaver_sniper_barrel_06"
+local _syn_all_sniper_barrels = _syn_helbore_sniper_barrels.."|".._syn_carry_sniper_barrels
+local _syn_pulse_barrels = "SWSMPR_barrel_01|SWSMPR_barrel_02|SWSMPR_barrel_03|SWSMPR_barrel_06|SWSMPR_barrel_07|SWSMPR_barrel_08|SWSMPR_barrel_09|SWSMPR_barrel_10|SWSMPR_barrel_11|SWSMPR_barrel_12|SWSMPR_barrel_13"
+local _syn_hellgun_barrels = "syn_heavybarrel_01|syn_heavybarrel_02|syn_heavybarrel_03|syn_hellgun_barrel_01|syn_hellgun_barrel_02"
+local _syn_carbine_barrels = "syn_carbine_barrel_01|syn_carbine_barrel_02|syn_carbine_barrel_03|syn_carbine_barrel_04|syn_carbine_barrel_05"
+local _syn_aquilon_barrels = "syn_aquilonbarrel_01|syn_aquilonbarrel_01a|syn_aquilonbarrel_02|syn_aquilonbarrel_02a"
+local _syn_heavy_barrels = "syn_heavybarrel_01|syn_heavybarrel_02|syn_heavybarrel_03"
+local _syn_thompson_barrels = "syn_thompson_barrel_01|syn_thompson_barrel_02"
+local _syn_rotary_barrels = "rotary_barrel_01|rotary_barrel_01a|rotary_barrel_01b|rotary_barrel_01c"
+local _syn_q3_barrels = "q3_machinegun_barrel_01|q3_machinegun_barrel_01a"
+local _syn_canis_barrels = "syn_vescanis_barrel_01|syn_vescanis_barrel_02"
+local _syn_gauss_barrels = "syn_gk8gauss_barrel_01|syn_gk8gauss_barrel_02"
+
 -- ########
 -- For This Variant Only
 -- ########
@@ -84,6 +135,22 @@ mod.mt.inject_fixes(this_variant, {
     -- Barrel
     {   dependencies = {"owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08"},
         barrelshroud = {hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    -- Muzzles
+    {	dependencies =  { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01|owo_muzzle_brake_helper_01_01"},
+        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04"},
+        muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_brake_helper_02_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_03_01"},
+        muzzle_4 = {hide_mesh = {{"muzzle_4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_4 = "owo_muzzle_brake_helper_03_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
+        muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_05_01"},
+        muzzle_6 = {hide_mesh = {{"muzzle_6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_6 = "owo_muzzle_brake_helper_05_00"}, },
     },
     -- Sights
     {   dependencies = {"owo_holosight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
@@ -127,6 +194,8 @@ mod.mt.inject_fixes(this_variant, {
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
+mod.fixes_owo_suppressors(this_variant)
+mod.fixes_owo_muzzle_brake(this_variant)
 
 -- #################
 -- Custom Fixes

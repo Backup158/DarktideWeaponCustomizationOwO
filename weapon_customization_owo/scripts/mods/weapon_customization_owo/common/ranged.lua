@@ -51,6 +51,11 @@ mod.wc.muzzle_5_list = {
 	"owo_muzzle_brake_helper_04_00",
 	"owo_muzzle_brake_helper_04_01",
 }
+mod.wc.add_custom_attachments.muzzle_6 = "muzzle_6_list"
+mod.wc.muzzle_6_list = {
+	"owo_muzzle_brake_helper_05_00",
+	"owo_muzzle_brake_helper_05_01",
+}
 -- BARREL
 if mod.syn then
 	mod.mt.table_append(mod.wc.barrelshrouds, {
@@ -805,60 +810,105 @@ function mod.owo_muzzle_brake(variant_id, type)
 		{id = "owo_muzzle_brake_helper_04_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_04_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
+	mod.inject_attachments_owo(variant_id, "muzzle_6", {
+		{id = "owo_muzzle_brake_helper_05_00", name = "Brake'vesa Empty", no_randomize = true},
+		{id = "owo_muzzle_brake_helper_05_01", name = "OwO Muzzle Brake'vesa Base", no_randomize = true},
+		{id = "owo_muzzle_brake_helper_05_02", name = "OwO Muzzle Brake'vesa Base 2", no_randomize = true},
+	})
 
 	mod.inject_models(variant_id, {
 		owo_muzzle_brake_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "muzzle", mesh_move = false, parent = "barrel",
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
 				muzzle_2 = "owo_muzzle_brake_helper_01_01", muzzle_3 = "owo_muzzle_brake_helper_02_01", 
 				muzzle_4 = "owo_muzzle_brake_helper_03_01", muzzle_5 = "owo_muzzle_brake_helper_04_01", 
-			}
+				muzzle_6 = "owo_muzzle_brake_helper_05_01",
+			},
+			hide_mesh = {
+				{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		owo_muzzle_brake_02 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_killshot_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
 				muzzle_2 = "owo_muzzle_brake_helper_01_01", muzzle_3 = "owo_muzzle_brake_helper_02_01", 
 				muzzle_4 = "owo_muzzle_brake_helper_03_01", muzzle_5 = "owo_muzzle_brake_helper_04_01", 
-			}
+				muzzle_6 = "owo_muzzle_brake_helper_05_02",
+			},
+			hide_mesh = {
+				{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		owo_muzzle_brake_03 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_killshot_muzzle_03", type = "muzzle", mesh_move = false, parent = "barrel",
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", mesh_move = false, parent = "barrel",
 			automatic_equip = {
 				muzzle_2 = "owo_muzzle_brake_helper_01_01", muzzle_3 = "owo_muzzle_brake_helper_02_01", 
 				muzzle_4 = "owo_muzzle_brake_helper_03_01", muzzle_5 = "owo_muzzle_brake_helper_04_01", 
-			}
+				muzzle_6 = "owo_muzzle_brake_helper_05_02",
+			},
+			hide_mesh = {
+				{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
 		},
 		-- ### Helpers ###
 		owo_muzzle_brake_helper_01_00 = {
-			model = "", type = "muzzle_2", mesh_move = false, parent = "muzzle"
+			model = "", type = "muzzle_2", mesh_move = false, parent = "muzzle_6"
 		},
 		owo_muzzle_brake_helper_01_01 = {
-			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_2", mesh_move = false, parent = "muzzle"
+			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_2", mesh_move = false, parent = "muzzle_6"
 		},
 		owo_muzzle_brake_helper_02_00 = {
-			model = "", type = "muzzle_3", mesh_move = false, parent = "muzzle"
+			model = "", type = "muzzle_3", mesh_move = false, parent = "muzzle_6"
 		},
 		owo_muzzle_brake_helper_02_01 = {
-			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_3", mesh_move = false, parent = "muzzle"
+			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_3", mesh_move = false, parent = "muzzle_6"
 		},
 		owo_muzzle_brake_helper_03_00 = {
-			model = "", type = "muzzle_4", mesh_move = false, parent = "muzzle"
+			model = "", type = "muzzle_4", mesh_move = false, parent = "muzzle_6"
 		},
 		owo_muzzle_brake_helper_03_01 = {
-			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_4", mesh_move = false, parent = "muzzle"
+			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_4", mesh_move = false, parent = "muzzle_6"
 		},
 		owo_muzzle_brake_helper_04_00 = {
-			model = "", type = "muzzle_5", mesh_move = false, parent = "muzzle"
+			model = "", type = "muzzle_5", mesh_move = false, parent = "muzzle_6"
 		},
 		owo_muzzle_brake_helper_04_01 = {
-			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_5", mesh_move = false, parent = "muzzle"
+			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_5", mesh_move = false, parent = "muzzle_6"
 		},
-		--[[owo_muzzle_brake_helper_05_00 = {
+		owo_muzzle_brake_helper_05_00 = {
 			model = "", type = "muzzle_6", mesh_move = false, parent = "muzzle"
 		},
 		owo_muzzle_brake_helper_05_01 = {
-			model = _item_ranged.."/underbarrels/shotgun_pump_action_underbarrel_01", type = "muzzle_6", mesh_move = false, parent = "muzzle"
-		},]]
+			model = _item_ranged.."/muzzles/autogun_rifle_killshot_muzzle_05", type = "muzzle_6", mesh_move = false, parent = "muzzle"
+		},
+		owo_muzzle_brake_helper_05_02 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_killshot_muzzle_03", type = "muzzle_6", mesh_move = false, parent = "muzzle"
+		},
+	})
+end
+function mod.fixes_owo_muzzle_brake(variant_id)
+	mod.mt.inject_fixes(variant_id, {
+		{	dependencies =  { "owo_muzzle_brake_01" },
+			muzzle_6 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 1.0 ) },
+			muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.3, 1.5 ) },
+			muzzle_3 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.3, 1.5 ) },
+			muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.3, 1.5 ) },
+			muzzle_5 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.3, 1.5 ) },
+		},
+		{	dependencies =  { "owo_muzzle_brake_02" },
+			muzzle_6 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 1.0 ) },
+			muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.5, 2.2 ) },
+			muzzle_3 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.5, 2.2 ) },
+			muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.5, 2.2 ) },
+			muzzle_5 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.5, 2.2 ) },
+		},
+		{	dependencies =  { "owo_muzzle_brake_03" },
+			muzzle_6 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 1.0 ) },
+			muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+			muzzle_3 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+			muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+			muzzle_5 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.7, 0.75, 2.2 ) },
+		},
 	})
 end
 

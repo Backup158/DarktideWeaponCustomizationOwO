@@ -24,6 +24,8 @@ end
 mod.wc.attachment[this_variant].muzzle_3 = {}
 mod.wc.attachment[this_variant].muzzle_4 = {}
 mod.wc.attachment[this_variant].muzzle_5 = {}
+mod.wc.attachment[this_variant].muzzle_6 = {}
+
 mod.wc.attachment[this_variant].magac = {} -- MT didn't add this to Helbore yet
 mod.wc.attachment[this_variant].bayonetac1 = {}
 mod.wc.attachment[this_variant].bayonetac2 = {}
@@ -174,6 +176,9 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
         muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
     },
+    {	dependencies =  { "owo_muzzle_brake_helper_05_01"},
+        muzzle_6 = {hide_mesh = {{"muzzle_6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_6 = "owo_muzzle_brake_helper_05_00"}, },
+    },
     -- Magazine
     {	dependencies =  { "owo_plasma_mag_helper_01|owo_plasma_mag_helper_02|owo_plasma_mag_helper_03|owo_plasma_mag_helper_04|owo_plasma_melta_mag_helper_01" },
         magac = {hide_mesh = {{"magac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
@@ -256,6 +261,7 @@ mod.mt.inject_fixes(this_variant, {
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
 mod.fixes_owo_suppressors(this_variant)
+mod.fixes_owo_muzzle_brake(this_variant)
 
 -- #################
 -- Custom Fixes

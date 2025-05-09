@@ -26,6 +26,7 @@ mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to a
 mod.wc.attachment[this_variant].muzzle_3 = {}
 mod.wc.attachment[this_variant].muzzle_4 = {}
 mod.wc.attachment[this_variant].muzzle_5 = {}
+mod.wc.attachment[this_variant].muzzle_6 = {}
 
 mod.wc.attachment[this_variant].foregripac1 = {}
 mod.wc.attachment[this_variant].foregripac2 = {}
@@ -215,6 +216,9 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
         muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
     },
+    {	dependencies =  { "owo_muzzle_brake_helper_05_01"},
+        muzzle_6 = {hide_mesh = {{"muzzle_6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_6 = "owo_muzzle_brake_helper_05_00"}, },
+    },
     -- Bayonet
     {	dependencies =  { "owo_dreg_bayonet_rear_01|owo_bayonet_m7_helper_01|owo_bayonet_seitengewehr_helper_01|owo_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
         bayonetac1 = {hide_mesh = {     {"bayonetac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
@@ -339,6 +343,7 @@ mod.mt.inject_fixes(this_variant, {
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
 mod.fixes_owo_suppressors(this_variant)
+mod.fixes_owo_muzzle_brake(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -545,29 +550,8 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: Muzzle Brake
 	-- ######
-	{	dependencies =  { "owo_muzzle_brake_01|owo_muzzle_brake_02|owo_muzzle_brake_03" },
-        muzzle =        { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 1.0 ) },
-    },
-    {	dependencies =  { "owo_muzzle_brake_01|owo_muzzle_brake_02|owo_muzzle_brake_03", _mt_single_stubber_barrels },
+    {	dependencies =  { "owo_muzzle_brake_01|owo_muzzle_brake_02|owo_muzzle_brake_03", _mt_laspistol_barrels },
         muzzle =        { offset = true, position = vector3_box(0, 1.25, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1.0, 2.5 ) },
-    },
-    {	dependencies =  { "owo_muzzle_brake_01" },
-        muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.3, 1.5 ) },
-        muzzle_3 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.3, 1.5 ) },
-        muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.3, 1.5 ) },
-        muzzle_5 =      { offset = true, position = vector3_box(0, 0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.3, 1.5 ) },
-    },
-    {	dependencies =  { "owo_muzzle_brake_02" },
-        muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.5, 2.2 ) },
-        muzzle_3 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.3, 0.5, 2.2 ) },
-        muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.5, 2.2 ) },
-        muzzle_5 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.3, 0.5, 2.2 ) },
-    },
-    {	dependencies =  { "owo_muzzle_brake_03" },
-        muzzle_2 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.7, 0.75, 2.2 ) },
-        muzzle_3 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, -30, 90), scale = vector3_box(1.7, 0.75, 2.2 ) },
-        muzzle_4 =      { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.7, 0.75, 2.2 ) },
-        muzzle_5 =      { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 30, -90), scale = vector3_box(1.7, 0.75, 2.2 ) },
     },
 
     -- ######
