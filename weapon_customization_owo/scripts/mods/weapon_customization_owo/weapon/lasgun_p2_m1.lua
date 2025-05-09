@@ -165,7 +165,7 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01|owo_muzzle_brake_helper_01_01"},
         muzzle_2 = { hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
-    {	dependencies =  { "owo_muzzle_brake_helper_02_01"},
+    {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04"},
         muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_brake_helper_02_00"}, },
     },
     {	dependencies =  { "owo_muzzle_brake_helper_03_01"},
@@ -1356,7 +1356,7 @@ mod.mt.inject_fixes(this_variant, {
 })
 
 -- #################
--- Universal Fixes
+-- Sight Fixes
 -- These are shared among multiple weapons but are the same each time
 -- Down here so prepend puts it before everything else
 -- #################

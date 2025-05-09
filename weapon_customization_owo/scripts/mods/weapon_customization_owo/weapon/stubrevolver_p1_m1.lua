@@ -550,7 +550,7 @@ mod.mt.inject_fixes(this_variant, {
 })
 
 -- #################
--- Universal Fixes
+-- Sight Fixes
 -- These are shared among multiple weapons but are the same each time
 -- Down here so prepend puts it before everything else
 -- #################
