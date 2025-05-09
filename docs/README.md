@@ -1,10 +1,12 @@
 [![NexusLink](https://img.shields.io/badge/Nexus_Mods-gray?logo=nexusmods)](https://www.nexusmods.com/warhammer40kdarktide/mods/429 "Mod page hosted on Nexus Mods")
-[![Discord](https://img.shields.io/badge/Discord-7289da?logo=discord&logoColor=7289DA&labelColor=gray&color=7289DA)](https://discord.gg/rKYWtaDx4D "Darktide Modders Discord")
+[![Discord](https://img.shields.io/badge/Darktide_Modders_Discord-7289da?logo=discord&logoColor=7289DA&labelColor=gray&color=7289DA)](https://discord.gg/rKYWtaDx4D "Darktide Modders Discord")
 [![DiscordThread](https://img.shields.io/badge/Discord_Thread-7289da?logo=discord)](https://discord.com/channels/1048312349867646996/1356536292891951105 "Thread in the Darktide Modders Discord")
 [![ThisPageDirect](https://img.shields.io/badge/This_Page_(Direct)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/README.md "README when displayed directly on the repository.")
 [![ThisPagePages](https://img.shields.io/badge/This_Page_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/ "README when displayed on GitHub Pages")
-[![PartsAdded](https://custom-icon-badges.demolab.com/badge/Parts_Added-e8d4b6?logo=list&logoSource=feather&logoColor=e18bbc&labelColor=gray)](parts_added "Parts Added List")
-[![ChangelogPages](https://img.shields.io/badge/Changelog-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](CHANGELOG "Changelog")
+[![PartsAddedDirect](https://custom-icon-badges.demolab.com/badge/Parts_Added_(Direct)-e8d4b6?logo=list&logoSource=feather&logoColor=86d37a&labelColor=gray)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/parts_added.md "Parts Added List when displayed directly on the repository.")
+[![PartsAddedPages](https://custom-icon-badges.demolab.com/badge/Parts_Added_(Pages)-e8d4b6?logo=list&logoSource=feather&logoColor=e18bbc&labelColor=gray)](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added "Parts Added List when displayed on GitHub Pages.")
+[![ChangelogDirect](https://img.shields.io/badge/Changelog_(Direct)-e8d4b6?logo=readdotcv&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/CHANGELOG.md "Changelog when displayed directly on the repository.")
+[![ChangelogPages](https://img.shields.io/badge/Changelog_(Pages)-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG "Changelog when displayed on GitHub Pages.")
 
 # OwO? What is this?
 Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots. 
@@ -53,7 +55,9 @@ If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunc
 
 # ***Notices youw pawts*** (Parts I added)
 
-The list is hosted externally. Follow [this link](parts_added)
+The list is hosted externally.  \
+&emsp; To see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html)  \
+&emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
 
 # FAQ
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
