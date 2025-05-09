@@ -319,30 +319,30 @@ function mod.owo_historical_blade(variant_id, type)
 end
 
 -- Blade: Slim Blades
---	Blade 4 doesn't exist
---	Slim is just less thicc but keeps how wide it is
---	Thin reduces both
+--		PSword Blade 4 doesn't exist
+--	Flat is just less thicc but keeps how wide it is
+--	Slim reduces both
 function mod.owo_slim_blade(variant_id, type, parent)
 	current_type = type or "blade"
 	current_parent = parent or "hilt"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_slim_psword_01", name = "OwO Slim PSword 1"},
-		{id = "owo_slim_psword_02", name = "OwO Slim PSword 2"},
-		{id = "owo_slim_psword_03", name = "OwO Slim PSword 3"},
-		--{id = "owo_slim_psword_04", name = "OwO Slim PSword 4"},
-		{id = "owo_slim_psword_05", name = "OwO Slim PSword 4"},
-		{id = "owo_slim_psword_06", name = "OwO Slim PSword 5"},
-		{id = "owo_slim_psword_07", name = "OwO Slim PSword 6"},
-		{id = "owo_slim_psword_08", name = "OwO Slim PSword 7 (M)"},
-		{id = "owo_slim_psword_01t", name = "OwO Thin PSword 1"},
-		{id = "owo_slim_psword_02t", name = "OwO Thin PSword 2"},
-		{id = "owo_slim_psword_03t", name = "OwO Thin PSword 3"},
+		{id = "owo_slim_psword_01", name = "OwO Flat PSword 1"},
+		{id = "owo_slim_psword_02", name = "OwO Flat PSword 2"},
+		{id = "owo_slim_psword_03", name = "OwO Flat PSword 3"},
+		--{id = "owo_slim_psword_04", name = "OwO Flat PSword 4"},
+		{id = "owo_slim_psword_05", name = "OwO Flat PSword 4"},
+		{id = "owo_slim_psword_06", name = "OwO Flat PSword 5"},
+		{id = "owo_slim_psword_07", name = "OwO Flat PSword 6"},
+		{id = "owo_slim_psword_08", name = "OwO Flat PSword 7 (M)"},
+		{id = "owo_slim_psword_01t", name = "OwO Slim PSword 1"},
+		{id = "owo_slim_psword_02t", name = "OwO Slim PSword 2"},
+		{id = "owo_slim_psword_03t", name = "OwO Slim PSword 3"},
 		--{id = "owo_slim_psword_04t", name = "OwO Slim PSword 4"},
-		{id = "owo_slim_psword_05t", name = "OwO Thin PSword 4"},
-		{id = "owo_slim_psword_06t", name = "OwO Thin PSword 5"},
-		{id = "owo_slim_psword_07t", name = "OwO Thin PSword 6"},
-		{id = "owo_slim_psword_08t", name = "OwO Thin PSword 7 (M)"},
+		{id = "owo_slim_psword_05t", name = "OwO Slim PSword 4"},
+		{id = "owo_slim_psword_06t", name = "OwO Slim PSword 5"},
+		{id = "owo_slim_psword_07t", name = "OwO Slim PSword 6"},
+		{id = "owo_slim_psword_08t", name = "OwO Slim PSword 7 (M)"},
 		{id = "owo_slim_dclaw_01", name = "OwO Slim DClaw 1"},
 		{id = "owo_slim_dclaw_02", name = "OwO Slim DClaw 2"},
 		{id = "owo_slim_dclaw_03", name = "OwO Slim DClaw 3"},
