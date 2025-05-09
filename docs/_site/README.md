@@ -3,6 +3,7 @@
 [![DiscordThread](https://img.shields.io/badge/Discord_Thread-7289da?logo=discord)](https://discord.com/channels/1048312349867646996/1356536292891951105 "Thread in the Darktide Modders Discord")
 [![ThisPageDirect](https://img.shields.io/badge/This_Page_(Direct)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/README.md "README when displayed directly on the repository.")
 [![ThisPagePages](https://img.shields.io/badge/This_Page_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/ "README when displayed on GitHub Pages")
+[![PartsAdded](https://custom-icon-badges.demolab.com/badge/Parts_Added-e8d4b6?logo=list&logoSource=feather&logoColor=e18bbc&labelColor=gray)](parts_added "Parts Added List")
 [![ChangelogPages](https://img.shields.io/badge/Changelog-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](CHANGELOG "Changelog")
 
 # OwO? What is this?
