@@ -4,7 +4,11 @@ Added:
 - Underbarrel GL and SG to bolter
 - Slim DClaw blades to (formerly) slim psword blades
 - Slim Blades to DClaw
-- Restored load order rules for AML update
+- Suppressors to bolter and bistol
+- Muzzle Brake to bolter and bistol
+Refactored fixes code to reduce copy pasted code. Increased overhead but simplifies adding it to new weapons.
+Reworked suppressors to be more like the muzzle brake, so it won't require as many patches
+Restored load order rules for AML update (ty icy my savior)
 
 # 2025-04-17
 v1.7.2
