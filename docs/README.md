@@ -3,7 +3,7 @@
 [![DiscordThread](https://img.shields.io/badge/Discord_Thread-7289da?logo=discord)](https://discord.com/channels/1048312349867646996/1356536292891951105 "Thread in the Darktide Modders Discord")
 [![ThisPageDirect](https://img.shields.io/badge/This_Page_(Direct)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/README.md "README when displayed directly on the repository.")
 [![ThisPagePages](https://img.shields.io/badge/This_Page_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/ "README when displayed on GitHub Pages")
-[![Changelog](https://img.shields.io/badge/Changelog-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](CHANGELOG.md "Changelog")
+[![ChangelogPages](https://img.shields.io/badge/Changelog-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](CHANGELOG "Changelog")
 
 # OwO? What is this?
 Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots. 
@@ -52,9 +52,7 @@ If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunc
 
 # ***Notices youw pawts*** (Parts I added)
 
-The list is hosted externally.  
-&emsp; To see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html)  
-&emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
+The list is hosted externally. Follow [this link](parts_added)
 
 # FAQ
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
