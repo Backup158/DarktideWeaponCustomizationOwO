@@ -15,13 +15,13 @@ Parts are prefixed with `OwO` in the customization menu.
 
 ### Muzzles
 
-- **Suppressors**: Infantry/Braced/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Combat Shotguns, Quickdraw Stub Revolvers  \
+- **Suppressors**: Infantry/Braced/Vigilant Autoguns, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Combat Shotguns, Quickdraw Stub Revolvers  \
   &emsp; 1 and 2 are generic suppressors  \
   &emsp; 3 is based on the PBS-1  \
   &emsp; 4 and 5 are different generic suppressors, but they're bigger and more metallic
 - **Lasgun Condom**: Infantry/Braced/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
   &emsp; To cover up the heat discoloring. Aligned for Helbore-based barrels.
-- **Muzzle Brake**: Infantry/Braced/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
+- **Muzzle Brake**: Infantry/Braced/Vigilant Autoguns, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns  \
   &emsp; Anti-Materiel Rifle muzzle brake based on the Barrett M82. Use it with the MT Single Stubber barrels.
 
 ### Barrels
@@ -51,14 +51,14 @@ Parts are prefixed with `OwO` in the customization menu.
 &emsp; Only really aligned with the Dreg Gunner Barrel
 - **Historical Pack**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns.  \
 &emsp; Based on US M7 Bayonet, German Seitengewehr 98, and French Épée-Baïonnette Modèle 1888
-- **Underbarrel Grenade Launchers**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
+- **Underbarrel Grenade Launchers**: Braced/Infantry/Vigilant Autoguns, Bolter, Infantry/Helbore/Recon Lasguns  \
 &emsp; Based on M203 and GP25
 
 > [!WARNING]
 > 
 > KNOWN ISSUE: Both variants will steal muzzle flashes from infantry autoguns
 
-- **Underbarrel Shotguns**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns  \
+- **Underbarrel Shotguns**: Braced/Infantry/Vigilant Autoguns, Bolter, Infantry/Helbore/Recon Lasguns  \
 &emsp; Based on the Knight's Armament Company Masterkey and the M26-MASS (Modular Accessory Shotgun System)  \
 &emsp; Masterkey includes smaller and larger variants
 
@@ -190,11 +190,13 @@ Spike on the back of the tactical axe head. Fills in the holes in the blades.
 &emsp; Tantos are basically the MT Combat Sword blades but skinnier and shorter, so I didn't bother aligning them outside the default case.
 
 ### Blades
-- **Thin Power Sword**: Power Swords  \
-&emsp; 1h Power Sword blades scaled down  \
+- **Thin Blades**: Power Swords, Catachan "Devil's Claw" Swords \
+&emsp; 1h Power Sword blades and "Devil's Claw" blades scaled down  \
 &emsp; &emsp; Slim: Less thick, but same width and height  \
 &emsp; &emsp; Thin: Less thick and wide, but same height  \
 &emsp; Also halves the thickness of whatever hilt you equipped
+&emsp; &emsp; Done by all for 1h psword
+&emsp; &emsp; Only done by (grippy) variants of DClaw
 
 ### Pommels
 - **Shovel Handles**: Sapper Shovels  \
