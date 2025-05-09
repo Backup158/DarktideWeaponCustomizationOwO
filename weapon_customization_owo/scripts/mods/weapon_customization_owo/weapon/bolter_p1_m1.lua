@@ -41,11 +41,21 @@ mod.wc.attachment[this_variant].bayonetac5 = {}
 mod.wc.attachment[this_variant].bayonetac6 = {}
 mod.wc.attachment[this_variant].bayonetac7 = {}
 
+if not mod.syn then
+    mod.wc.attachment[this_variant].muzzle_2 = {}
+end
+mod.wc.attachment[this_variant].muzzle_3 = {}
+mod.wc.attachment[this_variant].muzzle_4 = {}
+mod.wc.attachment[this_variant].muzzle_5 = {}
+
 -- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_california_bolter(this_variant, "receiver")
+
+mod.owo_suppressor(this_variant, "muzzle")
+mod.owo_muzzle_brake(this_variant)
 
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_underbarrel_shotgun(this_variant, "bayonet")
@@ -116,6 +126,19 @@ local _syn_all_xl_barrels = _syn_xl_iag_barrels.."|".._syn_xl_brauto_barrels.."|
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
 mod.mt.inject_fixes(this_variant, {
+    -- Muzzles
+    {	dependencies =  { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01|owo_muzzle_brake_helper_01_01"},
+        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04"},
+        muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_brake_helper_02_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_03_01"},
+        muzzle_4 = {hide_mesh = {{"muzzle_4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_4 = "owo_muzzle_brake_helper_03_00"}, },
+    },
+    {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
+        muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
+    },
     -- Bayonet
     {	dependencies =  { "owo_dreg_bayonet_rear_01|owo_bayonet_m7_helper_01|owo_bayonet_seitengewehr_helper_01|owo_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
         bayonetac1 = {hide_mesh = {     {"bayonetac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
@@ -180,6 +203,7 @@ mod.mt.inject_fixes(this_variant, {
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
+mod.fixes_owo_suppressors(this_variant)
 
 -- #################
 -- Custom Fixes
