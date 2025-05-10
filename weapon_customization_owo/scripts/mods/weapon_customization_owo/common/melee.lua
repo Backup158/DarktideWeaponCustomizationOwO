@@ -327,22 +327,56 @@ function mod.owo_slim_blade(variant_id, type, parent)
 	current_parent = parent or "hilt"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_slim_psword_01", name = "OwO Flat PSword 1"},
-		{id = "owo_slim_psword_02", name = "OwO Flat PSword 2"},
-		{id = "owo_slim_psword_03", name = "OwO Flat PSword 3"},
-		--{id = "owo_slim_psword_04", name = "OwO Flat PSword 4"},
-		{id = "owo_slim_psword_05", name = "OwO Flat PSword 4"},
-		{id = "owo_slim_psword_06", name = "OwO Flat PSword 5"},
-		{id = "owo_slim_psword_07", name = "OwO Flat PSword 6"},
+		-- PSword
+		{id = "owo_flat_psword_01", name = "OwO Flat PSword 1"},
+		{id = "owo_flat_psword_02", name = "OwO Flat PSword 2"},
+		{id = "owo_flat_psword_03", name = "OwO Flat PSword 3"},
+		--{id = "owo_flat_psword_04", name = "OwO Flat PSword 4"},
+		{id = "owo_flat_psword_05", name = "OwO Flat PSword 4"},
+		{id = "owo_flat_psword_06", name = "OwO Flat PSword 5"},
+		{id = "owo_flat_psword_07", name = "OwO Flat PSword 6"},
+		{id = "owo_flat_psword_08", name = "OwO Flat PSword 7 (M)"},
+		{id = "owo_slim_psword_01", name = "OwO Slim PSword 1"},
+		{id = "owo_slim_psword_02", name = "OwO Slim PSword 2"},
+		{id = "owo_slim_psword_03", name = "OwO Slim PSword 3"},
+		--{id = "owo_slim_psword_04", name = "OwO Slim PSword 4"},
+		{id = "owo_slim_psword_05", name = "OwO Slim PSword 4"},
+		{id = "owo_slim_psword_06", name = "OwO Slim PSword 5"},
+		{id = "owo_slim_psword_07", name = "OwO Slim PSword 6"},
+		{id = "owo_slim_psword_08", name = "OwO Slim PSword 7 (M)"},
+		{id = "owo_flat_psword_01", name = "OwO Flat PSword 1"},
+		{id = "owo_flat_psword_02", name = "OwO Flat PSword 2"},
+		{id = "owo_flat_psword_03", name = "OwO Flat PSword 3"},
+		--{id = "owo_flat_psword_04", name = "OwO Flat PSword 4"},
+		{id = "owo_flat_psword_05", name = "OwO Flat PSword 4"},
+		{id = "owo_flat_psword_06", name = "OwO Flat PSword 5"},
+		{id = "owo_flat_psword_07", name = "OwO Flat PSword 6"},
 		{id = "owo_slim_psword_08", name = "OwO Flat PSword 7 (M)"},
-		{id = "owo_slim_psword_01t", name = "OwO Slim PSword 1"},
-		{id = "owo_slim_psword_02t", name = "OwO Slim PSword 2"},
-		{id = "owo_slim_psword_03t", name = "OwO Slim PSword 3"},
-		--{id = "owo_slim_psword_04t", name = "OwO Slim PSword 4"},
-		{id = "owo_slim_psword_05t", name = "OwO Slim PSword 4"},
-		{id = "owo_slim_psword_06t", name = "OwO Slim PSword 5"},
-		{id = "owo_slim_psword_07t", name = "OwO Slim PSword 6"},
-		{id = "owo_slim_psword_08t", name = "OwO Slim PSword 7 (M)"},
+		{id = "owo_slim_psword_01", name = "OwO Slim PSword 1"},
+		{id = "owo_slim_psword_02", name = "OwO Slim PSword 2"},
+		{id = "owo_slim_psword_03", name = "OwO Slim PSword 3"},
+		--{id = "owo_slim_psword_04", name = "OwO Slim PSword 4"},
+		{id = "owo_slim_psword_05", name = "OwO Slim PSword 4"},
+		{id = "owo_slim_psword_06", name = "OwO Slim PSword 5"},
+		{id = "owo_slim_psword_07", name = "OwO Slim PSword 6"},
+		{id = "owo_slim_psword_08", name = "OwO Slim PSword 7 (M)"},
+		-- DClaw
+		{id = "owo_flat_dclaw_01", name = "OwO Flat DClaw 1"},
+		{id = "owo_flat_dclaw_02", name = "OwO Flat DClaw 2"},
+		{id = "owo_flat_dclaw_03", name = "OwO Flat DClaw 3"},
+		{id = "owo_flat_dclaw_04", name = "OwO Flat DClaw 4"},
+		{id = "owo_flat_dclaw_05", name = "OwO Flat DClaw 5"},
+		{id = "owo_flat_dclaw_06", name = "OwO Flat DClaw 6"},
+		{id = "owo_flat_dclaw_07", name = "OwO Flat DClaw 7"},
+		{id = "owo_flat_dclaw_08", name = "OwO Flat DClaw 8 (M)"},
+		{id = "owo_flat_dclaw_01g", name = "OwO Flat DClaw 1 grip"},
+		{id = "owo_flat_dclaw_02g", name = "OwO Flat DClaw 2 grip"},
+		{id = "owo_flat_dclaw_03g", name = "OwO Flat DClaw 3 grip"},
+		{id = "owo_flat_dclaw_04g", name = "OwO Flat DClaw 4 grip"},
+		{id = "owo_flat_dclaw_05g", name = "OwO Flat DClaw 5 grip"},
+		{id = "owo_flat_dclaw_06g", name = "OwO Flat DClaw 6 grip"},
+		{id = "owo_flat_dclaw_07g", name = "OwO Flat DClaw 7 grip"},
+		{id = "owo_flat_dclaw_08g", name = "OwO Flat DClaw (M) grip"},
 		{id = "owo_slim_dclaw_01", name = "OwO Slim DClaw 1"},
 		{id = "owo_slim_dclaw_02", name = "OwO Slim DClaw 2"},
 		{id = "owo_slim_dclaw_03", name = "OwO Slim DClaw 3"},
@@ -363,6 +397,39 @@ function mod.owo_slim_blade(variant_id, type, parent)
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
+		-- PSword
+		owo_flat_psword_01 = {
+			model = _item_melee.."/blades/power_sword_blade_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_flat_psword_02 = {
+			model = _item_melee.."/blades/power_sword_blade_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_flat_psword_03 = {
+			model = _item_melee.."/blades/power_sword_blade_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		--owo_flat_psword_04 = {
+		--	model = _item_melee.."/blades/power_sword_blade_04", type = current_type, 
+		--	mesh_move = false, parent = current_parent,
+		--},
+		owo_flat_psword_05 = {
+			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_flat_psword_06 = {
+			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_flat_psword_07 = {
+			model = _item_melee.."/blades/power_sword_blade_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_flat_psword_08 = {
+			model = _item_melee.."/blades/power_sword_blade_ml01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
 		owo_slim_psword_01 = {
 			model = _item_melee.."/blades/power_sword_blade_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
@@ -395,39 +462,122 @@ function mod.owo_slim_blade(variant_id, type, parent)
 			model = _item_melee.."/blades/power_sword_blade_ml01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
-		owo_slim_psword_01t = {
+		-- PSword Grip
+		owo_flat_psword_01g = {
 			model = _item_melee.."/blades/power_sword_blade_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
-		owo_slim_psword_02t = {
+		owo_flat_psword_02g = {
 			model = _item_melee.."/blades/power_sword_blade_02", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
-		owo_slim_psword_03t = {
+		owo_flat_psword_03g = {
 			model = _item_melee.."/blades/power_sword_blade_03", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
-		--owo_slim_psword_04t = {
+		--owo_flat_psword_04g = {
 		--	model = _item_melee.."/blades/power_sword_blade_04", type = current_type, 
 		--	mesh_move = false, parent = current_parent,
 		--},
-		owo_slim_psword_05t = {
+		owo_flat_psword_05g = {
 			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
-		owo_slim_psword_06t = {
+		owo_flat_psword_06g = {
 			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
-		owo_slim_psword_07t = {
+		owo_flat_psword_07g = {
 			model = _item_melee.."/blades/power_sword_blade_07", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
-		owo_slim_psword_08t = {
+		owo_flat_psword_08g = {
+			model = _item_melee.."/blades/power_sword_blade_ml01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_slim_psword_01g = {
+			model = _item_melee.."/blades/power_sword_blade_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_slim_psword_02g = {
+			model = _item_melee.."/blades/power_sword_blade_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_slim_psword_03g = {
+			model = _item_melee.."/blades/power_sword_blade_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		--owo_slim_psword_04g = {
+		--	model = _item_melee.."/blades/power_sword_blade_04", type = current_type, 
+		--	mesh_move = false, parent = current_parent,
+		--},
+		owo_slim_psword_05g = {
+			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_slim_psword_06g = {
+			model = _item_melee.."/blades/power_sword_blade_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_slim_psword_07g = {
+			model = _item_melee.."/blades/power_sword_blade_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_slim_psword_08g = {
 			model = _item_melee.."/blades/power_sword_blade_ml01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
 		-- Devil's Claw
+		--		Flat DClaw
+		owo_flat_dclaw_01 = {
+			model = _item_melee.."/blades/combat_sword_blade_01", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_02 = {
+			model = _item_melee.."/blades/combat_sword_blade_02", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_03 = {
+			model = _item_melee.."/blades/combat_sword_blade_03", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_04 = {
+			model = _item_melee.."/blades/combat_sword_blade_04", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_05 = {
+			model = _item_melee.."/blades/combat_sword_blade_05", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_06 = {
+			model = _item_melee.."/blades/combat_sword_blade_06", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_07 = {
+			model = _item_melee.."/blades/combat_sword_blade_07", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_08 = {
+			model = _item_melee.."/blades/combat_sword_blade_ml01", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_01g = {
+			model = _item_melee.."/blades/combat_sword_blade_01", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_02g = {
+			model = _item_melee.."/blades/combat_sword_blade_02", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_03g = {
+			model = _item_melee.."/blades/combat_sword_blade_03", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_04g = {
+			model = _item_melee.."/blades/combat_sword_blade_04", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_05g = {
+			model = _item_melee.."/blades/combat_sword_blade_05", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_06g = {
+			model = _item_melee.."/blades/combat_sword_blade_06", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_07g = {
+			model = _item_melee.."/blades/combat_sword_blade_07", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		owo_flat_dclaw_08g = {
+			model = _item_melee.."/blades/combat_sword_blade_ml01", type = current_type, mesh_move = false, parent = current_parent,
+		},
+		--		Slim DClaw
 		owo_slim_dclaw_01 = {
 			model = _item_melee.."/blades/combat_sword_blade_01", type = current_type, mesh_move = false, parent = current_parent,
 		},
