@@ -628,6 +628,46 @@ function mod.owo_slim_blade(variant_id, type, parent)
 		},
 	})
 end
+function mod.fixes_owo_slim_blade(variant_id)
+	mod.mt.inject_fixes(variant_id, {
+		-- PSword
+		--      Flat Power Sword
+		--          Default
+		{   dependencies =  { _owo_flat_psword_g_blades },
+			hilt =  { position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+			blade = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 1)},
+		},
+		{   dependencies =  { _owo_flat_psword_blades },
+			blade = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+		},
+		--      Slim Power Sword
+		--          Default
+		{   dependencies =  { _owo_slim_psword_g_blades },
+			hilt =  { position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+			blade = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 0.65, 1)},
+		},
+		{   dependencies =  { _owo_slim_psword_blades },
+			blade = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.65, 1)},
+		},
+		-- DClaw
+		--      Flat DClaw
+		{   dependencies =  { _owo_flag_dclaw_g_blades },
+			hilt =  { position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+			blade = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 1, 1)},
+		},
+		{   dependencies =  { _owo_flat_dclaw_blades },
+			blade = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+		},
+		--      Slim DClaw
+		{   dependencies =  { _owo_slim_dclaw_g_blades },
+			hilt =  { position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+			blade = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.75, 1)},
+		},
+		{   dependencies =  { _owo_slim_dclaw_blades },
+			blade = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.75, 1)},
+		},
+	})
+end
 
 -- Frontguard: Trench Dagger
 --	Guards 1,2,6 SOMETIMES don't attach

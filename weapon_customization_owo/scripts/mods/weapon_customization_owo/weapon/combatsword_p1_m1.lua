@@ -63,6 +63,7 @@ local _owo_all_dclaw_g_blades = _owo_flat_dclaw_g_blades.."|".._owo_slim_dclaw_g
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
+mod.fixes_owo_slim_blade(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -174,26 +175,4 @@ mod.mt.inject_fixes(this_variant, {
         body = { offset = true,   position = vector3_box(0, 0.0, -0.04),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.2, 1) },
     },
 
-    -- ######
-    -- Body: Thin Blades
-    -- ######
-    --  Slim Power Sword
-    {   dependencies =  { _owo_flat_psword_blades },
-        grip = {position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        body = {position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 1)},
-    },
-    --  Thin Power Sword
-    {   dependencies =  { _owo_slim_psword_blades },
-        grip =  { position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        body =  { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 0.65, 1)},
-    },
-    -- Slim DClaw
-    --  Default
-    {   dependencies =  { _owo_slim_dclaw_g_blades },
-        grip =  { position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        body =  { position = vector3_box(0, 0, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.75, 1)},
-    },
-    {   dependencies =  { _owo_slim_all_dclaw_blades },
-        body =  { position = vector3_box(0, 0, 0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.75, 1)},
-    },
 })
