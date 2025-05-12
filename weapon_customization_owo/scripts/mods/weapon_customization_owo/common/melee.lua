@@ -343,7 +343,7 @@ function mod.owo_slim_blade(variant_id, type, parent)
 		{id = "owo_flat_psword_05g", name = "OwO Flat PSword 4 (G)"},
 		{id = "owo_flat_psword_06g", name = "OwO Flat PSword 5 (G)"},
 		{id = "owo_flat_psword_07g", name = "OwO Flat PSword 6 (G)"},
-		{id = "owo_slim_psword_08g", name = "OwO Flat PSword 7 (G) (M)"},
+		{id = "owo_flat_psword_08g", name = "OwO Flat PSword 7 (G) (M)"},
 		{id = "owo_slim_psword_01", name = "OwO Slim PSword 1"},
 		{id = "owo_slim_psword_02", name = "OwO Slim PSword 2"},
 		{id = "owo_slim_psword_03", name = "OwO Slim PSword 3"},
