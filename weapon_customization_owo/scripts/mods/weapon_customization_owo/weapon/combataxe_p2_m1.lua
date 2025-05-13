@@ -38,6 +38,7 @@ local _mt_ogryn_grips = "ogrynbladehandle_01|ogrynbladehandle_02|ogrynbladehandl
 -- ########
 -- For This Variant Only
 -- ########
+local _owo_all_tacax_spike_heads = "owo_tacax_spike_01|owo_tacax_spike_02|owo_tacax_spike_03|owo_tacax_spike_04|owo_tacax_spike_05|owo_tacax_spike_06|owo_tacax_spike_07"
 
 -- ############################################
 -- Inject Fixes
@@ -59,54 +60,11 @@ mod.mt.inject_fixes(this_variant, {
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
+mod.fixes_owo_tacax_spike(this_variant, "head", "grip")
 
 -- #################
 -- Custom Fixes
 -- #################
 mod.mt.inject_fixes(this_variant, {
-    -- ######
-    -- Head: TACAX SPIKE
-    -- ######
-    {	dependencies =  { "owo_tacax_spike_01|owo_tacax_spike_06", _mt_ogryn_grips },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.54, 2.3, 1.5 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_03", _mt_ogryn_grips },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.54, 2.3, 1.5 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.214), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_04", _mt_ogryn_grips },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.54, 2.3, 1.5 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.17), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.808, 0.382 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_05", _mt_ogryn_grips },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.54, 2.3, 1.5 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.192), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.808, 0.262 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_02|owo_tacax_spike_07", _mt_ogryn_grips },
-        head =          { offset = false, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.54, 2.3, 1.5 ) },
-        bladeshroud =   { offset = false, position = vector3_box(0, 0, 0.382), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 2.202, 0.382 ) },
-    },
-    --  Default Cases
-    --      Chain axe, combat axe, tactical axe, mt shovel grips
-    {	dependencies =  { "owo_tacax_spike_01|owo_tacax_spike_06" },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_03" },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.214), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_04" },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.17), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.808, 0.382 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_05" },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.192), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.808, 0.262 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_02|owo_tacax_spike_07" },
-        head =          { offset = false, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        bladeshroud =   { offset = false, position = vector3_box(0, 0, 0.244), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
-    },
+
 })

@@ -115,7 +115,7 @@ function mod.owo_tacax_spike(variant_id, type, parent)
 		{id = "owo_tacax_spike_04", name = "OwO Spiked Tactical Axe 4"},
 		{id = "owo_tacax_spike_05", name = "OwO Spiked Tactical Axe 5"},
 		{id = "owo_tacax_spike_06", name = "OwO Spiked Tactical Axe 6"},
-		{id = "owo_tacax_spike_07", name = "OwO Spiked Tactical Axe 7 (M)"},
+		{id = "owo_tacax_spike_07", name = "OwO Spiked Tactical Axe M"},
 	})
     mod.inject_attachments_owo(variant_id, "bladeshroud" or type, {
         {id = "owo_tacax_spike_helper_empty", name = "Empty bladeshroud"},
@@ -125,63 +125,101 @@ function mod.owo_tacax_spike(variant_id, type, parent)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_tacax_spike_01 = {
-			model = _item_melee.."/heads/hatchet_head_01", type = "head", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_tacax_spike_helper_01",
 			},
 		},
 		owo_tacax_spike_02 = {
-			model = _item_melee.."/heads/hatchet_head_02", type = "head", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/heads/hatchet_head_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_tacax_spike_helper_01",
 			},
 		},
 		owo_tacax_spike_03 = {
-			model = _item_melee.."/heads/hatchet_head_03", type = "head", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/heads/hatchet_head_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_tacax_spike_helper_01",
 			},
 		},
 		owo_tacax_spike_04 = {
-			model = _item_melee.."/heads/hatchet_head_04", type = "head", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/heads/hatchet_head_04", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_tacax_spike_helper_01",
 			},
 		},
 		owo_tacax_spike_05 = {
-			model = _item_melee.."/heads/hatchet_head_05", type = "head", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/heads/hatchet_head_05", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_tacax_spike_helper_01",
 			},
 		},
 		owo_tacax_spike_06 = {
-			model = _item_melee.."/heads/hatchet_head_06", type = "head", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/heads/hatchet_head_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_tacax_spike_helper_01",
 			},
 		},
 		owo_tacax_spike_07 = {
-			model = _item_melee.."/heads/hatchet_head_ml01", type = "head", 
-			mesh_move = false, parent = "grip",
+			model = _item_melee.."/heads/hatchet_head_ml01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_tacax_spike_helper_01",
 			},
 		},
 		-- ### Helper Parts ###
-		owo_tacax_spike_helper_01 = {
-			model = _item_melee.."/heads/axe_head_03", type = "bladeshroud", 
-			mesh_move = false, parent = "grip",
-		},
-		-- ### Empty ###
 		owo_tacax_spike_helper_empty = {
 			model = "", type = "bladeshroud", 
-			mesh_move = false, parent = "grip"
+			mesh_move = false, parent = current_type,
+		},
+		owo_tacax_spike_helper_01 = {
+			model = _item_melee.."/heads/axe_head_03", type = "bladeshroud", 
+			mesh_move = false, parent = current_type,
+		},
+	})
+end
+function mod.fixes_owo_tacax_spike(variant_id, given_type, given_parent)
+	local _owo_all_tacax_spike_heads = "owo_tacax_spike_01|owo_tacax_spike_02|owo_tacax_spike_03|owo_tacax_spike_04|owo_tacax_spike_05|owo_tacax_spike_06|owo_tacax_spike_07"
+
+	local _mt_falchion_grips = "falchion_mt_grip_01|falchion_mt_grip_02|falchion_mt_grip_03|falchion_mt_grip_04|falchion_mt_grip_05"
+	local _mt_sabre_grips = "sabre_mt_grip_01|sabre_mt_grip_02|sabre_mt_grip_03|sabre_mt_grip_04|sabre_mt_grip_05"
+	local _mt_dclaw_grips = "combat_sword_mt_grip_01|combat_sword_mt_grip_02|combat_sword_mt_grip_03|combat_sword_mt_grip_04|combat_sword_mt_grip_05|combat_sword_mt_grip_06"
+	--local _mt_combat_axe_grips = "axe_mt_grip_01|axe_mt_grip_02|axe_mt_grip_03|axe_mt_grip_04|axe_mt_grip_05|axe_mt_grip_06"
+	--local _mt_tactical_axe_grips = "hatchet_mt_grip_01|hatchet_mt_grip_02|hatchet_mt_grip_03|hatchet_mt_grip_04|hatchet_mt_grip_05|hatchet_mt_grip_06"
+	local _mt_eviscerator_grips = "2h_chain_sword_mt_grip_01|2h_chain_sword_mt_grip_02|2h_chain_sword_mt_grip_03|2h_chain_sword_mt_grip_04"
+	local _mt_chain_sword_grips = "chain_sword_mt_grip_01|chain_sword_mt_grip_02|chain_sword_mt_grip_03|chain_sword_mt_grip_04|chain_sword_mt_grip_05|chain_sword_mt_grip_06|chain_sword_mt_grip_07|chain_sword_mt_grip_08"
+	local _mt_ogryn_grips = "ogrynbladehandle_01|ogrynbladehandle_02|ogrynbladehandle_03|ogrynbladehandle_04|ogrynbladehandle_05|ogrynbladehandle_06"
+
+	local current_type = given_type or "head"
+	local current_parent = given_parent or "grip"
+
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Head: TACAX SPIKE
+		-- ######
+		-- By not giving a head fix, it takes the default position
+		--  Default Cases
+		--      Chain axe, combat axe, tactical axe, mt shovel grips
+		{	dependencies =  { "owo_tacax_spike_01|owo_tacax_spike_06" },
+			bladeshroud =   { offset = false, parent = current_type, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
+		},
+		{	dependencies =  { "owo_tacax_spike_03" },
+			bladeshroud =   { offset = false, parent = current_type, position = vector3_box(0, 0, 0.214), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
+		},
+		{	dependencies =  { "owo_tacax_spike_04" },
+			bladeshroud =   { offset = false, parent = current_type, position = vector3_box(0, 0, 0.17), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.808, 0.382 ) },
+		},
+		{	dependencies =  { "owo_tacax_spike_05" },
+			bladeshroud =   { offset = false, parent = current_type, position = vector3_box(0, 0, 0.192), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.808, 0.262 ) },
+		},
+		{	dependencies =  { "owo_tacax_spike_02|owo_tacax_spike_07" },
+			bladeshroud =   { offset = false, position = vector3_box(0, 0, 0.244), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
 		},
 	})
 end

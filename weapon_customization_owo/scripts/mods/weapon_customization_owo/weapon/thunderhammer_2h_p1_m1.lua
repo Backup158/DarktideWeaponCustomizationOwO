@@ -21,12 +21,12 @@ end
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
-mod.owo_tacax_spike(this_variant)
+mod.owo_tacax_spike(this_variant, "head", "shaft")
 
 -- ############################################
 -- Define Variables for Fixes
 -- ############################################
-
+local _owo_all_tacax_spike_heads = "owo_tacax_spike_01|owo_tacax_spike_02|owo_tacax_spike_03|owo_tacax_spike_04|owo_tacax_spike_05|owo_tacax_spike_06|owo_tacax_spike_07"
 -- ########
 -- For This Variant Only
 -- ########
@@ -51,20 +51,11 @@ mod.mt.inject_fixes(this_variant, {
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
+mod.fixes_owo_tacax_spike(this_variant, "head", "shaft")
 
 -- #################
 -- Custom Fixes
 -- #################
 mod.mt.inject_fixes(this_variant, {
-    -- ######
-    -- Head: TACAX SPIKE
-    -- ######
-    {	dependencies =  { "owo_tacax_spike_01" },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        bladeshroud =   { offset = false, parent = "head", position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
-    },
-    {	dependencies =  { "owo_tacax_spike_02" },
-        head =          { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        bladeshroud =   { offset = false, parent = "head", parent_node = 8, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
-    },
+
 })
