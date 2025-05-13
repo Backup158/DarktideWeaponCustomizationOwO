@@ -104,8 +104,11 @@ mod.wc.frontguarda3_list = {
 -- inject_models adds the models for actual use
 -- ############################################
 -- Head: Tacax Spike (Spiked Tactical Axe)
-function mod.owo_tacax_spike(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "head" or type, {
+function mod.owo_tacax_spike(variant_id, type, parent)
+	local current_type = type or "head"
+	local current_parent = parent or "grip"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_tacax_spike_01", name = "OwO Spiked Tactical Axe 1"},
 		{id = "owo_tacax_spike_02", name = "OwO Spiked Tactical Axe 2"},
 		{id = "owo_tacax_spike_03", name = "OwO Spiked Tactical Axe 3"},
@@ -185,8 +188,8 @@ end
 
 -- Body: Rapier Blades
 function mod.owo_rapier_blade(variant_id, type, parent)
-	current_type = type or "body"
-	current_parent = parent or "grip"
+	local current_type = type or "body"
+	local current_parent = parent or "grip"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_rapier_blade_01", name = "OwO Rapier Blade 1"},
@@ -335,8 +338,8 @@ end
 --	Flat is just less thicc but keeps how wide it is
 --	Slim reduces both
 function mod.owo_slim_blade(variant_id, type, parent)
-	current_type = type or "blade"
-	current_parent = parent or "hilt"
+	local current_type = type or "blade"
+	local current_parent = parent or "hilt"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		-- PSword
@@ -657,7 +660,7 @@ function mod.fixes_owo_slim_blade(variant_id)
 	local _owo_slim_dclaw_g_blades = "owo_slim_dclaw_01g|owo_slim_dclaw_02g|owo_slim_dclaw_03g|owo_slim_dclaw_04g|owo_slim_dclaw_05g|owo_slim_dclaw_06g|owo_slim_dclaw_07g|owo_slim_dclaw_08g"
 	local _owo_slim_all_dclaw_blades = _owo_slim_dclaw_blades.."|".._owo_slim_dclaw_g_blades
 	local _owo_all_dclaw_g_blades = _owo_flat_dclaw_g_blades.."|".._owo_slim_dclaw_g_blades
-	
+
 	mod.mt.inject_fixes(variant_id, {
 		-- PSword
 		--      Flat Power Sword
