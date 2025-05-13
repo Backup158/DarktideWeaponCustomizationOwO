@@ -36,6 +36,18 @@ else
 		"owo_historical_blade_helper_gerber",
 	}
 end
+-- GRIP
+--	Grip Shroud
+--table.insert(mod.wc.attachment_slots, "gripshroud")
+--mod:add_global_localize_strings({
+--    loc_weapon_cosmetics_customization_gripshroud = {
+--        en = "Grip Shroud",
+--	},
+--})
+--mod.wc.add_custom_attachments.gripshroud = "gripshroud_list"
+--mod.wc.gripshroud_list = {
+--	
+--}
 -- POMMEL
 mod.wc.add_custom_attachments.pommelac1 = "pommelac1_list"
 mod.wc.pommelac1_list = {
@@ -53,7 +65,7 @@ mod.wc.pommelac2_list = {
     "owo_shovel_handles_ac2_02",
     "owo_shovel_handles_ac2_03",
 }
--- frontguard
+-- FRONTGUARD
 mod.wc.add_custom_attachments.frontguard = "frontguard_list"
 mod.wc.frontguard_list = {
 	"owo_trench_dagger_finger_guard_default",
