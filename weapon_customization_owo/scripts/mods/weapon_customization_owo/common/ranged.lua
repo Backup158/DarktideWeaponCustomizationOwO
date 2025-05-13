@@ -755,8 +755,14 @@ function mod.fixes_owo_suppressors(variant_id)
 		},
 		--  MT Twink Stubbers have no muzzles
 		--  MT Single Stubbers
-		{	dependencies =  { _owo_all_suppressor_muzzles, _mt_single_stubber_barrels },
+		{	dependencies =  { _owo_all_suppressor_muzzles, "singlestubber_barrel_01" },
 			muzzle =        { offset = true,   position = vector3_box(0, 0.78, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.3, 1.4, 2.3) },
+		},
+		{	dependencies =  { _owo_all_suppressor_muzzles, "singlestubber_barrel_02" },
+			muzzle =        { offset = true,   position = vector3_box(0, 1, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.3, 1.4, 2.3) },
+		},
+		{	dependencies =  { _owo_all_suppressor_muzzles, "singlestubber_barrel_03" },
+			muzzle =        { offset = true,   position = vector3_box(0, 1.34, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.3, 1.4, 2.3) },
 		},
 		--  MT Bolter
 		{	dependencies =  { _owo_all_suppressor_muzzles, _mt_bolter_barrels },
