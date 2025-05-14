@@ -178,11 +178,15 @@ These can get super janky when using non-default parts so watch out.
 ## Melee
 
 ### Heads
-- **Tactical Axe Spike**: Combat/Tactical Axes  \
+- **Tactical Axe Spike**: Combat/Tactical Axes, Thunder Hammers  \
 Spike on the back of the tactical axe head. Fills in the holes in the blades.
 
+> [!WARNING]
+> 
+> KNOWN ISSUE: Variants 2/3/M do not have the spike aligned properly, so there's a second axe head in the middle of everything
+
 ### Body
-- **Rapier Blade**: Dueling Swords  \
+- **Rapier Blade**: Catachan "Devil's Claw" Swords, Dueling Swords  \
 &emsp; Thin, straight blades
 - **Historical Knives**: Combat Blades  \
 &emsp; Based on the M1917 Trench Dagger, Gerber Mk II, Indonesian karambits, and tanto blades.  \
@@ -190,13 +194,17 @@ Spike on the back of the tactical axe head. Fills in the holes in the blades.
 &emsp; Tantos are basically the MT Combat Sword blades but skinnier and shorter, so I didn't bother aligning them outside the default case.
 
 ### Blades
-- **Thin Blades**: Power Swords, Catachan "Devil's Claw" Swords \
+- **Slim Blades**: Power Swords, Catachan "Devil's Claw" Swords \
 &emsp; 1h Power Sword blades and "Devil's Claw" blades scaled down  \
-&emsp; &emsp; Slim: Less thick, but same width and height  \
-&emsp; &emsp; Thin: Less thick and wide, but same height  \
-&emsp; Also halves the thickness of whatever hilt you equipped
-&emsp; &emsp; Done by all for 1h psword
-&emsp; &emsp; Only done by (grippy) variants of DClaw
+&emsp; &emsp; Flat: Less thick, but same width and height  \
+&emsp; &emsp; Slim: Less thick and wide, but same height  \
+&emsp; &emsp; Grip (G) variants of both: Also halves the thickness of whatever hilt you equipped  \
+&emsp; &emsp; &emsp; Unpatched for most other grips so caveat emptor
+
+### Connectors
+- **Invisible Connector**: Thunder Hammer  \
+&emsp; Makes the connector invisible. That's it. 
+&emsp; It doesn't extend the shaft on its own; it's meant to be used with other parts (namely the tacax spikes)
 
 ### Pommels
 - **Shovel Handles**: Sapper Shovels  \

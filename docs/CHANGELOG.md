@@ -11,7 +11,7 @@ Added:
 - Tacax spikes to Thunder Hammer
 - Invisible connector to Thunder Hammer
 
-Refactored fixes code to reduce copy pasted code. Increased overhead but simplifies adding it to new weapons.
+Refactored fixes code to reduce copy pasted code. Increased overhead but simplifies adding it to new weapons so suffer >:3.
 
 Reworked suppressors to be more like the muzzle brake, so it won't require as many patches
 
