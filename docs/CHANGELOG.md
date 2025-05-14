@@ -2,11 +2,14 @@
 v1.7.3
 
 Added:
-- Underbarrel GL and SG to bolter
-- Slim DClaw blades to (formerly) slim psword blades
+- Underbarrel Grenade Launchers to Bolter
+- Underbarrel Shotguns to Bolter
+- Slim DClaw blades to (formerly) slim Psword blades
 - Slim Blades to DClaw
-- Suppressors to bolter and bistol
-- Muzzle Brake to bolter and bistol
+- Suppressors to Bolter and Bistol
+- Muzzle Brake to Bolter and Bistol
+- Tacax spikes to Thunder Hammer
+- Invisible connector to Thunder Hammer
 
 Refactored fixes code to reduce copy pasted code. Increased overhead but simplifies adding it to new weapons.
 
