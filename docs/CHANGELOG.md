@@ -1,4 +1,11 @@
-# 2025-05-04
+# 2025-
+v1.7.4
+
+Added:
+- Tacax spikes to Thunder Hammer
+- Invisible connector to Thunder Hammer
+
+# 2025-05-09
 v1.7.3
 
 Added:
@@ -8,8 +15,6 @@ Added:
 - Slim Blades to DClaw
 - Suppressors to Bolter and Bistol
 - Muzzle Brake to Bolter and Bistol
-- Tacax spikes to Thunder Hammer
-- Invisible connector to Thunder Hammer
 
 Refactored fixes code to reduce copy pasted code. Increased overhead but simplifies adding it to new weapons so suffer >:3.
 
