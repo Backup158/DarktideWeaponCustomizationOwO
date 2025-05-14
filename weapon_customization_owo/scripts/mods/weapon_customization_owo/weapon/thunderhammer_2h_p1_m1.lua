@@ -22,6 +22,7 @@ end
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_tacax_spike(this_variant, "head", "shaft")
+mod.owo_invisible_connector(this_variant, "connector", "shaft")
 
 -- ############################################
 -- Define Variables for Fixes

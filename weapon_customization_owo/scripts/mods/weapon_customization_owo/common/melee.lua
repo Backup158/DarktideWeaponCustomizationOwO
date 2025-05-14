@@ -228,6 +228,26 @@ function mod.fixes_owo_tacax_spike(variant_id, given_type, given_parent)
 	})
 end
 
+-- Connector: Invisible
+function mod.owo_invisible_connector(variant_id, given_type, given_parent)
+	local current_type = given_type or "connector"
+	local current_parent = given_parent or "shaft"
+	mod.inject_attachments_owo(variant_id, current_type, {
+		{id = "owo_invisible_connector_01", name = "OwO Invisible Connector"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_invisible_connector_01 = {
+			model = _item_melee.."/connectors/thunder_hammer_connector_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+	})
+end
+
 -- Body: Rapier Blades
 function mod.owo_rapier_blade(variant_id, type, parent)
 	local current_type = type or "body"
