@@ -183,7 +183,7 @@ Spike on the back of the tactical axe head. Fills in the holes in the blades.
 
 > [!WARNING]
 > 
-> KNOWN ISSUE: Variants 2/3/M do not have the spike aligned properly, so there's a second axe head in the middle of everything
+> KNOWN ISSUE: Variants 2/3/M do not have the spike aligned properly, so there's a second axe head in the middle of these
 
 ### Body
 - **Rapier Blade**: Catachan "Devil's Claw" Swords, Dueling Swords  \
@@ -203,12 +203,15 @@ Spike on the back of the tactical axe head. Fills in the holes in the blades.
 
 ### Connectors
 - **Invisible Connector**: Thunder Hammer  \
-&emsp; Makes the connector invisible. That's it. 
+&emsp; Makes the connector invisible. That's it. \
 &emsp; It doesn't extend the shaft on its own; it's meant to be used with other parts (namely the tacax spikes)
 
 ### Pommels
 - **Shovel Handles**: Sapper Shovels  \
-&emsp; D-Ring handles and T-Handles, primarily based on contemporary military E-Tools
+&emsp; Primarily based on contemporary military E-Tools \
+&emsp; &emsp; Tri-fold \
+&emsp; &emsp; D-Rings \
+&emsp; &emsp; T-Rings (wooden and metallic)
 
 > [!WARNING]
 > 
