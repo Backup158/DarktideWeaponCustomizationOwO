@@ -58,6 +58,10 @@ mod.fixes_owo_tacax_spike(this_variant, "head", "shaft")
 -- Custom Fixes
 -- #################
 mod.mt.inject_fixes(this_variant, {
+    -- ######
+    -- Head: Tacax Spike
+    -- ######
+    -- Lowers it so the actual axehead is where the hammer head is usually
     {	dependencies =  { _owo_all_tacax_spike_heads },
         head =   { offset = true, position = vector3_box(0, 0, 0.61) },
     },
