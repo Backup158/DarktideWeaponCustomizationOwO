@@ -271,10 +271,17 @@ function mod.owo_polearm_head(variant_id, type, parent)
 		{id = "owo_polearm_head_bc_04", name = "OwO Bec de Corbin 4"},
 		{id = "owo_polearm_head_l_01", name = "OwO Lucerne 1"},
 		{id = "owo_polearm_head_l_02", name = "OwO Lucerne 2"},
-		{id = "owo_polearm_head_l_02", name = "OwO Lucerne 3"},
-		{id = "owo_polearm_head_p_01", name = "OwO Pollax/Poleaxe 1"},
-		{id = "owo_polearm_head_p_02", name = "OwO Pollax/Poleaxe 2"},
-		{id = "owo_polearm_head_p_03", name = "OwO Pollax/Poleaxe 3"},
+		{id = "owo_polearm_head_l_03", name = "OwO Lucerne 3"},
+		-- fuck renaming
+		{id = "owo_polearm_head_p_04", name = "OwO Pollax/Poleaxe 1"},
+		{id = "owo_polearm_head_p_05", name = "OwO Pollax/Poleaxe 2"},
+		{id = "owo_polearm_head_p_06", name = "OwO Pollax/Poleaxe 3"},
+		{id = "owo_polearm_head_p_07", name = "OwO Pollax/Poleaxe 4"},
+		{id = "owo_polearm_head_p_08", name = "OwO Pollax/Poleaxe 5"},
+		{id = "owo_polearm_head_p_09", name = "OwO Pollax/Poleaxe 6"},
+		{id = "owo_polearm_head_p_01", name = "OwO Pollax/Poleaxe 7"},
+		{id = "owo_polearm_head_p_02", name = "OwO Pollax/Poleaxe 8"},
+		{id = "owo_polearm_head_p_03", name = "OwO Pollax/Poleaxe 9"},
 	})
     mod.inject_attachments_owo(variant_id, "bladeshroud", {
         {id = "owo_polearm_head_helper_0_00", name = "Empty bladeshroud"},
@@ -291,6 +298,12 @@ function mod.owo_polearm_head(variant_id, type, parent)
 		{id = "owo_polearm_head_helper_1_p_01", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 		{id = "owo_polearm_head_helper_1_p_02", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 		{id = "owo_polearm_head_helper_1_p_03", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_p_04", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_p_05", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_p_06", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_p_07", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_p_08", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_p_09", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroudac2", {
         {id = "owo_polearm_head_helper_2_00", name = "Empty bladeshroudac2"},
@@ -417,6 +430,73 @@ function mod.owo_polearm_head(variant_id, type, parent)
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
+		--		pickaxe
+		owo_polearm_head_p_04 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_p_04",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_02",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_p_05 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_p_05",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_02",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_p_06 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_p_06",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_02",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_p_07 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_p_07",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_02",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_p_08 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_p_08",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_02",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_p_09 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_p_09",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_02",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
 		-- ### Helper Parts ###
 		-- Bladeshroud: Pseudo shaft extender
 		owo_polearm_head_helper_0_00 = {
@@ -471,6 +551,30 @@ function mod.owo_polearm_head(variant_id, type, parent)
 			model = _item_melee.."/heads/force_staff_head_06", type = "bladeshroudac", 
 			mesh_move = false, parent = current_type,
 		},
+		owo_polearm_head_helper_1_p_04 = {
+			model = _item_melee.."/heads/ogryn_pickaxe_2h_head_01", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_1_p_05 = {
+			model = _item_melee.."/heads/ogryn_pickaxe_2h_head_02", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_1_p_06 = {
+			model = _item_melee.."/heads/ogryn_pickaxe_2h_head_03", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_1_p_07 = {
+			model = _item_melee.."/heads/ogryn_pickaxe_2h_head_04", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_1_p_08 = {
+			model = _item_melee.."/heads/ogryn_pickaxe_2h_head_05", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_1_p_09 = {
+			model = _item_melee.."/heads/ogryn_pickaxe_2h_head_06", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
 		-- Bladeshroudac2: Top spike
 		owo_polearm_head_helper_2_00 = {
 			model = "", type = "bladeshroudac2", 
@@ -500,7 +604,9 @@ end
 function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 	local _owo_polearm_bec_heads = "owo_polearm_head_bc_01|owo_polearm_head_bc_02|owo_polearm_head_bc_03|owo_polearm_head_bc_04"
 	local _owo_polearm_lucerne_heads = "owo_polearm_head_l_01|owo_polearm_head_l_02|owo_polearm_head_l_03"
-	local _owo_polearm_pollax_heads = "owo_polearm_head_p_01|owo_polearm_head_p_02|owo_polearm_head_p_03"
+	local _owo_polearm_pollax_shovel_heads = "owo_polearm_head_p_04|owo_polearm_head_p_05|owo_polearm_head_p_06|owo_polearm_head_p_07|owo_polearm_head_p_08|owo_polearm_head_p_09"
+	local _owo_polearm_pollax_misc_heads = "owo_polearm_head_p_01|owo_polearm_head_p_02|owo_polearm_head_p_03"
+	local _owo_polearm_pollax_heads = _owo_polearm_pollax_shovel_heads.."|".._owo_polearm_pollax_misc_heads
 	local _owo_polearm_heads = _owo_polearm_bec_heads.."|".._owo_polearm_lucerne_heads.."|".._owo_polearm_pollax_heads
 
 	local current_type = given_type or "head"
@@ -520,7 +626,7 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.01, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 0.7, 1.8 ) },
 		},
 		--		axe head
-		{	dependencies =  	{ "owo_polearm_head_bc_03" },
+		{	dependencies =  	{ "owo_polearm_head_bc_04" },
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 1.6, 1.7 ) },
 		},
 		-- Default is built for the psword pommel
@@ -537,7 +643,7 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 		},
 		--		Using the force staff head
 		{	dependencies =  	{ "owo_polearm_head_l_03" },
-			bladeshroudac =		{ offset = true, position = vector3_box(0, -0.062, 0.164), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.0, 0.33, 0.87 ) },
+			bladeshroudac =		{ offset = true, position = vector3_box(0, -0.062, 0.158), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.0, 0.33, 0.87 ) },
 		},
 		{	dependencies =  	{ _owo_polearm_lucerne_heads },
 			bladeshroud =   	{ offset = true, position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.158, 0.158, 0.42 ) },
@@ -546,22 +652,27 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.3, 1.0, 0.32 ) },
 		},
 		-- Pollax
-		--		Force Staff head as blade
-		{	dependencies =  	{ "owo_polearm_head_p_03" },
-			bladeshroudac =   	{ offset = true, position = vector3_box(0, -0.062, 0.164), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.158, 0.58, 0.28 ) },
-			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.16), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.8, 1.0, 1.2 ) },
+		--		Regular combat axe
+		{	dependencies =  	{ "owo_polearm_head_p_01" },
+			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.8, 0.8 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.2), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.8, 1.4, 1.5 ) },
 		},
 		--		Thicc axe
 		{	dependencies =  	{ "owo_polearm_head_p_02" },
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.0, -0.066), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.9, 0.8 ) },
 			bladeshroudac3 =   	{ offset = true, position = vector3_box(0, -0.05, 0.2), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.8, 1.4, 1.5 ) },
 		},
-		--		Combat axe blade
+		--		Force Staff head as blade
+		{	dependencies =  	{ "owo_polearm_head_p_03" },
+			bladeshroudac =   	{ offset = true, position = vector3_box(0, -0.062, 0.164), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.158, 0.58, 0.86 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.16), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.8, 1.0, 1.2 ) },
+		},
+		--		Pickaxe blade and others
 		{	dependencies =  	{ _owo_polearm_pollax_heads },
 			bladeshroud =   	{ offset = true, position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.158, 0.158, 0.42 ) },
-			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.8, 0.8 ) },
+			bladeshroudac =		{ offset = true, position = vector3_box(0, -0.08, 0.154), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.17, 0.08, 0.34 ) },
 			bladeshroudac2 =	{ offset = true, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 0.6 ) },
-			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.2), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.8, 1.4, 1.5 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.158), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.8, 1.4, 1.5 ) },
 		},
 	})
 end
