@@ -15,12 +15,34 @@ if mod.syn then
 	mod.mt.table_append(mod.wc.bladeshrouds, {
 		"owo_tacax_spike_helper_empty",
 		"owo_tacax_spike_helper_01",
+		"owo_polearm_head_helper_0_00",
+		"owo_polearm_head_helper_0_01",
+	})
+	mod.mt.table_append(mod.wc.bladeshroudacs, {
+		"owo_polearm_head_helper_1_00",
+		"owo_polearm_head_helper_1_01",
+	})
+	mod.mt.table_append(mod.wc.bladeshroudac2s, {
+		"owo_polearm_head_helper_2_00",
+		"owo_polearm_head_helper_2_01",
 	})
 else 
 	mod.wc.add_custom_attachments.bladeshroud = "bladeshrouds"
 	mod.wc.bladeshrouds = {
 		"owo_tacax_spike_helper_empty",
 		"owo_tacax_spike_helper_01",
+		"owo_polearm_head_helper_0_00",
+		"owo_polearm_head_helper_0_01",
+	}
+	mod.wc.add_custom_attachments.bladeshroudac = "bladeshroudacs"
+	mod.wc.bladeshroudacs = {
+		"owo_polearm_head_helper_1_00",
+		"owo_polearm_head_helper_1_01",
+	}
+	mod.wc.add_custom_attachments.bladeshroudac2 = "bladeshroudac2s"
+	mod.wc.bladeshroudac2s = {
+		"owo_polearm_head_helper_2_00",
+		"owo_polearm_head_helper_2_01",
 	}
 end
 -- BLADE
@@ -225,6 +247,79 @@ function mod.fixes_owo_tacax_spike(variant_id, given_type, given_parent)
 			bladeshroud =   { offset = true, position = vector3_box(0, 0, 0.192), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.808, 0.262 ) },
 		},
 		
+	})
+end
+
+-- Head: Warhammer
+function mod.owo_polearm_head(variant_id, type, parent)
+	local current_type = type or "head"
+	local current_parent = parent or "grip"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
+		{id = "owo_polearm_head_01", name = "OwO Bec de Corbin 1"},
+		{id = "owo_polearm_head_02", name = "OwO Bec de Corbin 1"},
+		{id = "owo_polearm_head_03", name = "OwO Bec de Corbin 3"}, -- corvus corax type beat
+		{id = "owo_polearm_head_04", name = "OwO Lucerne"},
+		{id = "owo_polearm_head_05", name = "OwO Spiked Tactical Axe 5"},
+		{id = "owo_polearm_head_06", name = "OwO Spiked Tactical Axe 6"},
+		{id = "owo_polearm_head_07", name = "OwO Spiked Tactical Axe M"},
+	})
+    mod.inject_attachments_owo(variant_id, "bladeshroud", {
+        {id = "owo_polearm_head_helper_0_00", name = "Empty bladeshroud"},
+		{id = "owo_polearm_head_helper_0_01", name = "OwO Polearm'vesa 0", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bladeshroudac", {
+        {id = "owo_polearm_head_helper_1_00", name = "Empty bladeshroudac"},
+		{id = "owo_polearm_head_helper_1_01", name = "OwO Polearm'vesa 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bladeshroudac2", {
+        {id = "owo_polearm_head_helper_2_00", name = "Empty bladeshroudac2"},
+		{id = "owo_polearm_head_helper_2_01", name = "OwO Polearm'vesa 2", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		-- Making the base part invisible so I can parent to it and move it easily for patching
+		owo_polearm_head_01 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_01",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		-- ### Helper Parts ###
+		-- Bladeshroud
+		owo_polearm_head_helper_0_00 = {
+			model = "", type = "bladeshroud", 
+			mesh_move = false, parent = current_type,
+		},
+		--	Pseudo shaft extender
+		owo_polearm_head_helper_0_01 = {
+			model = _item_melee.."/heads/power_maul_head_05", type = "bladeshroud", 
+			mesh_move = false, parent = current_type,
+		},
+		-- Bladeshroudac
+		owo_polearm_head_helper_1_00 = {
+			model = "", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_1_01 = {
+			model = _item_melee.."/heads/axe_head_03", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		-- Bladeshroudac2
+		owo_polearm_head_helper_2_00 = {
+			model = "", type = "bladeshroudac2", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_2_01 = {
+			model = _item_melee.."/heads/axe_head_03", type = "bladeshroudac2", 
+			mesh_move = false, parent = current_type,
+		},
 	})
 end
 
