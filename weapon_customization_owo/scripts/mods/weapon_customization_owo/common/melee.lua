@@ -256,69 +256,158 @@ function mod.owo_polearm_head(variant_id, type, parent)
 	local current_parent = parent or "grip"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_polearm_head_01", name = "OwO Bec de Corbin 1"},
-		{id = "owo_polearm_head_02", name = "OwO Bec de Corbin 1"},
-		{id = "owo_polearm_head_03", name = "OwO Bec de Corbin 3"}, -- corvus corax type beat
-		{id = "owo_polearm_head_04", name = "OwO Lucerne"},
-		{id = "owo_polearm_head_05", name = "OwO Spiked Tactical Axe 5"},
-		{id = "owo_polearm_head_06", name = "OwO Spiked Tactical Axe 6"},
-		{id = "owo_polearm_head_07", name = "OwO Spiked Tactical Axe M"},
+		{id = "owo_polearm_head_bc_01", name = "OwO Bec de Corbin 1"},
+		{id = "owo_polearm_head_bc_02", name = "OwO Bec de Corbin 2"},
+		{id = "owo_polearm_head_bc_03", name = "OwO Bec de Corbin 3"}, -- corvus corax type beat
+		{id = "owo_polearm_head_l_01", name = "OwO Lucerne"},
+		{id = "owo_polearm_head_p_01", name = "OwO Pollax/Poleaxe"},
 	})
     mod.inject_attachments_owo(variant_id, "bladeshroud", {
         {id = "owo_polearm_head_helper_0_00", name = "Empty bladeshroud"},
-		{id = "owo_polearm_head_helper_0_01", name = "OwO Polearm'vesa 0", no_randomize = true},
+		{id = "owo_polearm_head_helper_0_01", name = "OwO Polearm'vesa 0 shaft", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroudac", {
         {id = "owo_polearm_head_helper_1_00", name = "Empty bladeshroudac"},
-		{id = "owo_polearm_head_helper_1_01", name = "OwO Polearm'vesa 1", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_01", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_02", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_03", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_03", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroudac2", {
         {id = "owo_polearm_head_helper_2_00", name = "Empty bladeshroudac2"},
-		{id = "owo_polearm_head_helper_2_01", name = "OwO Polearm'vesa 2", no_randomize = true},
+		{id = "owo_polearm_head_helper_2_01", name = "OwO Polearm'vesa 2 spike", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bladeshroudac3", {
+        {id = "owo_polearm_head_helper_3_00", name = "Empty bladeshroudac3"},
+		{id = "owo_polearm_head_helper_3_01", name = "OwO Polearm'vesa 3 pick", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		-- Making the base part invisible so I can parent to it and move it easily for patching
-		owo_polearm_head_01 = {
+		owo_polearm_head_bc_01 = {
 			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_01",
-				bladeshroudac2 = "owo_polearm_head_helper_2_01",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac2 = "owo_polearm_head_helper_3_01",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_bc_02 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_02",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac2 = "owo_polearm_head_helper_3_01",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_bc_03 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_03",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac2 = "owo_polearm_head_helper_3_01",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_bc_04 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_04",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac2 = "owo_polearm_head_helper_3_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
 		-- ### Helper Parts ###
-		-- Bladeshroud
+		-- Bladeshroud: Pseudo shaft extender
 		owo_polearm_head_helper_0_00 = {
 			model = "", type = "bladeshroud", 
 			mesh_move = false, parent = current_type,
 		},
-		--	Pseudo shaft extender
 		owo_polearm_head_helper_0_01 = {
 			model = _item_melee.."/heads/power_maul_head_05", type = "bladeshroud", 
 			mesh_move = false, parent = current_type,
 		},
-		-- Bladeshroudac
+		-- Bladeshroudac: Hammer head
 		owo_polearm_head_helper_1_00 = {
 			model = "", type = "bladeshroudac", 
 			mesh_move = false, parent = current_type,
 		},
 		owo_polearm_head_helper_1_01 = {
-			model = _item_melee.."/heads/axe_head_03", type = "bladeshroudac", 
+			model = _item_melee.."/pommels/power_sword_pommel_02", type = "bladeshroudac", 
 			mesh_move = false, parent = current_type,
 		},
-		-- Bladeshroudac2
+		owo_polearm_head_helper_1_02 = {
+			model = _item_melee.."/pommels/axe_pommel_05", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_1_03 = {
+			model = _item_melee.."/pommels/shovel_pommel_03", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_1_04 = {
+			model = _item_melee.."/pommels/2h_power_sword_pommel_01", type = "bladeshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		-- Bladeshroudac2: Top spike
 		owo_polearm_head_helper_2_00 = {
 			model = "", type = "bladeshroudac2", 
 			mesh_move = false, parent = current_type,
 		},
 		owo_polearm_head_helper_2_01 = {
-			model = _item_melee.."/heads/axe_head_03", type = "bladeshroudac2", 
+			model = _item_melee.."/blades/combat_knife_blade_02", type = "bladeshroudac2", 
 			mesh_move = false, parent = current_type,
+		},
+		-- Bladeshroudac3: pickaxe rear
+		owo_polearm_head_helper_3_00 = {
+			model = "", type = "bladeshroudac3", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_polearm_head_helper_3_01 = {
+			model = _item_melee.."/blades/sabre_blade_01", type = "bladeshroudac3", 
+			mesh_move = false, parent = current_type,
+		},
+	})
+end
+function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
+	local _owo_polearm_bec_heads = "owo_polearm_head_bc_01|owo_polearm_head_bc_02|owo_polearm_head_bc_03|owo_polearm_head_bc_04"
+	local _owo_polearm_lucerne_heads = "owo_polearm_head_l_01"
+	local _owo_polearm_pollax_heads = "owo_polearm_head_p_01"
+	local _owo_polearm_heads = _owo_polearm_bec_heads.."|".._owo_polearm_lucerne_heads.."|".._owo_polearm_pollax_heads
+
+	local current_type = given_type or "head"
+	local current_parent = given_parent or "grip"
+
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Head: POLEARM HEADS
+		-- ######
+		-- By not giving a head fix, it takes the default position
+		--  Default Cases
+		{	dependencies =  	{ _owo_polearm_bec_heads },
+			bladeshroud =   	{ offset = true, position = vector3_box(0, 0, 0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
+			bladeshroudac =		{ offset = true, position = vector3_box(0, 0, 0.108), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+			bladeshroudac2 =	{ offset = true, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.308), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+		},
+		--	Lucernes, when compared to Becs de Corbin, typically have a longer thinner back pick and taller top spike
+		-- 		head also usually has some protrusions
+		{	dependencies =  { _owo_polearm_lucerne_heads },
+			
+		},
+		{	dependencies =  { _owo_polearm_pollax_heads },
+			
 		},
 	})
 end

@@ -15,6 +15,9 @@ local this_variant = "thunderhammer_2h_p1_m1" -- Thunder Hammer
 -- ############################################
 if not syn then
     mod.wc.attachment[this_variant].bladeshroud = {}
+    mod.wc.attachment[this_variant].bladeshroudac = {}
+    mod.wc.attachment[this_variant].bladeshroudac2 = {}
+    mod.wc.attachment[this_variant].bladeshroudac3 = {}
 end
 
 -- ############################################
@@ -22,12 +25,19 @@ end
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_tacax_spike(this_variant, "head", "shaft")
+mod.owo_polearm_head(this_variant, "head", "shaft")
+
 mod.owo_invisible_connector(this_variant, "connector", "shaft")
 
 -- ############################################
 -- Define Variables for Fixes
 -- ############################################
 local _owo_all_tacax_spike_heads = "owo_tacax_spike_01|owo_tacax_spike_02|owo_tacax_spike_03|owo_tacax_spike_04|owo_tacax_spike_05|owo_tacax_spike_06|owo_tacax_spike_07"
+local _owo_polearm_bec_heads = "owo_polearm_head_bc_01|owo_polearm_head_bc_02|owo_polearm_head_bc_03|owo_polearm_head_bc_04"
+local _owo_polearm_lucerne_heads = "owo_polearm_head_l_01"
+local _owo_polearm_pollax_heads = "owo_polearm_head_p_01"
+local _owo_polearm_heads = _owo_polearm_bec_heads.."|".._owo_polearm_lucerne_heads.."|".._owo_polearm_pollax_heads
+    
 -- ########
 -- For This Variant Only
 -- ########
@@ -53,6 +63,7 @@ mod.mt.inject_fixes(this_variant, {
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
 mod.fixes_owo_tacax_spike(this_variant, "head", "shaft")
+mod.fixes_owo_polearm_head(this_variant, "head", "shaft")
 
 -- #################
 -- Custom Fixes
@@ -63,6 +74,13 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Lowers it so the actual axehead is where the hammer head is usually
     {	dependencies =  { _owo_all_tacax_spike_heads },
+        head =   { offset = true, position = vector3_box(0, 0, 0.61) },
+    },
+    -- ######
+    -- Head: Polearm heads
+    -- ######
+    -- Lowers it so the actual axehead is where the hammer head is usually
+    {	dependencies =  { _owo_polearm_heads },
         head =   { offset = true, position = vector3_box(0, 0, 0.61) },
     },
 })
