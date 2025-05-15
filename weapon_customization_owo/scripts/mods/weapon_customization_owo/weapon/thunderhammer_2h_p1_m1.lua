@@ -52,8 +52,17 @@ local _owo_polearm_heads = _owo_polearm_bec_heads.."|".._owo_polearm_lucerne_hea
 -- #################
 mod.mt.inject_fixes(this_variant, {
     -- Head
-    {	dependencies = {"owo_tacax_spike_helper_01"},
+    {	dependencies = {"owo_tacax_spike_helper_01|owo_polearm_head_helper_0_01"},
         bladeshroud = { hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {	dependencies = {"owo_polearm_head_helper_1_01|owo_polearm_head_helper_1_02|owo_polearm_head_helper_1_03|owo_polearm_head_helper_1_04"},
+        bladeshroudac = { hide_mesh = {{"bladeshroudac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {	dependencies = {"owo_polearm_head_helper_2_01"},
+        bladeshroudac2 = { hide_mesh = {{"bladeshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    },
+    {	dependencies = {"owo_polearm_head_helper_3_01"},
+        bladeshroudac3 = { hide_mesh = {{"bladeshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
 

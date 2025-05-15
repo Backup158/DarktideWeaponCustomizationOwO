@@ -26,6 +26,10 @@ if mod.syn then
 		"owo_polearm_head_helper_2_00",
 		"owo_polearm_head_helper_2_01",
 	})
+	mod.mt.table_append(mod.wc.bladeshroudac3s, {
+		"owo_polearm_head_helper_3_00",
+		"owo_polearm_head_helper_3_01",
+	})
 else 
 	mod.wc.add_custom_attachments.bladeshroud = "bladeshrouds"
 	mod.wc.bladeshrouds = {
@@ -43,6 +47,11 @@ else
 	mod.wc.bladeshroudac2s = {
 		"owo_polearm_head_helper_2_00",
 		"owo_polearm_head_helper_2_01",
+	}
+	mod.wc.add_custom_attachments.bladeshroudac3 = "bladeshroudac3s"
+	mod.wc.bladeshroudac3s = {
+		"owo_polearm_head_helper_3_00",
+		"owo_polearm_head_helper_3_01",
 	}
 end
 -- BLADE
@@ -250,7 +259,7 @@ function mod.fixes_owo_tacax_spike(variant_id, given_type, given_parent)
 	})
 end
 
--- Head: Warhammer
+-- Head: Polearms
 function mod.owo_polearm_head(variant_id, type, parent)
 	local current_type = type or "head"
 	local current_parent = parent or "grip"
@@ -258,7 +267,8 @@ function mod.owo_polearm_head(variant_id, type, parent)
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_polearm_head_bc_01", name = "OwO Bec de Corbin 1"},
 		{id = "owo_polearm_head_bc_02", name = "OwO Bec de Corbin 2"},
-		{id = "owo_polearm_head_bc_03", name = "OwO Bec de Corbin 3"}, -- corvus corax type beat
+		{id = "owo_polearm_head_bc_03", name = "OwO Bec de Corbin 3"},
+		{id = "owo_polearm_head_bc_04", name = "OwO Bec de Corbin 4"},
 		{id = "owo_polearm_head_l_01", name = "OwO Lucerne"},
 		{id = "owo_polearm_head_p_01", name = "OwO Pollax/Poleaxe"},
 	})
@@ -271,7 +281,7 @@ function mod.owo_polearm_head(variant_id, type, parent)
 		{id = "owo_polearm_head_helper_1_01", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 		{id = "owo_polearm_head_helper_1_02", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 		{id = "owo_polearm_head_helper_1_03", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
-		{id = "owo_polearm_head_helper_1_03", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+		{id = "owo_polearm_head_helper_1_04", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroudac2", {
         {id = "owo_polearm_head_helper_2_00", name = "Empty bladeshroudac2"},
@@ -290,7 +300,7 @@ function mod.owo_polearm_head(variant_id, type, parent)
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_01",
-				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac2 = "owo_polearm_head_helper_3_01",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -301,7 +311,7 @@ function mod.owo_polearm_head(variant_id, type, parent)
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_02",
-				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac2 = "owo_polearm_head_helper_3_01",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -312,7 +322,7 @@ function mod.owo_polearm_head(variant_id, type, parent)
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_03",
-				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac2 = "owo_polearm_head_helper_3_01",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -323,7 +333,29 @@ function mod.owo_polearm_head(variant_id, type, parent)
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_04",
-				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac2 = "owo_polearm_head_helper_3_01",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_01",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_l_01 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_04",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_01",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_p_01 = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_04",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -366,7 +398,7 @@ function mod.owo_polearm_head(variant_id, type, parent)
 			mesh_move = false, parent = current_type,
 		},
 		owo_polearm_head_helper_2_01 = {
-			model = _item_melee.."/blades/combat_knife_blade_02", type = "bladeshroudac2", 
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "bladeshroudac2", 
 			mesh_move = false, parent = current_type,
 		},
 		-- Bladeshroudac3: pickaxe rear
@@ -396,18 +428,24 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 		-- By not giving a head fix, it takes the default position
 		--  Default Cases
 		{	dependencies =  	{ _owo_polearm_bec_heads },
-			bladeshroud =   	{ offset = true, position = vector3_box(0, 0, 0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.56, 0.862, 0.382 ) },
-			bladeshroudac =		{ offset = true, position = vector3_box(0, 0, 0.108), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
-			bladeshroudac2 =	{ offset = true, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
-			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.308), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+			bladeshroud =   	{ offset = true, position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.158, 0.158, 0.42 ) },
+			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.1, 1.6, 1.5 ) },
+			bladeshroudac2 =	{ offset = true, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 0.6 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(2.8, 1.0, 0.25 ) },
 		},
 		--	Lucernes, when compared to Becs de Corbin, typically have a longer thinner back pick and taller top spike
 		-- 		head also usually has some protrusions
-		{	dependencies =  { _owo_polearm_lucerne_heads },
-			
+		{	dependencies =  	{ _owo_polearm_lucerne_heads },
+			bladeshroud =   	{ offset = true, position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.158, 0.158, 0.42 ) },
+			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.1, 1.6, 1.5 ) },
+			bladeshroudac2 =	{ offset = true, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.3, 1.0 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.3, 1.0, 0.37 ) },
 		},
-		{	dependencies =  { _owo_polearm_pollax_heads },
-			
+		{	dependencies =  	{ _owo_polearm_pollax_heads },
+			bladeshroud =   	{ offset = true, position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.158, 0.158, 0.42 ) },
+			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.1, 1.6, 1.5 ) },
+			bladeshroudac2 =	{ offset = true, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 0.6 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(2.8, 1.0, 0.25 ) },
 		},
 	})
 end
