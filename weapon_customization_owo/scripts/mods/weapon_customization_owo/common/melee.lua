@@ -668,11 +668,15 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.16), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.8, 1.0, 1.2 ) },
 		},
 		--		Pickaxe blade and others
+		--			shorter picks
+		{	dependencies =  	{ "owo_polearm_head_p_05|owo_polearm_head_p_06|owo_polearm_head_p_08|owo_polearm_head_p_09" },
+			bladeshroudac =   	{ offset = true, position = vector3_box(0, -0.15, 0.154), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.17, 0.03, 0.45 ) },
+		},
 		{	dependencies =  	{ _owo_polearm_pollax_heads },
 			bladeshroud =   	{ offset = true, position = vector3_box(0, 0, -0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.158, 0.158, 0.42 ) },
-			bladeshroudac =		{ offset = true, position = vector3_box(0, -0.08, 0.154), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.17, 0.08, 0.34 ) },
+			bladeshroudac =		{ offset = true, position = vector3_box(0, -0.11, 0.154), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.17, 0.03, 0.384 ) },
 			bladeshroudac2 =	{ offset = true, position = vector3_box(0, 0, 0.208), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 0.5, 0.6 ) },
-			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.158), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.8, 1.4, 1.5 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0, 0, 0.158), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.7, 1.1, 1.9 ) },
 		},
 	})
 end
