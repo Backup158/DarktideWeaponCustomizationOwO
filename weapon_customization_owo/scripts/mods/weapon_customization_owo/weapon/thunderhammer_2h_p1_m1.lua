@@ -19,6 +19,7 @@ if not syn then
     mod.wc.attachment[this_variant].bladeshroudac2 = {}
     mod.wc.attachment[this_variant].bladeshroudac3 = {}
 end
+mod.wc.attachment[this_variant].shaftac1 = {}
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -28,6 +29,8 @@ mod.owo_tacax_spike(this_variant, "head", "shaft")
 mod.owo_polearm_head(this_variant, "head", "shaft")
 
 mod.owo_invisible_connector(this_variant, "connector", "shaft")
+
+mod.owo_shaft_low_grip(this_variant, "shaft")
 
 -- ############################################
 -- Define Variables for Fixes
@@ -39,6 +42,7 @@ local _owo_polearm_pollax_shovel_heads = "owo_polearm_head_p_04|owo_polearm_head
 local _owo_polearm_pollax_misc_heads = "owo_polearm_head_p_01|owo_polearm_head_p_02|owo_polearm_head_p_03"
 local _owo_polearm_pollax_heads = _owo_polearm_pollax_shovel_heads.."|".._owo_polearm_pollax_misc_heads
 local _owo_polearm_heads = _owo_polearm_bec_heads.."|".._owo_polearm_lucerne_heads.."|".._owo_polearm_pollax_heads
+local _owo_low_grip_shafts = "owo_shaft_low_grip_01|owo_shaft_low_grip_02|owo_shaft_low_grip_03|owo_shaft_low_grip_04|owo_shaft_low_grip_05|owo_shaft_low_grip_06"
     
 -- ########
 -- For This Variant Only
@@ -75,6 +79,7 @@ mod.mt.inject_fixes(this_variant, {
 -- #################
 mod.fixes_owo_tacax_spike(this_variant, "head", "shaft")
 mod.fixes_owo_polearm_head(this_variant, "head", "shaft")
+mod.fixes_owo_shaft_low_grip(this_variant, "shaft")
 
 -- #################
 -- Custom Fixes

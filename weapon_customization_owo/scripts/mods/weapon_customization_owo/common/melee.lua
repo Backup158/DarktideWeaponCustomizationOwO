@@ -79,6 +79,16 @@ end
 --mod.wc.gripshroud_list = {
 --	
 --}
+mod.wc.add_custom_attachments.shaftac1 = "shaftac1_list"
+mod.wc.shaftac1_list = {
+	"owo_shaft_low_grip_helper_00",
+	"owo_shaft_low_grip_helper_01",
+	"owo_shaft_low_grip_helper_02",
+	"owo_shaft_low_grip_helper_03",
+	"owo_shaft_low_grip_helper_04",
+	"owo_shaft_low_grip_helper_05",
+	"owo_shaft_low_grip_helper_06",
+}
 -- POMMEL
 mod.wc.add_custom_attachments.pommelac1 = "pommelac1_list"
 mod.wc.pommelac1_list = {
@@ -686,7 +696,7 @@ function mod.owo_invisible_connector(variant_id, given_type, given_parent)
 	local current_type = given_type or "connector"
 	local current_parent = given_parent or "shaft"
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_invisible_connector_01", name = "OwO Invisible Connector"},
+		{id = "owo_invisible_connector_01", name = "OwO Invisible Connector", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -767,70 +777,70 @@ function mod.owo_historical_blade(variant_id, type)
 		-- ### Base Parts ###
 		owo_historical_blade_trench_spike = {
 			model = _item_ranged.."/bayonets/bayonet_03", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_historical_blade_02 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_gerber",
 			},
 		},
 		owo_historical_blade_karambit_f = {
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_karambit",
 			},
 		},
 		owo_historical_blade_karambit_s = {
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_karambit",
 			},
 		},
 		owo_historical_blade_karambit_sf = {
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_karambit",
 			},
 		},
 		owo_historical_blade_tanto_01 = {
 			model = _item_melee.."/blades/combat_sword_blade_01", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_02 = {
 			model = _item_melee.."/blades/combat_sword_blade_02", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_03 = {
 			model = _item_melee.."/blades/combat_sword_blade_03", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_04 = {
 			model = _item_melee.."/blades/combat_sword_blade_04", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_05 = {
 			model = _item_melee.."/blades/combat_sword_blade_05", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_06 = {
 			model = _item_melee.."/blades/combat_sword_blade_06", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_historical_blade_karambit = {
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_karambit",
 			},
 		},
 		owo_historical_blade_box_cutter = {
 			model = _item_melee.."/blades/combat_sword_blade_01", type = "body", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		-- ### Helper Parts ###
 		owo_historical_blade_helper_default = {
@@ -843,7 +853,7 @@ function mod.owo_historical_blade(variant_id, type)
 		},
 		owo_historical_blade_helper_karambit = {
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "bladeshroud", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 	})
 end
@@ -1230,6 +1240,104 @@ function mod.fixes_owo_slim_blade(variant_id)
 	})
 end
 
+-- Shaft: Thammer Low Grip
+function mod.owo_shaft_low_grip(variant_id, given_type)
+	local current_type = given_type or "shaft"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
+        {id = "owo_shaft_low_grip_01", name = "OwO Longer Shaft (Low Grip) 1"},
+		{id = "owo_shaft_low_grip_02", name = "OwO Longer Shaft (Low Grip) 2"},
+		{id = "owo_shaft_low_grip_03", name = "OwO Longer Shaft (Low Grip) 3"},
+		{id = "owo_shaft_low_grip_04", name = "OwO Longer Shaft (Low Grip) 4"},
+		{id = "owo_shaft_low_grip_05", name = "OwO Longer Shaft (Low Grip) 5"},
+		{id = "owo_shaft_low_grip_06", name = "OwO Longer Shaft (Low Grip) 6"},
+	})
+	mod.inject_attachments_owo(variant_id, "shaftac1", {
+		{id = "owo_shaft_low_grip_helper_00", name = "Default"},
+        {id = "owo_shaft_low_grip_helper_01", name = "OwO Shaft'vesa 1", no_randomize = true},
+		{id = "owo_shaft_low_grip_helper_02", name = "OwO Shaft'vesa 2", no_randomize = true},
+		{id = "owo_shaft_low_grip_helper_03", name = "OwO Shaft'vesa 3", no_randomize = true},
+		{id = "owo_shaft_low_grip_helper_04", name = "OwO Shaft'vesa 4", no_randomize = true},
+		{id = "owo_shaft_low_grip_helper_05", name = "OwO Shaft'vesa 5", no_randomize = true},
+		{id = "owo_shaft_low_grip_helper_06", name = "OwO Shaft'vesa 6", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_shaft_low_grip_01 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_01", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_01" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_shaft_low_grip_02 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_02", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_02" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_shaft_low_grip_03 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_03", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_03" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_shaft_low_grip_04 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_04", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_04" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_shaft_low_grip_05 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_05", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_05" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_shaft_low_grip_06 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_ml01", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_06" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		-- ### Helper Parts ###
+		owo_shaft_low_grip_helper_00 = {
+			model = "", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_shaft_low_grip_helper_01 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_01", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_shaft_low_grip_helper_02 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_02", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_shaft_low_grip_helper_03 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_03", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_shaft_low_grip_helper_04 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_04", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_shaft_low_grip_helper_05 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_05", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_shaft_low_grip_helper_06 = {
+			model = _item_ranged.."/shafts/thunder_hammer_shaft_ml01", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+	})
+end
+function mod.fixes_owo_shaft_low_grip(variant_id, type)
+	local current_type = given_type or "shaft"
+
+	local _owo_low_grip_shafts = "owo_shaft_low_grip_01|owo_shaft_low_grip_02|owo_shaft_low_grip_03|owo_shaft_low_grip_04|owo_shaft_low_grip_05|owo_shaft_low_grip_06"
+
+	mod.mt.inject_fixes(variant_id, {
+		{   dependencies =  { _owo_low_grip_shafts },
+			shaft =  		{ offset = true, position = vector3_box(0, 0, 0.2), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+			shaftac1 = 		{ offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.5) },
+		},
+	})
+end
+
 -- Frontguard: Trench Dagger
 --	Guards 1,2,6 SOMETIMES don't attach
 function mod.owo_trench_dagger_guard(variant_id, type)
@@ -1267,31 +1375,31 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 		},
 		owo_trench_dagger_finger_guard_01 = {
 			model = _item_melee.."/grips/combat_blade_grip_01", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_02 = {
 			model = _item_melee.."/grips/combat_blade_grip_02", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_03 = {
 			model = _item_melee.."/grips/combat_blade_grip_04", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_04 = {
 			model = _item_melee.."/grips/combat_blade_grip_05", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_05 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_06 = {
 			model = _item_melee.."/grips/combat_blade_grip_08", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_knuckles_01 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1_default",
 				frontguardac2 = "owo_trench_dagger_finger_guard_helper_ac2_default",
@@ -1300,7 +1408,7 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 		},
 		owo_trench_dagger_finger_guard_knuckles_02 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
 				frontguardac2 = "owo_trench_dagger_finger_guard_helper_ac2_default",
@@ -1309,7 +1417,7 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 		},
 		owo_trench_dagger_finger_guard_knuckles_03 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
 				frontguardac2 = "owo_trench_dagger_finger_guard_helper_ac2",
@@ -1318,7 +1426,7 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 		},
 		owo_trench_dagger_finger_guard_knuckles_04 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 			automatic_equip = {
 				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
 				frontguardac2 = "owo_trench_dagger_finger_guard_helper_ac2",
@@ -1328,27 +1436,27 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 		-- ### Helper Parts ###
 		owo_trench_dagger_finger_guard_helper_ac1_default = {
 			model = "", type = "frontguardac1", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_helper_ac1 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguardac1", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_helper_ac2_default = {
 			model = "", type = "frontguardac2", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_helper_ac2 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguardac2", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_helper_ac3_default = {
 			model = "", type = "frontguardac3", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_helper_ac3 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguardac3", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 	})
 end
@@ -1396,7 +1504,7 @@ function mod.owo_shovel_handles(variant_id, type)
         --  Fucked up single /\ D-Ring Handle
         owo_shovel_handles_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
         --  Proper /\ D-Ring Handle
         owo_shovel_handles_02 = {
@@ -1409,21 +1517,21 @@ function mod.owo_shovel_handles(variant_id, type)
         --  simple D-Ring Handle
         owo_shovel_handles_03 = {
 			model = _item_melee.."/grips/power_sword_grip_04", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_02", 
                 pommelac2 = "owo_shovel_handles_ac2_02", 
 			},
 		},
         owo_shovel_handles_04 = {
 			model = _item_melee.."/grips/power_sword_grip_04", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_02", 
 			},
 		},
         owo_shovel_handles_05 = {
 			model = _item_melee.."/grips/power_sword_grip_04", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_02", 
 			},
@@ -1431,35 +1539,35 @@ function mod.owo_shovel_handles(variant_id, type)
         --  single D-Ring Handle, chainsword
         --owo_shovel_handles_06 = {
 		--	model = _item_melee.."/grips/chain_sword_grip_01", type = "pommel", 
-		--	mesh_move = false, parent = "grip",
+		--	mesh_move = false, 
         --    automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_03", 
         --        pommelac2 = "owo_shovel_handles_ac2_empty", 
 		--	},
 		--},
         owo_shovel_handles_07 = {
 			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_04", 
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
 			},
 		},
         owo_shovel_handles_08b = {
 			model = _item_melee.."/grips/chain_sword_grip_05", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_05", 
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
 			},
 		},
 		owo_shovel_handles_07b = {
 			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_04", 
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
 			},
 		},
         owo_shovel_handles_08 = {
 			model = _item_melee.."/grips/chain_sword_grip_05", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_05", 
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
 			},
@@ -1468,7 +1576,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		--	Synthetic
 		owo_shovel_handles_09 = {
 			model = _item_melee.."/grips/combat_knife_grip_01", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_01", 
 			},
@@ -1476,7 +1584,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		-- 	Wood T
 		owo_shovel_handles_10 = {
 			model = _item_melee.."/grips/combat_knife_grip_01", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_03", 
 			},
@@ -1484,7 +1592,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		-- 	Super Wood T
 		owo_shovel_handles_11 = {
 			model = _item_ranged.."/handles/combat_blade_handle_01", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_03", 
 			},
@@ -1492,7 +1600,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		--  Wood T Metal end
 		owo_shovel_handles_12 = {
 			model = _item_ranged.."/handles/combat_blade_handle_01", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_04", 
 			},
@@ -1500,7 +1608,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		--  Double Metal T
 		owo_shovel_handles_13 = {
 			model = _item_melee.."/grips/chain_axe_grip_01", type = "pommel", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_04", 
 			},
@@ -1510,33 +1618,33 @@ function mod.owo_shovel_handles(variant_id, type)
 		--	/\ D-ring2
         owo_shovel_handles_ac1_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "pommelac1", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		--	D-Ring2
         owo_shovel_handles_ac1_02 = {
 			model = _item_melee.."/grips/power_sword_grip_04", type = "pommelac1", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		-- 	Chainsword D-ring wrapped
         --owo_shovel_handles_ac1_03 = {
 		--	model = _item_melee.."/grips/chain_sword_grip_01", type = "pommelac1", 
-		--	mesh_move = false, parent = "grip",
+		--	mesh_move = false, 
 		--},
 		-- 	Chainsword D-ring
         owo_shovel_handles_ac1_04 = {
 			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommelac1", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		-- 	Chainsword D-ring
         owo_shovel_handles_ac1_05 = {
 			model = _item_melee.."/grips/chain_sword_grip_05", type = "pommelac1", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		-- AC2
 		--	Soft ogryn handle to grip
         owo_shovel_handles_ac2_01 = {
 			model = _item_ranged.."/handles/combat_blade_handle_03", type = "pommelac2", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		--	Soft ogryn handle to pommel
         owo_shovel_handles_ac2_02 = {
@@ -1546,21 +1654,21 @@ function mod.owo_shovel_handles(variant_id, type)
 		-- 	Wood ogryn handle
 		owo_shovel_handles_ac2_03 = {
 			model = _item_ranged.."/handles/combat_blade_handle_01", type = "pommelac2", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 		--  Metal handle 
 		owo_shovel_handles_ac2_04 = {
 			model = _item_melee.."/grips/chain_axe_grip_01", type = "pommelac2", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
         -- ### Empty Parts ###
         owo_shovel_handles_ac1_empty = {
 			model = "", type = "pommelac1", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
         owo_shovel_handles_ac2_empty = {
 			model = "", type = "pommelac2", 
-			mesh_move = false, parent = "grip",
+			mesh_move = false, 
 		},
 	})
 end
