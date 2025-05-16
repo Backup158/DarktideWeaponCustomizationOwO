@@ -46,7 +46,7 @@ mod.load_mod_file("weapon/powersword_p1_m1") -- Power Sword
 -- mod.load_mod_file("weapon/ogryn_powermaul_p1_m1")
 -- mod.load_mod_file("weapon/ogryn_club_p1_m1") -- Latrine Shovel
 -- mod.load_mod_file("weapon/ogryn_club_p2_m1") -- Bully Club
--- mod.load_mod_file("weapon/ogryn_pickaxe_2h_p1_m1") -- Delver's Pickaxe
+mod.load_mod_file("weapon/ogryn_pickaxe_2h_p1_m1") -- Delver's Pickaxe
 -- mod.load_mod_file("weapon/ogryn_powermaul_slabshield_p1_m1")
 -- mod.load_mod_file("weapon/powermaul_2h_p1_m1") -- Crusher
 -- mod.load_mod_file("weapon/powermaul_p1_m1") -- Shock Maul
