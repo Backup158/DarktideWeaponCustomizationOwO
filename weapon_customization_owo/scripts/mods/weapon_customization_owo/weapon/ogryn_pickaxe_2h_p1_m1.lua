@@ -40,7 +40,7 @@ local _owo_polearm_pollax_shovel_heads = "owo_polearm_head_p_04|owo_polearm_head
 local _owo_polearm_pollax_misc_heads = "owo_polearm_head_p_01|owo_polearm_head_p_02|owo_polearm_head_p_03"
 local _owo_polearm_pollax_heads = _owo_polearm_pollax_shovel_heads.."|".._owo_polearm_pollax_misc_heads
 local _owo_polearm_heads = _owo_polearm_bec_heads.."|".._owo_polearm_lucerne_heads.."|".._owo_polearm_pollax_heads
-local _owo_low_grip_shafts = "owo_shaft_low_grip_01|owo_shaft_low_grip_02|owo_shaft_low_grip_03|owo_shaft_low_grip_04|owo_shaft_low_grip_05|owo_shaft_low_grip_06"
+local _owo_low_grip_ogryn_shafts = "owo_ogryn_shaft_low_grip_01|owo_ogryn_shaft_low_grip_02|owo_ogryn_shaft_low_grip_03|owo_ogryn_shaft_low_grip_04|owo_ogryn_shaft_low_grip_05|owo_ogryn_shaft_low_grip_06"
     
 -- ########
 -- For This Variant Only
@@ -69,8 +69,8 @@ mod.mt.inject_fixes(this_variant, {
         bladeshroudac3 = { hide_mesh = {{"bladeshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { bladeshroudac3 = "owo_polearm_head_helper_3_00" },
     },
     -- Shaft
-    {	dependencies = {"owo_shaft_low_grip_helper_01|owo_shaft_low_grip_helper_02|owo_shaft_low_grip_helper_03|owo_shaft_low_grip_helper_04|owo_shaft_low_grip_helper_05|owo_shaft_low_grip_helper_06"},
-        shaftac1 = { hide_mesh = {{"shaftac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_00" },
+    {	dependencies = {"owo_ogryn_shaft_low_grip_helper_01|owo_ogryn_shaft_low_grip_helper_02|owo_ogryn_shaft_low_grip_helper_03|owo_ogryn_shaft_low_grip_helper_04|owo_ogryn_shaft_low_grip_helper_05|owo_ogryn_shaft_low_grip_helper_06"},
+        shaftac1 = { hide_mesh = {{"shaftac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_00" },
     },
 })
 
@@ -92,21 +92,13 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Lowers it so the actual axehead is where the hammer head is usually
     {	dependencies =  { _owo_all_tacax_spike_heads },
-        head =   { offset = true, position = vector3_box(0, 0, 0.0), scale = vector3_box(2.5, 2.5, 2.5), },
+        head =   { offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 90), scale = vector3_box(2.5, 2.5, 2.5), },
     },
     -- ######
     -- Head: Polearm heads
     -- ######
     -- Lowers it so the actual axehead is where the hammer head is usually
     {	dependencies =  { _owo_polearm_heads },
-        head =   { offset = true, position = vector3_box(0, 0, 0.0), scale = vector3_box(2.5, 2.5, 2.5), },
+        head =   { offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 90), scale = vector3_box(2.5, 2.5, 2.5), },
     },
-    -- ######
-    -- Shaft: Long Shaft
-    -- ######
-    {   dependencies =  { _owo_low_grip_shafts },
-		shaft =  		{ offset = true, position = vector3_box(0, 0, 0.38), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-		shaftac1 = 		{ offset = true, position = vector3_box(0, 0, -0.28), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 2.5, 3.2) },
-		pommel = 		{ offset = true, position = vector3_box(0, 0, -0.48), },
-	},
 })

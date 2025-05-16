@@ -1344,7 +1344,8 @@ function mod.fixes_owo_shaft_low_grip(variant_id, type)
 	})
 end
 
--- Shaft: Thammer Ogryn Low Grip
+-- Shaft: Ogryn Low Grip
+-- 	Using mastery stick as base, so can't have that as an option. janky but i'm lazy and fuck that shit
 function mod.owo_ogryn_shaft_low_grip(variant_id, given_type)
 	local current_type = given_type or "shaft"
 
@@ -1367,27 +1368,27 @@ function mod.owo_ogryn_shaft_low_grip(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_ogryn_shaft_low_grip_01 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_01" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_ogryn_shaft_low_grip_02 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_02" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_ogryn_shaft_low_grip_03 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_03" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_ogryn_shaft_low_grip_04 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_04" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_ogryn_shaft_low_grip_05 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_05" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
@@ -1397,23 +1398,23 @@ function mod.owo_ogryn_shaft_low_grip(variant_id, given_type)
 			mesh_move = false, parent = current_type,
 		},
 		owo_ogryn_shaft_low_grip_helper_01 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_01", type = "shaftac1", 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_01", type = "shaftac1", 
 			mesh_move = false, parent = current_type,
 		},
 		owo_ogryn_shaft_low_grip_helper_02 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_02", type = "shaftac1", 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_02", type = "shaftac1", 
 			mesh_move = false, parent = current_type,
 		},
 		owo_ogryn_shaft_low_grip_helper_03 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_03", type = "shaftac1", 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_03", type = "shaftac1", 
 			mesh_move = false, parent = current_type,
 		},
 		owo_ogryn_shaft_low_grip_helper_04 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_04", type = "shaftac1", 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_04", type = "shaftac1", 
 			mesh_move = false, parent = current_type,
 		},
 		owo_ogryn_shaft_low_grip_helper_05 = {
-			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_05", type = "shaftac1", 
+			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_05", type = "shaftac1", 
 			mesh_move = false, parent = current_type,
 		},
 	})
