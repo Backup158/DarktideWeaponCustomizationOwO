@@ -1245,12 +1245,12 @@ function mod.owo_shaft_low_grip(variant_id, given_type)
 	local current_type = given_type or "shaft"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-        {id = "owo_shaft_low_grip_01", name = "OwO Longer Shaft (Low Grip) 1"},
-		{id = "owo_shaft_low_grip_02", name = "OwO Longer Shaft (Low Grip) 2"},
-		{id = "owo_shaft_low_grip_03", name = "OwO Longer Shaft (Low Grip) 3"},
-		{id = "owo_shaft_low_grip_04", name = "OwO Longer Shaft (Low Grip) 4"},
-		{id = "owo_shaft_low_grip_05", name = "OwO Longer Shaft (Low Grip) 5"},
-		{id = "owo_shaft_low_grip_06", name = "OwO Longer Shaft (Low Grip) 6"},
+        {id = "owo_shaft_low_grip_01", name = "OwO Long Shaft (Low Grip) 1"},
+		{id = "owo_shaft_low_grip_02", name = "OwO Long Shaft (Low Grip) 2"},
+		{id = "owo_shaft_low_grip_03", name = "OwO Long Shaft (Low Grip) 3"},
+		{id = "owo_shaft_low_grip_04", name = "OwO Long Shaft (Low Grip) 4"},
+		{id = "owo_shaft_low_grip_05", name = "OwO Long Shaft (Low Grip) 5"},
+		{id = "owo_shaft_low_grip_06", name = "OwO Long Shaft (Low Grip) 6"},
 	})
 	mod.inject_attachments_owo(variant_id, "shaftac1", {
 		{id = "owo_shaft_low_grip_helper_00", name = "Default"},
@@ -1265,32 +1265,32 @@ function mod.owo_shaft_low_grip(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_shaft_low_grip_01 = {
-			model = _item_ranged.."/shafts/thunder_hammer_shaft_01", type = current_type, 
+			model = _item_ranged.."/shafts/force_staff_shaft_lower_01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_01" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_shaft_low_grip_02 = {
-			model = _item_ranged.."/shafts/thunder_hammer_shaft_02", type = current_type, 
+			model = _item_ranged.."/shafts/force_staff_shaft_lower_01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_02" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_shaft_low_grip_03 = {
-			model = _item_ranged.."/shafts/thunder_hammer_shaft_03", type = current_type, 
+			model = _item_ranged.."/shafts/force_staff_shaft_lower_01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_03" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_shaft_low_grip_04 = {
-			model = _item_ranged.."/shafts/thunder_hammer_shaft_04", type = current_type, 
+			model = _item_ranged.."/shafts/force_staff_shaft_lower_01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_04" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_shaft_low_grip_05 = {
-			model = _item_ranged.."/shafts/thunder_hammer_shaft_05", type = current_type, 
+			model = _item_ranged.."/shafts/force_staff_shaft_lower_01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_05" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		owo_shaft_low_grip_06 = {
-			model = _item_ranged.."/shafts/thunder_hammer_shaft_ml01", type = current_type, 
+			model = _item_ranged.."/shafts/force_staff_shaft_lower_01", type = current_type, 
 			mesh_move = false, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_06" },
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
@@ -1331,9 +1331,15 @@ function mod.fixes_owo_shaft_low_grip(variant_id, type)
 	local _owo_low_grip_shafts = "owo_shaft_low_grip_01|owo_shaft_low_grip_02|owo_shaft_low_grip_03|owo_shaft_low_grip_04|owo_shaft_low_grip_05|owo_shaft_low_grip_06"
 
 	mod.mt.inject_fixes(variant_id, {
+		-- Trying to get it be 1.5-2 meters long
+		--	based on head position past connector:
+		--	1.35 ends up being around shoulder/lowerhead height
+		--	1.5 is eye level 
+		--	past that it goes off screen in first person
 		{   dependencies =  { _owo_low_grip_shafts },
-			shaft =  		{ offset = true, position = vector3_box(0, 0, 0.2), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-			shaftac1 = 		{ offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.5) },
+			shaft =  		{ offset = true, position = vector3_box(0, 0, 0.38), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+			shaftac1 = 		{ offset = true, position = vector3_box(0, 0, -0.28), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.5) },
+			pommel = 		{ offset = true, position = vector3_box(0, 0, -0.48), },
 		},
 	})
 end
