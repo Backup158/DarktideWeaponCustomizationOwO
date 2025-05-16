@@ -61,14 +61,18 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies = {"owo_tacax_spike_helper_01|owo_polearm_head_helper_0_01"},
         bladeshroud = { hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {	dependencies = {"owo_polearm_head_helper_1_01|owo_polearm_head_helper_1_02|owo_polearm_head_helper_1_03|owo_polearm_head_helper_1_04"},
-        bladeshroudac = { hide_mesh = {{"bladeshroudac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    {	dependencies = {"owo_polearm_head_helper_1_01|owo_polearm_head_helper_1_02|owo_polearm_head_helper_1_03|owo_polearm_head_helper_1_04|owo_polearm_head_helper_1_l_01|owo_polearm_head_helper_1_l_02|owo_polearm_head_helper_1_p_01|owo_polearm_head_helper_1_p_02|owo_polearm_head_helper_1_p_03|owo_polearm_head_helper_1_p_04|owo_polearm_head_helper_1_p_05|owo_polearm_head_helper_1_p_06|owo_polearm_head_helper_1_p_07|owo_polearm_head_helper_1_p_08|owo_polearm_head_helper_1_p_09"},
+        bladeshroudac = { hide_mesh = {{"bladeshroudac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { bladeshroudac = "owo_polearm_head_helper_1_00" },
     },
     {	dependencies = {"owo_polearm_head_helper_2_01"},
-        bladeshroudac2 = { hide_mesh = {{"bladeshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        bladeshroudac2 = { hide_mesh = {{"bladeshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { bladeshroudac2 = "owo_polearm_head_helper_2_00" },
     },
-    {	dependencies = {"owo_polearm_head_helper_3_01"},
-        bladeshroudac3 = { hide_mesh = {{"bladeshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+    {	dependencies = {"owo_polearm_head_helper_3_01|owo_polearm_head_helper_3_02"},
+        bladeshroudac3 = { hide_mesh = {{"bladeshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { bladeshroudac3 = "owo_polearm_head_helper_3_00" },
+    },
+    -- Shaft
+    {	dependencies = {"owo_shaft_low_grip_helper_01|owo_shaft_low_grip_helper_02|owo_shaft_low_grip_helper_03|owo_shaft_low_grip_helper_04|owo_shaft_low_grip_helper_05|owo_shaft_low_grip_helper_06"},
+        shaftac1 = { hide_mesh = {{"shaftac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_00" },
     },
 })
 

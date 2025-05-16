@@ -1246,11 +1246,11 @@ function mod.owo_shaft_low_grip(variant_id, given_type)
 
 	mod.inject_attachments_owo(variant_id, current_type, {
         {id = "owo_shaft_low_grip_01", name = "OwO Long Shaft (Low Grip) 1"},
-		{id = "owo_shaft_low_grip_02", name = "OwO Long Shaft (Low Grip) 2"},
-		{id = "owo_shaft_low_grip_03", name = "OwO Long Shaft (Low Grip) 3"},
-		{id = "owo_shaft_low_grip_04", name = "OwO Long Shaft (Low Grip) 4"},
-		{id = "owo_shaft_low_grip_05", name = "OwO Long Shaft (Low Grip) 5"},
-		{id = "owo_shaft_low_grip_06", name = "OwO Long Shaft (Low Grip) 6"},
+		{id = "owo_shaft_low_grip_02", name = "OwO Long Shaft (Low) 2"},
+		{id = "owo_shaft_low_grip_03", name = "OwO Long Shaft (Low) 3"},
+		{id = "owo_shaft_low_grip_04", name = "OwO Long Shaft (Low) 4"},
+		{id = "owo_shaft_low_grip_05", name = "OwO Long Shaft (Low) 5"},
+		{id = "owo_shaft_low_grip_06", name = "OwO Long Shaft (Low) 6"},
 	})
 	mod.inject_attachments_owo(variant_id, "shaftac1", {
 		{id = "owo_shaft_low_grip_helper_00", name = "Default"},
