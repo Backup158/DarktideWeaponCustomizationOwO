@@ -4,6 +4,8 @@ v1.7.4
 Added:
 - Tacax spikes to Thunder Hammer
 - Invisible connector to Thunder Hammer
+- Polearm heads to Thunder Hammer
+- Long Shafts (low grip) to Thunder Hammer
 
 # 2025-05-09
 v1.7.3
