@@ -1344,6 +1344,94 @@ function mod.fixes_owo_shaft_low_grip(variant_id, type)
 	})
 end
 
+-- Shaft: Thammer Ogryn Low Grip
+function mod.owo_ogryn_shaft_low_grip(variant_id, given_type)
+	local current_type = given_type or "shaft"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
+        {id = "owo_ogryn_shaft_low_grip_01", name = "OwO Long Ogryn (Low Grip) 1"},
+		{id = "owo_ogryn_shaft_low_grip_02", name = "OwO Long Ogryn (Low) 2"},
+		{id = "owo_ogryn_shaft_low_grip_03", name = "OwO Long Ogryn (Low) 3"},
+		{id = "owo_ogryn_shaft_low_grip_04", name = "OwO Long Ogryn (Low) 4"},
+		{id = "owo_ogryn_shaft_low_grip_05", name = "OwO Long Ogryn (Low) 5"},
+	})
+	mod.inject_attachments_owo(variant_id, "shaftac1", {
+		{id = "owo_ogryn_shaft_low_grip_helper_00", name = "Default"},
+        {id = "owo_ogryn_shaft_low_grip_helper_01", name = "OwO Shaft'vesa 1", no_randomize = true},
+		{id = "owo_ogryn_shaft_low_grip_helper_02", name = "OwO Shaft'vesa 2", no_randomize = true},
+		{id = "owo_ogryn_shaft_low_grip_helper_03", name = "OwO Shaft'vesa 3", no_randomize = true},
+		{id = "owo_ogryn_shaft_low_grip_helper_04", name = "OwO Shaft'vesa 4", no_randomize = true},
+		{id = "owo_ogryn_shaft_low_grip_helper_05", name = "OwO Shaft'vesa 5", no_randomize = true},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_ogryn_shaft_low_grip_01 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_01" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_ogryn_shaft_low_grip_02 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_02" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_ogryn_shaft_low_grip_03 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_03" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_ogryn_shaft_low_grip_04 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_04" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		owo_ogryn_shaft_low_grip_05 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_ml01", type = current_type, 
+			mesh_move = false, automatic_equip = { shaftac1 = "owo_ogryn_shaft_low_grip_helper_05" },
+			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
+		},
+		-- ### Helper Parts ###
+		owo_ogryn_shaft_low_grip_helper_00 = {
+			model = "", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_ogryn_shaft_low_grip_helper_01 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_01", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_ogryn_shaft_low_grip_helper_02 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_02", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_ogryn_shaft_low_grip_helper_03 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_03", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_ogryn_shaft_low_grip_helper_04 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_04", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_ogryn_shaft_low_grip_helper_05 = {
+			model = _item_ranged.."/shafts/ogryn_pickaxe_shaft_05", type = "shaftac1", 
+			mesh_move = false, parent = current_type,
+		},
+	})
+end
+function mod.fixes_owo_ogryn_shaft_low_grip(variant_id, type)
+	local current_type = given_type or "shaft"
+
+	local _owo_low_grip_ogryn_shafts = "owo_ogryn_shaft_low_grip_01|owo_ogryn_shaft_low_grip_02|owo_ogryn_shaft_low_grip_03|owo_ogryn_shaft_low_grip_04|owo_ogryn_shaft_low_grip_05|owo_ogryn_shaft_low_grip_06"
+
+	mod.mt.inject_fixes(variant_id, {
+		{   dependencies =  { _owo_low_grip_ogryn_shafts },
+			shaft =  		{ offset = true, position = vector3_box(0, 0, 0.38), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+			shaftac1 = 		{ offset = true, position = vector3_box(0, 0, -0.28), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.5) },
+			pommel = 		{ offset = true, position = vector3_box(0, 0, -0.48), },
+		},
+	})
+end
+
 -- Frontguard: Trench Dagger
 --	Guards 1,2,6 SOMETIMES don't attach
 function mod.owo_trench_dagger_guard(variant_id, type)

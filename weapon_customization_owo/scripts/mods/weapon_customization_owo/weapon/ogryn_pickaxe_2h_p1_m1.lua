@@ -28,7 +28,7 @@ mod.wc.attachment[this_variant].shaftac1 = {}
 mod.owo_tacax_spike(this_variant, "head", "shaft")
 mod.owo_polearm_head(this_variant, "head", "shaft")
 
-mod.owo_shaft_low_grip(this_variant, "shaft")
+mod.owo_ogryn_shaft_low_grip(this_variant, "shaft")
 
 -- ############################################
 -- Define Variables for Fixes
@@ -81,7 +81,7 @@ mod.mt.inject_fixes(this_variant, {
 -- #################
 mod.fixes_owo_tacax_spike(this_variant, "head", "shaft")
 mod.fixes_owo_polearm_head(this_variant, "head", "shaft")
-mod.fixes_owo_shaft_low_grip(this_variant, "shaft")
+mod.fixes_owo_ogryn_shaft_low_grip(this_variant, "shaft")
 
 -- #################
 -- Custom Fixes
@@ -101,4 +101,12 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { _owo_polearm_heads },
         head =   { offset = true, position = vector3_box(0, 0, 0.0), scale = vector3_box(2.5, 2.5, 2.5), },
     },
+    -- ######
+    -- Shaft: Long Shaft
+    -- ######
+    {   dependencies =  { _owo_low_grip_shafts },
+		shaft =  		{ offset = true, position = vector3_box(0, 0, 0.38), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
+		shaftac1 = 		{ offset = true, position = vector3_box(0, 0, -0.28), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 2.5, 3.2) },
+		pommel = 		{ offset = true, position = vector3_box(0, 0, -0.48), },
+	},
 })
