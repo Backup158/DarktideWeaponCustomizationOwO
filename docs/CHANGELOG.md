@@ -1,11 +1,15 @@
 # 2025-
-v1.7.4
+v1.8.1
+
+# 2025-05-17
+v1.8.0
 
 Added:
-- Tacax spikes to Thunder Hammer
-- Invisible connector to Thunder Hammer
-- Polearm heads to Thunder Hammer
-- Long Shafts (low grip) to Thunder Hammer
+- Tacax spikes to Thunder Hammers and Delver's Pickaxes
+- Invisible connector to Thunder Hammers
+- Polearm heads to Thunder Hammers and Delver's Pickaxes
+- Long Shafts (low grip) to Thunder Hammers
+- Long Ogryn Shafts to Delver's Pickaxes
 
 # 2025-05-09
 v1.7.3
