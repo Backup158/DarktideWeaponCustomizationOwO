@@ -19,10 +19,6 @@ if not mod.syn then
     mod.wc.attachment[this_variant].sightac3 = {}
     mod.wc.attachment[this_variant].sightac4 = {}
 
-    -- Inject empty stock_2 for default
-    mod.wc.attachment[this_variant].stock_2 = {}
-    mod.inject_attachments_owo(this_variant, "stock_2", { {id = "owo_stock_02_empty", name = "None"}, })
-    mod.inject_models(this_variant, { owo_stock_02_empty = { model = "", type = "stock_2", parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_00", }, }, })
     mod.wc.attachment[this_variant].stockac = {}
 
     mod.wc.attachment[this_variant].shotgun_p1_m1.muzzle_2 = {}
@@ -33,12 +29,18 @@ mod.wc.attachment[this_variant].foregripac2 = {}
 mod.wc.attachment[this_variant].foregripac3 = {}
 
 mod.wc.attachment[this_variant].sightac1 = {}
+-- sightac1-4 are covered by Syn's Edits
 mod.wc.attachment[this_variant].sightac5 = {}
 mod.wc.attachment[this_variant].sightac6 = {}
 mod.wc.attachment[this_variant].sightac7 = {}
 mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
+
+mod.wc.attachment[this_variant].stock_2 = {}
+-- Inject empty stock_2 for default, since this slot is selectable
+mod.inject_attachments_owo(this_variant, "stock_2", { {id = "owo_stock_02_empty", name = "None"}, })
+mod.inject_models(this_variant, { owo_stock_02_empty = { model = "", type = "stock_2", parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_00", }, }, })
 
 mod.wc.attachment[this_variant].muzzle_3 = {}
 
