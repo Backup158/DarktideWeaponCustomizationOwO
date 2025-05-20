@@ -1,5 +1,6 @@
 # 2025-05-18
 v1.8.1
+
 Hotfix for shotgun rework in Syn's Edits (removal of stock_2 declaration for that mod, so this mod must create it every time)
 
 # 2025-05-17
