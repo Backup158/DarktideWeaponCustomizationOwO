@@ -181,7 +181,7 @@ FAQs involving technical details about requirements and performance:
 
 12) **Why does this need to be above the other two plugins?**
 
-&emsp; I piggybacked off of some of the slots they already added to lessen the performance hit. The way parts get added to slots means that if the mod is lower in the load order than the mod that adds the slots, it either just won't work or will wipe out the parts added by the original slot creator. Also the alignments I mentioned earlier.
+&emsp; I piggybacked off of some of the slots they already added to lessen the performance hit. The way parts get added to slots means that if the mod is lower in the load order than the mod that adds the slots, it either just won't work or will wipe out the parts added by the original slot creator. This also means that EWC will actually load any custom alignments I make involving attachments from the other plugins, because otherwise it'll see and use the generic alignments first.
 
 ##
 </details>
