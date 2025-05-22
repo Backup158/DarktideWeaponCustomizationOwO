@@ -13,7 +13,7 @@ Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various part
 
 > [!WARNING] 
 > 
-> Expect performance drops, especially when piled onto a heavy load order (see [FAQ](#FAQ) #9). Some attachments are made of a lot of parts, which takes more resources to process.
+> Expect performance drops, especially when piled onto a heavy load order (see [FAQ](#FAQ) #9-10). Some attachments are made of a lot of parts, which takes more resources to process.
 > \
 > Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
 > \
@@ -153,17 +153,27 @@ FAQs involving technical details about requirements and performance:
 
 &emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches and in the inventory.
 
-&emsp; Error 2014 comes from your game taking too long to respond to the server; with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you >:3).
+&emsp; Error 2014 comes from your game taking too long to respond to the server ('pong' timeout); with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you >:3).
+
+&emsp; Performance hits can come from many sources (usually the base game lol). For mods, using a lot of mods which are known to use a lot of resources may not cause noticeable issues at first, but at some point you might get a straw that breaks the camel's back. See FAQ #10 for a few potential culprits
 
 &emsp; It's not literally unplayable, but caveat emptor.
 
 10) **Ok but can I do anything about this?**
 
 &emsp; Aside from the workarounds I posted in the main description, there's some small things but no silver bullets.
-  - Disable raytracing in your `user_settings.config file`. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch `rtxgi_scale`.
-  - Turn off 'Visible Equipment' in the EWC mod options
+  - Game Settings
+    - Disable raytracing in your `user_settings.config file`. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch `rtxgi_scale`.
+    - Disable 'Portrait Rendering' in the 'Video' section. These are the little character heads on the HUD. This is surprisingly heavy for some people.
+  - Mods and Mod Options
+    - EWC-related
+      - Disable 'Visible Equipment' and 'Randomization' in the EWC mod options.
+      - Using all of the EWC plugins. More plugins means more parts to process. This mainly means choosing between this mod and Syn's Edits, if performance is your primary goal. Personally, I'm addicted to customization so I use all of them and just live with the performance issues.
+      - Having a massive inventory. EWC goes through every single weapon in the inventory whenever you load a character, which can lead to disconnects when loading into the Mourningstar.
+      - If you crash at the end of missions, try setting locked packages to 'Always' in the EWC mod options (which will make performance worse but hopefully lessen crashes). Didn't help with disconnects but YMMV.
+    - Change 'Maximum Coroutine Cycles per Frame' in PowerDI from '1000' to '200' or something. PowerDI is constantly saving data in the background, and limiting how much it is allowed to work can improve performance (but maybe it'll be less accurate? I don't use it myself so I don't know)
+    - For the Drip in general. I also just live with this because it's drip or drown, bbq ;* (kill me)
   - For out of memory crashes, apply the lua heap memory increase band-aid fix (`--lua-heap-mb-size 2048` in the Steam launch options)
-  - If you crash at the end of missions, try setting locked packages to 'Always' in the EWC mod options (which will make performance worse but hopefully lessen crashes). Didn't help with disconnects but YMMV.
 
 11) **Why does this require the MT plugin?**
   
