@@ -178,12 +178,15 @@ These can get super janky when using non-default parts so watch out.
 ## Melee
 
 ### Heads
-- **Tactical Axe Spike**: Combat/Tactical Axes, Thunder Hammers  \
-Spike on the back of the tactical axe head. Fills in the holes in the blades.
+- **Tactical Axe Spike**: Combat/Tactical Axes, Thunder Hammers, Delver's Pickaxes  \
+&emsp; Spike on the back of the tactical axe head. Fills in the holes in the blades.
 
 > [!WARNING]
 > 
 > KNOWN ISSUE: Variants 2/3/M do not have the spike aligned properly, so there's a second axe head in the middle of these
+
+- **Polearm Heads**: Thunder Hammers, Delver's Pickaxes  \
+&emsp; Based on Becs de Corbin, Lucerne Hammers, and Poleaxes
 
 ### Body
 - **Rapier Blade**: Catachan "Devil's Claw" Swords, Dueling Swords  \
@@ -202,9 +205,17 @@ Spike on the back of the tactical axe head. Fills in the holes in the blades.
 &emsp; &emsp; &emsp; Unpatched for most other grips so caveat emptor
 
 ### Connectors
-- **Invisible Connector**: Thunder Hammer  \
+- **Invisible Connector**: Thunder Hammers  \
 &emsp; Makes the connector invisible. That's it. \
 &emsp; It doesn't extend the shaft on its own; it's meant to be used with other parts (namely the tacax spikes)
+
+### Shafts
+- **Long Shafts**: Thunder Hammers  \
+&emsp; Longer shaft (held at the bottom)
+&emsp; When used with an Invisible Connector, it's about forehead height for a max height character.
+- **Long Ogryn Shafts**: Delver's Pickaxes  \
+&emsp; Longer shaft (held at the bottom)
+&emsp; The head is around nose level.
 
 ### Pommels
 - **Shovel Handles**: Sapper Shovels  \
