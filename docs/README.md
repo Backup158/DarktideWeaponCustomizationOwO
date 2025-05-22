@@ -72,7 +72,7 @@ The list is hosted externally.  \
 
 3) **X attachment is unaligned when used with Y!**
    
-&emsp; Yeah that's what happens when I'm lazy. Send a screenshot of the customization menu and I'll try and get that fixed eventually. Delivery date depends on rotting status.
+&emsp; Yeah that's what happens when I'm lazy. Send a screenshot of the customization menu so I know which combination is messed up, and I'll try and get that fixed. Delivery date depends on bedrotting status.
 
 4) **The sights don't line up with where I'm shooting!**
 
