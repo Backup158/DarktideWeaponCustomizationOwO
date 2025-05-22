@@ -61,7 +61,6 @@ The list is hosted externally.  \
 
 # FAQ
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
-
 &emsp; HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA
 
 &emsp; *ahem* Make sure you put this above the MT/Syn plugins. Also make sure you have their latest full releases (just the ones on Nexus). If that doesn't fix it, drop a [console log](https://dmf-docs.darkti.de/#/faqs?id=how-do-i-report-mod-errors) in the Nexus posts or the Discord thread. I probably messed up in that case so sorry for laughing at you.
@@ -152,9 +151,6 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 <a id="faq-performance"></a>
 
 ## FAQ - Technical Details Involving Performance and Requirements
-
-<details>
-  <summary>Technical details</summary>
   
 9) **Why can the performance get bad?**
 
@@ -189,9 +185,6 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 12) **Why does this need to be above the other two plugins?**
 
 &emsp; I piggybacked off of some of the slots they already added to lessen the performance hit. The way parts get added to slots means that if the mod is lower in the load order than the mod that adds the slots, it either just won't work or will wipe out the parts added by the original slot creator. This also means that EWC will actually load any custom alignments I make involving attachments from the other plugins, because otherwise it'll see and use the generic alignments first.
-
-##
-</details>
 
 ## FAQ - New Parts
 
