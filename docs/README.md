@@ -141,7 +141,7 @@ mesh_streamer_settings = {
 7) **What do you mean by "intended for screenshots" ?**
 
 &emsp; It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.  \
-&emsp; That also means that appearances and accuracy are prioritized over performance. For example, the Masterkey is made of 8 components. There's a few parts I could've taken out, which would've changed it a bit but not enough to matter when it's sitting under your gun. 
+&emsp; That also means that appearances and accuracy are prioritized over performance. For example, the Masterkey is made of 8 components. There's a few parts I could've taken out, which would've changed it a bit but not enough to matter when it's sitting under your gun. I kept them anyways because I think it looks better when you get up close.
 <details>
   <summary>Elysian Drop Troop Weapons</summary>
   
