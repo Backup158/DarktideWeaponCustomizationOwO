@@ -101,8 +101,8 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 6) **When I use the scopes in game, they glitch out and are impossible to aim with!**
 
 &emsp; This is a consequence of the mesh streamer system. You can avoid it by:  \
-&emsp;&emsp; a) Increasing the Mesh Quality in the Options menu  \
-&emsp;&emsp; <details> <summary>Mesh Quality Settings</summary>![MeshQualitySetting](https://imgur.com/mR2GsjV.png)</details>  \
+&emsp;&emsp; a) Increasing the Mesh Quality in the Options menu 
+<details> <summary>Mesh Quality Settings</summary>&emsp;&emsp; ![MeshQualitySetting](https://imgur.com/mR2GsjV.png)</details>  \
 &emsp;&emsp; b) Completely disabling it in `<Darktide>\bundle\application_settings\settings_common.ini`, but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
 <details> <summary>Disabling the mesh streamer</summary>
   
