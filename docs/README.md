@@ -13,7 +13,7 @@ Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various part
 
 > [!WARNING] 
 > 
-> Expect performance drops, especially when piled onto a heavy load order (see [FAQ](#faq_-_technical_details_involving_performance_and_requirements) #9-10). Some attachments are made of a lot of parts, which takes more resources to process.
+> Expect performance drops, especially when piled onto a heavy load order (see [FAQ](#faq-technical-details-involving-performance-and-requirements) #9-10). Some attachments are made of a lot of parts, which takes more resources to process.
 > \
 > Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
 > \
