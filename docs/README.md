@@ -9,11 +9,11 @@
 [![ChangelogPages](https://img.shields.io/badge/Changelog_(Pages)-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG "Changelog when displayed on GitHub Pages.")
 
 # OwO? What is this?
-Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots, but works fine in gameplay with some performance caveats (see [FAQ](#FAQ) #7). 
+Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots, but works fine in gameplay (see [FAQ](#faq) #7). 
 
 > [!WARNING] 
 > 
-> Expect performance drops, especially when piled onto a heavy load order (see [FAQ](#FAQ) #9-10). Some attachments are made of a lot of parts, which takes more resources to process.
+> Expect performance drops, especially when piled onto a heavy load order (see [FAQ](#faq) #9-10). Some attachments are made of a lot of parts, which takes more resources to process.
 > \
 > Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
 > \
@@ -124,7 +124,8 @@ mesh_streamer_settings = {
 
 7) **What do you mean by "intended for screenshots" ?**
 
-&emsp; It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.
+&emsp; It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.  \
+&emsp; That also means that appearances and accuracy are prioritized over performance. For example, the Masterkey is made of 8 components. There's a few parts I could've taken out, which would've changed it a bit but not enough to matter when it's sitting under your gun. 
 <details>
   <summary>Elysian Drop Troop Weapons</summary>
   
