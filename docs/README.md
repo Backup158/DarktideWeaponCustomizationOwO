@@ -13,7 +13,7 @@ Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various part
 
 > [!WARNING] 
 > 
-> Expect performance drops, especially when piled onto a heavy load order (see [FAQ](#faq-technical-details-involving-performance-and-requirements) #9-10). Some attachments are made of a lot of parts, which takes more resources to process.
+> Expect performance drops, especially when piled onto a heavy load order (see [FAQ](#faq-performance) #9-10). Some attachments are made of a lot of parts, which takes more resources to process.
 > \
 > Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
 > \
@@ -148,6 +148,8 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 
 ![ewc_disable_settings](https://imgur.com/lcmwq8t.png)
 </details>
+
+<a id="faq-performance"></a>
 
 ## FAQ - Technical Details Involving Performance and Requirements
 
