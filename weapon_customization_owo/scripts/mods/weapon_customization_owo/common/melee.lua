@@ -711,6 +711,23 @@ function mod.owo_invisible_connector(variant_id, given_type, given_parent)
 	})
 end
 
+-- Hilt: Crossguards
+function mod.owo_crossguard_hilt(variant_id, given_type, given_parent)
+	local current_type = given_type or "hilt"
+	local current_parent = given_parent or "grip"
+	mod.inject_attachments_owo(variant_id, current_type, {
+		{id = "owo_crossguard_hilt_plate_01", name = "OwO Crossguard Plate"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_crossguard_hilt_plate_01 = {
+			model = _item_melee.."/pommels/axe_pommel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+	})
+end
+
 -- Body: Rapier Blades
 function mod.owo_rapier_blade(variant_id, type, parent)
 	local current_type = type or "body"
