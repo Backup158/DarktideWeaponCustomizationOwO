@@ -12,6 +12,8 @@ mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 -- 	Which isn't even necessary to have here
 --	The original prepends the whole table as is, preserving the order
 --	This way prepends each item, so in the end it'll be be in reverse order
+-- 	Since this is used for fixes, this'll end up putting the dependencies at the end
+-- 		which probably messes things up lol
 -- #################
 --function mod.table_prepend_reverse(table_to_prepend_to, items)
 --	for _, item in ipairs(items) do
