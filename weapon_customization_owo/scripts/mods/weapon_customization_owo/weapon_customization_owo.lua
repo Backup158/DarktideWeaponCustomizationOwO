@@ -7,6 +7,18 @@ local syn
 local mod_version = "1.8.1"
 mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 
+-- #################
+-- Alternative Prepend Function
+-- 	Which isn't even necessary to have here
+--	The original prepends the whole table as is, preserving the order
+--	This way prepends each item, so in the end it'll be be in reverse order
+-- #################
+--function mod.table_prepend_reverse(table_to_prepend_to, items)
+--	for _, item in ipairs(items) do
+--		table.insert(table_to_prepend_to, 1, item)
+--	end
+--end
+
 -- #########################################
 -- ############### ATTENTION ###############
 -- #########################################
