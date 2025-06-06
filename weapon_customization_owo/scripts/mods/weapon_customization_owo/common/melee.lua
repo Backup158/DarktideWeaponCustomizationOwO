@@ -67,6 +67,27 @@ else
 		"owo_historical_blade_helper_gerber",
 	}
 end
+-- CROSSGUARD (HILT)
+-- Can't add hilt slot to grip weapons. Don't know exactly why but I can't be assed to find out so eat shit >:3
+mod.wc.add_custom_attachments.crossguard = "crossguard_list"
+mod.wc.crossguard_list = {
+	"owo_crossguard_default",
+	"owo_crossguard_plate_01",
+}
+mod.create_new_slot("crossguard", 
+	{
+		en = "Crossguard",
+	}
+)
+--[[
+table.insert(mod.wc.attachment_slots, "crossguard")
+mod:add_global_localize_strings({
+    loc_weapon_cosmetics_customization_crossguard = {
+        en = "Crossguard",
+	},
+})
+]]
+
 -- GRIP
 --	Grip Shroud
 --table.insert(mod.wc.attachment_slots, "gripshroud")
@@ -712,29 +733,29 @@ function mod.owo_invisible_connector(variant_id, given_type, given_parent)
 end
 
 -- Hilt: Crossguards
-function mod.owo_crossguard_hilt(variant_id, given_type, given_parent)
-	local current_type = given_type or "hilt"
+function mod.owo_crossguard(variant_id, given_type, given_parent)
+	local current_type = given_type or "crossguard"
 	local current_parent = given_parent or "grip"
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_crossguard_hilt_plate_01", name = "OwO Crossguard Plate"},
+		{id = "owo_crossguard_plate_01", name = "OwO Crossguard Plate"},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
-		owo_crossguard_hilt_plate_01 = {
+		owo_crossguard_plate_01 = {
 			model = _item_melee.."/pommels/axe_pommel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
 	})
 end
-function mod.fixes_owo_crossguard_hilt(variant_id, given_type, given_parent)
+function mod.fixes_owo_crossguard(variant_id, given_type, given_parent)
 	local current_type = given_type or "hilt"
 	local current_parent = given_parent or "grip"
 
-	local _owo_crossguard_hilts = "owo_crossguard_hilt_plate_01"
+	local _owo_crossguards = "owo_crossguard_plate_01"
 
 	mod.mt.inject_fixes(variant_id, {
-		{   dependencies =  { "owo_crossguard_hilt_plate_01" },
+		{   dependencies =  { "owo_crossguard_plate_01" },
 			-- Hilt
 			hilt =  { position = vector3_box(0, 0, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 0.2)},
 		},

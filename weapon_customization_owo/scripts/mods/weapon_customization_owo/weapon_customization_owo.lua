@@ -127,6 +127,27 @@ function mod.on_all_mods_loaded()
 		mod.mt.table_prepend(wc.anchors[variant_id].fixes, fix_tables)
 	end
 	]]
+
+	-- ############################################################################
+	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
+	-- ############################################################################
+	-- ######
+	-- Creating a New Slot
+	-- DESCRIPTION: In the melee/ranged files, create a slot and inserts to the slot table
+	-- PARAMETER(S):
+	--		string: slot_name
+	--		table: slot_localization_table
+	-- RETURN: N/A
+	function mod.create_new_slot(slot_name, slot_localization_table)
+		table.insert(mod.wc.attachment_slots, slot_name)
+		mod:add_global_localize_strings({
+			["loc_weapon_cosmetics_customization_"..slot_name] = slot_localization_table
+		})
+	end
+
+	-- ############################################################################
+	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
+	-- ############################################################################
 	
 	-- Applies all the fixes you injected into each weapon
 	mod.load_mod_file("files_to_load")

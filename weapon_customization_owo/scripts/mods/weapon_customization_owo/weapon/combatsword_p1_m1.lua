@@ -21,7 +21,7 @@ mod.wc.attachment[this_variant].hilt = {}
 -- ############################################
 mod.owo_rapier_blade(this_variant)
 mod.owo_slim_blade(this_variant, "body", "grip")
-mod.owo_crossguard_hilt(this_variant, "hilt", "grip")
+mod.owo_crossguard(this_variant, "hilt", "grip")
 
 -- ############################################
 -- Define Variables for Fixes
@@ -49,6 +49,7 @@ local _mt_ogryn_grips = "ogrynbladehandle_01|ogrynbladehandle_02|ogrynbladehandl
 -- ########
 -- For This Variant Only
 -- ########
+local _combat_sword_grips = "combat_sword_grip_01|combat_sword_grip_02|combat_sword_grip_03|combat_sword_grip_04|combat_sword_grip_05|combat_sword_grip_06|combat_sword_grip_ml01"
 
 -- ############################################
 -- Inject Fixes
@@ -68,7 +69,7 @@ local _mt_ogryn_grips = "ogrynbladehandle_01|ogrynbladehandle_02|ogrynbladehandl
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
 mod.fixes_owo_slim_blade(this_variant)
-mod.fixes_owo_crossguard_hilt(this_variant)
+mod.fixes_owo_crossguard(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -150,4 +151,10 @@ mod.mt.inject_fixes(this_variant, {
         body = { offset = true,   position = vector3_box(0, 0.0, -0.04),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.2, 1) },
     },
 
+    -- #######
+    -- Blade: Flat Blades
+    -- #######
+    {   dependencies = { _owo_flat_dclaw_blades, _combat_sword_grips },
+        body = { position = vector3_box(0, 0, 0.09), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+    },
 })
