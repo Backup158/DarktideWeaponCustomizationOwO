@@ -3426,8 +3426,11 @@ end
 
 -- Sight: Rear sights with flip up. Ladder Aperture Sights
 --	Helbore style only
-function mod.owo_rear_sight(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "sight", {
+function mod.owo_rear_sight(variant_id, given_type, given_parent)
+	local current_type = given_type or "sight"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
 		{id = "owo_rear_sight_02", name = "OwO Aperture, U Notch (Up)"},
 		{id = "owo_rear_sight_o_00", name = "OwO _n_"},
@@ -3594,8 +3597,11 @@ end
 
 -- Sight: Kalashnikov Rear Sights
 --	I made 1 and 2 before noticing thte range select was already a part in game lmfao
-function mod.owo_rear_sight_ak(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "sight", {
+function mod.owo_rear_sight_ak(variant_id, given_type, given_parent)
+	local current_type = given_type or "sight"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_rear_sight_ak_01", name = "OwO AK Irons"},
 		{id = "owo_rear_sight_ak_02", name = "OwO AK Irons w/ Dust Cover"},
 		{id = "owo_rear_sight_ak_03", name = "OwO AK Scuffed Irons"},
@@ -3633,39 +3639,39 @@ function mod.owo_rear_sight_ak(variant_id, given_type)
 		-- Avtomat Kalashnikov
 		--	Using the elevation ladder ALREADY IN THE GAME
 		owo_rear_sight_ak_01 = {
-			model = _item_ranged.."/sights/autogun_rifle_sight_01", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/sights/autogun_rifle_sight_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_02", sightac2 = "owo_rear_sight_ak_ac2_02",
 				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
 				sightac5 = "owo_rear_sight_ak_ac5_01",
 			},
 			hide_mesh = {
-				{"sight", 2,3,4,5,6} -- one of these is the front rail lol
+				{current_type, 2,3,4,5,6} -- one of these is the front rail lol
 			},
 		},
 		owo_rear_sight_ak_02 = {
-			model = _item_ranged.."/sights/autogun_rifle_sight_01", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/sights/autogun_rifle_sight_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_02", sightac2 = "owo_rear_sight_ak_ac2_02",
 				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
 				sightac5 = "owo_rear_sight_ak_ac5_01", sightac6 = "owo_rear_sight_ak_ac6_01",
 			},
 			hide_mesh = {
-				{"sight", 2,3,4,5,6} -- one of these is the front rail lol
+				{current_type, 2,3,4,5,6} -- one of these is the front rail lol
 			},
 		},
 		--	Ladder for the elevation
 		owo_rear_sight_ak_03 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_01", sightac2 = "owo_rear_sight_ak_ac2_01",
 				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
 				sightac5 = "owo_rear_sight_ak_ac5_01",
 			}
 		},
 		owo_rear_sight_ak_04 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_rear_sight_ak_ac1_01", sightac2 = "owo_rear_sight_ak_ac2_01",
 				sightac3 = "owo_rear_sight_ak_ac3_01", sightac4 = "owo_rear_sight_ak_ac4_01",
 				sightac5 = "owo_rear_sight_ak_ac5_01", sightac6 = "owo_rear_sight_ak_ac6_01",
@@ -3676,77 +3682,80 @@ function mod.owo_rear_sight_ak(variant_id, given_type)
 		--	AK range select
 		owo_rear_sight_ak_ac1_01 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sightac1", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		owo_rear_sight_ak_ac1_02 = {
 			model = _item_melee.."/grips/hatchet_grip_03", type = "sightac1", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac2
 		--	AK range select
 		owo_rear_sight_ak_ac2_01 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sightac2", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		owo_rear_sight_ak_ac2_02 = {
 			model = _item_melee.."/grips/hatchet_grip_03", type = "sightac2", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac3
 		--	AK iron notch
 		owo_rear_sight_ak_ac3_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac3", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac4
 		--	AK iron notch
 		owo_rear_sight_ak_ac4_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac4", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac5
 		--	ak rear butt
 		owo_rear_sight_ak_ac5_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac5", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac6
 		--	ak dust cover
 		owo_rear_sight_ak_ac6_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "sightac6", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ### Empty ###
 		owo_rear_sight_ak_empty_01 = {
 			model = "", type = "sightac1", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_rear_sight_ak_empty_02 = {
 			model = "", type = "sightac2", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_rear_sight_ak_empty_03 = {
 			model = "", type = "sightac3", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_rear_sight_ak_empty_04 = {
 			model = "", type = "sightac4", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_rear_sight_ak_empty_05 = {
 			model = "", type = "sightac5", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_rear_sight_ak_empty_06 = {
 			model = "", type = "sightac6", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 	})
 end
 
 -- Sight: M16 Carry Handle
-function mod.owo_m16_sight(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "sight", {
+function mod.owo_m16_sight(variant_id, given_type, given_parent)
+	local current_type = given_type or "sight"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_m16_sight_01", name = "OwO M16 Carry Sight"},
 		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight (No Rear Elevation Wheel)"},
 	})
@@ -3782,8 +3791,8 @@ function mod.owo_m16_sight(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_m16_sight_01  = {
-			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = "sight", 
-			mesh_move = false, parent = 'receiver', hide_mesh = {{"sight", 1}}, -- hiding the stock. I stole this from MT
+			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = current_type, 
+			mesh_move = false, parent = current_parent, hide_mesh = {{current_type, 1}}, -- hiding the stock. I stole this from MT
 			automatic_equip = { sightac1 = "owo_m16_sight_helper_01", sightac2 = "owo_m16_sight_helper_02", 
 				sightac3 = "owo_m16_sight_helper_03", 
 				sightac4 = "owo_m16_sight_helper_04", sightac5 = "owo_m16_sight_helper_05", 
@@ -3791,8 +3800,8 @@ function mod.owo_m16_sight(variant_id, given_type)
 			}
 		},
 		owo_m16_sight_02  = {
-			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_02", type = "sight", 
-			mesh_move = false, parent = 'receiver', hide_mesh = {{"sight", 5}},
+			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_02", type = current_type, 
+			mesh_move = false, parent = current_parent, hide_mesh = {{current_type, 5}},
 			automatic_equip = { sightac1 = "owo_m16_sight_helper_01", sightac2 = "owo_m16_sight_helper_02", 
 				sightac3 = "owo_m16_sight_helper_03", 
 				sightac4 = "owo_m16_sight_helper_04", sightac5 = "owo_m16_sight_helper_05", 
@@ -3802,65 +3811,65 @@ function mod.owo_m16_sight(variant_id, given_type)
 		-- ### Helper Parts ###
 		-- Carry handle side rails
 		owo_m16_sight_helper_01 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = 'sightac1',
-			mesh_move = false, parent = 'sight'
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac1",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_helper_02 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = 'sightac2',
-			mesh_move = false, parent = 'sight'
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac2",
+			mesh_move = false, parent = current_type
 		},
 		-- Rear sight aperture
 		owo_m16_sight_helper_03 = {
-			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = 'sightac3',
-			mesh_move = false, parent = 'sight'
+			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "sightac3",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_helper_04 = {
-			model = _item_ranged.."/handles/combat_blade_handle_04", type = 'sightac4',
-			mesh_move = false, parent = 'sight'
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sightac4",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_helper_05 = {
-			model = _item_ranged.."/handles/combat_blade_handle_04", type = 'sightac5',
-			mesh_move = false, parent = 'sight'
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sightac5",
+			mesh_move = false, parent = current_type
 		},
 		-- Windage Knob
 		owo_m16_sight_helper_06 = {
-			model = _item_melee.."/heads/human_power_maul_head_05", type = 'sightac6',
-			mesh_move = false, parent = 'sight'
+			model = _item_melee.."/heads/human_power_maul_head_05", type = "sightac6",
+			mesh_move = false, parent = current_type
 		},
 		-- Rear Elevation Knob
 		-- seems to be a newer addition on a2+
 		owo_m16_sight_helper_07 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = 'sightac7',
-			mesh_move = false, parent = 'sight'
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "sightac7",
+			mesh_move = false, parent = current_type
 		},
 		-- ### Empty ###
 		owo_m16_sight_empty_01 = {
-			model = "", type = 'sightac1',
-			mesh_move = false, parent = 'sight'
+			model = "", type = "sightac1",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_empty_02 = {
-			model = "", type = 'sightac2',
-			mesh_move = false, parent = 'sight'
+			model = "", type = "sightac2",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_empty_03 = {
-			model = "", type = 'sightac3',
-			mesh_move = false, parent = 'sight'
+			model = "", type = "sightac3",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_empty_04 = {
-			model = "", type = 'sightac4',
-			mesh_move = false, parent = 'sight'
+			model = "", type = "sightac4",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_empty_05 = {
-			model = "", type = 'sightac5',
-			mesh_move = false, parent = 'sight'
+			model = "", type = "sightac5",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_empty_06 = {
-			model = "", type = 'sightac6',
-			mesh_move = false, parent = 'sight'
+			model = "", type = "sightac6",
+			mesh_move = false, parent = current_type
 		},
 		owo_m16_sight_empty_07 = {
-			model = "", type = 'sightac7',
-			mesh_move = false, parent = 'sight'
+			model = "", type = "sightac7",
+			mesh_move = false, parent = current_type
 		},
 		
 	})

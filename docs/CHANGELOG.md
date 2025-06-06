@@ -13,6 +13,9 @@ Refactor:
     - Trench Dagger Finger Guards
     - Shovel Handles
     - Historical Blades
+    - Ladder Aperture Sights
+    - Kalashnikov Rear Sights
+    - M16 Carry Handle Sights
     - Holographic Scopes
     - Telescopic Scopes
     - PU Scopes
