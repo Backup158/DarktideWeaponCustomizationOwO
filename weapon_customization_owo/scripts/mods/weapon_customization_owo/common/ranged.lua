@@ -5454,7 +5454,10 @@ mod.wc.KUMQUATs = {
 	""
 }
 
-function mod.owo_<NAME>(variant_id, given_type)
+function mod.owo_<NAME>(variant_id, given_type, given_parent)
+	local current_type = given_type or "magazine"
+	local current_parent = given_parent or "receiver"
+	
 	mod.inject_attachments_owo(variant_id, "", {
 		{id = "owo_", name = "OwO "},
 	})
