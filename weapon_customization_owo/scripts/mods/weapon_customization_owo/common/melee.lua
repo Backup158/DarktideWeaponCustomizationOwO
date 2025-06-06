@@ -1493,8 +1493,10 @@ end
 
 -- Frontguard: Trench Dagger
 --	Guards 1,2,6 SOMETIMES don't attach
-function mod.owo_trench_dagger_guard(variant_id, type)
-    mod.inject_attachments_owo(variant_id, "frontguard" or type, {
+function mod.owo_trench_dagger_guard(variant_id, given_type)
+	local current_type = given_type or "frontguard"
+
+    mod.inject_attachments_owo(variant_id, current_type, {
         {id = "owo_trench_dagger_finger_guard_default", name = "Default"},
 		{id = "owo_trench_dagger_finger_guard_01", name = "OwO Trench Dagger Guard 1"},
 		{id = "owo_trench_dagger_finger_guard_02", name = "OwO Trench Dagger Guard 2"},
@@ -1507,15 +1509,15 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 		{id = "owo_trench_dagger_finger_guard_knuckles_03", name = "OwO Knuckle Dusters 3"},
 		{id = "owo_trench_dagger_finger_guard_knuckles_04", name = "OwO Knuckle Dusters 4"},
 	})
-	mod.inject_attachments_owo(variant_id, "frontguardac1" or type, {
+	mod.inject_attachments_owo(variant_id, "frontguardac1", {
         {id = "owo_trench_dagger_finger_guard_helper_ac1_default", name = "Default"},
 		{id = "owo_trench_dagger_finger_guard_helper_ac1", name = "OwO Knuckle'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "frontguardac2" or type, {
+	mod.inject_attachments_owo(variant_id, "frontguardac2", {
         {id = "owo_trench_dagger_finger_guard_helper_ac2_default", name = "Default"},
 		{id = "owo_trench_dagger_finger_guard_helper_ac2", name = "OwO Knuckle'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "frontguardac3" or type, {
+	mod.inject_attachments_owo(variant_id, "frontguardac3", {
         {id = "owo_trench_dagger_finger_guard_helper_ac3_default", name = "Default"},
 		{id = "owo_trench_dagger_finger_guard_helper_ac3", name = "OwO Knuckle'vesa", no_randomize = true},
 	})
@@ -1523,35 +1525,35 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_trench_dagger_finger_guard_default = {
-			model = "", type = "frontguard", 
+			model = "", type = current_type, 
 			mesh_move = false, parent = "grip"
 		},
 		owo_trench_dagger_finger_guard_01 = {
-			model = _item_melee.."/grips/combat_blade_grip_01", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_01", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_02 = {
-			model = _item_melee.."/grips/combat_blade_grip_02", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_02", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_03 = {
-			model = _item_melee.."/grips/combat_blade_grip_04", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_04", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_04 = {
-			model = _item_melee.."/grips/combat_blade_grip_05", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_05", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_05 = {
-			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_06", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_06 = {
-			model = _item_melee.."/grips/combat_blade_grip_08", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_08", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_knuckles_01 = {
-			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_06", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1_default",
@@ -1560,7 +1562,7 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 			},
 		},
 		owo_trench_dagger_finger_guard_knuckles_02 = {
-			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_06", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
@@ -1569,7 +1571,7 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 			},
 		},
 		owo_trench_dagger_finger_guard_knuckles_03 = {
-			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_06", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
@@ -1578,7 +1580,7 @@ function mod.owo_trench_dagger_guard(variant_id, type)
 			},
 		},
 		owo_trench_dagger_finger_guard_knuckles_04 = {
-			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguard", 
+			model = _item_melee.."/grips/combat_blade_grip_06", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				frontguardac1 = "owo_trench_dagger_finger_guard_helper_ac1",
