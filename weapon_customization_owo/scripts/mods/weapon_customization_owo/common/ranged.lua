@@ -1495,8 +1495,11 @@ function mod.owo_wood_krieg(variant_id, given_type)
 end
 
 -- Barrel: Plasma Helbore
-function mod.owo_plasma_krieg(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
+function mod.owo_plasma_krieg(variant_id, given_type, given_parent)
+	local current_type = given_type or "barrel"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_plasma_krieg_01f", name = "OwO Plasma Helbore 1 (2)"},
 		{id = "owo_plasma_krieg_02f", name = "OwO Plasma Helbore 2 (3)"},
 		{id = "owo_plasma_dmr_01", name = "OwO Plasma Lasgun 1"},
@@ -1533,134 +1536,135 @@ function mod.owo_plasma_krieg(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_plasma_krieg_01f = {
-			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
 		},
 		owo_plasma_krieg_02f = {
-			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
 		},
 		owo_plasma_dmr_01 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
 		},
 		owo_plasma_dmr_02 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_05", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_05", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
 		},
 		owo_plasma_dmr_01f = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
 		},
 		owo_plasma_dmr_02f = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_05", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_05", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", }
 		},
 		owo_plasma_sniper_01 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_01", }
 		},
 		owo_plasma_sniper_02 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_02", }
 		},
 		owo_plasma_sniper_03 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_03", }
 		},
 		owo_plasma_sniper_04 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_04", }
 		},
 		owo_plasma_sniper_05 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_05", }
 		},
 		owo_plasma_sniper_06 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_06", }
 		},
 		owo_plasma_sniper_07 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_07", }
 		},
 		owo_plasma_sniper_08 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_08", }
 		},
 		owo_plasma_sniper_09 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_09", }
 		},
 		-- ### Helper Parts ###
 		owo_plasma_krieg_ac0_empty = {
 			model = "", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel"
+			mesh_move = false, parent = current_type
 		},
 		owo_plasma_krieg_ac0_01 = {
 			model = _item_ranged.."/barrels/plasma_rifle_barrel_01", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_empty = {
 			model = "", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel"
+			mesh_move = false, parent = current_type
 		},
 		owo_plasma_krieg_ac1_01 = {
 			model = _item_ranged.."/underbarrels/shotgun_rifle_underbarrel_01", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_02 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_03 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_04 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_05 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_06 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_07", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_07 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_08 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_plasma_krieg_ac1_09 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_ml01", type = "barrelshroudac", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 	})
 
 end
 
 -- Foregrip: Empty Foregrip
+--[[
 function mod.owo_empty_foregrip(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, given_type or "foregrip", {
 		{id = "owo_foregrip_empty", name = "Empty Foregrip"},
@@ -1672,10 +1676,14 @@ function mod.owo_empty_foregrip(variant_id, given_type)
 		},
 	})
 end
+]]
 
 -- Foregrip: Tactical Foregrips
-function mod.owo_tactical_foregrip(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "foregrip", {
+function mod.owo_tactical_foregrip(variant_id, given_type, given_parent)
+	local current_type = given_type or "foregrip"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_tactical_foregrip_01", name = "OwO Angled Foregrip (AFG) 1"},
 		{id = "owo_tactical_foregrip_02", name = "OwO AFG 1 Slanted"},
 		{id = "owo_tactical_foregrip_03", name = "OwO AFG 2"},
@@ -1697,20 +1705,20 @@ function mod.owo_tactical_foregrip(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_tactical_foregrip_01 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "foregrip", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_tactical_foregrip_02 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "foregrip", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_tactical_foregrip_03 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "foregrip", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_tactical_foregrip_04 = {
-			model = _item_ranged.."/grips/plasma_rifle_grip_03", type = "foregrip", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/grips/plasma_rifle_grip_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_tactical_foregrip_ac1_01", foregripac2 = "owo_tactical_foregrip_ac2_01", 
 				foregripac3 = "owo_tactical_foregrip_ac3_01"
 			},
@@ -1720,32 +1728,32 @@ function mod.owo_tactical_foregrip(variant_id, given_type)
 		--  magpul afg back part 1
 		owo_tactical_foregrip_ac1_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac1", 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 		},
 		-- AC2
 		-- 	magpul afg back part 2
 		owo_tactical_foregrip_ac2_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac2", 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 		},
 		-- AC3
 		-- 	magpul afg front
 		owo_tactical_foregrip_ac3_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac3", 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 		},
 		-- ### Empty ###
 		owo_tactical_foregrip_ac1_empty = {
 			model = "", type = "foregripac1", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_tactical_foregrip_ac2_empty = {
 			model = "", type = "foregripac2", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_tactical_foregrip_ac3_empty = {
 			model = "", type = "foregripac3", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 	})
 end

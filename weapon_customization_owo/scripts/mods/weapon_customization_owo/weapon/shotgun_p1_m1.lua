@@ -23,7 +23,8 @@ if not mod.syn then
 
     mod.wc.attachment[this_variant].shotgun_p1_m1.muzzle_2 = {}
 end
-mod.wc.attachment[this_variant].foregrip = {}
+--mod.wc.attachment[this_variant].foregrip = {}
+mod.initialize_custom_slot_for_weapon(this_variant, "foregrip")
 mod.wc.attachment[this_variant].foregripac1 = {}
 mod.wc.attachment[this_variant].foregripac2 = {}
 mod.wc.attachment[this_variant].foregripac3 = {}
@@ -58,7 +59,7 @@ mod.owo_telescopic_sight(this_variant, "sight")
 
 mod.owo_suppressor(this_variant)
 
-mod.owo_empty_foregrip(this_variant)
+--mod.owo_empty_foregrip(this_variant)
 mod.owo_tactical_foregrip(this_variant, "foregrip")
 mod.owo_heterosexual_foregrip(this_variant, "foregrip")
 

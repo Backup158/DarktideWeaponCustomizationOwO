@@ -16,10 +16,15 @@ Added:
 Refactor: 
 - Made functions to simplify creating custom slots on the developer side
     - Automatically creates an empty attachment for that slot, so hiding unused parts has a consistent part to rely on ("owo_<slot_name>_default")
+    - Removed now-redundant shotgun foregrip and sight_2 part initialization
+    - Removed `owo_empty_foregrip()`
 - Modularized type identity (logic fix for the 'or type') for 
     - Trench Dagger Finger Guards
     - Shovel Handles
     - Historical Blades
+    - Plasma Helbore Barrels
+    - Heterosexual Foregrips
+    - Tactical Foregrips
     - Historical Bayonets
     - Underbarrel Grenade Launchers
     - Underbarrel Shotguns
