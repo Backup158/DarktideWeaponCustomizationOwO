@@ -13,6 +13,7 @@ Refactor:
     - Historical Blades
     - Telescopic Scopes
     - PU Scopes
+    - Magpul
 
 # 2025-05-18
 v1.8.1

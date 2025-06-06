@@ -527,7 +527,7 @@ mod.mt.table_append(mod.wc.stockac2s, {
 -- ############################################
 -- Flashlight/Special: Grip Laser
 function mod.owo_grip_laser(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "flashlight" or type, {
+	mod.inject_attachments_owo(variant_id, "flashlight" {
 		{id = "owo_grip_laser_01", name = "OwO Trigger Guard Laser (R)"},
 		{id = "owo_grip_laser_02", name = "OwO Trigger Guard (G)"},
 	})
@@ -1293,23 +1293,23 @@ function mod.owo_m16_barrel(variant_id, given_type)
 		{id = "owo_m16_barrelshroud_a1_02", name = "OwO M16a2 Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a2", name = "OwO M16a2 Barrel Shroud", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroudac2" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroudac2" {
 		{id = "owo_m16_empty_02", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac2_01", name = "OwO M16 Front Sight shroudac", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroudac3" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroudac3" {
 		{id = "owo_m16_empty_03", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac3_a1", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroudac4" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroudac4" {
 		{id = "owo_m16_empty_04", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac4_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroudac5" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroudac5" {
 		{id = "owo_m16_empty_05", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac5_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroudac6" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroudac6" {
 		{id = "owo_m16_empty_06", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac6_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
@@ -1517,7 +1517,7 @@ function mod.owo_plasma_krieg(variant_id, given_type)
 		{id = "owo_plasma_krieg_ac0_empty", name = "Empty Barrel", no_randomize = true},
 		{id = "owo_plasma_krieg_ac0_01", name = "OwO Plasma Helbore ac0 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "barrelshroudac" or type, {
+	mod.inject_attachments_owo(variant_id, "barrelshroudac" {
 		{id = "owo_plasma_krieg_ac1_empty", name = "Empty Barrelac", no_randomize = true},
 		{id = "owo_plasma_krieg_ac1_01", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
 		{id = "owo_plasma_krieg_ac1_02", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
@@ -1675,21 +1675,21 @@ end
 
 -- Foregrip: Tactical Foregrips
 function mod.owo_tactical_foregrip(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "foregrip" or type, {
+	mod.inject_attachments_owo(variant_id, "foregrip" {
 		{id = "owo_tactical_foregrip_01", name = "OwO Angled Foregrip (AFG) 1"},
 		{id = "owo_tactical_foregrip_02", name = "OwO AFG 1 Slanted"},
 		{id = "owo_tactical_foregrip_03", name = "OwO AFG 2"},
 		{id = "owo_tactical_foregrip_04", name = "OwO AFG 3"},
 	})
-	mod.inject_attachments_owo(variant_id, "foregripac1" or type, {
+	mod.inject_attachments_owo(variant_id, "foregripac1" {
 		{id = "owo_tactical_foregrip_ac1_empty", name = "OwO foregripac1 empty"},
 		{id = "owo_tactical_foregrip_ac1_01", name = "OwO AFGac2'vesa 1"},
 	})
-	mod.inject_attachments_owo(variant_id, "foregripac2" or type, {
+	mod.inject_attachments_owo(variant_id, "foregripac2" {
 		{id = "owo_tactical_foregrip_ac2_empty", name = "OwO foregripac2 empty"},
 		{id = "owo_tactical_foregrip_ac2_01", name = "OwO AFGac2'vesa 1"},
 	})
-	mod.inject_attachments_owo(variant_id, "foregripac3" or type, {
+	mod.inject_attachments_owo(variant_id, "foregripac3" {
 		{id = "owo_tactical_foregrip_ac3_empty", name = "OwO foregripac3 empty"},
 		{id = "owo_tactical_foregrip_ac3_01", name = "OwO AFGac3'vesa 1"},
 	})
@@ -2330,7 +2330,7 @@ function mod.owo_underbarrel_shotgun(variant_id, given_type)
 		{id = "owo_underbarrel_shotgun_helper_06", name = "OwO Masterkey ac6", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_06_02", name = "OwO MASS ac6", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "bayonetac7" or type, {
+	mod.inject_attachments_owo(variant_id, "bayonetac7" {
 		{id = "owo_underbarrel_shotgun_empty_07", name = "Empty Bayonetac6", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_07", name = "OwO Masterkey ac6", no_randomize = true},
 	})
@@ -2485,7 +2485,7 @@ end
 		A semiautomatic, centerfire rifle that has an overall length of less than 30 inches
 ]]
 function mod.owo_california_bolter(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "receiver" or type, {
+	mod.inject_attachments_owo(variant_id, "receiver" {
 		{id = "owo_california_bolter_01", name = "OwO Vertically Challenged Bolter 1"},
 		{id = "owo_california_bolter_02", name = "OwO Vertically Challenged Bolter 2"},
 		{id = "owo_california_bolter_03", name = "OwO Vertically Challenged Bolter 3"},
@@ -2555,18 +2555,18 @@ end
 
 -- Receiver: Helbore Bolt Action
 function mod.owo_bolt_action(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "receiver" or type, {
+	mod.inject_attachments_owo(variant_id, "receiver" {
 		{id = "owo_bolt_helbore_01", name = "OwO Helbore Bolt Action 1"},
 		{id = "owo_bolt_helbore_02", name = "OwO Helbore Bolt Action 2"},
 		{id = "owo_bolt_helbore_03", name = "OwO Helbore Bolt Action 3"},
 		{id = "owo_bolt_helbore_04", name = "OwO Helbore Bolt Action 4"},
 		{id = "owo_bolt_helbore_05", name = "OwO Helbore Bolt Action 5"},
 	})
-	mod.inject_attachments_owo(variant_id, "receiverac1" or type, {
+	mod.inject_attachments_owo(variant_id, "receiverac1" {
 		{id = "owo_bolt_grip_empty", name = "receiverac1 empty", no_randomize = true},
 		{id = "owo_bolt_helbore_bolt_01", name = "OwO bolt action bolt", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "receiverac2" or type, {
+	mod.inject_attachments_owo(variant_id, "receiverac2" {
 		{id = "owo_bolt_shaft_empty", name = "receiverac2 empty", no_randomize = true},
 		{id = "owo_bolt_helbore_bolt_02", name = "OwO bolt action bolt shaft", no_randomize = true},
 	})
@@ -2623,7 +2623,7 @@ end
 
 -- Receiver: Helbore MAS-49
 function mod.owo_helbore_mas49(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "receiver" or type, {
+	mod.inject_attachments_owo(variant_id, "receiver" {
 		{id = "owo_helbore_mas49_01", name = "OwO Helbore MAS-49 1"},
 		{id = "owo_helbore_mas49_02", name = "OwO Helbore MAS-49 2"},
 		{id = "owo_helbore_mas49_03", name = "OwO Helbore MAS-49 3"},
@@ -2631,11 +2631,11 @@ function mod.owo_helbore_mas49(variant_id, given_type)
 		{id = "owo_helbore_mas49_05", name = "OwO Helbore MAS-49 4 (M)"},
 		{id = "owo_helbore_mas49_01_s", name = "OwO MAS-49 Slim 1"},
 	})
-	mod.inject_attachments_owo(variant_id, "receiverac1" or type, {
+	mod.inject_attachments_owo(variant_id, "receiverac1" {
 		{id = "owo_bolt_empty", name = "receiverac1 empty", no_randomize = true},
 		{id = "owo_helbore_mas49_ass", name = "OwO MAS-49 Ass", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "receiverac2" or type, {
+	mod.inject_attachments_owo(variant_id, "receiverac2" {
 		{id = "owo_knob_empty", name = "receiverac1 empty", no_randomize = true},
 		{id = "owo_helbore_mas49_knob", name = "OwO MAS-49 Knob", no_randomize = true},
 	})
@@ -2798,12 +2798,12 @@ function mod.owo_helbore_gripstock(variant_id,type)
 		{id = "owo_gripstock_amr_08", name = "OwO AMR Stock+Grip 8"},
 		{id = "owo_gripstock_amr_09", name = "OwO AMR Stock+Grip 9"},
 	})
-	mod.inject_attachments_owo(variant_id, "stockac" or type, {
+	mod.inject_attachments_owo(variant_id, "stockac" {
 		{id = "owo_gripstock_grip_empty",  name = "Empty stockac", no_randomize = true},
 		{id = "owo_gripstock_grip_01a",  name = "OwO StraightGrip stockac", no_randomize = true},
 		{id = "owo_gripstock_amr_ac_01",  name = "OwO StraightGrip50 stockac", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "stockac2" or type, {
+	mod.inject_attachments_owo(variant_id, "stockac2" {
 		{id = "owo_gripstock_amr_ac2_empty",  name = "Empty stockac2", no_randomize = true},
 		{id = "owo_gripstock_amr_ac2_01",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
 		{id = "owo_gripstock_amr_ac2_02",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
@@ -3427,7 +3427,7 @@ end
 -- Sight: Rear sights with flip up. Ladder Aperture Sights
 --	Helbore style only
 function mod.owo_rear_sight(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "sight" or type, {
+	mod.inject_attachments_owo(variant_id, "sight" {
 		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
 		{id = "owo_rear_sight_02", name = "OwO Aperture, U Notch (Up)"},
 		{id = "owo_rear_sight_o_00", name = "OwO _n_"},
@@ -3435,30 +3435,30 @@ function mod.owo_rear_sight(variant_id, given_type)
 		{id = "owo_rear_sight_o_02", name = "OwO MAS49/56 Irons"},
 		{id = "owo_rear_sight_o_03", name = "OwO MAS49 (starving)"},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac1" {
 		{id = "owo_rear_sight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac1_01", name = "Flip sight range select 1", no_randomize = true},
 		{id = "owo_rear_sight_ac1_02", name = "MAS49 Peep 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac2" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac2" {
 		{id = "owo_rear_sight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac2_01", name = "Flip sight range select 2", no_randomize = true},
 		{id = "owo_rear_sight_ac2_02", name = "MAS49 Peep 2", no_randomize = true},
 		{id = "owo_rear_sight_ac2_03", name = "MAS49/56 Feet", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac3" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac3" {
 		{id = "owo_rear_sight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac3_01", name = "Rear Aperture 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac4" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac4" {
 		{id = "owo_rear_sight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac4_01", name = "Rear Aperture 2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac5" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac5" {
 		{id = "owo_rear_sight_empty_05", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac5_01", name = "MAS49 sight seat", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac6" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac6" {
 		{id = "owo_rear_sight_empty_06", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac6_01", name = "MAS49 bulge", no_randomize = true},
 	})
@@ -3595,35 +3595,35 @@ end
 -- Sight: Kalashnikov Rear Sights
 --	I made 1 and 2 before noticing thte range select was already a part in game lmfao
 function mod.owo_rear_sight_ak(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "sight" or type, {
+	mod.inject_attachments_owo(variant_id, "sight" {
 		{id = "owo_rear_sight_ak_01", name = "OwO AK Irons"},
 		{id = "owo_rear_sight_ak_02", name = "OwO AK Irons w/ Dust Cover"},
 		{id = "owo_rear_sight_ak_03", name = "OwO AK Scuffed Irons"},
 		{id = "owo_rear_sight_ak_04", name = "OwO AK Scuffed Irons2"},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac1" {
 		{id = "owo_rear_sight_ak_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac1_01", name = "AK Range select 1", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac1_02", name = "AK Range select 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac2" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac2" {
 		{id = "owo_rear_sight_ak_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac2_01", name = "AK Range select 2", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac2_02", name = "AK Range select 2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac3" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac3" {
 		{id = "owo_rear_sight_ak_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac3_01", name = "Rear Aperture 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac4" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac4" {
 		{id = "owo_rear_sight_ak_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac4_01", name = "Rear Aperture 2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac5" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac5" {
 		{id = "owo_rear_sight_ak_empty_05", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac5_01", name = "AK Bottom notch", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac6" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac6" {
 		{id = "owo_rear_sight_ak_empty_06", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ak_ac6_01", name = "AK Dust Cover", no_randomize = true},
 	})
@@ -3870,7 +3870,7 @@ end
 --		EOTech HWS (Holographic Weapon Sight)
 --		Vortex Razor AMG UH-1
 function mod.owo_holosight(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "sight" or type, {
+	mod.inject_attachments_owo(variant_id, "sight" {
 		{id = "owo_holosight_01_01", name = "OwO EOTech"},
 		{id = "owo_holosight_01_02_z1", name = "OwO EOTech+Magnifier (1.25x)"},
 		{id = "owo_holosight_01_02_z2", name = "OwO EOTech+Magnifier (1.75x)"},
@@ -3888,32 +3888,32 @@ function mod.owo_holosight(variant_id, given_type)
 		{id = "owo_holosight_02_02ss_z2", name = "OwO Razor + M (Short, 1.75x)"},
 		{id = "owo_holosight_02_03ss", name = "OwO Razor + M/s (Short)"},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac1" {
 		{id = "owo_holosight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_helper_01", name = "OwO EOTech'vesa sight container 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac2" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac2" {
 		{id = "owo_holosight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_helper_02", name = "OwO EOTech'vesa sight container 2", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac3" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac3" {
 		{id = "owo_holosight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_helper_03", name = "OwO EOTech'vesa base bulge", no_randomize = true},
 		{id = "owo_holosight_helper_03_02", name = "OwO Razor'vesa front scope hood", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac4" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac4" {
 		{id = "owo_holosight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_helper_04", name = "OwO EOTech'vesa base", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sight_secondary" or type, {
+	mod.inject_attachments_owo(variant_id, "sight_secondary" {
 		{id = "owo_holosight_empty2", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_sight_secondary_01", name = "OwO EOTech Magnifier Stand", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sight_secondary_ac1" or type, {
+	mod.inject_attachments_owo(variant_id, "sight_secondary_ac1" {
 		{id = "owo_holosight_empty2_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_sight_secondary_helper_01", name = "OwO EOTech Magnifier 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2" or type, {
+	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2" {
 		{id = "owo_holosight_empty2_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holosight_sight_secondary_helper_02", name = "OwO EOTech Magnifier 2", no_randomize = true},
 	})
@@ -4671,11 +4671,11 @@ function mod.owo_pu_scope(variant_id, given_type)
 		{id = "owo_pu_scope_empty2", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_riser_01", name = "PU Scope Riser", no_randomize = true},
 	})
-	--[[mod.inject_attachments_owo(variant_id, "sight_secondary_ac1" or type, {
+	--[[mod.inject_attachments_owo(variant_id, "sight_secondary_ac1" {
 		{id = "owo_pu_scope_empty", name = "Empty Scope"},
 		{id = "owo_pu_scope2_helper_01", name = "PU Scope Riser'vesa"},
 	})
-	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2" or type, {
+	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2" {
 		{id = "owo_pu_scope_empty", name = "Empty Scope"},
 		{id = "owo_pu_scope2_helper_02", name = "PU Scope Riser'vesa"},
 	})]]
@@ -4952,7 +4952,7 @@ end
 --		Lasgun and Autogun mags
 --		All done with scaling in the weapon classes
 function mod.owo_magazine_flat(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+	mod.inject_attachments_owo(variant_id, "magazine" {
 		{id = "owo_lasgun_magazine_flat_01", name = "OwO Flat Mag (Las) 1"},
 		{id = "owo_autogun_magazine_flat_03", name = "OwO Flat Mag (Autogun) 3"},
 	})
@@ -4972,7 +4972,7 @@ end
 -- Magazine: Plasma
 --		Intended for Helbore since mt added plasma mags to some already?
 function mod.owo_plasma_mag(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+	mod.inject_attachments_owo(variant_id, "magazine" {
 		{id = "owo_plasma_mag_01", name = "OwO Plasma Mag 1"},
 		{id = "owo_plasma_mag_02", name = "OwO Plasma Mag 2"},
 		{id = "owo_plasma_mag_03", name = "OwO Plasma Mag 3"},
@@ -4984,7 +4984,7 @@ function mod.owo_plasma_mag(variant_id, given_type)
 		{id = "owo_plasma_mag_04ss", name = "OwO Plasma Mag 4 (SS)"},
 		{id = "owo_plasma_melta_mag_01ss", name = "OwO Melta Mag (SS)"},
 	})
-	mod.inject_attachments_owo(variant_id, "magac" or type, {
+	mod.inject_attachments_owo(variant_id, "magac" {
 		{id = "owo_plasma_mag_helper_00", name = "Empty magac"},
 		{id = "owo_plasma_mag_helper_01", name = "OwO Plasma Mag Helper 1", no_randomize = true},
 		{id = "owo_plasma_mag_helper_02", name = "OwO Plasma Mag Helper 2", no_randomize = true},
@@ -5056,7 +5056,7 @@ end
 --		For Straight Grip and Recon Stock
 -- 		I stole this from Syn
 function mod.owo_lasgun_magazine_rear(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+	mod.inject_attachments_owo(variant_id, "magazine" {
 		{id = "owo_lasgun_magazine_rear_01", name = "OwO Rear Mag 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "rearmag", {
@@ -5087,7 +5087,9 @@ end
 -- Magazine: Jungle Mags
 --		Autoguns
 function mod.owo_jungle_mag(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+	
+
+	mod.inject_attachments_owo(variant_id, "magazine" {
 		{id = "owo_jungle_mag_01", name = "OwO Jungle Mag 1 v^"},
 		{id = "owo_jungle_mag_02", name = "OwO Jungle Mag 2 v^"},
 		{id = "owo_jungle_mag_03", name = "OwO Jungle Mag 3 v^"},
@@ -5105,26 +5107,26 @@ function mod.owo_jungle_mag(variant_id, given_type)
 		{id = "owo_jungle_mag_03_up_flip", name = "OwO Jungle Mag 3 ^^ (R)"},
 		{id = "owo_jungle_mag_04_up_flip", name = "OwO Jungle Mag 4 ^^ (R)"},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac1" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac1" {
 		{id = "owo_jungle_mag_empty_01", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_helper_01", name = "OwO Jungle Mag'vesa 1", no_randomize = true},
 		{id = "owo_jungle_mag_helper_02", name = "OwO Jungle Mag'vesa 2", no_randomize = true},
 		{id = "owo_jungle_mag_helper_03", name = "OwO Jungle Mag'vesa 3", no_randomize = true},
 		{id = "owo_jungle_mag_helper_04", name = "OwO Jungle Mag'vesa 4", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac2" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac2" {
 		{id = "owo_jungle_mag_empty_02", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_connector_f_01", name = "OwO Jungle Connector f 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac3" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac3" {
 		{id = "owo_jungle_mag_empty_03", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_connector_b_01", name = "OwO Jungle Connector b 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac4" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac4" {
 		{id = "owo_jungle_mag_empty_04", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_connector_l_01", name = "OwO Jungle Connector l 1", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac5" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac5" {
 		{id = "owo_jungle_mag_empty_05", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_connector_r_01", name = "OwO Jungle Connector r 1", no_randomize = true},
 	})
@@ -5308,22 +5310,25 @@ end
 
 -- Magazine: Mag Assists
 --	Magpul magazine assists/pulls
-function mod.owo_magazine_magpull(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+function mod.owo_magazine_magpull(variant_id, given_type, given_parent)
+	local current_type = given_type or "magazine"
+	local current_parent = given_type or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_magazine_magpull_01", name = "OwO Magpul 1"},
 		{id = "owo_magazine_magpull_02", name = "OwO Magpul 2"},
 		{id = "owo_magazine_magpull_03", name = "OwO Magpul 3"},
 		{id = "owo_magazine_magpull_04", name = "OwO Magpul 4"},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac1" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac1", {
 		{id = "owo_magazine_magpull_helper_01_empty", name = "Empty Magac1"},
 		{id = "owo_magazine_magpull_helper_01", name = "OwO Autogun Magpul'vesa 1"},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac2" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac2", {
 		{id = "owo_magazine_magpull_helper_02_empty", name = "Empty Magac2"},
 		{id = "owo_magazine_magpull_helper_02", name = "OwO Autogun Magpul'vesa 2"},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac3" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac3", {
 		{id = "owo_magazine_magpull_helper_03_empty", name = "Empty Magac3"},
 		{id = "owo_magazine_magpull_helper_03", name = "OwO Autogun Magpul'vesa 3"},
 	})
@@ -5331,32 +5336,32 @@ function mod.owo_magazine_magpull(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_magazine_magpull_01 = {
-			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = "magazine", parent = "receiver", 
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_01", type = current_type, parent = current_parent, 
 			automatic_equip = { owo_magac1 = "owo_magazine_magpull_helper_01", owo_magac2 = "owo_magazine_magpull_helper_02", 
 				owo_magac3 = "owo_magazine_magpull_helper_03",
 			},
 		},
 		owo_magazine_magpull_02 = {
-			model = _item_ranged.."/magazines/autogun_rifle_magazine_02", type = "magazine", parent = "receiver", 
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_02", type = current_type, parent = current_parent, 
 			automatic_equip = { owo_magac1 = "owo_magazine_magpull_helper_01", owo_magac2 = "owo_magazine_magpull_helper_02", 
 				owo_magac3 = "owo_magazine_magpull_helper_03",
 			},
 		},
 		owo_magazine_magpull_03 = {
-			model = _item_ranged.."/magazines/autogun_rifle_magazine_03", type = "magazine", parent = "receiver", 
+			model = _item_ranged.."/magazines/autogun_rifle_magazine_03", type = current_type, parent = current_parent, 
 			automatic_equip = { owo_magac1 = "owo_magazine_magpull_helper_01", owo_magac2 = "owo_magazine_magpull_helper_02", 
 				owo_magac3 = "owo_magazine_magpull_helper_03",
 			},
 		},
 		owo_magazine_magpull_04 = {
-			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = "magazine", parent = "receiver", 
+			model = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01", type = current_type, parent = current_parent, 
 			automatic_equip = { owo_magac1 = "owo_magazine_magpull_helper_01", owo_magac2 = "owo_magazine_magpull_helper_02", 
 				owo_magac3 = "owo_magazine_magpull_helper_03",
 			},
 		},
 		-- ### Helpers ###
 		owo_magazine_magpull_helper_01 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "owo_magac1", parent = "magazine", 
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "owo_magac1", parent = current_type, 
 		},
 		owo_magazine_magpull_helper_02 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "owo_magac2", parent = "owo_magac1", 
@@ -5367,7 +5372,7 @@ function mod.owo_magazine_magpull(variant_id, given_type)
 		},
 		-- ### Empty ###
 		owo_magazine_magpull_helper_01_empty = {
-			model = "", type = "owo_magac1", parent = "magazine", 
+			model = "", type = "owo_magac1", parent = current_type, 
 		},
 		owo_magazine_magpull_helper_02_empty = {
 			model = "", type = "owo_magac2", parent = "owo_magac1", 
@@ -5382,12 +5387,12 @@ end
 --	Oh fuck the bullets don't move if I only move the mag
 --[[
 function mod.owo_magazine_ak(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "magazine" or type, {
+	mod.inject_attachments_owo(variant_id, "magazine" {
 		{id = "owo_magazine_ak_01", name = "OwO AK Mag"},
 		{id = "owo_magazine_ak_02", name = "OwO AK Mag Curvy"},
 		{id = "owo_magazine_ak_03", name = "OwO AK Mag Curvy (Extended)"},
 	})
-	mod.inject_attachments_owo(variant_id, "owo_magac1" or type, {
+	mod.inject_attachments_owo(variant_id, "owo_magac1" {
 		{id = "owo_magazine_ak_ac1_00", name = "OwO AK Mag'vesa Empty"},
 		{id = "owo_magazine_ak_ac1_01", name = "OwO AK Mag'vesa"},
 	})
@@ -5443,7 +5448,7 @@ mod.wc.KUMQUATs = {
 }
 
 function mod.owo_<NAME>(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, "" or type, {
+	mod.inject_attachments_owo(variant_id, "" {
 		{id = "owo_", name = "OwO "},
 	})
 
