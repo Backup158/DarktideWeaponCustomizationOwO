@@ -74,7 +74,7 @@ mod.wc.crossguard_list = {
 	"owo_crossguard_default",
 	"owo_crossguard_plate_01",
 }
-mod.create_new_slot("crossguard", 
+mod.create_custom_slot("crossguard", 
 	{
 		en = "Crossguard",
 	}
@@ -146,7 +146,7 @@ mod:add_global_localize_strings({
 	},
 })
 ]]
-mod.create_new_slot("frontguard", {
+mod.create_custom_slot("frontguard", {
 	en = "Front Guard",
 })
 

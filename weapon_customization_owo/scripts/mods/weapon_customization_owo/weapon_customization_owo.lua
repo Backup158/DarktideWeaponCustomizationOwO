@@ -132,14 +132,14 @@ function mod.on_all_mods_loaded()
 	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
 	-- ############################################################################
 	-- ######
-	-- Creating a New Slot
+	-- Creating a New Custom Slot
 	-- DESCRIPTION: In the melee/ranged files, create a slot and inserts to the slot table
 	-- PARAMETER(S):
 	--		string: slot_name
 	--		table: slot_localization_table
 	-- RETURN: N/A
 	-- ######
-	function mod.create_new_slot(slot_name, slot_localization_table)
+	function mod.create_custom_slot(slot_name, slot_localization_table)
 		table.insert(wc.attachment_slots, slot_name)
 		mod:add_global_localize_strings({
 			["loc_weapon_cosmetics_customization_"..slot_name] = slot_localization_table
