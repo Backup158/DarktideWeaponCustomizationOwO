@@ -69,7 +69,7 @@ mod.owo_m16_barrel(this_variant, "barrel")
 mod.owo_wood_krieg(this_variant, "barrel")
 
 mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
-mod.owo_bayonet(this_variant, "bayonet")
+mod.owo_historical_bayonet(this_variant, "bayonet")
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_underbarrel_shotgun(this_variant, "bayonet")
 
@@ -221,10 +221,10 @@ mod.mt.inject_fixes(this_variant, {
         muzzle_6 = {hide_mesh = {{"muzzle_6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_6 = "owo_muzzle_brake_helper_05_00"}, },
     },
     -- Bayonet
-    {	dependencies =  { "owo_dreg_bayonet_rear_01|owo_bayonet_m7_helper_01|owo_bayonet_seitengewehr_helper_01|owo_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
+    {	dependencies =  { "owo_dreg_bayonet_rear_01|owo_historical_bayonet_m7_helper_01|owo_historical_bayonet_seitengewehr_helper_01|owo_historical_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
         bayonetac1 = {hide_mesh = {     {"bayonetac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
-    {	dependencies =  { "owo_bayonet_m7_helper_02|owo_bayonet_seitengewehr_helper_02|owo_bayonet_epee_helper_02|owo_m203_helper_02|owo_gp25_helper_02|owo_underbarrel_shotgun_helper_02|owo_underbarrel_shotgun_helper_02_02"},
+    {	dependencies =  { "owo_historical_bayonet_m7_helper_02|owo_historical_bayonet_seitengewehr_helper_02|owo_historical_bayonet_epee_helper_02|owo_m203_helper_02|owo_gp25_helper_02|owo_underbarrel_shotgun_helper_02|owo_underbarrel_shotgun_helper_02_02"},
         bayonetac2 = {hide_mesh = {     {"bayonetac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
     {	dependencies =  { "owo_m203_helper_03|owo_gp25_helper_03|owo_underbarrel_shotgun_helper_03|owo_underbarrel_shotgun_helper_03_02"},
@@ -1632,10 +1632,10 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
 	--  M7 Bayonet
     --  -------------------------------------------
-    {   dependencies =  { "owo_bayonet_m7_01", _m16_all_barrels, },
+    {   dependencies =  { "owo_historical_bayonet_m7_01", _m16_all_barrels, },
         bayonet =       { offset = true, position = vector3_box(0, 0.158, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
     },
-    {   dependencies =  { "owo_bayonet_m7_01", },
+    {   dependencies =  { "owo_historical_bayonet_m7_01", },
         bayonet =       { offset = true, position = vector3_box(0, 0.47, -0.048), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.002, -0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         bayonetac2 =    { offset = true, position = vector3_box(0, -0.012, -0.002), rotation = vector3_box(0, 90, 180), scale = vector3_box(0.25, 0.825, 0.25) },
@@ -1643,10 +1643,10 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
 	--  Seitengewehr 98
     --  -------------------------------------------
-	{   dependencies =  { "owo_bayonet_seitengewehr", "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03" },
+	{   dependencies =  { "owo_historical_bayonet_seitengewehr", "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03" },
         bayonet =       { offset = true, position = vector3_box(0, 0.575, -0.06), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
-    {   dependencies =  { "owo_bayonet_seitengewehr", },
+    {   dependencies =  { "owo_historical_bayonet_seitengewehr", },
         bayonet =       { offset = true, position = vector3_box(0, 0.575, -0.048), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.002, -0.036), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.46, 0.25) },
         bayonetac2 =    { offset = true, position = vector3_box(0, 0, -0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.6, 0.2) },
@@ -1654,10 +1654,10 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
 	--  Épée baïonnette modèle 1886 Lebel
     --  -------------------------------------------
-	{   dependencies =  { "owo_bayonet_epee", "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03" },
+	{   dependencies =  { "owo_historical_bayonet_epee", "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03" },
         bayonet =       { offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
     },
-    {   dependencies =  { "owo_bayonet_epee", },
+    {   dependencies =  { "owo_historical_bayonet_epee", },
         bayonet =       { offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.025, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.1, 1.35, 0.6) },
         bayonetac2 =    { offset = true, position = vector3_box(0, 0.06, 0.014), rotation = vector3_box(180, 0, 180), scale = vector3_box(0.25, 0.09, 0.245) },

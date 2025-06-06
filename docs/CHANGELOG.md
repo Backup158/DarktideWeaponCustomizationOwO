@@ -4,8 +4,9 @@ v2.0.0
 **BREAKING CHANGE(S)**: 
 - Renamed `holosight` to `holographic_sight`, for function AND attachment names. 
 - Renamed `owo_rear_sight_ak` to `owo_kalashnikov_rear_sight`, for function AND attachment names. 
+- Renamed `owo_bayonet` to `owo_historical_bayonet`, for function AND attachment names. 
 
-ALL affected sights must be reequipped! Any patches will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well do this because it's been bugging me for months.
+ALL affected attachments must be reequipped! Any patches and fixes will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well rename them because it's been bugging me for months.
 
 `rear_sight_ak` made it harder to mass replace.
 
@@ -19,6 +20,9 @@ Refactor:
     - Trench Dagger Finger Guards
     - Shovel Handles
     - Historical Blades
+    - Historical Bayonets
+    - Underbarrel Grenade Launchers
+    - Underbarrel Shotguns
     - Ladder Aperture Sights
     - Kalashnikov Rear Sights
     - M16 Carry Handle Sights
