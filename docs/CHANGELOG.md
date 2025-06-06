@@ -1,3 +1,9 @@
+# 
+v1.9.0
+
+Added:
+- Disk Crossguard
+
 # 2025-05-18
 v1.8.1
 
