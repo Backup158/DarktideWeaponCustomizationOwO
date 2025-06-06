@@ -964,14 +964,17 @@ function mod.fixes_owo_muzzle_brake(variant_id)
 end
 
 -- Barrel: Bolt Pistol Shotgun barrel (short)
-function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type)
+function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type, given_parent)
+	local current_type = given_type or "barrel"
+	local current_parent = given_parent or "receiver"
+
 	--[[
 	1,6 dont work, but 2-5 do
 		setting offset to false made 1,6 as 2d models not following the gun and no scale
 		what the FUCK?
 	
 	]]
-	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
+	mod.inject_attachments_owo(variant_id, current_type, {
 		--{id = "owo_bistol_sg_base_01", name = "OwO Shotgun Shorty 1"},
 		{id = "owo_bistol_sg_base_04", name = "OwO Shotgun Shorty 1 (4)"},
 		{id = "owo_bistol_sg_base_05", name = "OwO Shotgun Shorty 2 (5)"},
@@ -995,104 +998,106 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type)
 
 	mod.inject_models(variant_id, {
 		--[[owo_bistol_sg_base_01 = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_01",
 			}
 		}, 
 		]]
 		owo_bistol_sg_base_04 = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04",
 			}
 		}, 
 		owo_bistol_sg_base_05 = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05",
 			}
 		}, 
 		owo_bistol_sg_base_06 = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06",
 			}
 		}, 
 		owo_bistol_sg_base_08 = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08",
 			}
 		}, 
 		--[[owo_bistol_sg_base_09 = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_09",
 			}
 		}, 
 		]]
 		owo_bistol_sg_base_04_s = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04",
 			}
 		}, 
 		owo_bistol_sg_base_05_s = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05",
 			}
 		}, 
 		owo_bistol_sg_base_06_s = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06",
 			}
 		}, 
 		owo_bistol_sg_base_08_s = {
-			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08",
 			}
 		}, 
 		owo_bistol_shotgun_barrel_short_empty = {
-			model = "", type = "barrelshroud", parent = "barrel"
+			model = "", type = "barrelshroud", parent = current_type
 		},
 		--[[owo_bistol_shotgun_barrel_short_01 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel"
+			mesh_move = false, parent = current_type
 		},
 		]]
 		owo_bistol_shotgun_barrel_short_04 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_bistol_shotgun_barrel_short_05 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_bistol_shotgun_barrel_short_06 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		owo_bistol_shotgun_barrel_short_08 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		--[[owo_bistol_shotgun_barrel_short_09 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel"
+			mesh_move = false, parent = current_type
 		}
 		]]
 	})
 end
 
 -- Barrel: Revolver Shotgun Barrel
-function mod.owo_revolver_shotgun_barrel(variant_id, given_type)
-	--[[ what the FUCK is wrong with barrels 1 and 9
-	]]
-	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
+function mod.owo_revolver_shotgun_barrel(variant_id, given_type, given_parent)
+	local current_type = given_type or "barrel"
+	local current_parent = given_parent or "receiver"
+
+	-- what the FUCK is wrong with barrels 1 and 9
+	mod.inject_attachments_owo(variant_id, current_type, {
 		--{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel (1)"},
 		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel (4)"},
 		{id = "owo_revolver_shotgun_barrel_base_04b", name = "OwO Shotgun Barrel (4b)"},
@@ -1121,83 +1126,88 @@ function mod.owo_revolver_shotgun_barrel(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		--[[owo_revolver_shotgun_barrel_base_01 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_01"},
 		},]]
 		owo_revolver_shotgun_barrel_base_04 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, -- parent = current_parent,
 			-- this was in wc/weapon_attachments/stub.lua and i thought it'd fix the animation issue but no fuck me im just too desperate
 			-- angle = -.5, move = vector3_box(0, -2, 0), remove = vector3_box(0, .1, 0),
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
 		},
 		owo_revolver_shotgun_barrel_base_04b = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
 		},
 		owo_revolver_shotgun_barrel_base_05 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, -- parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_05"},
 		},
 		owo_revolver_shotgun_barrel_base_06 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, -- parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_06"},
 		},
 		owo_revolver_shotgun_barrel_base_08 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", -- parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, -- parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_08"},
 		},
 		--[[owo_revolver_shotgun_barrel_base_09 = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_09"},
 		},]]
 		owo_revolver_shotgun_barrel_base_04_l = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
 		},
 		owo_revolver_shotgun_barrel_base_04b_l = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_04"},
 		},
 		owo_revolver_shotgun_barrel_base_05_l = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_05"},
 		},
 		owo_revolver_shotgun_barrel_base_06_l = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_06"},
 		},
 		owo_revolver_shotgun_barrel_base_08_l = {
-			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = "barrel", parent = "receiver",
+			model = _item_ranged.."/barrels/stubgun_pistol_barrel_01", type = current_type, parent = current_parent,
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_08"},
 		},
 		-- ### Helper Parts ###
 		owo_revolver_shotgun_barrel_empty = {
-			model = "", type = "barrelshroud", parent = "barrel",
+			model = "", type = "barrelshroud", parent = current_type,
 		},
 		--[[owo_revolver_shotgun_barrel_01 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", parent = "barrel",
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", parent = current_type,
 		},]]
 		owo_revolver_shotgun_barrel_04 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroud", parent = "barrel",
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_04", type = "barrelshroud", parent = current_type,
 		},
 		owo_revolver_shotgun_barrel_05 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelshroud", parent = "barrel",
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_05", type = "barrelshroud", parent = current_type,
 		},
 		owo_revolver_shotgun_barrel_06 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelshroud", parent = "barrel",
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_06", type = "barrelshroud", parent = current_type,
 		},
 		owo_revolver_shotgun_barrel_08 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroud", parent = "barrel",
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_08", type = "barrelshroud", parent = current_type,
 		},
-		--[[owo_revolver_shotgun_barrel_09 = {
-			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroud", parent = "barrel",
-		},]]
+		--[[
+		owo_revolver_shotgun_barrel_09 = {
+			model = _item_ranged.."/barrels/shotgun_rifle_barrel_09", type = "barrelshroud", parent = current_type,
+		},
+		]]
 	})
 end
 
 -- Barrel: Dreg Gunner barrel
-function mod.owo_dreg_gunner_barrel(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
+function mod.owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
+	local current_type = given_type or "stbarrelock"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
@@ -1224,8 +1234,8 @@ function mod.owo_dreg_gunner_barrel(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- thanks syn for the exitus barrel
 		owo_dreg_barrel_01 = {
-			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_02", type = "barrel", 
-			mesh_move = false, parent = 'receiver', 
+			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_02", type = current_type, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = {
 				barrelshroud= "owo_dreg_shroud_01", 
 				barrelshroudac= "owo_dreg_shroudac_01", 
@@ -1236,11 +1246,11 @@ function mod.owo_dreg_gunner_barrel(variant_id, given_type)
 		},
 		owo_dreg_shroud_01 = {
 			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_01", type = "barrelshroud", 
-			mesh_move = false, parent = 'receiver'
+			mesh_move = false, parent = current_parent
 		},
 		--[[owo_dreg_shroudac_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "barrelshroudac", 
-			mesh_move = false, parent = 'receiver'
+			mesh_move = false, parent = current_parent
 		},]]
 		owo_dreg_shroudac2_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_02", type = "barrelshroudac2", 
@@ -1256,27 +1266,30 @@ function mod.owo_dreg_gunner_barrel(variant_id, given_type)
 		},
 		owo_dreg_shroud_empty = {
 			model = "", type = "barrelshroudac", 
-			mesh_move = false, parent = 'receiver'
+			mesh_move = false, parent = current_parent
 		},
 		owo_dreg_shroud_empty_02 = {
 			model = "", type = "barrelshroudac2", 
-			mesh_move = false, parent = 'receiver'
+			mesh_move = false, parent = current_parent
 		},
 		owo_dreg_shroud_empty_03 = {
 			model = "", type = "barrelshroudac3", 
-			mesh_move = false, parent = 'receiver'
+			mesh_move = false, parent = current_parent
 		},
 		owo_dreg_shroud_empty_04 = {
 			model = "", type = "barrelshroudac4", 
-			mesh_move = false, parent = 'receiver'
+			mesh_move = false, parent = current_parent
 		},
 	})
 end
 
 -- Barrel: M16 barrels
 -- 		Autoguns
-function mod.owo_m16_barrel(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
+function mod.owo_m16_barrel(variant_id, given_type, given_parent)
+	local current_type = given_type or "barrel"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_m16_barrel_a1", name = "OwO M16a1 Barrel 1"},
 		{id = "owo_m16_barrel_a1_02", name = "OwO M16a1 Barrel 2"},
 		{id = "owo_m16_barrel_a2", name = "OwO M16a2 Barrel"},
@@ -1317,8 +1330,8 @@ function mod.owo_m16_barrel(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Main Parts ###
 		owo_m16_barrel_a1 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 				barrelshroudac3 = "owo_m16_barrelshroudac3_a1",
@@ -1326,24 +1339,24 @@ function mod.owo_m16_barrel(variant_id, given_type)
 			}
 		},
 		owo_m16_barrel_a2 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_a1_02 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_t_a1 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 				barrelshroudac3 = "owo_m16_barrelshroudac3_a1",
@@ -1351,109 +1364,112 @@ function mod.owo_m16_barrel(variant_id, given_type)
 			}
 		},
 		owo_m16_barrel_t_a2 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_t_a1_02 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02",
 				barrelshroudac2 = "owo_m16_barrelshroudac2_01",
 				barrelshroudac4 = "owo_m16_barrelshroudac4_01", barrelshroudac5 = "owo_m16_barrelshroudac5_01", barrelshroudac6 = "owo_m16_barrelshroudac6_01",
 			}
 		},
 		owo_m16_barrel_n_a1 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver", 
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1",
 				barrelshroudac3 = "owo_m16_barrelshroudac3_a1",
 			}
 		},
 		owo_m16_barrel_n_a2 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a2",
 			}
 		},
 		owo_m16_barrel_n_a1_02 = {
-			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_pistol_barrel_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_m16_barrelshroud_a1_02", }
 		},
 		-- ### Helper Parts ###
 		owo_m16_barrelshroud_a1 = {
 			model = _item_melee.."/grips/hatchet_grip_03", type = "barrelshroud", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_barrelshroud_a2 = {
 			model = _item_melee.."/grips/hatchet_grip_04", type = "barrelshroud", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_barrelshroud_a1_02 = {
 			model = _item_melee.."/grips/hatchet_grip_05", type = "barrelshroud", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		-- Front Post
 		owo_m16_barrelshroudac2_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "barrelshroudac2", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		-- helper a1 grip
 		owo_m16_barrelshroudac3_a1 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "barrelshroudac3", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		-- Front Post Sights
 		-- middle then sides
 		owo_m16_barrelshroudac4_01 = {
 			-- why tf is it like this???
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = "barrelshroudac4", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_barrelshroudac5_01 = {
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "barrelshroudac5", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_barrelshroudac6_01 = {
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "barrelshroudac6", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		-- ### Empty ###
 		owo_m16_empty = {
 			model = "", type = "barrelshroud", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_empty_02 = {
 			model = "", type = "barrelshroudac2", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_empty_03 = {
 			model = "", type = "barrelshroudac3", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_empty_04 = {
 			model = "", type = "barrelshroudac4", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_empty_05 = {
 			model = "", type = "barrelshroudac5", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 		owo_m16_empty_06 = {
 			model = "", type = "barrelshroudac6", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent
 		},
 	})
 
 end
 
 -- Barrel: Wooden Helbore
-function mod.owo_wood_krieg(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
+function mod.owo_wood_krieg(variant_id, given_type, given_parent)
+	local current_type = given_type or "barrel"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_wood_krieg_01", name = "OwO Wooden Helbore 1 (2)"},
 		{id = "owo_wood_krieg_02", name = "OwO Wooden Helbore 2 (3)"},
 		{id = "owo_wood_krieg_03", name = "OwO Wooden Helbore 3 (7)"},
@@ -1466,29 +1482,29 @@ function mod.owo_wood_krieg(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_wood_krieg_01 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_wood_krieg_ac1_01", }
 		},
 		owo_wood_krieg_02 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_04", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_wood_krieg_ac1_01", }
 		},
 		owo_wood_krieg_03 = {
-			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_ml01", type = "barrel", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/barrels/lasgun_rifle_krieg_barrel_ml01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { barrelshroud = "owo_wood_krieg_ac1_01", }
 		},
 		-- ### Helper Parts ###
 		owo_wood_krieg_ac1_01 = {
 			model = _item_ranged.."/handles/combat_blade_handle_01", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel",
+			mesh_move = false, parent = current_type,
 		},
 		-- ### Empty ###
 		owo_wood_krieg_empty = {
 			model = "", type = "barrelshroud", 
-			mesh_move = false, parent = "barrel"
+			mesh_move = false, parent = current_type
 		},
 	})
 
