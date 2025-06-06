@@ -13,6 +13,7 @@ local this_variant = "combatsword_p1_m1" -- Catachan "Devil's Claw" Sword
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
+-- WHY WONT THIS SHIT WOOOOOORK
 --mod.wc.attachment[this_variant].hilt = {}
 mod.initialize_custom_slot_for_weapon(this_variant, "crossguard")
 
