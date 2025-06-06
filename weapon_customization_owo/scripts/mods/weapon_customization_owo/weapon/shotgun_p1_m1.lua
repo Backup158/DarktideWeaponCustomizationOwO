@@ -37,10 +37,13 @@ mod.wc.attachment[this_variant].sight_secondary = {}
 mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
 mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 
+--[[
 mod.wc.attachment[this_variant].stock_2 = {}
 -- Inject empty stock_2 for default, since this slot is selectable
 mod.inject_attachments_owo(this_variant, "stock_2", { {id = "owo_stock_02_empty", name = "None"}, })
 mod.inject_models(this_variant, { owo_stock_02_empty = { model = "", type = "stock_2", parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_00", }, }, })
+]]
+mod.initialize_custom_slot_for_weapon(this_variant, "stock_2", "receiver")
 
 mod.wc.attachment[this_variant].muzzle_3 = {}
 

@@ -28,6 +28,8 @@ mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 -- 	When possible, I called functions directly from the MT plugin to reuse code with minimal copy-pasting
 --	Otherwise, many of the commands executed during on_all_mods_loaded are written directly into that function
 --	In other cases, the tables the function references are ones created directly in the function body
+-- My original works are wrapped in the :3 banners
+-- Feel free to steal those
 -- #########################################
 
 function mod.load_mod_file(relative_path)
@@ -140,7 +142,7 @@ function mod.on_all_mods_loaded()
 	-- RETURN: N/A
 	-- ######
 	function mod.create_custom_slot(slot_name, slot_localization_table)
-		table.insert(wc.attachment_slots, slot_name)
+		table.insert(mod.wc.attachment_slots, slot_name)
 		mod:add_global_localize_strings({
 			["loc_weapon_cosmetics_customization_"..slot_name] = slot_localization_table
 		})
@@ -155,7 +157,7 @@ function mod.on_all_mods_loaded()
 	-- RETURN: N/A
 	-- ######
 	function mod.initialize_custom_slot_for_weapon(this_variant, slot_name, parent_name)
-		wc.attachment[this_variant][slot_name] = {}
+		mod.wc.attachment[this_variant][slot_name] = {}
 		mod.inject_attachments_owo(this_variant, slot_name, {
 			{id = "owo_"..slot_name.."_default", name = "Empty "..slot_name},
 		})
