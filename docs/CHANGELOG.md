@@ -7,6 +7,8 @@ v2.0.0
 
 ALL affected sights must be reequipped! Any patches will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well do this because it's been bugging me for months.
 
+`rear_sight_ak` made it harder to mass replace.
+
 Added:
 - Disk Crossguard
 
