@@ -3470,31 +3470,31 @@ function mod.owo_ladder_aperture_sight(variant_id, given_type, given_parent)
 		-- ### Base Parts ###
 		-- the base sight is the ladder
 		owo_ladder_aperture_sight_01 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_01", sightac2 = "owo_ladder_aperture_sight_ac2_01",
 				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
 			}
 		},
 		owo_ladder_aperture_sight_02 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_01", sightac2 = "owo_ladder_aperture_sight_ac2_01",
 				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
 			}
 		},
 		-- mas sight
 		owo_ladder_aperture_sight_o_00 = {
-			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_02", sightac2 = "owo_ladder_aperture_sight_ac2_02",
 				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
 				sightac5 = "owo_ladder_aperture_sight_ac5_01", sightac6 = "owo_ladder_aperture_sight_empty",
 			}
 		},
 		owo_ladder_aperture_sight_o_01 = {
-			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_02", sightac2 = "owo_ladder_aperture_sight_ac2_02",
 				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
 				sightac5 = "owo_ladder_aperture_sight_ac5_01", sightac6 = "owo_ladder_aperture_sight_ac6_01",
@@ -3502,16 +3502,16 @@ function mod.owo_ladder_aperture_sight(variant_id, given_type, given_parent)
 		},
 		-- mas 49/56
 		owo_ladder_aperture_sight_o_02 = {
-			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_02", sightac2 = "owo_ladder_aperture_sight_empty",
 				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
 				sightac5 = "owo_ladder_aperture_sight_ac5_01", sightac6 = "owo_ladder_aperture_sight_ac6_01",
 			}
 		},
 		owo_ladder_aperture_sight_o_03 = {
-			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
-			mesh_move = false, parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_02", sightac2 = "owo_ladder_aperture_sight_empty",
 				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
 				sightac5 = "owo_ladder_aperture_sight_ac5_01", sightac6 = "owo_ladder_aperture_sight_empty",
@@ -3522,75 +3522,75 @@ function mod.owo_ladder_aperture_sight(variant_id, given_type, given_parent)
 		-- 	ladder sight select
 		owo_ladder_aperture_sight_ac1_01 = {
 			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "sightac1", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- 	mas peep
 		owo_ladder_aperture_sight_ac1_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "sightac1", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac2
 		-- 	ladder sight select
 		owo_ladder_aperture_sight_ac2_01 = {
 			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "sightac2", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- 	mas peep
 		owo_ladder_aperture_sight_ac2_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac2", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- 	mas 49/56 bulgey wulgey (fake)
 		owo_ladder_aperture_sight_ac2_03 = {
 			model = _item_melee.."/heads/power_maul_head_03", type = "sightac2", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac3
 		owo_ladder_aperture_sight_ac3_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "sightac3", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac4
 		owo_ladder_aperture_sight_ac4_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "sightac4", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac5
 		-- 	mas seat/feet
 		owo_ladder_aperture_sight_ac5_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "sightac5", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ac6
 		-- 	mas bulgey wulgey (real)
 		owo_ladder_aperture_sight_ac6_01 = {
 			model = _item_melee.."/heads/power_maul_head_03", type = "sightac6", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		-- ### Empty ###
 		owo_ladder_aperture_sight_empty_01 = {
 			model = "", type = "sightac1", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_ladder_aperture_sight_empty_02 = {
 			model = "", type = "sightac2", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_ladder_aperture_sight_empty_03 = {
 			model = "", type = "sightac3", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_ladder_aperture_sight_empty_04 = {
 			model = "", type = "sightac4", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_ladder_aperture_sight_empty_05 = {
 			model = "", type = "sightac5", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_ladder_aperture_sight_empty_06 = {
 			model = "", type = "sightac6", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 	})
 end
