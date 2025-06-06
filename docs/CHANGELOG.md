@@ -19,34 +19,44 @@ Refactor:
     - Removed now-redundant shotgun foregrip and sight_2 part initialization
     - Removed `owo_empty_foregrip()`
 - Modularized type identity (logic fix for the 'or type') for 
-    - Trench Dagger Finger Guards
-    - Shovel Handles
-    - Historical Blades
-    - Plasma Helbore Barrels
-    - Heterosexual Foregrips
-    - Tactical Foregrips
-    - Historical Bayonets
-    - Underbarrel Grenade Launchers
-    - Underbarrel Shotguns
-    - California Bolter Receivers
-    - Bolt Action Helbore Receivers
-    - Helbore MAS Receivers
-    - Laspistol Grip Mag Receivers
-    - Fin Grips
-    - Helbore Grip Stocks
-    - Tactical (Shotgun) Stocks
-    - Kalashnikov Stocks
-    - Beeg Stocks!
-    - Ladder Aperture Sights
-    - Kalashnikov Rear Sights
-    - M16 Carry Handle Sights
-    - Holographic Scopes
-    - Telescopic Scopes
-    - PU Scopes
-    - Flat Magazines
-    - Helbore Plasma Magazines
-    - Jungle Magazines
-    - Magpul Magazines
+    - Melee
+        - Trench Dagger Finger Guards
+        - Shovel Handles
+        - Historical Blades
+    - Ranged
+        - Suppressor Muzzles
+        - Lasgun Condom Muzzles
+        - Muzzle Brake
+        - Bolt Pistol Shotgun Barrels
+        - Revolver Shotgun Barrels
+        - Dreg Gunner Barrels
+        - M16 Barrels
+        - Wooden Helbore Barrels
+        - Plasma Helbore Barrels
+        - Heterosexual Foregrips
+        - Tactical Foregrips
+        - Historical Bayonets
+        - Underbarrel Grenade Launchers
+        - Underbarrel Shotguns
+        - California Bolter Receivers
+        - Bolt Action Helbore Receivers
+        - Helbore MAS Receivers
+        - Laspistol Grip Mag Receivers
+        - Fin Grips
+        - Helbore Grip Stocks
+        - Tactical (Shotgun) Stocks
+        - Kalashnikov Stocks
+        - Beeg Stocks!
+        - Ladder Aperture Sights
+        - Kalashnikov Rear Sights
+        - M16 Carry Handle Sights
+        - Holographic Scopes
+        - Telescopic Scopes
+        - PU Scopes
+        - Flat Magazines
+        - Helbore Plasma Magazines
+        - Jungle Magazines
+        - Magpul Magazines
 
 # 2025-05-18
 v1.8.1
