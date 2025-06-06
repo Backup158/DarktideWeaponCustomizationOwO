@@ -1785,7 +1785,7 @@ end
 
 -- Foregrip: Heterosexual Foregrips
 function mod.owo_heterosexual_foregrip(variant_id, given_type)
-	local current_type = type or "foregrip"
+	local current_type = given_type or "foregrip"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_heterosexual_foregrip_grip_01", name = "OwO Straight Grip (SG) 1"},
