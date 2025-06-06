@@ -150,20 +150,21 @@ function mod.on_all_mods_loaded()
 
 	-- ######
 	-- Initialize Custom Slot for Weapon
-	-- DESCRIPTION: Creates an empty table for the slot 
+	-- DESCRIPTION: Creates an empty table for the slot, then adds an empty default
+	--		Doesn't require a parent, since it's invisible and we won't see it anyways, so defaulting is fine
 	-- PARAMETER(S):
 	--		string: slot_name
 	--		table: slot_localization_table
 	-- RETURN: N/A
 	-- ######
-	function mod.initialize_custom_slot_for_weapon(this_variant, slot_name, parent_name)
+	function mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
 		mod.wc.attachment[this_variant][slot_name] = {}
 		mod.inject_attachments_owo(this_variant, slot_name, {
 			{id = "owo_"..slot_name.."_default", name = "Empty "..slot_name},
 		})
 		mod.inject_models(this_variant, {
 			["owo_"..slot_name.."_default"] = {
-				model = "", type = slot_name, mesh_move = false, parent = parent_name,
+				model = "", type = slot_name, mesh_move = false
 			},
 		})
 	end

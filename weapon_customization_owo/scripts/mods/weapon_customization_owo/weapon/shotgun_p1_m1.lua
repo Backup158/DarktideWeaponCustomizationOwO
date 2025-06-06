@@ -43,7 +43,7 @@ mod.wc.attachment[this_variant].stock_2 = {}
 mod.inject_attachments_owo(this_variant, "stock_2", { {id = "owo_stock_02_empty", name = "None"}, })
 mod.inject_models(this_variant, { owo_stock_02_empty = { model = "", type = "stock_2", parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_00", }, }, })
 ]]
-mod.initialize_custom_slot_for_weapon(this_variant, "stock_2", "receiver")
+mod.initialize_custom_slot_for_weapon(this_variant, "stock_2")
 
 mod.wc.attachment[this_variant].muzzle_3 = {}
 

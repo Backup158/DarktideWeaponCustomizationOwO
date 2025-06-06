@@ -13,9 +13,12 @@ local this_variant = "combataxe_p3_m1" -- Sapper Shovel
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].head2 = {}
-mod.wc.attachment[this_variant].pommelac1 = {}
-mod.wc.attachment[this_variant].pommelac2 = {}
+--mod.wc.attachment[this_variant].head2 = {}
+--mod.wc.attachment[this_variant].pommelac1 = {}
+--mod.wc.attachment[this_variant].pommelac2 = {}
+mod.initialize_custom_slot_for_weapon(this_variant, "head2")
+mod.initialize_custom_slot_for_weapon(this_variant, "pommelac1")
+mod.initialize_custom_slot_for_weapon(this_variant, "pommelac2")
 
 -- ############################################
 -- Injection Calls: attachments and models

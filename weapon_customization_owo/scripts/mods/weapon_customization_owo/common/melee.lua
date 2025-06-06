@@ -1620,8 +1620,10 @@ end
 --  D-Ring Handle mostly (D-Handle, D-Grip, etc.)
 --  ~~~~~~~~ Serrated Shovel ~~~~~~~~ this is literally already in the game dumb bitch
 --  ~~~~~~~~ Sheathed Shovel ~~~~~~~~ the straps are too big and the actual bag is too small. straps are part of the bag mesh
-function mod.owo_shovel_handles(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "pommel" or type, {
+function mod.owo_shovel_handles(variant_id, given_type)
+	local current_type = given_type or "pommel"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_shovel_handles_01", name = "OwO E-Tool Tri-Fold (Slim)"},
         {id = "owo_shovel_handles_02", name = "OwO E-Tool Tri-Fold 1"},
         {id = "owo_shovel_handles_03", name = "OwO D-Ring Handle 1"},
@@ -1658,12 +1660,12 @@ function mod.owo_shovel_handles(variant_id, type)
 		-- ### Base Parts ###
         --  Fucked up single /\ D-Ring Handle
         owo_shovel_handles_01 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "pommel", 
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
 			mesh_move = false, 
 		},
         --  Proper /\ D-Ring Handle
         owo_shovel_handles_02 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "pommel", 
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
 			mesh_move = false, parent = "pommel",
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_01", 
                 pommelac2 = "owo_shovel_handles_ac2_01", 
@@ -1671,21 +1673,21 @@ function mod.owo_shovel_handles(variant_id, type)
 		},
         --  simple D-Ring Handle
         owo_shovel_handles_03 = {
-			model = _item_melee.."/grips/power_sword_grip_04", type = "pommel", 
+			model = _item_melee.."/grips/power_sword_grip_04", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_02", 
                 pommelac2 = "owo_shovel_handles_ac2_02", 
 			},
 		},
         owo_shovel_handles_04 = {
-			model = _item_melee.."/grips/power_sword_grip_04", type = "pommel", 
+			model = _item_melee.."/grips/power_sword_grip_04", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_02", 
 			},
 		},
         owo_shovel_handles_05 = {
-			model = _item_melee.."/grips/power_sword_grip_04", type = "pommel", 
+			model = _item_melee.."/grips/power_sword_grip_04", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_02", 
@@ -1693,35 +1695,35 @@ function mod.owo_shovel_handles(variant_id, type)
 		},
         --  single D-Ring Handle, chainsword
         --owo_shovel_handles_06 = {
-		--	model = _item_melee.."/grips/chain_sword_grip_01", type = "pommel", 
+		--	model = _item_melee.."/grips/chain_sword_grip_01", type = current_type, 
 		--	mesh_move = false, 
         --    automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_03", 
         --        pommelac2 = "owo_shovel_handles_ac2_empty", 
 		--	},
 		--},
         owo_shovel_handles_07 = {
-			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommel", 
+			model = _item_melee.."/grips/chain_sword_grip_02", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_04", 
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
 			},
 		},
         owo_shovel_handles_08b = {
-			model = _item_melee.."/grips/chain_sword_grip_05", type = "pommel", 
+			model = _item_melee.."/grips/chain_sword_grip_05", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_05", 
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
 			},
 		},
 		owo_shovel_handles_07b = {
-			model = _item_melee.."/grips/chain_sword_grip_02", type = "pommel", 
+			model = _item_melee.."/grips/chain_sword_grip_02", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_04", 
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
 			},
 		},
         owo_shovel_handles_08 = {
-			model = _item_melee.."/grips/chain_sword_grip_05", type = "pommel", 
+			model = _item_melee.."/grips/chain_sword_grip_05", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_05", 
                 pommelac2 = "owo_shovel_handles_ac2_empty", 
@@ -1730,7 +1732,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		-- T-Handle
 		--	Synthetic
 		owo_shovel_handles_09 = {
-			model = _item_melee.."/grips/combat_knife_grip_01", type = "pommel", 
+			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_01", 
@@ -1738,7 +1740,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		},
 		-- 	Wood T
 		owo_shovel_handles_10 = {
-			model = _item_melee.."/grips/combat_knife_grip_01", type = "pommel", 
+			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_03", 
@@ -1746,7 +1748,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		},
 		-- 	Super Wood T
 		owo_shovel_handles_11 = {
-			model = _item_ranged.."/handles/combat_blade_handle_01", type = "pommel", 
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_03", 
@@ -1754,7 +1756,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		},
 		--  Wood T Metal end
 		owo_shovel_handles_12 = {
-			model = _item_ranged.."/handles/combat_blade_handle_01", type = "pommel", 
+			model = _item_ranged.."/handles/combat_blade_handle_01", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_04", 
@@ -1762,7 +1764,7 @@ function mod.owo_shovel_handles(variant_id, type)
 		},
 		--  Double Metal T
 		owo_shovel_handles_13 = {
-			model = _item_melee.."/grips/chain_axe_grip_01", type = "pommel", 
+			model = _item_melee.."/grips/chain_axe_grip_01", type = current_type, 
 			mesh_move = false, 
             automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
                 pommelac2 = "owo_shovel_handles_ac2_04", 
