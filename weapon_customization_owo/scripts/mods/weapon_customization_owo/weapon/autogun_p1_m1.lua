@@ -85,7 +85,7 @@ mod.owo_magazine_magpull(this_variant, "magazine")
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_m16_sight(this_variant, "sight")
-mod.owo_rear_sight_ak(this_variant)
+mod.owo_kalashnikov_rear_sight(this_variant)
 mod.owo_holographic_sight(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
 mod.owo_pu_scope(this_variant, "sight")
@@ -302,22 +302,22 @@ mod.mt.inject_fixes(this_variant, {
         gripac = { hide_mesh = {{"gripac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     -- Sights
-    {   dependencies =  { "owo_holographic_sight_helper_01|owo_ladder_aperture_sight_ac1_01|owo_ladder_aperture_sight_ac1_02|owo_ladder_aperture_sight_ac1_02|owo_ladder_aperture_sight_ac1_03|owo_rear_sight_ak_ac1_01|owo_rear_sight_ak_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
+    {   dependencies =  { "owo_holographic_sight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_kalashnikov_rear_sight_ac1_01|owo_kalashnikov_rear_sight_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
         sightac1 = { hide_mesh = {{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies =  { "owo_holographic_sight_helper_02|owo_ladder_aperture_sight_ac2_01|owo_ladder_aperture_sight_ac2_02|owo_ladder_aperture_sight_ac2_03|owo_ladder_aperture_sight_ac2_04|owo_rear_sight_ak_ac2_01|owo_rear_sight_ak_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
+    {   dependencies =  { "owo_holographic_sight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_kalashnikov_rear_sight_ac2_01|owo_kalashnikov_rear_sight_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01"},
         sightac2 = { hide_mesh = {{"sightac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies =  { "owo_holographic_sight_helper_03|owo_holographic_sight_helper_03_02|owo_ladder_aperture_sight_ac3_01|owo_rear_sight_ak_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
+    {   dependencies =  { "owo_holographic_sight_helper_03|owo_holographic_sight_helper_03_02|owo_rear_sight_ac3_01|owo_kalashnikov_rear_sight_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01"},
         sightac3 = { hide_mesh = {{"sightac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies =  { "owo_holographic_sight_helper_04|owo_ladder_aperture_sight_ac4_01|owo_rear_sight_ak_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04"},
+    {   dependencies =  { "owo_holographic_sight_helper_04|owo_rear_sight_ac4_01|owo_kalashnikov_rear_sight_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04"},
         sightac4 = { hide_mesh = {{"sightac4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_ladder_aperture_sight_ac5_01|owo_rear_sight_ak_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01"},
+    {   dependencies = { "owo_rear_sight_ac5_01|owo_kalashnikov_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01"},
         sightac5 = { hide_mesh = {{"sightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
-    {   dependencies = { "owo_ladder_aperture_sight_ac6_01|owo_rear_sight_ak_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01"},
+    {   dependencies = { "owo_rear_sight_ac6_01|owo_kalashnikov_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01"},
         sightac6 = { hide_mesh = {{"sightac6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {   dependencies = { "owo_m16_sight_helper_07|owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07"},
@@ -864,18 +864,18 @@ mod.mt.inject_fixes(this_variant, {
     -- Sight: Rear Sight
     -- ######
     -- AK
-    {	dependencies =  { "owo_rear_sight_ak_01"},
+    {	dependencies =  { "owo_kalashnikov_rear_sight_01"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.1, 0.007), rotation = vector3_box(0.5, 0, 0)},
         sight =     { offset = true, position = vector3_box(0, 0.24, -0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
         sightac5 = { offset = true, position = vector3_box(0.008, -0.01, 0.005), rotation = vector3_box(-145, 90, 145), scale = vector3_box(0.23, 0.24, 0.25 ) },
     },
-    {	dependencies =  { "owo_rear_sight_ak_02"},
+    {	dependencies =  { "owo_kalashnikov_rear_sight_02"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.15, 0.002), rotation = vector3_box(0.9, 0, 0)},
         sight =     { offset = true, position = vector3_box(0, 0.24, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
         sightac5 = { offset = true, position = vector3_box(0.008, -0.01, 0.003), rotation = vector3_box(-145, 90, 145), scale = vector3_box(0.23, 0.24, 0.25 ) },
         sightac6 =     { offset = true, position = vector3_box(0.0, 0.0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 1.4, 1.0 ) },
     },
-    {	dependencies =  { "owo_rear_sight_ak_01|owo_rear_sight_ak_02"},
+    {	dependencies =  { "owo_kalashnikov_rear_sight_01|owo_kalashnikov_rear_sight_02"},
         sightac1 = { offset = true, position = vector3_box(-0.004, -0.06, 0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.36, 0.36, 0.25 ) },
         sightac2 = { offset = true, position = vector3_box(0.022, -0.06, 0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.32, 0.32, 0.06 ) },
         sightac3 = { offset = true, position = vector3_box(0.009, -0.07, 0.0226), rotation = vector3_box(90, 90, 0), scale = vector3_box(0.23, 0.047, 0.22 ) },
@@ -884,16 +884,16 @@ mod.mt.inject_fixes(this_variant, {
     --   Scuffed
     --      0.5 degree up to align with brauto front post
     --      Pushed forwards to hide stock
-    {	dependencies =  { "owo_rear_sight_ak_03"},
+    {	dependencies =  { "owo_kalashnikov_rear_sight_03"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.1, 0.007), rotation = vector3_box(0.5, 0, 0)},
         sight =     { offset = true, position = vector3_box(0, 0.19, 0.119), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
     },
     --      pushed even more forwards to hide receiver not covered by dust cover (aka the part that gets molested by dust)
-    {	dependencies =  { "owo_rear_sight_ak_04"},
+    {	dependencies =  { "owo_kalashnikov_rear_sight_04"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.15, 0.002), rotation = vector3_box(0.9, 0, 0)},
         sight =     { offset = true, position = vector3_box(0, 0.19, 0.125), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
     },
-    {	dependencies =  { "owo_rear_sight_ak_03|owo_rear_sight_ak_04"},
+    {	dependencies =  { "owo_kalashnikov_rear_sight_03|owo_kalashnikov_rear_sight_04"},
         sightac1 = { offset = true, position = vector3_box(0, 0.034, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.38, 4.18 ) },
         --sightac2 = { offset = true, position = vector3_box(-0.008, -0.044, 0.016), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.8, 0.38, 4.18 ) },
         sightac2 = { offset = true, position = vector3_box(0, 0.034, -0.004), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.36, 0.73, 3.48 ) },
@@ -901,7 +901,7 @@ mod.mt.inject_fixes(this_variant, {
         sightac4 = { offset = true, position = vector3_box(-0.05, -0.034, -0.062), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.55, 0.27, 1.34 ) },
         sightac5 = { offset = true, position = vector3_box(-0.008, 0.012, -0.068), rotation = vector3_box(180, 0, 180), scale = vector3_box(1.04, 0.254, 1.62 ) },
     },
-    {	dependencies =  { "owo_rear_sight_ak_04"},
+    {	dependencies =  { "owo_kalashnikov_rear_sight_04"},
         sightac6 =     { offset = true, position = vector3_box(0.126, 0.126, 0.0), rotation = vector3_box(-180, -90, -180), scale = vector3_box(8.23, 2.8, 3.92 ) },
     },
 
