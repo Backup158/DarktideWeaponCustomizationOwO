@@ -138,10 +138,31 @@ function mod.on_all_mods_loaded()
 	--		string: slot_name
 	--		table: slot_localization_table
 	-- RETURN: N/A
+	-- ######
 	function mod.create_new_slot(slot_name, slot_localization_table)
-		table.insert(mod.wc.attachment_slots, slot_name)
+		table.insert(wc.attachment_slots, slot_name)
 		mod:add_global_localize_strings({
 			["loc_weapon_cosmetics_customization_"..slot_name] = slot_localization_table
+		})
+	end
+
+	-- ######
+	-- Initialize Custom Slot for Weapon
+	-- DESCRIPTION: Creates an empty table for the slot 
+	-- PARAMETER(S):
+	--		string: slot_name
+	--		table: slot_localization_table
+	-- RETURN: N/A
+	-- ######
+	function mod.initialize_custom_slot_for_weapon(this_variant, slot_name, parent_name)
+		wc.attachment[this_variant][slot_name] = {}
+		mod.inject_attachments_owo(this_variant, slot_name, {
+			{id = "owo_"..slot_name.."_default", name = "Empty "..slot_name},
+		})
+		mod.inject_models(this_variant, {
+			owo_crossguard_default = {
+				model = "", type = slot_name, mesh_move = false, parent = parent_name,
+			},
 		})
 	end
 

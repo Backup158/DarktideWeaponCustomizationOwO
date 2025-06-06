@@ -138,12 +138,19 @@ mod.wc.frontguard_list = {
 	"owo_trench_dagger_finger_guard_05",
 	"owo_trench_dagger_finger_guard_06",
 }
+--[[
 table.insert(mod.wc.attachment_slots, "frontguard")
 mod:add_global_localize_strings({
     loc_weapon_cosmetics_customization_frontguard = {
         en = "Front Guard",
 	},
 })
+]]
+mod.create_new_slot("frontguard", {
+	en = "Front Guard",
+})
+
+
 mod.wc.add_custom_attachments.frontguardac1 = "frontguardac1_list"
 mod.wc.frontguardac1_list = {
 	"owo_trench_dagger_finger_guard_helper_ac1_default",
@@ -749,7 +756,7 @@ function mod.owo_crossguard(variant_id, given_type, given_parent)
 	})
 end
 function mod.fixes_owo_crossguard(variant_id, given_type, given_parent)
-	local current_type = given_type or "hilt"
+	local current_type = given_type or "crossguard"
 	local current_parent = given_parent or "grip"
 
 	local _owo_crossguards = "owo_crossguard_plate_01"

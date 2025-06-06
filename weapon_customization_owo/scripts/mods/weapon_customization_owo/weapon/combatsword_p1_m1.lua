@@ -13,7 +13,8 @@ local this_variant = "combatsword_p1_m1" -- Catachan "Devil's Claw" Sword
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].hilt = {}
+--mod.wc.attachment[this_variant].hilt = {}
+mod.initialize_custom_slot_for_weapon(this_variant, "crossguard", "grip")
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -21,7 +22,7 @@ mod.wc.attachment[this_variant].hilt = {}
 -- ############################################
 mod.owo_rapier_blade(this_variant)
 mod.owo_slim_blade(this_variant, "body", "grip")
-mod.owo_crossguard(this_variant, "hilt", "grip")
+mod.owo_crossguard(this_variant, "crossguard", "grip")
 
 -- ############################################
 -- Define Variables for Fixes
