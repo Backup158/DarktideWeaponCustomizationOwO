@@ -6,7 +6,13 @@ Added:
 
 Refactor: 
 - Made functions to simplify creating custom slots on the developer side
-- Modularized type identity (logic fix for the 'or type') for Trench Dagger Finger Guards
+    - Automatically creates an empty attachment for that slot, so hiding unused parts has a consistent part to rely on ("owo_<slot_name>_default")
+- Modularized type identity (logic fix for the 'or type') for 
+    - Trench Dagger Finger Guards
+    - Shovel Handles
+    - Historical Blades
+    - Telescopic Scopes
+    - PU Scopes
 
 # 2025-05-18
 v1.8.1

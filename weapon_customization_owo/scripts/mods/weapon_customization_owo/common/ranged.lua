@@ -526,7 +526,7 @@ mod.mt.table_append(mod.wc.stockac2s, {
 -- inject_models adds the models for actual use
 -- ############################################
 -- Flashlight/Special: Grip Laser
-function mod.owo_grip_laser(variant_id, type)
+function mod.owo_grip_laser(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "flashlight" or type, {
 		{id = "owo_grip_laser_01", name = "OwO Trigger Guard Laser (R)"},
 		{id = "owo_grip_laser_02", name = "OwO Trigger Guard (G)"},
@@ -592,8 +592,8 @@ function mod.owo_grip_laser(variant_id, type)
 end
 
 -- Muzzle: Suppressor
-function mod.owo_suppressor(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "muzzle", {
+function mod.owo_suppressor(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "muzzle", {
 		{id = "owo_suppressor_01", name = "OwO Suppressor 1"},
 		{id = "owo_suppressor_02", name = "OwO Suppressor 2"},
 		{id = "owo_suppressor_03", name = "OwO Suppressor 3 (PBS-1)"},
@@ -812,8 +812,8 @@ function mod.fixes_owo_suppressors(variant_id)
 end
 
 -- Muzzle: Lasgun Condom
-function mod.owo_condom(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "muzzle", {
+function mod.owo_condom(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "muzzle", {
 		{id = "owo_condom_01", name = "OwO Lasbarrel Condom", no_randomize = true}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2", {
@@ -839,8 +839,8 @@ end
 
 -- Muzzle: Muzzle Brake
 --	AMR brake based on Barrett M82
-function mod.owo_muzzle_brake(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "muzzle", {
+function mod.owo_muzzle_brake(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "muzzle", {
 		{id = "owo_muzzle_brake_01", name = "OwO Muzzle Brake AMR", no_randomize = true},
 		{id = "owo_muzzle_brake_02", name = "OwO Muzzle Brake AMR (Big)", no_randomize = true},
 		{id = "owo_muzzle_brake_03", name = "OwO Muzzle Brake AMR (BIG)", no_randomize = true},
@@ -964,14 +964,14 @@ function mod.fixes_owo_muzzle_brake(variant_id)
 end
 
 -- Barrel: Bolt Pistol Shotgun barrel (short)
-function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
+function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type)
 	--[[
 	1,6 dont work, but 2-5 do
 		setting offset to false made 1,6 as 2d models not following the gun and no scale
 		what the FUCK?
 	
 	]]
-	mod.inject_attachments_owo(variant_id, type or "barrel", {
+	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
 		--{id = "owo_bistol_sg_base_01", name = "OwO Shotgun Shorty 1"},
 		{id = "owo_bistol_sg_base_04", name = "OwO Shotgun Shorty 1 (4)"},
 		{id = "owo_bistol_sg_base_05", name = "OwO Shotgun Shorty 2 (5)"},
@@ -1089,10 +1089,10 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, type)
 end
 
 -- Barrel: Revolver Shotgun Barrel
-function mod.owo_revolver_shotgun_barrel(variant_id, type)
+function mod.owo_revolver_shotgun_barrel(variant_id, given_type)
 	--[[ what the FUCK is wrong with barrels 1 and 9
 	]]
-	mod.inject_attachments_owo(variant_id, type or "barrel", {
+	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
 		--{id = "owo_revolver_shotgun_barrel_base_01", name = "OwO Shotgun Barrel (1)"},
 		{id = "owo_revolver_shotgun_barrel_base_04", name = "OwO Shotgun Barrel (4)"},
 		{id = "owo_revolver_shotgun_barrel_base_04b", name = "OwO Shotgun Barrel (4b)"},
@@ -1196,8 +1196,8 @@ function mod.owo_revolver_shotgun_barrel(variant_id, type)
 end
 
 -- Barrel: Dreg Gunner barrel
-function mod.owo_dreg_gunner_barrel(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "barrel", {
+function mod.owo_dreg_gunner_barrel(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
 		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
@@ -1275,8 +1275,8 @@ end
 
 -- Barrel: M16 barrels
 -- 		Autoguns
-function mod.owo_m16_barrel(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "barrel", {
+function mod.owo_m16_barrel(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
 		{id = "owo_m16_barrel_a1", name = "OwO M16a1 Barrel 1"},
 		{id = "owo_m16_barrel_a1_02", name = "OwO M16a1 Barrel 2"},
 		{id = "owo_m16_barrel_a2", name = "OwO M16a2 Barrel"},
@@ -1452,8 +1452,8 @@ function mod.owo_m16_barrel(variant_id, type)
 end
 
 -- Barrel: Wooden Helbore
-function mod.owo_wood_krieg(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "barrel", {
+function mod.owo_wood_krieg(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
 		{id = "owo_wood_krieg_01", name = "OwO Wooden Helbore 1 (2)"},
 		{id = "owo_wood_krieg_02", name = "OwO Wooden Helbore 2 (3)"},
 		{id = "owo_wood_krieg_03", name = "OwO Wooden Helbore 3 (7)"},
@@ -1495,8 +1495,8 @@ function mod.owo_wood_krieg(variant_id, type)
 end
 
 -- Barrel: Plasma Helbore
-function mod.owo_plasma_krieg(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "barrel", {
+function mod.owo_plasma_krieg(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "barrel", {
 		{id = "owo_plasma_krieg_01f", name = "OwO Plasma Helbore 1 (2)"},
 		{id = "owo_plasma_krieg_02f", name = "OwO Plasma Helbore 2 (3)"},
 		{id = "owo_plasma_dmr_01", name = "OwO Plasma Lasgun 1"},
@@ -1661,8 +1661,8 @@ function mod.owo_plasma_krieg(variant_id, type)
 end
 
 -- Foregrip: Empty Foregrip
-function mod.owo_empty_foregrip(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "foregrip", {
+function mod.owo_empty_foregrip(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "foregrip", {
 		{id = "owo_foregrip_empty", name = "Empty Foregrip"},
 	})
 	mod.inject_models(variant_id, {
@@ -1674,7 +1674,7 @@ function mod.owo_empty_foregrip(variant_id, type)
 end
 
 -- Foregrip: Tactical Foregrips
-function mod.owo_tactical_foregrip(variant_id, type)
+function mod.owo_tactical_foregrip(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "foregrip" or type, {
 		{id = "owo_tactical_foregrip_01", name = "OwO Angled Foregrip (AFG) 1"},
 		{id = "owo_tactical_foregrip_02", name = "OwO AFG 1 Slanted"},
@@ -1751,7 +1751,7 @@ function mod.owo_tactical_foregrip(variant_id, type)
 end
 
 -- Foregrip: Heterosexual Foregrips
-function mod.owo_heterosexual_foregrip(variant_id, type)
+function mod.owo_heterosexual_foregrip(variant_id, given_type)
 	local current_main_type = type or "foregrip"
 	mod.inject_attachments_owo(variant_id, current_main_type, {
 		{id = "owo_heterosexual_foregrip_grip_01", name = "OwO Straight Grip (SG) 1"},
@@ -2052,8 +2052,8 @@ end
 
 -- Bayonet: Dreg Gunner bayonet
 --		Brauto/Iag
-function mod.owo_dreg_gunner_bayonet(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "bayonet", {
+function mod.owo_dreg_gunner_bayonet(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "bayonet", {
 		{id = "owo_dreg_bayonet_empty", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner Bayonet"},
 
@@ -2091,8 +2091,8 @@ end
 
 -- Bayonet: M7, Seitengewehr 98 (Butcher's Blade), Épée Baïonnette 1886
 --		Autoguns, Helbores
-function mod.owo_bayonet(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "bayonet", {
+function mod.owo_bayonet(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "bayonet", {
 		{id = "owo_bayonet_m7_01", name = "OwO M7 Bayonet"},
 		{id = "owo_bayonet_seitengewehr", name = "OwO Seitengewehr 98"},
 		{id = "owo_bayonet_epee", name = "OwO Épée Baïonnette 1886"},
@@ -2174,8 +2174,8 @@ function mod.owo_bayonet(variant_id, type)
 end
 
 -- Bayonet: Underbarrel Grenade Launcher
-function mod.owo_underbarrel_gl(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "bayonet", {
+function mod.owo_underbarrel_gl(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "bayonet", {
 		{id = "owo_m203", name = "OwO M203 Grenade Launcher"},
 		{id = "owo_gp25", name = "OwO GP-25 Grenade Launcher"},
 	})
@@ -2294,8 +2294,8 @@ end
 
 -- Bayonet: Underbarrel Shotgun
 --		Knight's Armament Company Masterkey, M26-MASS (Modular Accessory Shotgun System)
-function mod.owo_underbarrel_shotgun(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "bayonet", {
+function mod.owo_underbarrel_shotgun(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "bayonet", {
 		{id = "owo_underbarrel_shotgun_01_01", name = "OwO Masterkey"},
 		{id = "owo_underbarrel_shotgun_01", name = "OwO Masterkey (THICC)"},
 		{id = "owo_underbarrel_shotgun_01_02", name = "OwO Masterkey (Mini)"},
@@ -2484,7 +2484,7 @@ end
 	SBR
 		A semiautomatic, centerfire rifle that has an overall length of less than 30 inches
 ]]
-function mod.owo_california_bolter(variant_id, type)
+function mod.owo_california_bolter(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "receiver" or type, {
 		{id = "owo_california_bolter_01", name = "OwO Vertically Challenged Bolter 1"},
 		{id = "owo_california_bolter_02", name = "OwO Vertically Challenged Bolter 2"},
@@ -2554,7 +2554,7 @@ function mod.owo_california_bolter(variant_id, type)
 end
 
 -- Receiver: Helbore Bolt Action
-function mod.owo_bolt_action(variant_id, type)
+function mod.owo_bolt_action(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "receiver" or type, {
 		{id = "owo_bolt_helbore_01", name = "OwO Helbore Bolt Action 1"},
 		{id = "owo_bolt_helbore_02", name = "OwO Helbore Bolt Action 2"},
@@ -2622,7 +2622,7 @@ function mod.owo_bolt_action(variant_id, type)
 end
 
 -- Receiver: Helbore MAS-49
-function mod.owo_helbore_mas49(variant_id, type)
+function mod.owo_helbore_mas49(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "receiver" or type, {
 		{id = "owo_helbore_mas49_01", name = "OwO Helbore MAS-49 1"},
 		{id = "owo_helbore_mas49_02", name = "OwO Helbore MAS-49 2"},
@@ -2749,8 +2749,8 @@ function mod.owo_laspistol_grip_mag(variant_id)
 end
 
 -- Grip: Fin Grip
-function mod.owo_fin_grip(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "grip", {
+function mod.owo_fin_grip(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "grip", {
 		{id = "owo_fin_grip_01", name = "OwO Fin Grip 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "gripac", {
@@ -2784,7 +2784,7 @@ end
 --	Recon
 --	Anti-Material Rifle (AMR, Barrett M82 style)
 function mod.owo_helbore_gripstock(variant_id,type)
-	mod.inject_attachments_owo(variant_id, type or "stock", {
+	mod.inject_attachments_owo(variant_id, given_type or "stock", {
 		{id = "owo_gripstock_recon_01", name = "OwO StraightGrip Recon 1"},
 		{id = "owo_gripstock_recon_02", name = "OwO StraightGrip Recon 2"},
 		{id = "owo_gripstock_recon_03", name = "OwO StraightGrip Recon 3"},
@@ -2945,8 +2945,8 @@ function mod.owo_helbore_gripstock(variant_id,type)
 end
 
 -- Stock: Tactical Stock
-function mod.owo_tactical_stock(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "stock", {
+function mod.owo_tactical_stock(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "stock", {
 		{id = "owo_tactical_stock_s_01", name = "OwO Skeletal Stock"},
 		{id = "owo_tactical_stock_f_01", name = "OwO Folded 1 (Natural)"},
 		{id = "owo_tactical_stock_f_02", name = "OwO Folded 2 (Natural)"},
@@ -3117,8 +3117,8 @@ function mod.owo_tactical_stock(variant_id, type)
 end
 
 -- Stock: Kalashnikov Stock
-function mod.owo_kalash_stock(variant_id, type)
-	mod.inject_attachments_owo(variant_id, type or "stock", {
+function mod.owo_kalash_stock(variant_id, given_type)
+	mod.inject_attachments_owo(variant_id, given_type or "stock", {
 		{id = "owo_kalash_stock_01", name = "OwO Kalashnikov Stock 1"},
 		{id = "owo_kalash_stock_02", name = "OwO Kalashnikov Stock 2"},
 		{id = "owo_kalash_stock_03", name = "OwO Kalashnikov Stock 3"},
@@ -3224,7 +3224,7 @@ function mod.owo_kalash_stock(variant_id, type)
 end
 
 -- Stock: Big Stock!
-function mod.owo_beeg_stock(variant_id, type)
+function mod.owo_beeg_stock(variant_id, given_type)
 	local current_main_type = type or "stock"
 	mod.inject_attachments_owo(variant_id, "stockac", {
 		{id = "owo_beeg_stockac_00", name = "Empty stockac", no_randomize = true},
@@ -3426,7 +3426,7 @@ end
 
 -- Sight: Rear sights with flip up. Ladder Aperture Sights
 --	Helbore style only
-function mod.owo_rear_sight(variant_id, type)
+function mod.owo_rear_sight(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
 		{id = "owo_rear_sight_02", name = "OwO Aperture, U Notch (Up)"},
@@ -3594,7 +3594,7 @@ end
 
 -- Sight: Kalashnikov Rear Sights
 --	I made 1 and 2 before noticing thte range select was already a part in game lmfao
-function mod.owo_rear_sight_ak(variant_id, type)
+function mod.owo_rear_sight_ak(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_rear_sight_ak_01", name = "OwO AK Irons"},
 		{id = "owo_rear_sight_ak_02", name = "OwO AK Irons w/ Dust Cover"},
@@ -3745,7 +3745,7 @@ function mod.owo_rear_sight_ak(variant_id, type)
 end
 
 -- Sight: M16 Carry Handle
-function mod.owo_m16_sight(variant_id, type)
+function mod.owo_m16_sight(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "sight", {
 		{id = "owo_m16_sight_01", name = "OwO M16 Carry Sight"},
 		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight (No Rear Elevation Wheel)"},
@@ -3869,7 +3869,7 @@ end
 -- Sight: Holographic Sights + Magnifiers
 --		EOTech HWS (Holographic Weapon Sight)
 --		Vortex Razor AMG UH-1
-function mod.owo_holosight(variant_id, type)
+function mod.owo_holosight(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "sight" or type, {
 		{id = "owo_holosight_01_01", name = "OwO EOTech"},
 		{id = "owo_holosight_01_02_z1", name = "OwO EOTech+Magnifier (1.25x)"},
@@ -3924,7 +3924,7 @@ function mod.owo_holosight(variant_id, type)
 		-- purposefully did not hide housing. the seating makes up the for skinny centre of the ogryn grip
 		owo_holosight_01_01 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
@@ -3936,7 +3936,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_01_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sight",
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
@@ -3949,7 +3949,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_01_02_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = "sight",
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
@@ -3962,7 +3962,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_01_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
@@ -3976,7 +3976,7 @@ function mod.owo_holosight(variant_id, type)
 		-- Compact Versions that you can't aim with
 		owo_holosight_01_01ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
@@ -3990,7 +3990,7 @@ function mod.owo_holosight(variant_id, type)
 		owo_holosight_01_02ss_z1 = {
 			--model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
@@ -4003,7 +4003,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_01_02ss_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
@@ -4016,7 +4016,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_01_03ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
@@ -4030,7 +4030,7 @@ function mod.owo_holosight(variant_id, type)
 		-- Vortex Razor Sight
 		owo_holosight_02_01 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
@@ -4042,7 +4042,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_02_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
@@ -4055,7 +4055,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_02_02_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
@@ -4068,7 +4068,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_02_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
@@ -4081,7 +4081,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_02_01ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
@@ -4093,7 +4093,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_02_02ss_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
@@ -4106,7 +4106,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_02_02ss_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
@@ -4119,7 +4119,7 @@ function mod.owo_holosight(variant_id, type)
 		},
 		owo_holosight_02_03ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = "sight", 
-			mesh_move = false, parent = "",
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
@@ -4198,8 +4198,10 @@ end
 --		Trijicon ACOG (Advanced Combat Optical Gunsight), SUSAT (Small Unit Small Arms, Trilux - L9A1), Night Vision 1 (Sightmark Wraith HD), Night Vision 2 (Sightmark Photon XT)
 --		KNOWN BUG: SUSAT on recon/ilas main receiver steals the laser (but not the volleygun)
 --			Thief is the ac2/3, ak muzzles in the back
-function mod.owo_telescopic_sight(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "sight" or type, {
+function mod.owo_telescopic_sight(variant_id, given_type)
+	local current_type = given_type or "sight"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_acog_sight_01f", name = "OwO ACOG (1.25x)"},
 		{id = "owo_acog_sight_01", name = "OwO ACOG (Backwards, 1.25x)"},
 		{id = "owo_acog_sight_01f_z1", name = "OwO ACOG (1.75x)"},
@@ -4271,8 +4273,8 @@ function mod.owo_telescopic_sight(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_acog_sight_01 = {
-			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4281,13 +4283,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_01f = {
-			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4296,13 +4298,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_01_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4311,13 +4313,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_01f_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4326,13 +4328,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_02 = {
-			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4342,13 +4344,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_02f = {
-			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4358,13 +4360,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_02_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4374,13 +4376,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_02f_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4390,13 +4392,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 5,6},
 			},
 		},
 		owo_acog_sight_02_top = {
-			model = _item_melee.."/full/force_staff_full_02", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/full/force_staff_full_02", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4406,13 +4408,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
 		owo_acog_sight_02f_top = {
-			model = _item_melee.."/full/force_staff_full_02", type = "sight", 
-			mesh_move = false, parent = "",
+			model = _item_melee.."/full/force_staff_full_02", type = current_type, 
+			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4422,13 +4424,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
 		-- SUSAT
 		owo_susat_01 = {
-			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
@@ -4437,13 +4439,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 1,5,6},
 			},
 		},
 		owo_susat_01_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
@@ -4452,13 +4454,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 1,5,6},
 			},
 		},
 		owo_susat_01_ps = {
-			model = _item_melee.."/full/force_staff_full_01", type = "sight", 
+			model = _item_melee.."/full/force_staff_full_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
@@ -4467,12 +4469,12 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_alt_viewmodel_06",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 1,5,6},
 			},
 		},
 		owo_susat_02 = {
-			model = _item_melee.."/pommels/axe_pommel_03", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
@@ -4482,13 +4484,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 1,5,6},
 			},
 		},
 		owo_susat_02_z1 = {
-			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
@@ -4498,13 +4500,13 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 1,5,6},
 			},
 		},
 		owo_susat_02_top = {
-			model = _item_melee.."/full/force_staff_full_01", type = "sight", 
+			model = _item_melee.."/full/force_staff_full_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
@@ -4514,7 +4516,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
@@ -4523,7 +4525,7 @@ function mod.owo_telescopic_sight(variant_id, type)
 		-- 	ACOG: Front of scope
 		owo_acog_sight_helper_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "sightac1", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- 	SUSAT: Cylinder thing
 		owo_susat_ac1_01 = {
@@ -4534,136 +4536,138 @@ function mod.owo_telescopic_sight(variant_id, type)
 		-- 	ACOG: Rear of scope
 		owo_acog_sight_helper_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac2", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_helper_03 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac3", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		--	SUSAT: Rear of scope
 		owo_susat_ac2_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "sightac2", 
 			--model = "", type = "sightac2", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_susat_ac3_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "sightac3", 
 			--model = "", type = "sightac3", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- AC4
 		-- 	Base
 		owo_acog_sight_helper_04 = {
 			model = _item_melee.."/grips/hatchet_grip_04", type = "sightac4",
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- AC5, 6
 		-- 	ACOG: Knobs
 		owo_acog_sight_helper_05 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "sightac5",
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_helper_06 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "sightac6",
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- SUSAT: Reticle
 		owo_susat_ac5_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "sightac5", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_susat_ac6_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "sightac6", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- AC7
 		-- Cable
 		owo_acog_sight_helper_07 = {
 			model = _item_melee.."/full/force_staff_full_01", type = "sightac7",
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_susat_ac7_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac7",
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- Sight_Secondary
 		-- RMR on top
 		owo_acog_sight_sight_secondary_01 = {
 			model = _item_ranged.."/sights/reflex_sight_02", type = "sight_secondary",
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- ### Empty ###
 		owo_acog_sight_empty_01 = {
 			model = "", type = "sightac1", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_empty_02 = {
 			model = "", type = "sightac2", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_empty_03 = {
 			model = "", type = "sightac3", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_empty_04 = {
 			model = "", type = "sightac4", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_empty_05 = {
 			model = "", type = "sightac5", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_empty_06 = {
 			model = "", type = "sightac6", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_empty_07 = {
 			model = "", type = "sightac7", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_acog_sight_empty2 = {
 			model = "", type = "sight_secondary", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 	})
 end
 
 -- Sight: Soviet PU scope
 --		Sight rings are too mf fat
-function mod.owo_pu_scope(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "sight" or type, {
+function mod.owo_pu_scope(variant_id, given_type)
+	local current_type = given_type or "sight"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_pu_scope_01", name = "OwO Soviet PU Scope, Riser 1"},
 		{id = "owo_pu_scope_02", name = "OwO Soviet PU Scope, Riser 1b"},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac1" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac1", {
 		{id = "owo_pu_scope_empty_01", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_01", name = "PU Scope'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac2" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac2", {
 		{id = "owo_pu_scope_empty_02", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_02", name = "PU Scope'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac3" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac3", {
 		{id = "owo_pu_scope_empty_03", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_03", name = "PU Scope'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac4" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac4", {
 		{id = "owo_pu_scope_empty_04", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_04", name = "PU Scope'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac5" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac5", {
 		{id = "owo_pu_scope_empty_05", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_05", name = "PU Scope'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac6" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac6", {
 		{id = "owo_pu_scope_empty_06", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_06", name = "PU Scope'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sightac7" or type, {
+	mod.inject_attachments_owo(variant_id, "sightac7", {
 		{id = "owo_pu_scope_empty_07", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_07", name = "PU Scope'vesa", no_randomize = true},
 	})
-	mod.inject_attachments_owo(variant_id, "sight_secondary" or type, {
+	mod.inject_attachments_owo(variant_id, "sight_secondary", {
 		{id = "owo_pu_scope_empty2", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_riser_01", name = "PU Scope Riser", no_randomize = true},
 	})
@@ -4679,7 +4683,7 @@ function mod.owo_pu_scope(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_pu_scope_01 = {
-			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
@@ -4689,12 +4693,12 @@ function mod.owo_pu_scope(variant_id, type)
 				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{"sight", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}, 
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}, 
 				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}, 
 			},
 		},
 		owo_pu_scope_02 = {
-			model = _item_melee.."/pommels/axe_pommel_05", type = "sight", 
+			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
@@ -4715,29 +4719,29 @@ function mod.owo_pu_scope(variant_id, type)
 		-- Crosshair
 		owo_pu_scope_helper_02 = {
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sightac2", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_helper_03 = {
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sightac3", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_helper_04 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "sightac4", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- Knobs
 		owo_pu_scope_helper_05 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "sightac5", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_helper_06 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "sightac6", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- Scope again
 		owo_pu_scope_helper_07 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac7", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		-- Riser
 		owo_pu_scope_riser_01 = {
@@ -4748,11 +4752,11 @@ function mod.owo_pu_scope(variant_id, type)
 		--[[ Too thick
 		owo_pu_scope2_helper_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "sight_secondary_ac1", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},
 		owo_pu_scope2_helper_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "sight_secondary_ac2", 
-			mesh_move = false, parent = "sight",
+			mesh_move = false, parent = current_type,
 		},]]
 		-- ### Empty ###
 		owo_pu_scope_empty_01 = {
@@ -4761,35 +4765,35 @@ function mod.owo_pu_scope(variant_id, type)
 		},
 		owo_pu_scope_empty_02 = {
 			model = "", type = "sightac2", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_empty_03 = {
 			model = "", type = "sightac3", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_empty_03 = {
 			model = "", type = "sightac3", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_empty_04 = {
 			model = "", type = "sightac4", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_empty_05 = {
 			model = "", type = "sightac5", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_empty_06 = {
 			model = "", type = "sightac6", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_empty_07 = {
 			model = "", type = "sightac7", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 		owo_pu_scope_empty2 = {
 			model = "", type = "sight_secondary", 
-			mesh_move = false, parent = "sight"
+			mesh_move = false, parent = current_type
 		},
 	})
 	
@@ -4947,7 +4951,7 @@ end
 -- Magazine: Flat
 --		Lasgun and Autogun mags
 --		All done with scaling in the weapon classes
-function mod.owo_magazine_flat(variant_id, type)
+function mod.owo_magazine_flat(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_lasgun_magazine_flat_01", name = "OwO Flat Mag (Las) 1"},
 		{id = "owo_autogun_magazine_flat_03", name = "OwO Flat Mag (Autogun) 3"},
@@ -4967,7 +4971,7 @@ end
 
 -- Magazine: Plasma
 --		Intended for Helbore since mt added plasma mags to some already?
-function mod.owo_plasma_mag(variant_id, type)
+function mod.owo_plasma_mag(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_plasma_mag_01", name = "OwO Plasma Mag 1"},
 		{id = "owo_plasma_mag_02", name = "OwO Plasma Mag 2"},
@@ -5051,7 +5055,7 @@ end
 -- Magazine: Rear Lasgun 
 --		For Straight Grip and Recon Stock
 -- 		I stole this from Syn
-function mod.owo_lasgun_magazine_rear(variant_id, type)
+function mod.owo_lasgun_magazine_rear(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_lasgun_magazine_rear_01", name = "OwO Rear Mag 1", no_randomize = true},
 	})
@@ -5082,7 +5086,7 @@ end
 
 -- Magazine: Jungle Mags
 --		Autoguns
-function mod.owo_jungle_mag(variant_id, type)
+function mod.owo_jungle_mag(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_jungle_mag_01", name = "OwO Jungle Mag 1 v^"},
 		{id = "owo_jungle_mag_02", name = "OwO Jungle Mag 2 v^"},
@@ -5304,7 +5308,7 @@ end
 
 -- Magazine: Mag Assists
 --	Magpul magazine assists/pulls
-function mod.owo_magazine_magpull(variant_id, type)
+function mod.owo_magazine_magpull(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_magazine_magpull_01", name = "OwO Magpul 1"},
 		{id = "owo_magazine_magpull_02", name = "OwO Magpul 2"},
@@ -5377,7 +5381,7 @@ end
 -- Magazine: AK
 --	Oh fuck the bullets don't move if I only move the mag
 --[[
-function mod.owo_magazine_ak(variant_id, type)
+function mod.owo_magazine_ak(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "magazine" or type, {
 		{id = "owo_magazine_ak_01", name = "OwO AK Mag"},
 		{id = "owo_magazine_ak_02", name = "OwO AK Mag Curvy"},
@@ -5438,7 +5442,7 @@ mod.wc.KUMQUATs = {
 	""
 }
 
-function mod.owo_<NAME>(variant_id, type)
+function mod.owo_<NAME>(variant_id, given_type)
 	mod.inject_attachments_owo(variant_id, "" or type, {
 		{id = "owo_", name = "OwO "},
 	})

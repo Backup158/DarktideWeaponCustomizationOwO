@@ -173,9 +173,9 @@ mod.wc.frontguardac3_list = {
 -- inject_models adds the models for actual use
 -- ############################################
 -- Head: Tacax Spike (Spiked Tactical Axe)
-function mod.owo_tacax_spike(variant_id, type, parent)
-	local current_type = type or "head"
-	local current_parent = parent or "grip"
+function mod.owo_tacax_spike(variant_id, given_type, given_parent)
+	local current_type = given_type or "head"
+	local current_parent = given_parent or "grip"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_tacax_spike_01", name = "OwO Spiked Tactical Axe 1"},
@@ -298,9 +298,9 @@ function mod.fixes_owo_tacax_spike(variant_id, given_type, given_parent)
 end
 
 -- Head: Polearms
-function mod.owo_polearm_head(variant_id, type, parent)
-	local current_type = type or "head"
-	local current_parent = parent or "grip"
+function mod.owo_polearm_head(variant_id, given_type, given_parent)
+	local current_type = given_type or "head"
+	local current_parent = given_parent or "grip"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_polearm_head_bc_01", name = "OwO Bec de Corbin 1"},
@@ -723,6 +723,7 @@ end
 function mod.owo_invisible_connector(variant_id, given_type, given_parent)
 	local current_type = given_type or "connector"
 	local current_parent = given_parent or "shaft"
+
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_invisible_connector_01", name = "OwO Invisible Connector", no_randomize = true},
 	})
@@ -770,9 +771,9 @@ function mod.fixes_owo_crossguard(variant_id, given_type, given_parent)
 end
 
 -- Body: Rapier Blades
-function mod.owo_rapier_blade(variant_id, type, parent)
-	local current_type = type or "body"
-	local current_parent = parent or "grip"
+function mod.owo_rapier_blade(variant_id, given_type, given_parent)
+	local current_type = given_type or "body"
+	local current_parent = given_parent or "grip"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_rapier_blade_01", name = "OwO Rapier Blade 1"},
@@ -809,8 +810,10 @@ end
 
 -- Body: Historical/Tactical Blades
 --	Trench Spike: M1917
-function mod.owo_historical_blade(variant_id, type)
-	mod.inject_attachments_owo(variant_id, "body" or type, {
+function mod.owo_historical_blade(variant_id, given_type)
+	local current_type = given_type or "body"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_historical_blade_trench_spike", name = "OwO Trench Dagger Spike"},
 		{id = "owo_historical_blade_02", name = "OwO Gerber Mk II"},
 		{id = "owo_historical_blade_karambit", name = "OwO Karambit Blade"},
@@ -834,80 +837,80 @@ function mod.owo_historical_blade(variant_id, type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_historical_blade_trench_spike = {
-			model = _item_ranged.."/bayonets/bayonet_03", type = "body", 
+			model = _item_ranged.."/bayonets/bayonet_03", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_historical_blade_02 = {
-			model = _item_melee.."/blades/combat_knife_blade_03", type = "body", 
+			model = _item_melee.."/blades/combat_knife_blade_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_gerber",
 			},
 		},
 		owo_historical_blade_karambit_f = {
-			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
+			model = _item_melee.."/blades/combat_blade_blade_05", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_karambit",
 			},
 		},
 		owo_historical_blade_karambit_s = {
-			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
+			model = _item_melee.."/blades/combat_blade_blade_05", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_karambit",
 			},
 		},
 		owo_historical_blade_karambit_sf = {
-			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
+			model = _item_melee.."/blades/combat_blade_blade_05", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_karambit",
 			},
 		},
 		owo_historical_blade_tanto_01 = {
-			model = _item_melee.."/blades/combat_sword_blade_01", type = "body", 
+			model = _item_melee.."/blades/combat_sword_blade_01", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_02 = {
-			model = _item_melee.."/blades/combat_sword_blade_02", type = "body", 
+			model = _item_melee.."/blades/combat_sword_blade_02", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_03 = {
-			model = _item_melee.."/blades/combat_sword_blade_03", type = "body", 
+			model = _item_melee.."/blades/combat_sword_blade_03", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_04 = {
-			model = _item_melee.."/blades/combat_sword_blade_04", type = "body", 
+			model = _item_melee.."/blades/combat_sword_blade_04", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_05 = {
-			model = _item_melee.."/blades/combat_sword_blade_05", type = "body", 
+			model = _item_melee.."/blades/combat_sword_blade_05", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_historical_blade_tanto_06 = {
-			model = _item_melee.."/blades/combat_sword_blade_06", type = "body", 
+			model = _item_melee.."/blades/combat_sword_blade_06", type = current_type, 
 			mesh_move = false, 
 		},
 		owo_historical_blade_karambit = {
-			model = _item_melee.."/blades/combat_blade_blade_05", type = "body", 
+			model = _item_melee.."/blades/combat_blade_blade_05", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = {
 				bladeshroud = "owo_historical_blade_helper_karambit",
 			},
 		},
 		owo_historical_blade_box_cutter = {
-			model = _item_melee.."/blades/combat_sword_blade_01", type = "body", 
+			model = _item_melee.."/blades/combat_sword_blade_01", type = current_type, 
 			mesh_move = false, 
 		},
 		-- ### Helper Parts ###
 		owo_historical_blade_helper_default = {
 			model = "", type = "bladeshroud", 
-			mesh_move = false, parent = "body",
+			mesh_move = false, parent = current_type,
 		},
 		owo_historical_blade_helper_gerber = {
 			model = _item_melee.."/blades/combat_blade_blade_06", type = "bladeshroud", 
-			mesh_move = false, parent = "body",
+			mesh_move = false, parent = current_type,
 		},
 		owo_historical_blade_helper_karambit = {
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "bladeshroud", 
@@ -920,9 +923,9 @@ end
 --		PSword Blade 4 doesn't exist
 --	Flat is just less thicc but keeps how wide it is
 --	Slim reduces both
-function mod.owo_slim_blade(variant_id, type, parent)
-	local current_type = type or "blade"
-	local current_parent = parent or "hilt"
+function mod.owo_slim_blade(variant_id, given_type, given_parent)
+	local current_type = given_type or "blade"
+	local current_parent = given_parent or "hilt"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		-- PSword
@@ -1383,7 +1386,7 @@ function mod.owo_shaft_low_grip(variant_id, given_type)
 		},
 	})
 end
-function mod.fixes_owo_shaft_low_grip(variant_id, type)
+function mod.fixes_owo_shaft_low_grip(variant_id, given_type)
 	local current_type = given_type or "shaft"
 
 	local _owo_low_grip_shafts = "owo_shaft_low_grip_01|owo_shaft_low_grip_02|owo_shaft_low_grip_03|owo_shaft_low_grip_04|owo_shaft_low_grip_05|owo_shaft_low_grip_06"
@@ -1477,7 +1480,7 @@ function mod.owo_ogryn_shaft_low_grip(variant_id, given_type)
 		},
 	})
 end
-function mod.fixes_owo_ogryn_shaft_low_grip(variant_id, type)
+function mod.fixes_owo_ogryn_shaft_low_grip(variant_id, given_type)
 	local current_type = given_type or "shaft"
 
 	local _owo_low_grip_ogryn_shafts = "owo_ogryn_shaft_low_grip_01|owo_ogryn_shaft_low_grip_02|owo_ogryn_shaft_low_grip_03|owo_ogryn_shaft_low_grip_04|owo_ogryn_shaft_low_grip_05|owo_ogryn_shaft_low_grip_06"
@@ -1682,14 +1685,14 @@ function mod.owo_shovel_handles(variant_id, given_type)
         owo_shovel_handles_04 = {
 			model = _item_melee.."/grips/power_sword_grip_04", type = current_type, 
 			mesh_move = false, 
-            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
+            automatic_equip = { pommelac1 = "owo_pommelac1_default", 
                 pommelac2 = "owo_shovel_handles_ac2_02", 
 			},
 		},
         owo_shovel_handles_05 = {
 			model = _item_melee.."/grips/power_sword_grip_04", type = current_type, 
 			mesh_move = false, 
-            automatic_equip = { pommelac1 = "owo_shovel_handles_ac1_empty", 
+            automatic_equip = { pommelac1 = "owo_pommelac1_default", 
                 pommelac2 = "owo_shovel_handles_ac2_02", 
 			},
 		},
