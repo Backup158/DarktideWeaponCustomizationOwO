@@ -162,7 +162,7 @@ mod.wc.frontguardac2_list = {
 	"owo_trench_dagger_finger_guard_helper_ac2",
 }
 mod.wc.add_custom_attachments.frontguardac3 = "frontguardac3_list"
-mod.wc.frontguarda3_list = {
+mod.wc.frontguardac3_list = {
 	"owo_trench_dagger_finger_guard_helper_ac3_default",
 	"owo_trench_dagger_finger_guard_helper_ac3",
 }
