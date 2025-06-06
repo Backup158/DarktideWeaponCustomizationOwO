@@ -23,6 +23,15 @@ Refactor:
     - Historical Bayonets
     - Underbarrel Grenade Launchers
     - Underbarrel Shotguns
+    - California Bolter Receivers
+    - Bolt Action Helbore Receivers
+    - Helbore MAS Receivers
+    - Laspistol Grip Mag Receivers
+    - Fin Grips
+    - Helbore Grip Stocks
+    - Tactical (Shotgun) Stocks
+    - Kalashnikov Stocks
+    - Beeg Stocks!
     - Ladder Aperture Sights
     - Kalashnikov Rear Sights
     - M16 Carry Handle Sights

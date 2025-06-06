@@ -2770,8 +2770,9 @@ function mod.owo_laspistol_grip_mag(variant_id, given_type)
 end
 
 -- Grip: Fin Grip
-function mod.owo_fin_grip(variant_id, given_type)
+function mod.owo_fin_grip(variant_id, given_type, given_parent)
 	local current_type = given_type or "grip"
+	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_fin_grip_01", name = "OwO Fin Grip 1"},
@@ -2784,8 +2785,8 @@ function mod.owo_fin_grip(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_fin_grip_01 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = "grip", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 			automatic_equip = {
 				gripac = "owo_fin_grip2_01",
 			},
@@ -2793,12 +2794,12 @@ function mod.owo_fin_grip(variant_id, given_type)
 		-- ### Helper Parts ###
 		owo_fin_grip2_01 = {
 			model = _item_melee.."/blades/combat_blade_blade_02", type = "gripac", 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 		},
 		-- ### Empty ###
 		owo_fin_grip2_empty = {
 			model = "", type = "gripac", 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 		},
 	})
 end
@@ -2806,8 +2807,11 @@ end
 -- Stock: Straight Grip and Stock
 --	Recon
 --	Anti-Material Rifle (AMR, Barrett M82 style)
-function mod.owo_helbore_gripstock(variant_id,type)
-	mod.inject_attachments_owo(variant_id, given_type or "stock", {
+function mod.owo_helbore_gripstock(variant_id, given_type, given_parent)
+	local current_type = given_type or "stock"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_gripstock_recon_01", name = "OwO StraightGrip Recon 1"},
 		{id = "owo_gripstock_recon_02", name = "OwO StraightGrip Recon 2"},
 		{id = "owo_gripstock_recon_03", name = "OwO StraightGrip Recon 3"},
@@ -2843,77 +2847,74 @@ function mod.owo_helbore_gripstock(variant_id,type)
 		-- ### Base Parts ###
 		--	Recon
 	    owo_gripstock_recon_01 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_01", type = "stock", parent = "receiver", 
-			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0),
+			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_01", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_grip_01a",
 			},
 		},
 		owo_gripstock_recon_02 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_02", type = "stock", parent = "receiver", 
-			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0),
+			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_02", type = current_type, parent = current_parent,
 			automatic_equip = {
 				stockac = "owo_gripstock_grip_01a",
 			},
 		},
 		owo_gripstock_recon_03 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_03", type = "stock", parent = "receiver", 
-			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0),
+			model = _item_ranged.."/stocks/lasgun_rifle_elysian_stock_03", type = current_type, parent = current_parent,
 			automatic_equip = {
 				stockac = "owo_gripstock_grip_01a",
 			},
 		},
 		-- 	AMR
 	    owo_gripstock_amr_01 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_01",
 			},
 		},
 		owo_gripstock_amr_02 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_02",
 			},
 		},
 		owo_gripstock_amr_03 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_03",
 			},
 		},
 		owo_gripstock_amr_04 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_04",
 			},
 		},
 		owo_gripstock_amr_05 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_05",
 			},
 		},
 		owo_gripstock_amr_06 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_06",
 			},
 		},
 		owo_gripstock_amr_07 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_07",
 			},
 		},
 		owo_gripstock_amr_08 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_08",
 			},
 		},
 		owo_gripstock_amr_09 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "stock", parent = "receiver", 
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, 
 			automatic_equip = {
 				stockac = "owo_gripstock_amr_ac_01", stockac2 = "owo_gripstock_amr_ac2_09",
 			},
@@ -2921,55 +2922,57 @@ function mod.owo_helbore_gripstock(variant_id,type)
 		-- ### Helper Parts ###
 		-- AC1: Grip
 		owo_gripstock_grip_empty = {
-			model = "", type = "stockac", parent = "receiver", 
+			model = "", type = "stockac", parent = current_parent, 
 		},
 		owo_gripstock_grip_01a = {
-			model = _item_ranged.."/recievers/stubgun_pistol_receiver_02", type = "stockac", parent = "receiver", 
-			move = vector3_box(0, 0, 0), remove = vector3_box(0, -.2, 0)
+			model = _item_ranged.."/recievers/stubgun_pistol_receiver_02", type = "stockac", parent = current_parent,
 		},
 		owo_gripstock_amr_ac_01 = {
-			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = "stockac", parent = "stock",
+			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = "stockac", parent = current_type,
 		},
 		-- AC2: Stock loop fuckass thing
 		owo_gripstock_amr_ac2_empty = {
-			model = "", type = "stockac2", parent = "stock", 
+			model = "", type = "stockac2", parent = current_type, 
 		},
 		--		Something about chain sword grips is making it not attach. The trigger perhaps?
 		--			Issue arises with grip {2, 3, 4, 6, 7, 9}
 		owo_gripstock_amr_ac2_01 = {
-			model = _item_melee.."/grips/chain_sword_grip_05", type = "stockac2", parent = "stock",
+			model = _item_melee.."/grips/chain_sword_grip_05", type = "stockac2", parent = current_type,
 		},
 		owo_gripstock_amr_ac2_02 = {
-			model = _item_melee.."/grips/chain_sword_grip_08", type = "stockac2", parent = "stock",
+			model = _item_melee.."/grips/chain_sword_grip_08", type = "stockac2", parent = current_type,
 		},
 		owo_gripstock_amr_ac2_03 = {
-			model = _item_ranged.."/recievers/rippergun_rifle_receiver_01", type = "stockac2", parent = "stock",
+			model = _item_ranged.."/recievers/rippergun_rifle_receiver_01", type = "stockac2", parent = current_type,
 			hide_mesh = {{"stockac2", 5,6}}
 		},
 		owo_gripstock_amr_ac2_04 = {
-			model = _item_melee.."/grips/combat_blade_grip_01", type = "stockac2", parent = "stock",
+			model = _item_melee.."/grips/combat_blade_grip_01", type = "stockac2", parent = current_type,
 		},
 		owo_gripstock_amr_ac2_05 = {
-			model = _item_melee.."/grips/combat_blade_grip_02", type = "stockac2", parent = "stock",
+			model = _item_melee.."/grips/combat_blade_grip_02", type = "stockac2", parent = current_type,
 		},
 		owo_gripstock_amr_ac2_06 = {
-			model = _item_melee.."/grips/combat_blade_grip_04", type = "stockac2", parent = "stock",
+			model = _item_melee.."/grips/combat_blade_grip_04", type = "stockac2", parent = current_type,
 		},
 		owo_gripstock_amr_ac2_07 = {
-			model = _item_melee.."/grips/combat_blade_grip_05", type = "stockac2", parent = "stock",
+			model = _item_melee.."/grips/combat_blade_grip_05", type = "stockac2", parent = current_type,
 		},
 		owo_gripstock_amr_ac2_08 = {
-			model = _item_melee.."/grips/combat_blade_grip_06", type = "stockac2", parent = "stock",
+			model = _item_melee.."/grips/combat_blade_grip_06", type = "stockac2", parent = current_type,
 		},
 		owo_gripstock_amr_ac2_09 = {
-			model = _item_melee.."/grips/combat_blade_grip_08", type = "stockac2", parent = "stock",
+			model = _item_melee.."/grips/combat_blade_grip_08", type = "stockac2", parent = current_type,
 		},
 	})
 end
 
 -- Stock: Tactical Stock
-function mod.owo_tactical_stock(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, given_type or "stock", {
+function mod.owo_tactical_stock(variant_id, given_type, given_parent)
+	local current_type = given_type or "stock"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_tactical_stock_s_01", name = "OwO Skeletal Stock"},
 		{id = "owo_tactical_stock_f_01", name = "OwO Folded 1 (Natural)"},
 		{id = "owo_tactical_stock_f_02", name = "OwO Folded 2 (Natural)"},
@@ -2995,7 +2998,6 @@ function mod.owo_tactical_stock(variant_id, given_type)
 		{id = "owo_tactical_stockac_00",  name = "Empty stockac", no_randomize = true},
 		{id = "owo_tactical_stockac_01",  name = "Folding stock'vesa", no_randomize = true},
 	})
-	local current_type = type or "stock" 
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -3140,8 +3142,11 @@ function mod.owo_tactical_stock(variant_id, given_type)
 end
 
 -- Stock: Kalashnikov Stock
-function mod.owo_kalash_stock(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, given_type or "stock", {
+function mod.owo_kalash_stock(variant_id, given_type, given_parent)
+	local current_type = given_type or "stock"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_kalash_stock_01", name = "OwO Kalashnikov Stock 1"},
 		{id = "owo_kalash_stock_02", name = "OwO Kalashnikov Stock 2"},
 		{id = "owo_kalash_stock_03", name = "OwO Kalashnikov Stock 3"},
@@ -3166,89 +3171,91 @@ function mod.owo_kalash_stock(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_kalash_stock_01 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_02 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_03 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_04 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_05 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_06 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_07 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_08 = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		-- Helbore
 		owo_kalash_stock_h_01 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_h_02 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_02", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_h_03 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_04", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_04", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		-- Shotgun Compact
 		owo_kalash_stock_01c = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_02c = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_03c = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_04c = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_05c = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_06c = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_07c = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 		owo_kalash_stock_08c = {
-			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = "stock", 
-			mesh_move = false, parent = "receiver",
+			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = current_type, 
+			mesh_move = false, parent = current_parent,
 		},
 	})
 end
 
 -- Stock: Big Stock!
-function mod.owo_beeg_stock(variant_id, given_type)
-	local current_type = type or "stock"
+function mod.owo_beeg_stock(variant_id, given_type, given_parent)
+	local current_type = given_type or "stock"
+	local current_parent = given_parent or "receiver"
+
 	mod.inject_attachments_owo(variant_id, "stockac", {
 		{id = "owo_beeg_stockac_00", name = "Empty stockac", no_randomize = true},
 		{id = "owo_beeg_stockac_01", name = "OwO Beeg Stock Indicator", no_randomize = true},
@@ -3256,16 +3263,18 @@ function mod.owo_beeg_stock(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- ### Helper Parts ###
 		owo_beeg_stockac_00 = {
-			model = "", type = "stockac", parent = "receiver",
+			model = "", type = "stockac", parent = current_parent,
 		},
 		owo_beeg_stockac_01 = {
-			model = _item_melee.."/grips/chain_sword_grip_06", type = "stockac", parent = "receiver",
+			model = _item_melee.."/grips/chain_sword_grip_06", type = "stockac", parent = current_parent,
 			hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
 		},
 	})
+
+	local variant_is_shotgun = (variant_id == "shotgun_p1_m1")
 	
 	-- Generic
-	if not (variant_id == "shotgun_p1_m1") then
+	if not variant_is_shotgun then
 		mod.inject_attachments_owo(variant_id, current_type, {
 			{id = "owo_beeg_stock_01", name = "OwO Big ^.^ Stock 1"},
 			{id = "owo_beeg_stock_02", name = "OwO Big ^.^ Stock 2"},
@@ -3277,19 +3286,19 @@ function mod.owo_beeg_stock(variant_id, given_type)
 		mod.inject_models(variant_id, {
 			-- Generic
 			owo_beeg_stock_01 = {
-				model = _item_ranged.."/stocks/stock_01", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/stock_01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_02 = {
-				model = _item_ranged.."/stocks/stock_02", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/stock_02", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_03 = {
-				model = _item_ranged.."/stocks/stock_03", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/stock_03", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_04 = {
-				model = _item_ranged.."/stocks/stock_04", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/stock_04", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_05 = {
-				model = _item_ranged.."/stocks/stock_05", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/stock_05", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 		})
 	end
@@ -3303,16 +3312,16 @@ function mod.owo_beeg_stock(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- Infantry Autogun
 		owo_beeg_stock_iag_02 = {
-			model = _item_ranged.."/stocks/autogun_rifle_stock_02", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/autogun_rifle_stock_02", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 		owo_beeg_stock_iag_03 = {
-			model = _item_ranged.."/stocks/autogun_rifle_stock_03", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/autogun_rifle_stock_03", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 		owo_beeg_stock_iag_04 = {
-			model = _item_ranged.."/stocks/autogun_rifle_stock_04", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/autogun_rifle_stock_04", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 		owo_beeg_stock_iag_05 = {
-			model = _item_ranged.."/stocks/autogun_rifle_stock_ml01", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/autogun_rifle_stock_ml01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 	})
 	-- Braced Autogun
@@ -3323,13 +3332,13 @@ function mod.owo_beeg_stock(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- Braced Autogun
 		owo_beeg_stock_bag_02 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 		owo_beeg_stock_bag_05 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 	})
-	if not (variant_id == "shotgun_p1_m1") then
+	if not variant_is_shotgun then
 		mod.inject_attachments_owo(variant_id, current_type, {
 			{id = "owo_beeg_stock_iag_01", name = "OwO Big ^.^ Stock IAG 1"},
 			{id = "owo_beeg_stock_bag_01", name = "OwO Big ^.^ Stock BAG 1"},
@@ -3353,72 +3362,72 @@ function mod.owo_beeg_stock(variant_id, given_type)
 		mod.inject_models(variant_id, {
 			-- Infantry Autogun
 			owo_beeg_stock_iag_01 = {
-				model = _item_ranged.."/stocks/autogun_rifle_stock_01", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/autogun_rifle_stock_01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			-- Braced Autogun
 			owo_beeg_stock_bag_01 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_bag_03 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_03", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_03", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_bag_04 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_04", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_04", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_bag_06 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_bag_07 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_07", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_07", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_bag_08 = {
-				model = _item_ranged.."/stocks/shotgun_rifle_ak_stock_ml01", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				model = _item_ranged.."/stocks/shotgun_rifle_ak_stock_ml01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			-- Shotgun
 			owo_beeg_stock_sg_01 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_sg_02 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_sg_03 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_sg_04 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_sg_05 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_sg_06 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_sg_07 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_sg_08 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			-- Helbore
 			owo_beeg_stock_h_01 = {
 				model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_h_02 = { 
 				model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_02", type = current_type, 
-				mesh_move = false, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 			owo_beeg_stock_h_03 = {
 				model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_04", type = current_type, 
-				mesh_move = false, parent = "receiver",
+				mesh_move = false, parent = current_parent,
 				automatic_equip = { stockac = "owo_beeg_stockac_01", },
 			},
 		})
@@ -3433,16 +3442,16 @@ function mod.owo_beeg_stock(variant_id, given_type)
 	mod.inject_models(variant_id, {
 		-- Las
 		owo_beeg_stock_las_01 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_01", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 		owo_beeg_stock_las_02 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_02", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_02", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 		owo_beeg_stock_las_03 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 		owo_beeg_stock_las_04 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_04", type = current_type, parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_01", },
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_04", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_beeg_stockac_01", },
 		},
 	})
 end
