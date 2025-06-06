@@ -160,7 +160,7 @@ function mod.on_all_mods_loaded()
 			{id = "owo_"..slot_name.."_default", name = "Empty "..slot_name},
 		})
 		mod.inject_models(this_variant, {
-			owo_crossguard_default = {
+			["owo_"..slot_name.."_default"] = {
 				model = "", type = slot_name, mesh_move = false, parent = parent_name,
 			},
 		})
