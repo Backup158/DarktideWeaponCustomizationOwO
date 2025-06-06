@@ -307,13 +307,13 @@ else
 end
 -- SIGHT
 mod.mt.table_append(mod.wc.sights, {
-	"owo_holosight_01_02_z1",
-	"owo_holosight_01_02_z2",
-	"owo_holosight_01_02ss_z1",
-	"owo_holosight_02_02_z1",
-	"owo_holosight_02_02_z2",
-	"owo_holosight_02_02ss_z1",
-	"owo_holosight_02_02ss_z2",
+	"owo_holographic_sight_01_02_z1",
+	"owo_holographic_sight_01_02_z2",
+	"owo_holographic_sight_01_02ss_z1",
+	"owo_holographic_sight_02_02_z1",
+	"owo_holographic_sight_02_02_z2",
+	"owo_holographic_sight_02_02ss_z1",
+	"owo_holographic_sight_02_02ss_z2",
 	"owo_acog_sight_01f",
 	"owo_acog_sight_01", 
 	"owo_acog_sight_01f_z1",
@@ -344,8 +344,8 @@ mod.wc.sniper_zoom_levels.axe_pommel_06 = 20 	-- 2x
 
 mod.wc.add_custom_attachments.sightac1 = "sightac1_list"
 mod.wc.sightac1_list = {
-	"owo_holosight_empty_01",
-	"owo_holosight_helper_01",
+	"owo_holographic_sight_empty_01",
+	"owo_holographic_sight_helper_01",
 	"owo_rear_sight_empty_01",
 	"owo_rear_sight_ac1_01",
 	"owo_pu_scope_helper_01",
@@ -358,8 +358,8 @@ mod.wc.sightac1_list = {
 --[[ sightac 2-4 covered by MT. it uses sightac for sightac1 but i hate that naming system so fuck that
 mod.wc.add_custom_attachments.sightac2 = "sightac2s"
 mod.wc.sightac2s = {
-	"owo_holosight_empty_02",
-	"owo_holosight_helper_02",
+	"owo_holographic_sight_empty_02",
+	"owo_holographic_sight_helper_02",
 	"owo_rear_sight_empty_02",
 	"owo_rear_sight_ac2_01",
 	"owo_rear_sight_ac2_02",
@@ -371,8 +371,8 @@ mod.wc.sightac2s = {
 }
 mod.wc.add_custom_attachments.sightac3 = "sightac3s"
 mod.wc.sightac3s = {
-	"owo_holosight_empty_03",
-	"owo_holosight_helper_03",
+	"owo_holographic_sight_empty_03",
+	"owo_holographic_sight_helper_03",
 	"owo_rear_sight_empty_03",
 	"owo_rear_sight_ac3_01",
 	"owo_pu_scope_helper_03",
@@ -382,8 +382,8 @@ mod.wc.sightac3s = {
 }
 mod.wc.add_custom_attachments.sightac4 = "sightac4s"
 mod.wc.sightac4s = {
-	"owo_holosight_empty_04",
-	"owo_holosight_helper_04",
+	"owo_holographic_sight_empty_04",
+	"owo_holographic_sight_helper_04",
 	"owo_rear_sight_empty_04",
 	"owo_rear_sight_ac4_01",
 	"owo_pu_scope_helper_04",
@@ -393,8 +393,8 @@ mod.wc.sightac4s = {
 ]]
 -- In the MT Plugin, these tables are sightacs#, instead of sightac#s
 mod.mt.table_append(mod.wc.sightacs2, {
-	"owo_holosight_empty_02",
-	"owo_holosight_helper_02",
+	"owo_holographic_sight_empty_02",
+	"owo_holographic_sight_helper_02",
 	"owo_rear_sight_empty_02",
 	"owo_rear_sight_ac2_01",
 	"owo_rear_sight_ac2_02",
@@ -407,8 +407,8 @@ mod.mt.table_append(mod.wc.sightacs2, {
 	"owo_rear_sight_ak_ac2_01",
 })
 mod.mt.table_append(mod.wc.sightacs3, {
-	"owo_holosight_empty_03",
-	"owo_holosight_helper_03",
+	"owo_holographic_sight_empty_03",
+	"owo_holographic_sight_helper_03",
 	"owo_rear_sight_empty_03",
 	"owo_rear_sight_ac3_01",
 	"owo_pu_scope_helper_03",
@@ -417,8 +417,8 @@ mod.mt.table_append(mod.wc.sightacs3, {
 	"owo_susat_ac3_01",
 })
 mod.mt.table_append(mod.wc.sightacs4, {
-	"owo_holosight_empty_04",
-	"owo_holosight_helper_04",
+	"owo_holographic_sight_empty_04",
+	"owo_holographic_sight_helper_04",
 	"owo_rear_sight_empty_04",
 	"owo_rear_sight_ac4_01",
 	"owo_pu_scope_helper_04",
@@ -462,20 +462,20 @@ mod.mt.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sig
 })
 mod.wc.add_custom_attachments.sight_secondary = "sight_secondary_list"
 mod.wc.sight_secondary_list = {
-	"owo_holosight_empty2",
-	"owo_holosight_sight_secondary_01",
+	"owo_holographic_sight_empty2",
+	"owo_holographic_sight_sight_secondary_01",
 	"owo_pu_scope_riser_01"
 }
 mod.wc.add_custom_attachments.sight_secondary_ac1 = "sight_secondary_ac1_list"
 mod.wc.sight_secondary_ac1_list = {
-	"owo_holosight_empty2_01",
-	"owo_holosight_sight_secondary_helper_01",
+	"owo_holographic_sight_empty2_01",
+	"owo_holographic_sight_sight_secondary_helper_01",
 	--"owo_pu_scope2_helper_01",
 }
 mod.wc.add_custom_attachments.sight_secondary_ac2 = "sight_secondary_ac2_list"
 mod.wc.sight_secondary_ac2_list = {
-	"owo_holosight_empty2_02",
-	"owo_holosight_sight_secondary_helper_02",
+	"owo_holographic_sight_empty2_02",
+	"owo_holographic_sight_sight_secondary_helper_02",
 	--"owo_pu_scope2_helper_02",
 }
 -- RECEIVER
@@ -3869,106 +3869,106 @@ end
 -- Sight: Holographic Sights + Magnifiers
 --		EOTech HWS (Holographic Weapon Sight)
 --		Vortex Razor AMG UH-1
-function mod.owo_holosight(variant_id, given_type)
+function mod.owo_holographic_sight(variant_id, given_type)
 	local current_type = given_type or "sight"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_holosight_01_01", name = "OwO EOTech"},
-		{id = "owo_holosight_01_02_z1", name = "OwO EOTech+Magnifier (1.25x)"},
-		{id = "owo_holosight_01_02_z2", name = "OwO EOTech+Magnifier (1.75x)"},
-		{id = "owo_holosight_01_03", name = "OwO EOTech+Magnifier (Side)"},
-		{id = "owo_holosight_01_01ss", name = "OwO EOTech (Short)"},
-		{id = "owo_holosight_01_02ss_z1", name = "OwO EOTech + M (Short, 1.25x)"},
-		{id = "owo_holosight_01_02ss_z2", name = "OwO EOTech + M (Short, 1.75x)"},
-		{id = "owo_holosight_01_03ss", name = "OwO EOTech + M/s (Short)"},
-		{id = "owo_holosight_02_01", name = "OwO Razor Sight"},
-		{id = "owo_holosight_02_02_z1", name = "OwO Razor + M (1.25x)"},
-		{id = "owo_holosight_02_02_z2", name = "OwO Razor + M (1.75x)"},
-		{id = "owo_holosight_02_03", name = "OwO Razor + M/s"},
-		{id = "owo_holosight_02_01ss", name = "OwO Razor (Short)"},
-		{id = "owo_holosight_02_02ss_z1", name = "OwO Razor + M (Short, 1.25x)"},
-		{id = "owo_holosight_02_02ss_z2", name = "OwO Razor + M (Short, 1.75x)"},
-		{id = "owo_holosight_02_03ss", name = "OwO Razor + M/s (Short)"},
+		{id = "owo_holographic_sight_01_01", name = "OwO EOTech"},
+		{id = "owo_holographic_sight_01_02_z1", name = "OwO EOTech+Magnifier (1.25x)"},
+		{id = "owo_holographic_sight_01_02_z2", name = "OwO EOTech+Magnifier (1.75x)"},
+		{id = "owo_holographic_sight_01_03", name = "OwO EOTech+Magnifier (Side)"},
+		{id = "owo_holographic_sight_01_01ss", name = "OwO EOTech (Short)"},
+		{id = "owo_holographic_sight_01_02ss_z1", name = "OwO EOTech + M (Short, 1.25x)"},
+		{id = "owo_holographic_sight_01_02ss_z2", name = "OwO EOTech + M (Short, 1.75x)"},
+		{id = "owo_holographic_sight_01_03ss", name = "OwO EOTech + M/s (Short)"},
+		{id = "owo_holographic_sight_02_01", name = "OwO Razor Sight"},
+		{id = "owo_holographic_sight_02_02_z1", name = "OwO Razor + M (1.25x)"},
+		{id = "owo_holographic_sight_02_02_z2", name = "OwO Razor + M (1.75x)"},
+		{id = "owo_holographic_sight_02_03", name = "OwO Razor + M/s"},
+		{id = "owo_holographic_sight_02_01ss", name = "OwO Razor (Short)"},
+		{id = "owo_holographic_sight_02_02ss_z1", name = "OwO Razor + M (Short, 1.25x)"},
+		{id = "owo_holographic_sight_02_02ss_z2", name = "OwO Razor + M (Short, 1.75x)"},
+		{id = "owo_holographic_sight_02_03ss", name = "OwO Razor + M/s (Short)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
-		{id = "owo_holosight_empty_01", name = "Empty Sight", no_randomize = true},
-		{id = "owo_holosight_helper_01", name = "OwO EOTech'vesa sight container 1", no_randomize = true},
+		{id = "owo_holographic_sight_empty_01", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holographic_sight_helper_01", name = "OwO EOTech'vesa sight container 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2", {
-		{id = "owo_holosight_empty_02", name = "Empty Sight", no_randomize = true},
-		{id = "owo_holosight_helper_02", name = "OwO EOTech'vesa sight container 2", no_randomize = true},
+		{id = "owo_holographic_sight_empty_02", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holographic_sight_helper_02", name = "OwO EOTech'vesa sight container 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3", {
-		{id = "owo_holosight_empty_03", name = "Empty Sight", no_randomize = true},
-		{id = "owo_holosight_helper_03", name = "OwO EOTech'vesa base bulge", no_randomize = true},
-		{id = "owo_holosight_helper_03_02", name = "OwO Razor'vesa front scope hood", no_randomize = true},
+		{id = "owo_holographic_sight_empty_03", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holographic_sight_helper_03", name = "OwO EOTech'vesa base bulge", no_randomize = true},
+		{id = "owo_holographic_sight_helper_03_02", name = "OwO Razor'vesa front scope hood", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac4", {
-		{id = "owo_holosight_empty_04", name = "Empty Sight", no_randomize = true},
-		{id = "owo_holosight_helper_04", name = "OwO EOTech'vesa base", no_randomize = true},
+		{id = "owo_holographic_sight_empty_04", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holographic_sight_helper_04", name = "OwO EOTech'vesa base", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary", {
-		{id = "owo_holosight_empty2", name = "Empty Sight", no_randomize = true},
-		{id = "owo_holosight_sight_secondary_01", name = "OwO EOTech Magnifier Stand", no_randomize = true},
+		{id = "owo_holographic_sight_empty2", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holographic_sight_sight_secondary_01", name = "OwO EOTech Magnifier Stand", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary_ac1", {
-		{id = "owo_holosight_empty2_01", name = "Empty Sight", no_randomize = true},
-		{id = "owo_holosight_sight_secondary_helper_01", name = "OwO EOTech Magnifier 1", no_randomize = true},
+		{id = "owo_holographic_sight_empty2_01", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holographic_sight_sight_secondary_helper_01", name = "OwO EOTech Magnifier 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2", {
-		{id = "owo_holosight_empty2_02", name = "Empty Sight", no_randomize = true},
-		{id = "owo_holosight_sight_secondary_helper_02", name = "OwO EOTech Magnifier 2", no_randomize = true},
+		{id = "owo_holographic_sight_empty2_02", name = "Empty Sight", no_randomize = true},
+		{id = "owo_holographic_sight_sight_secondary_helper_02", name = "OwO EOTech Magnifier 2", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		-- EOTech
 		-- purposefully did not hide housing. the seating makes up the for skinny centre of the ogryn grip
-		owo_holosight_01_01 = {
+		owo_holographic_sight_01_01 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03", sightac4 = "owo_holographic_sight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1}
 			},
 		},
-		owo_holosight_01_02_z1 = {
+		owo_holographic_sight_01_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type,
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
-		owo_holosight_01_02_z2 = {
+		owo_holographic_sight_01_02_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type,
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
-		owo_holosight_01_03 = {
+		owo_holographic_sight_01_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
@@ -3976,53 +3976,53 @@ function mod.owo_holosight(variant_id, given_type)
 			},
 		},
 		-- Compact Versions that you can't aim with
-		owo_holosight_01_01ss = {
+		owo_holographic_sight_01_01ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1}
 			},
 		},
-		owo_holosight_01_02ss_z1 = {
+		owo_holographic_sight_01_02ss_z1 = {
 			--model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1}
 			},
 		},
-		owo_holosight_01_02ss_z2 = {
+		owo_holographic_sight_01_02ss_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1}
 			},
 		},
-		owo_holosight_01_03ss = {
+		owo_holographic_sight_01_03ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
@@ -4030,101 +4030,101 @@ function mod.owo_holosight(variant_id, given_type)
 			},
 		},
 		-- Vortex Razor Sight
-		owo_holosight_02_01 = {
+		owo_holographic_sight_02_01 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03_02", sightac4 = "owo_holographic_sight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1}
 			},
 		},
-		owo_holosight_02_02_z1 = {
+		owo_holographic_sight_02_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03_02", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
-		owo_holosight_02_02_z2 = {
+		owo_holographic_sight_02_02_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03_02", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
-		owo_holosight_02_03 = {
+		owo_holographic_sight_02_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03_02", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1}
 			},
 		},
-		owo_holosight_02_01ss = {
+		owo_holographic_sight_02_01ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03_02", sightac4 = "owo_holographic_sight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1}
 			},
 		},
-		owo_holosight_02_02ss_z1 = {
+		owo_holographic_sight_02_02ss_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03_02", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
-		owo_holosight_02_02ss_z2 = {
+		owo_holographic_sight_02_02ss_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03_02", sightac4 = "owo_holographic_sight_helper_04",
+				sight_secondary = "owo_holographic_sight_sight_secondary_01", sight_secondary_ac1 = "owo_holographic_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holographic_sight_sight_secondary_helper_02",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
-		owo_holosight_02_03ss = {
+		owo_holographic_sight_02_03ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
-				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
-				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
+				sightac1 = "owo_holographic_sight_helper_01", sightac2 = "owo_holographic_sight_helper_02", 
+				sightac3 = "owo_holographic_sight_helper_03_02", sightac4 = "owo_holographic_sight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
@@ -4132,64 +4132,64 @@ function mod.owo_holosight(variant_id, given_type)
 			},
 		},
 		-- ### Helper Parts ###
-		owo_holosight_helper_01 = {
+		owo_holographic_sight_helper_01 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "sightac1", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_helper_02 = {
+		owo_holographic_sight_helper_02 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "sightac2", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_helper_03 = {
+		owo_holographic_sight_helper_03 = {
 			model = _item_melee.."/grips/hatchet_grip_03", type = "sightac3", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_helper_03_02 = {
+		owo_holographic_sight_helper_03_02 = {
 			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_03", type = "sightac3", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_helper_04 = {
+		owo_holographic_sight_helper_04 = {
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sightac4",
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_sight_secondary_01 = {
+		owo_holographic_sight_sight_secondary_01 = {
 			model = _item_melee.."/grips/2h_chain_sword_grip_01", type = "sight_secondary",
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_sight_secondary_helper_01 = {
+		owo_holographic_sight_sight_secondary_helper_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "sight_secondary_ac1",
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_sight_secondary_helper_02 = {
+		owo_holographic_sight_sight_secondary_helper_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "sight_secondary_ac2",
 			mesh_move = false, parent = current_type
 		},
 		-- ### Empty ###
-		owo_holosight_empty_01 = {
+		owo_holographic_sight_empty_01 = {
 			model = "", type = "sightac1", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_empty_02 = {
+		owo_holographic_sight_empty_02 = {
 			model = "", type = "sightac2", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_empty_03 = {
+		owo_holographic_sight_empty_03 = {
 			model = "", type = "sightac3", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_empty_04 = {
+		owo_holographic_sight_empty_04 = {
 			model = "", type = "sightac4", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_empty2 = {
+		owo_holographic_sight_empty2 = {
 			model = "", type = "sight_secondary", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_empty2_01 = {
+		owo_holographic_sight_empty2_01 = {
 			model = "", type = "sight_secondary_ac1", 
 			mesh_move = false, parent = current_type
 		},
-		owo_holosight_empty2_02 = {
+		owo_holographic_sight_empty2_02 = {
 			model = "", type = "sight_secondary_ac2", 
 			mesh_move = false, parent = current_type
 		},
