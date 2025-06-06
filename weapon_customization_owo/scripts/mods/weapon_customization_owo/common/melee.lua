@@ -727,6 +727,19 @@ function mod.owo_crossguard_hilt(variant_id, given_type, given_parent)
 		},
 	})
 end
+function mod.fixes_owo_crossguard_hilt(variant_id, given_type, given_parent)
+	local current_type = given_type or "hilt"
+	local current_parent = given_parent or "grip"
+
+	local _owo_crossguard_hilts = "owo_crossguard_hilt_plate_01"
+
+	mod.mt.inject_fixes(variant_id, {
+		{   dependencies =  { "owo_crossguard_hilt_plate_01" },
+			-- Hilt
+			hilt =  { position = vector3_box(0, 0, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 0.2)},
+		},
+	})
+end
 
 -- Body: Rapier Blades
 function mod.owo_rapier_blade(variant_id, type, parent)

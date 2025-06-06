@@ -27,6 +27,7 @@ local this_variant = "powersword_p1_m1" -- Power Sword
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_slim_blade(this_variant)
+mod.owo_crossguard_hilt(this_variant, "hilt", "grip")
 
 -- ############################################
 -- Define Variables for Fixes
@@ -69,6 +70,7 @@ local _power_sword_grips = "power_sword_grip_01|power_sword_grip_02|power_sword_
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
 mod.fixes_owo_slim_blade(this_variant)
+mod.fixes_owo_crossguard_hilt(this_variant)
 
 -- #################
 -- Custom Fixes
