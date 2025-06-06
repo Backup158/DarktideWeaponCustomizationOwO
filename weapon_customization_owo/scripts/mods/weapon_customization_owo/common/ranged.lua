@@ -4632,8 +4632,9 @@ end
 
 -- Sight: Soviet PU scope
 --		Sight rings are too mf fat
-function mod.owo_pu_scope(variant_id, given_type)
+function mod.owo_pu_scope(variant_id, given_type, given_parent)
 	local current_type = given_type or "sight"
+	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_pu_scope_01", name = "OwO Soviet PU Scope, Riser 1"},
@@ -4684,7 +4685,7 @@ function mod.owo_pu_scope(variant_id, given_type)
 		-- ### Base Parts ###
 		owo_pu_scope_01 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
 				sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
@@ -4699,7 +4700,7 @@ function mod.owo_pu_scope(variant_id, given_type)
 		},
 		owo_pu_scope_02 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
 				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
 				sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
@@ -4714,39 +4715,39 @@ function mod.owo_pu_scope(variant_id, given_type)
 		-- ### Helper Parts ###
 		owo_pu_scope_helper_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac1", 
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = current_parent,
 		},
 		-- Crosshair
 		owo_pu_scope_helper_02 = {
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sightac2", 
-			mesh_move = false, parent = current_type
+			mesh_move = false, parent = current_type,
 		},
 		owo_pu_scope_helper_03 = {
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sightac3", 
-			mesh_move = false, parent = current_type
+			mesh_move = false, parent = current_type,
 		},
 		owo_pu_scope_helper_04 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "sightac4", 
-			mesh_move = false, parent = current_type
+			mesh_move = false, parent = current_type,
 		},
 		-- Knobs
 		owo_pu_scope_helper_05 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "sightac5", 
-			mesh_move = false, parent = current_type
+			mesh_move = false, parent = current_type,
 		},
 		owo_pu_scope_helper_06 = {
 			model = _item_melee.."/pommels/shovel_pommel_01", type = "sightac6", 
-			mesh_move = false, parent = current_type
+			mesh_move = false, parent = current_type,
 		},
 		-- Scope again
 		owo_pu_scope_helper_07 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac7", 
-			mesh_move = false, parent = current_type
+			mesh_move = false, parent = current_type,
 		},
 		-- Riser
 		owo_pu_scope_riser_01 = {
 			model = _item_melee.."/grips/falchion_grip_03", type = "sight_secondary", 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			--automatic_equip = { sight_secondary_ac1 = "owo_pu_scope2_helper_01", sight_secondary_ac2 = "owo_pu_scope2_helper_02",}
 		},
 		--[[ Too thick
@@ -5457,7 +5458,7 @@ mod.wc.KUMQUATs = {
 function mod.owo_<NAME>(variant_id, given_type, given_parent)
 	local current_type = given_type or "magazine"
 	local current_parent = given_parent or "receiver"
-	
+
 	mod.inject_attachments_owo(variant_id, "", {
 		{id = "owo_", name = "OwO "},
 	})
