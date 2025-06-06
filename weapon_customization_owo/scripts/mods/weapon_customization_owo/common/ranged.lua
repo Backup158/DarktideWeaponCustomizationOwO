@@ -346,8 +346,8 @@ mod.wc.add_custom_attachments.sightac1 = "sightac1_list"
 mod.wc.sightac1_list = {
 	"owo_holographic_sight_empty_01",
 	"owo_holographic_sight_helper_01",
-	"owo_rear_sight_empty_01",
-	"owo_rear_sight_ac1_01",
+	"owo_ladder_aperture_sight_empty_01",
+	"owo_ladder_aperture_sight_ac1_01",
 	"owo_pu_scope_helper_01",
 	"owo_m16_sight_helper_01",
 	"owo_acog_sight_helper_01",
@@ -360,10 +360,10 @@ mod.wc.add_custom_attachments.sightac2 = "sightac2s"
 mod.wc.sightac2s = {
 	"owo_holographic_sight_empty_02",
 	"owo_holographic_sight_helper_02",
-	"owo_rear_sight_empty_02",
-	"owo_rear_sight_ac2_01",
-	"owo_rear_sight_ac2_02",
-	"owo_rear_sight_ac2_03",
+	"owo_ladder_aperture_sight_empty_02",
+	"owo_ladder_aperture_sight_ac2_01",
+	"owo_ladder_aperture_sight_ac2_02",
+	"owo_ladder_aperture_sight_ac2_03",
 	"owo_pu_scope_helper_02",
 	"owo_m16_sight_helper_02",
 	"owo_acog_sight_helper_02",
@@ -373,8 +373,8 @@ mod.wc.add_custom_attachments.sightac3 = "sightac3s"
 mod.wc.sightac3s = {
 	"owo_holographic_sight_empty_03",
 	"owo_holographic_sight_helper_03",
-	"owo_rear_sight_empty_03",
-	"owo_rear_sight_ac3_01",
+	"owo_ladder_aperture_sight_empty_03",
+	"owo_ladder_aperture_sight_ac3_01",
 	"owo_pu_scope_helper_03",
 	"owo_m16_sight_helper_03",
 	"owo_acog_sight_helper_03",
@@ -384,8 +384,8 @@ mod.wc.add_custom_attachments.sightac4 = "sightac4s"
 mod.wc.sightac4s = {
 	"owo_holographic_sight_empty_04",
 	"owo_holographic_sight_helper_04",
-	"owo_rear_sight_empty_04",
-	"owo_rear_sight_ac4_01",
+	"owo_ladder_aperture_sight_empty_04",
+	"owo_ladder_aperture_sight_ac4_01",
 	"owo_pu_scope_helper_04",
 	"owo_m16_sight_helper_04",
 	"owo_acog_sight_helper_04", -- SUSAT reuses this
@@ -395,10 +395,10 @@ mod.wc.sightac4s = {
 mod.mt.table_append(mod.wc.sightacs2, {
 	"owo_holographic_sight_empty_02",
 	"owo_holographic_sight_helper_02",
-	"owo_rear_sight_empty_02",
-	"owo_rear_sight_ac2_01",
-	"owo_rear_sight_ac2_02",
-	"owo_rear_sight_ac2_03",
+	"owo_ladder_aperture_sight_empty_02",
+	"owo_ladder_aperture_sight_ac2_01",
+	"owo_ladder_aperture_sight_ac2_02",
+	"owo_ladder_aperture_sight_ac2_03",
 	"owo_pu_scope_helper_02",
 	"owo_m16_sight_helper_02",
 	"owo_acog_sight_helper_02",
@@ -409,8 +409,8 @@ mod.mt.table_append(mod.wc.sightacs2, {
 mod.mt.table_append(mod.wc.sightacs3, {
 	"owo_holographic_sight_empty_03",
 	"owo_holographic_sight_helper_03",
-	"owo_rear_sight_empty_03",
-	"owo_rear_sight_ac3_01",
+	"owo_ladder_aperture_sight_empty_03",
+	"owo_ladder_aperture_sight_ac3_01",
 	"owo_pu_scope_helper_03",
 	"owo_m16_sight_helper_03",
 	"owo_acog_sight_helper_03",
@@ -419,16 +419,16 @@ mod.mt.table_append(mod.wc.sightacs3, {
 mod.mt.table_append(mod.wc.sightacs4, {
 	"owo_holographic_sight_empty_04",
 	"owo_holographic_sight_helper_04",
-	"owo_rear_sight_empty_04",
-	"owo_rear_sight_ac4_01",
+	"owo_ladder_aperture_sight_empty_04",
+	"owo_ladder_aperture_sight_ac4_01",
 	"owo_pu_scope_helper_04",
 	"owo_m16_sight_helper_04",
 	"owo_acog_sight_helper_04", -- SUSAT reuses this
 })
 mod.wc.add_custom_attachments.sightac5 = "sightac5_list"
 mod.wc.sightac5_list = {
-	"owo_rear_sight_empty_05",
-	"owo_rear_sight_ac5_01",
+	"owo_ladder_aperture_sight_empty_05",
+	"owo_ladder_aperture_sight_ac5_01",
 	"owo_pu_scope_empty_05",
 	"owo_pu_scope_helper_05",
 	"owo_m16_sight_helper_05",
@@ -437,8 +437,8 @@ mod.wc.sightac5_list = {
 }
 mod.wc.add_custom_attachments.sightac6 = "sightac6_list"
 mod.wc.sightac6_list = {
-	"owo_rear_sight_empty_06",
-	"owo_rear_sight_ac6_01",
+	"owo_ladder_aperture_sight_empty_06",
+	"owo_ladder_aperture_sight_ac6_01",
 	"owo_pu_scope_empty_06",
 	"owo_pu_scope_helper_06",
 	"owo_m16_sight_helper_06",
@@ -3426,169 +3426,169 @@ end
 
 -- Sight: Rear sights with flip up. Ladder Aperture Sights
 --	Helbore style only
-function mod.owo_rear_sight(variant_id, given_type, given_parent)
+function mod.owo_ladder_aperture_sight(variant_id, given_type, given_parent)
 	local current_type = given_type or "sight"
 	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_rear_sight_01", name = "OwO Aperture Sights, U Notch"},
-		{id = "owo_rear_sight_02", name = "OwO Aperture, U Notch (Up)"},
-		{id = "owo_rear_sight_o_00", name = "OwO _n_"},
-		{id = "owo_rear_sight_o_01", name = "OwO _n_ (thicc)"},
-		{id = "owo_rear_sight_o_02", name = "OwO MAS49/56 Irons"},
-		{id = "owo_rear_sight_o_03", name = "OwO MAS49 (starving)"},
+		{id = "owo_ladder_aperture_sight_01", name = "OwO Aperture Sights, U Notch"},
+		{id = "owo_ladder_aperture_sight_02", name = "OwO Aperture, U Notch (Up)"},
+		{id = "owo_ladder_aperture_sight_o_00", name = "OwO _n_"},
+		{id = "owo_ladder_aperture_sight_o_01", name = "OwO _n_ (thicc)"},
+		{id = "owo_ladder_aperture_sight_o_02", name = "OwO MAS49/56 Irons"},
+		{id = "owo_ladder_aperture_sight_o_03", name = "OwO MAS49 (starving)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
-		{id = "owo_rear_sight_empty_01", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac1_01", name = "Flip sight range select 1", no_randomize = true},
-		{id = "owo_rear_sight_ac1_02", name = "MAS49 Peep 1", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_empty_01", name = "Empty Sight", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac1_01", name = "Flip sight range select 1", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac1_02", name = "MAS49 Peep 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2", {
-		{id = "owo_rear_sight_empty_02", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac2_01", name = "Flip sight range select 2", no_randomize = true},
-		{id = "owo_rear_sight_ac2_02", name = "MAS49 Peep 2", no_randomize = true},
-		{id = "owo_rear_sight_ac2_03", name = "MAS49/56 Feet", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_empty_02", name = "Empty Sight", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac2_01", name = "Flip sight range select 2", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac2_02", name = "MAS49 Peep 2", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac2_03", name = "MAS49/56 Feet", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3", {
-		{id = "owo_rear_sight_empty_03", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac3_01", name = "Rear Aperture 1", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_empty_03", name = "Empty Sight", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac3_01", name = "Rear Aperture 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac4", {
-		{id = "owo_rear_sight_empty_04", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac4_01", name = "Rear Aperture 2", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_empty_04", name = "Empty Sight", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac4_01", name = "Rear Aperture 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac5", {
-		{id = "owo_rear_sight_empty_05", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac5_01", name = "MAS49 sight seat", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_empty_05", name = "Empty Sight", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac5_01", name = "MAS49 sight seat", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac6", {
-		{id = "owo_rear_sight_empty_06", name = "Empty Sight", no_randomize = true},
-		{id = "owo_rear_sight_ac6_01", name = "MAS49 bulge", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_empty_06", name = "Empty Sight", no_randomize = true},
+		{id = "owo_ladder_aperture_sight_ac6_01", name = "MAS49 bulge", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		-- the base sight is the ladder
-		owo_rear_sight_01 = {
+		owo_ladder_aperture_sight_01 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { sightac1 = "owo_rear_sight_ac1_01", sightac2 = "owo_rear_sight_ac2_01",
-				sightac3 = "owo_rear_sight_ac3_01", sightac4 = "owo_rear_sight_ac4_01",
+			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_01", sightac2 = "owo_ladder_aperture_sight_ac2_01",
+				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
 			}
 		},
-		owo_rear_sight_02 = {
+		owo_ladder_aperture_sight_02 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { sightac1 = "owo_rear_sight_ac1_01", sightac2 = "owo_rear_sight_ac2_01",
-				sightac3 = "owo_rear_sight_ac3_01", sightac4 = "owo_rear_sight_ac4_01",
+			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_01", sightac2 = "owo_ladder_aperture_sight_ac2_01",
+				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
 			}
 		},
 		-- mas sight
-		owo_rear_sight_o_00 = {
+		owo_ladder_aperture_sight_o_00 = {
 			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { sightac1 = "owo_rear_sight_ac1_02", sightac2 = "owo_rear_sight_ac2_02",
-				sightac3 = "owo_rear_sight_ac3_01", sightac4 = "owo_rear_sight_ac4_01",
-				sightac5 = "owo_rear_sight_ac5_01", sightac6 = "owo_rear_sight_empty",
+			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_02", sightac2 = "owo_ladder_aperture_sight_ac2_02",
+				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
+				sightac5 = "owo_ladder_aperture_sight_ac5_01", sightac6 = "owo_ladder_aperture_sight_empty",
 			}
 		},
-		owo_rear_sight_o_01 = {
+		owo_ladder_aperture_sight_o_01 = {
 			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { sightac1 = "owo_rear_sight_ac1_02", sightac2 = "owo_rear_sight_ac2_02",
-				sightac3 = "owo_rear_sight_ac3_01", sightac4 = "owo_rear_sight_ac4_01",
-				sightac5 = "owo_rear_sight_ac5_01", sightac6 = "owo_rear_sight_ac6_01",
+			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_02", sightac2 = "owo_ladder_aperture_sight_ac2_02",
+				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
+				sightac5 = "owo_ladder_aperture_sight_ac5_01", sightac6 = "owo_ladder_aperture_sight_ac6_01",
 			}
 		},
 		-- mas 49/56
-		owo_rear_sight_o_02 = {
+		owo_ladder_aperture_sight_o_02 = {
 			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { sightac1 = "owo_rear_sight_ac1_02", sightac2 = "owo_rear_sight_empty",
-				sightac3 = "owo_rear_sight_ac3_01", sightac4 = "owo_rear_sight_ac4_01",
-				sightac5 = "owo_rear_sight_ac5_01", sightac6 = "owo_rear_sight_ac6_01",
+			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_02", sightac2 = "owo_ladder_aperture_sight_empty",
+				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
+				sightac5 = "owo_ladder_aperture_sight_ac5_01", sightac6 = "owo_ladder_aperture_sight_ac6_01",
 			}
 		},
-		owo_rear_sight_o_03 = {
+		owo_ladder_aperture_sight_o_03 = {
 			model = _item_melee.."/grips/chain_sword_grip_07", type = "sight", 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { sightac1 = "owo_rear_sight_ac1_02", sightac2 = "owo_rear_sight_empty",
-				sightac3 = "owo_rear_sight_ac3_01", sightac4 = "owo_rear_sight_ac4_01",
-				sightac5 = "owo_rear_sight_ac5_01", sightac6 = "owo_rear_sight_empty",
+			automatic_equip = { sightac1 = "owo_ladder_aperture_sight_ac1_02", sightac2 = "owo_ladder_aperture_sight_empty",
+				sightac3 = "owo_ladder_aperture_sight_ac3_01", sightac4 = "owo_ladder_aperture_sight_ac4_01",
+				sightac5 = "owo_ladder_aperture_sight_ac5_01", sightac6 = "owo_ladder_aperture_sight_empty",
 			}
 		},
 		-- ### Helper Parts ###
 		-- ac1
 		-- 	ladder sight select
-		owo_rear_sight_ac1_01 = {
+		owo_ladder_aperture_sight_ac1_01 = {
 			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "sightac1", 
 			mesh_move = false, parent = "sight",
 		},
 		-- 	mas peep
-		owo_rear_sight_ac1_02 = {
+		owo_ladder_aperture_sight_ac1_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "sightac1", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ac2
 		-- 	ladder sight select
-		owo_rear_sight_ac2_01 = {
+		owo_ladder_aperture_sight_ac2_01 = {
 			model = _item_ranged.."/bayonets/rippergun_rifle_bayonet_02", type = "sightac2", 
 			mesh_move = false, parent = "sight",
 		},
 		-- 	mas peep
-		owo_rear_sight_ac2_02 = {
+		owo_ladder_aperture_sight_ac2_02 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac2", 
 			mesh_move = false, parent = "sight",
 		},
 		-- 	mas 49/56 bulgey wulgey (fake)
-		owo_rear_sight_ac2_03 = {
+		owo_ladder_aperture_sight_ac2_03 = {
 			model = _item_melee.."/heads/power_maul_head_03", type = "sightac2", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ac3
-		owo_rear_sight_ac3_01 = {
+		owo_ladder_aperture_sight_ac3_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "sightac3", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ac4
-		owo_rear_sight_ac4_01 = {
+		owo_ladder_aperture_sight_ac4_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = "sightac4", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ac5
 		-- 	mas seat/feet
-		owo_rear_sight_ac5_01 = {
+		owo_ladder_aperture_sight_ac5_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "sightac5", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ac6
 		-- 	mas bulgey wulgey (real)
-		owo_rear_sight_ac6_01 = {
+		owo_ladder_aperture_sight_ac6_01 = {
 			model = _item_melee.."/heads/power_maul_head_03", type = "sightac6", 
 			mesh_move = false, parent = "sight",
 		},
 		-- ### Empty ###
-		owo_rear_sight_empty_01 = {
+		owo_ladder_aperture_sight_empty_01 = {
 			model = "", type = "sightac1", 
 			mesh_move = false, parent = "sight"
 		},
-		owo_rear_sight_empty_02 = {
+		owo_ladder_aperture_sight_empty_02 = {
 			model = "", type = "sightac2", 
 			mesh_move = false, parent = "sight"
 		},
-		owo_rear_sight_empty_03 = {
+		owo_ladder_aperture_sight_empty_03 = {
 			model = "", type = "sightac3", 
 			mesh_move = false, parent = "sight"
 		},
-		owo_rear_sight_empty_04 = {
+		owo_ladder_aperture_sight_empty_04 = {
 			model = "", type = "sightac4", 
 			mesh_move = false, parent = "sight"
 		},
-		owo_rear_sight_empty_05 = {
+		owo_ladder_aperture_sight_empty_05 = {
 			model = "", type = "sightac5", 
 			mesh_move = false, parent = "sight"
 		},
-		owo_rear_sight_empty_06 = {
+		owo_ladder_aperture_sight_empty_06 = {
 			model = "", type = "sightac6", 
 			mesh_move = false, parent = "sight"
 		},

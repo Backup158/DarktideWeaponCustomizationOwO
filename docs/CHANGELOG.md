@@ -1,7 +1,11 @@
-# 
+# 2025-06-05
 v2.0.0
 
-**BREAKING CHANGE(S)**: Renamed `holosight` to `holographic_sight`, for function AND attachment names. All holographic sights must be reequipped! Any patches will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well do this because it's been bugging me for months.
+**BREAKING CHANGE(S)**: 
+- Renamed `holosight` to `holographic_sight`, for function AND attachment names. 
+- Renamed `owo_rear_sight` to `owo_ladder_aperture_sight`, for function AND attachment names. 
+
+ALL affected sights must be reequipped! Any patches will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well do this because it's been bugging me for months.
 
 Added:
 - Disk Crossguard
