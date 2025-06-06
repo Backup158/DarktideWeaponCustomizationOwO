@@ -24,7 +24,7 @@ mod.initialize_custom_slot_for_weapon(this_variant, "pommelac2")
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
-mod.owo_shovel_handles(this_variant, "head")
+mod.owo_shovel_handles(this_variant, "pommel")
 
 -- ############################################
 -- Define Variables for Fixes
