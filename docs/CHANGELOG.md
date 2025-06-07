@@ -22,6 +22,7 @@ Refactor:
     - `initialize_table_of_custom_slot_for_weapon`: Batch execution `initialize_custom_slot_for_weapon` over all names in the given table, so I don't have to copy paste so much at the top of each weapon file. Because this creates an extra table for each weapon, there is some additional overhead. It was not noticeable to me, so I'm willing to take it in exchange for the ease of development
     - `create_custom_slot`: Creates a new (visible, selectable) slot, then make the localization for it (which is provided when called, so it's easier for translators)
     - All weapons have been migrated to this new system.
+    - `hide_slot`: Fills out the hide_mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao)
 - Modularized type identity (logic fix for the 'or type') for 
     - Melee
         - Trench Dagger Finger Guards
