@@ -222,16 +222,6 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Muzzle: CONDOM
 	-- ######
-	{	dependencies = {"owo_condom_01"},
-		muzzle = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
-		muzzle_2 = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
-	},
-	-- the skinny bayonet. sits on muzzle
-	{	dependencies = {"owo_condom_01",
-			"autogun_bayonet_03",
-		},
-		bayonet = { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
-	},
 
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
@@ -342,22 +332,19 @@ mod.mt.inject_fixes(this_variant, {
     --    bayonet =      { offset = true, position = vector3_box(0.14, -0.176, -0.085), rotation = vector3_box(0, -60, 0), scale = vector3_box(1, 1.5, 1 ) },
     --},
     {	dependencies =  { "owo_m203", _syn_aquilon_barrels },
-        bayonet =      { offset = true, position = vector3_box(0, -0.098, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+        bayonet =       { offset = true, position = vector3_box(0, -0.098, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
         flashlight =    { offset = true, position = vector3_box(0.033, 0.568, 0.062), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
 	--  Syn's Volleygun Receivers
-    {	dependencies = {"owo_m203",
-            _syn_volleygun_receivers,
-        },
+    {	dependencies = { "owo_m203", _syn_volleygun_receivers, },
         bayonet =      { offset = true, position = vector3_box(0, -0.0172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
     --	M203 Default
-    {	dependencies = {"owo_m203",
-        },
+    {	dependencies = { "owo_m203", },
         bayonet =      { offset = true, position = vector3_box(0, -0.0172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
     --	M203 Helpers
-	{	dependencies = {"owo_m203"},
+	{	dependencies =  { "owo_m203" },
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.138, 0.), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
         bayonetac2 =    { offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
         bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
