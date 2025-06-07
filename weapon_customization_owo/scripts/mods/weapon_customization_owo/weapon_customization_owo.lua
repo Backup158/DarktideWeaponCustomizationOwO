@@ -7,6 +7,13 @@ local syn
 local mod_version = "2.0.0"
 mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 
+ -- Locals from Weapon Customization plugin template
+ local vector3_box = Vector3Box
+ local _item = "content/items/weapons/player"
+ local _item_ranged = _item.."/ranged"
+ local _item_melee = _item.."/melee"
+ local _item_minion = "content/items/weapons/minions"
+
 -- #################
 -- Alternative Prepend Function
 -- 	Which isn't even necessary to have here
@@ -196,6 +203,28 @@ function mod.on_all_mods_loaded()
 		for _, slot_name in ipairs(table_of_slot_names) do
 			mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
 		end
+	end
+
+	-- ######
+	-- Hide Slot
+	-- DESCRIPTION: To hide unused slots
+	-- 		Not directly injecting them to avoid overhead
+	-- PARAMETER(S):
+	--		string: slot_name
+	--		table: table_of_dependencies
+	--			table of strings
+	-- RETURN: N/A
+	-- ######
+	function mod.hide_slot(slot_name, table_of_dependencies)
+		return {
+			dependencies = table_of_dependencies,
+			[slot_name] = {
+				-- Send it into the stratosphere so it won't interfere with using modding_tools
+				position = vector3_box(0, 0, 2),
+				hide_mesh = { {slot_name, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, 
+				automatic_equip = { slot_name = "owo_"..slot_name.."_default" }, 
+			},
+		}
 	end
 
 	-- ############################################################################

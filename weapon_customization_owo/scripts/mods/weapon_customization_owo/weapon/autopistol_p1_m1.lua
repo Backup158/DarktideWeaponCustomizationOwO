@@ -127,7 +127,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     -- Stocks
     {   dependencies = {"owo_tactical_stockac_01"},
-        stockac = { hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        stockac = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
 

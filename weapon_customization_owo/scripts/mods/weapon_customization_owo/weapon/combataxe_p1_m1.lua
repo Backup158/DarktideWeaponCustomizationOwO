@@ -51,7 +51,7 @@ local _owo_all_tacax_spike_heads = "owo_tacax_spike_01|owo_tacax_spike_02|owo_ta
 mod.mt.inject_fixes(this_variant, {
     -- Head
     {	dependencies = {"owo_tacax_spike_helper_01"},
-        bladeshroud = { hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        bladeshroud = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
 

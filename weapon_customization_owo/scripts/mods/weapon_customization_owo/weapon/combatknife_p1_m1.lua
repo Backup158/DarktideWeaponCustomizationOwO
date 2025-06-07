@@ -63,13 +63,13 @@ mod.mt.inject_fixes(this_variant, {
     },
     -- Finger Guard
     {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac1"},
-        frontguardac1 = { hide_mesh = {{"frontguardac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        frontguardac1 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"frontguardac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac2"},
-        frontguardac2 = { hide_mesh = {{"frontguardac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        frontguardac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"frontguardac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
     {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac3"},
-        frontguardac3 = { hide_mesh = {{"frontguardac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        frontguardac3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"frontguardac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
 

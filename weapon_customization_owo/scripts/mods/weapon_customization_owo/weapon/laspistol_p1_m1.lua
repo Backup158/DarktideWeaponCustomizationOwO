@@ -107,10 +107,10 @@ mod.mt.inject_fixes(this_variant, {
     },
     -- Receivers
     {	dependencies = {"owo_laspistol_grip_mag_helper_01"},
-        receiverac1 = {automatic_equip = { receiverac1="owo_laspistol_grip_mag_helper_empty" }, hide_mesh = {{"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+        receiverac1 = {automatic_equip = { receiverac1 ="owo_laspistol_grip_mag_helper_empty" }, hide_mesh = {{"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
     {	dependencies = {"owo_laspistol_grip_mag_helper2_01"},
-        receiverac2 = {automatic_equip = { receiverac2="owo_laspistol_grip_mag_helper2_empty" },hide_mesh = {{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        receiverac2 = {automatic_equip = { receiverac2 ="owo_laspistol_grip_mag_helper2_empty" },hide_mesh = {{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
     },
 })
 
