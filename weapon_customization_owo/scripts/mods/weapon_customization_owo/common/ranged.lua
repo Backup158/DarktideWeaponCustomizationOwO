@@ -27,10 +27,8 @@ mod.mt.table_append(mod.wc.laser_pointers, {
 })
 -- MUZZLE
 mod.mt.table_append(mod.wc.muzzle_2s, {
-	"owo_suppressor_helper_empty",
 	"owo_suppressor_helper_01",
 	"owo_suppressor_helper_02",
-	"owo_condom_helper_empty",
 	"owo_condom_helper_m2_01",
 	"owo_muzzle_brake_helper_01_00",
 	"owo_muzzle_brake_helper_01_01",
@@ -38,22 +36,19 @@ mod.mt.table_append(mod.wc.muzzle_2s, {
 --	gonna be consistent with this even though i prefer muzzleac
 mod.wc.add_custom_attachments.muzzle_3 = "muzzle_3_list"
 mod.wc.muzzle_3_list = {
-	"owo_muzzle_brake_helper_02_00",
+	"owo_condom_helper_m3_01",
 	"owo_muzzle_brake_helper_02_01",
 }
 mod.wc.add_custom_attachments.muzzle_4 = "muzzle_4_list"
 mod.wc.muzzle_4_list = {
-	"owo_muzzle_brake_helper_03_00",
 	"owo_muzzle_brake_helper_03_01",
 }
 mod.wc.add_custom_attachments.muzzle_5 = "muzzle_5_list"
 mod.wc.muzzle_5_list = {
-	"owo_muzzle_brake_helper_04_00",
 	"owo_muzzle_brake_helper_04_01",
 }
 mod.wc.add_custom_attachments.muzzle_6 = "muzzle_6_list"
 mod.wc.muzzle_6_list = {
-	"owo_muzzle_brake_helper_05_00",
 	"owo_muzzle_brake_helper_05_01",
 }
 -- BARREL
@@ -611,14 +606,12 @@ function mod.owo_suppressor(variant_id, given_type, given_parent)
 		{id = "owo_suppressor_05", name = "OwO Suppressor 5"},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2", {
-		{id = "owo_suppressor_helper_empty", name = "Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
 		{id = "owo_suppressor_helper_02", name = "OwO Suppressor'vesa 2", no_randomize = true},
 		{id = "owo_suppressor_helper_03", name = "OwO Suppressor'vesa 3", no_randomize = true},
 		{id = "owo_suppressor_helper_04", name = "OwO Suppressor'vesa 4", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_3", {
-		{id = "owo_suppressor_helper_02_empty", name = "Empty", no_randomize = true},
 		{id = "owo_suppressor_helper_02_01", name = "OwO Suppressor'vesa2 1", no_randomize = true},
 		{id = "owo_suppressor_helper_02_02", name = "OwO Suppressor'vesa2 2", no_randomize = true},
 		{id = "owo_suppressor_helper_02_03", name = "OwO Suppressor'vesa2 3", no_randomize = true},
@@ -675,9 +668,6 @@ function mod.owo_suppressor(variant_id, given_type, given_parent)
 		},
 		-- ### Helpers ###
 		-- muzzle_2
-		owo_suppressor_helper_empty = {
-			model = "", type = "muzzle_2", mesh_move = false, parent = current_type
-		},
 		owo_suppressor_helper_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = current_type
 		},
@@ -691,9 +681,6 @@ function mod.owo_suppressor(variant_id, given_type, given_parent)
 			model = _item_melee.."/grips/hatchet_grip_03", type = "muzzle_2", mesh_move = false, parent = current_type
 		},
 		-- muzzle_3
-		owo_suppressor_helper_02_empty = {
-			model = "", type = "muzzle_3", mesh_move = false, parent = current_type
-		},
 		owo_suppressor_helper_02_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_3", mesh_move = false, parent = current_type,
 		},
