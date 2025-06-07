@@ -44,6 +44,9 @@ end
 -- ###############
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "muzzle_3",
+    "muzzle_4",
+    "muzzle_5",
+    "muzzle_6",
 
     "bayonetac1",
     "bayonetac2",

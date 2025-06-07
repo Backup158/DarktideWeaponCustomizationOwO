@@ -47,6 +47,9 @@ end
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "muzzle_2", -- MT and Syn didn't add this to Recons yet
     "muzzle_3",
+    "muzzle_4",
+    "muzzle_5",
+    "muzzle_6",
 
     -- "barrelac", -- only scab gunner barrel
 
