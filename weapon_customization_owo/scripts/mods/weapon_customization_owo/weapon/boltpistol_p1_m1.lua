@@ -13,28 +13,52 @@ local this_variant = "boltpistol_p1_m1" -- Bolt Pistol
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-if not mod.syn then
-    mod.wc.attachment[this_variant].barrelshroud = {}
-
-    mod.wc.attachment[this_variant].sight_2 = {}
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    "sightac2",
+    "sightac3",
+    "sightac4",
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
 end
-mod.wc.attachment[this_variant].sightac1 = {}
--- Covered by MT Plugin 
--- mod.wc.attachment[this_variant].sightac2 = {}
--- mod.wc.attachment[this_variant].sightac3 = {}
--- mod.wc.attachment[this_variant].sightac4 = {}
-mod.wc.attachment[this_variant].sightac5 = {}
-mod.wc.attachment[this_variant].sightac6 = {}
-mod.wc.attachment[this_variant].sightac7 = {}
-mod.wc.attachment[this_variant].sight_secondary = {}
-mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
-mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
 
-mod.wc.attachment[this_variant].muzzle_2 = {}
-mod.wc.attachment[this_variant].muzzle_3 = {}
-mod.wc.attachment[this_variant].muzzle_4 = {}
-mod.wc.attachment[this_variant].muzzle_5 = {}
-mod.wc.attachment[this_variant].muzzle_6 = {}
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    "barrelshroud",
+
+    "sight_2", 
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "sightac1",
+    "sightac5",
+    "sightac6",
+    "sightac7",
+    "sight_secondary",
+    "sight_secondary_ac1",
+    "sight_secondary_ac2",
+
+    "muzzle_2",
+    "muzzle_3",
+    "muzzle_4",
+    "muzzle_5",
+    "muzzle_6",
+})
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -136,25 +160,13 @@ local _bistol_barrels = "bolt_pistol_barrel_01|bolt_pistol_barrel_02|bolt_pistol
 -- #################
 mod.mt.inject_fixes(this_variant, {
     -- Barrel
-    {   dependencies = {"owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08"},
-        barrelshroud = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { barrelshroud = "owo_barrelshroud_default" }, },
-    },
+    mod.hide_slot("barrelshroud", { "owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08" }),
     -- Muzzles
-    {	dependencies =  { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01"},
-        muzzle_2 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_muzzle_2_default"}, },
-    },
-    {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01"},
-        muzzle_3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_3_default"}, },
-    },
-    {	dependencies =  { "owo_muzzle_brake_helper_03_01"},
-        muzzle_4 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_4 = "owo_muzzle_4_default"}, },
-    },
-    {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
-        muzzle_5 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_5_default"}, },
-    },
-    {	dependencies =  { "owo_muzzle_brake_helper_05_01"},
-        muzzle_6 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_6 = "owo_muzzle_6_default"}, },
-    },
+    mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
+    mod.hide_slot("muzzle_3", { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01" }),
+    mod.hide_slot("muzzle_4", { "owo_muzzle_brake_helper_03_01" }),
+    mod.hide_slot("muzzle_5", { "owo_muzzle_brake_helper_04_01" }),
+    mod.hide_slot("muzzle_6", { "owo_muzzle_brake_helper_05_01" }),
     -- Sights
     mod.hide_slot("sightac1", { "owo_holographic_sight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
     mod.hide_slot("sightac2", { "owo_holographic_sight_helper_02|owo_pu_scope_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
