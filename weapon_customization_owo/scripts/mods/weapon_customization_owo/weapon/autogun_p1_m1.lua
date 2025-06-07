@@ -13,64 +13,77 @@ local this_variant = "autogun_p1_m1" -- Braced/Infantry/Vigilant Autoguns
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-local table_with_slots_to_initialize = {
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    "gripac",
+    "sightac2",
+    "sightac3",
+    "sightac4",
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
+end
+
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    "barrelshroud",
+    "barrelshroudac",
+    "barrelshroudac2",
+    "barrelshroudac3",
+    "barrelshroudac4",
+    "barrelshroudac5",
+    "barrelshroudac6",
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "muzzle_2", -- MT and Syn didn't add this to autoguns yet
     "muzzle_3",
     "muzzle_4",
     "muzzle_5",
     "muzzle_6",
-}
-if not mod.syn then -- these slots already exist in Syn's plugin
-    mod.wc.attachment[this_variant].barrelshroud = {}
-    mod.wc.attachment[this_variant].barrelshroudac = {}
-    mod.wc.attachment[this_variant].barrelshroudac2 = {}
-    mod.wc.attachment[this_variant].barrelshroudac3 = {}
-    mod.wc.attachment[this_variant].barrelshroudac4 = {}
-    mod.wc.attachment[this_variant].barrelshroudac5 = {}
-    mod.wc.attachment[this_variant].barrelshroudac6 = {}
-end
+    "foregripac1",
+    "foregripac2",
+    "foregripac3",
 
-mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_with_slots_to_initialize)
+    "bayonetac1",
+    "bayonetac2",
+    "bayonetac3",
+    "bayonetac4",
+    "bayonetac5",
+    "bayonetac6",
+    "bayonetac7",
 
---mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autoguns yet
---mod.wc.attachment[this_variant].muzzle_3 = {}
---[[
-mod.wc.attachment[this_variant].muzzle_4 = {}
-mod.wc.attachment[this_variant].muzzle_5 = {}
-mod.wc.attachment[this_variant].muzzle_6 = {}
-]]
+    "owo_magac1",
+    "owo_magac2",
+    "owo_magac3",
+    "owo_magac4",
+    "owo_magac5",
 
-mod.wc.attachment[this_variant].foregripac1 = {}
-mod.wc.attachment[this_variant].foregripac2 = {}
-mod.wc.attachment[this_variant].foregripac3 = {}
+    "sightac1",
+    "sightac5",
+    "sightac6",
+    "sightac7",
+    "sight_secondary",
+    "sight_secondary_ac1",
+    "sight_secondary_ac2",
 
-mod.wc.attachment[this_variant].bayonetac1 = {}
-mod.wc.attachment[this_variant].bayonetac2 = {}
-mod.wc.attachment[this_variant].bayonetac3 = {}
-mod.wc.attachment[this_variant].bayonetac4 = {}
-mod.wc.attachment[this_variant].bayonetac5 = {}
-mod.wc.attachment[this_variant].bayonetac6 = {}
-mod.wc.attachment[this_variant].bayonetac7 = {}
-
-mod.wc.attachment[this_variant].owo_magac1 = {}
-mod.wc.attachment[this_variant].owo_magac2 = {}
-mod.wc.attachment[this_variant].owo_magac3 = {}
-mod.wc.attachment[this_variant].owo_magac4 = {}
-mod.wc.attachment[this_variant].owo_magac5 = {}
-mod.wc.attachment[this_variant].sightac1 = {}
--- Covered by MT Plugin 
--- mod.wc.attachment[this_variant].gripac = {}
--- mod.wc.attachment[this_variant].sightac2 = {}
--- mod.wc.attachment[this_variant].sightac3 = {}
--- mod.wc.attachment[this_variant].sightac4 = {}
-mod.wc.attachment[this_variant].sightac5 = {}
-mod.wc.attachment[this_variant].sightac6 = {}
-mod.wc.attachment[this_variant].sightac7 = {}
-mod.wc.attachment[this_variant].sight_secondary = {}
-mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
-mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
-mod.wc.attachment[this_variant].receiverac1 = {}
-mod.wc.attachment[this_variant].receiverac2 = {}
+    "receiverac1",
+    "receiverac2",
+})
 
 -- ############################################
 -- Injection Calls: attachments and models
