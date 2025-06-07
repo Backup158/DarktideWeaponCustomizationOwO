@@ -29,15 +29,16 @@ if not mod.syn then -- these slots already exist in Syn's plugin
     mod.wc.attachment[this_variant].barrelshroudac5 = {}
     mod.wc.attachment[this_variant].barrelshroudac6 = {}
 end
-for _, slot_name in table_with_slots_to_initialize do
-    mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
-end
+
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_with_slots_to_initialize)
+
 --mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autoguns yet
 --mod.wc.attachment[this_variant].muzzle_3 = {}
---[[]]
+--[[
 mod.wc.attachment[this_variant].muzzle_4 = {}
 mod.wc.attachment[this_variant].muzzle_5 = {}
 mod.wc.attachment[this_variant].muzzle_6 = {}
+]]
 
 mod.wc.attachment[this_variant].foregripac1 = {}
 mod.wc.attachment[this_variant].foregripac2 = {}

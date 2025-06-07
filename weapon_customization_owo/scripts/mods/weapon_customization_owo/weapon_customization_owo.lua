@@ -169,6 +169,21 @@ function mod.on_all_mods_loaded()
 		})
 	end
 
+	-- ######
+	-- Initialize Table of Custom Slot for Weapon
+	-- DESCRIPTION: batch usage of initialize_custom_slot_for_weapon
+	-- PARAMETER(S):
+	--		string: this_variant
+	--		table: table_of_slot_names
+	--			table of strings
+	-- RETURN: N/A
+	-- ######
+	function mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_slot_names)
+		for _, slot_name in ipairs(table_of_slot_names) do
+			mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
+		end
+	end
+
 	-- ############################################################################
 	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
 	-- ############################################################################
