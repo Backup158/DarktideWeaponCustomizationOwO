@@ -6,9 +6,7 @@ v2.0.0
 - Renamed `owo_rear_sight_ak` to `owo_kalashnikov_rear_sight`, for function AND attachment names. 
 - Renamed `owo_bayonet` to `owo_historical_bayonet`, for function AND attachment names. 
 
-ALL affected attachments must be reequipped! Any patches and fixes will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well rename them because it's been bugging me for months.
-
-`rear_sight_ak` made it harder to mass replace.
+ALL affected attachments must be reequipped! Any patches and fixes will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well rename them because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other two were just annoying. Wow I'm an ass.
 
 Added:
 - Disk Crossguard
@@ -19,8 +17,11 @@ Refactor:
     - `initialize_custom_slot_for_weapon`: Automatically creates empty table for the slot, then create a default attachment so hiding unused parts has a consistent part to rely on 
         - Removed now-redundant shotgun foregrip and sight_2 part initialization
         - Removed `owo_empty_foregrip()`
+        - Adapted the "hide parts fixes" to use these new defaults"
+        - Removed now-redundant default parts from each attachment creation function
     - `initialize_table_of_custom_slot_for_weapon`: Batch execution `initialize_custom_slot_for_weapon` over all names in the given table, so I don't have to copy paste so much at the top of each weapon file. Because this creates an extra table for each weapon, there is some additional overhead. It was not noticeable to me, so I'm willing to take it in exchange for the ease of development
-    - `create_custom_slot`: Creates a new (visible, selectable) slot, then make the localization for it
+    - `create_custom_slot`: Creates a new (visible, selectable) slot, then make the localization for it (which is provided when called, so it's easier for translators)
+    - All weapons have been migrated to this new system.
 - Modularized type identity (logic fix for the 'or type') for 
     - Melee
         - Trench Dagger Finger Guards
