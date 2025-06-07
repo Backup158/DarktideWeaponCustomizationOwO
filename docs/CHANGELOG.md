@@ -1,12 +1,14 @@
 # 2025-06-05
 v2.0.0
 
+The primary goal of this refactor was to make development easier, mainly by making it easier to copy and paste things (and hopefully to do that less often in the future, enough to make up for the amount I had to do to implement this update lmfao). Unfortunately, this will come with "breaking" changes that require reequipping attachments. Your game will not crash, but it's gonna be annoying. That's enough for me to call it a breaking change, so I bumped the version up to 2.0.0.
+
 **BREAKING CHANGE(S)**: 
 - Renamed `holosight` to `holographic_sight`, for function AND attachment names. 
 - Renamed `owo_rear_sight_ak` to `owo_kalashnikov_rear_sight`, for function AND attachment names. 
 - Renamed `owo_bayonet` to `owo_historical_bayonet`, for function AND attachment names. 
 
-ALL affected attachments must be reequipped! Any patches and fixes will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well rename them because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other two were just annoying. Wow I'm an ass.
+ALL affected attachments must be reequipped! Any patches and fixes will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well rename them because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other two were just annoying (wow I'm an ass).
 
 Added:
 - Disk Crossguard

@@ -126,9 +126,7 @@ mod.mt.inject_fixes(this_variant, {
         muzzle_3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_suppressor_helper_02_empty"}, },
     },
     -- Stocks
-    {   dependencies = {"owo_tactical_stockac_01"},
-        stockac = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
+    mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
 })
 
 -- #################
