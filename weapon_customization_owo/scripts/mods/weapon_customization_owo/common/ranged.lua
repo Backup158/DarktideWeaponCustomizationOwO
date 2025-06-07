@@ -5625,4 +5625,40 @@ mod.mt.inject_fixes(this_variant, {
 -- Custom Fixes
 -- #################
 
+-- #########################################################################################
+-- WEAPON SLOT INITIALIZATION
+
+mod.hide_slot("SLOT_NAMEAAAAAAA", { "DEPENDENCIES_AAAAAAAA" }),
+
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
+end
+
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    
+})
+
 ]]
