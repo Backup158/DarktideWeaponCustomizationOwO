@@ -13,22 +13,48 @@ local this_variant = "stubrevolver_p1_m1" -- Quickdraw Stub Revolver
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to revolver yet
-mod.wc.attachment[this_variant].muzzle_3 = {}
-mod.wc.attachment[this_variant].barrelshroud = {} -- MT and Syn didn't add this to revolver yet
-
-mod.wc.attachment[this_variant].sightac1 = {}
--- mod.wc.attachment[this_variant].sightac2 = {} -- Covered by MT Plugin 
--- mod.wc.attachment[this_variant].sightac3 = {} -- Covered by MT Plugin 
-if not mod.syn then
-    mod.wc.attachment[this_variant].sightac4 = {}
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    "sightac2", 
+    "sightac3", 
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
 end
-mod.wc.attachment[this_variant].sightac5 = {}
-mod.wc.attachment[this_variant].sightac6 = {}
-mod.wc.attachment[this_variant].sightac7 = {}
-mod.wc.attachment[this_variant].sight_secondary = {}
-mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
-mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
+
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    "sightac4",
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "muzzle_2", -- MT and Syn didn't add this to revolver yet
+    "muzzle_3",
+    
+    "barrelshroud", -- MT and Syn didn't add this to revolver yet
+
+    "sightac1",
+    "sightac5",
+    "sightac6",
+    "sightac7",
+    "sight_secondary",
+    "sight_secondary_ac1",
+    "sight_secondary_ac2",
+    })
 
 -- ############################################
 -- Injection Calls: attachments and models

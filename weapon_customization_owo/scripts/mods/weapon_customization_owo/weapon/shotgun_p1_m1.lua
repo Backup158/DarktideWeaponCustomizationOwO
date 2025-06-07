@@ -13,40 +13,59 @@ local this_variant = "shotgun_p1_m1" -- Combat Shotgun
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-if not mod.syn then
-    mod.wc.attachment[this_variant].sight_2 = {}
-    mod.wc.attachment[this_variant].sightac2 = {}
-    mod.wc.attachment[this_variant].sightac3 = {}
-    mod.wc.attachment[this_variant].sightac4 = {}
-
-    mod.wc.attachment[this_variant].stockac = {}
-
-    mod.wc.attachment[this_variant].shotgun_p1_m1.muzzle_2 = {}
-end
---mod.wc.attachment[this_variant].foregrip = {}
-mod.initialize_custom_slot_for_weapon(this_variant, "foregrip")
-mod.wc.attachment[this_variant].foregripac1 = {}
-mod.wc.attachment[this_variant].foregripac2 = {}
-mod.wc.attachment[this_variant].foregripac3 = {}
-
-mod.wc.attachment[this_variant].sightac1 = {}
--- sightac1-4 are covered by Syn's Edits
-mod.wc.attachment[this_variant].sightac5 = {}
-mod.wc.attachment[this_variant].sightac6 = {}
-mod.wc.attachment[this_variant].sightac7 = {}
-mod.wc.attachment[this_variant].sight_secondary = {}
-mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
-mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
-
 --[[
-mod.wc.attachment[this_variant].stock_2 = {}
--- Inject empty stock_2 for default, since this slot is selectable
-mod.inject_attachments_owo(this_variant, "stock_2", { {id = "owo_stock_02_empty", name = "None"}, })
-mod.inject_models(this_variant, { owo_stock_02_empty = { model = "", type = "stock_2", parent = "receiver", automatic_equip = { stockac = "owo_beeg_stockac_00", }, }, })
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
+end
 ]]
-mod.initialize_custom_slot_for_weapon(this_variant, "stock_2")
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    "sight_2",
+    "sightac2",
+    "sightac3",
+    "sightac4",
 
-mod.wc.attachment[this_variant].muzzle_3 = {}
+    "stockac",
+
+    "muzzle_2",
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "foregrip",
+    "foregripac1",
+    "foregripac2",
+    "foregripac3",
+
+    "sightac1",
+    "sightac5",
+    "sightac6",
+    "sightac7",
+    "sight_secondary",
+    "sight_secondary_ac1",
+    "sight_secondary_ac2",
+
+    "stock_2",
+
+    "muzzle_3",
+})
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -109,23 +128,13 @@ local _owo_grip_grip_straight_grips = "owo_heterosexual_foregrip_grip_01|owo_het
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
 mod.mt.inject_fixes(this_variant, {
-    -- Foregrips
-    {   dependencies =  { "owo_tactical_foregrip_ac1_01"},
-        foregripac1 = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"foregripac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { foregripac1 = "owo_foregripac1_default" }, },
-    },
-    {   dependencies =  { "owo_tactical_foregrip_ac2_01"},
-        foregripac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"foregripac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { foregripac2 = "owo_foregripac2_default" }, },
-    },
-    {   dependencies =  { "owo_tactical_foregrip_ac3_01"},
-        foregripac3 = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"foregripac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { foregripac3 = "owo_foregripac3_default" }, },
-    },
     -- Muzzles
-    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01"},
-		muzzle_2 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_muzzle_2_default"}, },
-	},
-    {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01"},
-        muzzle_3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_suppressor_helper_02_empty"}, },
-    },
+    mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
+    mod.hide_slot("muzzle_3", { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01" }),
+    -- Foregrips
+    mod.hide_slot("foregripac1", { "owo_tactical_foregrip_ac1_01" }),
+    mod.hide_slot("foregripac2", { "owo_tactical_foregrip_ac2_01" }),
+    mod.hide_slot("foregripac3", { "owo_tactical_foregrip_ac3_01" }),
     -- Sights
     mod.hide_slot("sightac1", { "owo_holographic_sight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_kalashnikov_rear_sight_ac1_01|owo_kalashnikov_rear_sight_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
     mod.hide_slot("sightac2", { "owo_holographic_sight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_kalashnikov_rear_sight_ac2_01|owo_kalashnikov_rear_sight_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
