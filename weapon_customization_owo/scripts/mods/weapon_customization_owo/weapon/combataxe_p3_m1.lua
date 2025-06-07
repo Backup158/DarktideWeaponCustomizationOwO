@@ -73,12 +73,8 @@ mod.owo_shovel_handles(this_variant, "pommel")
 -- #################
 mod.mt.inject_fixes(this_variant, {
     -- Pommel
-    {	dependencies = {"owo_shovel_handles_ac1_01|owo_shovel_handles_ac1_02|owo_shovel_handles_ac1_03|owo_shovel_handles_ac1_04|owo_shovel_handles_ac1_05"},
-        pommelac1 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"pommelac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {	dependencies = {"owo_shovel_handles_ac2_01|owo_shovel_handles_ac2_02|owo_shovel_handles_ac2_03|owo_shovel_handles_ac2_04"},
-        pommelac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"pommelac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
+    mod.hide_slot("pommelac1", { "owo_shovel_handles_ac1_01|owo_shovel_handles_ac1_02|owo_shovel_handles_ac1_03|owo_shovel_handles_ac1_04|owo_shovel_handles_ac1_05" }),
+    mod.hide_slot("pommelac2", { "owo_shovel_handles_ac2_01|owo_shovel_handles_ac2_02|owo_shovel_handles_ac2_03|owo_shovel_handles_ac2_04" }),
 })
 
 -- #################

@@ -13,10 +13,40 @@ local this_variant = "laspistol_p1_m1" -- Laspistols
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to laspistol yet
-mod.wc.attachment[this_variant].muzzle_3 = {}
-mod.wc.attachment[this_variant].receiverac1 = {}
-mod.wc.attachment[this_variant].receiverac2 = {}
+--[[
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
+end
+
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+]]
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "muzzle_2", -- MT and Syn didn't add this to laspistol yet
+    "muzzle_3",
+    "receiverac1",
+    "receiverac2",
+})
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -99,19 +129,11 @@ local _syn_gauss_barrels = "syn_gk8gauss_barrel_01|syn_gk8gauss_barrel_02"
 -- #################
 mod.mt.inject_fixes(this_variant, {
     -- Muzzles
-    {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01"},
-        muzzle_2 = {automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty" }, hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, },
-    },
-    {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01"},
-        muzzle_3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_suppressor_helper_02_empty"}, },
-    },
+    mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
+    mod.hide_slot("muzzle_3", { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01" }),
     -- Receivers
-    {	dependencies = {"owo_laspistol_grip_mag_helper_01"},
-        receiverac1 = {automatic_equip = { receiverac1 ="owo_laspistol_grip_mag_helper_empty" }, hide_mesh = {{"receiverac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
-    },
-    {	dependencies = {"owo_laspistol_grip_mag_helper2_01"},
-        receiverac2 = {automatic_equip = { receiverac2 ="owo_laspistol_grip_mag_helper2_empty" },hide_mesh = {{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
+    mod.hide_slot("receiverac1", { "owo_laspistol_grip_mag_helper_01" }),
+    mod.hide_slot("receiverac2", { "owo_laspistol_grip_mag_helper2_01" }),
 })
 
 -- #################
