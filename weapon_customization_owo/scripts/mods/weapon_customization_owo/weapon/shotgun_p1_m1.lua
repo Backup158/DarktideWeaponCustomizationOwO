@@ -111,13 +111,13 @@ local _owo_grip_grip_straight_grips = "owo_heterosexual_foregrip_grip_01|owo_het
 mod.mt.inject_fixes(this_variant, {
     -- Foregrips
     {   dependencies =  { "owo_tactical_foregrip_ac1_01"},
-        foregripac1 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"foregripac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        foregripac1 = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"foregripac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { foregripac1 = "owo_foregripac1_default" }, },
     },
     {   dependencies =  { "owo_tactical_foregrip_ac2_01"},
-        foregripac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"foregripac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        foregripac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"foregripac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { foregripac2 = "owo_foregripac2_default" }, },
     },
     {   dependencies =  { "owo_tactical_foregrip_ac3_01"},
-        foregripac3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"foregripac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+        foregripac3 = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"foregripac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { foregripac3 = "owo_foregripac3_default" }, },
     },
     -- Muzzles
     {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01"},

@@ -80,7 +80,7 @@ local _owo_long_shotgun_barrels_for_muzzles = "owo_revolver_shotgun_barrel_base_
 mod.mt.inject_fixes(this_variant, {
     -- Barrels
     {   dependencies = { "owo_revolver_shotgun_barrel_04|owo_revolver_shotgun_barrel_05|owo_revolver_shotgun_barrel_06|owo_revolver_shotgun_barrel_08" },
-            barrelshroud = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
+            barrelshroud = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"barrelshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { barrelshroud = "owo_barrelshroud_default" }, },
     },
     -- Muzzles
     {	dependencies = {"owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04" },
