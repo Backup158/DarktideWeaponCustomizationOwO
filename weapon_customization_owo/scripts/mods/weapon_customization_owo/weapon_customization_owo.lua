@@ -149,6 +149,27 @@ function mod.on_all_mods_loaded()
 	end
 
 	-- ######
+	-- Creating an Empty Default Attachment
+	-- DESCRIPTION: Creates an attachment with no model, to use as the default
+	--		Automatically named owo_<slot_name>_default. Keeping the owo prefix to avoid any possible collisions
+	--		I find that unlikely, and even more unlikely that that causes problems, but fuck it
+	-- PARAMETER(S):
+	--		string: this_variant
+	--		string: slot_name
+	-- RETURN: N/A
+	-- ######
+	function mod.create_default_attachment(this_variant, slot_name)
+		mod.inject_attachments_owo(this_variant, slot_name, {
+			{id = "owo_"..slot_name.."_default", name = "Empty "..slot_name},
+		})
+		mod.inject_models(this_variant, {
+			["owo_"..slot_name.."_default"] = {
+				model = "", type = slot_name,
+			},
+		})
+	end
+
+	-- ######
 	-- Initialize Custom Slot for Weapon
 	-- DESCRIPTION: Creates an empty table for the slot, then adds an empty default
 	--		Doesn't require a parent, since it's invisible and we won't see it anyways, so defaulting is fine
@@ -159,19 +180,12 @@ function mod.on_all_mods_loaded()
 	-- ######
 	function mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
 		mod.wc.attachment[this_variant][slot_name] = {}
-		mod.inject_attachments_owo(this_variant, slot_name, {
-			{id = "owo_"..slot_name.."_default", name = "Empty "..slot_name},
-		})
-		mod.inject_models(this_variant, {
-			["owo_"..slot_name.."_default"] = {
-				model = "", type = slot_name, mesh_move = false
-			},
-		})
+		mod.create_default_attachment(this_variant, slot_name)
 	end
 
 	-- ######
 	-- Initialize Table of Custom Slot for Weapon
-	-- DESCRIPTION: batch usage of initialize_custom_slot_for_weapon
+	-- DESCRIPTION: For batch usage of initialize_custom_slot_for_weapon
 	-- PARAMETER(S):
 	--		string: this_variant
 	--		table: table_of_slot_names
