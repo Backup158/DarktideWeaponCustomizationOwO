@@ -13,10 +13,39 @@ local this_variant = "combataxe_p1_m1" -- Combat Axe
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-if not syn then
-    mod.wc.attachment[this_variant].bladeshroud = {}
+--[[
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
+end
+]]
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    "bladeshroud",
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
 end
 
+--[[
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    
+})
+]]
 -- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua

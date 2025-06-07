@@ -13,12 +13,41 @@ local this_variant = "combataxe_p3_m1" -- Sapper Shovel
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
---mod.wc.attachment[this_variant].head2 = {}
---mod.wc.attachment[this_variant].pommelac1 = {}
---mod.wc.attachment[this_variant].pommelac2 = {}
-mod.initialize_custom_slot_for_weapon(this_variant, "head2")
-mod.initialize_custom_slot_for_weapon(this_variant, "pommelac1")
-mod.initialize_custom_slot_for_weapon(this_variant, "pommelac2")
+--[[
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
+end
+]]
+--[[
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+]]
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "head2",
+    "pommelac1",
+    "pommelac2",
+})
 
 -- ############################################
 -- Injection Calls: attachments and models
