@@ -164,7 +164,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sightac4", { "owo_holographic_sight_helper_04|owo_pu_scope_helper_04|owo_acog_sight_helper_04" }),
     mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01" }),
     mod.hide_slot("sightac6", { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_acog_sight_helper_06|owo_susat_ac6_01" }),
-    mod.hide_slot("sightac7", { "owo_acog_sight_helper_07|owo_susat_ac7_01" }),
+    mod.hide_slot("sightac7", { "owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07" }),
     mod.hide_slot("sight_secondary", { "owo_holographic_sight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
     mod.hide_slot("sight_secondary_ac1", { "owo_holographic_sight_sight_secondary_helper_01" }),
     mod.hide_slot("sight_secondary_ac2", { "owo_holographic_sight_sight_secondary_helper_02" }),
