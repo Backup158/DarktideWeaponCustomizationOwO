@@ -5,7 +5,7 @@ theme: 'jekyll-theme-slate'
 plugins: 
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
-markdown: GFM
+markdown: kramdown
 exclude: 
   - "**/*.ts" # Exclude source code files!
   - "**/*.js"
