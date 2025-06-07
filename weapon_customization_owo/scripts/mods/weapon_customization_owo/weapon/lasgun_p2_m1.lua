@@ -13,40 +13,67 @@ local this_variant = "lasgun_p2_m1" -- Helbore Lasgun
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-if not mod.syn then
-    mod.wc.attachment[this_variant].stockac = {} -- MT didn't add this to Helbore yet but Syn did
-    mod.wc.attachment[this_variant].stockac2 = {} -- MT didn't add this to Helbore yet but Syn did
-	mod.wc.attachment[this_variant].rearmag = {}
-    mod.wc.attachment[this_variant].muzzle_2 = {} -- MT didn't add this to Helbore yet but Syn did
-    mod.wc.attachment[this_variant].barrelshroud = {}
-    mod.wc.attachment[this_variant].barrelshroudac = {}
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    "sightac2",
+    "sightac3",
+    "sightac4",
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
 end
-mod.wc.attachment[this_variant].muzzle_3 = {}
-mod.wc.attachment[this_variant].muzzle_4 = {}
-mod.wc.attachment[this_variant].muzzle_5 = {}
-mod.wc.attachment[this_variant].muzzle_6 = {}
 
-mod.wc.attachment[this_variant].magac = {} -- MT didn't add this to Helbore yet
-mod.wc.attachment[this_variant].bayonetac1 = {}
-mod.wc.attachment[this_variant].bayonetac2 = {}
-mod.wc.attachment[this_variant].bayonetac3 = {}
-mod.wc.attachment[this_variant].bayonetac4 = {}
-mod.wc.attachment[this_variant].bayonetac5 = {}
-mod.wc.attachment[this_variant].bayonetac6 = {}
-mod.wc.attachment[this_variant].bayonetac7 = {}
-mod.wc.attachment[this_variant].receiverac1 = {}
-mod.wc.attachment[this_variant].receiverac2 = {}
-mod.wc.attachment[this_variant].sightac1 = {}
--- Covered by MT plugin
---mod.wc.attachment[this_variant].sightac2 = {}
---mod.wc.attachment[this_variant].sightac3 = {}
---mod.wc.attachment[this_variant].sightac4 = {}
-mod.wc.attachment[this_variant].sightac5 = {}
-mod.wc.attachment[this_variant].sightac6 = {}
-mod.wc.attachment[this_variant].sightac7 = {}
-mod.wc.attachment[this_variant].sight_secondary = {}
-mod.wc.attachment[this_variant].sight_secondary_ac1 = {}
-mod.wc.attachment[this_variant].sight_secondary_ac2 = {}
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    "stockac", -- MT didn't add this to Helbore yet but Syn did
+    "stockac2", -- MT didn't add this to Helbore yet but Syn did
+	"rearmag",
+    "muzzle_2", -- MT didn't add this to Helbore yet but Syn did
+    "barrelshroud",
+    "barrelshroudac",
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "muzzle_3",
+    "muzzle_4",
+    "muzzle_5",
+    "muzzle_6",
+
+    "magac", -- MT didn't add this to Helbore yet
+
+    "bayonetac1",
+    "bayonetac2",
+    "bayonetac3",
+    "bayonetac4",
+    "bayonetac5",
+    "bayonetac6",
+    "bayonetac7",
+
+    "receiverac1",
+    "receiverac2",
+    
+    "sightac1",
+    "sightac5",
+    "sightac6",
+    "sightac7",
+    "sight_secondary",
+    "sight_secondary_ac1",
+    "sight_secondary_ac2",
+})
 
 -- ############################################
 -- Injection Calls: attachments and models
