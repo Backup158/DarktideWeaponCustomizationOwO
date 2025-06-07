@@ -1,0 +1,304 @@
+# 2025-06-05
+v2.0.0
+
+The primary goal of this refactor was to make development easier, mainly by making it easier to copy and paste things (and hopefully to do that less often in the future, enough to make up for the amount I had to do to implement this update lmfao). Unfortunately, this will come with "breaking" changes that require reequipping attachments. Your game will not crash, but it's gonna be annoying. That's enough for me to call it a breaking change, so I bumped the version up to 2.0.0.
+
+**BREAKING CHANGE(S)**: 
+- Renamed `holosight` to `holographic_sight`, for function AND attachment names. 
+- Renamed `owo_rear_sight_ak` to `owo_kalashnikov_rear_sight`, for function AND attachment names. 
+- Renamed `owo_bayonet` to `owo_historical_bayonet`, for function AND attachment names. 
+
+ALL affected attachments must be reequipped! Any patches and fixes will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well rename them because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other two were just annoying (wow I'm an ass).
+
+Added:
+- Disk Crossguard
+
+Refactor: 
+- Made functions to simplify creating custom slots on the developer side
+    - `create_default_attachment`: Creates an empty attachment for the given slot ("owo_<slot_name>_default")
+    - `initialize_custom_slot_for_weapon`: Automatically creates empty table for the slot, then create a default attachment so hiding unused parts has a consistent part to rely on 
+        - Removed now-redundant shotgun foregrip and sight_2 part initialization
+        - Removed `owo_empty_foregrip()`
+        - Adapted the "hide parts fixes" to use these new defaults"
+        - Removed now-redundant default parts from each attachment creation function
+    - `initialize_table_of_custom_slot_for_weapon`: Batch execution `initialize_custom_slot_for_weapon` over all names in the given table, so I don't have to copy paste so much at the top of each weapon file. Because this creates an extra table for each weapon, there is some additional overhead. It was not noticeable to me, so I'm willing to take it in exchange for the ease of development
+    - `create_custom_slot`: Creates a new (visible, selectable) slot, then make the localization for it (which is provided when called, so it's easier for translators)
+    - All weapons have been migrated to this new system.
+    - `hide_slot`: Fills out the hide_mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao)
+- Modularized type identity (logic fix for the 'or type') for 
+    - Melee
+        - Trench Dagger Finger Guards
+        - Shovel Handles
+        - Historical Blades
+    - Ranged
+        - Suppressor Muzzles
+        - Lasgun Condom Muzzles
+        - Muzzle Brake
+        - Bolt Pistol Shotgun Barrels
+        - Revolver Shotgun Barrels
+        - Dreg Gunner Barrels
+        - M16 Barrels
+        - Wooden Helbore Barrels
+        - Plasma Helbore Barrels
+        - Heterosexual Foregrips
+        - Tactical Foregrips
+        - Historical Bayonets
+        - Underbarrel Grenade Launchers
+        - Underbarrel Shotguns
+        - California Bolter Receivers
+        - Bolt Action Helbore Receivers
+        - Helbore MAS Receivers
+        - Laspistol Grip Mag Receivers
+        - Fin Grips
+        - Helbore Grip Stocks
+        - Tactical (Shotgun) Stocks
+        - Kalashnikov Stocks
+        - Beeg Stocks!
+        - Ladder Aperture Sights
+        - Kalashnikov Rear Sights
+        - M16 Carry Handle Sights
+        - Holographic Scopes
+        - Telescopic Scopes
+        - PU Scopes
+        - Flat Magazines
+        - Helbore Plasma Magazines
+        - Jungle Magazines
+        - Magpul Magazines
+
+# 2025-05-18
+v1.8.1
+
+Hotfix for shotgun rework in Syn's Edits (removal of stock_2 declaration for that mod, so this mod must create it every time)
+
+# 2025-05-17
+v1.8.0
+
+Added:
+- Tacax spikes to Thunder Hammers and Delver's Pickaxes
+- Invisible connector to Thunder Hammers
+- Polearm heads to Thunder Hammers and Delver's Pickaxes
+- Long Shafts (low grip) to Thunder Hammers
+- Long Ogryn Shafts to Delver's Pickaxes
+
+# 2025-05-09
+v1.7.3
+
+Added:
+- Underbarrel Grenade Launchers to Bolter
+- Underbarrel Shotguns to Bolter
+- Slim DClaw blades to (formerly) slim Psword blades
+- Slim Blades to DClaw
+- Suppressors to Bolter and Bistol
+- Muzzle Brake to Bolter and Bistol
+
+Refactored fixes code to reduce copy pasted code. Increased overhead but simplifies adding it to new weapons so suffer >:3.
+
+Reworked suppressors to be more like the muzzle brake, so it won't require as many patches
+
+Restored load order rules for AML update (ty icy my savior)
+
+# 2025-04-17
+v1.7.2
+
+Added Features:
+- Simplified Chinese localization (thanks RinAnarchy!)
+- Russian "localization"
+- Additional (joke) mod options
+    - Debug mode, OwO mode, and Discord Release mode
+- Reload callback for EWC 2024-04-08
+    - Bundled this into the Discord Release Mode
+
+Fixes:
+- Missing point shooting code for Revolver
+- Unaligned scope lenses using alternative viewmodels for recon
+- Resized slim psword blades because I forgot to actually slim them down 
+- Missing attachment slot declarations for people not using Syn's edits
+
+# 2025-04-06
+v1.7.1
+
+Added
+- Beeg/Straight stocks in stock_2 (shotguns)
+- Added Holographic Sights, Telescopic Sights, and Tactical Foregrips (Shotgun)
+
+Fixed missing short eotech z2 housing (4 guns)
+
+Realized a changelog would be a good idea
+
+# 2025-04-05
+Migrated documentation to GitHub Pages
+
+# 2025-04-04
+v1.7.0
+
+Added 
+- Straight grips (shotgun)
+- Tactical stocks for stock_2 (shotgun)
+- straight foregrips (shotgun)
+- Invisible sight_2
+
+Modified recon volleygun scopes to use rails
+
+# 2025-04-03
+Created Scopes only version
+
+# 2025-04-02
+v1.6.1
+Fixed hiding issue with chunky slide
+
+# 2025-04-01
+v1.6
+
+Nexus Release
+- barrett m82 stock
+- helbore plasma rifle barrels
+
+# 2025-03-24
+v1.5
+
+added
+- vortex razor sight
+- spiked tacax for other marks
+- muzzle brake
+
+# 2025-03-10
+v1.4
+
+variables for fixes!
+
+added:
+- slim psword
+- small holo
+- trench spike
+- finger guards
+
+# 2025-03-03
+v1.3
+
+added zoom to scopes
+
+added rapier blades
+
+# 2025-02-25
+v1.2
+
+Added:
+- AK Irons
+- Kalash stock
+- Gp25
+- Alt viewmodels
+
+killed scab gunner stuff
+
+# 2025-02-18
+v1.1
+
+Added:
+- spiked tacax (1 only)
+- shovel pommels
+- suppressor 3-5
+- angled foregrips
+- straight foregrips
+- skeletal stock
+
+Migrated to importing functions from the mt plugin
+
+AML Support
+
+"+5 homosexuality" was in the commit history here for whatever reason
+
+# 2025-01-14
+v0.14
+
+Added:
+- masterkey and mass bayonets
+
+Figured out how to hide things lmao
+
+Migrated to reusing slots from other plugins
+
+# 2024-12-15
+v0.13
+
+Added:
+- ^^ jungle mags
+
+# 2024-12-08
+v0.12
+
+Added:
+- SUSAT
+
+alignments and bugfixes
+
+# 2024-12-01
+v0.11
+
+Added:
+- point shooting holos
+- ACOG
+- Mas receiver
+- flat autogun mag tilted
+- mas irons
+
+# 2024-11-24
+v0.10
+
+Throughout the week, added:
+- Epee baionette
+- Bolt Action Helbore Receivers
+- Rear Sights for Helbores
+- m203 bayonet
+- soviet pu scope
+- laspistol griplaser
+- laspistol chunky slide
+- added shotgun barrels for revolver
+
+Adjusted m16 post heights
+
+Investigated custom flashlights 
+
+# 2024-11-18
+v0.9
+
+Added Wood Helbore Barrels
+
+Added Seitengewehr bayonet
+
+# 2024-11-17
+v0.8
+
+Added Eotech + Magnifier
+
+Added M16 Barrel
+
+# 2024-11-16
+v0.7
+
+Added Jungle Mags
+
+# 2024-11-15
+v0.6
+
+Figured out primitive helper hiding
+
+# 2024-11-14
+v0.5
+
+Added Fin Grips
+
+# 2024-11-13
+v0.4
+
+Added California Bolter Receiver
+
+# 2024-11-12
+v0.3
+
+Initial Git commit
+- Added Dreg Gunner Barrel
+- Created before this commit 
+    - Suppressors (Helbore)
+    - Recon Stock (Helbore)
+    - Recon Rear Mag (Helbore)
+    - super short shotty (Bistol)

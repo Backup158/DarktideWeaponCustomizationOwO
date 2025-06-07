@@ -9,11 +9,11 @@
 [![ChangelogPages](https://img.shields.io/badge/Changelog_(Pages)-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG "Changelog when displayed on GitHub Pages.")
 
 # OwO? What is this?
-Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots. 
+Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots, but works fine in gameplay (see [FAQ #7](#faq-7)). 
 
 > [!WARNING] 
 > 
-> Expect performance drops, especially when piled onto a heavy load order. Some attachments are made of a lot of parts, which takes more resources to process.
+> Expect performance drops, especially when piled onto a heavy load order (see [FAQ #9-10](#faq-performance)). Some attachments are made of a lot of parts, which takes more resources to process.
 > \
 > Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
 > \
@@ -60,19 +60,26 @@ The list is hosted externally.  \
 &emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
 
 # FAQ
-1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
+<a id="faq-1"></a>
 
+1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
 &emsp; HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA
 
 &emsp; *ahem* Make sure you put this above the MT/Syn plugins. Also make sure you have their latest full releases (just the ones on Nexus). If that doesn't fix it, drop a [console log](https://dmf-docs.darkti.de/#/faqs?id=how-do-i-report-mod-errors) in the Nexus posts or the Discord thread. I probably messed up in that case so sorry for laughing at you.
+
+<a id="faq-2"></a>
 
 2) **This mod gave me a backend error!**
 
 &emsp; ~~Oh I'll give you a bac~~ You're missing a requirement for EWC
 
+<a id="faq-3"></a>
+
 3) **X attachment is unaligned when used with Y!**
    
-&emsp; Yeah that's what happens when I'm lazy. Send a screenshot of the customization menu and I'll try and get that fixed eventually. Delivery date depends on rotting status.
+&emsp; Yeah that's what happens when I'm lazy. Send a screenshot of the customization menu so I know which combination is messed up, and I'll try and get that fixed. Delivery date depends on bedrotting status.
+
+<a id="faq-4"></a>
 
 4) **The sights don't line up with where I'm shooting!**
 
@@ -93,16 +100,23 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 ##
 </details>
 
+<a id="faq-5"></a>
+
 5) **My scope/bayonet is stealing the muzzle flash from my gun!**
    
 &emsp; Yeah :( I'll fix that eventually  \
 &emsp; Oh, and also make sure you aren't using a "No muzzle" option for the muzzle. You need to use "Invisible muzzle" for that (That's part of Syn's plugin. May add that myself for people who don't use that).
 
+<a id="faq-6"></a>
+
 6) **When I use the scopes in game, they glitch out and are impossible to aim with!**
 
 &emsp; This is a consequence of the mesh streamer system. You can avoid it by:  \
-&emsp;&emsp; a) Increasing the Mesh Quality in the Options menu  \
-&emsp;&emsp; ![MeshQualitySetting](https://imgur.com/mR2GsjV.png)  \
+&emsp;&emsp; a) Increasing the Mesh Quality in the Options menu 
+<details>  <summary>Mesh Quality Settings</summary>
+
+![MeshQualitySettings](https://imgur.com/mR2GsjV.png)
+</details>
 &emsp;&emsp; b) Completely disabling it in `<Darktide>\bundle\application_settings\settings_common.ini`, but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
 <details> <summary>Disabling the mesh streamer</summary>
   
@@ -122,9 +136,12 @@ mesh_streamer_settings = {
 
 </details>
 
+<a id="faq-7"></a>
+
 7) **What do you mean by "intended for screenshots" ?**
 
-&emsp; It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.
+&emsp; It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.  \
+&emsp; That also means that appearances and accuracy are prioritized over performance. For example, the Masterkey is made of 8 components. There's a few parts I could've taken out, which would've changed it a bit but not enough to matter when it's sitting under your gun. I kept them anyways because I think it looks better when you get up close.
 <details>
   <summary>Elysian Drop Troop Weapons</summary>
   
@@ -135,6 +152,8 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 ##
 </details>
 
+<a id="faq-8"></a>
+
 8) **How am I supposed to aim with the Alternative Viewmodels if I'm not using the scope?**
 
 &emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, be sure to turn off EWC's options that disable crosshairs and lasers while aiming
@@ -144,37 +163,55 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 ![ewc_disable_settings](https://imgur.com/lcmwq8t.png)
 </details>
 
-FAQs involving technical details about requirements and performance:
+<a id="faq-performance"></a>
 
-<details>
-  <summary>Technical details</summary>
+## FAQ - Technical Details Involving Performance and Requirements
   
+<a id="faq-9"></a>
+
 9) **Why can the performance get bad?**
 
 &emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches and in the inventory.
 
-&emsp; Error 2014 comes from your game taking too long to respond to the server; with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you >:3).
+&emsp; Error 2014 comes from your game taking too long to respond to the server ('pong' timeout); with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you >:3).
+
+&emsp; Performance hits can come from many sources (usually the base game lol). For mods, using a lot of mods which are known to use a lot of resources may not cause noticeable issues at first, but at some point you might get a straw that breaks the camel's back. See FAQ #10 for a few potential culprits
 
 &emsp; It's not literally unplayable, but caveat emptor.
+
+<a id="faq-10"></a>
 
 10) **Ok but can I do anything about this?**
 
 &emsp; Aside from the workarounds I posted in the main description, there's some small things but no silver bullets.
-  - Disable raytracing in your `user_settings.config file`. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch `rtxgi_scale`.
-  - Turn off 'Visible Equipment' in the EWC mod options
+  - Game Settings
+    - Disable raytracing in your `user_settings.config file`. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch `rtxgi_scale`.
+    - Disable 'Portrait Rendering' in the 'Video' section. These are the little character heads on the HUD. This is surprisingly heavy for some people.
+  - Mods and Mod Options
+    - EWC-related
+      - Disable 'Visible Equipment' and 'Randomization' in the EWC mod options.
+      - Using all of the EWC plugins. More plugins means more parts to process. This mainly means choosing between this mod and Syn's Edits, if performance is your primary goal. Personally, I'm addicted to customization so I use all of them and just live with the performance issues.
+      - Having a massive inventory. EWC goes through every single weapon in the inventory whenever you load a character, which can lead to disconnects when loading into the Mourningstar.
+      - If you crash at the end of missions, try setting locked packages to 'Always' in the EWC mod options (which will make performance worse but hopefully lessen crashes). Didn't help with disconnects but YMMV.
+    - Change 'Maximum Coroutine Cycles per Frame' in PowerDI from '1000' to '200' or something. PowerDI is constantly saving data in the background, and limiting how much it is allowed to work can improve performance (but maybe it'll be less accurate? I don't use it myself so I don't know)
+    - For the Drip in general. I also just live with this because it's drip or drown, bbq ;* (kill me)
   - For out of memory crashes, apply the lua heap memory increase band-aid fix (`--lua-heap-mb-size 2048` in the Steam launch options)
-  - If you crash at the end of missions, try setting locked packages to 'Always' in the EWC mod options (which will make performance worse but hopefully lessen crashes). Didn't help with disconnects but YMMV.
+
+<a id="faq-11"></a>
 
 11) **Why does this require the MT plugin?**
   
 &emsp; MT's plugin includes functions that make creating parts from multiple pieces much easier. I used them.
 
+<a id="faq-12"></a>
+
 12) **Why does this need to be above the other two plugins?**
 
-&emsp; I piggybacked off of some of the slots they already added to lessen the performance hit. The way parts get added to slots means that if the mod is lower in the load order than the mod that adds the slots, it either just won't work or will wipe out the parts added by the original slot creator. Also the alignments I mentioned earlier.
+&emsp; I piggybacked off of some of the slots they already added to lessen the performance hit. The way parts get added to slots means that if the mod is lower in the load order than the mod that adds the slots, it either just won't work or will wipe out the parts added by the original slot creator. This also means that EWC will actually load any custom alignments I make involving attachments from the other plugins, because otherwise it'll see and use the generic alignments first.
 
-##
-</details>
+## FAQ - New Parts
+
+<a id="faq-13"></a>
 
 13) **XYZ part is historically inaccurate!**
 
@@ -188,6 +225,8 @@ FAQs involving technical details about requirements and performance:
 &emsp; ![DarktideModAutism](https://imgur.com/cguqJNq.png)
 ##
 </details>
+
+<a id="faq-14"></a>
 
 14) **Can you add XYZ?**
 

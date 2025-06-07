@@ -178,11 +178,18 @@ These can get super janky when using non-default parts so watch out.
 ## Melee
 
 ### Heads
-- **Tactical Axe Spike**: Combat/Tactical Axes  \
-Spike on the back of the tactical axe head. Fills in the holes in the blades.
+- **Tactical Axe Spike**: Combat/Tactical Axes, Thunder Hammers, Delver's Pickaxes  \
+&emsp; Spike on the back of the tactical axe head. Fills in the holes in the blades.
+
+> [!WARNING]
+> 
+> KNOWN ISSUE: Variants 2/3/M do not have the spike aligned properly, so there's a second axe head in the middle of these
+
+- **Polearm Heads**: Thunder Hammers, Delver's Pickaxes  \
+&emsp; Based on Becs de Corbin, Lucerne Hammers, and Poleaxes
 
 ### Body
-- **Rapier Blade**: Dueling Swords  \
+- **Rapier Blade**: Catachan "Devil's Claw" Swords, Dueling Swords  \
 &emsp; Thin, straight blades
 - **Historical Knives**: Combat Blades  \
 &emsp; Based on the M1917 Trench Dagger, Gerber Mk II, Indonesian karambits, and tanto blades.  \
@@ -190,17 +197,32 @@ Spike on the back of the tactical axe head. Fills in the holes in the blades.
 &emsp; Tantos are basically the MT Combat Sword blades but skinnier and shorter, so I didn't bother aligning them outside the default case.
 
 ### Blades
-- **Thin Blades**: Power Swords, Catachan "Devil's Claw" Swords \
+- **Slim Blades**: Power Swords, Catachan "Devil's Claw" Swords \
 &emsp; 1h Power Sword blades and "Devil's Claw" blades scaled down  \
-&emsp; &emsp; Slim: Less thick, but same width and height  \
-&emsp; &emsp; Thin: Less thick and wide, but same height  \
-&emsp; Also halves the thickness of whatever hilt you equipped
-&emsp; &emsp; Done by all for 1h psword
-&emsp; &emsp; Only done by (grippy) variants of DClaw
+&emsp; &emsp; Flat: Less thick, but same width and height  \
+&emsp; &emsp; Slim: Less thick and wide, but same height  \
+&emsp; &emsp; Grip (G) variants of both: Also halves the thickness of whatever hilt you equipped  \
+&emsp; &emsp; &emsp; Unpatched for most other grips so caveat emptor
+
+### Connectors
+- **Invisible Connector**: Thunder Hammers  \
+&emsp; Makes the connector invisible. That's it. \
+&emsp; It doesn't extend the shaft on its own; it's meant to be used with other parts (namely the tacax spikes)
+
+### Shafts
+- **Long Shafts**: Thunder Hammers  \
+&emsp; Longer shaft (held at the bottom)
+&emsp; When used with an Invisible Connector, it's about forehead height for a max height character.
+- **Long Ogryn Shafts**: Delver's Pickaxes  \
+&emsp; Longer shaft (held at the bottom)
+&emsp; The head is around nose level.
 
 ### Pommels
 - **Shovel Handles**: Sapper Shovels  \
-&emsp; D-Ring handles and T-Handles, primarily based on contemporary military E-Tools
+&emsp; Primarily based on contemporary military E-Tools \
+&emsp; &emsp; Tri-fold \
+&emsp; &emsp; D-Rings \
+&emsp; &emsp; T-Rings (wooden and metallic)
 
 > [!WARNING]
 > 

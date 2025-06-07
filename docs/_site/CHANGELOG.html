@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=1c0312c37f5bb4c644b6defe719026f6e5e7a976">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>2025-06-05 | Darktide Mod: Weapon Customization - OwO</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="2025-06-05" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection" />
+<meta property="og:description" content="Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection" />
+<link rel="canonical" href="http://localhost:4000/CHANGELOG.html" />
+<meta property="og:url" content="http://localhost:4000/CHANGELOG.html" />
+<meta property="og:site_name" content="Darktide Mod: Weapon Customization - OwO" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="2025-06-05" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection","headline":"2025-06-05","url":"http://localhost:4000/CHANGELOG.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+            <a id="forkme_banner" href="https://github.com/Backup158/DarktideWeaponCustomizationOwO">View on GitHub</a>
+          
+
+          <h1 id="project_title">Darktide Mod: Weapon Customization - OwO</h1>
+          <h2 id="project_tagline">Information about the Extended Weapon Customization mod's add-on plugin Ostracized without Objection</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="section">2025-06-05</h1>
+<p>v2.0.0</p>
+<p>The primary goal of this refactor was to make development easier, mainly by making it easier to copy and paste things (and hopefully to do that less often in the future, enough to make up for the amount I had to do to implement this update lmfao). Unfortunately, this will come with &quot;breaking&quot; changes that require reequipping attachments. Your game will not crash, but it's gonna be annoying. That's enough for me to call it a breaking change, so I bumped the version up to 2.0.0.</p>
+<p><strong>BREAKING CHANGE(S)</strong>:</p>
+<ul>
+<li>Renamed <code>holosight</code> to <code>holographic_sight</code>, for function AND attachment names.</li>
+<li>Renamed <code>owo_rear_sight_ak</code> to <code>owo_kalashnikov_rear_sight</code>, for function AND attachment names.</li>
+<li>Renamed <code>owo_bayonet</code> to <code>owo_historical_bayonet</code>, for function AND attachment names.</li>
+</ul>
+<p>ALL affected attachments must be reequipped! Any patches and fixes will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well rename them because it's been bugging me for months. <code>rear_sight_ak</code> made it harder to mass replace. The other two were just annoying (wow I'm an ass).</p>
+<p>Added:</p>
+<ul>
+<li>Disk Crossguard</li>
+</ul>
+<p>Refactor:</p>
+<ul>
+<li>Made functions to simplify creating custom slots on the developer side
+<ul>
+<li><code>create_default_attachment</code>: Creates an empty attachment for the given slot (&quot;owo_&lt;slot_name&gt;_default&quot;)</li>
+<li><code>initialize_custom_slot_for_weapon</code>: Automatically creates empty table for the slot, then create a default attachment so hiding unused parts has a consistent part to rely on
+<ul>
+<li>Removed now-redundant shotgun foregrip and sight_2 part initialization</li>
+<li>Removed <code>owo_empty_foregrip()</code></li>
+<li>Adapted the &quot;hide parts fixes&quot; to use these new defaults&quot;</li>
+<li>Removed now-redundant default parts from each attachment creation function</li>
+</ul>
+</li>
+<li><code>initialize_table_of_custom_slot_for_weapon</code>: Batch execution <code>initialize_custom_slot_for_weapon</code> over all names in the given table, so I don't have to copy paste so much at the top of each weapon file. Because this creates an extra table for each weapon, there is some additional overhead. It was not noticeable to me, so I'm willing to take it in exchange for the ease of development</li>
+<li><code>create_custom_slot</code>: Creates a new (visible, selectable) slot, then make the localization for it (which is provided when called, so it's easier for translators)</li>
+<li>All weapons have been migrated to this new system.</li>
+<li><code>hide_slot</code>: Fills out the hide_mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao)</li>
+</ul>
+</li>
+<li>Modularized type identity (logic fix for the 'or type') for
+<ul>
+<li>Melee
+<ul>
+<li>Trench Dagger Finger Guards</li>
+<li>Shovel Handles</li>
+<li>Historical Blades</li>
+</ul>
+</li>
+<li>Ranged
+<ul>
+<li>Suppressor Muzzles</li>
+<li>Lasgun Condom Muzzles</li>
+<li>Muzzle Brake</li>
+<li>Bolt Pistol Shotgun Barrels</li>
+<li>Revolver Shotgun Barrels</li>
+<li>Dreg Gunner Barrels</li>
+<li>M16 Barrels</li>
+<li>Wooden Helbore Barrels</li>
+<li>Plasma Helbore Barrels</li>
+<li>Heterosexual Foregrips</li>
+<li>Tactical Foregrips</li>
+<li>Historical Bayonets</li>
+<li>Underbarrel Grenade Launchers</li>
+<li>Underbarrel Shotguns</li>
+<li>California Bolter Receivers</li>
+<li>Bolt Action Helbore Receivers</li>
+<li>Helbore MAS Receivers</li>
+<li>Laspistol Grip Mag Receivers</li>
+<li>Fin Grips</li>
+<li>Helbore Grip Stocks</li>
+<li>Tactical (Shotgun) Stocks</li>
+<li>Kalashnikov Stocks</li>
+<li>Beeg Stocks!</li>
+<li>Ladder Aperture Sights</li>
+<li>Kalashnikov Rear Sights</li>
+<li>M16 Carry Handle Sights</li>
+<li>Holographic Scopes</li>
+<li>Telescopic Scopes</li>
+<li>PU Scopes</li>
+<li>Flat Magazines</li>
+<li>Helbore Plasma Magazines</li>
+<li>Jungle Magazines</li>
+<li>Magpul Magazines</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="section-1">2025-05-18</h1>
+<p>v1.8.1</p>
+<p>Hotfix for shotgun rework in Syn's Edits (removal of stock_2 declaration for that mod, so this mod must create it every time)</p>
+<h1 id="section-2">2025-05-17</h1>
+<p>v1.8.0</p>
+<p>Added:</p>
+<ul>
+<li>Tacax spikes to Thunder Hammers and Delver's Pickaxes</li>
+<li>Invisible connector to Thunder Hammers</li>
+<li>Polearm heads to Thunder Hammers and Delver's Pickaxes</li>
+<li>Long Shafts (low grip) to Thunder Hammers</li>
+<li>Long Ogryn Shafts to Delver's Pickaxes</li>
+</ul>
+<h1 id="section-3">2025-05-09</h1>
+<p>v1.7.3</p>
+<p>Added:</p>
+<ul>
+<li>Underbarrel Grenade Launchers to Bolter</li>
+<li>Underbarrel Shotguns to Bolter</li>
+<li>Slim DClaw blades to (formerly) slim Psword blades</li>
+<li>Slim Blades to DClaw</li>
+<li>Suppressors to Bolter and Bistol</li>
+<li>Muzzle Brake to Bolter and Bistol</li>
+</ul>
+<p>Refactored fixes code to reduce copy pasted code. Increased overhead but simplifies adding it to new weapons so suffer &gt;:3.</p>
+<p>Reworked suppressors to be more like the muzzle brake, so it won't require as many patches</p>
+<p>Restored load order rules for AML update (ty icy my savior)</p>
+<h1 id="section-4">2025-04-17</h1>
+<p>v1.7.2</p>
+<p>Added Features:</p>
+<ul>
+<li>Simplified Chinese localization (thanks RinAnarchy!)</li>
+<li>Russian &quot;localization&quot;</li>
+<li>Additional (joke) mod options
+<ul>
+<li>Debug mode, OwO mode, and Discord Release mode</li>
+</ul>
+</li>
+<li>Reload callback for EWC 2024-04-08
+<ul>
+<li>Bundled this into the Discord Release Mode</li>
+</ul>
+</li>
+</ul>
+<p>Fixes:</p>
+<ul>
+<li>Missing point shooting code for Revolver</li>
+<li>Unaligned scope lenses using alternative viewmodels for recon</li>
+<li>Resized slim psword blades because I forgot to actually slim them down</li>
+<li>Missing attachment slot declarations for people not using Syn's edits</li>
+</ul>
+<h1 id="section-5">2025-04-06</h1>
+<p>v1.7.1</p>
+<p>Added</p>
+<ul>
+<li>Beeg/Straight stocks in stock_2 (shotguns)</li>
+<li>Added Holographic Sights, Telescopic Sights, and Tactical Foregrips (Shotgun)</li>
+</ul>
+<p>Fixed missing short eotech z2 housing (4 guns)</p>
+<p>Realized a changelog would be a good idea</p>
+<h1 id="section-6">2025-04-05</h1>
+<p>Migrated documentation to GitHub Pages</p>
+<h1 id="section-7">2025-04-04</h1>
+<p>v1.7.0</p>
+<p>Added</p>
+<ul>
+<li>Straight grips (shotgun)</li>
+<li>Tactical stocks for stock_2 (shotgun)</li>
+<li>straight foregrips (shotgun)</li>
+<li>Invisible sight_2</li>
+</ul>
+<p>Modified recon volleygun scopes to use rails</p>
+<h1 id="section-8">2025-04-03</h1>
+<p>Created Scopes only version</p>
+<h1 id="section-9">2025-04-02</h1>
+<p>v1.6.1
+Fixed hiding issue with chunky slide</p>
+<h1 id="section-10">2025-04-01</h1>
+<p>v1.6</p>
+<p>Nexus Release</p>
+<ul>
+<li>barrett m82 stock</li>
+<li>helbore plasma rifle barrels</li>
+</ul>
+<h1 id="section-11">2025-03-24</h1>
+<p>v1.5</p>
+<p>added</p>
+<ul>
+<li>vortex razor sight</li>
+<li>spiked tacax for other marks</li>
+<li>muzzle brake</li>
+</ul>
+<h1 id="section-12">2025-03-10</h1>
+<p>v1.4</p>
+<p>variables for fixes!</p>
+<p>added:</p>
+<ul>
+<li>slim psword</li>
+<li>small holo</li>
+<li>trench spike</li>
+<li>finger guards</li>
+</ul>
+<h1 id="section-13">2025-03-03</h1>
+<p>v1.3</p>
+<p>added zoom to scopes</p>
+<p>added rapier blades</p>
+<h1 id="section-14">2025-02-25</h1>
+<p>v1.2</p>
+<p>Added:</p>
+<ul>
+<li>AK Irons</li>
+<li>Kalash stock</li>
+<li>Gp25</li>
+<li>Alt viewmodels</li>
+</ul>
+<p>killed scab gunner stuff</p>
+<h1 id="section-15">2025-02-18</h1>
+<p>v1.1</p>
+<p>Added:</p>
+<ul>
+<li>spiked tacax (1 only)</li>
+<li>shovel pommels</li>
+<li>suppressor 3-5</li>
+<li>angled foregrips</li>
+<li>straight foregrips</li>
+<li>skeletal stock</li>
+</ul>
+<p>Migrated to importing functions from the mt plugin</p>
+<p>AML Support</p>
+<p>&quot;+5 homosexuality&quot; was in the commit history here for whatever reason</p>
+<h1 id="section-16">2025-01-14</h1>
+<p>v0.14</p>
+<p>Added:</p>
+<ul>
+<li>masterkey and mass bayonets</li>
+</ul>
+<p>Figured out how to hide things lmao</p>
+<p>Migrated to reusing slots from other plugins</p>
+<h1 id="section-17">2024-12-15</h1>
+<p>v0.13</p>
+<p>Added:</p>
+<ul>
+<li>^^ jungle mags</li>
+</ul>
+<h1 id="section-18">2024-12-08</h1>
+<p>v0.12</p>
+<p>Added:</p>
+<ul>
+<li>SUSAT</li>
+</ul>
+<p>alignments and bugfixes</p>
+<h1 id="section-19">2024-12-01</h1>
+<p>v0.11</p>
+<p>Added:</p>
+<ul>
+<li>point shooting holos</li>
+<li>ACOG</li>
+<li>Mas receiver</li>
+<li>flat autogun mag tilted</li>
+<li>mas irons</li>
+</ul>
+<h1 id="section-20">2024-11-24</h1>
+<p>v0.10</p>
+<p>Throughout the week, added:</p>
+<ul>
+<li>Epee baionette</li>
+<li>Bolt Action Helbore Receivers</li>
+<li>Rear Sights for Helbores</li>
+<li>m203 bayonet</li>
+<li>soviet pu scope</li>
+<li>laspistol griplaser</li>
+<li>laspistol chunky slide</li>
+<li>added shotgun barrels for revolver</li>
+</ul>
+<p>Adjusted m16 post heights</p>
+<p>Investigated custom flashlights</p>
+<h1 id="section-21">2024-11-18</h1>
+<p>v0.9</p>
+<p>Added Wood Helbore Barrels</p>
+<p>Added Seitengewehr bayonet</p>
+<h1 id="section-22">2024-11-17</h1>
+<p>v0.8</p>
+<p>Added Eotech + Magnifier</p>
+<p>Added M16 Barrel</p>
+<h1 id="section-23">2024-11-16</h1>
+<p>v0.7</p>
+<p>Added Jungle Mags</p>
+<h1 id="section-24">2024-11-15</h1>
+<p>v0.6</p>
+<p>Figured out primitive helper hiding</p>
+<h1 id="section-25">2024-11-14</h1>
+<p>v0.5</p>
+<p>Added Fin Grips</p>
+<h1 id="section-26">2024-11-13</h1>
+<p>v0.4</p>
+<p>Added California Bolter Receiver</p>
+<h1 id="section-27">2024-11-12</h1>
+<p>v0.3</p>
+<p>Initial Git commit</p>
+<ul>
+<li>Added Dreg Gunner Barrel</li>
+<li>Created before this commit
+<ul>
+<li>Suppressors (Helbore)</li>
+<li>Recon Stock (Helbore)</li>
+<li>Recon Rear Mag (Helbore)</li>
+<li>super short shotty (Bistol)</li>
+</ul>
+</li>
+</ul>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">Darktide Mod: Weapon Customization - OwO maintained by <a href="https://github.com/Backup158">Backup158</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
