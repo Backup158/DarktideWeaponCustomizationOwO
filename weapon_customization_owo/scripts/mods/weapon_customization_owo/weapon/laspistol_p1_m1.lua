@@ -103,7 +103,7 @@ mod.mt.inject_fixes(this_variant, {
         muzzle_2 = {automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty" }, hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, },
     },
     {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01"},
-        muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_suppressor_helper_02_empty"}, },
+        muzzle_3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_suppressor_helper_02_empty"}, },
     },
     -- Receivers
     {	dependencies = {"owo_laspistol_grip_mag_helper_01"},
@@ -146,7 +146,7 @@ mod.mt.inject_fixes(this_variant, {
         receiverac1 = { offset = false, position = vector3_box(0, 0.136, 0.022), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.33, 0.38)},
         -- trigger already aligned. reuse as hammer? on a las weapon lmao
         -- receiverac2 = { offset = true, position = vector3_box(0, -0.04, -0.07), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.2, 0.2, 0.033)},
-        receiverac2 = {hide_mesh = { 	{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
+        receiverac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = { 	{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
         magazine = { offset = true, position = vector3_box(0, -0.115, -0.031), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.85, 0.5, 1)},
         grip = { offset = true,position = vector3_box(0, 0.0, -0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1, 1)},
     },
