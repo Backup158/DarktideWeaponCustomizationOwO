@@ -733,11 +733,9 @@ function mod.owo_condom(variant_id, given_type, given_parent)
 		{id = "owo_condom_01", name = "OwO Lasbarrel Condom", no_randomize = true}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2", {
-		--{id = "owo_condom_helper_empty", name = "Condom'vesa Empty", no_randomize = true},
 		{id = "owo_condom_helper_m2_01", name = "OwO Condom'vesa m2", no_randomize = true}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_3", {
-		--{id = "owo_condom_helper_empty", name = "Condom'vesa Empty", no_randomize = true},
 		{id = "owo_condom_helper_m3_01", name = "OwO Condom'vesa m3", no_randomize = true}
 	})
 
@@ -749,9 +747,6 @@ function mod.owo_condom(variant_id, given_type, given_parent)
 			},
 			hide_mesh = { {current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }, },
 		},
-		--owo_condom_helper_empty = {
-		--	model = "", type = "muzzle_2", mesh_move = false, parent = current_parent
-		--},
 		owo_condom_helper_m2_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = current_parent,
 		},
@@ -784,23 +779,18 @@ function mod.owo_muzzle_brake(variant_id, given_type, given_parent)
 		{id = "owo_muzzle_brake_03", name = "OwO Muzzle Brake AMR (BIG)", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2", {
-		{id = "owo_muzzle_brake_helper_01_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_01_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_3", {
-		{id = "owo_muzzle_brake_helper_02_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_02_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_4", {
-		{id = "owo_muzzle_brake_helper_03_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_03_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_5", {
-		{id = "owo_muzzle_brake_helper_04_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_04_01", name = "OwO Muzzle Brake'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_6", {
-		{id = "owo_muzzle_brake_helper_05_00", name = "Brake'vesa Empty", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_05_01", name = "OwO Muzzle Brake'vesa Base", no_randomize = true},
 		{id = "owo_muzzle_brake_helper_05_02", name = "OwO Muzzle Brake'vesa Base 2", no_randomize = true},
 	})
@@ -840,32 +830,17 @@ function mod.owo_muzzle_brake(variant_id, given_type, given_parent)
 			},
 		},
 		-- ### Helpers ###
-		owo_muzzle_brake_helper_01_00 = {
-			model = "", type = "muzzle_2", mesh_move = false, parent = "muzzle_6"
-		},
 		owo_muzzle_brake_helper_01_01 = {
 			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_2", mesh_move = false, parent = "muzzle_6"
-		},
-		owo_muzzle_brake_helper_02_00 = {
-			model = "", type = "muzzle_3", mesh_move = false, parent = "muzzle_6"
 		},
 		owo_muzzle_brake_helper_02_01 = {
 			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_3", mesh_move = false, parent = "muzzle_6"
 		},
-		owo_muzzle_brake_helper_03_00 = {
-			model = "", type = "muzzle_4", mesh_move = false, parent = "muzzle_6"
-		},
 		owo_muzzle_brake_helper_03_01 = {
 			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_4", mesh_move = false, parent = "muzzle_6"
 		},
-		owo_muzzle_brake_helper_04_00 = {
-			model = "", type = "muzzle_5", mesh_move = false, parent = "muzzle_6"
-		},
 		owo_muzzle_brake_helper_04_01 = {
 			model = _item_ranged.."/muzzles/lasgun_pistol_muzzle_04", type = "muzzle_5", mesh_move = false, parent = "muzzle_6"
-		},
-		owo_muzzle_brake_helper_05_00 = {
-			model = "", type = "muzzle_6", mesh_move = false, parent = current_type
 		},
 		owo_muzzle_brake_helper_05_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_killshot_muzzle_05", type = "muzzle_6", mesh_move = false, parent = current_type
@@ -925,7 +900,6 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type, given_paren
 		{id = "owo_bistol_sg_base_08_s", name = "OwO Sg Super Shorty 4 (8)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
-		{id = "owo_bistol_shotgun_barrel_short_empty", name = "Empty Barrel Shroud", no_randomize = true},
 		--{id = "owo_bistol_shotgun_barrel_short_01", name = "OwO Shotgun Shorty 1", no_randomize = true},
 		{id = "owo_bistol_shotgun_barrel_short_04", name = "OwO Shotgun Shorty 2", no_randomize = true},
 		{id = "owo_bistol_shotgun_barrel_short_05", name = "OwO Shotgun Shorty 3", no_randomize = true},
@@ -997,9 +971,6 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type, given_paren
 			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08",
 			}
 		}, 
-		owo_bistol_shotgun_barrel_short_empty = {
-			model = "", type = "barrelshroud", parent = current_type
-		},
 		--[[owo_bistol_shotgun_barrel_short_01 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", 
 			mesh_move = false, parent = current_type
@@ -1051,7 +1022,6 @@ function mod.owo_revolver_shotgun_barrel(variant_id, given_type, given_parent)
 		{id = "owo_revolver_shotgun_barrel_base_08_l", name = "OwO SG Long (8)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
-		{id = "owo_revolver_shotgun_barrel_empty", name = "Empty Barrelshroud"},
 		--{id = "owo_revolver_shotgun_barrel_01", name = "OwO Shotgun Barrel 1 (1)"},
 		{id = "owo_revolver_shotgun_barrel_04", name = "OwO Shotgun Barrel 1 (4)"},
 		{id = "owo_revolver_shotgun_barrel_05", name = "OwO Shotgun Barrel 2 (5)"},
@@ -1114,9 +1084,6 @@ function mod.owo_revolver_shotgun_barrel(variant_id, given_type, given_parent)
 			automatic_equip = {barrelshroud = "owo_revolver_shotgun_barrel_08"},
 		},
 		-- ### Helper Parts ###
-		owo_revolver_shotgun_barrel_empty = {
-			model = "", type = "barrelshroud", parent = current_type,
-		},
 		--[[owo_revolver_shotgun_barrel_01 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", parent = current_type,
 		},]]
@@ -1142,14 +1109,13 @@ end
 
 -- Barrel: Dreg Gunner barrel
 function mod.owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
-	local current_type = given_type or "stbarrelock"
+	local current_type = given_type or "barrel"
 	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_dreg_barrel_01", name = "OwO Dreg Gunner Barrel"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
-		{id = "owo_dreg_shroud_empty", name = "Dreg Shroud Empty", no_randomize = true},
 		{id = "owo_dreg_shroud_01", name = "OwO Dreg Shroud", no_randomize = true},
 	})
 	--[[mod.inject_attachments_owo(variant_id, "barrelshroudac", {
@@ -1157,15 +1123,12 @@ function mod.owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
 		{id = "owo_dreg_shroudac_01", name = "OwO Dreg Shroud Ac", no_randomize = true},
 	})]]
 	mod.inject_attachments_owo(variant_id, "barrelshroudac2", {
-		{id = "owo_dreg_shroud_empty_02", name = "Dreg Shroud Empty", no_randomize = true},
 		{id = "owo_dreg_shroudac2_01", name = "OwO Dreg Shroud Ac2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac3", {
-		{id = "owo_dreg_shroud_empty_03", name = "Dreg Shroud Empty", no_randomize = true},
 		{id = "owo_dreg_shroudac3_01", name = "OwO Dreg Shroud Ac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac4", {
-		{id = "owo_dreg_shroud_empty_04", name = "Dreg Shroud Empty", no_randomize = true},
 		{id = "owo_dreg_shroudac4_01", name = "OwO Dreg Shroud Ac4", no_randomize = true},
 	})
 
@@ -1175,10 +1138,8 @@ function mod.owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
 			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_02", type = current_type, 
 			mesh_move = false, parent = current_parent, 
 			automatic_equip = {
-				barrelshroud= "owo_dreg_shroud_01", 
-				barrelshroudac= "owo_dreg_shroudac_01", 
-				barrelshroudac2= "owo_dreg_shroudac2_01",
-				barrelshroudac3= "owo_dreg_shroudac3_01",
+				barrelshroud= "owo_dreg_shroud_01", barrelshroudac= "owo_dreg_shroudac_01", 
+				barrelshroudac2= "owo_dreg_shroudac2_01", barrelshroudac3= "owo_dreg_shroudac3_01",
 				barrelshroudac4= "owo_dreg_shroudac4_01",
 			},
 		},
@@ -1202,22 +1163,6 @@ function mod.owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
 			model = _item_ranged.."/underbarrels/shotgun_rifle_underbarrel_04", type = "barrelshroudac4", 
 			mesh_move = false, parent = 'barrel'
 		},
-		owo_dreg_shroud_empty = {
-			model = "", type = "barrelshroudac", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_dreg_shroud_empty_02 = {
-			model = "", type = "barrelshroudac2", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_dreg_shroud_empty_03 = {
-			model = "", type = "barrelshroudac3", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_dreg_shroud_empty_04 = {
-			model = "", type = "barrelshroudac4", 
-			mesh_move = false, parent = current_parent
-		},
 	})
 end
 
@@ -1239,29 +1184,23 @@ function mod.owo_m16_barrel(variant_id, given_type, given_parent)
 		{id = "owo_m16_barrel_n_a2", name = "OwO M16a2 Barrel (No Post)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
-		{id = "owo_m16_empty", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a1", name = "OwO M16a1 Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a1_02", name = "OwO M16a2 Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroud_a2", name = "OwO M16a2 Barrel Shroud", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac2", {
-		{id = "owo_m16_empty_02", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac2_01", name = "OwO M16 Front Sight shroudac", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac3", {
-		{id = "owo_m16_empty_03", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac3_a1", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac4", {
-		{id = "owo_m16_empty_04", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac4_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac5", {
-		{id = "owo_m16_empty_05", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac5_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac6", {
-		{id = "owo_m16_empty_06", name = "Empty Barrel Shroud", no_randomize = true},
 		{id = "owo_m16_barrelshroudac6_01", name = "OwO M16a1 Barrel Shroudac3", no_randomize = true},
 	})
 
@@ -1373,31 +1312,6 @@ function mod.owo_m16_barrel(variant_id, given_type, given_parent)
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "barrelshroudac6", 
 			mesh_move = false, parent = current_parent
 		},
-		-- ### Empty ###
-		owo_m16_empty = {
-			model = "", type = "barrelshroud", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_m16_empty_02 = {
-			model = "", type = "barrelshroudac2", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_m16_empty_03 = {
-			model = "", type = "barrelshroudac3", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_m16_empty_04 = {
-			model = "", type = "barrelshroudac4", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_m16_empty_05 = {
-			model = "", type = "barrelshroudac5", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_m16_empty_06 = {
-			model = "", type = "barrelshroudac6", 
-			mesh_move = false, parent = current_parent
-		},
 	})
 
 end
@@ -1413,7 +1327,6 @@ function mod.owo_wood_krieg(variant_id, given_type, given_parent)
 		{id = "owo_wood_krieg_03", name = "OwO Wooden Helbore 3 (7)"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
-		{id = "owo_wood_krieg_empty", name = "Empty Barrel", no_randomize = true},
 		{id = "owo_wood_krieg_ac1_01", name = "OwO Wooden Helbore ac1 1", no_randomize = true},
 	})
 
@@ -1438,11 +1351,6 @@ function mod.owo_wood_krieg(variant_id, given_type, given_parent)
 		owo_wood_krieg_ac1_01 = {
 			model = _item_ranged.."/handles/combat_blade_handle_01", type = "barrelshroud", 
 			mesh_move = false, parent = current_type,
-		},
-		-- ### Empty ###
-		owo_wood_krieg_empty = {
-			model = "", type = "barrelshroud", 
-			mesh_move = false, parent = current_type
 		},
 	})
 
@@ -1471,11 +1379,9 @@ function mod.owo_plasma_krieg(variant_id, given_type, given_parent)
 		{id = "owo_plasma_sniper_09", name = "OwO Plasma Sniper 9"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud" , {
-		{id = "owo_plasma_krieg_ac0_empty", name = "Empty Barrel", no_randomize = true},
 		{id = "owo_plasma_krieg_ac0_01", name = "OwO Plasma Helbore ac0 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac", {
-		{id = "owo_plasma_krieg_ac1_empty", name = "Empty Barrelac", no_randomize = true},
 		{id = "owo_plasma_krieg_ac1_01", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
 		{id = "owo_plasma_krieg_ac1_02", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
 		{id = "owo_plasma_krieg_ac1_03", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
@@ -1565,17 +1471,9 @@ function mod.owo_plasma_krieg(variant_id, given_type, given_parent)
 			automatic_equip = { barrelshroud = "owo_plasma_krieg_ac0_01", barrelshroudac = "owo_plasma_krieg_ac1_09", }
 		},
 		-- ### Helper Parts ###
-		owo_plasma_krieg_ac0_empty = {
-			model = "", type = "barrelshroud", 
-			mesh_move = false, parent = current_type
-		},
 		owo_plasma_krieg_ac0_01 = {
 			model = _item_ranged.."/barrels/plasma_rifle_barrel_01", type = "barrelshroud", 
 			mesh_move = false, parent = current_type,
-		},
-		owo_plasma_krieg_ac1_empty = {
-			model = "", type = "barrelshroudac", 
-			mesh_move = false, parent = current_type
 		},
 		owo_plasma_krieg_ac1_01 = {
 			model = _item_ranged.."/underbarrels/shotgun_rifle_underbarrel_01", type = "barrelshroudac", 
@@ -1644,15 +1542,12 @@ function mod.owo_tactical_foregrip(variant_id, given_type, given_parent)
 		{id = "owo_tactical_foregrip_04", name = "OwO AFG 3"},
 	})
 	mod.inject_attachments_owo(variant_id, "foregripac1", {
-		{id = "owo_tactical_foregrip_ac1_empty", name = "OwO foregripac1 empty"},
 		{id = "owo_tactical_foregrip_ac1_01", name = "OwO AFGac2'vesa 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "foregripac2", {
-		{id = "owo_tactical_foregrip_ac2_empty", name = "OwO foregripac2 empty"},
 		{id = "owo_tactical_foregrip_ac2_01", name = "OwO AFGac2'vesa 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "foregripac3", {
-		{id = "owo_tactical_foregrip_ac3_empty", name = "OwO foregripac3 empty"},
 		{id = "owo_tactical_foregrip_ac3_01", name = "OwO AFGac3'vesa 1"},
 	})
 
@@ -1695,19 +1590,6 @@ function mod.owo_tactical_foregrip(variant_id, given_type, given_parent)
 		owo_tactical_foregrip_ac3_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac3", 
 			mesh_move = false, parent = current_parent,
-		},
-		-- ### Empty ###
-		owo_tactical_foregrip_ac1_empty = {
-			model = "", type = "foregripac1", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_tactical_foregrip_ac2_empty = {
-			model = "", type = "foregripac2", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_tactical_foregrip_ac3_empty = {
-			model = "", type = "foregripac3", 
-			mesh_move = false, parent = current_parent
 		},
 	})
 end
@@ -2020,12 +1902,9 @@ function mod.owo_dreg_gunner_bayonet(variant_id, given_type, given_parent)
 	local current_parent = given_parent or "barrel"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_dreg_bayonet_empty", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner Bayonet"},
-
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
-		{id = "owo_dreg_bayonet_empty_01", name = "Empty Bayonetac1", no_randomize = true},
 		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Bayonet Hooker Ass", no_randomize = true},
 	})
 
@@ -2043,15 +1922,6 @@ function mod.owo_dreg_gunner_bayonet(variant_id, given_type, given_parent)
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "bayonetac1", 
 			mesh_move = false, parent = current_parent
 		}, 
-		-- ### Empty ###
-		owo_dreg_bayonet_empty = {
-			model = "", type = current_type, 
-			mesh_move = false, parent = current_parent
-		},
-		owo_dreg_bayonet_empty_01 = {
-			model = "", type = "bayonetac1", 
-			mesh_move = false, parent = current_parent
-		},
 	})
 end
 
@@ -2067,13 +1937,11 @@ function mod.owo_historical_bayonet(variant_id, given_type, given_parent)
 		{id = "owo_historical_bayonet_epee", name = "OwO Épée Baïonnette 1886"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
-		{id = "owo_historical_bayonet_empty_01", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_historical_bayonet_m7_helper_01", name = "M7 Bayonet Grip", no_randomize = true},
 		{id = "owo_historical_bayonet_seitengewehr_helper_01", name = "Seitengewehr Grip", no_randomize = true},
 		{id = "owo_historical_bayonet_epee_helper_01", name = "Epee Grip", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac2", {
-		{id = "owo_historical_bayonet_empty_02", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_historical_bayonet_m7_helper_02", name = "M7 Bayonet Lug", no_randomize = true},
 		{id = "owo_historical_bayonet_seitengewehr_helper_02", name = "Seitengewehr Grip bulge", no_randomize = true},
 		{id = "owo_historical_bayonet_epee_helper_02", name = "Epee loop d'loop", no_randomize = true},
@@ -2128,17 +1996,7 @@ function mod.owo_historical_bayonet(variant_id, given_type, given_parent)
 		owo_historical_bayonet_epee_helper_02 = {
 			model = _item_melee.."/heads/hatchet_head_03", type = "bayonetac2", 
 			mesh_move = false, parent = current_type,
-		},
-		-- ### Empty ###
-		owo_historical_bayonet_empty_01 = {
-			model = "", type = "bayonetac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_historical_bayonet_empty_02 = {
-			model = "", type = "bayonetac2", 
-			mesh_move = false, parent = current_type
-		},
-		
+		},	
 	})
 end
 
@@ -2152,27 +2010,22 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 		{id = "owo_gp25", name = "OwO GP-25 Grenade Launcher"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
-		{id = "owo_underbarrel_gl_empty_01", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_01", name = "OwO M203 ac1", no_randomize = true},
 		{id = "owo_gp25_helper_01", name = "OwO GP25 ac1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac2", {
-		{id = "owo_underbarrel_gl_empty_02", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_02", name = "OwO M203 ac2", no_randomize = true},
 		{id = "owo_gp25_helper_02", name = "OwO GP25 ac2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac3", {
-		{id = "owo_underbarrel_gl_empty_03", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_03", name = "OwO M203 ac3", no_randomize = true},
 		{id = "owo_gp25_helper_03", name = "OwO GP25 ac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac4", {
-		{id = "owo_underbarrel_gl_empty_04", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_m203_helper_04", name = "OwO M203 ac4", no_randomize = true},
 		{id = "owo_gp25_helper_04", name = "OwO GP25 ac4", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac5", {
-		{id = "owo_underbarrel_gl_empty_05", name = "Empty Bayonet", no_randomize = true},
 		{id = "owo_gp25_helper_05", name = "OwO GP25 ac5", no_randomize = true},
 	})
 
@@ -2240,27 +2093,6 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 			model = _item_ranged.."/grips/boltgun_pistol_grip_01", type = "bayonetac5", 
 			mesh_move = false, parent = current_type
 		},
-		-- ### Empty ###
-		owo_underbarrel_gl_empty_01 = {
-			model = "", type = "bayonetac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_gl_empty_02 = {
-			model = "", type = "bayonetac2", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_gl_empty_03 = {
-			model = "", type = "bayonetac3", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_gl_empty_04 = {
-			model = "", type = "bayonetac4", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_gl_empty_05 = {
-			model = "", type = "bayonetac5", 
-			mesh_move = false, parent = current_type
-		},
 	})
 end
 
@@ -2277,36 +2109,29 @@ function mod.owo_underbarrel_shotgun(variant_id, given_type, given_parent)
 		{id = "owo_underbarrel_shotgun_02", name = "OwO M26-MASS"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
-		{id = "owo_underbarrel_shotgun_empty_01", name = "Empty Bayonetac1", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_01", name = "OwO Masterkey ac1", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_01_02", name = "OwO MASS ac1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac2", {
-		{id = "owo_underbarrel_shotgun_empty_02", name = "Empty Bayonetac2", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_02", name = "OwO Masterkey ac2", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_02_02", name = "OwO MASS ac2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac3", {
-		{id = "owo_underbarrel_shotgun_empty_03", name = "Empty Bayonetac3", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_03", name = "OwO Masterkey ac3", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_03_02", name = "OwO MASS ac3", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac4", {
-		{id = "owo_underbarrel_shotgun_empty_04", name = "Empty Bayonetac4", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_04", name = "OwO Masterkey ac4", no_randomize = true}, -- Trigger
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac5", {
-		{id = "owo_underbarrel_shotgun_empty_05", name = "Empty Bayonetac5", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_05", name = "OwO Masterkey ac5", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_05_02", name = "OwO MASS ac5", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac6", {
-		{id = "owo_underbarrel_shotgun_empty_06", name = "Empty Bayonetac6", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_06", name = "OwO Masterkey ac6", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_06_02", name = "OwO MASS ac6", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac7", {
-		{id = "owo_underbarrel_shotgun_empty_07", name = "Empty Bayonetac6", no_randomize = true},
 		{id = "owo_underbarrel_shotgun_helper_07", name = "OwO Masterkey ac6", no_randomize = true},
 	})
 
@@ -2413,35 +2238,6 @@ function mod.owo_underbarrel_shotgun(variant_id, given_type, given_parent)
 			model = _item_ranged.."/underbarrels/boltgun_rifle_underbarrel_01", type = "bayonetac6", 
 			mesh_move = false, parent = current_type
 		},
-		-- ### Empty ###
-		owo_underbarrel_shotgun_empty_01 = {
-			model = "", type = "bayonetac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_shotgun_empty_02 = {
-			model = "", type = "bayonetac2", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_shotgun_empty_03 = {
-			model = "", type = "bayonetac3", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_shotgun_empty_04 = {
-			model = "", type = "bayonetac4", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_shotgun_empty_05 = {
-			model = "", type = "bayonetac5", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_shotgun_empty_06 = {
-			model = "", type = "bayonetac6", 
-			mesh_move = false, parent = current_type
-		},
-		owo_underbarrel_shotgun_empty_07 = {
-			model = "", type = "bayonetac7", 
-			mesh_move = false, parent = current_type
-		},
 	})
 end
 
@@ -2542,11 +2338,9 @@ function mod.owo_bolt_action(variant_id, given_type)
 		{id = "owo_bolt_helbore_05", name = "OwO Helbore Bolt Action 5"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
-		{id = "owo_bolt_grip_empty", name = "receiverac1 empty", no_randomize = true},
 		{id = "owo_bolt_helbore_bolt_01", name = "OwO bolt action bolt", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac2", {
-		{id = "owo_bolt_shaft_empty", name = "receiverac2 empty", no_randomize = true},
 		{id = "owo_bolt_helbore_bolt_02", name = "OwO bolt action bolt shaft", no_randomize = true},
 	})
 
@@ -2588,15 +2382,6 @@ function mod.owo_bolt_action(variant_id, given_type)
 			model = _item_melee.."/grips/combat_knife_grip_01", type = "receiverac2", 
 			mesh_move = false, parent = current_type
 		},
-		-- ### Empty ###
-		owo_bolt_grip_empty = {
-			model = "", type = "receiverac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_bolt_shaft_empty = {
-			model = "", type = "receiverac2", 
-			mesh_move = false, parent = current_type
-		},
 	})
 end
 
@@ -2613,11 +2398,9 @@ function mod.owo_helbore_mas49(variant_id, given_type)
 		{id = "owo_helbore_mas49_01_s", name = "OwO MAS-49 Slim 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
-		{id = "owo_bolt_empty", name = "receiverac1 empty", no_randomize = true},
 		{id = "owo_helbore_mas49_ass", name = "OwO MAS-49 Ass", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac2", {
-		{id = "owo_knob_empty", name = "receiverac1 empty", no_randomize = true},
 		{id = "owo_helbore_mas49_knob", name = "OwO MAS-49 Knob", no_randomize = true},
 	})
 
@@ -2665,15 +2448,6 @@ function mod.owo_helbore_mas49(variant_id, given_type)
 			model = _item_melee.."/grips/power_sword_grip_06", type = "receiverac2", 
 			mesh_move = false, parent = current_type
 		},
-		-- ### Empty ###
-		owo_bolt_empty = {
-			model = "", type = "receiverac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_knob_empty = {
-			model = "", type = "receiverac2", 
-			mesh_move = false, parent = current_type
-		},
 	})
 end
 
@@ -2687,11 +2461,9 @@ function mod.owo_laspistol_grip_mag(variant_id, given_type)
 		{id = "owo_laspistol_grip_mag_03", name = "OwO Chunky Slide 3 (M)"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
-		{id = "owo_laspistol_grip_mag_helper_empty", name = "Empty Receiverac1", no_randomize = true},
 		{id = "owo_laspistol_grip_mag_helper_01", name = "OwO Pistol Receiverac", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac2", {
-		{id = "owo_laspistol_grip_mag_helper2_empty", name = "Empty Receiverac2", no_randomize = true},
 		{id = "owo_laspistol_grip_mag_helper2_01", name = "OwO Pistol Trigger", no_randomize = true},
 	})
 
@@ -2716,14 +2488,8 @@ function mod.owo_laspistol_grip_mag(variant_id, given_type)
 			}
 		},
 		-- ### Helper Parts ###
-		owo_laspistol_grip_mag_helper_empty = {
-			model = "", type = "receiverac1", parent = current_type, mesh_move = false,
-		},
 		owo_laspistol_grip_mag_helper_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "receiverac1", parent = current_type, mesh_move = false,
-		},
-		owo_laspistol_grip_mag_helper2_empty = {
-			model = "", type = "receiverac2", parent = current_type, mesh_move = false,
 		},
 		owo_laspistol_grip_mag_helper2_01 = {
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "receiverac2", parent = current_type, mesh_move = false,
@@ -2740,7 +2506,6 @@ function mod.owo_fin_grip(variant_id, given_type, given_parent)
 		{id = "owo_fin_grip_01", name = "OwO Fin Grip 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "gripac", {
-		{id = "owo_fin_grip2_empty", name = "OwO Fin Grip empty", no_randomize = true},
 		{id = "owo_fin_grip2_01", name = "OwO Fin Grip'vesa 1", no_randomize = true},
 	})
 
@@ -2756,11 +2521,6 @@ function mod.owo_fin_grip(variant_id, given_type, given_parent)
 		-- ### Helper Parts ###
 		owo_fin_grip2_01 = {
 			model = _item_melee.."/blades/combat_blade_blade_02", type = "gripac", 
-			mesh_move = false, parent = current_parent,
-		},
-		-- ### Empty ###
-		owo_fin_grip2_empty = {
-			model = "", type = "gripac", 
 			mesh_move = false, parent = current_parent,
 		},
 	})
@@ -2788,12 +2548,10 @@ function mod.owo_helbore_gripstock(variant_id, given_type, given_parent)
 		{id = "owo_gripstock_amr_09", name = "OwO AMR Stock+Grip 9"},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac", {
-		{id = "owo_gripstock_grip_empty",  name = "Empty stockac", no_randomize = true},
 		{id = "owo_gripstock_grip_01a",  name = "OwO StraightGrip stockac", no_randomize = true},
 		{id = "owo_gripstock_amr_ac_01",  name = "OwO StraightGrip50 stockac", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac2", {
-		{id = "owo_gripstock_amr_ac2_empty",  name = "Empty stockac2", no_randomize = true},
 		{id = "owo_gripstock_amr_ac2_01",  name = "OwO StraightGrip50 stockac2 1", no_randomize = true},
 		{id = "owo_gripstock_amr_ac2_02",  name = "OwO StraightGrip50 stockac2 2", no_randomize = true},
 		{id = "owo_gripstock_amr_ac2_03",  name = "OwO StraightGrip50 stockac2 3", no_randomize = true},
@@ -2883,9 +2641,6 @@ function mod.owo_helbore_gripstock(variant_id, given_type, given_parent)
 		},
 		-- ### Helper Parts ###
 		-- AC1: Grip
-		owo_gripstock_grip_empty = {
-			model = "", type = "stockac", parent = current_parent, 
-		},
 		owo_gripstock_grip_01a = {
 			model = _item_ranged.."/recievers/stubgun_pistol_receiver_02", type = "stockac", parent = current_parent,
 		},
@@ -2893,9 +2648,6 @@ function mod.owo_helbore_gripstock(variant_id, given_type, given_parent)
 			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = "stockac", parent = current_type,
 		},
 		-- AC2: Stock loop fuckass thing
-		owo_gripstock_amr_ac2_empty = {
-			model = "", type = "stockac2", parent = current_type, 
-		},
 		--		Something about chain sword grips is making it not attach. The trigger perhaps?
 		--			Issue arises with grip {2, 3, 4, 6, 7, 9}
 		owo_gripstock_amr_ac2_01 = {
