@@ -17,11 +17,11 @@ Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various part
 > \
 > Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
 > \
-> Attachments may be not be aligned with parts from other plugins.
+> Attachments may not be aligned with parts from other plugins.
 > \
 > You have been warned!
 
-Because of misaligned sights, I recommend using [Crosshair Remap (Continued)](https://www.nexusmods.com/warhammer40kdarktide/mods/253) as a workaround. Error 2001/2014s when entering the Mourningstar can be kinda avoided by directly accessing the mission board through [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) or some other equivalent, but it won't save you from getting disconnected at the start of a mission. I've only had trouble connecting at the start; once you're in, you're probably in until the end.
+In case of misaligned sights, I recommend using [Crosshair Remap (Continued)](https://www.nexusmods.com/warhammer40kdarktide/mods/253) as a workaround. Error 2001/2014s when entering the Mourningstar can be kinda avoided by directly accessing the mission board through [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) or some other equivalent, but it won't save you from getting disconnected at the start of a mission. I've only had trouble connecting at the start; once you're in, you're probably in until the end.
 
 Report alignment issues and I might fix it if I'm not busy (lying umder blamket ^u^). 
 
@@ -156,7 +156,7 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 
 8) **How am I supposed to aim with the Alternative Viewmodels if I'm not using the scope?**
 
-&emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, be sure to turn off EWC's options that disable crosshairs and lasers while aiming
+&emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, be sure to turn off EWC's options that disable crosshairs and lasers while aiming. That takes care of the lasers, then you need to make sure you have Crosshair Remap for crosshairs to show up while aiming.
 
 <details> <summary>EWC Mod Options</summary>
 
@@ -175,7 +175,7 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 
 &emsp; Error 2014 comes from your game taking too long to respond to the server ('pong' timeout); with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you >:3).
 
-&emsp; Performance hits can come from many sources (usually the base game lol). For mods, using a lot of mods which are known to use a lot of resources may not cause noticeable issues at first, but at some point you might get a straw that breaks the camel's back. See FAQ #10 for a few potential culprits
+&emsp; Performance hits can come from many sources (usually the base game lol). For mods, using a lot of mods which are known to use a lot of resources may not cause noticeable issues at first, but at some point you might get a straw that breaks the camel's back. See FAQ #10 for a few potential culprits.
 
 &emsp; It's not literally unplayable, but caveat emptor.
 
