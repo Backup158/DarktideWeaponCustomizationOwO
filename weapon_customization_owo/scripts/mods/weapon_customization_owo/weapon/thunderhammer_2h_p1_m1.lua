@@ -13,13 +13,40 @@ local this_variant = "thunderhammer_2h_p1_m1" -- Thunder Hammer
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
-if not syn then
-    mod.wc.attachment[this_variant].bladeshroud = {}
-    mod.wc.attachment[this_variant].bladeshroudac = {}
-    mod.wc.attachment[this_variant].bladeshroudac2 = {}
-    mod.wc.attachment[this_variant].bladeshroudac3 = {}
+--[[
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
 end
-mod.wc.attachment[this_variant].shaftac1 = {}
+]]
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    "bladeshroud",
+    "bladeshroudac",
+    "bladeshroudac2",
+    "bladeshroudac3",
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "shaftac1",
+})
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -58,22 +85,12 @@ local _owo_low_grip_shafts = "owo_shaft_low_grip_01|owo_shaft_low_grip_02|owo_sh
 -- #################
 mod.mt.inject_fixes(this_variant, {
     -- Head
-    {	dependencies = {"owo_tacax_spike_helper_01|owo_polearm_head_helper_0_01"},
-        bladeshroud = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {	dependencies = {"owo_polearm_head_helper_1_01|owo_polearm_head_helper_1_02|owo_polearm_head_helper_1_03|owo_polearm_head_helper_1_04|owo_polearm_head_helper_1_l_01|owo_polearm_head_helper_1_l_02|owo_polearm_head_helper_1_p_01|owo_polearm_head_helper_1_p_02|owo_polearm_head_helper_1_p_03|owo_polearm_head_helper_1_p_04|owo_polearm_head_helper_1_p_05|owo_polearm_head_helper_1_p_06|owo_polearm_head_helper_1_p_07|owo_polearm_head_helper_1_p_08|owo_polearm_head_helper_1_p_09"},
-        bladeshroudac = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"bladeshroudac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { bladeshroudac = "owo_polearm_head_helper_1_00" },
-    },
-    {	dependencies = {"owo_polearm_head_helper_2_01"},
-        bladeshroudac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"bladeshroudac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { bladeshroudac2 = "owo_polearm_head_helper_2_00" },
-    },
-    {	dependencies = {"owo_polearm_head_helper_3_01|owo_polearm_head_helper_3_02"},
-        bladeshroudac3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"bladeshroudac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { bladeshroudac3 = "owo_polearm_head_helper_3_00" },
-    },
+    mod.hide_slot("bladeshroud", { "owo_tacax_spike_helper_01|owo_polearm_head_helper_0_01" }),
+    mod.hide_slot("bladeshroudac", { "owo_polearm_head_helper_1_01|owo_polearm_head_helper_1_02|owo_polearm_head_helper_1_03|owo_polearm_head_helper_1_04|owo_polearm_head_helper_1_l_01|owo_polearm_head_helper_1_l_02|owo_polearm_head_helper_1_p_01|owo_polearm_head_helper_1_p_02|owo_polearm_head_helper_1_p_03|owo_polearm_head_helper_1_p_04|owo_polearm_head_helper_1_p_05|owo_polearm_head_helper_1_p_06|owo_polearm_head_helper_1_p_07|owo_polearm_head_helper_1_p_08|owo_polearm_head_helper_1_p_09" }),
+    mod.hide_slot("bladeshroudac2", { "owo_polearm_head_helper_2_01" }),
+    mod.hide_slot("bladeshroudac3", { "owo_polearm_head_helper_3_01|owo_polearm_head_helper_3_02" }),
     -- Shaft
-    {	dependencies = {"owo_shaft_low_grip_helper_01|owo_shaft_low_grip_helper_02|owo_shaft_low_grip_helper_03|owo_shaft_low_grip_helper_04|owo_shaft_low_grip_helper_05|owo_shaft_low_grip_helper_06"},
-        shaftac1 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"shaftac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}}, automatic_equip = { shaftac1 = "owo_shaft_low_grip_helper_00" },
-    },
+    mod.hide_slot("shaftac1", { "owo_shaft_low_grip_helper_01|owo_shaft_low_grip_helper_02|owo_shaft_low_grip_helper_03|owo_shaft_low_grip_helper_04|owo_shaft_low_grip_helper_05|owo_shaft_low_grip_helper_06" }),
 })
 
 -- #################
