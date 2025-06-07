@@ -182,9 +182,7 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac7 = {position = vector3_box(0, 0, 0.04), hide_mesh = { {"bayonetac7", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, automatic_equip = { bayonetac7 = "owo_bayonetac7_default" }, },
     },
     -- Sights
-    {   dependencies = {"owo_holographic_sight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01"},
-        sightac1 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"sightac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
+    mod.hide_slot("sightac1", { "owo_holographic_sight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
     mod.hide_slot("sightac2", { "owo_holographic_sight_helper_02|owo_pu_scope_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
     mod.hide_slot("sightac3", { "owo_holographic_sight_helper_03|owo_holographic_sight_helper_03_02|owo_pu_scope_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01" }),
     mod.hide_slot("sightac4", { "owo_holographic_sight_helper_04|owo_pu_scope_helper_04|owo_acog_sight_helper_04" }),
