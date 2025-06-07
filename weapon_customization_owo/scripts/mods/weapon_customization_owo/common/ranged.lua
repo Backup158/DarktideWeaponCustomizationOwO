@@ -31,7 +31,7 @@ mod.mt.table_append(mod.wc.muzzle_2s, {
 	"owo_suppressor_helper_01",
 	"owo_suppressor_helper_02",
 	"owo_condom_helper_empty",
-	"owo_condom_helper_01",
+	"owo_condom_helper_m2_01",
 	"owo_muzzle_brake_helper_01_00",
 	"owo_muzzle_brake_helper_01_01",
 })
@@ -306,6 +306,13 @@ else
 	}
 end
 -- SIGHT
+--						|
+--						|
+--						|
+--				------- o ------- 
+--						|
+--						|
+--						|
 mod.mt.table_append(mod.wc.sights, {
 	"owo_holographic_sight_01_02_z1",
 	"owo_holographic_sight_01_02_z2",
@@ -823,22 +830,41 @@ function mod.owo_condom(variant_id, given_type, given_parent)
 		{id = "owo_condom_01", name = "OwO Lasbarrel Condom", no_randomize = true}
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2", {
-		{id = "owo_condom_helper_empty", name = "Condom'vesa Empty", no_randomize = true},
-		{id = "owo_condom_helper_01", name = "OwO Condom'vesa", no_randomize = true}
+		--{id = "owo_condom_helper_empty", name = "Condom'vesa Empty", no_randomize = true},
+		{id = "owo_condom_helper_m2_01", name = "OwO Condom'vesa m2", no_randomize = true}
+	})
+	mod.inject_attachments_owo(variant_id, "muzzle_3", {
+		--{id = "owo_condom_helper_empty", name = "Condom'vesa Empty", no_randomize = true},
+		{id = "owo_condom_helper_m3_01", name = "OwO Condom'vesa m3", no_randomize = true}
 	})
 
 	mod.inject_models(variant_id, {
 		owo_condom_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = current_type, mesh_move = false, parent = current_parent,
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_01", type = current_type, mesh_move = false, parent = current_parent,
 			automatic_equip = {
-				muzzle_2 = "owo_condom_helper_01"
-			}
+				muzzle_2 = "owo_condom_helper_m2_01", muzzle_3 = "owo_condom_helper_m3_01", 
+			},
+			hide_mesh = { {current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }, },
 		},
-		owo_condom_helper_empty = {
-			model = "", type = "muzzle_2", mesh_move = false, parent = current_parent
+		--owo_condom_helper_empty = {
+		--	model = "", type = "muzzle_2", mesh_move = false, parent = current_parent
+		--},
+		owo_condom_helper_m2_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = current_parent,
 		},
-		owo_condom_helper_01 = {
-			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_2", mesh_move = false, parent = current_parent
+		owo_condom_helper_m3_01 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "muzzle_3", mesh_move = false, parent = current_parent,
+		},
+	})
+end
+function mod.fixes_owo_condom(variant_id, given_type, given_parent)
+	local current_type = given_type or "muzzle"
+	local current_parent = given_parent or "barrel"
+
+	mod.mt.inject_fixes(variant_id, {
+		{	dependencies =  { "owo_condom_01"},
+			muzzle_2 =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
+			muzzle_3 =        { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
 		},
 	})
 end

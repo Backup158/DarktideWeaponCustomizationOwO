@@ -13,6 +13,13 @@ local this_variant = "autogun_p1_m1" -- Braced/Infantry/Vigilant Autoguns
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
+local table_with_slots_to_initialize = {
+    "muzzle_2", -- MT and Syn didn't add this to autoguns yet
+    "muzzle_3",
+    "muzzle_4",
+    "muzzle_5",
+    "muzzle_6",
+}
 if not mod.syn then -- these slots already exist in Syn's plugin
     mod.wc.attachment[this_variant].barrelshroud = {}
     mod.wc.attachment[this_variant].barrelshroudac = {}
@@ -22,8 +29,12 @@ if not mod.syn then -- these slots already exist in Syn's plugin
     mod.wc.attachment[this_variant].barrelshroudac5 = {}
     mod.wc.attachment[this_variant].barrelshroudac6 = {}
 end
-mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autoguns yet
-mod.wc.attachment[this_variant].muzzle_3 = {}
+for _, slot_name in table_with_slots_to_initialize do
+    mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
+end
+--mod.wc.attachment[this_variant].muzzle_2 = {} -- MT and Syn didn't add this to autoguns yet
+--mod.wc.attachment[this_variant].muzzle_3 = {}
+--[[]]
 mod.wc.attachment[this_variant].muzzle_4 = {}
 mod.wc.attachment[this_variant].muzzle_5 = {}
 mod.wc.attachment[this_variant].muzzle_6 = {}
@@ -73,8 +84,8 @@ mod.owo_historical_bayonet(this_variant, "bayonet")
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_underbarrel_shotgun(this_variant, "bayonet")
 
-mod.owo_suppressor(this_variant, "muzzle")
-mod.owo_condom(this_variant, "muzzle")
+mod.owo_suppressor(this_variant)
+mod.owo_condom(this_variant)
 mod.owo_muzzle_brake(this_variant)
 
 mod.owo_magazine_flat(this_variant, "magazine")
@@ -205,20 +216,20 @@ local _all_all_vigilant_autogun_barrels = _all_default_vigilant_autogun_barrels.
 -- #################
 mod.mt.inject_fixes(this_variant, {
     -- Muzzles
-    {	dependencies =  { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_01|owo_muzzle_brake_helper_01_01"},
-        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_suppressor_helper_empty"}, },
+    {	dependencies =  { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01"},
+        muzzle_2 = {hide_mesh = {{"muzzle_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_2 = "owo_muzzle_2_default"}, },
     },
     {	dependencies =  { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04"},
-        muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_brake_helper_02_00"}, },
+        muzzle_3 = {hide_mesh = {{"muzzle_3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_3 = "owo_muzzle_3_default"}, },
     },
     {	dependencies =  { "owo_muzzle_brake_helper_03_01"},
-        muzzle_4 = {hide_mesh = {{"muzzle_4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_4 = "owo_muzzle_brake_helper_03_00"}, },
+        muzzle_4 = {hide_mesh = {{"muzzle_4", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_4 = "owo_muzzle_4_default"}, },
     },
     {	dependencies =  { "owo_muzzle_brake_helper_04_01"},
-        muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_brake_helper_04_00"}, },
+        muzzle_5 = {hide_mesh = {{"muzzle_5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_5 = "owo_muzzle_5_default"}, },
     },
     {	dependencies =  { "owo_muzzle_brake_helper_05_01"},
-        muzzle_6 = {hide_mesh = {{"muzzle_6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_6 = "owo_muzzle_brake_helper_05_00"}, },
+        muzzle_6 = {hide_mesh = {{"muzzle_6", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}, automatic_equip = { muzzle_6 = "owo_muzzle_6_default"}, },
     },
     -- Bayonet
     {	dependencies =  { "owo_dreg_bayonet_rear_01|owo_historical_bayonet_m7_helper_01|owo_historical_bayonet_seitengewehr_helper_01|owo_historical_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02"},
@@ -345,6 +356,7 @@ mod.mt.inject_fixes(this_variant, {
 -- #################
 mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
+mod.fixes_owo_condom(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -536,16 +548,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- Muzzle: CONDOM
 	-- ######
     {   dependencies =  { _m16_all_barrels, "owo_condom_01" },
-        muzzle =        { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.645, 1.344, 0.645 ) },
-        muzzle_2 =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.645, 1.344, 0.645 ) },
-    },
-	{	dependencies =  { "owo_condom_01"},
-        muzzle =        { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
-        muzzle_2 =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 22, 0), scale = vector3_box(0.64, 1.344, 0.64 ) },
-    },
-    -- the skinny bayonet. sits on muzzle
-    {	dependencies =  { "owo_condom_01", "autogun_bayonet_03" },
-        bayonet =       { offset = true, position = vector3_box(0, 0.03, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.1, 0.66, 1.1 ) },
+        muzzle =        { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.001, 1.0, 1.001 ) },
     },
 
     -- ######
