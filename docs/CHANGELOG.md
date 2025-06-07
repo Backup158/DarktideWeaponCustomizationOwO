@@ -15,9 +15,12 @@ Added:
 
 Refactor: 
 - Made functions to simplify creating custom slots on the developer side
-    - Automatically creates an empty attachment for that slot, so hiding unused parts has a consistent part to rely on ("owo_<slot_name>_default")
-    - Removed now-redundant shotgun foregrip and sight_2 part initialization
-    - Removed `owo_empty_foregrip()`
+    - `create_default_attachment`: Creates an empty attachment for the given slot ("owo_<slot_name>_default")
+    - `initialize_custom_slot_for_weapon`: Automatically creates empty table for the slot, then create a default attachment so hiding unused parts has a consistent part to rely on 
+        - Removed now-redundant shotgun foregrip and sight_2 part initialization
+        - Removed `owo_empty_foregrip()`
+    - `initialize_table_of_custom_slot_for_weapon`: Batch execution `initialize_custom_slot_for_weapon` over all names in the given table, so I don't have to copy paste so much at the top of each weapon file. Because this creates an extra table for each weapon, there is some additional overhead. It was not noticeable to me, so I'm willing to take it in exchange for the ease of development
+    - `create_custom_slot`: Creates a new (visible, selectable) slot, then make the localization for it
 - Modularized type identity (logic fix for the 'or type') for 
     - Melee
         - Trench Dagger Finger Guards
