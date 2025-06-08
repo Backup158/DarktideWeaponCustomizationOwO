@@ -1515,21 +1515,6 @@ function mod.owo_plasma_krieg(variant_id, given_type, given_parent)
 
 end
 
--- Foregrip: Empty Foregrip
---[[
-function mod.owo_empty_foregrip(variant_id, given_type)
-	mod.inject_attachments_owo(variant_id, given_type or "foregrip", {
-		{id = "owo_foregrip_empty", name = "Empty Foregrip"},
-	})
-	mod.inject_models(variant_id, {
-		owo_foregrip_empty = {
-			model = "", type = type or "foregrip", 
-			mesh_move = false, parent = "receiver",
-		},
-	})
-end
-]]
-
 -- Foregrip: Tactical Foregrips
 function mod.owo_tactical_foregrip(variant_id, given_type, given_parent)
 	local current_type = given_type or "foregrip"
@@ -2709,7 +2694,6 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 		{id = "owo_tactical_stock_08l", name = "OwO Folded 8 (Left)"},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac", {
-		{id = "owo_tactical_stockac_00",  name = "Empty stockac", no_randomize = true},
 		{id = "owo_tactical_stockac_01",  name = "Folding stock'vesa", no_randomize = true},
 	})
 
@@ -2844,10 +2828,6 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 			},
 		},
 		-- ### Helper Parts ###
-		owo_tactical_stockac_00 = {
-			model = "", type = "stockac", 
-			mesh_move = false, parent = "receiver",
-		},
 		owo_tactical_stockac_01 = {
 			model = _item_melee.."/grips/2h_chain_sword_grip_02", type = "stockac", 
 			mesh_move = false, parent = "receiver",
@@ -2971,14 +2951,10 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, "stockac", {
-		{id = "owo_beeg_stockac_00", name = "Empty stockac", no_randomize = true},
 		{id = "owo_beeg_stockac_01", name = "OwO Beeg Stock Indicator", no_randomize = true},
 	})
 	mod.inject_models(variant_id, {
 		-- ### Helper Parts ###
-		owo_beeg_stockac_00 = {
-			model = "", type = "stockac", parent = current_parent,
-		},
 		owo_beeg_stockac_01 = {
 			model = _item_melee.."/grips/chain_sword_grip_06", type = "stockac", parent = current_parent,
 			hide_mesh = {{"stockac", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
@@ -3185,30 +3161,24 @@ function mod.owo_rear_sight(variant_id, given_type, given_parent)
 		{id = "owo_rear_sight_o_03", name = "OwO MAS49 (starving)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
-		{id = "owo_rear_sight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac1_01", name = "Flip sight range select 1", no_randomize = true},
 		{id = "owo_rear_sight_ac1_02", name = "MAS49 Peep 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2", {
-		{id = "owo_rear_sight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac2_01", name = "Flip sight range select 2", no_randomize = true},
 		{id = "owo_rear_sight_ac2_02", name = "MAS49 Peep 2", no_randomize = true},
 		{id = "owo_rear_sight_ac2_03", name = "MAS49/56 Feet", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3", {
-		{id = "owo_rear_sight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac3_01", name = "Rear Aperture 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac4", {
-		{id = "owo_rear_sight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac4_01", name = "Rear Aperture 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac5", {
-		{id = "owo_rear_sight_empty_05", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac5_01", name = "MAS49 sight seat", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac6", {
-		{id = "owo_rear_sight_empty_06", name = "Empty Sight", no_randomize = true},
 		{id = "owo_rear_sight_ac6_01", name = "MAS49 bulge", no_randomize = true},
 	})
 
@@ -3313,31 +3283,6 @@ function mod.owo_rear_sight(variant_id, given_type, given_parent)
 			model = _item_melee.."/heads/power_maul_head_03", type = "sightac6", 
 			mesh_move = false, parent = current_type,
 		},
-		-- ### Empty ###
-		owo_rear_sight_empty_01 = {
-			model = "", type = "sightac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_rear_sight_empty_02 = {
-			model = "", type = "sightac2", 
-			mesh_move = false, parent = current_type
-		},
-		owo_rear_sight_empty_03 = {
-			model = "", type = "sightac3", 
-			mesh_move = false, parent = current_type
-		},
-		owo_rear_sight_empty_04 = {
-			model = "", type = "sightac4", 
-			mesh_move = false, parent = current_type
-		},
-		owo_rear_sight_empty_05 = {
-			model = "", type = "sightac5", 
-			mesh_move = false, parent = current_type
-		},
-		owo_rear_sight_empty_06 = {
-			model = "", type = "sightac6", 
-			mesh_move = false, parent = current_type
-		},
 	})
 end
 
@@ -3354,29 +3299,23 @@ function mod.owo_kalashnikov_rear_sight(variant_id, given_type, given_parent)
 		{id = "owo_kalashnikov_rear_sight_04", name = "OwO AK Scuffed Irons2"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
-		{id = "owo_kalashnikov_rear_sight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_kalashnikov_rear_sight_ac1_01", name = "AK Range select 1", no_randomize = true},
 		{id = "owo_kalashnikov_rear_sight_ac1_02", name = "AK Range select 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2", {
-		{id = "owo_kalashnikov_rear_sight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_kalashnikov_rear_sight_ac2_01", name = "AK Range select 2", no_randomize = true},
 		{id = "owo_kalashnikov_rear_sight_ac2_02", name = "AK Range select 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3", {
-		{id = "owo_kalashnikov_rear_sight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_kalashnikov_rear_sight_ac3_01", name = "Rear Aperture 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac4", {
-		{id = "owo_kalashnikov_rear_sight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_kalashnikov_rear_sight_ac4_01", name = "Rear Aperture 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac5", {
-		{id = "owo_kalashnikov_rear_sight_empty_05", name = "Empty Sight", no_randomize = true},
 		{id = "owo_kalashnikov_rear_sight_ac5_01", name = "AK Bottom notch", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac6", {
-		{id = "owo_kalashnikov_rear_sight_empty_06", name = "Empty Sight", no_randomize = true},
 		{id = "owo_kalashnikov_rear_sight_ac6_01", name = "AK Dust Cover", no_randomize = true},
 	})
 
@@ -3468,31 +3407,6 @@ function mod.owo_kalashnikov_rear_sight(variant_id, given_type, given_parent)
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = "sightac6", 
 			mesh_move = false, parent = current_type,
 		},
-		-- ### Empty ###
-		owo_kalashnikov_rear_sight_empty_01 = {
-			model = "", type = "sightac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_kalashnikov_rear_sight_empty_02 = {
-			model = "", type = "sightac2", 
-			mesh_move = false, parent = current_type
-		},
-		owo_kalashnikov_rear_sight_empty_03 = {
-			model = "", type = "sightac3", 
-			mesh_move = false, parent = current_type
-		},
-		owo_kalashnikov_rear_sight_empty_04 = {
-			model = "", type = "sightac4", 
-			mesh_move = false, parent = current_type
-		},
-		owo_kalashnikov_rear_sight_empty_05 = {
-			model = "", type = "sightac5", 
-			mesh_move = false, parent = current_type
-		},
-		owo_kalashnikov_rear_sight_empty_06 = {
-			model = "", type = "sightac6", 
-			mesh_move = false, parent = current_type
-		},
 	})
 end
 
@@ -3506,31 +3420,24 @@ function mod.owo_m16_sight(variant_id, given_type, given_parent)
 		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight (No Rear Elevation Wheel)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
-		{id = "owo_m16_sight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_m16_sight_helper_01", name = "OwO M16 Carry Sight'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2", {
-		{id = "owo_m16_sight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_m16_sight_helper_02", name = "OwO M16 Carry Sight'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3", {
-		{id = "owo_m16_sight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_m16_sight_helper_03", name = "OwO M16 Carry Sight'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac4", {
-		{id = "owo_m16_sight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_m16_sight_helper_04", name = "OwO M16 Carry Sight'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac5", {
-		{id = "owo_m16_sight_empty_05", name = "Empty Sight", no_randomize = true},
 		{id = "owo_m16_sight_helper_05", name = "OwO M16 Carry Sight'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac6", {
-		{id = "owo_m16_sight_empty_06", name = "Empty Sight", no_randomize = true},
 		{id = "owo_m16_sight_helper_06", name = "OwO M16 Carry Sight'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac7", {
-		{id = "owo_m16_sight_empty_07", name = "Empty Sight", no_randomize = true},
 		{id = "owo_m16_sight_helper_07", name = "OwO M16 Carry Sight'vesa", no_randomize = true},
 	})
 
@@ -3587,37 +3494,7 @@ function mod.owo_m16_sight(variant_id, given_type, given_parent)
 		owo_m16_sight_helper_07 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "sightac7",
 			mesh_move = false, parent = current_type
-		},
-		-- ### Empty ###
-		owo_m16_sight_empty_01 = {
-			model = "", type = "sightac1",
-			mesh_move = false, parent = current_type
-		},
-		owo_m16_sight_empty_02 = {
-			model = "", type = "sightac2",
-			mesh_move = false, parent = current_type
-		},
-		owo_m16_sight_empty_03 = {
-			model = "", type = "sightac3",
-			mesh_move = false, parent = current_type
-		},
-		owo_m16_sight_empty_04 = {
-			model = "", type = "sightac4",
-			mesh_move = false, parent = current_type
-		},
-		owo_m16_sight_empty_05 = {
-			model = "", type = "sightac5",
-			mesh_move = false, parent = current_type
-		},
-		owo_m16_sight_empty_06 = {
-			model = "", type = "sightac6",
-			mesh_move = false, parent = current_type
-		},
-		owo_m16_sight_empty_07 = {
-			model = "", type = "sightac7",
-			mesh_move = false, parent = current_type
-		},
-		
+		},		
 	})
 end
 
@@ -3646,32 +3523,25 @@ function mod.owo_holographic_sight(variant_id, given_type)
 		{id = "owo_holographic_sight_02_03ss", name = "OwO Razor + M/s (Short)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
-		{id = "owo_holographic_sight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holographic_sight_helper_01", name = "OwO EOTech'vesa sight container 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2", {
-		{id = "owo_holographic_sight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holographic_sight_helper_02", name = "OwO EOTech'vesa sight container 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3", {
-		{id = "owo_holographic_sight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holographic_sight_helper_03", name = "OwO EOTech'vesa base bulge", no_randomize = true},
 		{id = "owo_holographic_sight_helper_03_02", name = "OwO Razor'vesa front scope hood", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac4", {
-		{id = "owo_holographic_sight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holographic_sight_helper_04", name = "OwO EOTech'vesa base", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary", {
-		{id = "owo_holographic_sight_empty2", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holographic_sight_sight_secondary_01", name = "OwO EOTech Magnifier Stand", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary_ac1", {
-		{id = "owo_holographic_sight_empty2_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holographic_sight_sight_secondary_helper_01", name = "OwO EOTech Magnifier 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2", {
-		{id = "owo_holographic_sight_empty2_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_holographic_sight_sight_secondary_helper_02", name = "OwO EOTech Magnifier 2", no_randomize = true},
 	})
 
@@ -3919,35 +3789,6 @@ function mod.owo_holographic_sight(variant_id, given_type)
 			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_01", type = "sight_secondary_ac2",
 			mesh_move = false, parent = current_type
 		},
-		-- ### Empty ###
-		owo_holographic_sight_empty_01 = {
-			model = "", type = "sightac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_holographic_sight_empty_02 = {
-			model = "", type = "sightac2", 
-			mesh_move = false, parent = current_type
-		},
-		owo_holographic_sight_empty_03 = {
-			model = "", type = "sightac3", 
-			mesh_move = false, parent = current_type
-		},
-		owo_holographic_sight_empty_04 = {
-			model = "", type = "sightac4", 
-			mesh_move = false, parent = current_type
-		},
-		owo_holographic_sight_empty2 = {
-			model = "", type = "sight_secondary", 
-			mesh_move = false, parent = current_type
-		},
-		owo_holographic_sight_empty2_01 = {
-			model = "", type = "sight_secondary_ac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_holographic_sight_empty2_02 = {
-			model = "", type = "sight_secondary_ac2", 
-			mesh_move = false, parent = current_type
-		},
 	})
 end
 
@@ -3982,41 +3823,33 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		--{id = "owo_nv_02_ir", name = "OwO Night Vision 2 + IR"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
-		{id = "owo_acog_sight_empty_01", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_01", name = "OwO ACOG'vesa sight container 1", no_randomize = true},
 		{id = "owo_susat_ac1_01", name = "SUSAT'vesa Cylinder thing", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2", {
-		{id = "owo_acog_sight_empty_02", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_02", name = "OwO ACOG'vesa rear sight container 1", no_randomize = true},
 		{id = "owo_susat_ac2_01", name = "SUSAT'vesa rear scope 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3", {
-		{id = "owo_acog_sight_empty_03", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_03", name = "OwO ACOG'vesa rear sight container 2", no_randomize = true},
 		{id = "owo_susat_ac3_01", name = "SUSAT'vesa rear scope 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac4", {
-		{id = "owo_acog_sight_empty_04", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_04", name = "OwO ACOG'vesa Base", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac5", {
-		{id = "owo_acog_sight_empty_05", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_05", name = "OwO ACOG'vesa Knob", no_randomize = true},
 		{id = "owo_susat_ac5_01", name = "SUSAT'vesa reticle 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac6", {
-		{id = "owo_acog_sight_empty_06", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_06", name = "OwO ACOG'vesa Knob", no_randomize = true},
 		{id = "owo_susat_ac6_01", name = "SUSAT'vesa reticle 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac7", {
-		{id = "owo_acog_sight_empty_07", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_helper_07", name = "ACOG'vesa Cable", no_randomize = true},
 		{id = "owo_susat_ac7_01", name = "SUSAT'vesa Front Scope 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary", {
-		{id = "owo_acog_sight_empty2", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_sight_secondary_01", name = "OwO ACOG RMR", no_randomize = true},
 	})
 	--[[mod.inject_attachments_owo(variant_id, "sight_secondary_ac1", {
@@ -4303,12 +4136,10 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		--	SUSAT: Rear of scope
 		owo_susat_ac2_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "sightac2", 
-			--model = "", type = "sightac2", 
 			mesh_move = false, parent = current_type
 		},
 		owo_susat_ac3_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", type = "sightac3", 
-			--model = "", type = "sightac3", 
 			mesh_move = false, parent = current_type
 		},
 		-- AC4
@@ -4352,39 +4183,6 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 			model = _item_ranged.."/sights/reflex_sight_02", type = "sight_secondary",
 			mesh_move = false, parent = current_type
 		},
-		-- ### Empty ###
-		owo_acog_sight_empty_01 = {
-			model = "", type = "sightac1", 
-			mesh_move = false, parent = current_type
-		},
-		owo_acog_sight_empty_02 = {
-			model = "", type = "sightac2", 
-			mesh_move = false, parent = current_type
-		},
-		owo_acog_sight_empty_03 = {
-			model = "", type = "sightac3", 
-			mesh_move = false, parent = current_type
-		},
-		owo_acog_sight_empty_04 = {
-			model = "", type = "sightac4", 
-			mesh_move = false, parent = current_type
-		},
-		owo_acog_sight_empty_05 = {
-			model = "", type = "sightac5", 
-			mesh_move = false, parent = current_type
-		},
-		owo_acog_sight_empty_06 = {
-			model = "", type = "sightac6", 
-			mesh_move = false, parent = current_type
-		},
-		owo_acog_sight_empty_07 = {
-			model = "", type = "sightac7", 
-			mesh_move = false, parent = current_type
-		},
-		owo_acog_sight_empty2 = {
-			model = "", type = "sight_secondary", 
-			mesh_move = false, parent = current_type
-		},
 	})
 end
 
@@ -4399,35 +4197,27 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 		{id = "owo_pu_scope_02", name = "OwO Soviet PU Scope, Riser 1b"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
-		{id = "owo_pu_scope_empty_01", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_01", name = "PU Scope'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac2", {
-		{id = "owo_pu_scope_empty_02", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_02", name = "PU Scope'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac3", {
-		{id = "owo_pu_scope_empty_03", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_03", name = "PU Scope'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac4", {
-		{id = "owo_pu_scope_empty_04", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_04", name = "PU Scope'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac5", {
-		{id = "owo_pu_scope_empty_05", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_05", name = "PU Scope'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac6", {
-		{id = "owo_pu_scope_empty_06", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_06", name = "PU Scope'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac7", {
-		{id = "owo_pu_scope_empty_07", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_helper_07", name = "PU Scope'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_secondary", {
-		{id = "owo_pu_scope_empty2", name = "Empty Scope", no_randomize = true},
 		{id = "owo_pu_scope_riser_01", name = "PU Scope Riser", no_randomize = true},
 	})
 	--[[mod.inject_attachments_owo(variant_id, "sight_secondary_ac1", {
@@ -4517,43 +4307,6 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", type = "sight_secondary_ac2", 
 			mesh_move = false, parent = current_type,
 		},]]
-		-- ### Empty ###
-		owo_pu_scope_empty_01 = {
-			model = "", type = "sightac1", 
-			mesh_move = false, parent = "receiver"
-		},
-		owo_pu_scope_empty_02 = {
-			model = "", type = "sightac2", 
-			mesh_move = false, parent = current_type
-		},
-		owo_pu_scope_empty_03 = {
-			model = "", type = "sightac3", 
-			mesh_move = false, parent = current_type
-		},
-		owo_pu_scope_empty_03 = {
-			model = "", type = "sightac3", 
-			mesh_move = false, parent = current_type
-		},
-		owo_pu_scope_empty_04 = {
-			model = "", type = "sightac4", 
-			mesh_move = false, parent = current_type
-		},
-		owo_pu_scope_empty_05 = {
-			model = "", type = "sightac5", 
-			mesh_move = false, parent = current_type
-		},
-		owo_pu_scope_empty_06 = {
-			model = "", type = "sightac6", 
-			mesh_move = false, parent = current_type
-		},
-		owo_pu_scope_empty_07 = {
-			model = "", type = "sightac7", 
-			mesh_move = false, parent = current_type
-		},
-		owo_pu_scope_empty2 = {
-			model = "", type = "sight_secondary", 
-			mesh_move = false, parent = current_type
-		},
 	})
 	
 end
@@ -4748,7 +4501,6 @@ function mod.owo_plasma_mag(variant_id, given_type, given_parent)
 		{id = "owo_plasma_melta_mag_01ss", name = "OwO Melta Mag (SS)"},
 	})
 	mod.inject_attachments_owo(variant_id, "magac", {
-		{id = "owo_plasma_mag_helper_00", name = "Empty magac"},
 		{id = "owo_plasma_mag_helper_01", name = "OwO Plasma Mag Helper 1", no_randomize = true},
 		{id = "owo_plasma_mag_helper_02", name = "OwO Plasma Mag Helper 2", no_randomize = true},
 		{id = "owo_plasma_mag_helper_03", name = "OwO Plasma Mag Helper 3", no_randomize = true},
@@ -4794,9 +4546,6 @@ function mod.owo_plasma_mag(variant_id, given_type, given_parent)
 			automatic_equip = { magac = "owo_plasma_melta_mag_helper_01", },
 		},
 		-- ### Helper Parts ###
-		owo_plasma_mag_helper_00 = {
-			model = "", type = "magac", parent = current_type, 
-		},
 		owo_plasma_mag_helper_01 = {
 			model = _item_ranged.."/magazines/plasma_rifle_magazine_01", type = "magac", parent = current_type, 
 		},
@@ -4826,7 +4575,6 @@ function mod.owo_lasgun_magazine_rear(variant_id, given_type, given_parent)
 		{id = "owo_lasgun_magazine_rear_01", name = "OwO Rear Mag 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "rearmag", {
-		{id = "owo_lasgun_magazine_rear_child_empty", name = "Empty Rearmag", no_randomize = true},
 		{id = "owo_lasgun_magazine_rear_child_01", name = "OwO RearMagChild 1", no_randomize = true},
 	})
 
@@ -4841,10 +4589,6 @@ function mod.owo_lasgun_magazine_rear(variant_id, given_type, given_parent)
 		-- ### Helper Parts ###
 		owo_lasgun_magazine_rear_child_01 = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "rearmag", mesh_move = false, parent = current_parent,
-		},
-		-- ### Empty ###
-		owo_lasgun_magazine_rear_child_empty = {
-			model = "", type = "rearmag", mesh_move = false, parent = current_parent,
 		},
 	})
 end
@@ -4874,26 +4618,21 @@ function mod.owo_jungle_mag(variant_id, given_type, given_parent)
 		{id = "owo_jungle_mag_04_up_flip", name = "OwO Jungle Mag 4 ^^ (R)"},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac1", {
-		{id = "owo_jungle_mag_empty_01", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_helper_01", name = "OwO Jungle Mag'vesa 1", no_randomize = true},
 		{id = "owo_jungle_mag_helper_02", name = "OwO Jungle Mag'vesa 2", no_randomize = true},
 		{id = "owo_jungle_mag_helper_03", name = "OwO Jungle Mag'vesa 3", no_randomize = true},
 		{id = "owo_jungle_mag_helper_04", name = "OwO Jungle Mag'vesa 4", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac2", {
-		{id = "owo_jungle_mag_empty_02", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_connector_f_01", name = "OwO Jungle Connector f 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac3", {
-		{id = "owo_jungle_mag_empty_03", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_connector_b_01", name = "OwO Jungle Connector b 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac4", {
-		{id = "owo_jungle_mag_empty_04", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_connector_l_01", name = "OwO Jungle Connector l 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac5", {
-		{id = "owo_jungle_mag_empty_05", name = "OwO Jungle Mag Empty", no_randomize = true},
 		{id = "owo_jungle_mag_connector_r_01", name = "OwO Jungle Connector r 1", no_randomize = true},
 	})
 
@@ -5050,27 +4789,6 @@ function mod.owo_jungle_mag(variant_id, given_type, given_parent)
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "owo_magac5", 
 			mesh_move = false, parent = current_type
 		},
-		-- ### Empty ### 
-		owo_jungle_mag_empty_01 = {
-			model = "", type = "owo_magac1", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_jungle_mag_empty_02 = {
-			model = "", type = "owo_magac2", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_jungle_mag_empty_03 = {
-			model = "", type = "owo_magac3", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_jungle_mag_empty_04 = {
-			model = "", type = "owo_magac4", 
-			mesh_move = false, parent = current_parent
-		},
-		owo_jungle_mag_empty_05 = {
-			model = "", type = "owo_magac5", 
-			mesh_move = false, parent = current_parent
-		},
 	})
 end
 
@@ -5087,15 +4805,12 @@ function mod.owo_magazine_magpull(variant_id, given_type, given_parent)
 		{id = "owo_magazine_magpull_04", name = "OwO Magpul 4"},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac1", {
-		{id = "owo_magazine_magpull_helper_01_empty", name = "Empty Magac1"},
 		{id = "owo_magazine_magpull_helper_01", name = "OwO Autogun Magpul'vesa 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac2", {
-		{id = "owo_magazine_magpull_helper_02_empty", name = "Empty Magac2"},
 		{id = "owo_magazine_magpull_helper_02", name = "OwO Autogun Magpul'vesa 2"},
 	})
 	mod.inject_attachments_owo(variant_id, "owo_magac3", {
-		{id = "owo_magazine_magpull_helper_03_empty", name = "Empty Magac3"},
 		{id = "owo_magazine_magpull_helper_03", name = "OwO Autogun Magpul'vesa 3"},
 	})
 
@@ -5135,16 +4850,6 @@ function mod.owo_magazine_magpull(variant_id, given_type, given_parent)
 		owo_magazine_magpull_helper_03 = {
 			model = _item_ranged.."/sights/reflex_sight_01", type = "owo_magac3", parent = "owo_magac2", 
 			hide_mesh = {{"owo_magac3", 1},},
-		},
-		-- ### Empty ###
-		owo_magazine_magpull_helper_01_empty = {
-			model = "", type = "owo_magac1", parent = current_type, 
-		},
-		owo_magazine_magpull_helper_02_empty = {
-			model = "", type = "owo_magac2", parent = "owo_magac1", 
-		},
-		owo_magazine_magpull_helper_03_empty = {
-			model = "", type = "owo_magac3", parent = "owo_magac2", 
 		},
 	})
 end
@@ -5234,11 +4939,6 @@ function mod.owo_<NAME>(variant_id, given_type, given_parent)
 		owo_ = {
 			model = , type = "", 
 			mesh_move = false, parent = "",
-		},
-		-- ### Empty ###
-		owo_ _empty = {
-			model = "", type = "", 
-			mesh_move = false, parent = ""
 		},
 	})
 end
