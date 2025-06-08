@@ -4550,7 +4550,7 @@ function mod.owo_plasma_mag(variant_id, given_type, given_parent)
 		{id = "owo_plasma_mag_04ss", name = "OwO Plasma Mag 4 (SS)"},
 		{id = "owo_plasma_melta_mag_01ss", name = "OwO Melta Mag (SS)"},
 	})
-	mod.inject_attachments_owo(variant_id, "magac", {
+	mod.inject_attachments_owo(variant_id, "owo_magac1", {
 		{id = "owo_plasma_mag_helper_01", name = "OwO Plasma Mag Helper 1", no_randomize = true},
 		{id = "owo_plasma_mag_helper_02", name = "OwO Plasma Mag Helper 2", no_randomize = true},
 		{id = "owo_plasma_mag_helper_03", name = "OwO Plasma Mag Helper 3", no_randomize = true},
@@ -4597,19 +4597,19 @@ function mod.owo_plasma_mag(variant_id, given_type, given_parent)
 		},
 		-- ### Helper Parts ###
 		owo_plasma_mag_helper_01 = {
-			model = _item_ranged.."/magazines/plasma_rifle_magazine_01", type = "magac", parent = current_type, 
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_01", type = "owo_magac1", parent = current_type, 
 		},
 		owo_plasma_mag_helper_02 = {
-			model = _item_ranged.."/magazines/plasma_rifle_magazine_02", type = "magac", parent = current_type, 
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_02", type = "owo_magac1", parent = current_type, 
 		},
 		owo_plasma_mag_helper_03 = {
-			model = _item_ranged.."/magazines/plasma_rifle_magazine_03", type = "magac", parent = current_type, 
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_03", type = "owo_magac1", parent = current_type, 
 		},
 		owo_plasma_mag_helper_04 = {
-			model = _item_ranged.."/magazines/plasma_rifle_magazine_04", type = "magac", parent = current_type, 
+			model = _item_ranged.."/magazines/plasma_rifle_magazine_04", type = "owo_magac1", parent = current_type, 
 		},
 		owo_plasma_melta_mag_helper_01 = {
-			model = _item_ranged.."/magazines/melta_gun_magazine_01", type = "magac", parent = current_type, 
+			model = _item_ranged.."/magazines/melta_gun_magazine_01", type = "owo_magac1", parent = current_type, 
 		},
 	})
 end

@@ -53,7 +53,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "muzzle_5",
     "muzzle_6",
 
-    "magac", -- MT didn't add this to Helbore yet
+    "owo_magac1",
 
     "bayonetac1",
     "bayonetac2",
@@ -198,7 +198,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("muzzle_5", { "owo_muzzle_brake_helper_04_01" }),
     mod.hide_slot("muzzle_6", { "owo_muzzle_brake_helper_05_01" }),
     -- Magazine
-    mod.hide_slot("magac", { "owo_plasma_mag_helper_01|owo_plasma_mag_helper_02|owo_plasma_mag_helper_03|owo_plasma_mag_helper_04|owo_plasma_melta_mag_helper_01" }),
+    mod.hide_slot("owo_magac1", { "owo_plasma_mag_helper_01|owo_plasma_mag_helper_02|owo_plasma_mag_helper_03|owo_plasma_mag_helper_04|owo_plasma_melta_mag_helper_01" }),
     {	dependencies = {"owo_lasgun_magazine_rear_child_01"},
         rearmag = {position = vector3_box(0, 0, 0.04), hide_mesh = {     {"rearmag", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
     },
@@ -345,7 +345,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     {	dependencies =  { "owo_plasma_mag_01ss|owo_plasma_mag_02ss|owo_plasma_mag_03ss|owo_plasma_mag_04ss|owo_plasma_melta_mag_01ss" },
         magazine =      { offset = true, scale = vector3_box(1, 1, 0.5 ) },
-        magac =         { offset = true, position = vector3_box(-0.003, 0.05, -0.085), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 2), },
+        owo_magac1 =    { offset = true, position = vector3_box(-0.003, 0.05, -0.085), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 2), },
         --magac =         { offset = false, position = vector3_box(-0.003, 0.05, -0.085), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 2), },
     },
 
