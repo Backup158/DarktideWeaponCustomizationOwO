@@ -29,6 +29,7 @@ Refactor:
     - `create_custom_slot`: Creates a new (visible, selectable) slot, then make the localization for it (which is provided when called, so it's easier for translators)
     - All weapons have been migrated to this new system.
     - `hide_slot`: Fills out the hide_mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao), although this might be irrelevant since I'm autoequipping an empty mesh. 
+- Remembered how key-value pairs worked in tables (applied this to generic fixes functions to make use of given_type). Accessing and injecting by `["key"]` instead of `[key]`
 - Modularized type identity (logic fix for the 'or type') for 
     - Melee
         - Trench Dagger Finger Guards
