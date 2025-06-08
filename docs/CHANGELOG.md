@@ -13,6 +13,10 @@ ALL affected attachments must be reequipped! Any patches and fixes will also nee
 Added:
 - Disk Crossguard
 
+Reworked:
+- Lasgun Condoms: Now the same structure as suppressors so compatibility is easier (on positioning and for bayonets)
+- Helbore Plasma Mags: Helpers moved to using `owo_magac1` to avoid showing up in the "Magazine Accessories" slot dropdown, for users who use Syn's Edits (slot for the shotgun shell racks)
+
 Refactor: 
 - Made functions to simplify creating custom slots on the developer side
     - `create_default_attachment`: Creates an empty attachment for the given slot ("owo_<slot_name>_default")
@@ -24,7 +28,7 @@ Refactor:
     - `initialize_table_of_custom_slot_for_weapon`: Batch execution `initialize_custom_slot_for_weapon` over all names in the given table, so I don't have to copy paste so much at the top of each weapon file. Because this creates an extra table for each weapon, there is some additional overhead. It was not noticeable to me, so I'm willing to take it in exchange for the ease of development
     - `create_custom_slot`: Creates a new (visible, selectable) slot, then make the localization for it (which is provided when called, so it's easier for translators)
     - All weapons have been migrated to this new system.
-    - `hide_slot`: Fills out the hide_mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao)
+    - `hide_slot`: Fills out the hide_mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao), although this might be irrelevant since I'm autoequipping an empty mesh. 
 - Modularized type identity (logic fix for the 'or type') for 
     - Melee
         - Trench Dagger Finger Guards
