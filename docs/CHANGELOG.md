@@ -6,13 +6,17 @@ The primary goal of this refactor was to make development easier, mainly by maki
 While refactoring, I had the chance to notice a few things I could fix. 
 
 **BREAKING CHANGE(S)**: 
-- Renamed `holosight` to `holographic_sight`, for function AND attachment names. 
-- Renamed `owo_rear_sight_ak` to `owo_kalashnikov_rear_sight`, for function AND attachment names. 
+- Renamed `owo_rear_sight_ak` to `owo_kalashnikov_rear_sight`, for function AND attachment names.
+    - AK Irons
+    - Scuffed AK Irons
 - Renamed `owo_bayonet` to `owo_historical_bayonet`, for function AND attachment names. 
+    - M7 Bayonet
+    - Seitengewehr 98
+    - Épée Baïonnette 1886
 
 *ALL affected attachments must be reequipped!* Any patches and fixes will also need to reflect this change. 
 
-Why did I do this? Idk I thought it'd be funny :3c. Ok but really though, I just figured I might as well rename them while I'm here because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other two were just annoying (wow I'm an ass).
+Why did I do this? Idk I thought it'd be funny :3c. Ok but really though, I just figured I might as well rename them while I'm here because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other was just annoying (wow I'm an ass).
 
 Added:
 - Disk Crossguard (WIP)

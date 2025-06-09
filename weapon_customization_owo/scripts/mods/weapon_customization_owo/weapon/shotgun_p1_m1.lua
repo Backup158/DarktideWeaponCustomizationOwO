@@ -73,7 +73,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
 -- ############################################
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
-mod.owo_holographic_sight(this_variant, "sight")
+mod.owo_holosight(this_variant, "sight")
 mod.owo_telescopic_sight(this_variant, "sight")
 
 mod.owo_suppressor(this_variant)
@@ -90,15 +90,15 @@ mod.owo_beeg_stock(this_variant, "stock_2")
 -- Define Variables for Fixes
 -- ############################################
 local _owo_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06|owo_reticle_helper_invisible"
-local _owo_no_magnifier_eotech_sights = "owo_holographic_sight_01_01|owo_holographic_sight_01_01ss"
-local _owo_magnifier_aligned_eotech_sights = "owo_holographic_sight_01_02_z1|owo_holographic_sight_01_02_z2|owo_holographic_sight_01_02ss_z1|owo_holographic_sight_01_02ss_z2"
-local _owo_magnifier_side_eotech_sights = "owo_holographic_sight_01_03|owo_holographic_sight_01_03ss"
+local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
+local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
+local _owo_magnifier_side_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
 local _owo_magnifier_eotech_sights = _owo_magnifier_aligned_eotech_sights.."|".._owo_magnifier_side_eotech_sights
-local _owo_short_eotech_sights = "owo_holographic_sight_01_01ss|owo_holographic_sight_01_02ss_z1|owo_holographic_sight_01_02ss_z2|owo_holographic_sight_01_03ss"
+local _owo_short_eotech_sights = "owo_holosight_01_01ss|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2|owo_holosight_01_03ss"
 local _owo_all_eotech_sights = _owo_no_magnifier_eotech_sights.."|".._owo_magnifier_eotech_sights
-local _owo_no_magnifier_vortex_sights = "owo_holographic_sight_02_01|owo_holographic_sight_02_01ss"
-local _owo_magnifier_aligned_vortex_sights = "owo_holographic_sight_02_02_z1|owo_holographic_sight_02_02_z2|owo_holographic_sight_02_02ss_z1|owo_holographic_sight_02_02ss_z2"
-local _owo_magnifier_side_vortex_sights = "owo_holographic_sight_02_03|owo_holographic_sight_02_03ss"
+local _owo_no_magnifier_vortex_sights = "owo_holosight_02_01|owo_holosight_02_01ss"
+local _owo_magnifier_aligned_vortex_sights = "owo_holosight_02_02_z1|owo_holosight_02_02_z2|owo_holosight_02_02ss_z1|owo_holosight_02_02ss_z2"
+local _owo_magnifier_side_vortex_sights = "owo_holosight_02_03|owo_holosight_02_03ss"
 local _owo_magnifier_vortex_sights = _owo_magnifier_aligned_vortex_sights.."|".._owo_magnifier_side_vortex_sights
 local _owo_all_vortex_sights = _owo_no_magnifier_vortex_sights.."|".._owo_magnifier_vortex_sights
 local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
@@ -136,16 +136,16 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("foregripac2", { "owo_tactical_foregrip_ac2_01" }),
     mod.hide_slot("foregripac3", { "owo_tactical_foregrip_ac3_01" }),
     -- Sights
-    mod.hide_slot("sightac1", { "owo_holographic_sight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_kalashnikov_rear_sight_ac1_01|owo_kalashnikov_rear_sight_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
-    mod.hide_slot("sightac2", { "owo_holographic_sight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_kalashnikov_rear_sight_ac2_01|owo_kalashnikov_rear_sight_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
-    mod.hide_slot("sightac3", { "owo_holographic_sight_helper_03|owo_holographic_sight_helper_03_02|owo_rear_sight_ac3_01|owo_kalashnikov_rear_sight_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01" }),
-    mod.hide_slot("sightac4", { "owo_holographic_sight_helper_04|owo_rear_sight_ac4_01|owo_kalashnikov_rear_sight_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04" }),
+    mod.hide_slot("sightac1", { "owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_kalashnikov_rear_sight_ac1_01|owo_kalashnikov_rear_sight_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
+    mod.hide_slot("sightac2", { "owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_kalashnikov_rear_sight_ac2_01|owo_kalashnikov_rear_sight_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
+    mod.hide_slot("sightac3", { "owo_holosight_helper_03|owo_holosight_helper_03_02|owo_rear_sight_ac3_01|owo_kalashnikov_rear_sight_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01" }),
+    mod.hide_slot("sightac4", { "owo_holosight_helper_04|owo_rear_sight_ac4_01|owo_kalashnikov_rear_sight_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04" }),
     mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_kalashnikov_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01" }),
     mod.hide_slot("sightac6", { "owo_rear_sight_ac6_01|owo_kalashnikov_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01" }),
     mod.hide_slot("sightac7", { "owo_m16_sight_helper_07|owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07" }),
-    mod.hide_slot("sight_secondary", { "owo_holographic_sight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
-    mod.hide_slot("sight_secondary_ac1", { "owo_holographic_sight_sight_secondary_helper_01" }),
-    mod.hide_slot("sight_secondary_ac2", { "owo_holographic_sight_sight_secondary_helper_02" }),
+    mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
+    mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
+    mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
     -- Stocks
     mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
 })
@@ -251,7 +251,7 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  Short Variant
-    {   dependencies =  { "owo_holographic_sight_02_01ss|owo_holographic_sight_02_02ss_z1|owo_holographic_sight_02_02ss_z2|owo_holographic_sight_02_03ss" },
+    {   dependencies =  { "owo_holosight_02_01ss|owo_holosight_02_02ss_z1|owo_holosight_02_02ss_z2|owo_holosight_02_03ss" },
         sightac1 =      { offset = true, position = vector3_box(-0.002, -0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.4, 0.292) },
         sightac2 =      { offset = true, position = vector3_box(0.00, -0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.4, 0.286) },
         sightac3 =      { offset = true, position = vector3_box(0, -0.032, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.05, 0.666, 1.282) },

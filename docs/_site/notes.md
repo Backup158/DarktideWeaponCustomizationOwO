@@ -78,7 +78,7 @@ It also doesn't even need to match the gun. The autogun muzzles were stealing la
 3. Append the scope's `attachment.id` to `wc.sights` table
 ```
 	mod.mt.table_append(mod.wc.sights, {
-        "owo_holographic_sight_01_01",
+        "owo_holosight_01_01",
     })
 ```
 4. Append base mesh to scope table to affect zoom
