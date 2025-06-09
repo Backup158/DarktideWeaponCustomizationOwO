@@ -563,7 +563,7 @@ end
 --	Not making this a generic function so I can specifically use a muzzle for this and not the others
 function mod.owo_invisible_muzzle(variant_id)
 	mod.inject_attachments_owo(variant_id, "muzzle", {
-		{id = "owo_muzzle_invisible", name = "Invisible Muzzle"},
+		{id = "owo_muzzle_invisible", name = "OwO Invisible Muzzle"},
 	})
 	mod.inject_models(variant_id, {
 		owo_muzzle_invisible = {
