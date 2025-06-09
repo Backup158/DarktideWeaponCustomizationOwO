@@ -3,19 +3,26 @@ v2.0.0
 
 The primary goal of this refactor was to make development easier, mainly by making it easier to copy and paste things (and hopefully to do that less often in the future, enough to make up for the amount I had to do to implement this update lmfao). Unfortunately, this will come with "breaking" changes that require reequipping attachments. Your game will not crash, but it's gonna be annoying. That's enough for me to call it a breaking change, so I bumped the version up to 2.0.0.
 
+While refactoring, I had the chance to notice a few things I could fix. 
+
 **BREAKING CHANGE(S)**: 
 - Renamed `holosight` to `holographic_sight`, for function AND attachment names. 
 - Renamed `owo_rear_sight_ak` to `owo_kalashnikov_rear_sight`, for function AND attachment names. 
 - Renamed `owo_bayonet` to `owo_historical_bayonet`, for function AND attachment names. 
 
-ALL affected attachments must be reequipped! Any patches and fixes will also need to reflect this change. Why did I make this? Idk I thought it'd be funny :3c. Ok but really though, I was just refactoring the code and figured I might as well rename them because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other two were just annoying (wow I'm an ass).
+*ALL affected attachments must be reequipped!* Any patches and fixes will also need to reflect this change. 
+
+Why did I do this? Idk I thought it'd be funny :3c. Ok but really though, I just figured I might as well rename them while I'm here because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other two were just annoying (wow I'm an ass).
 
 Added:
 - Disk Crossguard
 
+Fixed:
+- Fixes for Flat DClaw (G) Blades had a typo that prevented them from being applied
+
 Reworked:
 - Lasgun Condoms: Now the same structure as suppressors so compatibility is easier (on positioning and for bayonets)
-- Helbore Plasma Mags: Helpers moved to using `owo_magac1` to avoid showing up in the "Magazine Accessories" slot dropdown, for users who use Syn's Edits (slot for the shotgun shell racks)
+- Helbore Plasma Mags: Helpers moved to using `owo_magac1` to avoid showing up in the "Magazine Accessories" slot dropdown, for users who use Syn's Edits (slot for the shotgun shell racks I think)
 
 Refactor: 
 - Made functions to simplify creating custom slots on the developer side
@@ -30,45 +37,50 @@ Refactor:
     - All weapons have been migrated to this new system.
     - `hide_slot`: Fills out the hide_mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao), although this might be irrelevant since I'm autoequipping an empty mesh. 
 - Remembered how key-value pairs worked in tables (applied this to generic fixes functions to make use of given_type). Accessing and injecting by `["key"]` instead of `[key]`
-- Modularized type identity (logic fix for the 'or type') for 
-    - Melee
-        - Trench Dagger Finger Guards
-        - Shovel Handles
-        - Historical Blades
-    - Ranged
-        - Suppressor Muzzles
-        - Lasgun Condom Muzzles
-        - Muzzle Brake
-        - Bolt Pistol Shotgun Barrels
-        - Revolver Shotgun Barrels
-        - Dreg Gunner Barrels
-        - M16 Barrels
-        - Wooden Helbore Barrels
-        - Plasma Helbore Barrels
-        - Heterosexual Foregrips
-        - Tactical Foregrips
-        - Historical Bayonets
-        - Underbarrel Grenade Launchers
-        - Underbarrel Shotguns
-        - California Bolter Receivers
-        - Bolt Action Helbore Receivers
-        - Helbore MAS Receivers
-        - Laspistol Grip Mag Receivers
-        - Fin Grips
-        - Helbore Grip Stocks
-        - Tactical (Shotgun) Stocks
-        - Kalashnikov Stocks
-        - Beeg Stocks!
-        - Ladder Aperture Sights
-        - Kalashnikov Rear Sights
-        - M16 Carry Handle Sights
-        - Holographic Scopes
-        - Telescopic Scopes
-        - PU Scopes
-        - Flat Magazines
-        - Helbore Plasma Magazines
-        - Jungle Magazines
-        - Magpul Magazines
+- Modularized type identity (logic fix for the 'or type')
+    - When assigning a value (`=`) and using `a or b`, if `a` is valid, Lua will automatically use its value (short circuiting) to avoid extra calculations
+    - Attachments were created with their slot being something like `"barrel" or type` with `type` being a parameter for the function
+        - This was probably so you can make it a different type just by passing in a variable, with a default to fall back on
+        - Instead, the default was applying every time
+    - Affects:
+        - Melee
+            - Trench Dagger Finger Guards
+            - Shovel Handles
+            - Historical Blades
+        - Ranged
+            - Suppressor Muzzles
+            - Lasgun Condom Muzzles
+            - Muzzle Brake
+            - Bolt Pistol Shotgun Barrels
+            - Revolver Shotgun Barrels
+            - Dreg Gunner Barrels
+            - M16 Barrels
+            - Wooden Helbore Barrels
+            - Plasma Helbore Barrels
+            - Heterosexual Foregrips
+            - Tactical Foregrips
+            - Historical Bayonets
+            - Underbarrel Grenade Launchers
+            - Underbarrel Shotguns
+            - California Bolter Receivers
+            - Bolt Action Helbore Receivers
+            - Helbore MAS Receivers
+            - Laspistol Grip Mag Receivers
+            - Fin Grips
+            - Helbore Grip Stocks
+            - Tactical (Shotgun) Stocks
+            - Kalashnikov Stocks
+            - Beeg Stocks!
+            - Ladder Aperture Sights
+            - Kalashnikov Rear Sights
+            - M16 Carry Handle Sights
+            - Holographic Scopes
+            - Telescopic Scopes
+            - PU Scopes
+            - Flat Magazines
+            - Helbore Plasma Magazines
+            - Jungle Magazines
+            - Magpul Magazines
 
 # 2025-05-18
 v1.8.1
