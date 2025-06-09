@@ -10,61 +10,50 @@ local _item_minion = "content/items/weapons/minions"
 -- #############################
 -- Slot Additions
 -- #############################
--- HEAD
+-- HEAD/BLADE
 if mod.syn then
 	mod.mt.table_append(mod.wc.bladeshrouds, {
-		"owo_tacax_spike_helper_empty",
+		"owo_bladeshroud_default",
 		"owo_tacax_spike_helper_01",
 		"owo_polearm_head_helper_0_00",
 		"owo_polearm_head_helper_0_01",
+		"owo_historical_blade_helper_gerber",
 	})
 	mod.mt.table_append(mod.wc.bladeshroudacs, {
-		"owo_polearm_head_helper_1_00",
+		"owo_bladeshroudac_default",
 		"owo_polearm_head_helper_1_01",
 	})
 	mod.mt.table_append(mod.wc.bladeshroudac2s, {
-		"owo_polearm_head_helper_2_00",
+		"owo_bladeshroudac2_default",
 		"owo_polearm_head_helper_2_01",
 	})
 	mod.mt.table_append(mod.wc.bladeshroudac3s, {
-		"owo_polearm_head_helper_3_00",
+		"owo_bladeshroudac3_default",
 		"owo_polearm_head_helper_3_01",
 	})
 else 
 	mod.wc.add_custom_attachments.bladeshroud = "bladeshrouds"
 	mod.wc.bladeshrouds = {
-		"owo_tacax_spike_helper_empty",
+		"owo_bladeshroud_default",
 		"owo_tacax_spike_helper_01",
 		"owo_polearm_head_helper_0_00",
 		"owo_polearm_head_helper_0_01",
+		"owo_historical_blade_helper_gerber",
 	}
 	mod.wc.add_custom_attachments.bladeshroudac = "bladeshroudacs"
 	mod.wc.bladeshroudacs = {
-		"owo_polearm_head_helper_1_00",
+		"owo_bladeshroudac_default",
 		"owo_polearm_head_helper_1_01",
 	}
 	mod.wc.add_custom_attachments.bladeshroudac2 = "bladeshroudac2s"
 	mod.wc.bladeshroudac2s = {
-		"owo_polearm_head_helper_2_00",
+		"owo_bladeshroudac2_default",
 		"owo_polearm_head_helper_2_01",
 	}
 	mod.wc.add_custom_attachments.bladeshroudac3 = "bladeshroudac3s"
 	mod.wc.bladeshroudac3s = {
-		"owo_polearm_head_helper_3_00",
+		"owo_bladeshroudac3_default",
 		"owo_polearm_head_helper_3_01",
-	}
-end
--- BLADE
-if mod.syn then
-	mod.mt.table_append(mod.wc.bladeshrouds, {
-		"owo_historical_blade_helper_default",
-		"owo_historical_blade_helper_gerber",
-	})
-else 
-	mod.wc.add_custom_attachments.bladeshroud = "bladeshrouds"
-	mod.wc.bladeshrouds = {
-		"owo_historical_blade_helper_default",
-		"owo_historical_blade_helper_gerber",
 	}
 end
 -- CROSSGUARD (HILT)
@@ -79,14 +68,6 @@ mod.create_custom_slot("crossguard",
 		en = "Crossguard",
 	}
 )
---[[
-table.insert(mod.wc.attachment_slots, "crossguard")
-mod:add_global_localize_strings({
-    loc_weapon_cosmetics_customization_crossguard = {
-        en = "Crossguard",
-	},
-})
-]]
 
 -- GRIP
 --	Grip Shroud
@@ -100,9 +81,11 @@ mod:add_global_localize_strings({
 --mod.wc.gripshroud_list = {
 --	
 --}
+
+-- SHAFT
 mod.wc.add_custom_attachments.shaftac1 = "shaftac1_list"
 mod.wc.shaftac1_list = {
-	"owo_shaft_low_grip_helper_00",
+	"owo_shaftac1_default",
 	"owo_shaft_low_grip_helper_01",
 	"owo_shaft_low_grip_helper_02",
 	"owo_shaft_low_grip_helper_03",
@@ -113,7 +96,7 @@ mod.wc.shaftac1_list = {
 -- POMMEL
 mod.wc.add_custom_attachments.pommelac1 = "pommelac1_list"
 mod.wc.pommelac1_list = {
-	"owo_shovel_handles_ac1_empty",
+	"owo_pommelac1_empty",
     "owo_shovel_handles_ac1_01",
     "owo_shovel_handles_ac1_02",
     --"owo_shovel_handles_ac1_03",
@@ -122,7 +105,7 @@ mod.wc.pommelac1_list = {
 }
 mod.wc.add_custom_attachments.pommelac2 = "pommelac2_list"
 mod.wc.pommelac2_list = {
-	"owo_shovel_handles_ac2_empty",
+	"owo_pommelac2_empty",
     "owo_shovel_handles_ac2_01",
     "owo_shovel_handles_ac2_02",
     "owo_shovel_handles_ac2_03",
@@ -130,7 +113,7 @@ mod.wc.pommelac2_list = {
 -- FRONTGUARD
 mod.wc.add_custom_attachments.frontguard = "frontguard_list"
 mod.wc.frontguard_list = {
-	"owo_trench_dagger_finger_guard_default",
+	"owo_frontguard_default",
 	"owo_trench_dagger_finger_guard_01",
 	"owo_trench_dagger_finger_guard_02",
 	"owo_trench_dagger_finger_guard_03",
@@ -138,32 +121,22 @@ mod.wc.frontguard_list = {
 	"owo_trench_dagger_finger_guard_05",
 	"owo_trench_dagger_finger_guard_06",
 }
---[[
-table.insert(mod.wc.attachment_slots, "frontguard")
-mod:add_global_localize_strings({
-    loc_weapon_cosmetics_customization_frontguard = {
-        en = "Front Guard",
-	},
-})
-]]
 mod.create_custom_slot("frontguard", {
 	en = "Front Guard",
 })
-
-
 mod.wc.add_custom_attachments.frontguardac1 = "frontguardac1_list"
 mod.wc.frontguardac1_list = {
-	"owo_trench_dagger_finger_guard_helper_ac1_default",
+	"owo_frontguardac1_default",
 	"owo_trench_dagger_finger_guard_helper_ac1",
 }
 mod.wc.add_custom_attachments.frontguardac2 = "frontguardac2_list"
 mod.wc.frontguardac2_list = {
-	"owo_trench_dagger_finger_guard_helper_ac2_default",
+	"owo_frontguardac2_default",
 	"owo_trench_dagger_finger_guard_helper_ac2",
 }
 mod.wc.add_custom_attachments.frontguardac3 = "frontguardac3_list"
 mod.wc.frontguardac3_list = {
-	"owo_trench_dagger_finger_guard_helper_ac3_default",
+	"owo_frontguardac3_default",
 	"owo_trench_dagger_finger_guard_helper_ac3",
 }
 
@@ -187,8 +160,7 @@ function mod.owo_tacax_spike(variant_id, given_type, given_parent)
 		{id = "owo_tacax_spike_07", name = "OwO Spiked Tactical Axe M"},
 	})
     mod.inject_attachments_owo(variant_id, "bladeshroud" or type, {
-        {id = "owo_tacax_spike_helper_empty", name = "Empty bladeshroud"},
-		{id = "owo_tacax_spike_helper_01", name = "OwO Tacax'vesa 1", no_randomize = true},
+        {id = "owo_tacax_spike_helper_01", name = "OwO Tacax'vesa 1", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -243,10 +215,6 @@ function mod.owo_tacax_spike(variant_id, given_type, given_parent)
 			},
 		},
 		-- ### Helper Parts ###
-		owo_tacax_spike_helper_empty = {
-			model = "", type = "bladeshroud", 
-			mesh_move = false, parent = current_type,
-		},
 		owo_tacax_spike_helper_01 = {
 			model = _item_melee.."/heads/axe_head_03", type = "bladeshroud", 
 			mesh_move = false, parent = current_type,
@@ -322,12 +290,10 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 		{id = "owo_polearm_head_p_03", name = "OwO Pollax/Poleaxe 9"},
 	})
     mod.inject_attachments_owo(variant_id, "bladeshroud", {
-        {id = "owo_polearm_head_helper_0_00", name = "Empty bladeshroud"},
-		{id = "owo_polearm_head_helper_0_01", name = "OwO Polearm'vesa 0 shaft", no_randomize = true},
+        {id = "owo_polearm_head_helper_0_01", name = "OwO Polearm'vesa 0 shaft", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroudac", {
-        {id = "owo_polearm_head_helper_1_00", name = "Empty bladeshroudac"},
-		{id = "owo_polearm_head_helper_1_01", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
+        {id = "owo_polearm_head_helper_1_01", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 		{id = "owo_polearm_head_helper_1_02", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 		{id = "owo_polearm_head_helper_1_03", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 		{id = "owo_polearm_head_helper_1_04", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
@@ -344,12 +310,10 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 		{id = "owo_polearm_head_helper_1_p_09", name = "OwO Polearm'vesa 1 hammer", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroudac2", {
-        {id = "owo_polearm_head_helper_2_00", name = "Empty bladeshroudac2"},
-		{id = "owo_polearm_head_helper_2_01", name = "OwO Polearm'vesa 2 spike", no_randomize = true},
+        {id = "owo_polearm_head_helper_2_01", name = "OwO Polearm'vesa 2 spike", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroudac3", {
-        {id = "owo_polearm_head_helper_3_00", name = "Empty bladeshroudac3"},
-		{id = "owo_polearm_head_helper_3_01", name = "OwO Polearm'vesa 3 pick", no_randomize = true},
+        {id = "owo_polearm_head_helper_3_01", name = "OwO Polearm'vesa 3 pick", no_randomize = true},
 		{id = "owo_polearm_head_helper_3_02", name = "OwO Polearm'vesa 3 pick hammer", no_randomize = true},
 	})
 
@@ -537,10 +501,6 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 		},
 		-- ### Helper Parts ###
 		-- Bladeshroud: Pseudo shaft extender
-		owo_polearm_head_helper_0_00 = {
-			model = "", type = "bladeshroud", 
-			mesh_move = false, parent = current_type,
-		},
 		owo_polearm_head_helper_0_01 = {
 			model = _item_melee.."/heads/power_maul_head_05", type = "bladeshroud", 
 			mesh_move = false, parent = current_type,
@@ -614,19 +574,11 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 			mesh_move = false, parent = current_type,
 		},
 		-- Bladeshroudac2: Top spike
-		owo_polearm_head_helper_2_00 = {
-			model = "", type = "bladeshroudac2", 
-			mesh_move = false, parent = current_type,
-		},
 		owo_polearm_head_helper_2_01 = {
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "bladeshroudac2", 
 			mesh_move = false, parent = current_type,
 		},
 		-- Bladeshroudac3: rear
-		owo_polearm_head_helper_3_00 = {
-			model = "", type = "bladeshroudac3", 
-			mesh_move = false, parent = current_type,
-		},
 		--	Pick
 		owo_polearm_head_helper_3_01 = {
 			model = _item_melee.."/blades/sabre_blade_01", type = "bladeshroudac3", 
@@ -744,6 +696,7 @@ end
 function mod.owo_crossguard(variant_id, given_type, given_parent)
 	local current_type = given_type or "crossguard"
 	local current_parent = given_parent or "grip"
+
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_crossguard_plate_01", name = "OwO Crossguard Plate"},
 	})
@@ -829,7 +782,6 @@ function mod.owo_historical_blade(variant_id, given_type)
 		{id = "owo_historical_blade_box_cutter", name = "OwO Box Cutter"},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroud" or type, {
-		{id = "owo_historical_blade_helper_default", name = "Empty"},
 		{id = "owo_historical_blade_helper_gerber", name = "OwO Gerber'vesa", no_randomize = true},
 		{id = "owo_historical_blade_helper_karambit", name = "OwO Karambit'vesa", no_randomize = true},
 	})
@@ -904,10 +856,6 @@ function mod.owo_historical_blade(variant_id, given_type)
 			mesh_move = false, 
 		},
 		-- ### Helper Parts ###
-		owo_historical_blade_helper_default = {
-			model = "", type = "bladeshroud", 
-			mesh_move = false, parent = current_type,
-		},
 		owo_historical_blade_helper_gerber = {
 			model = _item_melee.."/blades/combat_blade_blade_06", type = "bladeshroud", 
 			mesh_move = false, parent = current_type,
@@ -1303,8 +1251,7 @@ function mod.owo_shaft_low_grip(variant_id, given_type)
 		{id = "owo_shaft_low_grip_06", name = "OwO Long Shaft (Low) 6"},
 	})
 	mod.inject_attachments_owo(variant_id, "shaftac1", {
-		{id = "owo_shaft_low_grip_helper_00", name = "Default"},
-        {id = "owo_shaft_low_grip_helper_01", name = "OwO Shaft'vesa 1", no_randomize = true},
+		{id = "owo_shaft_low_grip_helper_01", name = "OwO Shaft'vesa 1", no_randomize = true},
 		{id = "owo_shaft_low_grip_helper_02", name = "OwO Shaft'vesa 2", no_randomize = true},
 		{id = "owo_shaft_low_grip_helper_03", name = "OwO Shaft'vesa 3", no_randomize = true},
 		{id = "owo_shaft_low_grip_helper_04", name = "OwO Shaft'vesa 4", no_randomize = true},
@@ -1345,10 +1292,6 @@ function mod.owo_shaft_low_grip(variant_id, given_type)
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		-- ### Helper Parts ###
-		owo_shaft_low_grip_helper_00 = {
-			model = "", type = "shaftac1", 
-			mesh_move = false, parent = current_type,
-		},
 		owo_shaft_low_grip_helper_01 = {
 			model = _item_ranged.."/shafts/thunder_hammer_shaft_01", type = "shaftac1", 
 			mesh_move = false, parent = current_type,
@@ -1407,8 +1350,7 @@ function mod.owo_ogryn_shaft_low_grip(variant_id, given_type)
 		{id = "owo_ogryn_shaft_low_grip_05", name = "OwO Long Ogryn (Low) 5"},
 	})
 	mod.inject_attachments_owo(variant_id, "shaftac1", {
-		{id = "owo_ogryn_shaft_low_grip_helper_00", name = "Default"},
-        {id = "owo_ogryn_shaft_low_grip_helper_01", name = "OwO Shaft'vesa 1", no_randomize = true},
+		{id = "owo_ogryn_shaft_low_grip_helper_01", name = "OwO Shaft'vesa 1", no_randomize = true},
 		{id = "owo_ogryn_shaft_low_grip_helper_02", name = "OwO Shaft'vesa 2", no_randomize = true},
 		{id = "owo_ogryn_shaft_low_grip_helper_03", name = "OwO Shaft'vesa 3", no_randomize = true},
 		{id = "owo_ogryn_shaft_low_grip_helper_04", name = "OwO Shaft'vesa 4", no_randomize = true},
@@ -1443,10 +1385,6 @@ function mod.owo_ogryn_shaft_low_grip(variant_id, given_type)
 			hide_mesh = { {"shaft", 1,2,3,4,5,6,7,8,9,10,12,13,14,15 }, },
 		},
 		-- ### Helper Parts ###
-		owo_ogryn_shaft_low_grip_helper_00 = {
-			model = "", type = "shaftac1", 
-			mesh_move = false, parent = current_type,
-		},
 		owo_ogryn_shaft_low_grip_helper_01 = {
 			model = _item_melee.."/shafts/ogryn_pickaxe_shaft_01", type = "shaftac1", 
 			mesh_move = false, parent = current_type,
@@ -1489,8 +1427,7 @@ function mod.owo_trench_dagger_guard(variant_id, given_type)
 	local current_type = given_type or "frontguard"
 
     mod.inject_attachments_owo(variant_id, current_type, {
-        {id = "owo_trench_dagger_finger_guard_default", name = "Default"},
-		{id = "owo_trench_dagger_finger_guard_01", name = "OwO Trench Dagger Guard 1"},
+        {id = "owo_trench_dagger_finger_guard_01", name = "OwO Trench Dagger Guard 1"},
 		{id = "owo_trench_dagger_finger_guard_02", name = "OwO Trench Dagger Guard 2"},
 		{id = "owo_trench_dagger_finger_guard_03", name = "OwO Trench Dagger Guard 3"},
 		{id = "owo_trench_dagger_finger_guard_04", name = "OwO Trench Dagger Guard 4"},
@@ -1502,24 +1439,17 @@ function mod.owo_trench_dagger_guard(variant_id, given_type)
 		{id = "owo_trench_dagger_finger_guard_knuckles_04", name = "OwO Knuckle Dusters 4"},
 	})
 	mod.inject_attachments_owo(variant_id, "frontguardac1", {
-        {id = "owo_trench_dagger_finger_guard_helper_ac1_default", name = "Default"},
-		{id = "owo_trench_dagger_finger_guard_helper_ac1", name = "OwO Knuckle'vesa", no_randomize = true},
+        {id = "owo_trench_dagger_finger_guard_helper_ac1", name = "OwO Knuckle'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "frontguardac2", {
-        {id = "owo_trench_dagger_finger_guard_helper_ac2_default", name = "Default"},
-		{id = "owo_trench_dagger_finger_guard_helper_ac2", name = "OwO Knuckle'vesa", no_randomize = true},
+        {id = "owo_trench_dagger_finger_guard_helper_ac2", name = "OwO Knuckle'vesa", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "frontguardac3", {
-        {id = "owo_trench_dagger_finger_guard_helper_ac3_default", name = "Default"},
-		{id = "owo_trench_dagger_finger_guard_helper_ac3", name = "OwO Knuckle'vesa", no_randomize = true},
+        {id = "owo_trench_dagger_finger_guard_helper_ac3", name = "OwO Knuckle'vesa", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
-		owo_trench_dagger_finger_guard_default = {
-			model = "", type = current_type, 
-			mesh_move = false, parent = "grip"
-		},
 		owo_trench_dagger_finger_guard_01 = {
 			model = _item_melee.."/grips/combat_blade_grip_01", type = current_type, 
 			mesh_move = false, 
@@ -1581,24 +1511,12 @@ function mod.owo_trench_dagger_guard(variant_id, given_type)
 			},
 		},
 		-- ### Helper Parts ###
-		owo_trench_dagger_finger_guard_helper_ac1_default = {
-			model = "", type = "frontguardac1", 
-			mesh_move = false, 
-		},
 		owo_trench_dagger_finger_guard_helper_ac1 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguardac1", 
 			mesh_move = false, 
 		},
-		owo_trench_dagger_finger_guard_helper_ac2_default = {
-			model = "", type = "frontguardac2", 
-			mesh_move = false, 
-		},
 		owo_trench_dagger_finger_guard_helper_ac2 = {
 			model = _item_melee.."/grips/combat_blade_grip_06", type = "frontguardac2", 
-			mesh_move = false, 
-		},
-		owo_trench_dagger_finger_guard_helper_ac3_default = {
-			model = "", type = "frontguardac3", 
 			mesh_move = false, 
 		},
 		owo_trench_dagger_finger_guard_helper_ac3 = {
@@ -1633,16 +1551,14 @@ function mod.owo_shovel_handles(variant_id, given_type)
 		{id = "owo_shovel_handles_13", name = "OwO T-Handle 5"},
 	})
     mod.inject_attachments_owo(variant_id, "pommelac1" or type, {
-		{id = "owo_shovel_handles_ac1_empty", name = "Empty Pommelac1"},
-        {id = "owo_shovel_handles_ac1_01", name = "OwO E-Tool'vesa'ac1 1", no_randomize = true},
+		{id = "owo_shovel_handles_ac1_01", name = "OwO E-Tool'vesa'ac1 1", no_randomize = true},
         {id = "owo_shovel_handles_ac1_02", name = "OwO E-Tool'vesa'ac1 2", no_randomize = true},
         --{id = "owo_shovel_handles_ac1_03", name = "OwO E-Tool'vesa'ac1 3", no_randomize = true},
         {id = "owo_shovel_handles_ac1_04", name = "OwO E-Tool'vesa'ac1 4", no_randomize = true},
         {id = "owo_shovel_handles_ac1_05", name = "OwO E-Tool'vesa'ac1 5", no_randomize = true},
 	})
     mod.inject_attachments_owo(variant_id, "pommelac2" or type, {
-		{id = "owo_shovel_handles_ac2_empty", name = "Empty Pommelac1"},
-        {id = "owo_shovel_handles_ac2_01", name = "OwO E-Tool'vesa'ac2 1", no_randomize = true},
+		{id = "owo_shovel_handles_ac2_01", name = "OwO E-Tool'vesa'ac2 1", no_randomize = true},
         {id = "owo_shovel_handles_ac2_02", name = "OwO E-Tool'vesa'ac2 2", no_randomize = true},
 		{id = "owo_shovel_handles_ac2_03", name = "OwO E-Tool'vesa'ac2 3", no_randomize = true},
 		{id = "owo_shovel_handles_ac2_04", name = "OwO E-Tool'vesa'ac2 4", no_randomize = true},
@@ -1808,15 +1724,6 @@ function mod.owo_shovel_handles(variant_id, given_type)
 		--  Metal handle 
 		owo_shovel_handles_ac2_04 = {
 			model = _item_melee.."/grips/chain_axe_grip_01", type = "pommelac2", 
-			mesh_move = false, 
-		},
-        -- ### Empty Parts ###
-        owo_shovel_handles_ac1_empty = {
-			model = "", type = "pommelac1", 
-			mesh_move = false, 
-		},
-        owo_shovel_handles_ac2_empty = {
-			model = "", type = "pommelac2", 
 			mesh_move = false, 
 		},
 	})
