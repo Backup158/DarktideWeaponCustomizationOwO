@@ -506,10 +506,6 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 			mesh_move = false, parent = current_type,
 		},
 		-- Bladeshroudac: Hammer head
-		owo_polearm_head_helper_1_00 = {
-			model = "", type = "bladeshroudac", 
-			mesh_move = false, parent = current_type,
-		},
 		--	Becs de Corbin
 		owo_polearm_head_helper_1_01 = {
 			model = _item_melee.."/pommels/power_sword_pommel_02", type = "bladeshroudac", 
