@@ -70,7 +70,7 @@ local _combat_sword_grips = "combat_sword_grip_01|combat_sword_grip_02|combat_sw
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
-mod.fixes_owo_slim_blade(this_variant)
+mod.fixes_owo_slim_blade(this_variant, "body", "grip")
 mod.fixes_owo_crossguard(this_variant)
 
 -- #################
