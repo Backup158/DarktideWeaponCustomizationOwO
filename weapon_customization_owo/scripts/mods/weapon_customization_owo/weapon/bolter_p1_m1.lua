@@ -78,6 +78,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
 -- ############################################
 mod.owo_california_bolter(this_variant, "receiver")
 
+if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_muzzle_brake(this_variant)
 

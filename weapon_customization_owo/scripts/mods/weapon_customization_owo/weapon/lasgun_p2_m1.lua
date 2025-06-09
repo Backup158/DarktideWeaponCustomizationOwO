@@ -236,6 +236,7 @@ mod.mt.inject_fixes(this_variant, {
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
+if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)

@@ -66,6 +66,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
 -- ############################################
 mod.owo_bistol_shotgun_barrel_short(this_variant)
 
+mod.owo_invisible_muzzle(this_variant)
 mod.owo_suppressor(this_variant, "muzzle")
 mod.owo_muzzle_brake(this_variant)
 

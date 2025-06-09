@@ -75,6 +75,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_magazine_flat(this_variant)
+
+if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant)
 mod.owo_condom(this_variant)
 mod.owo_muzzle_brake(this_variant)

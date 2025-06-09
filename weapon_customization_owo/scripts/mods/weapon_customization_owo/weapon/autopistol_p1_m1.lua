@@ -52,6 +52,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant)
 
 mod.owo_tactical_stock(this_variant)

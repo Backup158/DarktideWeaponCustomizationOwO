@@ -98,6 +98,7 @@ mod.owo_historical_bayonet(this_variant, "bayonet")
 mod.owo_underbarrel_gl(this_variant, "bayonet")
 mod.owo_underbarrel_shotgun(this_variant, "bayonet")
 
+if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant)
 mod.owo_condom(this_variant)
 mod.owo_muzzle_brake(this_variant)

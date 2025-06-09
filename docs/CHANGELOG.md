@@ -15,7 +15,13 @@ While refactoring, I had the chance to notice a few things I could fix.
 Why did I do this? Idk I thought it'd be funny :3c. Ok but really though, I just figured I might as well rename them while I'm here because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other two were just annoying (wow I'm an ass).
 
 Added:
-- Disk Crossguard
+- Disk Crossguard (WIP)
+    - I started refactoring in the middle of this so it's not done lmfao
+    - DClaw, PSword
+- Invisible Muzzles
+    - If Syn added it to a gun, I didn't (naive hard coding)
+    - >> Autoguns, Autopistol, Bolter, iLasguns, Helbores, Recons
+    - Bistol, Laspistol
 
 Fixed:
 - Fixes for Flat DClaw (G) Blades had a typo that prevented them from being applied

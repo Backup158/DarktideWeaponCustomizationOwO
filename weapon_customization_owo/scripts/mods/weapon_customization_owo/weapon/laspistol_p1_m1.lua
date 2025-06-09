@@ -54,7 +54,10 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
 -- ############################################
 mod.owo_grip_laser(this_variant, "flashlight")
 mod.owo_magazine_flat(this_variant)
+
+mod.owo_invisible_muzzle(this_variant)
 mod.owo_suppressor(this_variant, "muzzle")
+
 mod.owo_laspistol_grip_mag(this_variant)
 
 mod.owo_reticle_helper(this_variant)
