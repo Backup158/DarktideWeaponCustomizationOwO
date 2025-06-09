@@ -692,7 +692,7 @@ function mod.owo_invisible_connector(variant_id, given_type, given_parent)
 	})
 end
 
--- Hilt: Crossguards
+-- Crossguards
 function mod.owo_crossguard(variant_id, given_type, given_parent)
 	local current_type = given_type or "crossguard"
 	local current_parent = given_parent or "grip"

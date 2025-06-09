@@ -13,9 +13,37 @@ local this_variant = "combatsword_p1_m1" -- Catachan "Devil's Claw" Sword
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
--- WHY WONT THIS SHIT WOOOOOORK
---mod.wc.attachment[this_variant].hilt = {}
-mod.initialize_custom_slot_for_weapon(this_variant, "crossguard")
+--[[
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
+end
+
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+]]
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "crossguard",
+})
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -71,7 +99,7 @@ local _combat_sword_grips = "combat_sword_grip_01|combat_sword_grip_02|combat_sw
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
 mod.fixes_owo_slim_blade(this_variant, "body", "grip")
-mod.fixes_owo_crossguard(this_variant)
+mod.fixes_owo_crossguard(this_variant, "crossguard", "grip")
 
 -- #################
 -- Custom Fixes
