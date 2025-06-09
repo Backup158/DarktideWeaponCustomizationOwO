@@ -33,7 +33,7 @@ Fixed:
 - Fixes for Flat DClaw (G) Blades had a typo that prevented them from being applied
 
 Reworked:
-- Lasgun Condoms: Now the same structure as suppressors so compatibility is easier (on positioning and for bayonets)
+- Lasgun Condoms: Now the same structure as suppressors so making compatibility alignments is easier (and to not affect the scale of the slot's children, namely bayonets)
 - Helbore Plasma Mags: Helpers moved to using `owo_magac1` to avoid showing up in the "Magazine Accessories" slot dropdown, for users who use Syn's Edits (slot for the shotgun shell racks I think)
 
 Refactor: 
