@@ -561,6 +561,7 @@ end
 
 -- Muzzle: Invisible
 --	Not making this a generic function so I can specifically use a muzzle for this and not the others
+--	Syn added this to: autogun, autopistol, bolter, ilas, helbore, recon
 function mod.owo_invisible_muzzle(variant_id)
 	mod.inject_attachments_owo(variant_id, "muzzle", {
 		{id = "owo_muzzle_invisible", name = "OwO Invisible Muzzle"},
