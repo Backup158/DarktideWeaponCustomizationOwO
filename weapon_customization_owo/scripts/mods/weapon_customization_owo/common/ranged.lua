@@ -559,6 +559,20 @@ function mod.owo_grip_laser(variant_id, given_type)
 	})
 end
 
+-- Muzzle: Invisible
+--	Not making this a generic function so I can specifically use a muzzle for this and not the others
+function mod.owo_invisible_muzzle(variant_id)
+	mod.inject_attachments_owo(variant_id, "muzzle", {
+		{id = "owo_muzzle_invisible", name = "Invisible Muzzle"},
+	})
+	mod.inject_models(variant_id, {
+		owo_muzzle_invisible = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "muzzle", 
+			parent = "barrel", hide_mesh = {{"muzzle", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}},
+		},
+	})
+end
+
 -- Muzzle: Suppressor
 function mod.owo_suppressor(variant_id, given_type, given_parent)
 	local current_type = given_type or "muzzle"
