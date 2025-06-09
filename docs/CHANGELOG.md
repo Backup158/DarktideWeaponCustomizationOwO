@@ -24,8 +24,7 @@ Added:
     - DClaw, PSword
         - Dclaw just refuses to accept new slots. will be investigated (in 3 years)
 - Invisible Muzzles
-    - If Syn added it to a gun, I didn't (naive hard coding)
-    - >> Autoguns, Autopistol, Bolter, iLasguns, Helbores, Recons
+    - If Syn added it to a gun, I didn't (naively hard coded to affect: Autoguns, Autopistol, Bolter, iLasguns, Helbores, Recons)
     - Bistol, Laspistol
 
 Fixed:
