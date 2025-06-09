@@ -1272,7 +1272,7 @@ function mod.fixes_owo_slim_blade(variant_id, given_type, given_parent)
 		},
 		-- DClaw
 		--      Flat DClaw
-		{   dependencies =  { _owo_flag_dclaw_g_blades },
+		{   dependencies =  { _owo_flat_dclaw_g_blades },
 			[current_parent] =  { position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
 			[current_type] = { position = vector3_box(0, 0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 1, 1)},
 		},
