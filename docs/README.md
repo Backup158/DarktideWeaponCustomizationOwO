@@ -105,7 +105,7 @@ If your settings differ, that's probably causing the issue. From then on, you ha
 5) **My scope/bayonet is stealing the muzzle flash from my gun!**
    
 &emsp; Yeah :( I'll fix that eventually  \
-&emsp; Oh, and also make sure you aren't using a "No muzzle" option for the muzzle. You need to use "Invisible muzzle" for that (That's part of Syn's plugin. May add that myself for people who don't use that).
+&emsp; Oh, and also make sure you aren't using a "No muzzle" option for the muzzle. To have no muzzle but keep the shooting effects, you need to equip the "Invisible Muzzle" option.
 
 <a id="faq-6"></a>
 
