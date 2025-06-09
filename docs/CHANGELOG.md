@@ -18,6 +18,7 @@ Added:
 - Disk Crossguard (WIP)
     - I started refactoring in the middle of this so it's not done lmfao
     - DClaw, PSword
+        - Dclaw just refuses to accept new slots. will be investigated (in 3 years)
 - Invisible Muzzles
     - If Syn added it to a gun, I didn't (naive hard coding)
     - >> Autoguns, Autopistol, Bolter, iLasguns, Helbores, Recons
