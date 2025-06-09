@@ -1,4 +1,4 @@
-# 2025-06-05
+# 2025-06-08
 v2.0.0
 
 The primary goal of this refactor was to make development easier, mainly by making it easier to copy and paste things (and hopefully to do that less often in the future, enough to make up for the amount I had to do to implement this update lmfao). Unfortunately, this will come with "breaking" changes that require reequipping attachments. Your game will not crash, but it's gonna be annoying. That's enough for me to call it a breaking change, so I bumped the version up to 2.0.0.
