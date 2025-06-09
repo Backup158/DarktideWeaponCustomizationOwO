@@ -88,15 +88,15 @@ The list is hosted externally.  \
   <summary>Settings mismatch</summary>
   
 First of all, I aligned these sights under specific conditions:  \
-&emsp; ﻿I'm using the default FOV but have Weapon FOV set for arbitrary values per weapon >:3  \
-&emsp; ﻿I'm using the default reticle size in the EWC mod options  \
-&emsp; ﻿I'm using Constant FOV but allow changes from aiming  \
+&emsp; I'm using the default FOV but have Weapon FOV set for arbitrary values per weapon >:3  \
+&emsp; I'm using the default reticle size in the EWC mod options  \
+&emsp; I'm using Constant FOV but allow changes from aiming  \
 If your settings differ, that's probably causing the issue. From then on, you have two options
 
-1) ﻿﻿For non-physical reticles, remove the reticle and aim using the crosshair from Crosshair Remap. To remove the reticle, open the customization menu and equip one of the following:  \
-&emsp; ﻿﻿&emsp; ﻿﻿MT Helper scope (Clear)  \
-&emsp; ﻿﻿&emsp; ﻿﻿Invisible sight_2
-2) ﻿﻿Align the scope for yourself. I made a [little guide](https://backup158.github.io/Darktide_EWC_Edits.html#AligningSights) for this.
+1) For non-physical reticles, remove the reticle and aim using the crosshair from Crosshair Remap. To remove the reticle, open the customization menu and equip one of the following:  \
+&emsp; &emsp; MT Helper scope (Clear)  \
+&emsp; &emsp; Invisible sight_2
+2) Align the scope for yourself. I made a [little guide](https://backup158.github.io/Darktide_EWC_Edits.html#AligningSights) for this.
 ##
 </details>
 
