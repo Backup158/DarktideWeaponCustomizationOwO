@@ -37,16 +37,16 @@ Reworked:
 
 Refactor: 
 - Made functions to simplify creating custom slots on the developer side
-    - `create_default_attachment`: Creates an empty attachment for the given slot ("owo_<slot_name>_default")
+    - `create_default_attachment`: Creates an empty attachment for the given slot (`owo_<slot_name>_default`)
     - `initialize_custom_slot_for_weapon`: Automatically creates empty table for the slot, then create a default attachment so hiding unused parts has a consistent part to rely on 
-        - Removed now-redundant shotgun foregrip and sight_2 part initialization
+        - Removed now-redundant shotgun `foregrip` and `sight_2` part initialization
         - Removed `owo_empty_foregrip()`
-        - Adapted the "hide parts fixes" to use these new defaults"
+        - Adapted the "hide parts fixes" to use these new defaults
         - Removed now-redundant default parts from each attachment creation function
     - `initialize_table_of_custom_slot_for_weapon`: Batch execution `initialize_custom_slot_for_weapon` over all names in the given table, so I don't have to copy paste so much at the top of each weapon file. Because this creates an extra table for each weapon, there is some additional overhead. It was not noticeable to me, so I'm willing to take it in exchange for the ease of development
     - `create_custom_slot`: Creates a new (visible, selectable) slot, then make the localization for it (which is provided when called, so it's easier for translators)
-    - All weapons have been migrated to this new system.
-    - `hide_slot`: Fills out the hide_mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao), although this might be irrelevant since I'm autoequipping an empty mesh. 
+        - All weapons have been migrated to this new system.
+    - `hide_slot`: Fills out the hide mesh and auto equip for helper attachments. Needs to be fed the dependencies. Also takes the helper and sends it into fucking space so it won't hog up space when using modding_tools (yes this is a stupid solution but eat my ass lmao), although this might be irrelevant since I'm autoequipping an empty mesh. 
 - Remembered how key-value pairs worked in tables (applied this to generic fixes functions to make use of given_type). Accessing and injecting by `["key"]` instead of `[key]`
 - Modularized type identity (logic fix for the 'or type')
     - When assigning a value (`=`) and using `a or b`, if `a` is valid, Lua will automatically use its value (short circuiting) to avoid extra calculations
