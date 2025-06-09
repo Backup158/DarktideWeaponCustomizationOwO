@@ -18,6 +18,8 @@ While refactoring, I had the chance to notice a few things I could fix.
 
 Why did I do this? Idk I thought it'd be funny :3c. Ok but really though, I just figured I might as well rename them while I'm here because it's been bugging me for months. `rear_sight_ak` made it harder to mass replace. The other was just annoying (wow I'm an ass).
 
+**Other Changes**: 
+
 Added:
 - Disk Crossguard (WIP)
     - I started refactoring in the middle of this so it's not done lmfao
@@ -91,6 +93,7 @@ Refactor:
             - Helbore Plasma Magazines
             - Jungle Magazines
             - Magpul Magazines
+- Removed Discord Release Mode requirement for reloading fixes
 
 # 2025-05-18
 v1.8.1
