@@ -864,9 +864,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Main Sight body
     --      Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-    {   dependencies =  { _owo_no_magnifier_eotech_sights,
-            _owo_sight_2s,
-        },
+    {   dependencies =  { _owo_no_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =  { _owo_no_magnifier_eotech_sights },
@@ -875,9 +873,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
-    {   dependencies =      { _owo_magnifier_eotech_sights,
-            _owo_sight_2s,
-        },
+    {   dependencies =      { _owo_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =      { _owo_magnifier_eotech_sights },

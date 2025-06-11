@@ -3618,7 +3618,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_01_01 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
@@ -3630,7 +3630,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_01_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type,
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3643,7 +3643,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_01_02_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type,
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3656,7 +3656,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_01_03 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3670,7 +3670,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_01_01ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3684,7 +3684,7 @@ function mod.owo_holosight(variant_id, given_type)
 			--model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3697,7 +3697,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_01_02ss_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3710,7 +3710,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_01_03ss = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3724,7 +3724,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_02_01 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
@@ -3736,7 +3736,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_02_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3749,7 +3749,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_02_02_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3762,7 +3762,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_02_03 = {
 			model =  _item_melee.."/pommels/axe_pommel_01", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3775,7 +3775,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_02_01ss = {
 			model =  _item_melee.."/pommels/axe_pommel_01", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
@@ -3787,7 +3787,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_02_02ss_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3800,7 +3800,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_02_02ss_z2 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
@@ -3813,7 +3813,7 @@ function mod.owo_holosight(variant_id, given_type)
 		owo_holosight_02_03ss = {
 			model = _item_melee.."/pommels/axe_pommel_01", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
@@ -3856,6 +3856,11 @@ function mod.owo_holosight(variant_id, given_type)
 			mesh_move = false, parent = current_type
 		},
 	})
+end
+function mod.fixes_owo_holosight(variant_id, given_type)
+	local current_type = given_type or "sight"
+
+	
 end
 
 -- Sight: Telescopic Sights
