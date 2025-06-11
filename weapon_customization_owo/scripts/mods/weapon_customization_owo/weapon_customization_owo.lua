@@ -72,14 +72,14 @@ function mod.on_all_mods_loaded()
 	local debug = mod:get("debug_mode")
 	local discord = mod:get("discord_mode")
 
-	if discord then
-		-- Reload Callback
-		--	Reinject fixes
-		mod.wc.register_definition_callback(function()
-			mod.load_mod_file("files_to_load")
-			mod:info("weapon attachment wewoad :3")
-		end)
-	end
+	
+	-- Reload Callback
+	--	Reinject fixes
+	mod.wc.register_definition_callback(function()
+		mod.load_mod_file("files_to_load")
+		mod:info("weapon attachment wewoad :3")
+	end)
+	
 
 	-- Renamed because initially I was worried about collisions
 	-- 		Not an actual issue since methods are called with the class name, like class.method
