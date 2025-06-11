@@ -314,14 +314,15 @@ mod.mt.table_append(mod.wc.sights, {
 	"owo_susat_02_z1",
 })
 mod.mt.table_append(mod.wc.scopes, {
-	"axe_pommel_01",
+	--"axe_pommel_01",
 	"axe_pommel_02",
 	"axe_pommel_03",
 	"axe_pommel_04",
 	"axe_pommel_05",
 	"axe_pommel_06",
 })
-mod.wc.sniper_zoom_levels.axe_pommel_01 = 50	-- Literally no zoom, same as hipfire.
+--mod.wc.sniper_zoom_levels.axe_pommel_01 = 50	-- Literally no zoom, same as hipfire.
+	-- Reserving pommel_01 for alignment
 mod.wc.sniper_zoom_levels.axe_pommel_02 = 40 	-- 1x, this is around default
 mod.wc.sniper_zoom_levels.axe_pommel_03 = 33 	-- 1.25x
 mod.wc.sniper_zoom_levels.axe_pommel_04 = 27 	-- 1.5x
@@ -3759,7 +3760,7 @@ function mod.owo_holosight(variant_id, given_type)
 			},
 		},
 		owo_holosight_02_03 = {
-			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
+			model =  _item_melee.."/pommels/axe_pommel_01", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
@@ -3768,11 +3769,11 @@ function mod.owo_holosight(variant_id, given_type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{current_type, 1}
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
 		owo_holosight_02_01ss = {
-			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
+			model =  _item_melee.."/pommels/axe_pommel_01", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
@@ -3780,7 +3781,7 @@ function mod.owo_holosight(variant_id, given_type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{current_type, 1}
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
 		owo_holosight_02_02ss_z1 = {
@@ -3810,7 +3811,7 @@ function mod.owo_holosight(variant_id, given_type)
 			},
 		},
 		owo_holosight_02_03ss = {
-			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, 
+			model = _item_melee.."/pommels/axe_pommel_01", type = current_type, 
 			mesh_move = false, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_default",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
@@ -3818,7 +3819,7 @@ function mod.owo_holosight(variant_id, given_type)
 				sight_2 = "reflex_scopehelper_01",
 			},
 			hide_mesh = {
-				{current_type, 1}
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 			},
 		},
 		-- ### Helper Parts ###
