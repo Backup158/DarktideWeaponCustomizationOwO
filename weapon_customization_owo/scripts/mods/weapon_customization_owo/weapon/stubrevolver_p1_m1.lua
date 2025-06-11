@@ -170,7 +170,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  Sight Helpers
     {   dependencies =  { _owo_all_eotech_sights },
-        rail =          { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.85, 0.8), automatic_equip = { rail = "rail_01"}, },
+        rail =          { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.85, 0.8), },
 
         sightac3 =      { offset = true, position = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154),},
         sightac4 =      { offset = true, position = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314),},
@@ -245,7 +245,7 @@ mod.mt.inject_fixes(this_variant, {
         sightac2 =      { offset = true, position = vector3_box(0.00, -0.018, 0.004), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
         sightac3 =      { offset = true, position = vector3_box(0, -0.032, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.05, 0.666, 0.884) },
         sightac4 =      { offset = true, position = vector3_box(0, -0.002, 0.002), rotation = vector3_box(90, -90, 180), scale = vector3_box(0.98, 0.24, 0.16) },
-        rail =          { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.66, 0.8), automatic_equip = { rail = "rail_01"}, },
+        rail =          { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.66, 0.8), },
     },
     --  Magnifier
     --      Aligned

@@ -667,6 +667,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { _owo_all_eotech_sights },
         sightac3 =          { offset = true, position = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =          { offset = true, position = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
+        rail =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
     },
     {   dependencies =      { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03" },
         sightac1 =          { offset = true, position = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
@@ -700,7 +701,7 @@ mod.mt.inject_fixes(this_variant, {
         sight =             { offset = true, position = vector3_box(0, 0.11, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
     },
     --          Else, Recon Receiver
-    {   dependencies =      { _owo_magnifier_eotech_sights,  },
+    {   dependencies =      { _owo_magnifier_eotech_sights, },
         sight =             { offset = true, position = vector3_box(0, 0.16, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
     },
     -- Magnifier Alignment
@@ -738,7 +739,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Magnifier moves sight forwards
     {   dependencies =  { _owo_magnifier_vortex_sights, _syn_volleygun_receivers },
-        rail =          { automatic_equip = { rail = "rail_01"}, offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
+        rail =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
         sight =         { offset = false, parent = "rail", position = vector3_box(0, 0.12, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =         { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
@@ -754,12 +755,12 @@ mod.mt.inject_fixes(this_variant, {
     --},
     --  Default Case
     {   dependencies =  { _owo_all_vortex_sights, _syn_volleygun_receivers },
-        rail =          { automatic_equip = { rail = "rail_01"}, offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
+        rail =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
         sight =         { offset = false, parent = "rail", position = vector3_box(0, 0.03, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
     },
     {   dependencies =  { _owo_all_vortex_sights },
-        rail =          { automatic_equip = { rail = "rail_01"}, offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
+        rail =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
         sight =         { offset = true, position = vector3_box(0, 0.052, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
         sightac1 =      { offset = true, position = vector3_box(-0.002, -0.018, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.292) },
@@ -850,7 +851,7 @@ mod.mt.inject_fixes(this_variant, {
     },
 	{   dependencies =  { _owo_forwards_acog_sights, _syn_volleygun_receivers, },
         sight =         { offset = true, position = vector3_box(0, 0.108, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), automatic_equip = { rail = "rail_01"}, },
+        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
         lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.132, 0.1865), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, 0.006, 0.1850), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =       { offset = false, position = vector3_box(0, 0.05, 0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -862,7 +863,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =  { _owo_backwards_acog_sights, _syn_volleygun_receivers, },
         sight =         { offset = true, position = vector3_box(0, 0.046, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), automatic_equip = { rail = "rail_01"}, },
+        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
         lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.064, 0.1865), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, -0.052, 0.1850), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =       { offset = false, position = vector3_box(0, -0.05, 0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -891,7 +892,7 @@ mod.mt.inject_fixes(this_variant, {
     --      Syn's Hellgun Receivers
     {   dependencies =  { _owo_all_susat_sights, _syn_volleygun_receivers, },
         sight =         { offset = true, position = vector3_box(0, 0.006, 0.175), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), automatic_equip = { rail = "rail_01"}, },
+        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
     },
     --      Else: Recon Receivers
     --      And default helpers
