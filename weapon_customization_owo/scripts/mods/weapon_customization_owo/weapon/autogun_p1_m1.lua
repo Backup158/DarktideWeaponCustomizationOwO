@@ -200,7 +200,8 @@ local _syn_gauss_barrels = "syn_gk8gauss_barrel_01|syn_gk8gauss_barrel_02"
 -- ########
 -- For This Variant Only
 -- ########
-local _infantry_autogun_receivers = "receiver_01|receiver_10"
+-- meshauto_01 is mt custom
+local _infantry_autogun_receivers = "receiver_01|receiver_10|meshauto_01"
 local _braced_autogun_receivers = "receiver_03|receiver_06|receiver_07|receiver_08"
 local _vigilant_autogun_receivers = "receiver_02|receiver_04|receiver_05|receiver_09|receiver_11"
 
@@ -297,7 +298,7 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Receiver: BOLT ACTION HELBORE
 	-- ######
-	{	dependencies =  { "owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05"},
+	{	dependencies =  { "owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05" },
 		receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 		receiverac1 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
 		receiverac2 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
@@ -305,10 +306,10 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Receiver: HELBORE MAS-49
 	-- ######
-	{	dependencies =  { "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05"},
+	{	dependencies =  { "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05" },
         receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
-    {	dependencies =  { "owo_helbore_mas49_01_s"},
+    {	dependencies =  { "owo_helbore_mas49_01_s" },
         receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.69, 1, 1 ) },
     },
     {	dependencies =  { "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"},
@@ -326,10 +327,10 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Magazine: FLAT
 	-- ######
-	{	dependencies =  { "owo_lasgun_magazine_flat_01"},
+	{	dependencies =  { "owo_lasgun_magazine_flat_01" },
 		magazine =      { offset = true, scale = vector3_box(1, 1, 0.5 ) },
 	},
-	{	dependencies =  { "owo_autogun_magazine_flat_03"},
+	{	dependencies =  { "owo_autogun_magazine_flat_03" },
 		magazine =      { offset = true, scale = vector3_box(1, 1, 0.6 ) },
 	},
 
@@ -356,7 +357,7 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Iag
     --  meshauto_01 is the MT Autogun Custom
-    {   dependencies =  { "owo_dreg_barrel_01", _infantry_autogun_receivers.."|meshauto_01", },
+    {   dependencies =  { "owo_dreg_barrel_01", _infantry_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
         barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
     },
@@ -393,51 +394,51 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- skeletal shotgun
     {   dependencies =  { "owo_tactical_foregrip_01"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.605, -0.045),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.605, -0.045),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
     },
     -- skeletal shotgun (slant)
     {   dependencies =  { "owo_tactical_foregrip_02"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.545, -0.035),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.545, -0.035),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
     },
     -- skeletal brauto (slant)
     {   dependencies =  { "owo_tactical_foregrip_03"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.555, -0.02),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.555, -0.02),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
     },
     -- magpul afg triple threat
     {   dependencies =  { "owo_tactical_foregrip_04"},
-        foregrip = { offset = true,   position = vector3_box(-0.0, 0.34, 0.022),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
-        foregripac1 = { offset = true,   position = vector3_box(0.002, 0.415, -0.102),   rotation = vector3_box(0, 90, -40),    scale = vector3_box(0.5, 0.45, 0.2) },
-        foregripac2 = { offset = true,   position = vector3_box(-0.002, 0.415, -0.102),   rotation = vector3_box(-40, -90, 0),    scale = vector3_box(0.5, 0.45, 0.2) },
-        foregripac3 = { offset = true,   position = vector3_box(0, 0.47, -0.060),   rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.5, 0.45, 0.2) },
+        foregrip =      { offset = true,   position = vector3_box(-0.0, 0.34, 0.022),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
+        foregripac1 =   { offset = true,   position = vector3_box(0.002, 0.415, -0.102),   rotation = vector3_box(0, 90, -40),    scale = vector3_box(0.5, 0.45, 0.2) },
+        foregripac2 =   { offset = true,   position = vector3_box(-0.002, 0.415, -0.102),   rotation = vector3_box(-40, -90, 0),    scale = vector3_box(0.5, 0.45, 0.2) },
+        foregripac3 =   { offset = true,   position = vector3_box(0, 0.47, -0.060),   rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.5, 0.45, 0.2) },
     },
 
     -- ######
     -- Foregrip: HETEROSEXUAL FOREGRIP
     -- ######
     --  Ogryn handles
-    {   dependencies =  { "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
+    {   dependencies =  { "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08" },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
     },
     --  Dclaw
-    {   dependencies =  { "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
+    {   dependencies =  { "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14" },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
     },
     --  Knife
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    {   dependencies =  { "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06" },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
     {   dependencies =  { "owo_heterosexual_foregrip_knife_06_fat"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
     },
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
+    {   dependencies =  { "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s" },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
     },
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_06s_fat"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
+    {   dependencies =  { "owo_heterosexual_foregrip_knife_06s_fat" },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
     },
     --  Grip grips
-    {   dependencies =  { "owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29"},
-        foregrip = { offset = true,   position = vector3_box(0, 0.375, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
+    {   dependencies =  { "owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29" },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.375, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
 
     -- ######
@@ -458,9 +459,9 @@ mod.mt.inject_fixes(this_variant, {
     -- Grip: FIN GRIP
     -- ######
     {   dependencies =  { "owo_fin_grip_01" },
-        grip =   { offset = true,    position = vector3_box(0, 0, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+        grip =          { offset = true,    position = vector3_box(0, 0, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
         -- fin
-        gripac = { offset = true,    position = vector3_box(0, -0.0715, 0.0195), rotation = vector3_box(145, 0, 0),  scale = vector3_box(0.35, 0.35, 0.165) },
+        gripac =        { offset = true,    position = vector3_box(0, -0.0715, 0.0195), rotation = vector3_box(145, 0, 0),  scale = vector3_box(0.35, 0.35, 0.165) },
     },
 
     -- ######
@@ -746,98 +747,91 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Barrel: WOODEN HELBORE
 	-- ######
-	{	dependencies =  { "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03",
-        },
-        barrel = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        barrelshroud = { offset = true, position = vector3_box(0, 0.19, -0.001), rotation = vector3_box(90, 0, 180), scale = vector3_box(0.78, 0.6, 1.188 ) },
+	{	dependencies =  { "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03", },
+        barrel =        { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        barrelshroud =  { offset = true, position = vector3_box(0, 0.19, -0.001), rotation = vector3_box(90, 0, 180), scale = vector3_box(0.78, 0.6, 1.188 ) },
     },
     -- Regular Helbore bayonets (barrel parent)
-    {   dependencies =  { "owo_wood_krieg_01",
-            "autogun_bayonet_01|autogun_bayonet_02"
-        },
-        bayonet = { offset = true,   position = vector3_box(0, 0.504, -0.03),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    {   dependencies =  { "owo_wood_krieg_01", "autogun_bayonet_01|autogun_bayonet_02" },
+        bayonet =       { offset = true,   position = vector3_box(0, 0.504, -0.03),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
     -- 	these barrels are shorter
-    {   dependencies =  { "owo_wood_krieg_02|owo_wood_krieg_03",
-            "autogun_bayonet_01|autogun_bayonet_02"
-        },
-        bayonet = { offset = true,   position = vector3_box(0, 0.428, -0.04),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    {   dependencies =  { "owo_wood_krieg_02|owo_wood_krieg_03", "autogun_bayonet_01|autogun_bayonet_02" },
+        bayonet =       { offset = true,   position = vector3_box(0, 0.428, -0.04),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
 
     -- ######
 	-- Sight: M16 Sights
 	-- ######
-    {	dependencies =  { "owo_m16_sight_01|owo_m16_sight_02",
-            _vigilant_autogun_receivers,
-        },
+    {	dependencies =      { "owo_m16_sight_01|owo_m16_sight_02", _vigilant_autogun_receivers, },
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.00015, -0.0273), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { offset = true, position = vector3_box(0, -0.00015, -0.0273), rotation = vector3_box(0, 0, 0)},
-        sight =      { offset = true, position = vector3_box(0, -0.038, 0.024), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
-        sightac1 =    { offset = true, position = vector3_box(0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
-        sightac2 =    { offset = true, position = vector3_box(-0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
+        sight =             { offset = true, position = vector3_box(0, -0.038, 0.024), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
+        sightac1 =          { offset = true, position = vector3_box(0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
+        sightac2 =          { offset = true, position = vector3_box(-0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
     },
-    {	dependencies =  { "owo_m16_sight_01|owo_m16_sight_02"},
+    {	dependencies =      { "owo_m16_sight_01|owo_m16_sight_02" },
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.00015, -0.0223), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { offset = true, position = vector3_box(0, -0.00015, -0.0223), rotation = vector3_box(0, 0, 0)},
-        sight =      { offset = true, position = vector3_box(0, -0.038, 0.019), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
-        sightac1 =    { offset = true, position = vector3_box(0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
-        sightac2 =    { offset = true, position = vector3_box(-0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
+        sight =             { offset = true, position = vector3_box(0, -0.038, 0.019), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
+        sightac1 =          { offset = true, position = vector3_box(0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
+        sightac2 =          { offset = true, position = vector3_box(-0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
     },
     --  M16 Helpers
-	{	dependencies =  { "owo_m16_sight_01|owo_m16_sight_02"},
+	{	dependencies =  { "owo_m16_sight_01|owo_m16_sight_02" },
         -- Rear Sight Aperture. the peep hole then the 2 bases
-        sightac3 =    { offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
-        sightac4 =    { offset = true, position = vector3_box(0.001, 0.024, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
-        sightac5 =    { offset = true, position = vector3_box(-0.003, 0.024, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
+        sightac3 =      { offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
+        sightac4 =      { offset = true, position = vector3_box(0.001, 0.024, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
+        sightac5 =      { offset = true, position = vector3_box(-0.003, 0.024, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
         -- Windage Knob on the right side of the sight
-        sightac6 =    { offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
+        sightac6 =      { offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
         -- Rear Elevation Knob in the base, below the rear sight
-        sightac7 =    { offset = true, position = vector3_box(0, 0.012, 0.146), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
+        sightac7 =      { offset = true, position = vector3_box(0, 0.012, 0.146), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
     },
 
     -- ######
     -- Sight: Rear Sight
     -- ######
     -- AK
-    {	dependencies =  { "owo_kalashnikov_rear_sight_01"},
+    {	dependencies =      { "owo_kalashnikov_rear_sight_01"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.1, 0.007), rotation = vector3_box(0.5, 0, 0)},
-        sight =     { offset = true, position = vector3_box(0, 0.24, -0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
-        sightac5 = { offset = true, position = vector3_box(0.008, -0.01, 0.005), rotation = vector3_box(-145, 90, 145), scale = vector3_box(0.23, 0.24, 0.25 ) },
+        sight =             { offset = true, position = vector3_box(0, 0.24, -0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+        sightac5 =          { offset = true, position = vector3_box(0.008, -0.01, 0.005), rotation = vector3_box(-145, 90, 145), scale = vector3_box(0.23, 0.24, 0.25 ) },
     },
-    {	dependencies =  { "owo_kalashnikov_rear_sight_02"},
+    {	dependencies =      { "owo_kalashnikov_rear_sight_02"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.15, 0.002), rotation = vector3_box(0.9, 0, 0)},
-        sight =     { offset = true, position = vector3_box(0, 0.24, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
-        sightac5 = { offset = true, position = vector3_box(0.008, -0.01, 0.003), rotation = vector3_box(-145, 90, 145), scale = vector3_box(0.23, 0.24, 0.25 ) },
-        sightac6 =     { offset = true, position = vector3_box(0.0, 0.0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 1.4, 1.0 ) },
+        sight =             { offset = true, position = vector3_box(0, 0.24, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+        sightac5 =          { offset = true, position = vector3_box(0.008, -0.01, 0.003), rotation = vector3_box(-145, 90, 145), scale = vector3_box(0.23, 0.24, 0.25 ) },
+        sightac6 =          { offset = true, position = vector3_box(0.0, 0.0, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 1.4, 1.0 ) },
     },
-    {	dependencies =  { "owo_kalashnikov_rear_sight_01|owo_kalashnikov_rear_sight_02"},
-        sightac1 = { offset = true, position = vector3_box(-0.004, -0.06, 0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.36, 0.36, 0.25 ) },
-        sightac2 = { offset = true, position = vector3_box(0.022, -0.06, 0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.32, 0.32, 0.06 ) },
-        sightac3 = { offset = true, position = vector3_box(0.009, -0.07, 0.0226), rotation = vector3_box(90, 90, 0), scale = vector3_box(0.23, 0.047, 0.22 ) },
-        sightac4 = { offset = true, position = vector3_box(-0.009, -0.07, 0.0226), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.23, 0.047, 0.22 ) },
+    {	dependencies =      { "owo_kalashnikov_rear_sight_01|owo_kalashnikov_rear_sight_02"},
+        sightac1 =          { offset = true, position = vector3_box(-0.004, -0.06, 0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.36, 0.36, 0.25 ) },
+        sightac2 =          { offset = true, position = vector3_box(0.022, -0.06, 0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.32, 0.32, 0.06 ) },
+        sightac3 =          { offset = true, position = vector3_box(0.009, -0.07, 0.0226), rotation = vector3_box(90, 90, 0), scale = vector3_box(0.23, 0.047, 0.22 ) },
+        sightac4 =          { offset = true, position = vector3_box(-0.009, -0.07, 0.0226), rotation = vector3_box(90, -90, 0), scale = vector3_box(0.23, 0.047, 0.22 ) },
     },
     --   Scuffed
     --      0.5 degree up to align with brauto front post
     --      Pushed forwards to hide stock
-    {	dependencies =  { "owo_kalashnikov_rear_sight_03"},
+    {	dependencies =      { "owo_kalashnikov_rear_sight_03"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.1, 0.007), rotation = vector3_box(0.5, 0, 0)},
-        sight =     { offset = true, position = vector3_box(0, 0.19, 0.119), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
+        sight =             { offset = true, position = vector3_box(0, 0.19, 0.119), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
     },
     --      pushed even more forwards to hide receiver not covered by dust cover (aka the part that gets molested by dust)
-    {	dependencies =  { "owo_kalashnikov_rear_sight_04"},
+    {	dependencies =      { "owo_kalashnikov_rear_sight_04"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.15, 0.002), rotation = vector3_box(0.9, 0, 0)},
-        sight =     { offset = true, position = vector3_box(0, 0.19, 0.125), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
+        sight =             { offset = true, position = vector3_box(0, 0.19, 0.125), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.23, 0.5, 0.1 ) },
     },
     {	dependencies =  { "owo_kalashnikov_rear_sight_03|owo_kalashnikov_rear_sight_04"},
-        sightac1 = { offset = true, position = vector3_box(0, 0.034, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.38, 4.18 ) },
+        sightac1 =      { offset = true, position = vector3_box(0, 0.034, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.38, 4.18 ) },
         --sightac2 = { offset = true, position = vector3_box(-0.008, -0.044, 0.016), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.8, 0.38, 4.18 ) },
-        sightac2 = { offset = true, position = vector3_box(0, 0.034, -0.004), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.36, 0.73, 3.48 ) },
-        sightac3 = { offset = true, position = vector3_box(-0.05, -0.034, 0.054), rotation = vector3_box(0, 0, 90), scale = vector3_box(0.55, 0.27, 1.34 ) },
-        sightac4 = { offset = true, position = vector3_box(-0.05, -0.034, -0.062), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.55, 0.27, 1.34 ) },
-        sightac5 = { offset = true, position = vector3_box(-0.008, 0.012, -0.068), rotation = vector3_box(180, 0, 180), scale = vector3_box(1.04, 0.254, 1.62 ) },
+        sightac2 =      { offset = true, position = vector3_box(0, 0.034, -0.004), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.36, 0.73, 3.48 ) },
+        sightac3 =      { offset = true, position = vector3_box(-0.05, -0.034, 0.054), rotation = vector3_box(0, 0, 90), scale = vector3_box(0.55, 0.27, 1.34 ) },
+        sightac4 =      { offset = true, position = vector3_box(-0.05, -0.034, -0.062), rotation = vector3_box(180, 0, 90), scale = vector3_box(0.55, 0.27, 1.34 ) },
+        sightac5 =      { offset = true, position = vector3_box(-0.008, 0.012, -0.068), rotation = vector3_box(180, 0, 180), scale = vector3_box(1.04, 0.254, 1.62 ) },
     },
     {	dependencies =  { "owo_kalashnikov_rear_sight_04"},
-        sightac6 =     { offset = true, position = vector3_box(0.126, 0.126, 0.0), rotation = vector3_box(-180, -90, -180), scale = vector3_box(8.23, 2.8, 3.92 ) },
+        sightac6 =      { offset = true, position = vector3_box(0.126, 0.126, 0.0), rotation = vector3_box(-180, -90, -180), scale = vector3_box(8.23, 2.8, 3.92 ) },
     },
 
     -- ######
@@ -850,7 +844,6 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { _owo_all_eotech_sights },
         sightac3 =      { offset = true, position = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
         sightac4 =      { offset = true, position = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
-        
         rail =          { offset = true, position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
     },
     {   dependencies =  { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03" },
