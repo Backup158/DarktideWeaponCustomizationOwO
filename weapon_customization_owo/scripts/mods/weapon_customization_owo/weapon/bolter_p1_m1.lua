@@ -204,6 +204,8 @@ mod.mt.inject_fixes(this_variant, {
 mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 
+mod.fixes_owo_holosight(this_variant)
+
 -- #################
 -- Custom Fixes
 -- #################
@@ -367,48 +369,24 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  EOTech
     --  -------------------------------------------
-    {   dependencies =  { _owo_all_eotech_sights },
-        sightac3 =      { offset = true, position = vector3_box(0, 0.088, 0.01), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.1, 0.57, 0.154) },
-        sightac4 =      { offset = true, position = vector3_box(0, 0.034, 0.008), rotation = vector3_box(90, 0, -180), scale = vector3_box(0.42, 0.24, 0.314) },
-        rail =          { offset = true, position = vector3_box(0, 0.036, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.1, 0.8), },
-    },
-    {   dependencies =  { "owo_holosight_01_01|owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_03" },
-        sightac1 =      { offset = true, position = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
-        sightac2 =      { offset = true, position = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
-    },
-    --  Short Variant
-    {   dependencies =  { _owo_short_eotech_sights },
-        sightac1 =      { offset = true, position = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.366, 0.256) },
-        sightac2 =      { offset = true, position = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.366, 0.256) },
-    },
     {   dependencies =  { _owo_no_magnifier_eotech_sights, _owo_sight_2s, },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+        sight_2 =       { parent = "sight", position = vector3_box(0, 0.062, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =  { _owo_no_magnifier_eotech_sights, },
-        sight =         { offset = true, parent = "rail", position = vector3_box(0, 0, 0.16), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+    rail =              { offset = true, position = vector3_box(0, 0.062, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+        sight =         { offset = false, parent = "rail", position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     {   dependencies =  { _owo_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-     },
-    {   dependencies =          { _owo_magnifier_eotech_sights, },
+    },
+    {   dependencies =      { _owo_magnifier_eotech_sights, },
+        rail =              { offset = true, position = vector3_box(0, 0.062, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
         --sight =             { offset = true, position = vector3_box(0, 0.05, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight =                 { offset = true, position = vector3_box(0, 0.13, 0.16), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_2 =               { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
-        sight_secondary =       { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-    },
-    {   dependencies =          { _owo_magnifier_aligned_eotech_sights },
-        sight_secondary_ac1 =   { offset = true, position = vector3_box(0, -0.154, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        sight_secondary_ac2 =   { offset = true, position = vector3_box(0, -0.0162, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        lens =                  { offset = false, parent = "sight", position = vector3_box(0, -0.048, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
-	    lens_2 =                { offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
-    },
-    {   dependencies =          { _owo_magnifier_side_eotech_sights },
-        sight_secondary_ac1 =   { offset = true, position = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        sight_secondary_ac2 =   { offset = true, position = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        lens =                  { offset = false, parent = "sight", position = vector3_box(0.042, -0.048, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
-	    lens_2 =                { offset = false, parent = "sight", position = vector3_box(0.042, -0.12, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
+        sight =             { offset = false, parent = "rail", position = vector3_box(0, 0.13, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
+        sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
     --  -------------------------------------------
     --  Vortex Razor
@@ -417,44 +395,21 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { _owo_all_vortex_sights, _owo_sight_2s, },
         sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    --  Short Variant
-    {   dependencies =  { "owo_holosight_02_01ss|owo_holosight_02_02ss_z1|owo_holosight_02_02ss_z2|owo_holosight_02_03ss" },
-        sightac1 =      { offset = true, position = vector3_box(-0.002, -0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.4, 0.292) },
-        sightac2 =      { offset = true, position = vector3_box(0.00, -0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.4, 0.286) },
-    },
     --  Magnifier moves sight forwards
     {   dependencies =  { _owo_magnifier_aligned_vortex_sights },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.001), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
     },
     {   dependencies =  { _owo_magnifier_vortex_sights },
-        sight =         { offset = true, position = vector3_box(0, 0.11, 0.17), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =          { offset = true, position = vector3_box(0, 0.062, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+        sight =         { offset = false, parent = "rail", position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.005), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =         { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
     {   dependencies =  { _owo_all_vortex_sights },
-        sight =         { offset = true, position = vector3_box(0, 0.05, 0.17), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    rail =              { offset = true, position = vector3_box(0, 0.062, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+        sight =         { offset = false, parent = "rail", position = vector3_box(0, 0.05, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.005), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-        sightac1 =      { offset = true, position = vector3_box(-0.002, -0.018, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.292) },
-        sightac2 =      { offset = true, position = vector3_box(0.00, -0.018, 0.004), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
-        sightac3 =      { offset = true, position = vector3_box(0, -0.032, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.05, 0.666, 0.884) },
-        sightac4 =      { offset = true, position = vector3_box(0, -0.002, 0.002), rotation = vector3_box(90, -90, 180), scale = vector3_box(0.98, 0.24, 0.16) },
-        rail =          { offset = true, position = vector3_box(0, 0.036, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.1, 0.8), },
     },
-    --  Magnifier
-    --      Aligned
-    {   dependencies =          { _owo_magnifier_aligned_vortex_sights },
-        sight_secondary_ac1 =   { offset = true, position = vector3_box(0, -0.194, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        sight_secondary_ac2 =   { offset = true, position = vector3_box(0, -0.0562, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        lens =                  { offset = false, parent = "sight", position = vector3_box(0, -0.088, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 1}},
-	    lens_2 =                { offset = false, parent = "sight", position = vector3_box(0, -0.16, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 2}},
-	},
-	--		Side
-    {   dependencies =          { _owo_magnifier_side_vortex_sights },
-        sight_secondary_ac1 =   { offset = true, position = vector3_box(0.042, -0.194, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        sight_secondary_ac2 =   { offset = true, position = vector3_box(0.042, -0.0562, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
-        lens =                  { offset = false, parent = "sight", position = vector3_box(0.042, -0.088, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 1}},
-	    lens_2 =                { offset = false, parent = "sight", position = vector3_box(0.042, -0.16, 0.01), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 2}},
-	},
     --  -------------------------------------------
     --  Aligning sights to crosshair
     --  -------------------------------------------
