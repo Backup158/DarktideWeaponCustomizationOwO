@@ -1,3 +1,14 @@
+# 2025-06-
+v2.0.1
+
+I started repatching things broken by the refactor, and I took the opportunity to adjust some parts I've been meaning to do for ages.
+
+- Realigned (physically) Holographic Sights
+    - Autoguns, Bolters, Bistols, iLas, Helbores, Recons, CShotguns, Revolvers
+    - Probably unaligned the crosshair parts. I'll get back to that later lol
+- Added rails to holosights
+    - Recons (syn_volleygun receivers)
+
 # 2025-06-08
 v2.0.0
 
