@@ -735,7 +735,7 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
     },
     {   dependencies =  { _owo_all_vortex_sights },
-        rail =          { hide_mesh = {"rail", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }, },
+        rail =          { automatic_equip = { rail, "rail_default"}, },
         sight =         { offset = true, position = vector3_box(0, 0.052, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
     },
