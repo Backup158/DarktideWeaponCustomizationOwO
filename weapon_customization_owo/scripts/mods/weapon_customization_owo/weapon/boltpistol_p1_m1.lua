@@ -73,7 +73,7 @@ mod.owo_muzzle_brake(this_variant)
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
-mod.owo_holosight(this_variant, "sight")
+mod.owo_holosight(this_variant, "sight", "receiver")
 mod.owo_telescopic_sight(this_variant, "sight")
 
 mod.owo_tactical_stock(this_variant, "stock")
@@ -83,14 +83,18 @@ mod.owo_tactical_stock(this_variant, "stock")
 -- ############################################
 local _owo_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06|owo_reticle_helper_invisible"
 local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
+local _owo_no_zoom_no_magnifier_eotech_sights = _owo_no_magnifier_eotech_sights
 local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
 local _owo_magnifier_side_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
+local _owo_no_zoom_yes_magnifier_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
 local _owo_magnifier_eotech_sights = _owo_magnifier_aligned_eotech_sights.."|".._owo_magnifier_side_eotech_sights
 local _owo_short_eotech_sights = "owo_holosight_01_01ss|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2|owo_holosight_01_03ss"
 local _owo_all_eotech_sights = _owo_no_magnifier_eotech_sights.."|".._owo_magnifier_eotech_sights
 local _owo_no_magnifier_vortex_sights = "owo_holosight_02_01|owo_holosight_02_01ss"
+local _owo_no_zoom_no_magnifier_vortex_sights = _owo_no_magnifier_vortex_sights
 local _owo_magnifier_aligned_vortex_sights = "owo_holosight_02_02_z1|owo_holosight_02_02_z2|owo_holosight_02_02ss_z1|owo_holosight_02_02ss_z2"
 local _owo_magnifier_side_vortex_sights = "owo_holosight_02_03|owo_holosight_02_03ss"
+local _owo_no_zoom_yes_magnifier_vortex_sights = "owo_holosight_02_03|owo_holosight_02_03ss"
 local _owo_magnifier_vortex_sights = _owo_magnifier_aligned_vortex_sights.."|".._owo_magnifier_side_vortex_sights
 local _owo_all_vortex_sights = _owo_no_magnifier_vortex_sights.."|".._owo_magnifier_vortex_sights
 local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
