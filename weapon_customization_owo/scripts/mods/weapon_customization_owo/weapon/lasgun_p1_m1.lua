@@ -642,12 +642,12 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Magnifier moves sight forwards
     {   dependencies =  { _owo_magnifier_vortex_sights },
-        sight =         { offset = true, position = vector3_box(0, 0.12, 0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =         { offset = true, position = vector3_box(0, 0.12, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =         { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
     {   dependencies =  { _owo_all_vortex_sights },
-        sight =         { offset = true, position = vector3_box(0, 0.034, 0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =         { offset = true, position = vector3_box(0, 0.034, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
     },
     --  -------------------------------------------

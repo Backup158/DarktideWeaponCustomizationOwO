@@ -244,7 +244,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { _owo_magnifier_eotech_sights, },
         rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1), },
         --sight =             { offset = true, position = vector3_box(0, 0.05, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight =             { offset = true position = vector3_box(0, 0.06, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.429, 1.3) },
+        sight =             { offset = true, position = vector3_box(0, 0.06, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.429, 1.3) },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
@@ -258,7 +258,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Magnifier moves sight forwards
     {   dependencies =      { _owo_magnifier_vortex_sights },
         rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1), },
-        sight =             { offset = true,  position = vector3_box(0, 0.09, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.429, 1) },
+        sight =             { offset = true, position = vector3_box(0, 0.09, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.429, 1) },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
