@@ -301,13 +301,13 @@ mod.mt.inject_fixes(this_variant, {
     --      Sight and Sight 2 Adjustment
     --          For whatever fucking reason, the recon body won't apply position transformations to sight_2
     {   dependencies =  { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top" },
-        sight =         { offset = true, position = vector3_box(0, 0.02, 0.128), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =         { offset = true, position = vector3_box(0, 0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         lens =          { offset = true, parent = "sight", position = vector3_box(0, 0.072, 0.0325), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =        { offset = true, parent = "sight", position = vector3_box(0, -0.053, 0.0355), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =       { offset = true, position = vector3_box(0, 0.0, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     {   dependencies =  { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
-        sight =         { offset = true, position = vector3_box(0, 0.07, 0.128), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =         { offset = true, position = vector3_box(0, 0.07, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         lens =          { offset = true, parent = "sight", position = vector3_box(0, 0.122, 0.0325), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =        { offset = true, parent = "sight", position = vector3_box(0, -0.003, 0.0355), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =       { offset = true, position = vector3_box(0, 0.0, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -333,7 +333,7 @@ mod.mt.inject_fixes(this_variant, {
     --  SUSAT
     --  -------------------------------------------
     {   dependencies =  { "owo_susat_01|owo_susat_01_ps|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
-        sight =         { offset = true, position = vector3_box(0, -0.03, 0.16), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =         { offset = true, position = vector3_box(0, -0.03, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- Cylinder thing
         sightac1 =      { offset = true, position = vector3_box(0, -0.115, 0.147), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 2.47, 2.14) },
         -- Rear
