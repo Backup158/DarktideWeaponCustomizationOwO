@@ -3,11 +3,19 @@ v2.0.1
 
 I started repatching things broken by the refactor, and I took the opportunity to adjust some parts I've been meaning to do for ages.
 
+Which also led to me finding out that this also unaligned the Telescopic Sights (ACOG/SUSAT).
+
+Haha.
+
+Ha...
+
+- Refactored Holographic Sights to allow different parents
 - Realigned (physically) Holographic Sights
     - Autoguns, Bolters, Bistols, iLas, Helbores, Recons, CShotguns, Revolvers
     - Probably unaligned the crosshair parts. I'll get back to that later lol
 - Added rails to holosights
     - Recons (syn_volleygun receivers)
+- *Actually* made reload callback no longer require Discord mode
 
 # 2025-06-08
 v2.0.0
