@@ -73,7 +73,7 @@ mod.owo_muzzle_brake(this_variant)
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
-mod.owo_holosight(this_variant, "sight", "receiver")
+mod.owo_holosight(this_variant, "sight", "rail")
 mod.owo_telescopic_sight(this_variant, "sight")
 
 mod.owo_tactical_stock(this_variant, "stock")
@@ -83,18 +83,14 @@ mod.owo_tactical_stock(this_variant, "stock")
 -- ############################################
 local _owo_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06|owo_reticle_helper_invisible"
 local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
-local _owo_no_zoom_no_magnifier_eotech_sights = _owo_no_magnifier_eotech_sights
 local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
 local _owo_magnifier_side_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
-local _owo_no_zoom_yes_magnifier_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
 local _owo_magnifier_eotech_sights = _owo_magnifier_aligned_eotech_sights.."|".._owo_magnifier_side_eotech_sights
 local _owo_short_eotech_sights = "owo_holosight_01_01ss|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2|owo_holosight_01_03ss"
 local _owo_all_eotech_sights = _owo_no_magnifier_eotech_sights.."|".._owo_magnifier_eotech_sights
 local _owo_no_magnifier_vortex_sights = "owo_holosight_02_01|owo_holosight_02_01ss"
-local _owo_no_zoom_no_magnifier_vortex_sights = _owo_no_magnifier_vortex_sights
 local _owo_magnifier_aligned_vortex_sights = "owo_holosight_02_02_z1|owo_holosight_02_02_z2|owo_holosight_02_02ss_z1|owo_holosight_02_02ss_z2"
 local _owo_magnifier_side_vortex_sights = "owo_holosight_02_03|owo_holosight_02_03ss"
-local _owo_no_zoom_yes_magnifier_vortex_sights = "owo_holosight_02_03|owo_holosight_02_03ss"
 local _owo_magnifier_vortex_sights = _owo_magnifier_aligned_vortex_sights.."|".._owo_magnifier_side_vortex_sights
 local _owo_all_vortex_sights = _owo_no_magnifier_vortex_sights.."|".._owo_magnifier_vortex_sights
 local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
@@ -227,7 +223,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Sight: Holographic Sights + Magnifier
     -- ######
-    -- Rails need to be shrunk
+    -- Rail length need to be shrunk: 1 --> 0.7
+    -- Counteract this with sight scale: 1 --> 1.429
+    -- Push forwards more: 0.03 --> 0.06
     --  -------------------------------------------
     --  EOTech
     --  -------------------------------------------
@@ -236,7 +234,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =  { _owo_no_magnifier_eotech_sights, },
         rail =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1), },
-        sight =         { offset = true, parent = "receiver", position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        sight =         { offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.429, 1.3) },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
@@ -246,7 +244,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { _owo_magnifier_eotech_sights, },
         rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1), },
         --sight =             { offset = true, position = vector3_box(0, 0.05, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight =             { offset = true, parent = "receiver", position = vector3_box(0, 0.03, 0.0124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        sight =             { offset = true position = vector3_box(0, 0.06, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.429, 1.3) },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
@@ -258,15 +256,15 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  Magnifier moves sight forwards
-    {   dependencies =  { _owo_magnifier_vortex_sights },
-        rail =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1), },
-        sight =         { offset = true, parent = "receiver", position = vector3_box(0, 0.09, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-        sight_secondary =         { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
+    {   dependencies =      { _owo_magnifier_vortex_sights },
+        rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1), },
+        sight =             { offset = true,  position = vector3_box(0, 0.09, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.429, 1) },
+        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
+        sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
     },
     {   dependencies =  { _owo_all_vortex_sights },
         rail =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1), },
-        sight =         { offset = true, parent = "receiver", position = vector3_box(0, 0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =         { offset = true, position = vector3_box(0, 0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.429, 1) },
         sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, -0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
     },
     --  -------------------------------------------
