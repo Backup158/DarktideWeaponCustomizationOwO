@@ -18,6 +18,10 @@ Ha...
     - merged position and alignment, since they're separated in the same way (so it wont run the same check twice)
 - Added rails to holosights
     - Recons (syn_volleygun receivers)
+- CONVERT ACOGS TO RAIL PARENT. SAME PARENT POSITION ISSUE WITH THE POMMEL VS REFLEX
+
+^^^^^^^^^^^
+
 - *Actually* made reload callback no longer require Discord mode
 
 # 2025-06-08

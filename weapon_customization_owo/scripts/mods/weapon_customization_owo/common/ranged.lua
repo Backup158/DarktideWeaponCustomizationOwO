@@ -3619,7 +3619,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 		owo_holosight_01_01 = {
 			model = _item_ranged.."/sights/reflex_sight_03", type = current_type, parent = current_parent,
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01",
+			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01", 
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_2 = "reflex_scopehelper_01",
@@ -4021,7 +4021,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_01 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4036,7 +4036,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_01f = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4051,7 +4051,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_01_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4066,7 +4066,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_01f_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4081,7 +4081,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_02 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4097,7 +4097,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_02f = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4113,7 +4113,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4129,7 +4129,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_02f_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4145,7 +4145,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_02_top = {
 			model = _item_melee.."/full/force_staff_full_02", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4161,7 +4161,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_acog_sight_02f_top = {
 			model = _item_melee.."/full/force_staff_full_02", type = current_type, 
 			mesh_move = false, 
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
@@ -4178,7 +4178,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_susat_01 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -4193,7 +4193,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_susat_01_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -4208,7 +4208,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_susat_01_ps = {
 			model = _item_melee.."/full/force_staff_full_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -4222,7 +4222,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_susat_02 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -4238,7 +4238,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_susat_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -4254,7 +4254,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		owo_susat_02_top = {
 			model = _item_melee.."/full/force_staff_full_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
+			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_susat_ac1_01", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
@@ -4352,17 +4352,18 @@ function mod.fixes_owo_telescopic_sight(variant_id)
 		--  Trijicon ACOG
 		--  --------------------------------------------
 		--  Sight Helpers
-		{   dependencies =  { _owo_all_acog_sights },
-			sightac1 =      { offset = true, position = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
-			sightac2 =      { offset = true, position = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-			sightac3 =      { offset = true, position = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
+		{   dependencies =  	{ _owo_all_acog_sights },
+			rail =          	{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+			sightac1 =      	{ offset = true, position = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
+			sightac2 =      	{ offset = true, position = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+			sightac3 =      	{ offset = true, position = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
 			-- Base
-			sightac4 =      { offset = true, position = vector3_box(0, -0.018, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
+			sightac4 =      	{ offset = true, position = vector3_box(0, -0.018, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
 			-- Knobs
-			sightac5 =      { offset = true, position = vector3_box(0, -0.01, 0.061), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24) },
-			sightac6 =      { offset = true, position = vector3_box(0.028, -0.014, 0.034), rotation = vector3_box(-180, -90, -180), scale = vector3_box(0.45, 0.45, 0.12) },
+			sightac5 =      	{ offset = true, position = vector3_box(0, -0.01, 0.061), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24) },
+			sightac6 =      	{ offset = true, position = vector3_box(0.028, -0.014, 0.034), rotation = vector3_box(-180, -90, -180), scale = vector3_box(0.45, 0.45, 0.12) },
 			-- Cable
-			sightac7 =      { offset = true, position = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
+			sightac7 =      	{ offset = true, position = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
 		},
 		--  ACOG with RMR on top
 		{   dependencies =      { _owo_rmr_acog_sights },
@@ -4371,22 +4372,23 @@ function mod.fixes_owo_telescopic_sight(variant_id)
 		--  --------------------------------------------
 		--  SUSAT
 		--  --------------------------------------------
-		{   dependencies =  { _owo_all_susat_sights },
+		{   dependencies =  	{ _owo_all_susat_sights },
+			rail =          	{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			-- Cylinder thing
-			sightac1 =      { offset = true, position = vector3_box(0, -0.115, 0.147), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 2.47, 2.14) },
+			sightac1 =      	{ offset = true, position = vector3_box(0, -0.115, 0.147), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 2.47, 2.14) },
 			-- Rear
-			sightac2 =      { offset = true, position = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
-			sightac3 =      { offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
+			sightac2 =      	{ offset = true, position = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
+			sightac3 =      	{ offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
 			-- Base
-			sightac4 =      { offset = true, position = vector3_box(0, 0.07, -0.036), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
+			sightac4 =      	{ offset = true, position = vector3_box(0, 0.07, -0.036), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
 			-- Reticle
-			sightac5 =      { offset = true, position = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
-			sightac6 =      { offset = true, position = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
+			sightac5 =      	{ offset = true, position = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
+			sightac6 =      	{ offset = true, position = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
 			-- Main sight body
-			sightac7 =      { offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
+			sightac7 =      	{ offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
 			-- Lenses
-			lens =          { offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), data = {lens = 1}},
-			lens_2 =        { offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+			lens =          	{ offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), data = {lens = 1}},
+			lens_2 =        	{ offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
 		},
 		-- SUSAT with red dot
 		{   dependencies =      { "owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
