@@ -663,120 +663,84 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  EOTech
     --  -------------------------------------------
-    --      Syn's Hellgun Receivers
-    --          Alt vm patch
-    {   dependencies =      { _owo_no_magnifier_eotech_sights, _owo_sight_2s, _syn_volleygun_receivers, },
+    --  Alt vm patch
+    {   dependencies =      { _owo_sight_2s, _owo_all_eotech_sights, },
         sight_2 =           { parent = "sight", position = vector3_box(0, 0, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies =      { _owo_no_magnifier_eotech_sights, _syn_volleygun_receivers, },
+    --  Sight Alignment
+    --      Sight Only
+    --          Syn's Hellgun Receivers
+    {   dependencies =      { _syn_volleygun_receivers, _owo_no_magnifier_eotech_sights, },
         sight =             { offset = true, parent = "rail", position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_2 =           { parent = "sight", position = vector3_box(0, 0, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0004, 0.0265), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
-    --      Else, Recon Receiver
-    {   dependencies =      { _owo_no_magnifier_eotech_sights, _owo_sight_2s, },
-        sight_2 =           { parent = "sight", position = vector3_box(0, 0, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
+    --          Else, Recon Receiver
     {   dependencies =      { _owo_no_magnifier_eotech_sights, },
         rail =              { automatic_equip = { rail, "rail_default"}, },
         sight =             { offset = true, position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        sight_2 =           { parent = "sight", position = vector3_box(0, 0, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
     },
     --      Holo + Magnifier puts the holo a bit more forwards
-    {   dependencies =      { _owo_magnifier_eotech_sights, _owo_sight_2s, },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
     --          Syn's Hellgun Receivers
-    {   dependencies =      { _owo_magnifier_side_eotech_sights, _syn_volleygun_receivers, },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
-        sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-        sight =             { offset = true, parent = "rail", position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-    },
-    {   dependencies =      { _owo_magnifier_aligned_eotech_sights, _syn_volleygun_receivers, },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
+    {   dependencies =      { _syn_volleygun_receivers, _owo_magnifier_aligned_eotech_sights, },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         sight =             { offset = true, parent = "rail", position = vector3_box(0, 0.11, 0.132), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0004, 0.0265), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+    },
+    {   dependencies =      { _syn_volleygun_receivers, _owo_magnifier_side_eotech_sights, },
+        sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
+        sight =             { offset = true, parent = "rail", position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0004, 0.0265), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
     --          Else, Recon Receiver
-    {   dependencies =      { _owo_magnifier_side_eotech_sights, },
-        rail =              { automatic_equip = { rail, "rail_default"}, },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
-        sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-        sight =             { offset = true, position = vector3_box(0, 0.16, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-    },
     {   dependencies =      { _owo_magnifier_aligned_eotech_sights, },
         rail =              { automatic_equip = { rail, "rail_default"}, },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         sight =             { offset = true, position = vector3_box(0, 0.16, 0.18), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0), lense_transparency = true},
+    },
+    {   dependencies =      { _owo_magnifier_side_eotech_sights, },
+        rail =              { automatic_equip = { rail, "rail_default"}, },
+        sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
+        sight =             { offset = true, position = vector3_box(0, 0.16, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
     },
     --  -------------------------------------------
     --  Vortex Razor
     --  -------------------------------------------
     --  Patch for alt sights
-    {   dependencies =  { _owo_all_vortex_sights, _owo_sight_2s, },
-        sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    {   dependencies =      { _owo_sight_2s, _owo_all_vortex_sights, },
+        sight_2 =           { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    --  Magnifier moves sight forwards
-    {   dependencies =      { _owo_magnifier_vortex_sights, _syn_volleygun_receivers },
-        rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
-        sight =             { offset = false, parent = "rail", position = vector3_box(0, 0.12, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-        sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-    },
-    {   dependencies =      { _owo_magnifier_vortex_sights },
-        sight =             { offset = true, position = vector3_box(0, 0.12, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-        sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-    },
-    --  Default Case
-    {   dependencies =  { _owo_all_vortex_sights, _syn_volleygun_receivers },
-        rail =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
-        sight =         { offset = true, parent = "rail", position = vector3_box(0, 0.03, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-    },
-    {   dependencies =  { _owo_all_vortex_sights },
-        rail =          { automatic_equip = { rail, "rail_default"}, },
-        sight =         { offset = true, position = vector3_box(0, 0.052, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =       { offset = true, parent = "sight", position = vector3_box(0, -0.02, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-    },
-    --  -------------------------------------------
-    --  Aligning sights to crosshair
-    --  -------------------------------------------
-    --  Syn's Hellgun Receivers
-    --      EOTech
-    {   dependencies =      { _owo_all_eotech_sights, _syn_volleygun_receivers, },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0004, 0.0265), rotation = vector3_box(0, 0, 0), lense_transparency = true},
-    },
-    --      Vortex Razor
-    {   dependencies =      { _owo_no_magnifier_vortex_sights, _syn_volleygun_receivers },
+    --  Sight Alignment
+    --      Sight Only
+    --          Syn's Hellgun Receivers
+    {   dependencies =      { _syn_volleygun_receivers _owo_no_magnifier_vortex_sights, },
+        rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
+        sight =             { offset = true, parent = "rail", position = vector3_box(0, 0.03, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, 0.0235), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies =      { _owo_magnifier_aligned_vortex_sights, _syn_volleygun_receivers },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, 0.021), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { _owo_magnifier_side_vortex_sights, _syn_volleygun_receivers },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, 0.021), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    --  Recon Receiver
-    --      "receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
-    --      EOTech
-    {   dependencies =      { _owo_no_magnifier_eotech_sights, },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
-    },
-    {   dependencies =      { _owo_magnifier_aligned_eotech_sights, },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0), lense_transparency = true},
-    },
-    {   dependencies =      { _owo_magnifier_side_eotech_sights, },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
-    },
-    --      Vortex Razor
-    {   dependencies =      { _owo_no_magnifier_vortex_sights },
+    --          Else, Recon Receiver
+    {   dependencies =      { _owo_no_magnifier_vortex_sights, },
+        rail =              { automatic_equip = { rail, "rail_default"}, },
+        sight =             { offset = true, position = vector3_box(0, 0.052, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies =      { _owo_magnifier_aligned_vortex_sights },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+    --      Magnifier moves sight forwards
+    --          Syn's Hellgun Receivers
+    {   dependencies =      { _syn_volleygun_receivers, _owo_magnifier_vortex_sights, },
+        rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+        sight =             { offset = false, parent = "rail", position = vector3_box(0, 0.12, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
+        { offset = true, position = vector3_box(0, -0.0, 0.021), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0, 0.0235), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies =      { _owo_magnifier_side_vortex_sights },
+    --          Else, Recon Receiver
+    {   dependencies =      { _owo_magnifier_vortex_sights, },
+        rail =              { automatic_equip = { rail, "rail_default"}, },
+        sight =             { offset = true, position = vector3_box(0, 0.12, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
 
