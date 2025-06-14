@@ -943,8 +943,10 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  SUSAT
     --  --------------------------------------------
-    {   dependencies =      { _owo_all_susat_sights },
-        sight =             { offset = true, position = vector3_box(0, -0.06, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    --  Aiming with RMR
+    {   dependencies =      { "owo_susat_02_top" },
+        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _vigilant_autogun_receivers, "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0238), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -952,12 +954,10 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    --  Aiming with RMR
-    {   dependencies =      { "owo_susat_02_top" },
-        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
-        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
+    {   dependencies =      { _owo_all_susat_sights },
+        sight =             { offset = true, position = vector3_box(0, -0.06, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
-
+    
     -- ######
 	-- Sight: SOVIET PU SCOPE
 	-- ######
