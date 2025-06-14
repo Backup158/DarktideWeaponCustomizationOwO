@@ -193,6 +193,7 @@ mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 
 mod.fixes_owo_holosight(this_variant)
+mod.fixes_owo_telescopic_sight(this_variant)
 
 -- #################
 -- Custom Fixes
