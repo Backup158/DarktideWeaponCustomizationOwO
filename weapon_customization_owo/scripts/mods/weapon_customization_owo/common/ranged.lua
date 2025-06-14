@@ -3953,7 +3953,7 @@ end
 --			Thief is the ac2/3, ak muzzles in the back
 function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 	local current_type = given_type or "sight"
-	local current_parent = given_parent or "receiver"
+	local current_parent = given_parent or "rail"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_acog_sight_01f", name = "OwO ACOG (1.25x)"},
