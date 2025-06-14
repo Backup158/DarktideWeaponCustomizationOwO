@@ -4020,7 +4020,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		-- ### Base Parts ###
 		owo_acog_sight_01 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4035,7 +4035,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_01f = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4050,7 +4050,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_01_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4065,7 +4065,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_01f_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4080,7 +4080,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_02 = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4096,7 +4096,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_02f = {
 			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4112,7 +4112,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_02_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4128,7 +4128,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_02f_z1 = {
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4144,7 +4144,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_02_top = {
 			model = _item_melee.."/full/force_staff_full_02", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
@@ -4160,7 +4160,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 		owo_acog_sight_02f_top = {
 			model = _item_melee.."/full/force_staff_full_02", type = current_type, 
-			mesh_move = false, 
+			mesh_move = false, parent = current_parent, 
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02", rail = "rail_01", 
 				sightac1 = "owo_acog_sight_helper_01", sightac2 = "owo_acog_sight_helper_02", 
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",

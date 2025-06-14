@@ -89,7 +89,7 @@ mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
 mod.owo_holosight(this_variant, "sight", "rail")
-mod.owo_telescopic_sight(this_variant, "sight")
+mod.owo_telescopic_sight(this_variant, "sight", "receiver")
 
 mod.owo_tactical_stock(this_variant, "stock")
 
@@ -426,7 +426,6 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --      Aiming with RMR on ACOG
     {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
-        -- sight_2 =           { offset = true, position = vector3_box(0, -0.116, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.114), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.114), rotation = vector3_box(0, 0, 0), },
     },
@@ -451,7 +450,7 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.3, -0.094), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_all_susat_sights },
-        sight =             { offset = true, position = vector3_box(0, 0.006, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =             { offset = true, position = vector3_box(0, 0.006, 0.204), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         rail =              { offset = true, position = vector3_box(0, 0.036, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.1, 0.8), },
         scope_offset =      { offset = true, position = vector3_box(0, 0.04, -0.03), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
