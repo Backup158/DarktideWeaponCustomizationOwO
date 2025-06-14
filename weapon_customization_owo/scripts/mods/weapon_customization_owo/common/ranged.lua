@@ -4354,7 +4354,9 @@ function mod.fixes_owo_telescopic_sight(variant_id)
 		--  Sight Helpers
 		{   dependencies =  	{ _owo_all_acog_sights },
 			rail =          	{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+			-- Front half
 			sightac1 =      	{ offset = true, position = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
+			-- Back half
 			sightac2 =      	{ offset = true, position = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
 			sightac3 =      	{ offset = true, position = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
 			-- Base
@@ -4364,6 +4366,9 @@ function mod.fixes_owo_telescopic_sight(variant_id)
 			sightac6 =      	{ offset = true, position = vector3_box(0.028, -0.014, 0.034), rotation = vector3_box(-180, -90, -180), scale = vector3_box(0.45, 0.45, 0.12) },
 			-- Cable
 			sightac7 =      	{ offset = true, position = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
+			-- Lenses
+			lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.026, 0.0325), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.18, 0.3, 1.18), data = {lens = 1}},
+	    	lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0325), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
 		},
 		--  ACOG with RMR on top
 		{   dependencies =      { _owo_rmr_acog_sights },
