@@ -677,7 +677,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --          Else, Recon Receiver
     {   dependencies =      { _owo_no_magnifier_eotech_sights, },
-        rail =              { automatic_equip = { rail, "rail_default"}, },
+        rail =              { automatic_equip = { rail = "rail_default"}, },
         sight =             { offset = true, position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
     },
@@ -695,13 +695,13 @@ mod.mt.inject_fixes(this_variant, {
     },
     --          Else, Recon Receiver
     {   dependencies =      { _owo_magnifier_aligned_eotech_sights, },
-        rail =              { automatic_equip = { rail, "rail_default"}, },
+        rail =              { automatic_equip = { rail = "rail_default"}, },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         sight =             { offset = true, position = vector3_box(0, 0.16, 0.18), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0), lense_transparency = true},
     },
     {   dependencies =      { _owo_magnifier_side_eotech_sights, },
-        rail =              { automatic_equip = { rail, "rail_default"}, },
+        rail =              { automatic_equip = { rail = "rail_default"}, },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         sight =             { offset = true, position = vector3_box(0, 0.16, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
@@ -723,7 +723,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --          Else, Recon Receiver
     {   dependencies =      { _owo_no_magnifier_vortex_sights, },
-        rail =              { automatic_equip = { rail, "rail_default"}, },
+        rail =              { automatic_equip = { rail = "rail_default"}, },
         sight =             { offset = true, position = vector3_box(0, 0.052, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -739,7 +739,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --          Else, Recon Receiver
     {   dependencies =      { _owo_magnifier_vortex_sights, },
-        rail =              { automatic_equip = { rail, "rail_default"}, },
+        rail =              { automatic_equip = { rail = "rail_default"}, },
         sight =             { offset = true, position = vector3_box(0, 0.12, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
