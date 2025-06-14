@@ -842,11 +842,11 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  EOTech
     --  -------------------------------------------
-    --  Main Sight body
-    --      Patch to hide alt viewmodel sights.
+    --  Patch to hide alt viewmodel sights.
     {   dependencies =      { _owo_sight_2s, _owo_all_eotech_sights, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
+    --  Sight Alignment
     {   dependencies =      { _owo_no_magnifier_eotech_sights },
         sight =             { offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0193), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -869,11 +869,12 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { _owo_sight_2s, _owo_all_vortex_sights, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
+    --  Sight Alignment
     {   dependencies =      { _owo_no_magnifier_vortex_sights },
         sight =             { offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0193), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    --  Magnifier moves sight forwards
+    --      Magnifier moves sight forwards
     --[[
         -- Aligned and side end up the same
     {   dependencies =      { _owo_magnifier_aligned_vortex_sights },
