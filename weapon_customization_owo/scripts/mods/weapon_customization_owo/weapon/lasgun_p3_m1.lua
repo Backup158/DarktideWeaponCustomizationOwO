@@ -716,7 +716,7 @@ mod.mt.inject_fixes(this_variant, {
     --  Sight Alignment
     --      Sight Only
     --          Syn's Hellgun Receivers
-    {   dependencies =      { _syn_volleygun_receivers _owo_no_magnifier_vortex_sights, },
+    {   dependencies =      { _syn_volleygun_receivers, _owo_no_magnifier_vortex_sights, },
         rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.8), },
         sight =             { offset = true, parent = "rail", position = vector3_box(0, 0.03, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, 0.0235), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -726,7 +726,6 @@ mod.mt.inject_fixes(this_variant, {
         rail =              { automatic_equip = { rail = "rail_default"}, },
         sight =             { offset = true, position = vector3_box(0, 0.052, 0.174), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0204), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Magnifier moves sight forwards
     --          Syn's Hellgun Receivers
@@ -734,7 +733,6 @@ mod.mt.inject_fixes(this_variant, {
         rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
         sight =             { offset = false, parent = "rail", position = vector3_box(0, 0.12, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-        { offset = true, position = vector3_box(0, -0.0, 0.021), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, 0.0235), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Else, Recon Receiver
