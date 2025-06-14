@@ -292,6 +292,7 @@ mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_holosight(this_variant)
+mod.fixes_owo_telescopic_sight(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -357,21 +358,26 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- DREG GUNNER BARREL
     -- ######
-    -- Iag
-    --  meshauto_01 is the MT Autogun Custom
+    -- Main Barrel
+    --  Iag
     {   dependencies =  { "owo_dreg_barrel_01", _infantry_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
         barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
     },
-    -- Brautos
+    --  Brautos
     {   dependencies =  { "owo_dreg_barrel_01", _braced_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, 0.025),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
         barrelshroud =  { offset = true,    position = vector3_box(0, 0, 0.025),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
     },
-    -- Headhunters
+    --  Headhunters
     {   dependencies =  { "owo_dreg_barrel_01", _vigilant_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, -0.012),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
         barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.012),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24)}, 
+    },
+    --  Default
+    {   dependencies =  { "owo_dreg_barrel_01", },
+        barrel =        { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
+        barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
     },
     --  Dreg Gunner Helpers
 	{   dependencies =  { "owo_dreg_barrel_01" },

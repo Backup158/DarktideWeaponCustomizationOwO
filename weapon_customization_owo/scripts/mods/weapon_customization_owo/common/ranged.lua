@@ -4340,6 +4340,16 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 	})
 end
+function mod.fixes_owo_telescopic_sight(variant_id)
+	local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
+	local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top"
+	local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
+	local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
+
+	mod.mt.inject_fixes(variant_id, {
+		
+	})
+end
 
 -- Sight: Soviet PU scope
 --		Sight rings are too mf fat
