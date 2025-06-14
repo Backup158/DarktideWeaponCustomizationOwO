@@ -170,67 +170,41 @@ mod.mt.inject_fixes(this_variant, {
     --  EOTech
     --  -------------------------------------------
     --  Patch to hide alt viewmodel sights
-    {   dependencies =  { _owo_no_magnifier_eotech_sights, _owo_sight_2s, },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    {   dependencies =      { _owo_sight_2s, _owo_all_eotech_sights, },
+        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies =  { _owo_no_magnifier_eotech_sights },
-        rail =          { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
-        sight =         { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.03, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3),},
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
+    --  Sight Alignment
+    {   dependencies =      { _owo_no_magnifier_eotech_sights },
+        rail =              { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
+        sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.03, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3),},
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0463), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
-    --          Patch to hide alt viewmodel sights
-    {   dependencies =  { _owo_magnifier_eotech_sights, _owo_sight_2s, },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
     {   dependencies =      { _owo_magnifier_eotech_sights },
         rail =              { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
         sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.096, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3),},
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104),},
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.046), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  -------------------------------------------
     --  Vortex Razor
     --  -------------------------------------------
     --  Patch for alt sights
-    {   dependencies =  { _owo_sight_2s, _owo_all_vortex_sights, },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    {   dependencies =      { _owo_sight_2s, _owo_all_vortex_sights, },
+        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    --  Magnifier moves sight forwards
-    {   dependencies =  { _owo_magnifier_vortex_sights },
-        rail =          { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
-        sight =         { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.11, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-        --sight_secondary =         { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-        sight_secondary =         { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.04, 0.021), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-    },
-    {   dependencies =  { _owo_no_magnifier_vortex_sights },
-        rail =          { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
-        sight =         { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.058, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
-    },
-    --  -------------------------------------------
-    --  Aligning sights to crosshair
-    --  -------------------------------------------
-    -- Vortex Razor
+    --  Sight Alignment
     {   dependencies =      { _owo_no_magnifier_vortex_sights },
+        rail =              { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
+        sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.058, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0363), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies =      { _owo_magnifier_aligned_vortex_sights },
+    --      Magnifier moves sight forwards
+    {   dependencies =      { _owo_magnifier_vortex_sights },
+        rail =              { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
+        sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.11, 0.021), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_secondary =   { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.04, 0.021), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0363), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { _owo_magnifier_side_vortex_sights },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0363), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    -- EOTech
-    {   dependencies =      { _owo_no_magnifier_eotech_sights },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0463), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { _owo_magnifier_aligned_eotech_sights },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.046), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { _owo_magnifier_side_eotech_sights },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.046), rotation = vector3_box(0, 0, 0), },
     },
 
     -- ######
