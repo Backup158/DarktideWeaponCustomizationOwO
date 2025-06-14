@@ -211,6 +211,7 @@ mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_holosight(this_variant)
+mod.fixes_owo_telescopic_sight(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -749,142 +750,77 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     -- Trijicon ACOG
     --  --------------------------------------------
-    --  ACOG only
-    {   dependencies =  { _owo_all_acog_sights },
-        sightac1 =      { offset = true, position = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
-        sightac2 =      { offset = true, position = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sightac3 =      { offset = true, position = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
-        -- Base
-        sightac4 =      { offset = true, position = vector3_box(0, -0.018, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
-        -- Knobs
-        sightac5 =      { offset = true, position = vector3_box(0, -0.01, 0.061), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24) },
-        sightac6 =      { offset = true, position = vector3_box(0.028, -0.014, 0.034), rotation = vector3_box(-180, -90, -180), scale = vector3_box(0.45, 0.45, 0.12) },
-        -- Cable
-        sightac7 =      { offset = true, position = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
-    },
     --      Syn's Hellgun Receivers
-    {   dependencies =  { _owo_forwards_acog_sights, _syn_volleygun_receivers, _owo_sight_2s, },
-        lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.024, 0.0300), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-        lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, -0.098, 0.0300), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =       { offset = false, position = vector3_box(0, -0.05, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    {   dependencies =      { _syn_volleygun_receivers, "owo_acog_sight_02_top|owo_acog_sight_02f_top", },
+        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.073), rotation = vector3_box(0, 0, 0), },
     },
-	{   dependencies =  { _owo_forwards_acog_sights, _syn_volleygun_receivers, },
-        sight =         { offset = true, position = vector3_box(0, 0.108, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
-        lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.132, 0.1865), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, 0.006, 0.1850), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =       { offset = false, position = vector3_box(0, 0.05, 0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    {   dependencies =      { _owo_sight_2s, _syn_volleygun_receivers, _owo_forwards_acog_sights, },
+        lens =              { offset = false, parent = "sight_2", position = vector3_box(0, 0.024, 0.0300), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+        lens_2 =            { offset = false, parent = "sight_2", position = vector3_box(0, -0.098, 0.0300), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = false, position = vector3_box(0, -0.05, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies =  { _owo_backwards_acog_sights, _syn_volleygun_receivers, _owo_sight_2s, },
-        lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.024, 0.0300), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-        lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, -0.098, 0.0300), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =       { offset = false, position = vector3_box(0, -0.15, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+	{   dependencies =      { _syn_volleygun_receivers, _owo_forwards_acog_sights, },
+        sight =             { offset = true, position = vector3_box(0, 0.108, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
+        lens =              { offset = false, parent = "sight_2", position = vector3_box(0, 0.132, 0.1865), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            { offset = false, parent = "sight_2", position = vector3_box(0, 0.006, 0.1850), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = false, position = vector3_box(0, 0.05, 0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.002), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies =  { _owo_backwards_acog_sights, _syn_volleygun_receivers, },
-        sight =         { offset = true, position = vector3_box(0, 0.046, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
-        lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.064, 0.1865), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, -0.052, 0.1850), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =       { offset = false, position = vector3_box(0, -0.05, 0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    {   dependencies =      { _owo_sight_2s, _syn_volleygun_receivers, _owo_backwards_acog_sights, },
+        lens =              { offset = false, parent = "sight_2", position = vector3_box(0, 0.024, 0.0300), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+        lens_2 =            { offset = false, parent = "sight_2", position = vector3_box(0, -0.098, 0.0300), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = false, position = vector3_box(0, -0.15, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },  
+    {   dependencies =      { _syn_volleygun_receivers, _owo_backwards_acog_sights, },
+        sight =             { offset = true, position = vector3_box(0, 0.046, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
+        lens =              { offset = false, parent = "sight_2", position = vector3_box(0, 0.064, 0.1865), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            { offset = false, parent = "sight_2", position = vector3_box(0, -0.052, 0.1850), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = false, position = vector3_box(0, -0.05, 0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.002), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Else: Recon Body
     --          Recon rail already put acog forwards
-    {   dependencies =  { _owo_all_acog_sights, _owo_sight_2s,},
-        lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.024, 0.0300), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, -0.098, 0.0300), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =       { offset = false, position = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    {   dependencies =      { _owo_sight_2s, _owo_all_acog_sights, },
+        lens =              { offset = false, parent = "sight_2", position = vector3_box(0, 0.024, 0.0300), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            { offset = false, parent = "sight_2", position = vector3_box(0, -0.098, 0.0300), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = false, position = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies =  { _owo_all_acog_sights, },
-        sight =         { offset = true, position = vector3_box(0, 0.138, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        lens =          { offset = false, parent = "sight_2", position = vector3_box(0, 0.156, 0.2195), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =        { offset = false, parent = "sight_2", position = vector3_box(0, 0.038, 0.2195), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-        sight_2 =       { offset = false, position = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
-        --sight_2 =       { offset = false, position = vector3_box(0, -0.032, 0.058), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+    {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top", },
+        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
     },
-    --  ACOG with RMR on top
-    {   dependencies =      { "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
-        sight_secondary =   { offset = true, position = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
+    {   dependencies =      { _owo_all_acog_sights, },
+        sight =             { offset = true, position = vector3_box(0, 0.138, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        lens =              { offset = false, parent = "sight_2", position = vector3_box(0, 0.156, 0.2195), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            { offset = false, parent = "sight_2", position = vector3_box(0, 0.038, 0.2195), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        sight_2 =           { offset = false, position = vector3_box(0, 0.092, 0.188), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  --------------------------------------------
     --  SUSAT
     --  --------------------------------------------
     --      Syn's Hellgun Receivers
-    {   dependencies =  { _owo_all_susat_sights, _syn_volleygun_receivers, },
-        sight =         { offset = true, position = vector3_box(0, 0.006, 0.175), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        rail =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
+    {   dependencies =      { _syn_volleygun_receivers, "owo_susat_02_top", },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0, 0.2, -0.05), rotation = vector3_box(0, 0, 0), },
+    },
+    {   dependencies =      { _syn_volleygun_receivers, _owo_all_susat_sights, },
+        sight =             { offset = true, position = vector3_box(0, 0.006, 0.175), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.013), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Else: Recon Receivers
     --      And default helpers
-    {   dependencies =  { _owo_all_susat_sights },
-        sight =         { offset = true, position = vector3_box(0, 0.016, 0.221), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        -- Cylinder thing
-        --sightac1 =      { offset = true, position = vector3_box(0, 0.096, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.6, 1.47, 1.27), data = {lens = 1} },
-        sightac1 =      { offset = true, position = vector3_box(0, -0.11, 0.136), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 2.76, 1.92)},
-        -- Rear
-        --  One is sliiightly further back to prevent z-fighting
-        sightac2 =      { offset = true, position = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
-        sightac3 =      { offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
-        -- Base
-        sightac4 =      { offset = true, position = vector3_box(0, 0.07, -0.036), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
-        -- Reticle
-        sightac5 =      { offset = true, position = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
-        sightac6 =      { offset = true, position = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
-        -- Main sight body
-        sightac7 =      { offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
-        lens =          { offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), data = {lens = 1}},
-	    lens_2 =        { offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-    },
-    --  SUSAT with red dot
-    {   dependencies =      { "owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
-        sight_secondary =   { offset = true, position = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
-    },
-    --  --------------------------------------------
-    --  Aligning sights to crosshair
-    --  --------------------------------------------
-    --  Aiming with Main Sight
-    --      Syn's Hellgun Receivers
-    {   dependencies =      { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1", _syn_volleygun_receivers, },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.002), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1", _syn_volleygun_receivers, },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.002), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", _syn_volleygun_receivers, },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.013), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    --      Else: Recon Receiver
-	{   dependencies =      { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1",},
-        scope_offset =      { offset = true, position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1", },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    --  Aiming with RMR
-    --      To keep the lenses, I replaced the base part with a non scope. This makes it use no_scope_offset
-    --      Syn's Hellgun Receivers
-    --          ACOG
-    {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top", _syn_volleygun_receivers, },
-        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.05), rotation = vector3_box(0, 0, 0), },
-        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.073), rotation = vector3_box(0, 0, 0), },
-    },
-    --          SUSAT
-    {   dependencies =      { "owo_susat_02_top", _syn_volleygun_receivers, },
-        --scope_offset =      { offset = true, position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), },
-        no_scope_offset =   { offset = true, position = vector3_box(0, 0.2, -0.05), rotation = vector3_box(0, 0, 0), },
-    },
-    --      Else: Recon Receiver
-    --          ACOG
-	{   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top", },
-        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
-        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
-    },
-    --          SUSAT
     {   dependencies =      { "owo_susat_02_top", },
-        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
+        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
+    },
+    {   dependencies =      { _owo_all_susat_sights },
+        sight =             { offset = true, position = vector3_box(0, 0.016, 0.221), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     
     -- ######
