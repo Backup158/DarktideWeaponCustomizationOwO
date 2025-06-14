@@ -215,27 +215,22 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  Trijicon ACOG
     --  --------------------------------------------
+    --  Patch for alt vms
+    {   dependencies =      { _owo_sight_2s, _owo_all_acog_sights, },
+        sight_2 =           { parent = "sight", position = vector3_box(0, -0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
     --  Aiming with RMR on ACOG
     {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
         scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.127), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.127), rotation = vector3_box(0, 0, 0), },
     },
-    --  Main sight and reticle (forwards)
-    --      Patch to hide alt viewmodel sights
-    {   dependencies =      { _owo_sight_2s, _owo_forwards_acog_sights, },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
+    --  Sight Position
     {   dependencies =      { _owo_forwards_acog_sights },
         sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.074, 0.038), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
         sight_2 =           { offset = true, position = vector3_box(0, -0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.026, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1},},
 	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2},},
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0528), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    --  Main sight and reticle (backwards)
-    --     Patch to hide alt viewmodel sights
-    {   dependencies =      { _owo_sight_2s, _owo_backwards_acog_sights, },
-        sight_2 =           { parent = "sight", position = vector3_box(0, -0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =      { _owo_backwards_acog_sights },
         sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.074, 0.038), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
