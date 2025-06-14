@@ -13,7 +13,9 @@ Ha...
 - Realigned (physically) Holographic Sights
     - Autoguns, Bolters, Bistols, iLas, Helbores, Recons, CShotguns, Revolvers
     - Probably unaligned the crosshair parts. I'll get back to that later lol
-- Refactored Holosight fixes to be more optimized (not that it'll be noticeable)
+- Refactored Holosight fixes to be more optimized (not that it'll be noticeable, especially since the universal fixes kinda made it worse in the first place)
+    - moved alt vm check to allow for faster short circuiting
+    - merged position and alignment, since they're separated in the same way (so it wont run the same check twice)
 - Added rails to holosights
     - Recons (syn_volleygun receivers)
 - *Actually* made reload callback no longer require Discord mode

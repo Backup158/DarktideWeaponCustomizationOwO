@@ -169,8 +169,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  EOTech
     --  -------------------------------------------
-    --  Main Sight body
-    --      Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
+    --  Patch to hide alt viewmodel sights
     {   dependencies =  { _owo_no_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
@@ -180,7 +179,7 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
-    --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
+    --          Patch to hide alt viewmodel sights
     {   dependencies =  { _owo_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
@@ -242,7 +241,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  ACOG only
     --      Main sight and reticle
-    --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
+    --          Patch to hide alt viewmodel sights
     {   dependencies = { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top",
             _owo_sight_2s,
         },
@@ -253,7 +252,7 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { offset = true, position = vector3_box(0, -0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --      Main sight and reticle (backwards)
-    --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
+    --          Patch to hide alt viewmodel sights
     {   dependencies = { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top",
             _owo_sight_2s,
         },

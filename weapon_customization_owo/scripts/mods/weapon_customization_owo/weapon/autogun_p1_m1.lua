@@ -902,7 +902,7 @@ mod.mt.inject_fixes(this_variant, {
     --  -------------------------------------------
     --  ACOG only
     --      Main sight and reticle
-    --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
+    --          Patch to hide alt viewmodel sights
     {   dependencies =  { _owo_forwards_acog_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
@@ -911,7 +911,7 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =       { offset = true, position = vector3_box(0, -0.046, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
     },
     --      Main sight and reticle (backwards)
-    --          Patch to hide alt viewmodel sights. Copies position of case below because its children are lenses
+    --          Patch to hide alt viewmodel sights
     {   dependencies =  { _owo_backwards_acog_sights, _owo_sight_2s, },
         sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
