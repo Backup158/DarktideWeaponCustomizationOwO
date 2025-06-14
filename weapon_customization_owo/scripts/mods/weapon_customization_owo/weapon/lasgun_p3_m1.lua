@@ -733,7 +733,7 @@ mod.mt.inject_fixes(this_variant, {
         rail =              { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
         sight =             { offset = false, parent = "rail", position = vector3_box(0, 0.12, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0, 0.0235), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.0, 0.021), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Else, Recon Receiver
     {   dependencies =      { _owo_magnifier_vortex_sights, },
