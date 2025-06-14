@@ -92,23 +92,23 @@ mod.mt.inject_fixes(this_variant, {
     -- ALL of these are only really aligned for shovel_grip_02
     --  minor gaps for others, really small for ogryn grips
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  The fucked up mini /\ handle
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "owo_shovel_handles_01"},
         pommel =        { offset = true, position = vector3_box(0, 0.012, 0.003), rotation = vector3_box(84, 0, 0), scale = vector3_box(1, 1, 0.488 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  The proper three arms
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "owo_shovel_handles_02"},
         pommel =        { offset = true, position = vector3_box(0, -0.009, -0.043), rotation = vector3_box(107, 0, 0), scale = vector3_box(1, 0.69, 0.275 ) },
         pommelac1 =     { offset = true, position = vector3_box(0, 0.015, -0.059), rotation = vector3_box(63, 0, 0), scale = vector3_box(1, 0.69, 0.275 ) },
         pommelac2 =     { offset = true, position = vector3_box(0, -0.01, -0.244), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.46, 0.38, 0.55 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  The classic D-ring handle
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "owo_shovel_handles_03"},
         pommel =        { offset = true, position = vector3_box(-0.012, -0.036, -0.208), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.64, 0.7 ) },
         pommelac1 =     { offset = true, position = vector3_box(0.008, 0.047, -0.208), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.6, 0.64, 0.7 ) },
@@ -122,9 +122,9 @@ mod.mt.inject_fixes(this_variant, {
         pommel =        { offset = true, position = vector3_box(-0.0, 0.036, -0.208), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.6, 0.64, 0.7 ) },
         pommelac2 =     { offset = true, position = vector3_box(0.0, 0.002, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.5, 0.67 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  D-ring handle (double chainswords)
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "shovel_grip_01", "owo_shovel_handles_07|owo_shovel_handles_08" },
         pommel =        { offset = true, position = vector3_box(-0.0, 0.00, -0.125), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 0.5, 0.5 ) },
         pommelac1 =     { offset = true, position = vector3_box(0.00, -0.00, -0.125), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.8, 0.5, 0.5 ) },
@@ -143,9 +143,9 @@ mod.mt.inject_fixes(this_variant, {
         pommel =        { offset = true, position = vector3_box(-0.0, 0.00, -0.175), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 0.8, 0.75 ) },
         pommelac1 =     { offset = true, position = vector3_box(0.00, -0.00, -0.175), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.8, 0.8, 0.75 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  T-Handle (Ogryn pommelac2)
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "shovel_grip_02", "owo_shovel_handles_09|owo_shovel_handles_10"},
         pommel =        { offset = false, position = vector3_box(-0.0, 0.00, -0.15), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
         pommelac2 =     { offset = true, position = vector3_box(0.00, -0.00, -0.162), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.35, 0.25, 0.5 ) },
@@ -154,23 +154,23 @@ mod.mt.inject_fixes(this_variant, {
         pommel =        { offset = true, position = vector3_box(-0.0, 0.00, -0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
         pommelac2 =     { offset = true, position = vector3_box(0.00, -0.00, -0.162), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.35, 0.25, 0.5 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  T-Handle (Double Ogryn)
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "owo_shovel_handles_11"},
         pommel =        { offset = true, position = vector3_box(-0.0, 0.00, -0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.35, 0.25, 0.5 ) },
         pommelac2 =     { offset = true, position = vector3_box(0.00, -0.00, -0.162), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.35, 0.25, 0.5 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  T-Handle (Ogryn pommel, humie handle)
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "owo_shovel_handles_12"},
         pommel =        { offset = true, position = vector3_box(-0.0, 0.00, -0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.35, 0.25, 0.5 ) },
         pommelac2 =     { offset = true, position = vector3_box(0.00, -0.018, -0.162), rotation = vector3_box(-90, 0, -180), scale = vector3_box(1.0, 1.0, 0.65 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  T-Handle (double human)
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "owo_shovel_handles_13"},
         pommel =        { offset = true, position = vector3_box(-0.0, 0.00, -0.128), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 0.4 ) },
         pommelac2 =     { offset = true, position = vector3_box(0.00, -0.018, -0.162), rotation = vector3_box(-90, 0, -180), scale = vector3_box(1.0, 1.0, 0.65 ) },

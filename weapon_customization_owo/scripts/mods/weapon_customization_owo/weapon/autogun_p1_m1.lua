@@ -143,6 +143,7 @@ local _owo_magnifier_vortex_sights = _owo_magnifier_aligned_vortex_sights.."|"..
 local _owo_all_vortex_sights = _owo_no_magnifier_vortex_sights.."|".._owo_magnifier_vortex_sights
 local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top"
+local _owo_rmr_acog_sights = "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
 local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
@@ -644,9 +645,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Barrel: M16
 	-- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Brautos
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =      { _m16_all_barrels, _braced_autogun_receivers, },
         flashlight =        { offset = false,   position = vector3_box(0.028, 0.406, 0.07), rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1)},
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0.03),       rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -675,9 +676,9 @@ mod.mt.inject_fixes(this_variant, {
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.160),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
         barrelshroudac6 =   { offset = true,    position = vector3_box(-0.003, 0.642, 0.160),    rotation = vector3_box(0, 0, -90), scale = vector3_box(2.36, 0.03, 0.022) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Headhunters (Vigilants)
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =      { _m16_all_barrels, _vigilant_autogun_receivers, },
         barrel =            { offset = true,    position = vector3_box(0, 0.3, -0.02),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         trinket_hook =      { offset = true,    position = vector3_box(0.00, -0.01, -0.032), scale = vector3_box(1, 1, 1)},
@@ -708,9 +709,9 @@ mod.mt.inject_fixes(this_variant, {
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.160),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
         barrelshroudac6 =   { offset = true,    position = vector3_box(-0.003, 0.642, 0.160),    rotation = vector3_box(0, 0, -90), scale = vector3_box(2.36, 0.03, 0.022) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Infantry Autoguns and others
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Barrels
     {   dependencies =      { _m16_all_barrels, },
         barrel =            { offset = true,    position = vector3_box(0, 0.3, 0),          rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -744,9 +745,9 @@ mod.mt.inject_fixes(this_variant, {
         barrelshroudac5 =   { offset = true,    position = vector3_box(0.003, 0.642, 0.154),    rotation = vector3_box(0, 0, 90), scale = vector3_box(2.36, 0.03, 0.022) },
         barrelshroudac6 =   { offset = true,    position = vector3_box(-0.003, 0.642, 0.154),    rotation = vector3_box(0, 0, -90), scale = vector3_box(2.36, 0.03, 0.022) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  All
-    --  -------------------------------------------
+    --  --------------------------------------------
     -- Muzzle Alignment
     {   dependencies =      { _m16_all_barrels, },
         muzzle =            { offset = true,    position = vector3_box(0, 0.11, 0),         rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -845,9 +846,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Sight: Holographic Sights + Magnifier
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  EOTech
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Patch to hide alt viewmodel sights.
     {   dependencies =      { _owo_sight_2s, _owo_all_eotech_sights, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
@@ -868,9 +869,9 @@ mod.mt.inject_fixes(this_variant, {
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.018), rotation = vector3_box(0, 0, 0) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Vortex Razor
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Patch for alt sights
     {   dependencies =      { _owo_sight_2s, _owo_all_vortex_sights, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
@@ -903,104 +904,55 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Sight: Telescopic Sights
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Trijicon ACOG
-    --  -------------------------------------------
+    --  --------------------------------------------
+    --  Patch to hide alt viewmodel sights
+    {   dependencies =      { _owo_sight_2s, _owo_all_acog_sights, },
+        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
     --  ACOG only
-    --      Main sight and reticle
-    --          Patch to hide alt viewmodel sights
-    {   dependencies =  { _owo_forwards_acog_sights, _owo_sight_2s, },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    --      Aiming with RMR on ACOG
+    {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
+        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.100), rotation = vector3_box(0, 0, 0), },
+        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.100), rotation = vector3_box(0, 0, 0), },
     },
-    {   dependencies =  { _owo_forwards_acog_sights },
-        sight =         { offset = true, position = vector3_box(0, 0.074, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =       { offset = true, position = vector3_box(0, -0.046, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-    },
-    --      Main sight and reticle (backwards)
-    --          Patch to hide alt viewmodel sights
-    {   dependencies =  { _owo_backwards_acog_sights, _owo_sight_2s, },
-        sight_2 =       { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
-    },
-    {   dependencies =  { _owo_backwards_acog_sights },
-        sight =         { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sight_2 =       { offset = true, position = vector3_box(0, -0.046, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-    },
-    --      Sight Helpers
-    {   dependencies =  { _owo_all_acog_sights },
-        sightac1 =      { offset = true, position = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
-        sightac2 =      { offset = true, position = vector3_box(0, -0.132, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        sightac3 =      { offset = true, position = vector3_box(0, 0.064, 0.032), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1) },
-        -- Base
-        sightac4 =      { offset = true, position = vector3_box(0, -0.018, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
-        -- Knobs
-        sightac5 =      { offset = true, position = vector3_box(0, -0.01, 0.061), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.45, 0.68, 0.24) },
-        sightac6 =      { offset = true, position = vector3_box(0.028, -0.014, 0.034), rotation = vector3_box(-180, -90, -180), scale = vector3_box(0.45, 0.45, 0.12) },
-        -- Cable
-        sightac7 =      { offset = true, position = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
-        -- Lenses are the same for forwards and backwards
-        lens =          { offset = false, parent = "sight", position = vector3_box(0, 0.026, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =        { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-    },
-    --  ACOG with RMR on top
-    {   dependencies =      { "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
-        sight_secondary =   { offset = true, position = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
-    },
-    --  -------------------------------------------
-    --  SUSAT
-    --  -------------------------------------------
-    {   dependencies =  { "owo_susat_01|owo_susat_01_ps|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
-        sight =         { offset = true, position = vector3_box(0, -0.06, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        -- Cylinder thing
-        sightac1 =      { offset = true, position = vector3_box(0, -0.115, 0.147), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 2.47, 2.14) },
-        -- Rear
-        sightac2 =      { offset = true, position = vector3_box(0, -0.0081, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.36, 0.514, 1.36) },
-        sightac3 =      { offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 17, 0), scale = vector3_box(1.36, 0.514, 1.36) },
-        -- Base
-        sightac4 =      { offset = true, position = vector3_box(0, 0.07, -0.036), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 0.63, 0.56) },
-        -- Reticle
-        sightac5 =      { offset = true, position = vector3_box(-0.0028, 0.066, -0.026), rotation = vector3_box(0, 6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
-        sightac6 =      { offset = true, position = vector3_box(0.0028, 0.066, -0.026), rotation = vector3_box(0, -6, 0), scale = vector3_box(0.15, 0.45, 0.09) },
-        -- Main sight body
-        sightac7 =      { offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
-        -- Lenses
-        lens =          { offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), data = {lens = 1}},
-	    lens_2 =        { offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
-    },
-    -- SUSAT with red dot
-    {   dependencies =      { "owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
-        sight_secondary =   { offset = true, position = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
-    },
-    --  -------------------------------------------
-    --  Aligning sights to crosshair
-    --  -------------------------------------------
-    --  Aiming with main sight
-    --      ACOG
-    {   dependencies =      { _owo_forwards_acog_sights, _vigilant_autogun_receivers, },
+    --      Sight Alignment
+    --          Main sight and reticle (forwards)
+    {   dependencies =      { _vigilant_autogun_receivers, _owo_forwards_acog_sights, },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0258), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_forwards_acog_sights },
+        sight =             { offset = true, position = vector3_box(0, 0.074, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_2 =           { offset = true, position = vector3_box(0, -0.046, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.026, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    --      ACOG Backwards
-    {   dependencies =      { _owo_backwards_acog_sights, _vigilant_autogun_receivers, },
+    --          Main sight and reticle (backwards)
+    {   dependencies =      { _vigilant_autogun_receivers, _owo_backwards_acog_sights, },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.026), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_backwards_acog_sights },
+        sight =             { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight_2 =           { offset = true, position = vector3_box(0, -0.046, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.026, 0.0345), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
+	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0257), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    --      SUSAT
-    {   dependencies =      { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", _vigilant_autogun_receivers, },
+    --  --------------------------------------------
+    --  SUSAT
+    --  --------------------------------------------
+    {   dependencies =      { _owo_all_susat_sights },
+        sight =             { offset = true, position = vector3_box(0, -0.06, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+    },
+    {   dependencies =      { _vigilant_autogun_receivers, "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0238), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    --  Aiming with RMR on ACOG
-    {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
-        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.100), rotation = vector3_box(0, 0, 0), },
-        no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.100), rotation = vector3_box(0, 0, 0), },
-    },
-    --  Aiming with RMR on SUSAT
+    --  Aiming with RMR
     {   dependencies =      { "owo_susat_02_top" },
         scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
@@ -1097,9 +1049,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  M203
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "owo_m203", _short_infantry_autogun_all_barrels},
         bayonet =       { offset = true, position = vector3_box(0, -0.064, -0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
@@ -1216,9 +1168,9 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
         bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  GP-25
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { "owo_gp25", _short_infantry_autogun_all_barrels},
         bayonet =       { offset = true, position = vector3_box(0, 0.06, -0.136), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
@@ -1346,9 +1298,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL SHOTGUN
 	-- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Masterkey
-    --  -------------------------------------------
+    --  --------------------------------------------
     --      A bit lower
     {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, "owo_underbarrel_shotgun_01_01"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
@@ -1437,9 +1389,9 @@ mod.mt.inject_fixes(this_variant, {
         -- Pump
         bayonetac7 =    { offset = true, position = vector3_box(0, 0.46, -0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.95, 0.7, 0.85 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  M26-MASS
-    --  -------------------------------------------
+    --  --------------------------------------------
     {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, "owo_underbarrel_shotgun_02"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.25, -0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
@@ -1494,9 +1446,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Bayonet: HISTORICAL PACK
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
 	--  M7 Bayonet
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =  { "owo_historical_bayonet_m7_01", _m16_all_barrels, },
         bayonet =       { offset = true, position = vector3_box(0, 0.158, -0.058), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
     },
@@ -1505,9 +1457,9 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.002, -0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         bayonetac2 =    { offset = true, position = vector3_box(0, -0.012, -0.002), rotation = vector3_box(0, 90, 180), scale = vector3_box(0.25, 0.825, 0.25) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
 	--  Seitengewehr 98
-    --  -------------------------------------------
+    --  --------------------------------------------
 	{   dependencies =  { "owo_historical_bayonet_seitengewehr", "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03" },
         bayonet =       { offset = true, position = vector3_box(0, 0.575, -0.06), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
     },
@@ -1516,9 +1468,9 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.002, -0.036), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.46, 0.25) },
         bayonetac2 =    { offset = true, position = vector3_box(0, 0, -0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.6, 0.2) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
 	--  Épée baïonnette modèle 1886 Lebel
-    --  -------------------------------------------
+    --  --------------------------------------------
 	{   dependencies =  { "owo_historical_bayonet_epee", "owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03" },
         bayonet =       { offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
     },

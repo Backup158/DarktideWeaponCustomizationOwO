@@ -107,6 +107,7 @@ local _owo_short_vortex_sights = "owo_holosight_02_01ss|owo_holosight_02_02ss_z1
 local _owo_all_vortex_sights = _owo_no_magnifier_vortex_sights.."|".._owo_magnifier_vortex_sights
 local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top"
+local _owo_rmr_acog_sights = "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
 local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
@@ -234,9 +235,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
 	--	M203
-	--  -------------------------------------------
+	--  --------------------------------------------
     {	dependencies =  { "owo_m203", _short_infantry_lasgun_barrels },
         bayonet =       { offset = true, position = vector3_box(0, -0.089, -0.132), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
@@ -358,9 +359,9 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
         bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
 	--	GP25
-	--  -------------------------------------------
+	--  --------------------------------------------
 	{	dependencies =  { "owo_gp25", _short_infantry_lasgun_barrels },
         bayonet =       { offset = true, position = vector3_box(0, 0.088, -0.144), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
@@ -502,9 +503,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL SHOTGUN
 	-- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Masterkey
-    --  -------------------------------------------
+    --  --------------------------------------------
     --[[
     --  Syn's Volleygun/Kantrael bodies (uses the same positioning as lasgun_p1_m1 because they're iLas bodies)
     --      THICC
@@ -624,9 +625,9 @@ mod.mt.inject_fixes(this_variant, {
         -- Pump
         bayonetac7 =    { offset = true, position = vector3_box(0, 0.46, -0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.95, 0.7, 0.85 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  M26-MASS
-    --  -------------------------------------------
+    --  --------------------------------------------
     --      Syn's Volleygun Receivers
     {	dependencies =  { "owo_underbarrel_shotgun_02",
             _syn_volleygun_receivers,
@@ -660,9 +661,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Sight: Holographic Sights + Magnifier
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  EOTech
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Alt vm patch
     {   dependencies =      { _owo_sight_2s, _owo_all_eotech_sights, },
         sight_2 =           { parent = "sight", position = vector3_box(0, 0, 0.014), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
@@ -705,9 +706,9 @@ mod.mt.inject_fixes(this_variant, {
         sight =             { offset = true, position = vector3_box(0, 0.16, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0007, -0.0333), rotation = vector3_box(0, 0, 0)},
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Vortex Razor
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Patch for alt sights
     {   dependencies =      { _owo_sight_2s, _owo_all_vortex_sights, },
         sight_2 =           { offset = true, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
@@ -747,9 +748,9 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Sight: Telescopic Sights
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     -- Trijicon ACOG
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  ACOG only
     {   dependencies =  { _owo_all_acog_sights },
         sightac1 =      { offset = true, position = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
@@ -806,9 +807,9 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  SUSAT
-    --  -------------------------------------------
+    --  --------------------------------------------
     --      Syn's Hellgun Receivers
     {   dependencies =  { _owo_all_susat_sights, _syn_volleygun_receivers, },
         sight =         { offset = true, position = vector3_box(0, 0.006, 0.175), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
@@ -839,9 +840,9 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { "owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
         sight_secondary =   { offset = true, position = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Aligning sights to crosshair
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Aiming with Main Sight
     --      Syn's Hellgun Receivers
     {   dependencies =      { "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1", _syn_volleygun_receivers, },

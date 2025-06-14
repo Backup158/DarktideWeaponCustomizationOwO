@@ -104,6 +104,7 @@ local _owo_magnifier_vortex_sights = _owo_magnifier_aligned_vortex_sights.."|"..
 local _owo_all_vortex_sights = _owo_no_magnifier_vortex_sights.."|".._owo_magnifier_vortex_sights
 local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top"
+local _owo_rmr_acog_sights = "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
@@ -226,9 +227,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
 	-- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
 	--	M203
-	--  -------------------------------------------
+	--  --------------------------------------------
     {	dependencies =  { "owo_m203", _short_infantry_lasgun_barrels },
         bayonet =       { offset = true, position = vector3_box(0, -0.089, -0.132), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
@@ -346,9 +347,9 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
         bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
 	--	GP25
-	--  -------------------------------------------
+	--  --------------------------------------------
     {	dependencies =  { "owo_gp25", _short_infantry_lasgun_barrels },
         bayonet =       { offset = true, position = vector3_box(0, 0.088, -0.144), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
@@ -486,9 +487,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Bayonet: UNDERBARREL SHOTGUN
 	-- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Masterkey
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Main Body Position
     --      A bit lower
     {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, "owo_underbarrel_shotgun_01_01"},
@@ -558,9 +559,9 @@ mod.mt.inject_fixes(this_variant, {
         -- Pump
         bayonetac7 =    { offset = true, position = vector3_box(0, 0.46, -0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.95, 0.7, 0.85 ) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  M26-MASS
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Main Body Position
     {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, "owo_underbarrel_shotgun_02"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.25, -0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
@@ -610,9 +611,9 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Sight: Holographic Sights + Magnifier
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  EOTech
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Patch to hide alt viewmodel sights
     {   dependencies =      { _owo_no_magnifier_eotech_sights, _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
@@ -628,9 +629,9 @@ mod.mt.inject_fixes(this_variant, {
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0004, -0.004), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Vortex Razor
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Patch for alt sights
     {   dependencies =      { _owo_sight_2s, _owo_all_vortex_sights, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
@@ -650,9 +651,9 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Sight: Telescopic Sights
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Trijicon ACOG
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  ACOG only
     --      Sight and Sight 2 Adjustment
     --          For whatever fucking reason, the recon body won't apply position transformations to sight_2
@@ -695,9 +696,9 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top" },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  SUSAT
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =  { "owo_susat_01|owo_susat_01_ps|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
         sight =         { offset = true, position = vector3_box(0, 0.006, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         -- Cylinder thing
@@ -719,9 +720,9 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { "owo_susat_02|owo_susat_02_z1|owo_susat_02_top" },
         sight_secondary =   { offset = true, position = vector3_box(0, 0.022, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Aligning sights to crosshair
-    --  -------------------------------------------
+    --  --------------------------------------------
     --      Aiming with main sight
     --          Backwards
     {   dependencies =      { "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1" },

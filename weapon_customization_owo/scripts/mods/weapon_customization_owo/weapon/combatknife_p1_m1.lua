@@ -137,9 +137,9 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { _owo_finger_guards },
         frontguard =    { offset = true, position = vector3_box(0, 0, 0.064), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.36, 0.36, 0.36 ), },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Knuckle Dusters
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =  { _mt_falchion_grips, _owo_trench_dagger_finger_guard_knuckles },
         frontguard =    { offset = true, position = vector3_box(0, 0.004, 0.076), rotation = vector3_box(10, 0, 0), scale = vector3_box(0.26, 0.2, 0.14 ), },
         frontguardac1 = { offset = true, position = vector3_box(0, 0.01, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.26, 0.2, 0.14 ), },
@@ -156,9 +156,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Blade: Historical Pack
     -- ######
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Trench Spike
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =  { _mt_falchion_grips, "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.014, 0.0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.0, 1.75, 1.25 ), },
     },
@@ -186,9 +186,9 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { "owo_historical_blade_trench_spike" },
         body =          { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.85, 1.0, 0.85 ), },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Gerber Mk II
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =  { _mt_falchion_grips, "owo_historical_blade_02" },
         body =          { offset = true, position = vector3_box(0, -0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.15, 1.75, 1.5 ), },
     },
@@ -219,9 +219,9 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { "owo_historical_blade_02" },
         bladeshroud =   { offset = true, position = vector3_box(0.0, 0.001, 0.042), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.04, 0.2, 0.30 ), },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Karambit
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =  { "owo_historical_blade_karambit" },
         body =          { offset = true, position = vector3_box(0, -0.0, -0.014), rotation = vector3_box(9, 0, 180), scale = vector3_box(0.4, 0.188, 0.14 ), },
         bladeshroud =   { offset = true, position = vector3_box(0, -0.0246, 0.049), rotation = vector3_box(-48, 0, 180), scale = vector3_box(0.18, 0.1, 0.078 ), },
@@ -238,15 +238,15 @@ mod.mt.inject_fixes(this_variant, {
         body =          { offset = true, position = vector3_box(0, 0.003, -0.005), rotation = vector3_box(-9, 0, 0), scale = vector3_box(0.4, 0.13, 0.084 ), },
         bladeshroud =   { offset = true, position = vector3_box(0, 0.017, 0.031), rotation = vector3_box(48, 0, 0), scale = vector3_box(0.18, 0.054, 0.058 ), },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Tactical Tanto
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =  { _owo_tactical_tanto_blades },
         body =          { offset = true, position = vector3_box(0, -0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.35, 0.35, 0.19 ), },
     },
-    --  -------------------------------------------
+    --  --------------------------------------------
     --  Tactical Box Cutter
-    --  -------------------------------------------
+    --  --------------------------------------------
     {   dependencies =  { "owo_historical_blade_box_cutter" },
         body =          { offset = true, position = vector3_box(0, -0.0, -0.094), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.35, 0.19 ), },
     },
