@@ -4437,7 +4437,7 @@ function mod.fixes_owo_telescopic_sight(variant_id)
 			-- Main sight body
 			sightac7 =      	{ offset = true, position = vector3_box(0, -0.008, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
 			-- Lenses
-			lens =          	{ offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.85, 0.3, 0.85), data = {lens = 1}},
+			lens =          	{ offset = false, parent = "sightac7", position = vector3_box(0, 0.096, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.924, 0.3, 0.924), data = {lens = 1}},
 			lens_2 =        	{ offset = false, parent = "sightac7", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
 		},
 		-- SUSAT with red dot
