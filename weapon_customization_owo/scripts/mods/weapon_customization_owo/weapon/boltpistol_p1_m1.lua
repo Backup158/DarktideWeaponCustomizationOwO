@@ -290,13 +290,11 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { _owo_forwards_acog_sights },
         rail =              { offset = true, position = vector3_box(0, 0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.686, 1), },
         sight =             { offset = true, position = vector3_box(0, 0.13, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.458, 1) },
-        sight_2 =           { offset = true, position = vector3_box(0, 0.0, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { position = vector3_box(0.003, 0.04, -0.028), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_backwards_acog_sights },
         rail =              { offset = true, position = vector3_box(0, 0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.686, 1), },
         sight =             { offset = true, position = vector3_box(0, 0.08, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.458, 1) },
-        sight_2 =           { offset = true, position = vector3_box(0, 0.0, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { position = vector3_box(0.003, 0.04, -0.028), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  --------------------------------------------
