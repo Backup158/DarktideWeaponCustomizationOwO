@@ -456,6 +456,9 @@ mod.mt.inject_fixes(this_variant, {
     -- Bayonet: DREG GUNNER BAYONET
     -- ######
     -- Patches
+    {   dependencies =  { "owo_dreg_barrel_01", "owo_dreg_bayonet_01" },
+        bayonet = { offset = true,   position = vector3_box(0, 0.699, -0.095),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.5, 1.7, 3.0) },
+    },
     
     -- ######
     -- Grip: FIN GRIP

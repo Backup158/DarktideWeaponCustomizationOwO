@@ -1991,9 +1991,9 @@ function mod.fixes_owo_dreg_gunner_bayonet(variant_id)
 	mod.mt.inject_fixes(variant_id, {
 		{   dependencies =  { "owo_dreg_bayonet_01", },
 			-- Front
-			bayonetac1 =    { offset = true,     position = vector3_box(0, 0.55, -0.055),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(0.35, 0.275, 0.35) },
+			bayonetac1 =    { offset = true,     position = vector3_box(0, 0.0, -0.021),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(0.35, 0.275, 0.35) },
 			-- Rear
-			bayonetac2 =    { offset = true,     position = vector3_box(0, 0.55, -0.069),    rotation = vector3_box(90, 0, 0),   scale = vector3_box(0.35, 0.225, 0.075) },
+			bayonetac2 =    { offset = true,     position = vector3_box(0, 0.0, -0.039),    rotation = vector3_box(90, 0, 0),   scale = vector3_box(0.35, 0.225, 0.075) },
 		},
 	})
 end
