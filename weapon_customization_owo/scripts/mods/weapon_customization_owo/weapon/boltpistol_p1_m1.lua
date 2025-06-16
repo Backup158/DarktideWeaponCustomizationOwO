@@ -74,7 +74,7 @@ mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
 mod.owo_holosight(this_variant, "sight", "rail")
-mod.owo_telescopic_sight(this_variant, "sight")
+mod.owo_telescopic_sight(this_variant, "sight", "rail")
 
 mod.owo_tactical_stock(this_variant, "stock")
 
@@ -97,6 +97,7 @@ local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_
 local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top"
 local _owo_rmr_acog_sights = "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
+local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
 
 local _short_braced_autogun_mt_barrels = "bagun_barrel_01|bagun_barrel_05|bagun_barrel_06|bagun_barrel_07|bagun_barrel_08"
@@ -272,6 +273,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Sight: Telescopic Sights
     -- ######
+    --      ACOG and Rail: (1, 1, 1) and (1, 0.686, 1) --> (1, 1.458, 1)
     --  --------------------------------------------
     --  Trijicon ACOG
     --  --------------------------------------------
@@ -282,16 +284,14 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { position = vector3_box(0.006, 0.001, -0.103), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_forwards_acog_sights },
-        sight =             { offset = true, position = vector3_box(0, 0.07, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        lens =              { offset = true, parent = "sight", position = vector3_box(0, 0.122, 0.0325), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =            { offset = true, parent = "sight", position = vector3_box(0, -0.003, 0.0355), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        rail =              { offset = true, position = vector3_box(0, 0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.686, 1), },
+        sight =             { offset = true, position = vector3_box(0, 0.13, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.458, 1) },
         sight_2 =           { offset = true, position = vector3_box(0, 0.0, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { position = vector3_box(0.003, 0.04, -0.028), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_backwards_acog_sights },
-        sight =             { offset = true, position = vector3_box(0, 0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        lens =              { offset = true, parent = "sight", position = vector3_box(0, 0.072, 0.0325), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
-	    lens_2 =            { offset = true, parent = "sight", position = vector3_box(0, -0.053, 0.0355), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+        rail =              { offset = true, position = vector3_box(0, 0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.686, 1), },
+        sight =             { offset = true, position = vector3_box(0, 0.08, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.458, 1) },
         sight_2 =           { offset = true, position = vector3_box(0, 0.0, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { position = vector3_box(0.003, 0.04, -0.028), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
@@ -304,7 +304,8 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { position = vector3_box(0.006, 0.04, -0.09), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_all_susat_sights },
-        sight =             { offset = true, position = vector3_box(0, -0.03, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.686, 1), },
+        sight =             { offset = true, position = vector3_box(0, -0.03, 0.044), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.458, 1) },
         scope_offset =      { position = vector3_box(0.002, 0.04, -0.026), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
 
