@@ -4410,7 +4410,7 @@ function mod.fixes_owo_telescopic_sight(variant_id)
 			-- Cable
 			sightac7 =      	{ offset = true, position = vector3_box(0, -0.018, 0.066), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.515, 0.195, 0.525) },
 			-- Reticle
-			sight_2 =           { offset = false, parent = "sight", position = vector3_box(0, -0.04, 0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = { {"sight_2", 5,6 }, }, animation_wait_attach = { "rail" }, },
+			sight_2 =           { offset = false, parent = "sight", position = vector3_box(0, -0.1, 0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), animation_wait_attach = { "rail" }, },
 			-- Lenses
 			lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.026, 0.0325), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.18, 0.3, 1.18), data = {lens = 1}},
 	    	lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0325), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},

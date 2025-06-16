@@ -916,18 +916,18 @@ mod.mt.inject_fixes(this_variant, {
     --      Sight Alignment
     --          Main sight and reticle (forwards)
     {   dependencies =      { _vigilant_autogun_receivers, _owo_forwards_acog_sights, },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0258), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.033), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_forwards_acog_sights },
         sight =             { offset = true, position = vector3_box(0, 0.074, 0.024), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.031), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Main sight and reticle (backwards)
     {   dependencies =      { _vigilant_autogun_receivers, _owo_backwards_acog_sights, },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.026), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0329), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_backwards_acog_sights },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0257), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.033), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  --------------------------------------------
     --  SUSAT
@@ -937,14 +937,12 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
     },
-    {   dependencies =      { _vigilant_autogun_receivers, "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", },
+    {   dependencies =      { _vigilant_autogun_receivers, _owo_all_susat_sights, },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0238), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-    },
-    {   dependencies =      { "owo_susat_01|owo_susat_01_z1|owo_susat_02|owo_susat_02_z1", },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_all_susat_sights },
         sight =             { offset = true, position = vector3_box(0, -0.06, 0.046), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     
     -- ######
