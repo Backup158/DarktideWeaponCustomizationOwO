@@ -211,7 +211,7 @@ mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_holosight(this_variant)
-mod.fixes_owo_telescopic_sight(this_variant)
+mod.fixes_owo_telescopic_sight(this_variant, "sight", "receiver")
 
 -- #################
 -- Custom Fixes
@@ -761,12 +761,12 @@ mod.mt.inject_fixes(this_variant, {
     },
 	{   dependencies =      { _syn_volleygun_receivers, _owo_forwards_acog_sights, },
         rail =              { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
-        sight =             { offset = true, position = vector3_box(0, 0.108, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =             { offset = true, parent = "rail", position = vector3_box(0, 0.108, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.002), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _syn_volleygun_receivers, _owo_backwards_acog_sights, },
         rail =              { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
-        sight =             { offset = true, position = vector3_box(0, 0.046, 0.154), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =             { offset = true, parent = "rail", position = vector3_box(0, 0.046, 0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.002), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Else: Recon Body
@@ -776,6 +776,7 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.11), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_all_acog_sights, },
+        rail =              { automatic_equip = { rail = "rail_default"}, },
         sight =             { offset = true, position = vector3_box(0, 0.138, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
@@ -784,21 +785,21 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --      Syn's Hellgun Receivers
     {   dependencies =      { _syn_volleygun_receivers, "owo_susat_02_top", },
-        scope_offset =      { offset = true, position = vector3_box(0, 0.2, -0.0385), rotation = vector3_box(0, 0, 0), },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.2, -0.05), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0, 0.2, -0.05), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _syn_volleygun_receivers, _owo_all_susat_sights, },
-        sight =             { offset = true, position = vector3_box(0, 0.006, 0.175), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         rail =              { offset = true, position = vector3_box(0, -0.01, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.0), },
+        sight =             { offset = true, parent = "rail", position = vector3_box(0, 0.006, 0.048), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.03, 0.013), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Else: Recon Receivers
-    --      And default helpers
     {   dependencies =      { "owo_susat_02_top", },
         scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_all_susat_sights },
+        rail =              { automatic_equip = { rail = "rail_default"}, },
         sight =             { offset = true, position = vector3_box(0, 0.016, 0.221), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
