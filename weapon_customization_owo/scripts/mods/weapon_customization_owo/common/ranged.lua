@@ -208,6 +208,7 @@ mod.wc.bayonetac2_list = {
 mod.wc.add_custom_attachments.bayonetac3 = "bayonetac3_list"
 mod.wc.bayonetac3_list = {
 	"owo_bayonetac3_default",
+	"owo_dreg_bayonet_lug_01_01",
 	"owo_m203_helper_03",
 	"owo_underbarrel_shotgun_helper_03",
 	"owo_underbarrel_shotgun_helper_03_02",
@@ -215,6 +216,7 @@ mod.wc.bayonetac3_list = {
 mod.wc.add_custom_attachments.bayonetac4 = "bayonetac4_list"
 mod.wc.bayonetac4_list = {
 	"owo_bayonetac4_default",
+	"owo_dreg_bayonet_lug_02_01",
 	"owo_m203_helper_04",
 	"owo_underbarrel_shotgun_helper_04",
 }
@@ -1962,6 +1964,12 @@ function mod.owo_dreg_gunner_bayonet(variant_id, given_type, given_parent)
 	mod.inject_attachments_owo(variant_id, "bayonetac2", {
 		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Bayonet Hooker Ass", no_randomize = true},
 	})
+	mod.inject_attachments_owo(variant_id, "bayonetac3", {
+		{id = "owo_dreg_bayonet_lug_01_01", name = "OwO Dreg Bayonet Lug 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac4", {
+		{id = "owo_dreg_bayonet_lug_02_01", name = "OwO Dreg Bayonet Lug 2", no_randomize = true},
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -1970,6 +1978,7 @@ function mod.owo_dreg_gunner_bayonet(variant_id, given_type, given_parent)
 			mesh_move = false, parent = current_parent, 
 			automatic_equip = {
 				bayonetac1 = "owo_dreg_bayonet_front_01", bayonetac2 = "owo_dreg_bayonet_rear_01", 
+				bayonetac3 = "owo_dreg_bayonet_lug_01_01", bayonetac4 = "owo_dreg_bayonet_lug_02_01", 
 			},
 			hide_mesh = {
 				{ current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }, 
@@ -1983,6 +1992,14 @@ function mod.owo_dreg_gunner_bayonet(variant_id, given_type, given_parent)
 		owo_dreg_bayonet_rear_01 = {
 			model = _item_melee.."/blades/combat_blade_blade_05", type = "bayonetac2", 
 			mesh_move = false, parent = current_type
+		},
+		owo_dreg_bayonet_lug_01_01 = {
+			model = _item.."/trinkets/trinket_hook_02", type = "bayonetac3", 
+			mesh_move = false, parent = current_type
+		}, 
+		owo_dreg_bayonet_lug_02_01 = {
+			model = _item.."/trinkets/trinket_hook_02", type = "bayonetac4", 
+			mesh_move = false, parent = current_type
 		}, 
 	})
 end
@@ -1991,9 +2008,12 @@ function mod.fixes_owo_dreg_gunner_bayonet(variant_id)
 	mod.mt.inject_fixes(variant_id, {
 		{   dependencies =  { "owo_dreg_bayonet_01", },
 			-- Front
-			bayonetac1 =    { offset = true,     position = vector3_box(0, 0.0, -0.021),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(0.35, 0.275, 0.35) },
+			bayonetac1 =    { offset = true,     position = vector3_box(0, 0.0, -0.029),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(0.35, 0.275, 0.35) },
 			-- Rear
-			bayonetac2 =    { offset = true,     position = vector3_box(0, 0.0, -0.039),    rotation = vector3_box(90, 0, 0),   scale = vector3_box(0.35, 0.225, 0.075) },
+			bayonetac2 =    { offset = true,     position = vector3_box(0, 0.0, -0.048),    rotation = vector3_box(90, 0, 0),   scale = vector3_box(0.35, 0.225, 0.075) },
+			-- Lugs
+			bayonetac3 =    { offset = true,     position = vector3_box(0, 0.05, -0.009),    rotation = vector3_box(-180, 0, -180),   scale = vector3_box(0.55, 1, 0.85) },
+			bayonetac4 =    { offset = true,     position = vector3_box(0, 0.005, -0.009),    rotation = vector3_box(-180, 0, -180),   scale = vector3_box(0.55, 1, 0.85) },
 		},
 	})
 end
