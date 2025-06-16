@@ -1,5 +1,7 @@
-# 2025-06-
+# 2025-06-16
 v2.0.1
+
+**KNOWN ISSUE**: Crosshairs are NOT aligned for a vast majority of Holographic Sights and Telescopic Sights (ACOG/SUSAT). I only physically set them up for this update. I will realign these at a later point. Helbores and Revolvers should be fine.
 
 I started repatching things broken by the refactor, and I took the opportunity to adjust some parts I've been meaning to do for ages.
 
@@ -13,18 +15,27 @@ Ha...
     - Allowed different parents
     - Realigned (physically) Holographic Sights
         - Autoguns, Bolters, Bistols, iLas, Helbores, Recons, CShotguns, Revolvers
-        - Probably unaligned the crosshair parts. I'll get back to that later lol
+        - Probably unaligned the crosshair parts. I'll get back to that later lol (see known issue)
     - Refactored Holosight fixes to be more optimized (not that it'll be noticeable, especially since the universal fixes kinda made it worse in the first place)
-        - moved alt vm check to allow for faster short circuiting
+        - Shifted dependencies for the Alternative Viewmodels checks to allow for faster short circuiting (more efficient for the game)
         - merged position and alignment, since they're separated in the same way (so it wont run the same check twice)
-    - Added rails
-        - Recons (syn_volleygun receivers)
+    - Added rails to some of them. idk all but for sure i added it to:
+        - Recon Lasguns when using syn_volleygun receivers
+        - Combat Shotguns
     - Fixed missing side magnifier for short Vortex
-- Refactored Telescopic Scopes (ACOG/SUSAT)
+- Reworked Telescopic Scopes (ACOG/SUSAT)
     - Allowed different parents
     - Realigned (physically), same as holos
-    - Refactored fixes to be easier to add
-    - Added rails to idk lol
+        - Autoguns, Bolters, Bistols, iLas, Helbores, Recons, CShotguns, Revolvers
+        - Did not fix crosshair positioning in relation to this (see known issue at top)
+    - Refactored fixes to be easier to add to different weapons, with a bit of optimization to make up for the unnoticable yet present performance hit
+        - Unified sight_2 helper positions for all affected weapons, so an ACOG on a autogun and recon lasgun, for example, would have the same reticle size (before, the reticle may have been further forwards on one or something)
+        - Unified lens positioning for all affected weapons
+        - Shifted dependencies for the Alternative Viewmodels checks to allow for faster short circuiting (more efficient for the game)
+        - Merged positioning and crosshair alignment fixes for efficiency
+    - Added rails to some of them. idek for sure
+        - Combat Shotguns
+    - Increased size of front lens for SUSAT so it's more snug (so you see less of the brass rim inside)
 - Reworked Dreg Gunner Bayonet
     - Added bayonet lugs so they're not floating anymore
     - Restructured shape so it's easier to make patches
