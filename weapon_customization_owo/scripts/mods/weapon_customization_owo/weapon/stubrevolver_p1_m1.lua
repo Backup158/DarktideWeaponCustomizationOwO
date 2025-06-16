@@ -68,7 +68,7 @@ mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
 mod.owo_holosight(this_variant, "sight", "rail")
-mod.owo_telescopic_sight(this_variant, "sight")
+mod.owo_telescopic_sight(this_variant, "sight", "rail")
 
 -- ############################################
 -- Define Variables for Fixes
