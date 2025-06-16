@@ -446,7 +446,7 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --      Aiming with RMR on SUSAT
     {   dependencies =      { "owo_susat_02_top" },
-        --scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.094), rotation = vector3_box(0, 0, 0), },
+        scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.094), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.3, -0.094), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_all_susat_sights },

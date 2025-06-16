@@ -1956,23 +1956,44 @@ function mod.owo_dreg_gunner_bayonet(variant_id, given_type, given_parent)
 		{id = "owo_dreg_bayonet_01", name = "OwO Dreg Gunner Bayonet"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
+		{id = "owo_dreg_bayonet_front_01", name = "OwO Dreg Bayonet Saw Head", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "bayonetac2", {
 		{id = "owo_dreg_bayonet_rear_01", name = "OwO Dreg Bayonet Hooker Ass", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_dreg_bayonet_01 = {
-			model = _item_melee.."/blades/combat_blade_blade_03", type = current_type, 
+			model = _item_ranged.."/bayonets/bayonet_01", type = current_type, 
 			mesh_move = false, parent = current_parent, 
 			automatic_equip = {
-				bayonetac1 = "owo_dreg_bayonet_rear_01"
-			}
+				bayonetac1 = "owo_dreg_bayonet_front_01", bayonetac2 = "owo_dreg_bayonet_rear_01", 
+			},
+			hide_mesh = {
+				{ current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }, 
+			},
 		},
 		-- ### Helper Parts ###
-		owo_dreg_bayonet_rear_01 = {
-			model = _item_melee.."/blades/combat_blade_blade_05", type = "bayonetac1", 
-			mesh_move = false, parent = current_parent
+		owo_dreg_bayonet_front_01 = {
+			model = _item_melee.."/blades/combat_blade_blade_03", type = "bayonetac1", 
+			mesh_move = false, parent = current_type
 		}, 
+		owo_dreg_bayonet_rear_01 = {
+			model = _item_melee.."/blades/combat_blade_blade_05", type = "bayonetac2", 
+			mesh_move = false, parent = current_type
+		}, 
+	})
+end
+function mod.fixes_owo_dreg_gunner_bayonet(variant_id)
+
+	mod.mt.inject_fixes(variant_id, {
+		{   dependencies =  { "owo_dreg_bayonet_01", },
+			-- Front
+			bayonetac1 =    { offset = true,     position = vector3_box(0, 0.55, -0.055),    rotation = vector3_box(-90, 0, 0),  scale = vector3_box(0.35, 0.275, 0.35) },
+			-- Rear
+			bayonetac2 =    { offset = true,     position = vector3_box(0, 0.55, -0.069),    rotation = vector3_box(90, 0, 0),   scale = vector3_box(0.35, 0.225, 0.075) },
+		},
 	})
 end
 
