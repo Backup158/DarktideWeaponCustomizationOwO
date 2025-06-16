@@ -9,18 +9,22 @@ Haha.
 
 Ha...
 
-- Refactored Holographic Sights to allow different parents
-- Realigned (physically) Holographic Sights
-    - Autoguns, Bolters, Bistols, iLas, Helbores, Recons, CShotguns, Revolvers
-    - Probably unaligned the crosshair parts. I'll get back to that later lol
-- Refactored Holosight fixes to be more optimized (not that it'll be noticeable, especially since the universal fixes kinda made it worse in the first place)
-    - moved alt vm check to allow for faster short circuiting
-    - merged position and alignment, since they're separated in the same way (so it wont run the same check twice)
-- Added rails to holosights
-    - Recons (syn_volleygun receivers)
-- CONVERT ACOGS TO RAIL PARENT. SAME PARENT POSITION ISSUE WITH THE POMMEL VS REFLEX
-
-^^^^^^^^^^^
+- Reworked Holographic Sights
+    - Allowed different parents
+    - Realigned (physically) Holographic Sights
+        - Autoguns, Bolters, Bistols, iLas, Helbores, Recons, CShotguns, Revolvers
+        - Probably unaligned the crosshair parts. I'll get back to that later lol
+    - Refactored Holosight fixes to be more optimized (not that it'll be noticeable, especially since the universal fixes kinda made it worse in the first place)
+        - moved alt vm check to allow for faster short circuiting
+        - merged position and alignment, since they're separated in the same way (so it wont run the same check twice)
+    - Added rails
+        - Recons (syn_volleygun receivers)
+    - Fixed missing side magnifier for short Vortex
+- Refactored Telescopic Scopes (ACOG/SUSAT)
+    - Allowed different parents
+    - Realigned (physically), same as holos
+    - Refactored fixes to be easier to add
+    - Added rails to idk lol
 - Reworked Dreg Gunner Bayonet
     - Added bayonet lugs so they're not floating anymore
     - Restructured shape so it's easier to make patches
