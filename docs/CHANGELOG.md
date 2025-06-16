@@ -21,7 +21,9 @@ Ha...
 - CONVERT ACOGS TO RAIL PARENT. SAME PARENT POSITION ISSUE WITH THE POMMEL VS REFLEX
 
 ^^^^^^^^^^^
-
+- Reworked Dreg Gunner Bayonet
+    - Added bayonet lugs so they're not floating anymore
+    - Restructured shape so it's easier to make patches
 - *Actually* made reload callback no longer require Discord mode
 
 # 2025-06-08
