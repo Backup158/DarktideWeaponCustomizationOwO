@@ -385,7 +385,7 @@ mod.mt.inject_fixes(this_variant, {
         rail =              { offset = true, position = vector3_box(0, 0.062, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
         sight =             { offset = true, position = vector3_box(0, 0.13, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.029), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.029), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { _owo_magnifier_side_eotech_sights, },
         rail =              { offset = true, position = vector3_box(0, 0.062, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },

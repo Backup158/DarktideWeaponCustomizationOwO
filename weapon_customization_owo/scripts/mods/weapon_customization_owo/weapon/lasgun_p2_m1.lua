@@ -1072,20 +1072,20 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =      { _owo_no_magnifier_eotech_sights },
         sight =             { offset = true, position = vector3_box(0, 0.03, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     --          Using pommel as base
     {   dependencies =      { _owo_magnifier_aligned_eotech_sights },
         sight =             { offset = true, position = vector3_box(0, 0.1, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Using sight as base
     {   dependencies =      { _owo_magnifier_side_eotech_sights },
         sight =             { offset = true, position = vector3_box(0, 0.1, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  --------------------------------------------
     --  Vortex Razor
@@ -1132,7 +1132,7 @@ mod.mt.inject_fixes(this_variant, {
 		lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0325), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.099, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =           { offset = true, position = vector3_box(0, -0.066, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0435), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0435), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
 	{   dependencies =      { _owo_sight_2s, _owo_forwards_acog_sights, },
         sight_2 =           { offset = true, position = vector3_box(0, -0.066, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
@@ -1142,7 +1142,7 @@ mod.mt.inject_fixes(this_variant, {
 		lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0325), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.03, 0.3, 1.03), data = {lens = 1}},
 	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.099, 0.0315), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
         sight_2 =           { offset = true, position = vector3_box(0, 0.072, 0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0435), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0435), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
 	--  --------------------------------------------
     --  SUSAT
@@ -1154,7 +1154,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =      { _owo_all_susat_sights, },
         sight =             { offset = true, position = vector3_box(0, 0.01, 0.160), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.0001, -0.0405), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0405), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
 
 	-- ######
