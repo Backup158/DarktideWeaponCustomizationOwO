@@ -277,6 +277,10 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  Trijicon ACOG
     --  --------------------------------------------
+    --  Patch to hide alt viewmodel sights
+    {   dependencies =      { _owo_sight_2s, _owo_all_acog_sights, },
+        sight_2 =           { offset = false, parent = "sight", position = vector3_box(0, -0.04, 0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
+    },
     --  ACOG only
     --      Aiming with RMR on ACOG
     {   dependencies =      { "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
