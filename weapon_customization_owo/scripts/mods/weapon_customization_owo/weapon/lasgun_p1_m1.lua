@@ -682,7 +682,7 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.3, -0.079), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_all_susat_sights },
-        sight =             { offset = true, position = vector3_box(0, 0.006, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        sight =             { offset = true, position = vector3_box(0, 0.006, 0.048), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.04, -0.016), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
 
