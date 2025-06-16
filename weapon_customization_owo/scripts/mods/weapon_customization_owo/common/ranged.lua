@@ -186,7 +186,7 @@ mod.wc.foregripac3_list = {
 mod.wc.add_custom_attachments.bayonetac1 = "bayonetac1_list"
 mod.wc.bayonetac1_list = {
 	"owo_bayonetac1_default",
-	"owo_dreg_bayonet_rear_01",
+	"owo_dreg_bayonet_front_01",
 	"owo_historical_bayonet_m7_helper_01",
 	"owo_historical_bayonet_seitengewehr_helper_01",
 	"owo_historical_bayonet_epee_helper_01",
@@ -197,6 +197,7 @@ mod.wc.bayonetac1_list = {
 mod.wc.add_custom_attachments.bayonetac2 = "bayonetac2_list"
 mod.wc.bayonetac2_list = {
 	"owo_bayonetac2_default",
+	"owo_dreg_bayonet_rear_01",
 	"owo_historical_bayonet_m7_helper_02",
 	"owo_historical_bayonet_seitengewehr_helper_01",
 	"owo_historical_bayonet_epee_helper_01",
