@@ -245,6 +245,7 @@ mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_telescopic_sight(this_variant)
+mod.fixes_owo_pu_scope(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -1154,29 +1155,9 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	{	dependencies =      {"owo_pu_scope_01|owo_pu_scope_02",},
 		sight =             { offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
-		-- Sight body
-		sightac1 =          { offset = true, position = vector3_box(0, 0.192 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
-		sightac7 =          { offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-		-- Crosshair
-		sightac2 =          { offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
-		sightac3 =          { offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
-		sightac4 =          { offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
-		-- Knobs
-		sightac5 =          { offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
-		sightac6 =          { offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
-        -- Lens
-        lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.162, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 1}},
-	    lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
 		-- Aligning to Crosshair
         --no_scope_offset =   { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
 		scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-	},
-	-- Riser alignment
-	{	dependencies = {"owo_pu_scope_01",},
-		sight_secondary = { offset = true, position = vector3_box(0, 0.104, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
-	},
-	{	dependencies = {"owo_pu_scope_02",},
-		sight_secondary = { offset = true, position = vector3_box(0, 0.064, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.67, 0.4, 0.5 ) },
 	},
 })
 

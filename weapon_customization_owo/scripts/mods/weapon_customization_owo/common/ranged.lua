@@ -4522,9 +4522,10 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 			},
 		},
 		-- ### Helper Parts ###
+		-- Scope body
 		owo_pu_scope_helper_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = "sightac1", 
-			mesh_move = false, parent = current_parent,
+			mesh_move = false, parent = current_type,
 		},
 		-- Crosshair
 		owo_pu_scope_helper_02 = {
@@ -4570,6 +4571,49 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 		},]]
 	})
 	
+end
+function mod.fixes_owo_pu_scope(variant_id) 
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Scope: SOVIET PU SCOPE
+		-- ######
+		-- Purposely duplicated the copy pasted code for checks efficiency
+		{	dependencies =  	{ "owo_pu_scope_01"},
+			-- Scope body
+			sightac1 = 			{ offset = true, position = vector3_box(0, 0.2 , 0.0), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			sightac7 = 			{ offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			-- Crosshair
+			sightac2 = 			{ offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+			sightac3 = 			{ offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+			sightac4 = 			{ offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+			-- Knobs
+			sightac5 = 			{ offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
+			sightac6 = 			{ offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
+			-- Lenses
+			lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.162, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 1}},
+			lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+			-- Riser
+			sight_secondary = { offset = true, position = vector3_box(0, 0.016, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
+		},
+		{	dependencies =  	{ "owo_pu_scope_02"},
+			-- Scope body
+			sightac1 = 			{ offset = true, position = vector3_box(0, 0.2 , 0.0), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			sightac7 = 			{ offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			-- Crosshair
+			sightac2 = 			{ offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+			sightac3 = 			{ offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+			sightac4 = 			{ offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+			-- Knobs
+			sightac5 = 			{ offset = true, position = vector3_box(0, 0.13, 0.03), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.5, 0.5, 0.2 ) },
+			sightac6 = 			{ offset = true, position = vector3_box(0.03, 0.095, 0), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.5, 0.5, 0.2 ) },
+			-- Lenses
+			lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.162, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 1}},
+			lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
+			-- Riser
+			sight_secondary = 	{ offset = true, position = vector3_box(0, -0.036, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.67, 0.4, 0.5 ) },
+		},
+	})
+
 end
 
 -- Sight_2: Invisible
