@@ -155,6 +155,7 @@ local _m16a2_barrels = "owo_m16_barrel_a2|owo_m16_barrel_t_a2|owo_m16_barrel_n_a
 local _m16_normal_post_barrels = "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2"
 local _m16_tall_post_barrels = "owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2"
 local _m16_no_post_barrels = "owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
+local _owo_mas_helbore_receivers = "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"
 
 local _short_braced_autogun_mt_barrels = "bagun_barrel_01|bagun_barrel_05|bagun_barrel_06|bagun_barrel_07|bagun_barrel_08"
 local _long_braced_autogun_mt_barrels = "bagun_barrel_03|bagun_barrel_04"
@@ -313,22 +314,18 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Receiver: HELBORE MAS-49
 	-- ######
-	{	dependencies =  { "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05" },
-        receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-    },
     {	dependencies =  { "owo_helbore_mas49_01_s" },
         receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.69, 1, 1 ) },
     },
-    {	dependencies =  { "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"},
+    {	dependencies =  { _owo_mas_helbore_receivers },
+    receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
         receiverac1 =   { offset = true, position = vector3_box(0.031, -0.016, 0.022), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.518, 0.573, 0.545 ) },
         receiverac2 =   { offset = true, position = vector3_box(0.046, 0.18, 0.096), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.755, 0.755, 0.15 ) },
         stock =         { offset = true, position = vector3_box(0, -0.042, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
     --  Patch for MT Helbore grip
-    {	dependencies =  { "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s",
-            "hlasgun_grip_01|hlasgun_grip_02|hlasgun_grip_03"
-        },
-        grip = { offset = true, position = vector3_box(0, -0.006, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    {	dependencies =  { _owo_mas_helbore_receivers, "hlasgun_grip_01|hlasgun_grip_02|hlasgun_grip_03", },
+        grip =          { offset = true, position = vector3_box(0, -0.006, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
 
     -- ######
@@ -950,26 +947,22 @@ mod.mt.inject_fixes(this_variant, {
 	-- Sight: SOVIET PU SCOPE
 	-- ######
     --  Position for MAS bodies
-    {	dependencies =  { "owo_pu_scope_01|owo_pu_scope_02", 
-            "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s",
-        },
-        sight = 	    { offset = true, position = vector3_box(0, -0.028, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+    {	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02", _owo_mas_helbore_receivers, },
+        sight = 	        { offset = true, position = vector3_box(0, -0.028, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
         -- Scope body
-        sightac1 =      { offset = true, position = vector3_box(0, 0.166 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
-        sightac7 =      { offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        sightac1 =          { offset = true, position = vector3_box(0, 0.166 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+        sightac7 =          { offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
-	{	dependencies =  { "owo_pu_scope_01|owo_pu_scope_02"},
-        sight = 	  { offset = true, position = vector3_box(0, -0.09, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+	{	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02"},
+        sight = 	        { offset = true, position = vector3_box(0, -0.09, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
         -- Aligning with Crosshair
         --no_scope_offset =   { offset = true, position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true },
 
     },
     -- Riser alightment
-    {	dependencies =  { "owo_pu_scope_01", 
-            "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s",
-        },
-        sight_secondary = { offset = true, position = vector3_box(0, 0.066, 0.096), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
+    {	dependencies =      { "owo_pu_scope_01", _owo_mas_helbore_receivers },
+        sight_secondary =   { offset = true, position = vector3_box(0, 0.066, 0.096), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
     },
     
 
