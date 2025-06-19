@@ -427,14 +427,8 @@ mod.wc.sightac7_list = {
 	"owo_m16_sight_helper_07",
 	"owo_acog_sight_helper_07",
 }
--- SIGHT_2
-mod.mt.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sight_2 is called
-	"owo_alt_viewmodel_01",
-	"owo_alt_viewmodel_02",
-	"owo_alt_viewmodel_03",
-	"owo_alt_viewmodel_04",
-	"owo_alt_viewmodel_05",
-})
+--			sight_secondary is NOT sight_2
+--				it's basically like sightac1, with sight_secondary_ac1 being sightac1_ac1
 mod.wc.add_custom_attachments.sight_secondary = "sight_secondary_list"
 mod.wc.sight_secondary_list = {
 	"owo_sight_secondary_default",
@@ -452,6 +446,45 @@ mod.wc.sight_secondary_ac2_list = {
 	"owo_sight_secondary_ac2_default",
 	"owo_holosight_sight_secondary_helper_02",
 	--"owo_pu_scope2_helper_02",
+}
+-- SIGHT_2
+mod.mt.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sight_2 is called
+	"owo_alt_viewmodel_01",
+	"owo_alt_viewmodel_02",
+	"owo_alt_viewmodel_03",
+	"owo_alt_viewmodel_04",
+	"owo_alt_viewmodel_05",
+	"owo_crosshair_german_01",
+	"owo_crosshair_german_01h",
+})
+mod.wc.add_custom_attachments.sight_2_ac1 = "sight_2_ac1_list"
+mod.wc.sight_2_ac1_list = {
+	"owo_sight_2_ac1_default",
+	"owo_crosshair_ac1_block",
+	"owo_crosshair_ac1_obelisk",
+}
+mod.wc.add_custom_attachments.sight_2_ac2 = "sight_2_ac2_list"
+mod.wc.sight_2_ac2_list = {
+	"owo_sight_2_ac2_default",
+	"owo_crosshair_ac2_block",
+	"owo_crosshair_ac2_obelisk",
+}
+mod.wc.add_custom_attachments.sight_2_ac3 = "sight_2_ac3_list"
+mod.wc.sight_2_ac3_list = {
+	"owo_sight_2_ac3_default",
+	"owo_crosshair_ac3_block",
+	"owo_crosshair_ac3_obelisk",
+}
+mod.wc.add_custom_attachments.sight_2_ac4 = "sight_2_ac4_list"
+mod.wc.sight_2_ac4_list = {
+	"owo_sight_2_ac4_default",
+	"owo_crosshair_ac4_block",
+	"owo_crosshair_ac4_obelisk",
+}
+mod.wc.add_custom_attachments.sight_2_ac5 = "sight_2_ac5_list"
+mod.wc.sight_2_ac5_list = {
+	"owo_sight_2_ac5_default",
+	"owo_crosshair_ac5_dot",
 }
 -- RECEIVER
 --[[
@@ -4629,38 +4662,82 @@ function mod.owo_reticle_helper(variant_id)
 	})
 end
 
--- Sight_2: Reticle only
--- fuck it. i'll just use the ones mt already added and hide the mesh in the weapon classes
---[[function mod.owo_reticle_helper(variant_id)
-
-	-- Adding to existing table, where empty sight is already included
+-- Sight_2: Crosshairs
+function mod.owo_scope_crosshair(variant_id)
 	mod.inject_attachments_owo(variant_id, "sight_2", {
-		-- {id = "owo_reticle_helper_empty", name = "Empty sight_2"},
-		{id = "owo_reticle_helper_01", name = "Reticle 1 (·)"},
-		{id = "owo_reticle_helper_02", name = "Reticle 2 [·]"},
-		{id = "owo_reticle_helper_03", name = "Reticle 3 [+]"},
+		-- fuck it. i'll just use the ones mt already added and hide the mesh in the weapon classes
+		--{id = "owo_reticle_helper_01", name = "Reticle 1 (·)"},
+		--{id = "owo_reticle_helper_02", name = "Reticle 2 [·]"},
+		--{id = "owo_reticle_helper_03", name = "Reticle 3 [+]"},
+		{id = "owo_crosshair_german_01", name = "OwO German #1 (T)", no_randomize = true},
+		{id = "owo_crosshair_german_01h", name = "OwO German #1 (T), High", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "sight_2_ac1", {
+		{id = "owo_crosshair_ac1_obelisk", name = "Crosshair Obelisk", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "sight_2_ac2", {
+		{id = "owo_crosshair_ac2_block", name = "Crosshair Rectangle", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "sight_2_ac3", {
+		{id = "owo_crosshair_ac3_block", name = "Crosshair Rectangle", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
-		--owo_reticle_helper_empty = {
-		--	model = "", type = "sight_2", 
-		--	parent = "sight"
+		--owo_reticle_helper_01 = {
+		--	model = _item_ranged.."/sights/reflex_sight_01", type = "sight_2", 
+		--	parent = "sight", hide_mesh = {{"sight_2", 6}}, -- for some reason this is diff
 		--},
-		owo_reticle_helper_01 = {
-			model = _item_ranged.."/sights/reflex_sight_01", type = "sight_2", 
-			parent = "sight", hide_mesh = {{"sight_2", 6}}, -- for some reason this is diff
-		},
-		owo_reticle_helper_02 = {
+		--owo_reticle_helper_02 = {
+		--	model = _item_ranged.."/sights/reflex_sight_02", type = "sight_2", 
+		--	parent = "sight", hide_mesh = {{"sight_2", 5}}, 
+		--},
+		--owo_reticle_helper_03 = {
+		--	model = _item_ranged.."/sights/reflex_sight_03", type = "sight_2", 
+		--	parent = "sight", hide_mesh = {{"sight_2", 5}},
+		--},
+		-- ### Base Parts ###
+		-- Using the reflex sight with everything hidden to keep the scratched up glass effect
+		owo_crosshair_german_01 = {
 			model = _item_ranged.."/sights/reflex_sight_02", type = "sight_2", 
-			parent = "sight", hide_mesh = {{"sight_2", 5}}, 
+			parent = "sight", hide_mesh = {{"sight_2", 1,5,6}},
+			automatic_equip = {
+				sight_2_ac1 = "owo_crosshair_ac1_obelisk", sight_2_ac2 = "owo_crosshair_ac2_block", 
+				sight_2_ac3 = "owo_crosshair_ac3_block", 
+			},
 		},
-		owo_reticle_helper_03 = {
-			model = _item_ranged.."/sights/reflex_sight_03", type = "sight_2", 
-			parent = "sight", hide_mesh = {{"sight_2", 5}},
+		owo_crosshair_german_01h = {
+			model = _item_ranged.."/sights/reflex_sight_02", type = "sight_2", 
+			parent = "sight", hide_mesh = {{"sight_2", 1,5,6}},
+			automatic_equip = {
+				sight_2_ac1 = "owo_crosshair_ac1_obelisk", sight_2_ac2 = "owo_crosshair_ac2_block", 
+				sight_2_ac3 = "owo_crosshair_ac3_block", 
+			},
+		},
+		-- ### Helper Parts ###
+		-- AC1
+		owo_crosshair_ac1_obelisk = {
+			model = _item_melee.."/blades/combat_knife_blade_03", type = "sight_2_ac1", parent = "sight_2",
+		},
+		-- AC2
+		owo_crosshair_ac2_block = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sight_2_ac2", parent = "sight_2",
+		},
+		-- AC3
+		owo_crosshair_ac3_block = {
+			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sight_2_ac3", parent = "sight_2",
 		},
 	})
 end
-]]
+function mod.fixes_owo_scope_crosshair(variant_id)
+	mod.mt.inject_fixes(variant_id, {
+		-- German Reticle #1
+		{	dependencies = 	{ "owo_crosshair_german_01", },
+			sight2_ac1 = 	{ offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+			sight2_ac2 = 	{ offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+			sight2_ac3 = 	{ offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+		},
+	})
+end
 
 -- Sight_2: Alternative viewmodel
 -- 	Avoid on flamer_p1_m1 (and prob brauto)

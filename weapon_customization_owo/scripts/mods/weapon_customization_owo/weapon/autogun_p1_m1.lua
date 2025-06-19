@@ -81,6 +81,10 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary_ac1",
     "sight_secondary_ac2",
 
+    "sight_2_ac1",
+    "sight_2_ac2",
+    "sight_2_ac3",
+
     "receiverac1",
     "receiverac2",
 })
@@ -109,6 +113,8 @@ mod.owo_magazine_magpull(this_variant, "magazine")
 --mod.owo_magazine_ak(this_variant)
 
 mod.owo_reticle_helper(this_variant)
+mod.owo_scope_crosshair(this_variant)
+
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_m16_sight(this_variant, "sight")
 mod.owo_kalashnikov_rear_sight(this_variant)
@@ -280,6 +286,10 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
     mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
+    -- Sight_2
+    mod.hide_slot("sight_2_ac1", { "owo_crosshair_ac1_block|owo_crosshair_ac1_obelisk" }),
+    mod.hide_slot("sight_2_ac2", { "owo_crosshair_ac2_block|owo_crosshair_ac2_obelisk" }),
+    mod.hide_slot("sight_2_ac3", { "owo_crosshair_ac3_block|owo_crosshair_ac3_obelisk" }),
     -- Stocks
     mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
 })
@@ -295,6 +305,7 @@ mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_dreg_gunner_bayonet(this_variant)
 
+mod.fixes_owo_scope_crosshair(this_variant)
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_telescopic_sight(this_variant)
 mod.fixes_owo_pu_scope(this_variant)
