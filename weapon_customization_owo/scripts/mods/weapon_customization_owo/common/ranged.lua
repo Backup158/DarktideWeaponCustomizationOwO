@@ -4027,7 +4027,7 @@ end
 --		Trijicon ACOG (Advanced Combat Optical Gunsight), SUSAT (Small Unit Small Arms, Trilux - L9A1), Night Vision 1 (Sightmark Wraith HD), Night Vision 2 (Sightmark Photon XT)
 --		KNOWN BUG: SUSAT on recon/ilas main receiver steals the laser (but not the volleygun)
 --			Thief is the ac2/3, ak muzzles in the back
-function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
+function mod.owo_prismatic_telescopic_sight(variant_id, given_type, given_parent)
 	local current_type = given_type or "sight"
 	local current_parent = given_parent or "rail"
 
@@ -4416,7 +4416,7 @@ function mod.owo_telescopic_sight(variant_id, given_type, given_parent)
 		},
 	})
 end
-function mod.fixes_owo_telescopic_sight(variant_id)
+function mod.fixes_owo_prismatic_telescopic_sight(variant_id)
 	local _owo_forwards_acog_sights = "owo_acog_sight_01f|owo_acog_sight_01f_z1|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 	local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top"
 	local _owo_rmr_acog_sights = "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
