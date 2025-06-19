@@ -1,7 +1,10 @@
 # 2025-
 v2.0.2
 
-
+- Affects Developers Only: renamed function for ACOG/SUSAT sights from "Telescopic Sight" to "Prismatic Sight"
+    - Just if anyone (likely no one) reused this function for a personal mod, they'd have to rename it
+    - The function to add the PU Scope is separate even though it's telescopic too
+    - I may expand that into a broader group of classic telescopic sights
 
 # 2025-06-16
 v2.0.1

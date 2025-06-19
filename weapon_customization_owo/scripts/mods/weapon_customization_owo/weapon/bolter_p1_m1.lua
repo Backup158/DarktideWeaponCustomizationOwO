@@ -89,7 +89,7 @@ mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
 mod.owo_holosight(this_variant, "sight", "rail")
-mod.owo_prismatic_telescopic_sight(this_variant, "sight", "receiver")
+mod.owo_prismatic_sight(this_variant, "sight", "receiver")
 
 mod.owo_tactical_stock(this_variant, "stock")
 
@@ -207,7 +207,7 @@ mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 
 mod.fixes_owo_holosight(this_variant)
-mod.fixes_owo_prismatic_telescopic_sight(this_variant)
+mod.fixes_owo_prismatic_sight(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -420,7 +420,7 @@ mod.mt.inject_fixes(this_variant, {
     },
 
 	-- ######
-    -- Sight: Telescopic Sights
+    -- Sight: Prismatic Sights (Telescopic)
     -- ######
     --  --------------------------------------------
     --  Trijicon ACOG

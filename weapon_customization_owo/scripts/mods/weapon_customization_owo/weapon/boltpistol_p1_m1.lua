@@ -74,7 +74,7 @@ mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 
 mod.owo_holosight(this_variant, "sight", "rail")
-mod.owo_prismatic_telescopic_sight(this_variant, "sight", "rail")
+mod.owo_prismatic_sight(this_variant, "sight", "rail")
 
 mod.owo_tactical_stock(this_variant, "stock")
 
@@ -194,7 +194,7 @@ mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 
 mod.fixes_owo_holosight(this_variant)
-mod.fixes_owo_prismatic_telescopic_sight(this_variant)
+mod.fixes_owo_prismatic_sight(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -271,7 +271,7 @@ mod.mt.inject_fixes(this_variant, {
     },   
 
 	-- ######
-    -- Sight: Telescopic Sights
+    -- Sight: Prismatic Sights (Telescopic)
     -- ######
     --      ACOG and Rail: (1, 1, 1) and (1, 0.686, 1) --> (1, 1.458, 1)
     --  --------------------------------------------

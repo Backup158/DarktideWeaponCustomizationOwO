@@ -119,7 +119,7 @@ mod.owo_alt_viewmodel(this_variant)
 mod.owo_m16_sight(this_variant, "sight")
 mod.owo_kalashnikov_rear_sight(this_variant)
 mod.owo_holosight(this_variant, "sight", "rail")
-mod.owo_prismatic_telescopic_sight(this_variant, "sight", "rail")
+mod.owo_prismatic_sight(this_variant, "sight", "rail")
 mod.owo_pu_scope(this_variant, "sight")
 
 mod.owo_helbore_mas49(this_variant, "receiver")
@@ -307,7 +307,7 @@ mod.fixes_owo_dreg_gunner_bayonet(this_variant)
 
 mod.fixes_owo_scope_crosshair(this_variant)
 mod.fixes_owo_holosight(this_variant)
-mod.fixes_owo_prismatic_telescopic_sight(this_variant)
+mod.fixes_owo_prismatic_sight(this_variant)
 mod.fixes_owo_pu_scope(this_variant)
 
 -- #################
@@ -907,7 +907,7 @@ mod.mt.inject_fixes(this_variant, {
     },
 
     -- ######
-    -- Sight: Telescopic Sights
+    -- Sight: Prismatic Sights (Telescopic)
     -- ######
     --  --------------------------------------------
     --  Trijicon ACOG
