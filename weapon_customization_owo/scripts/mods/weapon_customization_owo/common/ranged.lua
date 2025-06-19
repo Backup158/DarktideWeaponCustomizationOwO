@@ -1485,14 +1485,14 @@ function mod.owo_plasma_krieg(variant_id, given_type, given_parent)
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac", {
 		{id = "owo_plasma_krieg_ac1_01", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
-		{id = "owo_plasma_krieg_ac1_02", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
-		{id = "owo_plasma_krieg_ac1_03", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
-		{id = "owo_plasma_krieg_ac1_04", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
-		{id = "owo_plasma_krieg_ac1_05", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
-		{id = "owo_plasma_krieg_ac1_06", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
-		{id = "owo_plasma_krieg_ac1_07", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
-		{id = "owo_plasma_krieg_ac1_08", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
-		{id = "owo_plasma_krieg_ac1_09", name = "OwO Plasma Helbore ac1 1", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_02", name = "OwO Plasma Helbore ac1 2", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_03", name = "OwO Plasma Helbore ac1 3", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_04", name = "OwO Plasma Helbore ac1 4", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_05", name = "OwO Plasma Helbore ac1 5", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_06", name = "OwO Plasma Helbore ac1 6", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_07", name = "OwO Plasma Helbore ac1 7", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_08", name = "OwO Plasma Helbore ac1 8", no_randomize = true},
+		{id = "owo_plasma_krieg_ac1_09", name = "OwO Plasma Helbore ac1 9", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
