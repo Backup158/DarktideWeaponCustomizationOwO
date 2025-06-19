@@ -4676,13 +4676,13 @@ function mod.owo_scope_crosshair(variant_id)
 		{id = "owo_crosshair_german_01h", name = "OwO German #1 (T), High", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_2_ac1", {
-		{id = "owo_crosshair_ac1_obelisk", name = "Crosshair Obelisk", no_randomize = true},
+		{id = "owo_crosshair_ac1_obelisk", name = "Bottom Crosshair Obelisk", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_2_ac2", {
-		{id = "owo_crosshair_ac2_block", name = "Crosshair Rectangle", no_randomize = true},
+		{id = "owo_crosshair_ac2_block", name = "Left Crosshair Rectangle", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "sight_2_ac3", {
-		{id = "owo_crosshair_ac3_block", name = "Crosshair Rectangle", no_randomize = true},
+		{id = "owo_crosshair_ac3_block", name = "Right Crosshair Rectangle", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -4735,13 +4735,13 @@ function mod.fixes_owo_scope_crosshair(variant_id)
 	mod.mt.inject_fixes(variant_id, {
 		-- German Reticle #1
 		{	dependencies = 	{ "owo_crosshair_german_01", },
-			sight_2 = 		{ offset = true, position = vector3_box(0.0, 0.0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			sight_2 = 		{ offset = true, position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 			-- Bottom obelisk
-			sight_2_ac1 = 	{ offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
-			-- Left
-			sight_2_ac2 = 	{ offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
-			-- Right
-			sight_2_ac3 = 	{ offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+			sight_2_ac1 = 	{ offset = false, parent = "sight_2", position = vector3_box(0, 0.08, -0.31), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.1, 0.02, 0.06 ) },
+			-- Left and Right
+			--	vertical, forwards, horiz
+			sight_2_ac2 = 	{ offset = false, parent = "sight_2", position = vector3_box(0.125, 0.08, 0.21), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.008, 0.2, 0.055 ) },
+			sight_2_ac3 = 	{ offset = false, parent = "sight_2", position = vector3_box(0.125, 0.08, -0.21), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.008, 0.2, 0.055 ) },
 		},
 		-- German Reticle #1 (High)
 		{	dependencies = 	{ "owo_crosshair_german_01h", },
