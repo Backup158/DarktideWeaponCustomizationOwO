@@ -38,12 +38,17 @@ Parts are prefixed with `OwO` in the customization menu.
 - **Short Shotgun Barrels**: Bolt Pistol  \
 &emsp; Short variants that extend the barrel a little. Super short variants extend it a little less (wow such detail).
 - **Shotgun Barrel Extension**: Snubnosed Revolver  \
-&emsp; Short and long variants. Short fits typical revolver barrel length. Long goes a bit beyond that.
+&emsp; Adds short and long variants. 
+&emsp; &emsp; Short fits typical revolver barrel length.  \
+&emsp; &emsp; Long goes a bit beyond that.
 
 ### Foregrips
 - **Tactical Foregrips**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; Angled foregrips, mostly like the iconic Magpul one
+&emsp; Adds Angled Foregrips  \
+&emsp; &emsp; Based on the iconic Magpul angled grip  \
+&emsp; &emsp; Some generic slanted grips
 - **Straight Foregrips**: Infantry/Braced/Vigilant Autoguns  \
+&emsp; Adds Generic Grips, Braced Autogun Grips, Bolter Grips, Laspistol Grips, Flamer Grips, Knife Handle Grips (Normal and Stubby), Ogryn Cleaver Grips, "Devil's Claw" Combat Sword Grips
 &emsp; Foregrips perpendicular to the barrel, which will clip with your off hand (this is why the MT plugin uses slanted foregrips).
 
 ### Bayonets
@@ -140,7 +145,7 @@ These can get super janky when using non-default parts so watch out.
 &emsp; Bigger stocks rotated to resemble the stocks on Kalashnikov rifles  \
 &emsp; Includes compact variants for shotgun stocks
 - **Straight Grip**: Combat Shotguns  \
-&emsp; Same choices and Straight Foregrips but as a stock
+&emsp; Same options from the Straight Foregrips but as a stock
 - Stock_2, **Big Stocks**: Combat Shotguns  \
 &emsp; Rifle stocks sized up
 
