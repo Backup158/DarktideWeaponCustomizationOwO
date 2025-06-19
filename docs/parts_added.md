@@ -29,7 +29,7 @@ Parts are prefixed with `OwO` in the customization menu.
 - **M16 Barrels**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; 2 versions based on the a1. 1 on the a2. The a1 variants are very scuffed lol.  \
 &emsp; Regular variants are aligned with EOTech holographic sights. By aligned, I mean the front post is aligned with the reticle. Kinda like absolute cowitnessing but without the rear sight (so not really cowitness lol). Pretend you have a rear flip sight flipped down, I guess.  \
-&emsp; Tall variants are aligned with the telescopic and M16 carryhandle sights.  \
+&emsp; Tall variants are aligned with the Prismatic Sights and M16 Carryhandle Sights.  \
 &emsp; No post variants have no front post. The front post blocks most other sights, so I recommend using these for those.
 - **Wooden Helbore Barrels**: Helbore Lasguns  \
 &emsp; MAS inspired
@@ -60,7 +60,7 @@ Parts are prefixed with `OwO` in the customization menu.
 
 - **Underbarrel Shotguns**: Braced/Infantry/Vigilant Autoguns, Bolter, Infantry/Helbore/Recon Lasguns  \
 &emsp; Based on the Knight's Armament Company Masterkey and the M26-MASS (Modular Accessory Shotgun System)  \
-&emsp; Masterkey includes smaller and larger variants
+&emsp; &emsp; Masterkey includes smaller and larger variants
 
 > [!WARNING]
 > 
@@ -88,28 +88,30 @@ These can get super janky when using non-default parts so watch out.
 &emsp; Equipped in the helper sight section  \
 &emsp; These change how you hold the gun while ADSing while keeping the physical appearance of the scope on your gun.
 - **Ladder Aperture Sights**: Helbore Lasguns  \
-&emsp; Based on WWI style iron sights. No front posts though so good luck aiming with just the U notch.  \
+&emsp; Based on WWI era iron sights. No front posts though so good luck aiming with just the U notch.  \
 &emsp; Includes very shoddily made MAS49 inspired sights. These look ugly as sin since the receiver is so wide and I'm too lazy to resize them.
 - **AK Irons**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; Adjustable rear notch sight  \
 &emsp; Aligned for the long Braced Autogun barrel with the Infantry/Braced receiver  \
 &emsp; Includes variant with dust cover (that I wish I could make wider). I also left two scuffed variants that I made before I realize there was already an elevation ladder in the game lmao.
 - **M16 Carry Handle Irons**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; Sight aligned with M16 Barrels (Tall). Versions with and without the rear elevation wheel since I don't think a1's have them.
-- **Holographic Sights with Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
+&emsp; Versions with and without the rear elevation wheel since I don't think a1's have them.  \
+&emsp; Sight aligned with M16 Barrels (Tall).
+- **Holographic Sights with optional Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
 &emsp; Based on EOTech HWS and Vortex Razor AMG.  \
 &emsp; Adds standalone holographic sight, holo with magnifier to the side, and holo with magnifier lined up (with options for 2 zoom levels).  \
 &emsp; You can choose all 3 sight pictures by using the sight_2 options from the MT Plugin.  \
 &emsp; Holo with magnifier lined up includes variants for zoom.  \
 &emsp; Includes short variants that doesn't clip with the receiver, but blocks more of the sight picture.  \
 &emsp; Supports the Volleygun receivers from Syn's Edits.
-- **Telescopic Sights with Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
-&emsp; Adds ACOG sight and SUSAT sight. Includes variants for different zoom and with RDS stacked on top.  \
+- **Prismatic Sights with optional Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
+&emsp; Based on Trijicon ACOG (Advanced Combat Optical Gunsight) and SUSAT (Small Unit Small Arms, Trilux).  \
+&emsp; Adds standalone prism sight and prism sight with a RDS stacked on top (both having options for 2 zoom levels).  \
 &emsp; &emsp; Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.  \
-&emsp; &emsp; Includes variants to aim through the main sight and the red dot (top).  \
-&emsp; ACOG doesn't have bullet drop compensation crosshair ticks.  \
+&emsp; &emsp; Stacked sights have variants to aim through the main sight or the red dot (top).  \
+&emsp; ACOGs don't have bullet drop compensation crosshair ticks.  \
 &emsp; &emsp; Uses the default Darktide reflex pictures, equipped through sight_2 options.  \
-&emsp; SUSAT uses the German post, obelisk-shaped reticle.  \
+&emsp; SUSATs use the German post, obelisk-shaped reticle (No options).  \
 &emsp; Sights are aligned with M16 Barrels (Tall)  \
 &emsp; Supports the Volleygun receivers from Syn's Edits.
 
