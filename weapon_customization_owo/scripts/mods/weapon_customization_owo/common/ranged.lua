@@ -4529,9 +4529,8 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
-				sightac1 = "owo_pu_scope_helper_01", 
-				-- sightac2 = "owo_pu_scope_helper_02",
-				-- sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
+				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_sightac2_default",
+				sightac3 = "owo_sightac3_default", sightac4 = "owo_sightac4_default",
 				sightac5 = "owo_pu_scope_helper_05", sightac6 = "owo_pu_scope_helper_06",
 				sightac7 = "owo_pu_scope_helper_07",
 				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "owo_crosshair_german_01",
@@ -4545,9 +4544,8 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
-				sightac1 = "owo_pu_scope_helper_01", 
-				-- sightac2 = "owo_pu_scope_helper_02",
-				-- sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
+				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_sightac2_default",
+				sightac3 = "owo_sightac3_default", sightac4 = "owo_sightac4_default",
 				sightac5 = "owo_pu_scope_helper_05", sightac6 = "owo_pu_scope_helper_06",
 				sightac7 = "owo_pu_scope_helper_07",
 				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "owo_crosshair_german_01",
@@ -4745,7 +4743,13 @@ function mod.fixes_owo_scope_crosshair(variant_id)
 		},
 		-- German Reticle #1 (High)
 		{	dependencies = 	{ "owo_crosshair_german_01h", },
-			sight_2 = 		{ offset = true, position = vector3_box(0.0, 0.0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			sight_2 = 		{ offset = true, position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			-- Bottom obelisk
+			sight_2_ac1 = 	{ offset = false, parent = "sight_2", position = vector3_box(0, 0.08, -0.26), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.1, 0.02, 0.08 ) },
+			-- Left and Right
+			--	vertical, forwards, horiz
+			sight_2_ac2 = 	{ offset = false, parent = "sight_2", position = vector3_box(-0.3, 0.08, 0.21), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.008, 0.2, 0.055 ) },
+			sight_2_ac3 = 	{ offset = false, parent = "sight_2", position = vector3_box(-0.3, 0.08, -0.21), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.008, 0.2, 0.055 ) },
 		},
 	})
 end
