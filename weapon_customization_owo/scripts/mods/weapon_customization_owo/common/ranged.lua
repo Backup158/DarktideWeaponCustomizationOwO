@@ -4529,11 +4529,12 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
-				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
-				sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
+				sightac1 = "owo_pu_scope_helper_01", 
+				-- sightac2 = "owo_pu_scope_helper_02",
+				-- sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
 				sightac5 = "owo_pu_scope_helper_05", sightac6 = "owo_pu_scope_helper_06",
 				sightac7 = "owo_pu_scope_helper_07",
-				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "reflex_scopehelper_01",
+				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "owo_crosshair_german_01",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}, 
@@ -4544,13 +4545,15 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 			model = _item_melee.."/pommels/axe_pommel_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = { lens = "scope_lens_02", lens_2 = "scope_lens_2_02",
-				sightac1 = "owo_pu_scope_helper_01", sightac2 = "owo_pu_scope_helper_02",
-				sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
+				sightac1 = "owo_pu_scope_helper_01", 
+				-- sightac2 = "owo_pu_scope_helper_02",
+				-- sightac3 = "owo_pu_scope_helper_03", sightac4 = "owo_pu_scope_helper_04",
 				sightac5 = "owo_pu_scope_helper_05", sightac6 = "owo_pu_scope_helper_06",
 				sightac7 = "owo_pu_scope_helper_07",
-				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "reflex_scopehelper_01",
+				sight_secondary = "owo_pu_scope_riser_01", sight_2 = "owo_crosshair_german_01",
 			},
 			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}, 
 				{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
@@ -4732,9 +4735,17 @@ function mod.fixes_owo_scope_crosshair(variant_id)
 	mod.mt.inject_fixes(variant_id, {
 		-- German Reticle #1
 		{	dependencies = 	{ "owo_crosshair_german_01", },
-			sight2_ac1 = 	{ offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
-			sight2_ac2 = 	{ offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
-			sight2_ac3 = 	{ offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+			sight_2 = 		{ offset = true, position = vector3_box(0.0, 0.0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			-- Bottom obelisk
+			sight_2_ac1 = 	{ offset = true, position = vector3_box(0, 0.08, -0.031), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.1 ) },
+			-- Left
+			sight_2_ac2 = 	{ offset = true, position = vector3_box(0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+			-- Right
+			sight_2_ac3 = 	{ offset = true, position = vector3_box(-0.015, 0.08, 0), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.01, 0.2, 0.078 ) },
+		},
+		-- German Reticle #1 (High)
+		{	dependencies = 	{ "owo_crosshair_german_01h", },
+			sight_2 = 		{ offset = true, position = vector3_box(0.0, 0.0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 		},
 	})
 end
