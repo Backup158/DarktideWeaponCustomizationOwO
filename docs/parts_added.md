@@ -32,9 +32,10 @@ Parts are prefixed with `OwO` in the customization menu.
 &emsp; Tall variants are aligned with the Prismatic Sights and M16 Carryhandle Sights.  \
 &emsp; No post variants have no front post. The front post blocks most other sights, so I recommend using these for those.
 - **Wooden Helbore Barrels**: Helbore Lasguns  \
-&emsp; MAS inspired
+&emsp; Based on the MAS-49 
 - **Plasma Rifle Barrels**: Helbore Lasguns  \
-&emsp; Rectangular plasma rifle barrel.
+&emsp; Adds rifle barrels with plasma coils in the center.  \
+&emsp; &emsp; Variants using Helbore Lasgun barrels, Infantry Lasgun barrels, and Combat Shotgun barrels (named "Sniper")
 - **Short Shotgun Barrels**: Bolt Pistol  \
 &emsp; Short variants that extend the barrel a little. Super short variants extend it a little less (wow such detail).
 - **Shotgun Barrel Extension**: Snubnosed Revolver  \
