@@ -3639,6 +3639,10 @@ function mod.owo_m16_sight(variant_id, given_type, given_parent)
 	})
 end
 
+-- Sight: Collimator Sights
+--	Red dot sights, not quite as advanced as holographic
+--		PK-AS
+
 -- Sight: Holographic Sights + Magnifiers
 --		EOTech HWS (Holographic Weapon Sight)
 --		Vortex Razor AMG UH-1
@@ -4026,6 +4030,7 @@ end
 -- Sight: Prismatic Sights
 --	Type of Telescopic Sights
 --		Trijicon ACOG (Advanced Combat Optical Gunsight)
+--		ELCAN Specter
 --		SUSAT (Small Unit Small Arms, Trilux - L9A1)
 --		Night Vision 1 (Sightmark Wraith HD)
 --		Night Vision 2 (Sightmark Photon XT)
