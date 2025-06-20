@@ -1,4 +1,4 @@
-# 2025-
+# 2025-UNRELEASED
 v2.0.2
 
 - Affects Developers Only: renamed function for ACOG/SUSAT sights from "Telescopic Sight" to "Prismatic Sight"
