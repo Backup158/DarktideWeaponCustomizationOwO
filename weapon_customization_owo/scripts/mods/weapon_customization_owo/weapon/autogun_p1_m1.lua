@@ -304,6 +304,7 @@ mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_dreg_gunner_bayonet(this_variant)
+mod.fixes_owo_underbarrel_gl(this_variant)
 
 mod.fixes_owo_scope_crosshair(this_variant)
 mod.fixes_owo_holosight(this_variant)
@@ -1026,6 +1027,7 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  M203
     --  --------------------------------------------
+    --[[
     {	dependencies =  { "owo_m203", _short_infantry_autogun_all_barrels},
         bayonet =       { offset = true, position = vector3_box(0, -0.064, -0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
@@ -1131,20 +1133,11 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { "owo_m203", _syn_aquilon_barrels },
         bayonet =       { offset = true, position = vector3_box(0, -0.098, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
-    --      Default
-	{	dependencies =  { "owo_m203" },
-        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.118), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    --  Helpers
-    {	dependencies =  { "owo_m203"},
-        bayonetac1 =    { offset = true, position = vector3_box(0, 0.138, 0.), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        bayonetac2 =    { offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
-        bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
-        bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
-    },
+    ]]
     --  --------------------------------------------
     --  GP-25
     --  --------------------------------------------
+    --[[
     {	dependencies =  { "owo_gp25", _short_infantry_autogun_all_barrels},
         bayonet =       { offset = true, position = vector3_box(0, 0.06, -0.136), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
@@ -1253,22 +1246,8 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { "owo_gp25", _syn_aquilon_barrels },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.5, -0.038), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
-    --      Default
-    {	dependencies =  { "owo_gp25" },
-        bayonet =       { offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
-    },
-    --  Helpers
-    {	dependencies =  { "owo_gp25" },
-        bayonetac1 =    { offset = true, position = vector3_box(0, -0.022, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.875, 1, 0.875 ) },
-        bayonetac2 =    { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(90, 0, 180), scale = vector3_box(1.1, 1.1, 1.3 ) },
-        -- Connector
-        bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.03), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 0.566, 0.21 ) },
-        -- Trigger
-        bayonetac4 =    { offset = true, position = vector3_box(0, 0.142, 0.004), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 0.6, 0.35 ) },
-        -- Top trigger
-        bayonetac5 =    { offset = true, position = vector3_box(0, 0.158, -0.012), rotation = vector3_box(-173, 0, 0), scale = vector3_box(0.6, 0.7, 0.7 ) },
-    },
-
+    ]]
+    
     -- ######
 	-- Bayonet: UNDERBARREL SHOTGUN
 	-- ######

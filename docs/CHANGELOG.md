@@ -5,6 +5,13 @@ v2.0.2
     - Just if anyone (likely no one) reused this function for a personal mod, they'd have to rename it
     - The function to add the PU Scope is separate even though it's telescopic too
     - I may expand that into a broader group of classic telescopic sights (since prism sights are a subset of telescopic sights)
+- Reworked Underbarrel Grenade Launcher fixes
+    - Universalized helpers
+    - Removed many of the positioning variants for performance (I really went ham with those lol)
+        - Performance-wise these should be fine since it'll short circuit after the M203 and GP-25 checks, which is basically the same amount of checks as a few ACOG alignments
+        - I made these based on barrel parenting, so changing it to receiver parenting means I'd have to recheck it... all (some were already like this so I was just making it consistent)
+        - fuck that the M203 is supposed to stay near the magazine anyways
+        - maybe GP-25 alignments can get redone since that has a grip
 
 # 2025-06-16
 v2.0.1
