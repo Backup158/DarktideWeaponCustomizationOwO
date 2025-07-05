@@ -14,6 +14,11 @@ v2.0.2
         - maybe GP-25 alignments can get redone since that has a grip
 - Reworked PU Scopes
     - Parented the riser to the scope to make it easier to patch
+    - Moved the crosshair to use sight_2
+- Created crosshairs for sight_2
+    - Ideally these should be easy enough to position for the various scope bodies (famous last words)
+    - If it works, it means I can have even more modular scope pictures, in addition to the mt helpers
+    - Added German #1 reticle (from pu scope)
 - Refactored Suppressors for Combat Shotguns and Stubrevolvers to use universalized helper fixes
 - Prepared files for new weapons
     - Arbites Shock Maul, Shock Maul and Suppression Shield, Exterminator Shotgun, and Subductor Shotpistol and Riot Shield
