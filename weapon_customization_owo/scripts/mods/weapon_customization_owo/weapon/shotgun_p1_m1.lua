@@ -76,6 +76,7 @@ mod.owo_alt_viewmodel(this_variant)
 mod.owo_holosight(this_variant, "sight", "rail")
 mod.owo_prismatic_sight(this_variant, "sight", "rail")
 
+mod.owo_invisible_muzzle(this_variant)
 mod.owo_suppressor(this_variant)
 
 --mod.owo_empty_foregrip(this_variant)
