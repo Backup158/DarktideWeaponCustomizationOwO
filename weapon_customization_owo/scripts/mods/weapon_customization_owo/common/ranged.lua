@@ -4632,7 +4632,7 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 		-- Riser
 		owo_pu_scope_riser_01 = {
 			model = _item_melee.."/grips/falchion_grip_03", type = "sight_secondary", 
-			mesh_move = false, parent = current_parent,
+			mesh_move = false, parent = current_type,
 			--automatic_equip = { sight_secondary_ac1 = "owo_pu_scope2_helper_01", sight_secondary_ac2 = "owo_pu_scope2_helper_02",}
 		},
 		--[[ Too thick
@@ -4668,7 +4668,7 @@ function mod.fixes_owo_pu_scope(variant_id)
 			lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.162, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 1}},
 			lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
 			-- Riser
-			sight_secondary = 	{ offset = true, position = vector3_box(0, 0.016, 0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
+			sight_secondary = 	{ offset = true, position = vector3_box(0, 0.115, -0.1), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.55, 0.5 ) },
 		},
 		{	dependencies =  	{ "owo_pu_scope_02" },
 			-- Scope body
@@ -4685,7 +4685,7 @@ function mod.fixes_owo_pu_scope(variant_id)
 			lens =              { offset = false, parent = "sight", position = vector3_box(0, 0.162, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 1}},
 			lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, 0.032, 0.0), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
 			-- Riser
-			sight_secondary = 	{ offset = true, position = vector3_box(0, -0.036, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.67, 0.4, 0.5 ) },
+			sight_secondary = 	{ offset = true, position = vector3_box(0, 0.112, -0.102), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.67, 0.55, 0.5 ) },
 		},
 	})
 
