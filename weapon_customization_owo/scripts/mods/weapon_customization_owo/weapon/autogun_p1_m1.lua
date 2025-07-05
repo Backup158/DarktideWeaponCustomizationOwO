@@ -161,6 +161,7 @@ local _m16a2_barrels = "owo_m16_barrel_a2|owo_m16_barrel_t_a2|owo_m16_barrel_n_a
 local _m16_normal_post_barrels = "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2"
 local _m16_tall_post_barrels = "owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2"
 local _m16_no_post_barrels = "owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
+local _owo_bolt_helbore_receivers = "owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05"
 local _owo_mas_helbore_receivers = "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"
 
 local _short_braced_autogun_mt_barrels = "bagun_barrel_01|bagun_barrel_05|bagun_barrel_06|bagun_barrel_07|bagun_barrel_08"
@@ -318,7 +319,7 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Receiver: BOLT ACTION HELBORE
 	-- ######
-	{	dependencies =  { "owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05" },
+	{	dependencies =  { _owo_bolt_helbore_receivers },
 		receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 		receiverac1 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
 		receiverac2 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
@@ -1027,113 +1028,12 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  M203
     --  --------------------------------------------
-    --[[
-    {	dependencies =  { "owo_m203", _short_infantry_autogun_all_barrels},
-        bayonet =       { offset = true, position = vector3_box(0, -0.064, -0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    --  Helbore-based Receivers
+    --      Bolt Action and MAS
+    {	dependencies =  { "owo_m203", _owo_bolt_helbore_receivers.."|".._owo_mas_helbore_receivers },
+        bayonet =       { offset = true, position = vector3_box(0, 0.36, -0.054), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
-    {	dependencies =  { "owo_m203", _medium_infantry_autogun_all_barrels.."|".._long_infantry_autogun_all_barrels},
-        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _super_short_braced_autogun_all_barrels.."|".._short_braced_autogun_all_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _long_braced_autogun_all_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.242, -0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _short_vigilant_autogun_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.272, -0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _long_vigilant_autogun_all_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    --      Patches for MT parts
-    {	dependencies =  { "owo_m203", _short_infantry_lasgun_mt_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.016, -0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _long_infantry_lasgun_mt_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.084, -0.128), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_recon_lasgun_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.044, -0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_laspistol_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.142), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_combat_shotgun_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.296, -0.132), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_autopistol_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.142), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", "longlasgun_barrel_01" },
-        bayonet =       { offset = true, position = vector3_box(0, -0.088, -0.138), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_db_shotgun_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.184, -0.084), rotation = vector3_box(0, 0, 0), scale = vector3_box(2, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_plasma_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.22, -0.18), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.47, 1.5, 1.67 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_flamer_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.118, -0.192), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.5, 1.5, 1.43 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_bolter_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.178, -0.18), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.6, 0.75, 1.6 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_backwards_bolter_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.178, -0.18), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.6, 0.75, 1.6 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_twin_stubber_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.402, -0.536), rotation = vector3_box(0, 0, 0), scale = vector3_box(4, 3, 4 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_single_stubber_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.326, -0.222), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.6, 2.5, 2.6 ) },
-    },
-    {	dependencies =  { "owo_m203", _mt_ripper_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.202, -0.212), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.5, 1.5, 2.5 ) },
-    },
-    --      Patches for Syn's parts
-    {	dependencies =  { "owo_m203", "exitus_barrel_01" },
-        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.142), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_helbore_sniper_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.116, -0.476), rotation = vector3_box(0, 0, 0), scale = vector3_box(3.3, 1.5, 3.3 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_carry_sniper_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.116, -0.488), rotation = vector3_box(0, 0, 0), scale = vector3_box(3.3, 1.5, 3.3 ) },
-    },
-    {	dependencies =  { "owo_m203", "ilasgun_double_barrel_01" },
-        bayonet =       { offset = true, position = vector3_box(0, -0.116, -0.158), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_heavy_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.172, -0.098), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_m41a_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.34, -0.142), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.25, 3, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_carbine_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.04, -0.15), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_thompson_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.094, -0.152), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", "syn_daewook11_barrel_01" },
-        bayonet =       { offset = true, position = vector3_box(0, -0.3, 0.1), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 2.2, 1 ) },
-    },
-    --          As it suggests, the rotary barrels ROTATE! which will spin the grenade launcher lmao. offset false to allow reparent to the handguard
-    {	dependencies =  { "owo_m203", _syn_rotary_barrels },
-        bayonet =       { offset = false, parent = "barrelshroudac3", position = vector3_box(0, 0.114, -0.098), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.744, 1.26, 1.42 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_q3_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, 0.208, -0.422), rotation = vector3_box(0, 0, 0), scale = vector3_box(3.33, 2.3, 3.33 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_pulse_barrels },
-        bayonet =       { offset = true, position = vector3_box(0.14, -0.176, -0.085), rotation = vector3_box(0, -60, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    {	dependencies =  { "owo_m203", _syn_aquilon_barrels },
-        bayonet =       { offset = true, position = vector3_box(0, -0.098, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    },
-    ]]
+    --  handled universally otherwise
     --  --------------------------------------------
     --  GP-25
     --  --------------------------------------------
@@ -1247,6 +1147,12 @@ mod.mt.inject_fixes(this_variant, {
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.5, -0.038), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
     ]]
+    --  Helbore-based Receivers
+    --      Bolt Action and MAS
+    {	dependencies =  { "owo_gp25", _owo_bolt_helbore_receivers.."|".._owo_mas_helbore_receivers },
+        bayonet =       { offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
+    },
+    --  handled universally otherwise
     
     -- ######
 	-- Bayonet: UNDERBARREL SHOTGUN
