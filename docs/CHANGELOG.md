@@ -12,6 +12,8 @@ v2.0.2
         - I made these based on barrel parenting, so changing it to receiver parenting means I'd have to recheck it... all (some were already like this so I was just making it consistent)
         - fuck that the M203 is supposed to stay near the magazine anyways
         - maybe GP-25 alignments can get redone since that has a grip
+- Prepared files for new weapons
+    - Arbites Shock Maul, Shock Maul and Suppression Shield, Exterminator Shotgun, and Subductor Shotpistol and Riot Shield
 
 # 2025-06-16
 v2.0.1

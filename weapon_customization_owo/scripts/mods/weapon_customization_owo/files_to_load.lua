@@ -29,7 +29,8 @@ mod.load_mod_file("weapon/bolter_p1_m1")
 mod.load_mod_file("weapon/boltpistol_p1_m1")
 mod.load_mod_file("weapon/shotgun_p1_m1") -- Combat Shotgun
 -- mod.load_mod_file("weapon/shotgun_p2_m1") -- Double-Barrelled Shotgun
---mod.load_mod_file("weapon/shotgun_p4_m1") -- Exterminator Shotgun
+-- mod.load_mod_file("weapon/shotgun_p4_m1") -- Exterminator Shotgun
+-- mod.load_mod_file("weapon/shotpistol_p1_m1") -- Subductor Shotpistol and Riot Shield
 mod.load_mod_file("weapon/stubrevolver_p1_m1")
 -- mod.load_mod_file("weapon/forcestaff_p1_m1")
 --#endregion ranged
