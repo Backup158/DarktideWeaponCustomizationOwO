@@ -208,6 +208,8 @@ mod.fixes_owo_condom(this_variant)
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
 
+mod.fixes_owo_underbarrel_gl(this_variant)
+
 -- #################
 -- Custom Fixes
 -- #################
@@ -232,6 +234,7 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
 	--	M203
 	--  --------------------------------------------
+    --[[
     {	dependencies =  { "owo_m203", _short_infantry_lasgun_barrels },
         bayonet =       { offset = true, position = vector3_box(0, -0.089, -0.132), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
@@ -349,9 +352,15 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
         bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
     },
+    ]]
+    --	M203 Default for iLas
+    {	dependencies =  { "owo_m203" },
+        bayonet =       { offset = true, position = vector3_box(0, 0.225, -0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
     --  --------------------------------------------
 	--	GP25
 	--  --------------------------------------------
+    --[[
     {	dependencies =  { "owo_gp25", _short_infantry_lasgun_barrels },
         bayonet =       { offset = true, position = vector3_box(0, 0.088, -0.144), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
@@ -484,6 +493,11 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.03), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 0.566, 0.21 ) },
         bayonetac4 =    { offset = true, position = vector3_box(0, 0.142, 0.004), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 0.6, 0.35 ) },
         bayonetac5 =    { offset = true, position = vector3_box(0, 0.158, -0.012), rotation = vector3_box(-173, 0, 0), scale = vector3_box(0.6, 0.7, 0.7 ) },
+    },
+    ]]
+    --	GP25 Default
+    {	dependencies =  { "owo_gp25" },
+        bayonet =       { offset = true, position = vector3_box(0, 0.412, -0.054), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
 
     -- ######
