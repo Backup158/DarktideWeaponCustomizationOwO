@@ -131,6 +131,7 @@ mod.mt.inject_fixes(this_variant, {
 -- #################
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
+mod.fixes_owo_suppressors(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -139,32 +140,6 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Muzzle: Suppressors
     -- ######
-    --  --------------------------------------------
-    --  Double cans
-    --  --------------------------------------------
-    {	dependencies =  { "owo_suppressor_01" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 22, 0),   scale = vector3_box(1.2, 1.8, 1.2) },	
-        muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
-    },
-    {	dependencies =  { "owo_suppressor_02" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 17, 0),   scale = vector3_box(1.2, 1.8, 1.2) },
-        muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
-    },
-    --  --------------------------------------------
-    --  PBS-1
-    --  --------------------------------------------
-    -- Default
-    {	dependencies =  { "owo_suppressor_03" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0.055, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
-        muzzle_3 =      { offset = true,   position = vector3_box(0, 0.265, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
-    },
-    --  --------------------------------------------
-    --  Can and Seat
-    --  --------------------------------------------
-    {	dependencies =  { "owo_suppressor_04|owo_suppressor_05" },
-        muzzle_2 =      { offset = true,   position = vector3_box(0, 0.13, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
-        muzzle_3 =      { offset = true,   position = vector3_box(0, 0.086, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
-    },
 
     -- ######
     -- Sight: Holographic Sights + Magnifier
