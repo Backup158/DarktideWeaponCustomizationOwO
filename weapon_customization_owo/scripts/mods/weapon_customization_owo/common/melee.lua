@@ -673,8 +673,8 @@ function mod.owo_crutch_head(variant_id, given_type, given_parent)
 	local current_parent = given_parent or "grip"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_crutch_01", name = "OwO Crutch 1"},
-		{id = "owo_crutch_02", name = "OwO Crutch 2"},
+		{id = "owo_crutch_01_01", name = "OwO Axillary Crutch 1"},
+		{id = "owo_crutch_02_01", name = "OwO Lofstrand Crutch 1"},
 	})
 	mod.inject_attachments_owo(variant_id, "bladeshroud", {
 		{id = "owo_crutch_grip_01", name = "OwO Crutch Grip 1"},
@@ -682,11 +682,13 @@ function mod.owo_crutch_head(variant_id, given_type, given_parent)
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
-		owo_crutch_01 = {
+		-- axillary/underarm crutch
+		owo_crutch_01_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
-		owo_crutch_02 = {
+		-- Lofstrand/elbow crutch
+		owo_crutch_02_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_type, 
 			mesh_move = false, parent = current_parent, 
 			automatic_equip = {
@@ -701,7 +703,7 @@ function mod.owo_crutch_head(variant_id, given_type, given_parent)
 	})
 end
 function mod.fixes_owo_crutch_head(variant_id, given_type, given_parent)
-	local _owo_crutch_heads = "owo_crutch_01"
+	local _owo_crutch_heads = "owo_crutch_01_01"
 
 	--local _mt_falchion_grips = "falchion_mt_grip_01|falchion_mt_grip_02|falchion_mt_grip_03|falchion_mt_grip_04|falchion_mt_grip_05"
 	--local _mt_sabre_grips = "sabre_mt_grip_01|sabre_mt_grip_02|sabre_mt_grip_03|sabre_mt_grip_04|sabre_mt_grip_05"
@@ -719,15 +721,22 @@ function mod.fixes_owo_crutch_head(variant_id, given_type, given_parent)
 		-- ######
 		-- Head: CRUTCHES
 		-- ######
-		{	dependencies =	{ "owo_crutch_01", "owo_invisible_connector_01" },
+		{	dependencies =	{ "owo_crutch_01_01", "owo_invisible_connector_01" },
 			head =			{ offset = true, position = vector3_box(0, 0.0, 0.51), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.1, 1.1, 0.71 ) },
 		},
-		{	dependencies =	{ "owo_crutch_01", },
+		{	dependencies =	{ "owo_crutch_01_01", },
 			head =			{ offset = true, position = vector3_box(0, 0.0, 0.777), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.1, 1.1, 1.0 ) },
+			-- making it more foot like
+			pommel =		{ offset = true, position = vector3_box(0, 0, -0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.4, 1.4, 1.0 ) },
 		},
-		{	dependencies =	{ "owo_crutch_02", },
+		{	dependencies =	{ "owo_crutch_02_01", "owo_invisible_connector_01" },
+			head =			{ offset = true, position = vector3_box(0, -0.006, 0.606), rotation = vector3_box(115, 0, -180), scale = vector3_box(2.1, 1.1, 1.2 ) },
+		},
+		{	dependencies =	{ "owo_crutch_02_01", },
 			head =			{ offset = true, position = vector3_box(0, 0.015, 0.857), rotation = vector3_box(115, 0, -180), scale = vector3_box(2.1, 1.1, 1.2 ) },
-			bladeshroud =	{ offset = true, position = vector3_box(0, -0.016, -0.0622), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.25 ) },
+			bladeshroud =	{ offset = true, position = vector3_box(0, 0.012, -0.0522), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.145, 0.25, 0.25 ) },
+			-- making it more foot like
+			pommel =		{ offset = true, position = vector3_box(0, 0, -0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.4, 1.4, 1.0 ) },
 		},
 	})
 end
