@@ -86,7 +86,7 @@ local _owo_low_grip_shafts = "owo_shaft_low_grip_01|owo_shaft_low_grip_02|owo_sh
 -- #################
 mod.mt.inject_fixes(this_variant, {
     -- Head
-    mod.hide_slot("bladeshroud", { "owo_tacax_spike_helper_01|owo_polearm_head_helper_0_01" }),
+    mod.hide_slot("bladeshroud", { "owo_tacax_spike_helper_01|owo_polearm_head_helper_0_01|owo_crutch_grip_01" }),
     mod.hide_slot("bladeshroudac", { "owo_polearm_head_helper_1_01|owo_polearm_head_helper_1_02|owo_polearm_head_helper_1_03|owo_polearm_head_helper_1_04|owo_polearm_head_helper_1_l_01|owo_polearm_head_helper_1_l_02|owo_polearm_head_helper_1_p_01|owo_polearm_head_helper_1_p_02|owo_polearm_head_helper_1_p_03|owo_polearm_head_helper_1_p_04|owo_polearm_head_helper_1_p_05|owo_polearm_head_helper_1_p_06|owo_polearm_head_helper_1_p_07|owo_polearm_head_helper_1_p_08|owo_polearm_head_helper_1_p_09" }),
     mod.hide_slot("bladeshroudac2", { "owo_polearm_head_helper_2_01" }),
     mod.hide_slot("bladeshroudac3", { "owo_polearm_head_helper_3_01|owo_polearm_head_helper_3_02" }),

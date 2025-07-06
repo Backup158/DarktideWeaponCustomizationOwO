@@ -674,6 +674,10 @@ function mod.owo_crutch_head(variant_id, given_type, given_parent)
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_crutch_01", name = "OwO Crutch 1"},
+		{id = "owo_crutch_02", name = "OwO Crutch 2"},
+	})
+	mod.inject_attachments_owo(variant_id, "bladeshroud", {
+		{id = "owo_crutch_grip_01", name = "OwO Crutch Grip 1"},
 	})
 
 	mod.inject_models(variant_id, {
@@ -681,6 +685,18 @@ function mod.owo_crutch_head(variant_id, given_type, given_parent)
 		owo_crutch_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
+		},
+		owo_crutch_02 = {
+			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_type, 
+			mesh_move = false, parent = current_parent, 
+			automatic_equip = {
+				bladeshroud = "owo_crutch_grip_01",
+			},
+		},
+		-- ### Helper Parts ###
+		owo_crutch_grip_01 = {
+			model = _item_ranged.."/handles/combat_blade_handle_03", type = "bladeshroud", 
+			mesh_move = false, parent = current_type,
 		},
 	})
 end
@@ -708,6 +724,10 @@ function mod.fixes_owo_crutch_head(variant_id, given_type, given_parent)
 		},
 		{	dependencies =	{ "owo_crutch_01", },
 			head =			{ offset = true, position = vector3_box(0, 0.0, 0.777), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.1, 1.1, 1.0 ) },
+		},
+		{	dependencies =	{ "owo_crutch_02", },
+			head =			{ offset = true, position = vector3_box(0, 0.015, 0.857), rotation = vector3_box(115, 0, -180), scale = vector3_box(2.1, 1.1, 1.2 ) },
+			bladeshroud =	{ offset = true, position = vector3_box(0, -0.016, -0.0622), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.25, 0.25 ) },
 		},
 	})
 end
