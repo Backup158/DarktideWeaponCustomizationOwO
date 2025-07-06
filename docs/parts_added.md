@@ -81,6 +81,8 @@ These can get super janky when using non-default parts so watch out.
 &emsp; Makes the gun and magazine vertically shorter. This one is just janky all around.  \
 &emsp; To avoid arrest, use with the 'Cadia' Complaint grips from the MT plugin.
 
+![california bolter pic](assets/images/california_bolter.webp)
+
 > [!WARNING]
 > 
 > KNOWN ISSUE: The RAW versions have unusable scopes. There's way too many scopes to manually fix, considering that this attachment was made as a joke. They work fine on the other variants (those have fucky barrels outside of the defaults)
