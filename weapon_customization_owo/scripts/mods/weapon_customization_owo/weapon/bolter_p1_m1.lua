@@ -79,7 +79,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
-mod.owo_california_bolter(this_variant, "receiver")
+mod.owo_california_bolter(this_variant, "receiverac1")
 
 if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant, "muzzle")

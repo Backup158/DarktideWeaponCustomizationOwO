@@ -10,6 +10,10 @@ Affects:
 - Bolt Action Helbore
 - Helbore MAS
 
+*ALL affected attachments must be reequipped!* Any patches and fixes will also need to reflect this change.
+
+I should've just done this last time but I got lazy and just wanted to push it out. My bad. It will happen again. >:3
+
 **OTHER CHANGES**
 
 # 2025-07-06
