@@ -506,6 +506,11 @@ mod.wc.receiverac1_list = {
 	"owo_laspistol_grip_mag_helper_01",
 	"owo_helbore_mas49_ass",
 }
+mod.create_custom_slot("receiverac1", 
+	{
+		en = "Receiver Accessory",
+	}
+)
 mod.wc.add_custom_attachments.receiverac2 = "receiverac2_list"
 mod.wc.receiverac2_list = {
 	"owo_receiverac2_default",
@@ -2413,120 +2418,27 @@ end
 	SBR
 		A semiautomatic, centerfire rifle that has an overall length of less than 30 inches
 ]]
-function mod.owo_california_bolter(variant_id, given_type)
-	local current_type = given_type or "receiver"
+function mod.owo_california_bolter(variant_id, given_type, given_parent)
+	local current_type = given_type or "receiverac1"
+	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_california_bolter_01_new", name = "OwO smol bolter 1"},
-		{id = "owo_california_bolter_02_new", name = "OwO smol bolter 2"},
-		{id = "owo_california_bolter_03_new", name = "OwO smol bolter 3"},
-		{id = "owo_california_bolter_04_new", name = "OwO smol bolter 4"},
-		{id = "owo_california_bolter_05_new", name = "OwO smol bolter 5"},
-		{id = "owo_california_bolter_06_new", name = "OwO smol bolter 6"},
-		{id = "owo_california_bolter_07_new", name = "OwO smol bolter 7"},
-		{id = "owo_california_bolter_08_new", name = "OwO smol bolter 8"},
-		{id = "owo_california_bolter_ml01_new", name = "OwO smol bolter M"},
-		{id = "owo_california_bolter_01", name = "OwO smol bolter (RAW) 1"},
-		{id = "owo_california_bolter_02", name = "OwO smol bolter (RAW) 2"},
-		{id = "owo_california_bolter_03", name = "OwO smol bolter (RAW) 3"},
-		{id = "owo_california_bolter_04", name = "OwO smol bolter (RAW) 4"},
-		{id = "owo_california_bolter_05", name = "OwO smol bolter (RAW) 5"},
-		{id = "owo_california_bolter_06", name = "OwO smol bolter (RAW) 6"},
-		{id = "owo_california_bolter_07", name = "OwO smol bolter (RAW) 7"},
-		{id = "owo_california_bolter_08", name = "OwO smol bolter (RAW) 8"},
-		{id = "owo_california_bolter_ml01", name = "OwO smol bolter (RAW) M"},
-	})
-	mod.inject_attachments_owo(variant_id, "receiverac1", {
-		{id = "owo_california_bolter_shroud_01", name = "OwO Vertically Challenged Bolter Shroud 1"},
-		{id = "owo_california_bolter_shroud_02", name = "OwO Vertically Challenged Bolter Shroud 2"},
-		{id = "owo_california_bolter_shroud_03", name = "OwO Vertically Challenged Bolter Shroud 3"},
-		{id = "owo_california_bolter_shroud_04", name = "OwO Vertically Challenged Bolter Shroud 4"},
-		{id = "owo_california_bolter_shroud_05", name = "OwO Vertically Challenged Bolter Shroud 5"},
-		{id = "owo_california_bolter_shroud_06", name = "OwO Vertically Challenged Bolter Shroud 6"},
-		{id = "owo_california_bolter_shroud_07", name = "OwO Vertically Challenged Bolter Shroud 7"},
-		{id = "owo_california_bolter_shroud_08", name = "OwO Vertically Challenged Bolter Shroud 8"},
-		{id = "owo_california_bolter_shroud_ml01", name = "OwO Vertically Challenged Bolter Shroud M"},
+		{id = "owo_california_bolter_shroud_00", name = "OwO Make It Smol"},
+		{id = "owo_california_bolter_shroud_01", name = "OwO Smol Bolter 1"},
+		{id = "owo_california_bolter_shroud_02", name = "OwO Smol Bolter 2"},
+		{id = "owo_california_bolter_shroud_03", name = "OwO Smol Bolter 3"},
+		{id = "owo_california_bolter_shroud_04", name = "OwO Smol Bolter 4"},
+		{id = "owo_california_bolter_shroud_05", name = "OwO Smol Bolter 5"},
+		{id = "owo_california_bolter_shroud_06", name = "OwO Smol Bolter 6"},
+		{id = "owo_california_bolter_shroud_07", name = "OwO Smol Bolter 7"},
+		{id = "owo_california_bolter_shroud_08", name = "OwO Smol Bolter 8"},
+		{id = "owo_california_bolter_shroud_ml01", name = "OwO Smol Bolter M"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiver_group_indicator", {
-		{id = "owo_receiver_group_indicator_california_bolter_1", name = "OwO Vertically Challenged Bolter Group Indicator"},
-		{id = "owo_receiver_group_indicator_california_bolter_new_1", name = "OwO Vertically Challenged Bolter (Squish) Group Indicator"},
+		{id = "owo_receiver_group_indicator_california_bolter", name = "OwO Vertically Challenged Bolter Group Indicator"},
 	})
 	-- 1-7
 	mod.inject_models(variant_id, {
-		-- ### Base Parts ###
-		owo_california_bolter_01 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		owo_california_bolter_02 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_02", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		owo_california_bolter_03 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_03", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		owo_california_bolter_04 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_04", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		owo_california_bolter_05 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_05", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		owo_california_bolter_06 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_06", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		owo_california_bolter_07 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_07", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		owo_california_bolter_08 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_08", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		owo_california_bolter_ml01 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_ml01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_1",
-			},
-		},
-		-- New style
-		owo_california_bolter_01_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_02", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
 			--[[ this is fucking stupid
 			no_support = {
 				-- Thumbhole, Folding, and Telescoping Stocks
@@ -2548,130 +2460,104 @@ function mod.owo_california_bolter(variant_id, given_type)
 				"xl_autogun_rifle_stock_08",	-- syn xl headhunter
 				"xl_autogun_rifle_stock_16",
 			}]]
-		},
-		owo_california_bolter_02_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_02", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
-		},
-		owo_california_bolter_03_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_03", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
-		},
-		owo_california_bolter_04_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_04", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
-		},
-		owo_california_bolter_05_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_05", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
-		},
-		owo_california_bolter_06_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_06", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
-		},
-		owo_california_bolter_07_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_07", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
-		},
-		owo_california_bolter_08_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_08", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
-		},
-		owo_california_bolter_ml01_new = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_ml01", type = current_type, 
-			mesh_move = false,
-			automatic_equip = {
-				receiverac1 = "owo_california_bolter_shroud_ml01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter_new_1",
-			},
-			hide_mesh = {
-				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
-			},
-		},
-		-- ### Helper Parts ###
+		-- ### Base Parts ###
 		-- Receiver AC1 (Shrouds)
+		owo_california_bolter_shroud_00 = {
+			model = "", type = current_type, 
+			parent = "receiver", mesh_move = false,
+		},
 		owo_california_bolter_shroud_01 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_02", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		owo_california_bolter_shroud_02 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_02", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_02", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		owo_california_bolter_shroud_03 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_03", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_03", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		owo_california_bolter_shroud_04 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_04", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_04", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		owo_california_bolter_shroud_05 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_05", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_05", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		owo_california_bolter_shroud_06 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_06", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_06", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		owo_california_bolter_shroud_07 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_07", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_07", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		owo_california_bolter_shroud_08 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_08", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_08", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		owo_california_bolter_shroud_ml01 = {
-			model = _item_ranged.."/recievers/boltgun_rifle_receiver_ml01", type = "receiverac1", 
-			parent = current_type, mesh_move = false
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_ml01", type = current_type, 
+			parent = "receiver", mesh_move = false,
+			automatic_equip = {
+				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+			},
+			hide_mesh = {
+				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
 		},
 		-- Indicators
-		owo_receiver_group_indicator_california_bolter_1 = {
-			model = "", type = "receiver_group_indicator", 
-		},
-		owo_receiver_group_indicator_california_bolter_new_1 = {
+		owo_receiver_group_indicator_california_bolter = {
 			model = "", type = "receiver_group_indicator", 
 		},
 	})

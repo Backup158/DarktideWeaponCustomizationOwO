@@ -1,10 +1,27 @@
 # 2025-UNRELEASED
+v3.0
+
+**BREAKING CHANGE(S)**
+
+Reworked how receiver accessory things work.
+
+Affects:
+- Vertically Challenged (smol) Bolters
+- Bolt Action Helbore
+- Helbore MAS
+
+**OTHER CHANGES**
+
+# 2025-07-06
 v2.2.0
+
+Never actually released this but I'll split it for development reasons
 
 - Added crutches lmfao 
     - For Thunder Hammers
     - Under shoulder and elbow crutches
         - proportions fof for shoulder
+- Moved trinket hook for invisible connector
 
 # 2025-07-05
 v2.1.0
