@@ -2425,6 +2425,7 @@ function mod.owo_california_bolter(variant_id, given_type)
 		{id = "owo_california_bolter_06", name = "OwO smol Bolter 6"},
 		{id = "owo_california_bolter_07", name = "OwO smol Bolter 7"},
 		{id = "owo_california_bolter_08", name = "OwO smol Bolter 8"},
+		{id = "owo_california_bolter_ml01", name = "OwO smol Bolter 8"},
 		{id = "owo_california_bolter_01_new", name = "OwO smol Bolter (squish) 1"},
 		{id = "owo_california_bolter_02_new", name = "OwO smol Bolter (squish) 2"},
 		{id = "owo_california_bolter_03_new", name = "OwO smol Bolter (squish) 3"},
@@ -2433,6 +2434,7 @@ function mod.owo_california_bolter(variant_id, given_type)
 		{id = "owo_california_bolter_06_new", name = "OwO smol Bolter (squish) 6"},
 		{id = "owo_california_bolter_07_new", name = "OwO smol Bolter (squish) 7"},
 		{id = "owo_california_bolter_08_new", name = "OwO smol Bolter (squish) 8"},
+		{id = "owo_california_bolter_ml01_new", name = "OwO smol Bolter (squish) M"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
 		{id = "owo_california_bolter_shroud_01", name = "OwO Vertically Challenged Bolter Shroud 1"},
@@ -2443,6 +2445,7 @@ function mod.owo_california_bolter(variant_id, given_type)
 		{id = "owo_california_bolter_shroud_06", name = "OwO Vertically Challenged Bolter Shroud 6"},
 		{id = "owo_california_bolter_shroud_07", name = "OwO Vertically Challenged Bolter Shroud 7"},
 		{id = "owo_california_bolter_shroud_08", name = "OwO Vertically Challenged Bolter Shroud 8"},
+		{id = "owo_california_bolter_shroud_ml01", name = "OwO Vertically Challenged Bolter Shroud M"},
 	})
 	-- 1-7
 	mod.inject_models(variant_id, {
@@ -2477,6 +2480,10 @@ function mod.owo_california_bolter(variant_id, given_type)
 		},
 		owo_california_bolter_08 = {
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_08", type = current_type, 
+			mesh_move = false,
+		},
+		owo_california_bolter_ml01 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_ml01", type = current_type, 
 			mesh_move = false,
 		},
 		-- New style
@@ -2581,6 +2588,16 @@ function mod.owo_california_bolter(variant_id, given_type)
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
 			},
 		},
+		owo_california_bolter_ml01_new = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_ml01", type = current_type, 
+			mesh_move = false,
+			automatic_equip = {
+				receiverac1 = "owo_california_bolter_shroud_ml01"
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
+			},
+		},
 		-- ### Helper Parts ###
 		owo_california_bolter_shroud_01 = {
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = "receiverac1", 
@@ -2612,6 +2629,10 @@ function mod.owo_california_bolter(variant_id, given_type)
 		},
 		owo_california_bolter_shroud_08 = {
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_08", type = "receiverac1", 
+			parent = current_type, mesh_move = false
+		},
+		owo_california_bolter_shroud_ml01 = {
+			model = _item_ranged.."/recievers/boltgun_rifle_receiver_ml01", type = "receiverac1", 
 			parent = current_type, mesh_move = false
 		},
 	})
