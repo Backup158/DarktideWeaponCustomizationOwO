@@ -2423,7 +2423,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_california_bolter_shroud_00", name = "OwO Make It Smol"},
+		{id = "owo_california_bolter_shroud_00", name = "OwO Smol BUT RAW BOLTA!"},
 		{id = "owo_california_bolter_shroud_01", name = "OwO Smol Bolter 1"},
 		{id = "owo_california_bolter_shroud_02", name = "OwO Smol Bolter 2"},
 		{id = "owo_california_bolter_shroud_03", name = "OwO Smol Bolter 3"},

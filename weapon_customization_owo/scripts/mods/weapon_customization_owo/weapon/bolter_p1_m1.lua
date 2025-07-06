@@ -118,8 +118,7 @@ local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog
 local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
-local _owo_california_bolter_receivers = "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08"
-local _owo_california_bolter_new_receivers = "owo_california_bolter_01_new|owo_california_bolter_02_new|owo_california_bolter_03_new|owo_california_bolter_04_new|owo_california_bolter_05_new|owo_california_bolter_06_new|owo_california_bolter_07_new|owo_california_bolter_08_new"
+local _owo_california_bolter_receiverac1s = "owo_california_bolter_shroud_01|owo_california_bolter_shroud_02|owo_california_bolter_shroud_03|owo_california_bolter_shroud_04|owo_california_bolter_shroud_05|owo_california_bolter_shroud_06|owo_california_bolter_shroud_07|owo_california_bolter_shroud_08|owo_california_bolter_shroud_ml01"
 
 local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
 local _long_infantry_lasgun_mt_barrels = "ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08"
@@ -237,12 +236,12 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { "owo_california_bolter_shroud_00", _mt_helbore_grips },
         grip =          { offset = true,  position = vector3_box(0, 0, 0.013), scale = vector3_box(1, 1, 1.564)},
     },
-    {   dependencies =  { "owo_receiver_group_indicator_california_bolter", _owo_california_bolter_new_receivers, _mt_helbore_grips },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter", _owo_california_bolter_receiverac1s, _mt_helbore_grips },
         grip =          { offset = true,  position = vector3_box(0, 0.032, 0.064), scale = vector3_box(1, 1, 1)},
     },
     -- Barrels
     --  Default Barrel
-    {   dependencies =  { "owo_receiver_group_indicator_california_bolter", _owo_california_bolter_new_receivers, _bolter_barrels },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter", _owo_california_bolter_receiverac1s, _bolter_barrels },
         barrel =        { offset = true,  position = vector3_box(0, 0.0, 0.018), scale = vector3_box(0.7, 1, 0.7)},
     },
     --  Defaults
@@ -253,7 +252,7 @@ mod.mt.inject_fixes(this_variant, {
         --sight =         { offset = true,  position = vector3_box(0, 0.0, 0.0), scale = vector3_box(1, 1, 1.564)}, -- fuck this shit
         grip =          { offset = true,  position = vector3_box(0, 0, 0.03), scale = vector3_box(1, 1, 1.564)},
     },
-    {   dependencies =  { "owo_receiver_group_indicator_california_bolter", _owo_california_bolter_new_receivers },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter", _owo_california_bolter_receiverac1s },
         receiver =      { offset = true,  position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)}, 
         receiverac1 =   { offset = true,  position = vector3_box(0, 0, 0.054), scale = vector3_box(1, 1, 0.64)},   
         -- In compliance with California Penal Code § 32310 PC: Reducing magazine capacity

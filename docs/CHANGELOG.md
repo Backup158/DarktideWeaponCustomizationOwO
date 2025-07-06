@@ -1,12 +1,20 @@
 # 2025-UNRELEASED
-v3.0
+v3.0.0
 
 **BREAKING CHANGE(S)**
 
 Reworked how receiver accessory things work.
 
+Because there is less parts overall (on the technical side), it's should slightly improve performance. Not noticably, but every bit helps with taking down this monster schlong. 
+
 Affects:
 - Vertically Challenged (smol) Bolters
+    - Old RAW variants are merged into the "Smol but RAW" `receiverac1`
+    - Choose any of the regular receivers, then having "Smol but RAW" will shrink those for you
+    - Other Smol Bolter variants work as usual
+        - Autoequips a base to make invisible
+        - Since it can't be the same mesh (and you don't see it), equip the "Bolter 1" (`receiver_01`) by default
+        - "Smol Bolter 1" uses another base for the same reason
 - Bolt Action Helbore
 - Helbore MAS
 
