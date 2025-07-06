@@ -761,6 +761,19 @@ function mod.owo_invisible_connector(variant_id, given_type, given_parent)
 		},
 	})
 end
+function mod.fixes_owo_invisible_connector(variant_id, given_type, given_parent)
+	local current_type = given_type or "connector"
+	local current_parent = given_parent or "shaft"
+
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Connector: WHEN YOU CAN'T EVEN SAY! MY NAME!
+		-- ######
+		{	dependencies =	{ "owo_invisible_connector_01" },
+			trinket_hook =	{ offset = true, position = vector3_box(-0.02, 0.0, -0.027), rotation = vector3_box(0, 90, 90), scale = vector3_box(1, 1, 1) },
+		},
+	})
+end
 
 -- Crossguards
 function mod.owo_crossguard(variant_id, given_type, given_parent)

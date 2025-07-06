@@ -103,6 +103,8 @@ mod.fixes_owo_tacax_spike(this_variant, "head", "shaft")
 mod.fixes_owo_polearm_head(this_variant, "head", "shaft")
 mod.fixes_owo_crutch_head(this_variant, "head", "shaft")
 
+mod.fixes_owo_invisible_connector(this_variant)
+
 mod.fixes_owo_shaft_low_grip(this_variant, "shaft")
 
 -- #################
