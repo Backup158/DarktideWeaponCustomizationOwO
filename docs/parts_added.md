@@ -81,7 +81,7 @@ These can get super janky when using non-default parts so watch out.
 &emsp; Makes the gun and magazine vertically shorter. This one is just janky all around.  \
 &emsp; To avoid arrest, use with the 'Cadia' Complaint grips from the MT plugin.
 
-![california bolter pic](assets/images/california_bolter.webp)
+![california bolter pic](./assets/images/california_bolter.webp)
 
 > [!WARNING]
 > 
