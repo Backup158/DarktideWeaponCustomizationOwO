@@ -19,6 +19,18 @@ v2.0.2
     - Ideally these should be easy enough to position for the various scope bodies (famous last words)
     - If it works, it means I can have even more modular scope pictures, in addition to the mt helpers
     - Added German #1 reticle (from pu scope)
+- Reworked Vertically Challenged Bolters
+    - Added variants using invisible base with the helper shroud shrinking so I don't have to resize every scope
+        - Need to move grips and underbarrels (and barrels but I'm too lazy for the MT plugin parts)
+        - Scopes are good as-is
+        - Floats off your hands
+    - Original ones are still there, with their fucked up scopes
+        - I am NOT patching every single scope for this
+- MAYBE refactored heterosexual grips for optimization
+    - add group 1 helper to all the ogryn ones
+    - check for group 1 helper AND ogryn ones
+    - hide if ONLY find group 1 helper
+    - so it short circuits and doesn't need to check every grip
 - Refactored Suppressors for Combat Shotguns and Stubrevolvers to use universalized helper fixes
 - Prepared files for new weapons
     - Arbites Shock Maul, Shock Maul and Suppression Shield, Exterminator Shotgun, and Subductor Shotpistol and Riot Shield

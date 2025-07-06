@@ -50,6 +50,8 @@ end
 -- OwO Slot Initialization
 -- ###############
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+    "receiverac1",
+
     "sightac1",
     "sightac5",
     "sightac6",
@@ -115,6 +117,8 @@ local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog
 local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
+local _owo_california_bolter_receivers = "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08"
+local _owo_california_bolter_new_receivers = "owo_california_bolter_01_new|owo_california_bolter_02_new|owo_california_bolter_03_new|owo_california_bolter_04_new|owo_california_bolter_05_new|owo_california_bolter_06_new|owo_california_bolter_07_new|owo_california_bolter_08_new"
 
 local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
 local _long_infantry_lasgun_mt_barrels = "ilasgun_barrel_01|ilasgun_barrel_02|ilasgun_barrel_04|ilasgun_barrel_05|ilasgun_barrel_06|ilasgun_barrel_07|ilasgun_barrel_08"
@@ -125,7 +129,6 @@ local _long_helbore_mt_barrels = "hlasgun_barrel_02"
 local _all_helbore_mt_barrels = _medium_short_helbore_mt_barrels.."|".._medium_medium_helbore_mt_barrels.."|".._long_helbore_mt_barrels
 local _mt_recon_lasgun_barrels = "rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05"
 local _mt_laspistol_barrels = "lpistol_barrel_01|lpistol_barrel_02|lpistol_barrel_03|lpistol_barrel_04|lpistol_barrel_05|lpistol_barrel_06|lpistol_barrel_07"
-
 local _mt_autopistol_barrels = "apistol_barrel_01|apistol_barrel_02|apistol_barrel_03|apistol_barrel_04|apistol_barrel_05"
 local _mt_twin_stubber_barrels = "stubber_barrel_01|stubber_barrel_02|stubber_barrel_03|stubber_barrel_04|stubber_barrel_05"
 local _mt_single_stubber_barrels = "singlestubber_barrel_01|singlestubber_barrel_02|singlestubber_barrel_03"
@@ -136,6 +139,8 @@ local _mt_flamer_barrels = "flamer_barrel_01|flamer_barrel_02|flamer_barrel_03|f
 local _mt_bolter_barrels = "bolter_barrel_01|bolter_barrel_02|bolter_barrel_03|bolter_barrel_04"
 local _mt_backwards_bolter_barrels = "fbolter_barrel_01|fbolter_barrel_02|fbolter_barrel_03|fbolter_barrel_04"
 local _mt_ripper_barrels = "ripper_barrel_01|ripper_barrel_02|ripper_barrel_03|ripper_barrel_04|ripper_barrel_05|ripper_barrel_06"
+local _mt_plasma_grips = "plas_pisgrip_01|plas_pisgrip_02|plas_pisgrip_03"
+local _mt_helbore_grips = "hlasgun_grip_01|hlasgun_grip_02|hlasgun_grip_03"
 
 local _syn_m41a_barrels = "syn_m41a_barrel_01|syn_m41a_barrel_02|syn_m41a_barrel_03|syn_m41a_barrel_04|syn_m41a_barrel_05|syn_m41a_barrel_06|syn_m41a_barrel_07|syn_m41a_barrel_08"
 local _syn_helbore_sniper_barrels = "helbore_sniper_barrel_01|helbore_sniper_barrel_02|helbore_sniper_barrel_03|helbore_sniper_barrel_04|helbore_sniper_barrel_05|helbore_sniper_barrel_05b"
@@ -155,6 +160,8 @@ local _syn_gauss_barrels = "syn_gk8gauss_barrel_01|syn_gk8gauss_barrel_02"
 -- ########
 -- For This Variant Only
 -- ########
+local _bolter_barrels = "bolter_barrel_01|bolter_barrel_02|bolter_barrel_03|bolter_barrel_04"
+
 local _syn_xl_iag_barrels = 'xl_iagun_barrel_01|xl_iagun_barrel_02|xl_iagun_barrel_03|xl_iagun_barrel_04|xl_iagun_barrel_05|xl_iagun_barrel_06|xl_iagun_barrel_07'
 local _syn_xl_brauto_barrels = "xl_bagun_barrel_01|xl_bagun_barrel_02|xl_bagun_barrel_03|xl_bagun_barrel_04|xl_bagun_barrel_05|xl_bagun_barrel_06|xl_bagun_barrel_07|xl_bagun_barrel_08|xl_bagun_barrel_09"
 local _syn_xl_hha_barrels = "xl_hagun_barrel_01|xl_hagun_barrel_02|xl_hagun_barrel_03|xl_hagun_barrel_04|xl_hagun_barrel_05"
@@ -196,6 +203,8 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
     -- Stocks
     mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
+    -- Receivers
+    mod.hide_slot("receiverac1", { "owo_california_bolter_shroud_01|owo_california_bolter_shroud_02|owo_california_bolter_shroud_03|owo_california_bolter_shroud_04|owo_california_bolter_shroud_05|owo_california_bolter_shroud_06|owo_california_bolter_shroud_07|owo_california_bolter_shroud_08" }),
 })
 
 -- #################
@@ -216,31 +225,40 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Receiver: California Bolter receiver
     -- ######
-    {   dependencies = { "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08"},
-        receiver = { offset = true,  position = vector3_box(0, 0, 0.054), scale = vector3_box(1, 1, 0.64)},    
-        -- In compliance with California Penal Code § 32310 PC 
-        -- Reducing magazine capacity
-        magazine = { offset = true,  position = vector3_box(0, 0, 0.055), scale = vector3_box(1, 1, 0.58)},
-    },
     -- Grips
     --      MT Plasma grips
     --      this one sits higher than other grips for whatever the fuck reason
-    {   dependencies = { "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08", 
-            "plas_pisgrip_01|plas_pisgrip_02|plas_pisgrip_03"
-        },
-        grip = { offset = true,  position = vector3_box(0, 0.006, -0.032), scale = vector3_box(1, 1, 1.564)},
+    {   dependencies =  { _owo_california_bolter_receivers, _mt_plasma_grips },
+        grip =          { offset = true,  position = vector3_box(0, 0.006, -0.032), scale = vector3_box(1, 1, 1.564)},
     },
     --      Repositioning for MT Cadia Compliant Stock
     --      makes it sit higher than usual so the top of the trigger guard is flush with the receiver
-    {   dependencies = { "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08", 
-            "hlasgun_grip_01|hlasgun_grip_02|hlasgun_grip_03"
-        },
-        grip = { offset = true,  position = vector3_box(0, 0, 0.013), scale = vector3_box(1, 1, 1.564)},
+    {   dependencies =  { _owo_california_bolter_receivers, _mt_helbore_grips },
+        grip =          { offset = true,  position = vector3_box(0, 0, 0.013), scale = vector3_box(1, 1, 1.564)},
     },
-    --      Else
-    {   dependencies = { "owo_california_bolter_01|owo_california_bolter_02|owo_california_bolter_03|owo_california_bolter_04|owo_california_bolter_05|owo_california_bolter_06|owo_california_bolter_07|owo_california_bolter_08", 
-        },
-        grip = { offset = true,  position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.564)}
+    {   dependencies =  { _owo_california_bolter_new_receivers, _mt_helbore_grips },
+        grip =          { offset = true,  position = vector3_box(0, 0.032, 0.064), scale = vector3_box(1, 1, 1)},
+    },
+    -- Barrels
+    --  Default Barrel
+    {   dependencies =  { _owo_california_bolter_new_receivers, _bolter_barrels },
+        barrel =        { offset = true,  position = vector3_box(0, 0.0, 0.018), scale = vector3_box(0.7, 1, 0.7)},
+    },
+    --  Defaults
+    {   dependencies =  { _owo_california_bolter_receivers },
+        receiver =      { offset = true,  position = vector3_box(0, 0, 0.054), scale = vector3_box(1, 1, 0.64)}, 
+        -- In compliance with California Penal Code § 32310 PC: Reducing magazine capacity
+        magazine =      { offset = true,  position = vector3_box(0, 0, 0.055), scale = vector3_box(1, 1, 0.58)},
+        sight =         { offset = true,  position = vector3_box(0, 0.0, 0.0), scale = vector3_box(1, 1, 1.564)},
+        grip =          { offset = true,  position = vector3_box(0, 0, 0.03), scale = vector3_box(1, 1, 1.564)},
+    },
+    {   dependencies =  { _owo_california_bolter_new_receivers },
+        receiver =      { offset = true,  position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)}, 
+        receiverac1 =   { offset = true,  position = vector3_box(0, 0, 0.054), scale = vector3_box(1, 1, 0.64)},   
+        -- In compliance with California Penal Code § 32310 PC: Reducing magazine capacity
+        magazine =      { offset = true,  position = vector3_box(0, 0, 0.055), scale = vector3_box(1, 1, 0.58)},
+        grip =          { offset = true,  position = vector3_box(0, 0, 0.03), scale = vector3_box(1, 1, 1)},
+        underbarrel =   { offset = true,  position = vector3_box(0, 0, 0.054), scale = vector3_box(1, 1, 0.64)},
     },
 
     -- ######
