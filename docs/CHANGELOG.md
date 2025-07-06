@@ -1,3 +1,11 @@
+# 2025-UNRELEASED
+v2.2.0
+
+- Added crutches lmfao 
+    - For Thunder Hammers
+    - Under shoulder and elbow crutches
+        - proportions fof for shoulder
+
 # 2025-07-05
 v2.1.0
 
