@@ -4,7 +4,7 @@ local mt
 local syn
 
 -- Prints a message to the console log containing the current version number
-local mod_version = "2.0.2"
+local mod_version = "2.1.0"
 mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 
  -- Locals from Weapon Customization plugin template

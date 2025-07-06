@@ -51,6 +51,7 @@ end
 -- ###############
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "receiverac1",
+    "receiver_group_indicator",
 
     "sightac1",
     "sightac5",
@@ -205,6 +206,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
     -- Receivers
     mod.hide_slot("receiverac1", { "owo_california_bolter_shroud_01|owo_california_bolter_shroud_02|owo_california_bolter_shroud_03|owo_california_bolter_shroud_04|owo_california_bolter_shroud_05|owo_california_bolter_shroud_06|owo_california_bolter_shroud_07|owo_california_bolter_shroud_08" }),
+    mod.hide_slot("receiver_group_indicator", { "owo_receiver_group_indicator_california_bolter_1|owo_receiver_group_indicator_california_bolter_new_1" }),
 })
 
 -- #################
@@ -228,31 +230,31 @@ mod.mt.inject_fixes(this_variant, {
     -- Grips
     --      MT Plasma grips
     --      this one sits higher than other grips for whatever the fuck reason
-    {   dependencies =  { _owo_california_bolter_receivers, _mt_plasma_grips },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter_1", _owo_california_bolter_receivers, _mt_plasma_grips },
         grip =          { offset = true,  position = vector3_box(0, 0.006, -0.032), scale = vector3_box(1, 1, 1.564)},
     },
     --      Repositioning for MT Cadia Compliant Stock
     --      makes it sit higher than usual so the top of the trigger guard is flush with the receiver
-    {   dependencies =  { _owo_california_bolter_receivers, _mt_helbore_grips },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter_1", _owo_california_bolter_receivers, _mt_helbore_grips },
         grip =          { offset = true,  position = vector3_box(0, 0, 0.013), scale = vector3_box(1, 1, 1.564)},
     },
-    {   dependencies =  { _owo_california_bolter_new_receivers, _mt_helbore_grips },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter_new_1", _owo_california_bolter_new_receivers, _mt_helbore_grips },
         grip =          { offset = true,  position = vector3_box(0, 0.032, 0.064), scale = vector3_box(1, 1, 1)},
     },
     -- Barrels
     --  Default Barrel
-    {   dependencies =  { _owo_california_bolter_new_receivers, _bolter_barrels },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter_new_1", _owo_california_bolter_new_receivers, _bolter_barrels },
         barrel =        { offset = true,  position = vector3_box(0, 0.0, 0.018), scale = vector3_box(0.7, 1, 0.7)},
     },
     --  Defaults
-    {   dependencies =  { _owo_california_bolter_receivers },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter_1", _owo_california_bolter_receivers },
         receiver =      { offset = true,  position = vector3_box(0, 0, 0.054), scale = vector3_box(1, 1, 0.64)}, 
         -- In compliance with California Penal Code § 32310 PC: Reducing magazine capacity
         magazine =      { offset = true,  position = vector3_box(0, 0, 0.055), scale = vector3_box(1, 1, 0.58)},
-        sight =         { offset = true,  position = vector3_box(0, 0.0, 0.0), scale = vector3_box(1, 1, 1.564)},
+        --sight =         { offset = true,  position = vector3_box(0, 0.0, 0.0), scale = vector3_box(1, 1, 1.564)}, -- fuck this shit
         grip =          { offset = true,  position = vector3_box(0, 0, 0.03), scale = vector3_box(1, 1, 1.564)},
     },
-    {   dependencies =  { _owo_california_bolter_new_receivers },
+    {   dependencies =  { "owo_receiver_group_indicator_california_bolter_new_1", _owo_california_bolter_new_receivers },
         receiver =      { offset = true,  position = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)}, 
         receiverac1 =   { offset = true,  position = vector3_box(0, 0, 0.054), scale = vector3_box(1, 1, 0.64)},   
         -- In compliance with California Penal Code § 32310 PC: Reducing magazine capacity
