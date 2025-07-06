@@ -39,7 +39,7 @@ Parts are prefixed with `OwO` in the customization menu.
 - **Short Shotgun Barrels**: Bolt Pistol  \
 &emsp; Short variants that extend the barrel a little. Super short variants extend it a little less (wow such detail).
 - **Shotgun Barrel Extension**: Snubnosed Revolver  \
-&emsp; Adds short and long variants. 
+&emsp; Adds short and long variants.  \
 &emsp; &emsp; Short fits typical revolver barrel length.  \
 &emsp; &emsp; Long goes a bit beyond that.
 
@@ -49,7 +49,7 @@ Parts are prefixed with `OwO` in the customization menu.
 &emsp; &emsp; Based on the iconic Magpul angled grip  \
 &emsp; &emsp; Some generic slanted grips
 - **Straight Foregrips**: Infantry/Braced/Vigilant Autoguns  \
-&emsp; Adds Generic Grips, Braced Autogun Grips, Bolter Grips, Laspistol Grips, Flamer Grips, Knife Handle Grips (Normal and Stubby), Ogryn Cleaver Grips, "Devil's Claw" Combat Sword Grips
+&emsp; Adds Generic Grips, Braced Autogun Grips, Bolter Grips, Laspistol Grips, Flamer Grips, Knife Handle Grips (Normal and Stubby), Ogryn Cleaver Grips, "Devil's Claw" Combat Sword Grips  \
 &emsp; Foregrips perpendicular to the barrel, which will clip with your off hand (this is why the MT plugin uses slanted foregrips).
 
 ### Bayonets
@@ -75,7 +75,16 @@ Parts are prefixed with `OwO` in the customization menu.
 ### Receivers
 These can get super janky when using non-default parts so watch out.
 - **Vertically Challenged Bolter Receiver**: Spearhead Boltgun  \
-&emsp; Makes the gun and magazine vertically shorter. This one is just janky all around. Use with the 'Cadia' Complaint grips from the MT plugin.
+&emsp; Variants  \
+&emsp; &emsp; Smol Bolter (RAW): Receiver is squished, as well as everything else connected automatically   \
+&emsp; &emsp; Smol Bolter: Only receiver is squished, with some manual adjustments   \
+&emsp; Makes the gun and magazine vertically shorter. This one is just janky all around.  \
+&emsp; To avoid arrest, use with the 'Cadia' Complaint grips from the MT plugin.
+
+> [!WARNING]
+> 
+> KNOWN ISSUE: The RAW versions have unusable scopes. There's way too many scopes to manually fix, considering that this attachment was made as a joke. They work fine on the other variants (those have fucky barrels outside of the defaults)
+
 - **Bolt Action Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; Adds a grip to the back to mimic a bolt
 - **MAS-49 Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \

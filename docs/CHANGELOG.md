@@ -30,7 +30,7 @@ v2.1.0
         - Moved the crosshair to use sight_2
     - Vertically Challenged Bolters
         - Renamed to smol bolters because that name was too long
-        - Added variants (smol squish) using invisible base with the helper shroud shrinking so I don't have to resize every scope
+        - Added variants using invisible base with the helper shroud shrinking so I don't have to resize every scope
             - Need to move grips and underbarrels (and barrels but I'm too lazy for the MT plugin parts)
             - Scopes are good as-is
             - Floats off your hands
