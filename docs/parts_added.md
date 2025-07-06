@@ -219,10 +219,10 @@ These can get super janky when using non-default parts so watch out.
 
 ### Shafts
 - **Long Shafts**: Thunder Hammers  \
-&emsp; Longer shaft (held at the bottom)
+&emsp; Longer shaft (held at the bottom)  \
 &emsp; When used with an Invisible Connector, it's about forehead height for a max height character.
 - **Long Ogryn Shafts**: Delver's Pickaxes  \
-&emsp; Longer shaft (held at the bottom)
+&emsp; Longer shaft (held at the bottom)  \
 &emsp; The head is around nose level.
 
 ### Pommels
