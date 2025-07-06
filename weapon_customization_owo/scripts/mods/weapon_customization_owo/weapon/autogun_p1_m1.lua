@@ -122,7 +122,8 @@ mod.owo_holosight(this_variant, "sight", "rail")
 mod.owo_prismatic_sight(this_variant, "sight", "rail")
 mod.owo_pu_scope(this_variant, "sight")
 
-mod.owo_helbore_mas49(this_variant, "receiver")
+mod.owo_helbore_body(this_variant)
+mod.owo_helbore_mas49(this_variant)
 
 mod.owo_fin_grip(this_variant, "grip")
 
@@ -161,7 +162,7 @@ local _m16a2_barrels = "owo_m16_barrel_a2|owo_m16_barrel_t_a2|owo_m16_barrel_n_a
 local _m16_normal_post_barrels = "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2"
 local _m16_tall_post_barrels = "owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2"
 local _m16_no_post_barrels = "owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
-local _owo_bolt_helbore_receivers = "owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05"
+local _owo_bolt_helbore_receiverac1s = "owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05"
 local _owo_mas_helbore_receivers = "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"
 
 local _short_braced_autogun_mt_barrels = "bagun_barrel_01|bagun_barrel_05|bagun_barrel_06|bagun_barrel_07|bagun_barrel_08"
@@ -266,7 +267,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("foregripac2", { "owo_tactical_foregrip_ac2_01" }),
     mod.hide_slot("foregripac3", { "owo_tactical_foregrip_ac3_01" }),
     -- Receivers
-    mod.hide_slot("receiverac1", { "owo_bolt_helbore_bolt_01|owo_helbore_mas49_ass" }),
+    --
     mod.hide_slot("receiverac2", { "owo_bolt_helbore_bolt_02|owo_helbore_mas49_knob" }),
     -- Magazines
     mod.hide_slot("owo_magac1", { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01|owo_magazine_ak_ac1_01" }),
@@ -319,10 +320,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Receiver: BOLT ACTION HELBORE
 	-- ######
-	{	dependencies =  { _owo_bolt_helbore_receivers },
-		receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-		receiverac1 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
-		receiverac2 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+	{	dependencies =  { _owo_bolt_helbore_receiverac1s },
+		receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+        receiverac2 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
 	},
     -- ######
 	-- Receiver: HELBORE MAS-49
@@ -1030,7 +1030,7 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  Helbore-based Receivers
     --      Bolt Action and MAS
-    {	dependencies =  { "owo_m203", _owo_bolt_helbore_receivers.."|".._owo_mas_helbore_receivers },
+    {	dependencies =  { "owo_m203", _owo_bolt_helbore_receiverac1s.."|".._owo_mas_helbore_receivers },
         bayonet =       { offset = true, position = vector3_box(0, 0.36, -0.054), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
     --  handled universally otherwise
@@ -1149,7 +1149,7 @@ mod.mt.inject_fixes(this_variant, {
     ]]
     --  Helbore-based Receivers
     --      Bolt Action and MAS
-    {	dependencies =  { "owo_gp25", _owo_bolt_helbore_receivers.."|".._owo_mas_helbore_receivers },
+    {	dependencies =  { "owo_gp25", _owo_bolt_helbore_receiverac1s.."|".._owo_mas_helbore_receivers },
         bayonet =       { offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
     --  handled universally otherwise

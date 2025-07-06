@@ -127,7 +127,7 @@ local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog
 local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
-local _owo_bolt_helbore_receivers = "owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05"
+local _owo_bolt_helbore_receiverac1s = "owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05"
 local _owo_mas_helbore_receivers = "owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s"
 
 local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
@@ -218,7 +218,6 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("bayonetac6", { "owo_underbarrel_shotgun_helper_06|owo_underbarrel_shotgun_helper_06_02" }),
     mod.hide_slot("bayonetac7", { "owo_underbarrel_shotgun_helper_07" }),
     -- Receivers
-    mod.hide_slot("receiverac1", { "owo_bolt_helbore_bolt_01|owo_helbore_mas49_ass" }),
     mod.hide_slot("receiverac2", { "owo_bolt_helbore_bolt_02|owo_helbore_mas49_knob" }),
     -- Sights
     mod.hide_slot("sightac1", { "owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_holosight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
@@ -258,28 +257,21 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Receiver: BOLT ACTION HELBORE
 	-- ######
-	{	dependencies = {"owo_bolt_helbore_01|owo_bolt_helbore_02|owo_bolt_helbore_03|owo_bolt_helbore_04|owo_bolt_helbore_05",
-		},
-		receiver = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-		receiverac1 = { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
-		receiverac2 = { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+	{	dependencies =  { _owo_bolt_helbore_receiverac1s,},
+		receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+        receiverac2 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
 	},
 
 	-- ######
 	-- Receiver: HELBORE MAS-49
 	-- ######
-	{	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05",
-		},
-		receiver = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    -- Slims down receiver
+	{	dependencies =  { "owo_helbore_mas49_01_s", },
+		receiver =      { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.69, 1, 1 ) },
 	},
-	{	dependencies = {"owo_helbore_mas49_01_s",
-		},
-		receiver = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.69, 1, 1 ) },
-	},
-	{	dependencies = {"owo_helbore_mas49_01|owo_helbore_mas49_02|owo_helbore_mas49_03|owo_helbore_mas49_05|owo_helbore_mas49_01_s",
-		},
-		receiverac1 = { offset = true, position = vector3_box(0.031, 0.022, 0.046), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.518, 0.573, 0.545 ) },
-		receiverac2 = { offset = true, position = vector3_box(0.046, 0.18, 0.096), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.755, 0.755, 0.15 ) },
+	{	dependencies =  { "owo_helbore_mas49_01|owo_helbore_mas49_01_s", },
+		receiverac1 =   { offset = true, position = vector3_box(0.031, 0.022, 0.046), rotation = vector3_box(-90, 0, 90), scale = vector3_box(0.518, 0.573, 0.545 ) },
+		receiverac2 =   { offset = true, position = vector3_box(0.046, 0.18, 0.096), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.755, 0.755, 0.15 ) },
 	},
 
 	-- ######

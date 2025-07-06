@@ -13,7 +13,7 @@ Affects:
     - Choose any of the regular receivers, then having "Smol but RAW" will shrink those for you
     - Other Smol Bolter variants work as usual
         - Autoequips a base to make invisible
-        - Since it can't be the same mesh (and you don't see it), equip the "Bolter 1" (`receiver_01`) by default
+        - Since it can't be the same mesh (and you don't see it), equip the "Bolter 1" receiver (`receiver_01`) by default
         - "Smol Bolter 1" uses another base for the same reason
 - Bolt Action Helbore
 - Helbore MAS
