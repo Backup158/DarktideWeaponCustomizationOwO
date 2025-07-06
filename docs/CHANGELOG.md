@@ -5,10 +5,10 @@ v2.1.0
     - Just if anyone (likely no one) reused this function for a personal mod, they'd have to rename it
     - The function to add the PU Scope is separate even though it's telescopic too
     - I may expand that into a broader group of classic telescopic sights (since prism sights are a subset of telescopic sights)
-- Created crosshairs for sight_2
+- Created crosshairs for `sight_2`
     - Ideally these should be easy enough to position for the various scope bodies (famous last words)
     - If it works, it means I can have even more modular scope pictures, in addition to the mt helpers
-    - Added German #1 reticle (from pu scope)
+    - Added German #1 reticle (from PU Scope)
 - Refactored fixes for increased performance
     - Adds a hidden slot I call the "group indicator"
     - This is meant to be used with big groups of fixes to induce a short circuit when those are not equipped, so less work is done (better performance)
@@ -23,11 +23,11 @@ v2.1.0
         - Removed many of the positioning variants for performance (dang I really went ham with those lol)
             - Performance-wise these should be fine since it'll short circuit after the M203 and GP-25 checks, which is basically the same amount of checks as a few ACOG alignments
             - I made these based on barrel parenting, so changing it to receiver parenting means I'd have to recheck it... all (some were already like this so I was just making it consistent)
-            - fuck that the M203 is supposed to stay near the magazine anyways (and that's easier on performance)
-            - maybe GP-25 alignments can get redone since that has a grip
+                - fuck that the M203 is supposed to stay near the magazine anyways (and that's easier on performance)
+                - maybe GP-25 alignments can get redone since that has a grip
     - PU Scopes
         - Parented the riser to the scope to make it easier to patch
-        - Moved the crosshair to use sight_2
+        - Moved the crosshair to use `sight_2`
     - Vertically Challenged Bolters
         - Renamed to smol bolters because that name was too long
         - Added variants using invisible base with the helper shroud shrinking so I don't have to resize every scope
@@ -36,6 +36,7 @@ v2.1.0
             - Floats off your hands
         - Original ones are still there, with their fucked up scopes
             - I am NOT patching every single scope for this
+        - Added Mastery receivers for both variants
 - Refactored Suppressors for Combat Shotguns and Stubrevolvers to use universalized helper fixes
 - Prepared files for new weapons
     - Arbites Shock Maul, Shock Maul and Suppression Shield, Exterminator Shotgun, and Subductor Shotpistol and Riot Shield
