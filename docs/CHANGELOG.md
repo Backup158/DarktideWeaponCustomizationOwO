@@ -23,6 +23,22 @@ Affects:
 I should've just done this last time but I got lazy and just wanted to push it out. My bad. It will happen again. >:3
 
 **OTHER CHANGES**
+- Added Standalone Helbore Receiver for Autoguns
+    - So you can use the Bolt-action and MAS Receiver Accessories
+    - Still has the jank of before
+- Added Invisible Grip to Autoguns
+    - For use with Helbore bodies if you use the stock then realize there's a random grip there
+- Added Slim Slides (Magazine in grip) for Laspistols
+    - Even more jank than the chunky slides
+        - Triggers floating
+        - Magazine well lights floating
+        - Switches on side floating
+        - Kill yourself
+        - Random magazine is just sitting there where it'd be normally even though the actually equipped magazine was moved to the grip
+    - Shorter and less wide
+    - Just as with the smol bolters
+        - A RAW DAWG variant that straight up shrinks the gun (so sights can't be used) but everything else should work
+        - The shroud variants that use the invisible base for usable sights but float off your hands (and need more manual patching)
 
 # 2025-07-06
 v2.2.0
