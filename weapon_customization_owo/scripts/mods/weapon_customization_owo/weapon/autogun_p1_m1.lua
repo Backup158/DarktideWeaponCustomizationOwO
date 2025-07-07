@@ -328,17 +328,29 @@ mod.mt.inject_fixes(this_variant, {
     -- Receiver: HELBORE
     -- ######
     --  Patch for MT Helbore grip
+    --      wait these just parent automatically lol
     {	dependencies =  { _owo_helbore_body_receivers, "hlasgun_grip_01|hlasgun_grip_02|hlasgun_grip_03", },
-        grip =          { offset = true, position = vector3_box(0, -0.006, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        grip =          { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    },
+    --  MT Helbore Stocks
+    {	dependencies =  { _owo_helbore_body_receivers, "hlasgun_stock_01|hlasgun_stock_02|hlasgun_stock_03"},
+        stock =         { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+    },
+    {	dependencies =  { _owo_helbore_body_receivers, },
+        grip =          { offset = true, position = vector3_box(0, 0.04, 0.024), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        stock =         { offset = true, position = vector3_box(0, -0.056, 0.038), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
 
     -- ######
 	-- ReceiverAC1: BOLT ACTION HELBORE
 	-- ######
+    -- Wooden Helbore
+    {	dependencies =  { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid", "owo_helbore_body_04" },
+        receiverac1 =   { offset = true, position = vector3_box(0, 0.012, 0.11), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+    },
     -- patch for regular autogun bodies
-	{	dependencies =  { _owo_bolt_helbore_receiverac1s, _all_autogun_receivers },
+	{	dependencies =  { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid", _all_autogun_receivers },
 		receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
-        receiverac2 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
 	},
     -- ######
 	-- ReceiverAC1: HELBORE MAS-49

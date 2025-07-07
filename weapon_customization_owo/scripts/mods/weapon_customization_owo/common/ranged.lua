@@ -2426,6 +2426,7 @@ function mod.owo_helbore_body(variant_id)
 			mesh_move = false,
 		},
 		-- WHY IS THERE NO 3
+		-- Wooden Body
 		owo_helbore_body_04 = {
 			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_04", type = "receiver",
 			mesh_move = false,
@@ -2663,12 +2664,15 @@ function mod.fixes_owo_bolt_action(variant_id, given_type, given_parent)
 		-- ######
 		-- Receiver: BOLT ACTION HELBORE
 		-- ######
-		{	dependencies =  { "owo_receiverac1_group_indicator_bolt", "owo_bolt_helbore_bolt_01" },
+		-- Bolt shaft positioning (same for all)
+		{	dependencies =  { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid", },
 			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+		},
+		-- Bolt grip angle
+		{	dependencies =  { "owo_receiverac1_group_indicator_bolt", "owo_bolt_helbore_bolt_01" },
 			receiverac2 =   { offset = true, position = vector3_box(0.028, -0.016, 0.05), rotation = vector3_box(-90, -65, -90), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},
 		{	dependencies =  { "owo_receiverac1_group_indicator_bolt_stupid", "owo_bolt_helbore_bolt_01s" },
-			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
 			receiverac2 =   { offset = true, position = vector3_box(0.022, 0.0, 0.05), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},
 	})

@@ -74,6 +74,10 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
+
+    "sight_2_ac1",
+    "sight_2_ac2",
+    "sight_2_ac3",
 })
 
 -- ############################################
@@ -102,6 +106,7 @@ mod.owo_helbore_mas49(this_variant)
 
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
+mod.owo_scope_crosshair(this_variant)
 mod.owo_rear_sight(this_variant)
 mod.owo_holosight(this_variant, "sight", "receiver")
 mod.owo_prismatic_sight(this_variant, "sight", "receiver")
@@ -246,6 +251,7 @@ mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
 
+mod.fixes_owo_scope_crosshair(this_variant)
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
 mod.fixes_owo_pu_scope(this_variant)
@@ -262,6 +268,10 @@ mod.mt.inject_fixes(this_variant, {
 	-- Receiver: BOLT ACTION HELBORE
 	-- ######
 	-- Handled universally
+    --	Wooden Helbore
+	{	dependencies =  { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid", "receiver_04" },
+        receiverac1 =   { offset = true, position = vector3_box(0, 0.012, 0.11), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+    },
 
 	-- ######
 	-- Receiver: HELBORE MAS-49
