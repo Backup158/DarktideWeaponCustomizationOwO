@@ -2754,16 +2754,16 @@ end
 -- Receiver AC1: Pistol Grip Mag
 function mod.owo_laspistol_grip_mag(variant_id)
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
-		{id = "owo_slim_laspistol_grip_mag_00", name = "OwO Slim Slide RAW", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_01", name = "OwO Slim Slide 1", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_02", name = "OwO Slim Slide 2", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_03", name = "OwO Slim Slide 3", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_04", name = "OwO Slim Slide 4", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_05", name = "OwO Slim Slide 5", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_06", name = "OwO Slim Slide 6", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_07", name = "OwO Slim Slide 7", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_08", name = "OwO Slim Slide 8", no_randomize = true},
-		{id = "owo_slim_laspistol_grip_mag_ml01", name = "OwO Slim Slide M", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_00", name = "OwO Slim LasSlide RAW", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_01", name = "OwO Slim LasSlide 1", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_02", name = "OwO Slim LasSlide 2", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_03", name = "OwO Slim LasSlide 3", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_04", name = "OwO Slim LasSlide 4", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_05", name = "OwO Slim LasSlide 5", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_06", name = "OwO Slim LasSlide 6", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_07", name = "OwO Slim LasSlide 7", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_08", name = "OwO Slim LasSlide 8", no_randomize = true},
+		{id = "owo_slim_laspistol_grip_mag_ml01", name = "OwO Slim LasSlide M", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac2", {
 		{id = "owo_slim_laspistol_grip_mag_helper2_01", name = "OwO Pistol Trigger", no_randomize = true},
@@ -2773,25 +2773,27 @@ function mod.owo_laspistol_grip_mag(variant_id)
 		{id = "owo_slim_laspistol_grip_mag_helper3_01", name = "OwO Pistol Coverup", no_randomize = true},
 	})
 	mod.create_indicator_group(variant_id, "receiverac1", {
-		{id = "owo_receiverac1_group_indicator_slim_slide", name = "OwO slim Slide Group", no_randomize = true},
+		{id = "owo_receiverac1_group_indicator_slim_lasslide", name = "OwO Slim LasSlide Group", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		--	RAW DAWG
+		--		doesn't need a trigger
 		owo_slim_laspistol_grip_mag_00 = {
 			model = "", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
+				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_receiverac3_default", 
 			},
 		},
 		--	The rest
 		--		for some reason only laspistol_receiver_08 lets you parent another receiver onto it
+		--		and the RANDOM MAGAZINE IS BACK IM GONNA KILL MYSELF
 		owo_slim_laspistol_grip_mag_01 = {
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_01", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_08",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2801,7 +2803,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_02", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_08",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2811,7 +2813,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_03", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_08",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2821,7 +2823,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_04", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_08",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2831,7 +2833,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_05", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_08",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2841,7 +2843,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_06", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_08",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2851,7 +2853,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_07", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_08",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2861,7 +2863,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_08", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_01",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_01",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2871,7 +2873,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_ml01", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_slide", receiver = "laspistol_receiver_08",
+				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2880,7 +2882,6 @@ function mod.owo_laspistol_grip_mag(variant_id)
 
 		-- ### Helper Parts ###
 		owo_slim_laspistol_grip_mag_helper2_01 = {
-			--model = _item_ranged.."/recievers/shotgun_double_barrel_receiver_01", type = "receiverac2", parent = "receiverac1", mesh_move = false,
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_04", type = "receiverac2", parent = "receiverac1", mesh_move = false,
 		},
 		owo_slim_laspistol_grip_mag_helper2_02 = {
@@ -2890,7 +2891,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			},
 		},
 		owo_slim_laspistol_grip_mag_helper3_01 = {
-			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = "receiverac3", parent = "receiverac1", mesh_move = false,
+			model = _item_ranged.."/recievers/shotgun_double_barrel_receiver_01", type = "receiverac3", parent = "receiverac1", mesh_move = false,
 		},
 	})
 end

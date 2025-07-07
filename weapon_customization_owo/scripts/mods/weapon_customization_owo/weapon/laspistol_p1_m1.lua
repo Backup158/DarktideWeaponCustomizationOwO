@@ -141,7 +141,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
     mod.hide_slot("muzzle_3", { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01" }),
     -- Receivers
-    mod.hide_slot("receiverac1_group_indicator", { "owo_receiverac1_group_indicator_slim_slide" }),
+    mod.hide_slot("receiverac1_group_indicator", { "owo_receiverac1_group_indicator_slim_lasslide" }),
     mod.hide_slot("receiverac2", { "owo_slim_laspistol_grip_mag_helper2_01|owo_chunky_laspistol_grip_mag_helper2_01" }),
     mod.hide_slot("receiverac3", { "owo_slim_laspistol_grip_mag_helper3_01|owo_slim_laspistol_grip_mag_helper3_02|owo_chunky_laspistol_grip_mag_helper3_01" }),
 })
@@ -226,14 +226,22 @@ mod.mt.inject_fixes(this_variant, {
         grip =          { offset = false ,position = vector3_box(0, 0.042, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.7, 1, 1)},
         stock =         { offset = true, position = vector3_box(0, 0, -0.04), },
     },
-    {   dependencies =  { "owo_receiverac1_group_indicator_slim_slide", _owo_slim_slide_receiverac1s },
+    -- SLIM SHROUDS
+    --  Magazine
+    --      MT Autogun mags
+    {   dependencies =  { "owo_receiverac1_group_indicator_slim_lasslide", "agun_magazine_01|agun_magazine_02|agun_magazine_03|bgun_magazine_01", _owo_slim_slide_receiverac1s },
+        magazine =      { offset = true, position = vector3_box(0, -0.115, 0.0), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.47, 0.5, 0.7)},
+    },
+    --  Default
+    {   dependencies =  { "owo_receiverac1_group_indicator_slim_lasslide", _owo_slim_slide_receiverac1s },
         receiverac1 =   { offset = true, position = vector3_box(0, 0, 0.044), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.666)},
         receiverac2 =   { offset = true, position = vector3_box(0.0, 0.082, 0.028), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 0.894, 0.574), },
-        receiverac3 =   { offset = true, position = vector3_box(0.0, 0.0, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-
-        magazine =      { offset = true, position = vector3_box(0, -0.115, -0.031), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.47, 0.5, 1)},
+        receiverac3 =   { offset = true, position = vector3_box(0.0, 0.0, -0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.46, 1, 1)},
+        -- Other parts moving up
+        barrel =        { offset = true, position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6)},
+        magazine =      { offset = true, position = vector3_box(0, -0.115, 0.0), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.47, 0.5, 1)},
         -- widen to fit mag inside
-        grip =          { offset = true,position = vector3_box(0, 0.0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.7, 1, 1)},
+        grip =          { offset = true,position = vector3_box(0, 0.0, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.7, 1, 1)},
         -- flashlight = { offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},
     },
     --[[
