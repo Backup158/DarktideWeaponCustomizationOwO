@@ -170,6 +170,14 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Receiver: CHUNKY Grip Mag
     -- ######
+    -- Flashlights
+    --      Trigger flashlights
+    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
+            "owo_grip_laser_01|owo_grip_laser_02"
+        },
+        flashlight = { offset = true,  position = vector3_box(-0.024, 0.072, -0.057), scale = vector3_box(0.75, 0.425, 0.588)},
+    },
+    -- Body
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03"},
         receiver = { offset = true, position = vector3_box(0, 0, 0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
         -- None of my transformations are working im gonna kill someone
@@ -183,39 +191,29 @@ mod.mt.inject_fixes(this_variant, {
         grip = { offset = true,position = vector3_box(0, 0.0, -0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1, 1)},
         flashlight = { offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},
     },
-    --  MT Irons
-    -- offsets are already set, so these just get overwritten unless this goes before them in the load order
+    -- Sights
+    --      MT Irons
+    --      offsets are already set, so these just get overwritten unless this goes before them in the load order
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "lasgun_sight_01",
         },
         --no_scope_offset = { offset = true, position = vector3_box(-0.058, -0.5, -0.063), rotation = vector3_box(0, 29, 0)},
         no_scope_offset = { offset = true, position = vector3_box(-0.055, -0.5, -0.063), rotation = vector3_box(0, 29, 0)},
     },
-    -- Syn's aquilon scope alignment
+    --      Syn's aquilon scope alignment
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
             "aquilon_scope_01|aquilon_scope_01a|aquilon_scope_02|aquilon_scope_02a"
         },
         scope_offset = { offset = true, position = vector3_box(-0.035, -0.5, -0.053), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true },
     },
-    -- other sights
+    --      other sights
     {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
         },
         -- rotated to be straight in first person
         no_scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0)},
         scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true },
     },
-    -- Flashlights
-    --      Trigger flashlights
-    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
-            "owo_grip_laser_01|owo_grip_laser_02"
-        },
-        flashlight = { offset = true,  position = vector3_box(-0.024, 0.072, -0.057), scale = vector3_box(0.75, 0.425, 0.588)},
-    },
-    --      Normal flashlights
-    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
-        },
-        
-    },
+    
 
     -- ######
     -- Receiver AC1: Slim Grip Mag
