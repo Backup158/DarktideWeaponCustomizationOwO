@@ -28,125 +28,6 @@ mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 --	end
 --end
 
--- ############################################################################
--- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
--- Helper Functions
--- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
--- ############################################################################
--- ######
--- Creating a New Custom Slot
--- DESCRIPTION: In the melee/ranged files, create a slot and inserts to the slot table
--- PARAMETER(S):
---		string: slot_name
---		table: slot_localization_table
--- RETURN: N/A
--- ######
-function mod.create_custom_slot(slot_name, slot_localization_table)
-	table.insert(mod.wc.attachment_slots, slot_name)
-	mod:add_global_localize_strings({
-		["loc_weapon_cosmetics_customization_"..slot_name] = slot_localization_table
-	})
-end
-
--- ######
--- Creating an Empty Default Attachment
--- DESCRIPTION: Creates an attachment with no model, to use as the default
---		Automatically named owo_<slot_name>_default. Keeping the owo prefix to avoid any possible collisions
---		I find that unlikely, and even more unlikely that that causes problems, but fuck it
--- PARAMETER(S):
---		string: this_variant
---		string: slot_name
--- RETURN: N/A
--- ######
-function mod.create_default_attachment(this_variant, slot_name)
-	mod.inject_attachments_owo(this_variant, slot_name, {
-		{id = "owo_"..slot_name.."_default", name = "Empty "..slot_name},
-	})
-	mod.inject_models(this_variant, {
-		["owo_"..slot_name.."_default"] = {
-			model = "", type = slot_name,
-		},
-	})
-end
-
--- ######
--- Initialize Custom Slot for Weapon
--- DESCRIPTION: Creates an empty table for the slot, then adds an empty default
---		Doesn't require a parent, since it's invisible and we won't see it anyways, so defaulting is fine
--- PARAMETER(S):
---		string: slot_name
---		table: slot_localization_table
--- RETURN: N/A
--- ######
-function mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
-	mod.wc.attachment[this_variant][slot_name] = {}
-	mod.create_default_attachment(this_variant, slot_name)
-end
-
--- ######
--- Initialize Table of Custom Slot for Weapon
--- DESCRIPTION: For batch usage of initialize_custom_slot_for_weapon
--- PARAMETER(S):
---		string: this_variant
---		table: table_of_slot_names
---			table of strings
--- RETURN: N/A
--- ######
-function mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_slot_names)
-	for _, slot_name in ipairs(table_of_slot_names) do
-		mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
-	end
-end
-
--- ######
--- Hide Slot
--- DESCRIPTION: To hide unused slots
--- 		Not directly injecting them to avoid overhead
--- PARAMETER(S):
---		string: slot_name
---		table: table_of_dependencies
---			table of strings
--- RETURN: N/A
--- ######
-function mod.hide_slot(slot_name, table_of_dependencies)
-	return {
-		dependencies = table_of_dependencies,
-		[slot_name] = {
-			-- Send it into the stratosphere so it won't interfere with using modding_tools
-			position = vector3_box(0, 0, 2),
-			hide_mesh = { {slot_name, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, 
-			automatic_equip = { slot_name = "owo_"..slot_name.."_default" }, 
-		},
-	}
-end
-
--- ######
--- Create Indicator Group
--- DESCRIPTION: Creates Indicator groups for fixes efficiency
--- PARAMETER(S):
---		string: variant_id
---			name of weapon family
---		string: name of slot indicator is for
---		table: table_of_indicators
---			table of id and name strings
--- RETURN: N/A
--- ######
-function mod.create_indicator_group(variant_id, slot_name, table_of_indicators)
-	local indicator_slot = slot_name.."_group_indicator"
-	mod.inject_attachments_owo(variant_id, indicator_slot, table_of_indicators)
-	local models_for_indicators = {}
-	for _, indicator in ipairs(table_of_indicators) do
-		models_for_indicators[indicator[id]] = {
-			model = "", type = indicator_slot, 
-		}
-	end
-	mod.inject_models(variant_id, models_for_indicators)
-end
-
--- ############################################################################
--- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
--- ############################################################################
-
 -- #########################################
 -- ############### ATTENTION ###############
 -- #########################################
@@ -255,6 +136,125 @@ function mod.on_all_mods_loaded()
 		mod.mt.table_prepend(wc.anchors[variant_id].fixes, fix_tables)
 	end
 	]]
+
+	-- ############################################################################
+	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
+	-- Helper Functions
+	-- I need these here because they rely on mod.inject_attachments_owo() and mod.inject_models(), which are only defined on all mods loaded
+	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
+	-- ############################################################################
+	-- ######
+	-- Creating a New Custom Slot
+	-- DESCRIPTION: In the melee/ranged files, create a slot and inserts to the slot table
+	-- PARAMETER(S):
+	--		string: slot_name
+	--		table: slot_localization_table
+	-- RETURN: N/A
+	-- ######
+	function mod.create_custom_slot(slot_name, slot_localization_table)
+		table.insert(mod.wc.attachment_slots, slot_name)
+		mod:add_global_localize_strings({
+			["loc_weapon_cosmetics_customization_"..slot_name] = slot_localization_table
+		})
+	end
+
+	-- ######
+	-- Creating an Empty Default Attachment
+	-- DESCRIPTION: Creates an attachment with no model, to use as the default
+	--		Automatically named owo_<slot_name>_default. Keeping the owo prefix to avoid any possible collisions
+	--		I find that unlikely, and even more unlikely that that causes problems, but fuck it
+	-- PARAMETER(S):
+	--		string: this_variant
+	--		string: slot_name
+	-- RETURN: N/A
+	-- ######
+	function mod.create_default_attachment(this_variant, slot_name)
+		mod.inject_attachments_owo(this_variant, slot_name, {
+			{id = "owo_"..slot_name.."_default", name = "Empty "..slot_name},
+		})
+		mod.inject_models(this_variant, {
+			["owo_"..slot_name.."_default"] = {
+				model = "", type = slot_name,
+			},
+		})
+	end
+
+	-- ######
+	-- Initialize Custom Slot for Weapon
+	-- DESCRIPTION: Creates an empty table for the slot, then adds an empty default
+	--		Doesn't require a parent, since it's invisible and we won't see it anyways, so defaulting is fine
+	-- PARAMETER(S):
+	--		string: slot_name
+	--		table: slot_localization_table
+	-- RETURN: N/A
+	-- ######
+	function mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
+		mod.wc.attachment[this_variant][slot_name] = {}
+		mod.create_default_attachment(this_variant, slot_name)
+	end
+
+	-- ######
+	-- Initialize Table of Custom Slot for Weapon
+	-- DESCRIPTION: For batch usage of initialize_custom_slot_for_weapon
+	-- PARAMETER(S):
+	--		string: this_variant
+	--		table: table_of_slot_names
+	--			table of strings
+	-- RETURN: N/A
+	-- ######
+	function mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_slot_names)
+		for _, slot_name in ipairs(table_of_slot_names) do
+			mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
+		end
+	end
+
+	-- ######
+	-- Hide Slot
+	-- DESCRIPTION: To hide unused slots
+	-- 		Not directly injecting them to avoid overhead
+	-- PARAMETER(S):
+	--		string: slot_name
+	--		table: table_of_dependencies
+	--			table of strings
+	-- RETURN: N/A
+	-- ######
+	function mod.hide_slot(slot_name, table_of_dependencies)
+		return {
+			dependencies = table_of_dependencies,
+			[slot_name] = {
+				-- Send it into the stratosphere so it won't interfere with using modding_tools
+				position = vector3_box(0, 0, 2),
+				hide_mesh = { {slot_name, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }, 
+				automatic_equip = { slot_name = "owo_"..slot_name.."_default" }, 
+			},
+		}
+	end
+
+	-- ######
+	-- Create Indicator Group
+	-- DESCRIPTION: Creates Indicator groups for fixes efficiency
+	-- PARAMETER(S):
+	--		string: variant_id
+	--			name of weapon family
+	--		string: name of slot indicator is for
+	--		table: table_of_indicators
+	--			table of id and name strings
+	-- RETURN: N/A
+	-- ######
+	function mod.create_indicator_group(variant_id, slot_name, table_of_indicators)
+		local indicator_slot = slot_name.."_group_indicator"
+		mod.inject_attachments_owo(variant_id, indicator_slot, table_of_indicators)
+		local models_for_indicators = {}
+		for _, indicator in ipairs(table_of_indicators) do
+			models_for_indicators[indicator["id"]] = { model = "", type = indicator_slot, }
+		end
+		mod.inject_models(variant_id, models_for_indicators)
+	end
+
+	-- ############################################################################
+	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
+	-- ############################################################################
+
 	
 	-- Applies all the fixes you injected into each weapon
 	mod.load_mod_file("files_to_load")
