@@ -514,7 +514,7 @@ mod.create_custom_slot("receiverac1",
 mod.wc.add_custom_attachments.receiverac2 = "receiverac2_list"
 mod.wc.receiverac2_list = {
 	"owo_receiverac2_default",
-	"owo_bolt_helbore_bolt_02",
+	"owo_bolt_helbore_grip_01",
 	"owo_laspistol_grip_mag_helper2_01",
 	"owo_helbore_mas49_knob",
 }
@@ -2406,7 +2406,7 @@ end
 
 -- Receiver: Helbore RAW
 function mod.owo_helbore_body(variant_id)
-	mod.inject_attachments_owo(variant_id, current_type, {
+	mod.inject_attachments_owo(variant_id, "receiver", {
 		{id = "owo_helbore_body_01", name = "OwO Helbore Receiver 1"},
 		{id = "owo_helbore_body_02", name = "OwO Helbore Receiver 2"},
 		{id = "owo_helbore_body_04", name = "OwO Helbore Receiver 3"},
@@ -2418,28 +2418,28 @@ function mod.owo_helbore_body(variant_id)
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
 		owo_helbore_body_01 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_01", type = current_type, 
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_01", type = "receiver", 
 			mesh_move = false,
 		},
 		owo_helbore_body_02 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_02", type = current_type, 
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_02", type = "receiver", 
 			mesh_move = false,
 		},
 		-- WHY IS THERE NO 3
 		owo_helbore_body_04 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_04", type = current_type,
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_04", type = "receiver",
 			mesh_move = false,
 		},
 		owo_helbore_body_05 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_05", type = current_type, 
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_05", type = "receiver", 
 			mesh_move = false,
 		},
 		owo_helbore_body_06 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_06", type = current_type, 
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_06", type = "receiver", 
 			mesh_move = false,
 		},
 		owo_helbore_body_ml01 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_ml01", type = current_type, 
+			model = _item_ranged.."/recievers/lasgun_rifle_krieg_receiver_ml01", type = "receiver", 
 			mesh_move = false,
 		},
 	})
@@ -2609,11 +2609,16 @@ function mod.owo_bolt_action(variant_id, given_type, given_parent)
 	local current_type = given_type or "receiverac1"
 	local current_parent = given_parent or "receiver"
 
-	mod.inject_attachments_owo(variant_id, "receiverac1", {
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_bolt_helbore_bolt_01", name = "OwO Bolt-Action Bolt 1", no_randomize = true},
+		{id = "owo_bolt_helbore_bolt_01s", name = "OwO Bolt-Action Bolt (90) 1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac2", {
-		{id = "owo_bolt_helbore_bolt_02", name = "OwO bolt action bolt grippy part 1", no_randomize = true},
+		{id = "owo_bolt_helbore_grip_01", name = "OwO bolt action bolt grippy part 1", no_randomize = true},
+	})
+	mod.inject_attachments_owo(variant_id, "receiverac1_group_indicator", {
+		{id = "owo_receiverac1_group_indicator_bolt", name = "OwO Normal Bolt Action Grip", no_randomize = true},
+		{id = "owo_receiverac1_group_indicator_bolt_stupid", name = "OwO Perpendicular Bolt Action Grip", no_randomize = true},
 	})
 
 	mod.inject_models(variant_id, {
@@ -2623,19 +2628,44 @@ function mod.owo_bolt_action(variant_id, given_type, given_parent)
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
-				receiverac2 = "owo_bolt_helbore_bolt_02"
+				receiverac2 = "owo_bolt_helbore_grip_01", receiverac1_group_indicator = "owo_receiverac1_group_indicator_bolt"
+			},
+		},
+		owo_bolt_helbore_bolt_01s = {
+			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				receiverac2 = "owo_bolt_helbore_grip_01", receiverac1_group_indicator = "owo_receiverac1_group_indicator_bolt_stupid"
 			},
 		},
 		-- ### Helper Parts ###
 		-- grippy part
-		owo_bolt_helbore_bolt_02 = {
+		owo_bolt_helbore_grip_01 = {
 			model = _item_melee.."/grips/combat_knife_grip_07", type = "receiverac2", 
 			mesh_move = false, parent = current_type
 		},
 	})
 end
+function mod.fixes_owo_bolt_action(variant_id, given_type, given_parent)
+	local current_type = given_type or "receiverac1"
+	local current_parent = given_parent or "receiver"
 
--- Receiver: Helbore MAS-49
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Receiver: BOLT ACTION HELBORE
+		-- ######
+		{	dependencies =  { "owo_receiverac1_group_indicator_bolt", "owo_bolt_helbore_bolt_01" },
+			receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+			receiverac2 =   { offset = true, position = vector3_box(0.025, 0.0, 0.05), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.55, 0.55 ) },
+		},
+		{	dependencies =  { "owo_receiverac1_group_indicator_bolt_stupid", "owo_bolt_helbore_bolt_01s" },
+			receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+			receiverac2 =   { offset = true, position = vector3_box(0.022, -0.007, 0.05), rotation = vector3_box(-90, -65, -90), scale = vector3_box(0.55, 0.55, 0.55 ) },
+		},
+	})
+end
+
+-- Receiver AC1: Helbore MAS-49
 function mod.owo_helbore_mas49(variant_id)
 
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
