@@ -183,7 +183,7 @@ mod.mt.inject_fixes(this_variant, {
         -- None of my transformations are working im gonna kill someone
         -- and receiverac1 is stealing mag anims lmaoooo
         -- SETTING OFFSET TO FALSE FIXED IT. lets this take over from default? it would stretch this time but wouldn't move (unlike shotgun which didn't stretch either)
-        receiverac1 = { offset = false, position = vector3_box(0, 0.136, 0.022), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.33, 0.38)},
+        receiverac3 = { offset = false, position = vector3_box(0, 0.136, 0.022), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.33, 0.38)},
         -- trigger already aligned. reuse as hammer? on a las weapon lmao
         -- receiverac2 = { offset = true, position = vector3_box(0, -0.04, -0.07), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.2, 0.2, 0.033)},
         receiverac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = { 	{"receiverac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }},
@@ -213,40 +213,25 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0)},
         scope_offset = { offset = false, position = vector3_box(-0.035, -0.5, -0.10), rotation = vector3_box(0, 29, 0), aim_scale = -0.13, lense_transparency = true },
     },
-    
 
     -- ######
     -- Receiver AC1: Slim Grip Mag
     -- ######
-    -- Flashlights
-    --      Trigger flashlights
-    --[[
-    {   dependencies = {"owo_laspistol_grip_mag_01|owo_laspistol_grip_mag_02|owo_laspistol_grip_mag_03",
-            "owo_grip_laser_01|owo_grip_laser_02"
-        },
-        flashlight = { offset = true,  position = vector3_box(-0.024, 0.072, -0.057), scale = vector3_box(0.75, 0.425, 0.588)},
-    },
-    ]]
     -- RAW DAWG
     {   dependencies =  { "owo_slim_laspistol_grip_mag_00" },
-        receiver = { offset = true, position = vector3_box(0, 0, 0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
-        -- trigger already aligned. reuse as hammer? on a las weapon lmao
-        receiverac2 = { offset = false, parent = "receiver", position = vector3_box(0, 0, 0.04), },
-        -- None of my transformations are working im gonna kill someone
-        -- and receiverac1 is stealing mag anims lmaoooo
-        -- SETTING OFFSET TO FALSE FIXED IT. lets this take over from default? it would stretch this time but wouldn't move (unlike shotgun which didn't stretch either)
-        receiverac3 = { offset = false, parent = "receiver", position = vector3_box(0, 0.136, 0.022), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.33, 0.38)},
-        
-        magazine = { offset = true, position = vector3_box(0, -0.115, -0.031), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.85, 0.5, 1)},
-        grip = { offset = true,position = vector3_box(0, 0.0, -0.050), rotation = vector3_box(0, 0, 0), scale = vector3_box(2.7, 1, 1)},
-        flashlight = { offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},
+        receiver =      { offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.666)},
+        receiverac2 =   { offset = false, parent = "receiver", position = vector3_box(0, 0, 0.04), },
+        receiverac3 =   { offset = false, parent = "receiver", position = vector3_box(0, 0.136, 0.022), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.33, 0.38)},
+        magazine =      { offset = false, position = vector3_box(0, -0.088, -0.066), rotation = vector3_box(-20, 0, 0), scale = vector3_box(0.5, 0.5, 1)},
+        grip =          { offset = false ,position = vector3_box(0, 0.042, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.7, 1, 1)},
+        stock =         { offset = true, position = vector3_box(0, 0, -0.04), },
     },
     {   dependencies =  { "owo_receiverac1_group_indicator_slim_slide", _owo_slim_slide_receiverac1s },
         receiverac1 =   { offset = true, position = vector3_box(0, 0, 0.044), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.666)},
-        receiverac2 =   { offset = true, position = vector3_box(0, 0, 0.04), },
-        receiverac3 =   { offset = true, position = vector3_box(0.003, 0.004, 0.028), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.894, 0.574)},
+        receiverac2 =   { offset = true, position = vector3_box(0.0, 0.082, 0.028), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 0.894, 0.574), },
+        receiverac3 =   { offset = true, position = vector3_box(0.0, 0.0, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1)},
 
-        magazine =      { offset = true, position = vector3_box(0, -0.115, -0.031), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.85, 0.5, 1)},
+        magazine =      { offset = true, position = vector3_box(0, -0.115, -0.031), rotation = vector3_box(-30, 0, 0), scale = vector3_box(0.47, 0.5, 1)},
         -- widen to fit mag inside
         grip =          { offset = true,position = vector3_box(0, 0.0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.7, 1, 1)},
         -- flashlight = { offset = true,  position = vector3_box(-0.064, -0.112, -0.119), scale = vector3_box(1, 1, 1)},

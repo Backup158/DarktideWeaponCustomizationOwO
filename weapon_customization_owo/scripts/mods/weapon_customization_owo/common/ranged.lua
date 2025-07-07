@@ -518,6 +518,10 @@ mod.wc.receiverac2_list = {
 	"owo_slim_laspistol_grip_mag_helper2_01",
 	"owo_helbore_mas49_knob",
 }
+mod.wc.add_custom_attachments.receiverac3 = "receiverac3_list"
+mod.wc.receiverac3_list = {
+	"owo_receiverac3_default",
+}
 -- STOCKS
 mod.mt.table_append(mod.wc.stockacs, {
 	"owo_stockac_default",
@@ -2733,7 +2737,7 @@ function mod.owo_chunky_laspistol_grip_mag(variant_id, given_type)
 			}
 		},
 		owo_laspistol_grip_mag_03 = {
-			model = _item_ranged.."/recievers/lasgun_rifle_receiver_0ml01", type = current_type, mesh_move = false,
+			model = _item_ranged.."/recievers/lasgun_rifle_receiver_ml01", type = current_type, mesh_move = false,
 			automatic_equip = {
 				receiverac3 = "owo_chunky_laspistol_grip_mag_helper3_01", receiverac2 = "owo_chunky_laspistol_grip_mag_helper2_01"
 			}
@@ -2877,7 +2881,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 		-- ### Helper Parts ###
 		owo_slim_laspistol_grip_mag_helper2_01 = {
 			--model = _item_ranged.."/recievers/shotgun_double_barrel_receiver_01", type = "receiverac2", parent = "receiverac1", mesh_move = false,
-			model = _item_ranged.."/recievers/lasgun_pistol_receiver_07", type = "receiverac2", parent = "receiverac1", mesh_move = false,
+			model = _item_ranged.."/recievers/lasgun_pistol_receiver_04", type = "receiverac2", parent = "receiverac1", mesh_move = false,
 		},
 		owo_slim_laspistol_grip_mag_helper2_02 = {
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "receiverac2", parent = "receiverac1", mesh_move = false,
