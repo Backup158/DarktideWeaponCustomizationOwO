@@ -2664,12 +2664,12 @@ function mod.fixes_owo_bolt_action(variant_id, given_type, given_parent)
 		-- Receiver: BOLT ACTION HELBORE
 		-- ######
 		{	dependencies =  { "owo_receiverac1_group_indicator_bolt", "owo_bolt_helbore_bolt_01" },
-			receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
-			receiverac2 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.55, 0.55 ) },
+			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+			receiverac2 =   { offset = true, position = vector3_box(0.028, -0.016, 0.05), rotation = vector3_box(-90, -65, -90), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},
 		{	dependencies =  { "owo_receiverac1_group_indicator_bolt_stupid", "owo_bolt_helbore_bolt_01s" },
-			receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
-			receiverac2 =   { offset = true, position = vector3_box(0.022, -0.007, 0.05), rotation = vector3_box(-90, -65, -90), scale = vector3_box(0.55, 0.55, 0.55 ) },
+			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
+			receiverac2 =   { offset = true, position = vector3_box(0.022, 0.0, 0.05), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},
 	})
 end
