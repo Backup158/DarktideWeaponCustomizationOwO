@@ -88,6 +88,7 @@ mod.owo_plasma_mag(this_variant)
 mod.owo_wood_krieg(this_variant)
 mod.owo_plasma_krieg(this_variant)
 
+if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant)
 mod.owo_condom(this_variant)
 mod.owo_muzzle_brake(this_variant)
@@ -219,6 +220,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("bayonetac6", { "owo_underbarrel_shotgun_helper_06|owo_underbarrel_shotgun_helper_06_02" }),
     mod.hide_slot("bayonetac7", { "owo_underbarrel_shotgun_helper_07" }),
     -- Receivers
+    mod.hide_slot("receiverac1_group_indicator", { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid" }),
     mod.hide_slot("receiverac2", { "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob" }),
     -- Sights
     mod.hide_slot("sightac1", { "owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_holosight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
@@ -240,7 +242,6 @@ mod.mt.inject_fixes(this_variant, {
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
-if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)

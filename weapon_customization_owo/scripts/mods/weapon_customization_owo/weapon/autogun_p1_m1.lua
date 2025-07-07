@@ -127,6 +127,7 @@ mod.owo_helbore_body(this_variant)
 mod.owo_bolt_action(this_variant)
 mod.owo_helbore_mas49(this_variant)
 
+mod.owo_invisible_grip(this_variant)
 mod.owo_fin_grip(this_variant, "grip")
 
 mod.owo_tactical_foregrip(this_variant, "foregrip")
@@ -217,6 +218,7 @@ local _syn_gauss_barrels = "syn_gk8gauss_barrel_01|syn_gk8gauss_barrel_02"
 local _infantry_autogun_receivers = "receiver_01|receiver_10|meshauto_01"
 local _braced_autogun_receivers = "receiver_03|receiver_06|receiver_07|receiver_08"
 local _vigilant_autogun_receivers = "receiver_02|receiver_04|receiver_05|receiver_09|receiver_11"
+local _all_autogun_receivers = _infantry_autogun_receivers.."|".._braced_autogun_receivers.."|".._vigilant_autogun_receivers
 
 local _super_short_braced_autogun_all_barrels = "barrel_08|bagun_barrel_02"
 local _short_braced_autogun_barrels = "barrel_07|barrel_13|barrel_14|barrel_18|barrel_19|barrel_20"
@@ -270,7 +272,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("foregripac2", { "owo_tactical_foregrip_ac2_01" }),
     mod.hide_slot("foregripac3", { "owo_tactical_foregrip_ac3_01" }),
     -- Receivers
-    --
+    mod.hide_slot("receiverac1_group_indicator", { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid" }),
     mod.hide_slot("receiverac2", { "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob" }),
     -- Magazines
     mod.hide_slot("owo_magac1", { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01|owo_magazine_ak_ac1_01" }),
@@ -311,6 +313,8 @@ mod.fixes_owo_condom(this_variant)
 mod.fixes_owo_dreg_gunner_bayonet(this_variant)
 mod.fixes_owo_underbarrel_gl(this_variant)
 
+mod.fixes_owo_bolt_action(this_variant)
+
 mod.fixes_owo_scope_crosshair(this_variant)
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
@@ -332,7 +336,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ReceiverAC1: BOLT ACTION HELBORE
 	-- ######
     -- patch for regular autogun bodies
-	{	dependencies =  { _owo_bolt_helbore_receiverac1s },
+	{	dependencies =  { _owo_bolt_helbore_receiverac1s, _all_autogun_receivers },
 		receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
         receiverac2 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.45, 0.55 ) },
 	},

@@ -2628,20 +2628,29 @@ function mod.owo_bolt_action(variant_id, given_type, given_parent)
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
-				receiverac2 = "owo_bolt_helbore_grip_01", receiverac1_group_indicator = "owo_receiverac1_group_indicator_bolt"
+				receiverac2 = "owo_bolt_helbore_grip_01", receiverac1_group_indicator = "owo_receiverac1_group_indicator_bolt",
 			},
 		},
 		owo_bolt_helbore_bolt_01s = {
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
-				receiverac2 = "owo_bolt_helbore_grip_01", receiverac1_group_indicator = "owo_receiverac1_group_indicator_bolt_stupid"
+				receiverac2 = "owo_bolt_helbore_grip_01", receiverac1_group_indicator = "owo_receiverac1_group_indicator_bolt_stupid",
 			},
 		},
 		-- ### Helper Parts ###
 		-- grippy part
 		owo_bolt_helbore_grip_01 = {
 			model = _item_melee.."/grips/combat_knife_grip_07", type = "receiverac2", 
+			mesh_move = false, parent = current_type
+		},
+		-- indicator groups
+		owo_receiverac1_group_indicator_bolt = {
+			model = "", type = "receiverac1_group_indicator", 
+			mesh_move = false, parent = current_type
+		},
+		owo_receiverac1_group_indicator_bolt_stupid = {
+			model = "", type = "receiverac1_group_indicator", 
 			mesh_move = false, parent = current_type
 		},
 	})
@@ -2656,7 +2665,7 @@ function mod.fixes_owo_bolt_action(variant_id, given_type, given_parent)
 		-- ######
 		{	dependencies =  { "owo_receiverac1_group_indicator_bolt", "owo_bolt_helbore_bolt_01" },
 			receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
-			receiverac2 =   { offset = true, position = vector3_box(0.025, 0.0, 0.05), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.55, 0.55 ) },
+			receiverac2 =   { offset = true, position = vector3_box(0.025, -0.026, 0.1), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},
 		{	dependencies =  { "owo_receiverac1_group_indicator_bolt_stupid", "owo_bolt_helbore_bolt_01s" },
 			receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
@@ -2667,7 +2676,6 @@ end
 
 -- Receiver AC1: Helbore MAS-49
 function mod.owo_helbore_mas49(variant_id)
-
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
 		{id = "owo_helbore_mas49_01", name = "OwO MAS-49 Dovetail", no_randomize = true},
 		{id = "owo_helbore_mas49_01_s", name = "OwO MAS-49 Slim Body"},
@@ -2745,6 +2753,27 @@ function mod.owo_laspistol_grip_mag(variant_id, given_type)
 		},
 		owo_laspistol_grip_mag_helper2_01 = {
 			model = "content/items/weapons/player/melee/blades/sabre_blade_01", type = "receiverac2", parent = current_type, mesh_move = false,
+		},
+	})
+end
+
+-- Grip: Invisible Grip
+function mod.owo_invisible_grip(variant_id, given_type, given_parent)
+	local current_type = given_type or "grip"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, current_type, {
+		{id = "owo_invisible_grip_01", name = "OwO Invisible Grip"},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_invisible_grip_01 = {
+			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15, },
+			},
 		},
 	})
 end
