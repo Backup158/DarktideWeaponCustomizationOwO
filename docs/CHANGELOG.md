@@ -20,7 +20,7 @@ Affects:
 
 *ALL affected attachments must be reequipped!* Any patches and fixes will also need to reflect this change.
 
-I should've just done this last time but I got lazy and just wanted to push it out. My bad. It will happen again. >:3
+I should've just done this when I was developing v2.0.0 but I got lazy and just wanted to push it out. My bad. It will happen again. >:3
 
 **OTHER CHANGES**
 - Added Standalone Helbore Receiver for Autoguns

@@ -59,6 +59,15 @@ The list is hosted externally.  \
 &emsp; To see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html)  \
 &emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
 
+# Acknowledgements
+Not comprehensive
+- grasmann: For the original EWC mod and including a plugin template
+- MT607, Random Account: For making the first major plugin, which I used as a base
+- Syndonai: For sharing knowledge and techniques for kitbashing and quirks of EWC
+- RinAnarchy: For Chinese (Simplified) localization ["zh-cn"]
+- The gun store next to one of my favorite ice cream shops: For letting me see some of these parts in person without going broke
+- random autistic people arguing on forums: For posting pictures of their guns
+
 # FAQ
 <a id="faq-1"></a>
 
