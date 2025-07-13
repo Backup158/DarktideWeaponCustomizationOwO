@@ -28,7 +28,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - Still has the jank of before
 - Added Invisible Grip to Autoguns
     - For use with Helbore bodies if you use the stock then realize there's a random grip there
-- Added Slim Slides (Magazine in grip) for Laspistols
+- [VERY WIP] Added Slim Slides (Magazine in grip) for Laspistols 
     - Even more jank than the chunky slides
         - Triggers floating
         - Magazine well lights floating
@@ -39,6 +39,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - Just as with the smol bolters
         - A RAW DAWG variant that straight up shrinks the gun (so sights can't be used) but everything else should work
         - The shroud variants that use the invisible base for usable sights but float off your hands (and need more manual patching)
+        - But apparently I can't use the same method as the bolters because noooooo, laspistol receivers just haaave to be special with their nodes im going to shit myself then kick the stool to hang myself
 - Refactored
     - Bistol Shotgun barrels
         - Added indicator groups for efficiency
