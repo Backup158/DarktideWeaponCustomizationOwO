@@ -3287,7 +3287,7 @@ function mod.fixes_owo_tactical_stock(variant_id, given_type, given_parent)
 	local current_type = given_type or "stock"
 	local current_parent = given_parent or "receiver"
 
-	mod.mt.inject_fixes(this_variant, {
+	mod.mt.inject_fixes(variant_id, {
 		-- ######
 		-- Stock: TACTICAL STOCK
 		-- ######

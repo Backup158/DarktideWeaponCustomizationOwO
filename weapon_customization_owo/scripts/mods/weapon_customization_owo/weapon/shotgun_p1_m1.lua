@@ -163,6 +163,7 @@ mod.mt.inject_fixes(this_variant, {
 mod.fixes_owo_holosight(this_variant, "sight", "rail")
 mod.fixes_owo_prismatic_sight(this_variant)
 mod.fixes_owo_suppressors(this_variant)
+mod.fixes_owo_tactical_stock(this_variant, "stock_2")
 
 -- #################
 -- Custom Fixes

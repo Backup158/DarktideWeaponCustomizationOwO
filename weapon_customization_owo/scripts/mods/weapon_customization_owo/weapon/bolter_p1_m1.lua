@@ -221,6 +221,8 @@ mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
 
+mod.fixes_owo_tactical_stock(this_variant)
+
 -- #################
 -- Custom Fixes
 -- #################
