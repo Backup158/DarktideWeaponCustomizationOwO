@@ -172,6 +172,7 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Muzzle: Suppressors
     -- ######
+    -- Handled universally
 
     -- ######
     -- Sight: Holographic Sights + Magnifier
@@ -264,6 +265,7 @@ mod.mt.inject_fixes(this_variant, {
 
     -- ######
     -- Foregrip: Tactical Foregrip
+    -- Attaching to underbarrel, so it moves when you pump
     -- ######
     -- skeletal shotgun
     {   dependencies =  { "owo_tactical_foregrip_01"},
@@ -286,8 +288,9 @@ mod.mt.inject_fixes(this_variant, {
     },
 
     -- ######
-    -- Stock: Straight Grip
+    -- Foregrip/Stock: Straight Grip
     -- For shotguns, stock is like grip
+    -- Foregrips attach to underbarrel so it can move when pumped
     -- ######
     --  No stock_2
     --      reconstocknone is the None option added by syn
@@ -295,15 +298,15 @@ mod.mt.inject_fixes(this_variant, {
         stock =         { offset = true,   position = vector3_box(0, 0.07, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
     },
     --  Syn's Short Shotgun Barrels
-    --  Ogryn handles
+    --      Ogryn handles
     {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08"},
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.45, 0.3) },
     },
-    --  Dclaw
+    --      Dclaw
     {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14"},
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.9, 0.45) },
     },
-    --  Knife
+    --      Knife
     {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1.5, 1) },
     },
@@ -316,7 +319,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_06s_fat"},
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1.5, 0.5) },
     },
-    --  Grip grips
+    --      Grip grips
     {   dependencies =  { _syn_short_shotgun_barrels, _owo_grip_grip_straight_grips },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.09, 0.07),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1.2, 1) },
     },
@@ -364,9 +367,10 @@ mod.mt.inject_fixes(this_variant, {
     --{   dependencies =  { _owo_basic_bigga_stocks },
     --    stock_2 =       { offset = false, parent = "receiver", parent_node = 2, position = vector3_box(0.0, -0.208, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.75, 1.35 ) },
     --},
-    {   dependencies =  { _owo_all_beeg_stocks },
+    {   dependencies =  { "owo_stock_group_indicator_beeg", _owo_all_beeg_stocks },
         stock_2 =       { offset = true, position = vector3_box(0.0, 0.020, 0.045), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1.5, 1.2 ) },
     },
+
     -- ######
     -- Stock_2: Tactical Stocks
     -- ######
