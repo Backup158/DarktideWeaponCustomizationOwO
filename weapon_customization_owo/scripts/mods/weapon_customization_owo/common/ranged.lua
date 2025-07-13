@@ -1018,70 +1018,76 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type, given_paren
 		{id = "owo_bistol_shotgun_barrel_short_08", name = "OwO Shotgun Shorty 5", no_randomize = true},
 		--{id = "owo_bistol_shotgun_barrel_short_09", name = "OwO Shotgun Shorty 6", no_randomize = true},
 	})
+	mod.create_indicator_group(variant_id, "barrel", {
+		{id = "owo_barrel_group_indicator_bistol_shotgun", name = "OwO Bistol Shotgun Barrel Group Indicator"},
+	})
 
 	mod.inject_models(variant_id, {
+		-- ### Base Parts ####
 		--[[owo_bistol_sg_base_01 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_01",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_01", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		]]
 		owo_bistol_sg_base_04 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_05 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_06 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_08 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		--[[owo_bistol_sg_base_09 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_09",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_09", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		]]
+		-- Short Variants
 		owo_bistol_sg_base_04_s = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_05_s = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_06_s = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_08_s = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
+		-- ### Helper Parts ###
 		--[[owo_bistol_shotgun_barrel_short_01 = {
 			model = _item_ranged.."/barrels/shotgun_rifle_barrel_01", type = "barrelshroud", 
 			mesh_move = false, parent = current_type

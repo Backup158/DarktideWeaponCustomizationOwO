@@ -58,6 +58,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "muzzle_4",
     "muzzle_5",
     "muzzle_6",
+
+    "barrel_group_indicator",
 })
 
 -- ############################################
@@ -164,6 +166,7 @@ local _bistol_barrels = "bolt_pistol_barrel_01|bolt_pistol_barrel_02|bolt_pistol
 mod.mt.inject_fixes(this_variant, {
     -- Barrel
     mod.hide_slot("barrelshroud", { "owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08" }),
+    mod.hide_slot("barrel_group_indicator", { "owo_barrel_group_indicator_bistol_shotgun", }),
     -- Muzzles
     mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
     mod.hide_slot("muzzle_3", { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01" }),
@@ -315,17 +318,17 @@ mod.mt.inject_fixes(this_variant, {
     -- Barrel: Short Shotgun
     -- #####
     -- Muzzle Patches
-    {   dependencies =  { _owo_all_bistol_shotgun_barrels },
-        muzzle =        { offset = true, parent = "barrel", position = vector3_box(0, 0.0, 0), scale = vector3_box(1, 1, 1) },
-    },
+    --{   dependencies =  { "owo_barrel_group_indicator_bistol_shotgun", _owo_all_bistol_shotgun_barrels },
+    --    muzzle =        { offset = true, parent = "barrel", position = vector3_box(0, 0.0, 0), scale = vector3_box(1, 1, 1) },
+    --},
     --  Barrel
     --      Short
-    {   dependencies =  { _owo_short_bistol_shotgun_barrels },
+    {   dependencies =  { "owo_barrel_group_indicator_bistol_shotgun", _owo_short_bistol_shotgun_barrels },
         barrel =        { offset = true,  position = vector3_box(0, 0.162, 0.012), scale = vector3_box(1, 1, 1) },
         barrelshroud =  { offset = true,  position = vector3_box(0, -0.148, 0.002), scale = vector3_box(1.165, 0.33, 0.9) },
     },
     --      Super Shorty
-    {   dependencies =  { _owo_super_short_bistol_shotgun_barrels },
+    {   dependencies =  { "owo_barrel_group_indicator_bistol_shotgun", _owo_super_short_bistol_shotgun_barrels },
         barrel =        { offset = true,  position = vector3_box(0, 0.098, 0.012), scale = vector3_box(1, 1, 1) },
         barrelshroud =  { offset = true,  position = vector3_box(0, -0.082, 0.002), scale = vector3_box(1.165, 0.178, 0.9) },
     },
