@@ -3341,88 +3341,135 @@ function mod.owo_kalash_stock(variant_id, given_type, given_parent)
 		{id = "owo_kalash_stock_07c", name = "OwO Compact Kalashnikov 7"},
 		{id = "owo_kalash_stock_08c", name = "OwO Compact Kalashnikov (M)"},
 	})
+	mod.create_indicator_group(variant_id, "stock", {
+		{id = "owo_stock_group_indicator_kalashnikov",  name = "OwO Kalashnikov Stock, Stock Group Indicator"},
+		{id = "owo_stock_group_indicator_kalashnikov_wood",  name = "OwO Kalashnikov Stock Wood, Stock Group Indicator"},
+		{id = "owo_stock_group_indicator_kalashnikov_compact",  name = "OwO Kalashnikov Stock Compact, Stock Group Indicator"},
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
+		-- Regular
 		owo_kalash_stock_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_02 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_03 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_04 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_05 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_06 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_07 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_08 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
 		},
-		-- Helbore
+		-- Helbore (wood)
 		owo_kalash_stock_h_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_wood", },
 		},
 		owo_kalash_stock_h_02 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_02", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_wood", },
 		},
 		owo_kalash_stock_h_03 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_04", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_wood", },
 		},
 		-- Shotgun Compact
 		owo_kalash_stock_01c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_02c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_03c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_04c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_05c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_06c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_07c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_08c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = current_type, 
 			mesh_move = false, parent = current_parent,
+			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 	})
+end
+function mod.fixes_owo_kalash_stock(variant_id, given_type, given_parent)
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Stock: Kalashnikov Stock
+		-- ######
+		-- Full Stocks
+		--  Shotgun
+		{   dependencies =  { "owo_stock_group_indicator_kalashnikov", "owo_kalash_stock_01|owo_kalash_stock_02|owo_kalash_stock_03|owo_kalash_stock_04|owo_kalash_stock_05|owo_kalash_stock_06|owo_kalash_stock_07|owo_kalash_stock_08" },
+			stock =         { position = vector3_box(0.0, 0.027, 0.085), rotation = vector3_box(-169, 0, -180), scale = vector3_box(1.0, 1.35, 1.0 ) },
+		},
+		--  Helbore
+		{   dependencies =  { "owo_stock_group_indicator_kalashnikov_wood", "owo_kalash_stock_h_01|owo_kalash_stock_h_02|owo_kalash_stock_h_03" },
+			stock =         { position = vector3_box(0.0, 0.158, 0.077), rotation = vector3_box(-172, 0, 180), scale = vector3_box(1.0, 1.4, 1.0 ) },
+		},
+		-- Compact Stocks
+		--	Shotgun
+		{   dependencies =  { "owo_stock_group_indicator_kalashnikov_compact", "owo_kalash_stock_01c|owo_kalash_stock_02c|owo_kalash_stock_03c|owo_kalash_stock_04c|owo_kalash_stock_05c|owo_kalash_stock_06c|owo_kalash_stock_07c|owo_kalash_stock_08c" },
+			stock =         { position = vector3_box(0.0, -0.01, 0.083), rotation = vector3_box(-165, 0, -180), scale = vector3_box(1.0, 1.0, 1.0 ) },
+		},
+	})
+
 end
 
 -- Stock: Big Stock!

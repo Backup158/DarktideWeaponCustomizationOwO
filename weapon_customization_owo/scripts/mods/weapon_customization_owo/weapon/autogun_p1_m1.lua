@@ -301,7 +301,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_2_ac3", { "owo_crosshair_ac3_block|owo_crosshair_ac3_obelisk" }),
     -- Stocks
     mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
-    mod.hide_slot("stock_group_indicator", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left", }),
+    mod.hide_slot("stock_group_indicator", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
 })
 
 -- #################
@@ -324,6 +324,7 @@ mod.fixes_owo_prismatic_sight(this_variant)
 mod.fixes_owo_pu_scope(this_variant)
 
 mod.fixes_owo_tactical_stock(this_variant)
+mod.fixes_owo_kalash_stock(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -1016,19 +1017,7 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Stock: Kalash Stock
 	-- ######
-    -- Full
-    --  Shotgun
-    {   dependencies =  { "owo_kalash_stock_01|owo_kalash_stock_02|owo_kalash_stock_03|owo_kalash_stock_04|owo_kalash_stock_05|owo_kalash_stock_06|owo_kalash_stock_07|owo_kalash_stock_08" },
-        stock =         { position = vector3_box(0.0, 0.027, 0.085), rotation = vector3_box(-169, 0, -180), scale = vector3_box(1.0, 1.35, 1.0 ) },
-    },
-    --  Helbore
-    {   dependencies =  { "owo_kalash_stock_h_01|owo_kalash_stock_h_02|owo_kalash_stock_h_03" },
-        stock =         { position = vector3_box(0.0, 0.158, 0.077), rotation = vector3_box(-172, 0, 180), scale = vector3_box(1.0, 1.4, 1.0 ) },
-    },
-    -- Compact
-    {   dependencies =  { "owo_kalash_stock_01c|owo_kalash_stock_02c|owo_kalash_stock_03c|owo_kalash_stock_04c|owo_kalash_stock_05c|owo_kalash_stock_06c|owo_kalash_stock_07c|owo_kalash_stock_08c" },
-        stock =         { position = vector3_box(0.0, -0.01, 0.083), rotation = vector3_box(-165, 0, -180), scale = vector3_box(1.0, 1.0, 1.0 ) },
-    },
+    -- Handled universally
 
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER

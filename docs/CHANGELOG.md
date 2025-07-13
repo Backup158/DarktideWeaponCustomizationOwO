@@ -39,6 +39,13 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - Just as with the smol bolters
         - A RAW DAWG variant that straight up shrinks the gun (so sights can't be used) but everything else should work
         - The shroud variants that use the invisible base for usable sights but float off your hands (and need more manual patching)
+- Refactored
+    - Bistol Shotgun barrels
+        - Added indicator groups for efficiency
+        - Resized muzzles to fit over the barrel
+    - Tactical Stocks
+        - Universalized fixes
+        - Added indicator groups for efficiency
 
 # 2025-07-06
 v2.2.0
