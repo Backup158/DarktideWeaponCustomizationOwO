@@ -165,8 +165,13 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; Bigger stocks rotated to resemble the stocks on Kalashnikov rifles  \
 &emsp; Includes compact variants for shotgun stocks
 - **Straight Grip**: Combat Shotguns  \
-&emsp; Same options from the Straight Foregrips but as a stock
-- Stock_2, **Big Stocks**: Combat Shotguns  \
+&emsp; Same options from the Straight Foregrips but reused as a stock
+
+> [!WARNING]
+> 
+> QUIRK: Because it's a reused part, that means you cannot mix straight foregrips and grips (stocks), otherwise it may use the wrong sizes. For example, using an straight ogryn foregrip with a lasgun grip (stock) will make a giant straight ogryn foregrip. Fixing this would take much more time and effort I'd like to put into this single attachment, especially when most of us just us the angled foregrips
+
+- Technically `stock_2`, **Big Stocks**: Combat Shotguns  \
 &emsp; Rifle stocks sized up
 
 ### Magazines
