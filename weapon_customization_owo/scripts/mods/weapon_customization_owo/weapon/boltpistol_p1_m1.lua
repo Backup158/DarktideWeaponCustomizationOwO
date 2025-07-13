@@ -60,6 +60,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "muzzle_6",
 
     "barrel_group_indicator",
+
+    "stock_group_indicator",
 })
 
 -- ############################################
@@ -186,6 +188,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
     -- Stocks
     mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
+    mod.hide_slot("stock_group_indicator", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left", }),
 })
 
 -- #################
@@ -336,17 +339,14 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Stock: TACTICAL STOCK
 	-- ######
-    --  Skeletal
-    {   dependencies =  { "owo_tactical_stock_s_01" },
-        stock =         { position = vector3_box(0.0, 0.11, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
-    },
+    --  Rest are handled universally
     --  Folded
-    {   dependencies =  { "owo_tactical_stock_01|owo_tactical_stock_02|owo_tactical_stock_03|owo_tactical_stock_04|owo_tactical_stock_05|owo_tactical_stock_06|owo_tactical_stock_07|owo_tactical_stock_08" },
+    {   dependencies =  { "owo_stock_group_indicator_tactical_stock_folded", "owo_tactical_stock_01|owo_tactical_stock_02|owo_tactical_stock_03|owo_tactical_stock_04|owo_tactical_stock_05|owo_tactical_stock_06|owo_tactical_stock_07|owo_tactical_stock_08" },
         stock =         { position = vector3_box(0.056, -0.122, 0.044), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
         stockac =       { position = vector3_box(-0.0037, -0.092, 0.043), rotation = vector3_box(90, 0, -90), scale = vector3_box(1, 0.5, 0.3 )}
     },
     --  Folded (Left)
-    {   dependencies =  { "owo_tactical_stock_01l|owo_tactical_stock_02l|owo_tactical_stock_03l|owo_tactical_stock_04l|owo_tactical_stock_05l|owo_tactical_stock_06l|owo_tactical_stock_07l|owo_tactical_stock_08l" },
+    {   dependencies =  { "owo_stock_group_indicator_tactical_stock_folded_left", "owo_tactical_stock_01l|owo_tactical_stock_02l|owo_tactical_stock_03l|owo_tactical_stock_04l|owo_tactical_stock_05l|owo_tactical_stock_06l|owo_tactical_stock_07l|owo_tactical_stock_08l" },
         stock =         { position = vector3_box(-0.05, -0.122, 0.044), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
         stockac =       { position = vector3_box(0.0023, -0.092, 0.043), rotation = vector3_box(90, 0, 90), scale = vector3_box(1, 0.5, 0.3 )}
     },

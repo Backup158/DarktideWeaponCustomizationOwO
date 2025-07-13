@@ -88,6 +88,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "receiverac1",
     "receiverac1_group_indicator",
     "receiverac2",
+
+    "stock_group_indicator",
 })
 
 -- ############################################
@@ -299,6 +301,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_2_ac3", { "owo_crosshair_ac3_block|owo_crosshair_ac3_obelisk" }),
     -- Stocks
     mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
+    mod.hide_slot("stock_group_indicator", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left", }),
 })
 
 -- #################
