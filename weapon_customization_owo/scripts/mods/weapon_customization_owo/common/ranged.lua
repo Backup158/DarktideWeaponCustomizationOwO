@@ -1695,6 +1695,35 @@ function mod.owo_tactical_foregrip(variant_id, given_type, given_parent)
 		},
 	})
 end
+function mod.fixes_owo_tactical_foregrip(variant_id, given_type, given_parent)
+	local current_type = given_type or "foregrip"
+	local current_parent = given_parent or "receiver"
+
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Foregrip: TACTICAL FOREGRIP
+		-- ######
+		-- skeletal shotgun
+		{   dependencies =  { "owo_tactical_foregrip_01"},
+			foregrip =      { offset = true,   position = vector3_box(0, 0.605, -0.045),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
+		},
+		-- skeletal shotgun (slant)
+		{   dependencies =  { "owo_tactical_foregrip_02"},
+			foregrip =      { offset = true,   position = vector3_box(0, 0.545, -0.035),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
+		},
+		-- skeletal brauto (slant)
+		{   dependencies =  { "owo_tactical_foregrip_03"},
+			foregrip =      { offset = true,   position = vector3_box(0, 0.555, -0.02),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
+		},
+		-- magpul afg triple threat
+		{   dependencies =  { "owo_tactical_foregrip_04"},
+			foregrip =      { offset = true,   position = vector3_box(-0.0, 0.34, 0.022),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
+			foregripac1 =   { offset = true,   position = vector3_box(0.002, 0.415, -0.102),   rotation = vector3_box(0, 90, -40),    scale = vector3_box(0.5, 0.45, 0.2) },
+			foregripac2 =   { offset = true,   position = vector3_box(-0.002, 0.415, -0.102),   rotation = vector3_box(-40, -90, 0),    scale = vector3_box(0.5, 0.45, 0.2) },
+			foregripac3 =   { offset = true,   position = vector3_box(0, 0.47, -0.060),   rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.5, 0.45, 0.2) },
+		},
+	})
+end
 
 -- Foregrip: Heterosexual Foregrips
 function mod.owo_heterosexual_foregrip(variant_id, given_type)
