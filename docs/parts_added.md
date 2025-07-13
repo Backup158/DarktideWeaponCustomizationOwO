@@ -151,6 +151,8 @@ Additional slot to add to or replace the original receiver. These can get super 
 - **Fin Grips**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; Grip with a wedge sticking out the back to avoid having a grip that "protrudes conspicuously beneath the action of the weapon."  \
 &emsp; In compliance with Cadian Penal Code section 30515
+- **Invisible Grip**: Infantry/Braced/Vigilant Autoguns  \
+&emsp; For use with the Helbore stock when using the Helbore receiver
 
 ### Stocks
 - **Straight Grip and Stock**: Helbore Lasguns  \
