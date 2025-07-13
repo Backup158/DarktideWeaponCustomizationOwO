@@ -46,6 +46,11 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - Tactical Stocks
         - Universalized fixes
         - Added indicator groups for efficiency
+    - Kalashnikov Stocks
+        - Universalized fixes
+        - Added indicator groups for efficiency
+    - Beeg Stocks (Big ^.^ Stocks!)
+        - Changed indicator from `stockac` to `stock_group_indicator`
 
 # 2025-07-06
 v2.2.0
