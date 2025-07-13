@@ -73,10 +73,18 @@ Parts are prefixed with `OwO` in the customization menu.
 > KNOWN ISSUE: Both variants sometimes steal muzzle flashes from bullet-based weapons
 
 ### Receivers
-These can get super janky when using non-default parts so watch out.
+- **Helbore Body**: Infantry/Braced/Vigilant Autoguns  \
+&emsp; Replaces the receiver with the Helbore lasgun receivers
+
+> [!WARNING]
+> 
+> I would *strongly* recommend only using these for screenshots. Making things work right in actual gameplay in terms of animation is... quite a mountain to climb.
+
+### Receiver Accessories
+Additional slot to add to or replace the original receiver. These can get super janky when using non-default parts so watch out. For variants that use a different base for the receiver, animations may not look right.
 - **Vertically Challenged Bolter Receiver**: Spearhead Boltgun  \
 &emsp; Variants  \
-&emsp; &emsp; Smol Bolter (RAW): Receiver is squished, as well as everything else connected automatically   \
+&emsp; &emsp; Smol Bolter (RAW): Whatever receiver you selected gets squished, as well as everything else connected automatically   \
 &emsp; &emsp; Smol Bolter: Only receiver is squished, with some manual adjustments   \
 &emsp; Makes the gun and magazine vertically shorter. This one is just janky all around.  \
 &emsp; To avoid arrest, use with the 'Cadia' Complaint grips from the MT plugin.
@@ -85,7 +93,7 @@ These can get super janky when using non-default parts so watch out.
 
 > [!WARNING]
 > 
-> KNOWN ISSUE: The RAW versions have unusable scopes. There's way too many scopes to manually fix, considering that this attachment was made as a joke. They work fine on the other variants (those have fucky barrels outside of the defaults)
+> KNOWN ISSUE: The RAW versions have unusable scopes. There's way too many scopes to manually fix, especially considering that this attachment started off as a joke. They work fine on the other variants (those have fucky barrels and float in your hands). Such is the way of tradeoffs.
 
 - **Bolt Action Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; Adds a grip to the back to mimic a bolt
