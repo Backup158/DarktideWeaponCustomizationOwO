@@ -3135,15 +3135,21 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 		{id = "owo_tactical_stock_08l", name = "OwO Folded 8 (Left)"},
 	})
 	mod.inject_attachments_owo(variant_id, "stockac", {
-		{id = "owo_tactical_stockac_01",  name = "Folding stock'vesa", no_randomize = true},
+		{id = "owo_tactical_stockac_01",  name = "Folding stock'vesa (Hinge)", no_randomize = true},
+	})
+	mod.create_indicator_group(variant_id, "stock", {
+		{id = "owo_stock_group_indicator_tactical_stock_folded",  name = "Tactical Stock - Folded Stock, Stock Group Indicator"},
+		{id = "owo_stock_group_indicator_tactical_stock_folded_left",  name = "Tactical Stock - Folded Stock (Left), Stock Group Indicator"},
 	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
+		-- Skeletal Stock
 		owo_tactical_stock_s_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 		},
+		-- Folded (Natural)
 		owo_tactical_stock_f_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
@@ -3156,122 +3162,155 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 		},
+		-- Folded
 		owo_tactical_stock_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_02 = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_03 = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_04 = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_05 = {
 			model = _item_ranged.."/stocks/stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_06 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_07 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_08 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
+		-- Folded (Left)
 		owo_tactical_stock_01l = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_02l = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_03l = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_04l = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_05l = {
 			model = _item_ranged.."/stocks/stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_06l = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_07l = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_08l = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01",
+				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		-- ### Helper Parts ###
 		owo_tactical_stockac_01 = {
 			model = _item_melee.."/grips/2h_chain_sword_grip_02", type = "stockac", 
 			mesh_move = false, parent = "receiver",
+		},
+	})
+end
+function mod.fixes_owo_tactical_stock(variant_id, given_type, given_parent)
+	local current_type = given_type or "stock"
+	local current_parent = given_parent or "receiver"
+
+	mod.mt.inject_fixes(this_variant, {
+		-- ######
+		-- Stock: TACTICAL STOCK
+		-- ######
+		--  Skeletal
+		{   dependencies =  	{ "owo_tactical_stock_s_01" },
+			[current_type] =    { position = vector3_box(0.0, 0.11, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
+		},
+		--  Folded
+		{   dependencies =  	{ "owo_stock_group_indicator_tactical_stock_folded", "owo_tactical_stock_01|owo_tactical_stock_02|owo_tactical_stock_03|owo_tactical_stock_04|owo_tactical_stock_05|owo_tactical_stock_06|owo_tactical_stock_07|owo_tactical_stock_08" },
+			[current_type] =    { position = vector3_box(0.054, -0.092, 0.058), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
+			stockac =       	{ position = vector3_box(-0.0037, -0.054, 0.059), rotation = vector3_box(90, 0, -90), scale = vector3_box(1, 0.45, 0.3 )}
+		},
+		--  Folded (Left)
+		{   dependencies =  	{ "owo_stock_group_indicator_tactical_stock_folded_left", "owo_tactical_stock_01l|owo_tactical_stock_02l|owo_tactical_stock_03l|owo_tactical_stock_04l|owo_tactical_stock_05l|owo_tactical_stock_06l|owo_tactical_stock_07l|owo_tactical_stock_08l" },
+			[current_type] =  	{ position = vector3_box(-0.05, -0.096, 0.060), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
+			stockac =       	{ position = vector3_box(0.0023, -0.054, 0.061), rotation = vector3_box(90, 0, 90), scale = vector3_box(1, 0.45, 0.3 )}
+		},
+		--  Floating/Natural
+		{   dependencies =  	{ "owo_tactical_stock_f_01|owo_tactical_stock_f_02" },
+			[current_type] =    { position = vector3_box(-0.012, -0.108, 0.064), rotation = vector3_box(0, 0, -176), scale = vector3_box(1, 1.0, 1 ) },
+		},
+		{   dependencies =  	{ "owo_tactical_stock_f_03u" },
+			[current_type] =    { position = vector3_box(0.0, -0.112, 0.0625), rotation = vector3_box(174, 0, 0), scale = vector3_box(2.52, 1.3, 1 ) },
 		},
 	})
 end
