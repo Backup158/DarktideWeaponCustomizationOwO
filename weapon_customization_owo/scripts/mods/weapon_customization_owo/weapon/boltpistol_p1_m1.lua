@@ -318,9 +318,9 @@ mod.mt.inject_fixes(this_variant, {
     -- Barrel: Short Shotgun
     -- #####
     -- Muzzle Patches
-    --{   dependencies =  { "owo_barrel_group_indicator_bistol_shotgun", _owo_all_bistol_shotgun_barrels },
-    --    muzzle =        { offset = true, parent = "barrel", position = vector3_box(0, 0.0, 0), scale = vector3_box(1, 1, 1) },
-    --},
+    {   dependencies =  { "owo_barrel_group_indicator_bistol_shotgun", _owo_all_bistol_shotgun_barrels },
+        muzzle =        { offset = true, parent = "barrel", position = vector3_box(0, 0.07, 0), scale = vector3_box(1.2, 1, 1.2) },
+    },
     --  Barrel
     --      Short
     {   dependencies =  { "owo_barrel_group_indicator_bistol_shotgun", _owo_short_bistol_shotgun_barrels },
