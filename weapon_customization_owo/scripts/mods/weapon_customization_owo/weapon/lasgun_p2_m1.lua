@@ -74,6 +74,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
+    "sight_group_indicator",
 
     "sight_2_ac1",
     "sight_2_ac2",
@@ -237,6 +238,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
     mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
+    mod.hide_slot("sight_group_indicator", { "owo_sight_group_indicator_holosight_acog|owo_sight_group_indicator_holosight_razor|owo_sight_group_indicator_prismatic_sight_acog|owo_sight_group_indicator_prismatic_sight_susat" }),
     -- Stock
     mod.hide_slot("stockac", { "owo_gripstock_grip_01a|owo_gripstock_amr_ac_01" }),
     mod.hide_slot("stockac2", { "owo_gripstock_amr_ac2_01|owo_gripstock_amr_ac2_02|owo_gripstock_amr_ac2_03|owo_gripstock_amr_ac2_04|owo_gripstock_amr_ac2_05|owo_gripstock_amr_ac2_06|owo_gripstock_amr_ac2_07|owo_gripstock_amr_ac2_08|owo_gripstock_amr_ac2_09" }),
@@ -967,22 +969,22 @@ mod.mt.inject_fixes(this_variant, {
     -- 	EOTech
 	--  --------------------------------------------
 	--  Patch to hide alt viewmodel sights
-	{   dependencies =      { _owo_sight_2s, _owo_all_eotech_sights, },
+	{   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies =      { _owo_no_magnifier_eotech_sights },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_no_magnifier_eotech_sights },
         sight =             { offset = true, position = vector3_box(0, 0.03, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     --          Using pommel as base
-    {   dependencies =      { _owo_magnifier_aligned_eotech_sights },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_aligned_eotech_sights },
         sight =             { offset = true, position = vector3_box(0, 0.1, 0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Using sight as base
-    {   dependencies =      { _owo_magnifier_side_eotech_sights },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_side_eotech_sights },
         sight =             { offset = true, position = vector3_box(0, 0.1, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -991,23 +993,23 @@ mod.mt.inject_fixes(this_variant, {
     --  Vortex Razor
     --  --------------------------------------------
     --  Patch for alt sights
-    {   dependencies =      { _owo_sight_2s, _owo_all_vortex_sights, },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  Sight Alignment
-    {   dependencies =      { _owo_no_magnifier_eotech_sights },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_no_magnifier_vortex_sights },
         sight =             { offset = true, position = vector3_box(0, 0.06, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Magnifier moves sight forwards
     --          Using sight as base
-    {   dependencies =      { _owo_magnifier_side_vortex_sights },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_magnifier_side_vortex_sights },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Using pommel as base
-    {   dependencies =      { _owo_magnifier_aligned_vortex_sights },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_magnifier_aligned_vortex_sights },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.124), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0373), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -1020,7 +1022,7 @@ mod.mt.inject_fixes(this_variant, {
     -- 	Trijicon ACOG
 	--  --------------------------------------------
     --  Patch to hide alt viewmodel sights
-    {   dependencies =      { _owo_sight_2s, _owo_all_acog_sights, },
+    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_sight_2s, },
         sight_2 =           { offset = false, parent = "sight", position = vector3_box(0, -0.04, 0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --      Aiming with RMR on ACOG

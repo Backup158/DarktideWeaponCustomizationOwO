@@ -4200,6 +4200,10 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2", {
 		{id = "owo_holosight_sight_secondary_helper_02", name = "OwO EOTech Magnifier 2", no_randomize = true},
 	})
+	mod.create_indicator_group(variant_id, "sight", {
+		{id = "owo_sight_group_indicator_holosight_eotech", name = "OwO EOTech Group Indicator", },
+		{id = "owo_sight_group_indicator_holosight_razor", name = "OwO Vortex Razor Group Indicator", },
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -4211,7 +4215,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01", 
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4224,7 +4228,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4237,7 +4241,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4250,7 +4254,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4264,7 +4268,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4277,7 +4281,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4290,7 +4294,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4303,7 +4307,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4316,7 +4320,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4329,7 +4333,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4342,7 +4346,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4355,7 +4359,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4367,7 +4371,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4380,7 +4384,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4393,7 +4397,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4406,7 +4410,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4475,11 +4479,12 @@ function mod.fixes_owo_holosight(variant_id)
 		--  --------------------------------------------
 		--  Sight Body Components
 		--      Short Variant
-		{   dependencies =  		{ _owo_short_eotech_sights },
+		{   dependencies =  		{ "owo_sight_group_indicator_holosight_eotech", _owo_short_eotech_sights },
 			sightac1 =      		{ offset = true, position = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.366, 0.256) },
 			sightac2 =      		{ offset = true, position = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.366, 0.256) },
 		},
-		{   dependencies =  		{ _owo_all_eotech_sights },
+		-- 			_owo_all_eotech_sights
+		{   dependencies =  		{ "owo_sight_group_indicator_holosight_eotech", },
 			rail =          		{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			sightac1 =      		{ offset = true, position = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
 			sightac2 =      		{ offset = true, position = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
@@ -4489,14 +4494,14 @@ function mod.fixes_owo_holosight(variant_id)
 		},
 		--  Magnifier
 		--      Aligned
-		{   dependencies =      	{ _owo_magnifier_aligned_eotech_sights },
+		{   dependencies =      	{ "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_aligned_eotech_sights },
 			sight_secondary_ac1 =   { offset = true, position = vector3_box(0, -0.154, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
 			sight_secondary_ac2 =   { offset = true, position = vector3_box(0, -0.0162, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
 			lens =              	{ offset = false, parent = "sight", position = vector3_box(0, -0.048, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 1}},
 			lens_2 =            	{ offset = false, parent = "sight", position = vector3_box(0, -0.12, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.45), data = {lens = 2}},
 		},
 		--      Side
-		{   dependencies =      	{ _owo_magnifier_side_eotech_sights },
+		{   dependencies =      	{ "owo_sight_group_indicator_holosight_eotech",_owo_magnifier_side_eotech_sights },
 			sight_secondary_ac1 =   { offset = true, position = vector3_box(0.042, -0.154, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
 			sight_secondary_ac2 =   { offset = true, position = vector3_box(0.042, -0.0162, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
 			lens =              	{ offset = false, parent = "sight", position = vector3_box(0.042, -0.048, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.52)},
@@ -4506,12 +4511,13 @@ function mod.fixes_owo_holosight(variant_id)
 		--  Vortex Razor
 		--  --------------------------------------------
 		--  Short Variant
-		{   dependencies =  		{ _owo_short_vortex_sights },
+		{   dependencies =  		{ "owo_sight_group_indicator_holosight_razor", _owo_short_vortex_sights },
 			sightac1 =      		{ offset = true, position = vector3_box(-0.002, -0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.4, 0.292) },
 			sightac2 =      		{ offset = true, position = vector3_box(0.00, -0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.4, 0.286) },
 			sightac3 =      		{ offset = true, position = vector3_box(0, -0.032, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.05, 0.666, 1.282) },
 		},
-		{   dependencies =  		{ _owo_all_vortex_sights },
+		-- _owo_all_vortex_sights
+		{   dependencies =  		{ "owo_sight_group_indicator_holosight_razor", },
 			rail =          		{ offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			sightac1 =      		{ offset = true, position = vector3_box(-0.002, -0.018, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.292) },
 			sightac2 =      		{ offset = true, position = vector3_box(0.00, -0.018, 0.004), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
@@ -4521,14 +4527,14 @@ function mod.fixes_owo_holosight(variant_id)
 		},
 		--  Magnifier
 		--      Aligned
-		{   dependencies =          { _owo_magnifier_aligned_vortex_sights },
+		{   dependencies =          { "owo_sight_group_indicator_holosight_razor", _owo_magnifier_aligned_vortex_sights },
 			sight_secondary_ac1 =   { offset = true, position = vector3_box(0, -0.194, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
 			sight_secondary_ac2 =   { offset = true, position = vector3_box(0, -0.0562, 0.034), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
 			lens =                  { offset = false, parent = "sight", position = vector3_box(0, -0.088, 0.034), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 1}},
 			lens_2 =                { offset = false, parent = "sight", position = vector3_box(0, -0.16, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 2}},
 		},
 		--		Side
-		{   dependencies =          { _owo_magnifier_side_vortex_sights },
+		{   dependencies =          { "owo_sight_group_indicator_holosight_razor", _owo_magnifier_side_vortex_sights },
 			sight_secondary_ac1 =   { offset = true, position = vector3_box(0.042, -0.194, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
 			sight_secondary_ac2 =   { offset = true, position = vector3_box(0.042, -0.0562, 0.01), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.89, 1, 0.61) },
 			lens =                  { offset = false, parent = "sight", position = vector3_box(0.042, -0.088, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.155, 0.57), data = {lens = 1}},
@@ -4610,6 +4616,10 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_sight_secondary_helper_02", name = "OwO ACOG Magnifier 2", no_randomize = true},
 	})]]
+	mod.create_indicator_group(variant_id, "sight", {
+		{id = "owo_sight_group_indicator_prismatic_sight_acog", name = "OwO ACOG Group Indicator", },
+		{id = "owo_sight_group_indicator_prismatic_sight_susat", name = "OwO SUSAT Group Indicator", },
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -4621,7 +4631,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4636,7 +4646,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4651,7 +4661,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4666,7 +4676,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4682,7 +4692,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4698,7 +4708,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4714,7 +4724,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4730,7 +4740,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sight_2 = "reflex_scopehelper_01",
+				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4746,7 +4756,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
-				sight_2 = "owo_reticle_helper_invisible",
+				sight_2 = "owo_reticle_helper_invisible", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4762,7 +4772,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
-				sight_2 = "owo_reticle_helper_invisible",
+				sight_2 = "owo_reticle_helper_invisible", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4778,6 +4788,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4793,6 +4804,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4808,6 +4820,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_alt_viewmodel_06",
+				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4823,6 +4836,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4839,6 +4853,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4855,6 +4870,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4947,7 +4963,8 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 		--  Trijicon ACOG
 		--  --------------------------------------------
 		--  Sight Helpers
-		{   dependencies =  	{ _owo_all_acog_sights },
+		--		_owo_all_acog_sights
+		{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_acog", },
 			rail =          	{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			-- Front half
 			sightac1 =      	{ offset = true, position = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
@@ -4968,13 +4985,14 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 	    	lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0325), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
 		},
 		--  ACOG with RMR on top
-		{   dependencies =      { _owo_rmr_acog_sights },
+		{   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_rmr_acog_sights },
 			sight_secondary =   { offset = true, position = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
 		},
 		--  --------------------------------------------
 		--  SUSAT
 		--  --------------------------------------------
-		{   dependencies =  	{ _owo_all_susat_sights },
+		--  _owo_all_susat_sights
+		{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_susat", },
 			rail =          	{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			-- Cylinder thing
 			sightac1 =      	{ offset = true, position = vector3_box(0, -0.115, 0.147), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 2.47, 2.14) },
