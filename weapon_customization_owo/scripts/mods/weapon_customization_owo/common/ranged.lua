@@ -2109,7 +2109,7 @@ function mod.fixes_owo_heterosexual_foregrip(variant_id, given_type)
 		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06" },
 			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
 		},
-		--		This one is smaller than average so I also have a fat variant
+		--		This one is skinnier than average so I also have a fat variant
 		{   dependencies =  { "owo_heterosexual_foregrip_knife_06_fat"},
 			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
 		},
