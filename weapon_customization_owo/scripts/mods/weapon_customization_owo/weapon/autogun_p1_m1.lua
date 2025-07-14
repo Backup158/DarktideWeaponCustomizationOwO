@@ -58,6 +58,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "foregripac1",
     "foregripac2",
     "foregripac3",
+    "foregrip_group_indicator",
 
     "bayonetac1",
     "bayonetac2",
@@ -273,6 +274,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("foregripac1", { "owo_tactical_foregrip_ac1_01" }),
     mod.hide_slot("foregripac2", { "owo_tactical_foregrip_ac2_01" }),
     mod.hide_slot("foregripac3", { "owo_tactical_foregrip_ac3_01" }),
+    mod.hide_slot("foregrip_group_indicator", { "owo_foregrip_group_indicator_heterosexual_gun_grip|owo_foregrip_group_indicator_heterosexual_ogryn_grip|owo_foregrip_group_indicator_heterosexual_knife_grip|owo_foregrip_group_indicator_heterosexual_dclaw_grip" }),
     -- Receivers
     mod.hide_slot("receiverac1_group_indicator", { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid" }),
     mod.hide_slot("receiverac2", { "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob" }),
@@ -451,31 +453,7 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Foregrip: HETEROSEXUAL FOREGRIP
     -- ######
-    --  Ogryn handles
-    {   dependencies =  { "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08" },
-        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
-    },
-    --  Dclaw
-    {   dependencies =  { "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14" },
-        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
-    },
-    --  Knife
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06" },
-        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
-    },
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_06_fat"},
-        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
-    },
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s" },
-        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
-    },
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_06s_fat" },
-        foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
-    },
-    --  Grip grips
-    {   dependencies =  { "owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29" },
-        foregrip =      { offset = true,   position = vector3_box(0, 0.375, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
-    },
+    -- Handled universally... thank fuck
 
     -- ######
     -- Bayonet: DREG GUNNER BAYONET

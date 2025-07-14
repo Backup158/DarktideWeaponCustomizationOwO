@@ -53,6 +53,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "foregripac1",
     "foregripac2",
     "foregripac3",
+    "foregrip_group_indicator",
 
     "sightac1",
     "sightac5",
@@ -139,6 +140,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("foregripac1", { "owo_tactical_foregrip_ac1_01" }),
     mod.hide_slot("foregripac2", { "owo_tactical_foregrip_ac2_01" }),
     mod.hide_slot("foregripac3", { "owo_tactical_foregrip_ac3_01" }),
+    mod.hide_slot("foregrip_group_indicator", { "owo_foregrip_group_indicator_heterosexual_gun_grip|owo_foregrip_group_indicator_heterosexual_ogryn_grip|owo_foregrip_group_indicator_heterosexual_knife_grip|owo_foregrip_group_indicator_heterosexual_dclaw_grip" }),
     -- Sights
     mod.hide_slot("sightac1", { "owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_kalashnikov_rear_sight_ac1_01|owo_kalashnikov_rear_sight_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
     mod.hide_slot("sightac2", { "owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_kalashnikov_rear_sight_ac2_01|owo_kalashnikov_rear_sight_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
@@ -299,43 +301,46 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Syn's Short Shotgun Barrels
     --      Ogryn handles
-    {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08"},
+    --          "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08",
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_ogryn_grip", _syn_short_shotgun_barrels, },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.45, 0.3) },
     },
     --      Dclaw
-    {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14"},
+    --          "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14",
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_dclaw_grip", _syn_short_shotgun_barrels, },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.9, 0.45) },
     },
     --      Knife
-    {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1.5, 1) },
     },
-    {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_06_fat"},
+    {   dependencies =  { "owo_heterosexual_foregrip_knife_06_fat", _syn_short_shotgun_barrels, },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1.5, 1) },
     },
-    {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1.5, 0.5) },
     },
-    {   dependencies =  { _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_06s_fat"},
+    {   dependencies =  { "owo_heterosexual_foregrip_knife_06s_fat", _syn_short_shotgun_barrels, },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1.5, 0.5) },
     },
     --      Grip grips
-    {   dependencies =  { _syn_short_shotgun_barrels, _owo_grip_grip_straight_grips },
+    --          _owo_grip_grip_straight_grips
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_gun_grip", _syn_short_shotgun_barrels, },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.09, 0.07),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1.2, 1) },
     },
     --  Default
     --      Ogryn handles
-    {   dependencies =  { "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08"},
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
         stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.45, 0.3, 0.3) },
     },
     --      Dclaw
-    {   dependencies =  { "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14"},
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
         stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.1, 0.6, 0.45) },
     },
     --      Knife
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
         stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
     },
@@ -343,7 +348,7 @@ mod.mt.inject_fixes(this_variant, {
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
         stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.25, 1, 1) },
     },
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
         stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
     },
@@ -352,7 +357,7 @@ mod.mt.inject_fixes(this_variant, {
         stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.25, 1, 0.5) },
     },
     --      Grip grips
-    {   dependencies =  { _owo_grip_grip_straight_grips },
+    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_gun_grip", },
         foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.04, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
         stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
     },

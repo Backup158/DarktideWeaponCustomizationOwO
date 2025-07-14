@@ -54,6 +54,9 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - Changed indicator from `stockac` to `stock_group_indicator`
     - Tactical Foregrips
         - Universalized fixes (NOT INCLUDING SHOTGUN) to prepare it for other weapons
+    - Straight Foregrips
+        - Universalized fixes (NOT INCLUDING SHOTGUN) to prepare it for other weapons
+        - Added indicator groups for efficiency (*especially* for this one because it turns 25 checks into 1)
 
 # 2025-07-06
 v2.2.0
