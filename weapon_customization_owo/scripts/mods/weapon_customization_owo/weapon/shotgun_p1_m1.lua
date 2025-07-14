@@ -372,7 +372,8 @@ mod.mt.inject_fixes(this_variant, {
     --{   dependencies =  { _owo_basic_bigga_stocks },
     --    stock_2 =       { offset = false, parent = "receiver", parent_node = 2, position = vector3_box(0.0, -0.208, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.75, 1.35 ) },
     --},
-    {   dependencies =  { "owo_stock_group_indicator_beeg", _owo_all_beeg_stocks },
+    --  _owo_all_beeg_stocks
+    {   dependencies =  { "owo_stock_group_indicator_beeg", },
         stock_2 =       { offset = true, position = vector3_box(0.0, 0.020, 0.045), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1.5, 1.2 ) },
     },
 
