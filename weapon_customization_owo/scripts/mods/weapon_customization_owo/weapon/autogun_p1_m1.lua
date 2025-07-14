@@ -329,6 +329,7 @@ mod.fixes_owo_tactical_stock(this_variant)
 mod.fixes_owo_kalash_stock(this_variant)
 
 mod.fixes_owo_tactical_foregrip(this_variant)
+mod.fixes_owo_heterosexual_foregrip(this_variant)
 
 -- #################
 -- Custom Fixes
