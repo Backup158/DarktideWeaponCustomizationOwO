@@ -23,12 +23,12 @@ Affects:
 I should've just done this when I was developing v2.0.0 but I got lazy and just wanted to push it out. My bad. It will happen again. >:3
 
 **OTHER CHANGES**
-- Removed most group indicators
-    - I did the math, and adding slots creates much more checks than added more dependencies
-    - Mostly due to existing dependencies
+- Removed standalone group indicator slots
+    - I did the math, and adding slots creates much more checks than adding more dependencies
+    - Mostly due to existing dependencies from other plugins
     - Now only exists if I can tack it to an existing slot
         - that exists on the weapon family already
-        - otherwise im just reinventing the wheel lol
+        - otherwise I'm just making the same mistake lol
 - Added Standalone Helbore Receiver for Autoguns
     - So you can use the Bolt-action and MAS Receiver Accessories
     - Still has the jank of before
@@ -56,6 +56,8 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - Kalashnikov Stocks
         - Universalized fixes to prepare it for other weapons
         - Added indicator groups to `stockac` for efficiency
+    - Beeg stocks (Big ^.^ stocks!)
+        - Added indicator groups to `stockac` for efficiency
     - Tactical Foregrips
         - Universalized fixes (NOT INCLUDING SHOTGUN) to prepare it for other weapons
     - Straight Foregrips
@@ -66,6 +68,8 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - Fixed missing sight alignment check for vortex razors with no magnifier
     - Bolt Action
         - Variables for fixes to prepare for more variants
+    - Smol Bolters
+        - Moved indicator groups from `receiver_group_indicator` to `receiverac2`
 
 # 2025-07-06
 v2.2.0

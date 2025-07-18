@@ -2614,7 +2614,6 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 		{id = "owo_california_bolter_shroud_08", name = "OwO Smol Bolter 8"},
 		{id = "owo_california_bolter_shroud_ml01", name = "OwO Smol Bolter M"},
 	})
-	-- mod.create_group_indicator(variant_id, "receiver", {
 	mod.create_group_indicator(variant_id, "receiverac2", {
 		{id = "owo_receiver_group_indicator_california_bolter", name = "OwO Vertically Challenged Bolter Group Indicator"},
 	})

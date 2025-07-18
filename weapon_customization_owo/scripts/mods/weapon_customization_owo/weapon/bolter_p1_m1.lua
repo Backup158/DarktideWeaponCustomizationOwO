@@ -204,7 +204,7 @@ mod.mt.inject_fixes(this_variant, {
     -- Stocks
     mod.hide_slot("stockac", { "owo_tactical_stockac_01|owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg" }),
     -- Receivers
-    mod.hide_slot("receiverac2", { "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob" }),
+    mod.hide_slot("receiverac2", { "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob|owo_receiver_group_indicator_california_bolter" }),
 })
 
 -- #################
