@@ -1018,7 +1018,7 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type, given_paren
 		{id = "owo_bistol_shotgun_barrel_short_08", name = "OwO Shotgun Shorty 5", no_randomize = true},
 		--{id = "owo_bistol_shotgun_barrel_short_09", name = "OwO Shotgun Shorty 6", no_randomize = true},
 	})
-	mod.create_indicator_group(variant_id, "barrel", {
+	mod.create_group_indicator(variant_id, "barrelshroudac", {
 		{id = "owo_barrel_group_indicator_bistol_shotgun", name = "OwO Bistol Shotgun Barrel Group Indicator"},
 	})
 
@@ -1027,38 +1027,38 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type, given_paren
 		--[[owo_bistol_sg_base_01 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_01", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_01", -- barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		]]
 		owo_bistol_sg_base_04 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_05 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_06 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_08 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		--[[owo_bistol_sg_base_09 = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_09", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_09", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		]]
@@ -1066,25 +1066,25 @@ function mod.owo_bistol_shotgun_barrel_short(variant_id, given_type, given_paren
 		owo_bistol_sg_base_04_s = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_04", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_05_s = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_05", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_06_s = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_06", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		owo_bistol_sg_base_08_s = {
 			model = _item_ranged.."/barrels/boltgun_pistol_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08", barrel_group_indicator = "owo_barrel_group_indicator_bistol_shotgun",
+			automatic_equip = { barrelshroud = "owo_bistol_shotgun_barrel_short_08", barrelshroudac = "owo_barrel_group_indicator_bistol_shotgun",
 			}
 		}, 
 		-- ### Helper Parts ###
@@ -1788,7 +1788,7 @@ function mod.owo_heterosexual_foregrip(variant_id, given_type)
 		{id = "owo_heterosexual_foregrip_13", name = "OwO SG DClaw 5"},
 		{id = "owo_heterosexual_foregrip_14", name = "OwO SG DClaw 6"},
 	})
-	mod.create_indicator_group(variant_id, "foregrip", {
+	mod.create_group_indicator(variant_id, "foregripac1", {
 		{id = "owo_foregrip_group_indicator_heterosexual_gun_grip", name = "OwO Straight Grip (Guns) Foregrip Group Indicator"},
 		{id = "owo_foregrip_group_indicator_heterosexual_knife_grip", name = "OwO Straight Grip (Combat Blade) Foregrip Group Indicator"},
 		{id = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", name = "OwO Straight Grip (Ogryn Cleaver) Foregrip Group Indicator"},
@@ -1801,290 +1801,290 @@ function mod.owo_heterosexual_foregrip(variant_id, given_type)
 		owo_heterosexual_foregrip_grip_01 = {
 			model = _item_ranged.."/grips/grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_02 = {
 			model = _item_ranged.."/grips/grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_03 = {
 			model = _item_ranged.."/grips/grip_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_04 = {
 			model = _item_ranged.."/grips/grip_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_05 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_06 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_07 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_08 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_09 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_10 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_11 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_12 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_13 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_14 = {
 			model = _item_ranged.."/grips/boltgun_pistol_grip_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_15 = {
 			model = _item_ranged.."/grips/boltgun_pistol_grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_16 = {
 			model = _item_ranged.."/grips/boltgun_pistol_grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_17 = {
 			model = _item_ranged.."/grips/boltgun_rifle_grip_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_18 = {
 			model = _item_ranged.."/grips/boltgun_rifle_grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_19 = {
 			model = _item_ranged.."/grips/boltgun_rifle_grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_20 = {
 			model = _item_ranged.."/grips/boltgun_rifle_grip_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_21 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_22 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_23 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_24 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_25 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_26 = {
 			model = _item_ranged.."/grips/flamer_rifle_grip_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_27 = {
 			model = _item_ranged.."/grips/flamer_rifle_grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_28 = {
 			model = _item_ranged.."/grips/flamer_rifle_grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_29 = {
 			model = _item_ranged.."/grips/flamer_rifle_grip_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		-- Ogryn
 		owo_heterosexual_foregrip_01 = {
 			model = _item_ranged.."/handles/combat_blade_handle_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_02 = {
 			model = _item_ranged.."/handles/combat_blade_handle_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_03 = {
 			model = _item_ranged.."/handles/combat_blade_handle_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_04 = {
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_05 = {
 			model = _item_ranged.."/handles/combat_blade_handle_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_06 = {
 			model = _item_ranged.."/handles/combat_blade_handle_06", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_07 = {
 			model = _item_ranged.."/handles/combat_blade_handle_07", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_08 = {
 			model = _item_ranged.."/handles/combat_blade_handle_08", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		-- Dclaw
 		owo_heterosexual_foregrip_09 = {
 			model = _item_melee.."/grips/combat_sword_grip_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_10 = {
 			model = _item_melee.."/grips/combat_sword_grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_11 = {
 			model = _item_melee.."/grips/combat_sword_grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_12 = {
 			model = _item_melee.."/grips/combat_sword_grip_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_13 = {
 			model = _item_melee.."/grips/combat_sword_grip_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_14 = {
 			model = _item_melee.."/grips/combat_sword_grip_06", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		-- Knife 
 		owo_heterosexual_foregrip_knife_01 = {
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_02 = {
 			model = _item_melee.."/grips/combat_knife_grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_03 = {
 			model = _item_melee.."/grips/combat_knife_grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_04 = {
 			model = _item_melee.."/grips/combat_knife_grip_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_05 = {
 			model = _item_melee.."/grips/combat_knife_grip_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_06 = {
 			model = _item_melee.."/grips/combat_knife_grip_06", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_06_fat = {
 			model = _item_melee.."/grips/combat_knife_grip_06", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_01s = {
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_02s = {
 			model = _item_melee.."/grips/combat_knife_grip_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_03s = {
 			model = _item_melee.."/grips/combat_knife_grip_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_04s = {
 			model = _item_melee.."/grips/combat_knife_grip_04", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_05s = {
 			model = _item_melee.."/grips/combat_knife_grip_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_06s = {
 			model = _item_melee.."/grips/combat_knife_grip_06", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_06s_fat = {
 			model = _item_melee.."/grips/combat_knife_grip_06", type = current_type, 
 			mesh_move = false, parent = "receiver",
-			automatic_equip = { foregrip_group_indicator = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
+			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 	})
 end
@@ -2096,13 +2096,11 @@ function mod.fixes_owo_heterosexual_foregrip(variant_id, given_type)
 		-- Foregrip: HETEROSEXUAL FOREGRIP
 		-- ######
 		--  Ogryn handles
-		--		"owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08",
-		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
+		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_ogryn_grip", "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08", },
 			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
 		},
 		--  Dclaw
-		--		"owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14", 
-		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_dclaw_grip",  },
+		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_dclaw_grip", "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14", },
 			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
 		},
 		--  Knife
@@ -2121,8 +2119,7 @@ function mod.fixes_owo_heterosexual_foregrip(variant_id, given_type)
 			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
 		},
 		--  Gun grips
-		-- 		"owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29",
-		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_gun_grip", },
+		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_gun_grip", "owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29", },
 			foregrip =      { offset = true,   position = vector3_box(0, 0.375, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
 		},
 	})
@@ -2617,7 +2614,8 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 		{id = "owo_california_bolter_shroud_08", name = "OwO Smol Bolter 8"},
 		{id = "owo_california_bolter_shroud_ml01", name = "OwO Smol Bolter M"},
 	})
-	mod.create_indicator_group(variant_id, "receiver", {
+	-- mod.create_group_indicator(variant_id, "receiver", {
+	mod.create_group_indicator(variant_id, "receiverac2", {
 		{id = "owo_receiver_group_indicator_california_bolter", name = "OwO Vertically Challenged Bolter Group Indicator"},
 	})
 	-- 1-7
@@ -2653,7 +2651,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_01", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_02", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_02", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2663,7 +2661,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_02", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_01", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2673,7 +2671,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_03", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_01", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2683,7 +2681,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_04", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_01", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2693,7 +2691,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_05", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_01", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2703,7 +2701,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_06", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_01", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2713,7 +2711,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_07", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_01", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2723,7 +2721,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_08", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_01", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2733,7 +2731,7 @@ function mod.owo_california_bolter(variant_id, given_type, given_parent)
 			model = _item_ranged.."/recievers/boltgun_rifle_receiver_ml01", type = current_type, 
 			parent = "receiver", mesh_move = false,
 			automatic_equip = {
-				receiver = "receiver_01", receiver_group_indicator = "owo_receiver_group_indicator_california_bolter",
+				receiver = "receiver_01", receiverac2 = "owo_receiver_group_indicator_california_bolter",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2754,10 +2752,6 @@ function mod.owo_bolt_action(variant_id, given_type, given_parent)
 	mod.inject_attachments_owo(variant_id, "receiverac2", {
 		{id = "owo_bolt_helbore_grip_01", name = "OwO bolt action bolt grippy part 1", no_randomize = true},
 	})
-	mod.create_indicator_group(variant_id, "receiverac1", {
-		{id = "owo_receiverac1_group_indicator_bolt", name = "OwO Normal Bolt Action Grip", no_randomize = true},
-		{id = "owo_receiverac1_group_indicator_bolt_stupid", name = "OwO Perpendicular Bolt Action Grip", no_randomize = true},
-	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -2766,14 +2760,14 @@ function mod.owo_bolt_action(variant_id, given_type, given_parent)
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
-				receiverac2 = "owo_bolt_helbore_grip_01", receiverac1_group_indicator = "owo_receiverac1_group_indicator_bolt",
+				receiverac2 = "owo_bolt_helbore_grip_01",
 			},
 		},
 		owo_bolt_helbore_bolt_01s = {
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
-				receiverac2 = "owo_bolt_helbore_grip_01", receiverac1_group_indicator = "owo_receiverac1_group_indicator_bolt_stupid",
+				receiverac2 = "owo_bolt_helbore_grip_01",
 			},
 		},
 		-- ### Helper Parts ###
@@ -2792,15 +2786,15 @@ function mod.fixes_owo_bolt_action(variant_id, given_type, given_parent)
 		-- ######
 		-- Receiver: BOLT ACTION HELBORE
 		-- ######
-		-- Bolt shaft positioning (same for all)
-		{	dependencies =  { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid", },
-			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
-		},
 		-- Bolt grip angle
-		{	dependencies =  { "owo_receiverac1_group_indicator_bolt", "owo_bolt_helbore_bolt_01" },
+		--		Angled down
+		{	dependencies =  { "owo_bolt_helbore_bolt_01" },
+			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
 			receiverac2 =   { offset = true, position = vector3_box(0.028, -0.016, 0.05), rotation = vector3_box(-90, -65, -90), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},
-		{	dependencies =  { "owo_receiverac1_group_indicator_bolt_stupid", "owo_bolt_helbore_bolt_01s" },
+		--		Straight up perpendicular
+		{	dependencies =  { "owo_bolt_helbore_bolt_01s" },
+			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
 			receiverac2 =   { offset = true, position = vector3_box(0.022, 0.0, 0.05), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},
 	})
@@ -2909,9 +2903,6 @@ function mod.owo_laspistol_grip_mag(variant_id)
 	mod.inject_attachments_owo(variant_id, "receiverac3", {
 		{id = "owo_slim_laspistol_grip_mag_helper3_01", name = "OwO Pistol Coverup", no_randomize = true},
 	})
-	mod.create_indicator_group(variant_id, "receiverac1", {
-		{id = "owo_receiverac1_group_indicator_slim_lasslide", name = "OwO Slim LasSlide Group", no_randomize = true},
-	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -2930,7 +2921,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_01", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
+				receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2940,7 +2931,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_02", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
+				receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2950,7 +2941,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_03", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
+				receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2960,7 +2951,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_04", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
+				receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2970,7 +2961,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_05", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
+				receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2980,7 +2971,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_06", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
+				receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -2990,7 +2981,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_07", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
+				receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -3000,7 +2991,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_08", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_01",
+				receiver = "laspistol_receiver_01",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -3010,7 +3001,7 @@ function mod.owo_laspistol_grip_mag(variant_id)
 			model = _item_ranged.."/recievers/lasgun_pistol_receiver_ml01", type = "receiverac1", parent = "receiver", mesh_move = false,
 			automatic_equip = {
 				receiverac2 = "owo_slim_laspistol_grip_mag_helper2_01", receiverac3 = "owo_slim_laspistol_grip_mag_helper3_01", 
-				receiverac1_group_indicator = "owo_receiverac1_group_indicator_slim_lasslide", receiver = "laspistol_receiver_08",
+				receiver = "laspistol_receiver_08",
 			},
 			hide_mesh = {
 				{"receiver", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 },
@@ -3268,7 +3259,7 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 	mod.inject_attachments_owo(variant_id, "stockac", {
 		{id = "owo_tactical_stockac_01",  name = "Folding stock'vesa (Hinge)", no_randomize = true},
 	})
-	mod.create_indicator_group(variant_id, "stock", {
+	mod.create_group_indicator(variant_id, "stockac2", {
 		{id = "owo_stock_group_indicator_tactical_stock_folded",  name = "Tactical Stock - Folded Stock, Stock Group Indicator"},
 		{id = "owo_stock_group_indicator_tactical_stock_folded_left",  name = "Tactical Stock - Folded Stock (Left), Stock Group Indicator"},
 	})
@@ -3298,56 +3289,56 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_02 = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_03 = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_04 = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_05 = {
 			model = _item_ranged.."/stocks/stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_06 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_07 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		owo_tactical_stock_08 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded", 
 			},
 		},
 		-- Folded (Left)
@@ -3355,56 +3346,56 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_02l = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_03l = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_04l = {
 			model = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_05l = {
 			model = _item_ranged.."/stocks/stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_06l = {
 			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_07l = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		owo_tactical_stock_08l = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 			automatic_equip = {
-				stockac = "owo_tactical_stockac_01", stock_group_indicator = "owo_stock_group_indicator_tactical_stock_folded_left", 
+				stockac = "owo_tactical_stockac_01", stockac2 = "owo_stock_group_indicator_tactical_stock_folded_left", 
 			},
 		},
 		-- ### Helper Parts ###
@@ -3472,7 +3463,7 @@ function mod.owo_kalash_stock(variant_id, given_type, given_parent)
 		{id = "owo_kalash_stock_07c", name = "OwO Compact Kalashnikov 7"},
 		{id = "owo_kalash_stock_08c", name = "OwO Compact Kalashnikov (M)"},
 	})
-	mod.create_indicator_group(variant_id, "stock", {
+	mod.create_group_indicator(variant_id, "stockac", {
 		{id = "owo_stock_group_indicator_kalashnikov",  name = "OwO Kalashnikov Stock, Stock Group Indicator"},
 		{id = "owo_stock_group_indicator_kalashnikov_wood",  name = "OwO Kalashnikov Stock Wood, Stock Group Indicator"},
 		{id = "owo_stock_group_indicator_kalashnikov_compact",  name = "OwO Kalashnikov Stock Compact, Stock Group Indicator"},
@@ -3484,99 +3475,99 @@ function mod.owo_kalash_stock(variant_id, given_type, given_parent)
 		owo_kalash_stock_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_02 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_03 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_04 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_05 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_06 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_07 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov", },
 		},
 		owo_kalash_stock_08 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov", },
 		},
 		-- Helbore (wood)
 		owo_kalash_stock_h_01 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_wood", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_wood", },
 		},
 		owo_kalash_stock_h_02 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_02", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_wood", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_wood", },
 		},
 		owo_kalash_stock_h_03 = {
 			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_04", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_wood", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_wood", },
 		},
 		-- Shotgun Compact
 		owo_kalash_stock_01c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_02c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_03c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_04c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_05c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_06c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_07c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 		owo_kalash_stock_08c = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = current_type, 
 			mesh_move = false, parent = current_parent,
-			automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_kalashnikov_compact", },
+			automatic_equip = { stockac = "owo_stock_group_indicator_kalashnikov_compact", },
 		},
 	})
 end
@@ -3608,7 +3599,7 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 	local current_type = given_type or "stock"
 	local current_parent = given_parent or "receiver"
 	
-	mod.create_indicator_group(variant_id, "stock", {
+	mod.create_group_indicator(variant_id, "stockac", {
 		{id = "owo_stock_group_indicator_beeg", name = "OwO Beeg Stock Indicator", },
 	})
 
@@ -3627,19 +3618,19 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 		mod.inject_models(variant_id, {
 			-- Generic
 			owo_beeg_stock_01 = {
-				model = _item_ranged.."/stocks/stock_01", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/stock_01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_02 = {
-				model = _item_ranged.."/stocks/stock_02", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/stock_02", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_03 = {
-				model = _item_ranged.."/stocks/stock_03", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/stock_03", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_04 = {
-				model = _item_ranged.."/stocks/stock_04", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/stock_04", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_05 = {
-				model = _item_ranged.."/stocks/stock_05", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/stock_05", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 		})
 	end
@@ -3653,16 +3644,16 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 	mod.inject_models(variant_id, {
 		-- Infantry Autogun
 		owo_beeg_stock_iag_02 = {
-			model = _item_ranged.."/stocks/autogun_rifle_stock_02", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/autogun_rifle_stock_02", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 		owo_beeg_stock_iag_03 = {
-			model = _item_ranged.."/stocks/autogun_rifle_stock_03", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/autogun_rifle_stock_03", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 		owo_beeg_stock_iag_04 = {
-			model = _item_ranged.."/stocks/autogun_rifle_stock_04", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/autogun_rifle_stock_04", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 		owo_beeg_stock_iag_05 = {
-			model = _item_ranged.."/stocks/autogun_rifle_stock_ml01", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/autogun_rifle_stock_ml01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 	})
 	-- Braced Autogun
@@ -3673,10 +3664,10 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 	mod.inject_models(variant_id, {
 		-- Braced Autogun
 		owo_beeg_stock_bag_02 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 		owo_beeg_stock_bag_05 = {
-			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 	})
 	if not variant_is_shotgun then
@@ -3703,73 +3694,73 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 		mod.inject_models(variant_id, {
 			-- Infantry Autogun
 			owo_beeg_stock_iag_01 = {
-				model = _item_ranged.."/stocks/autogun_rifle_stock_01", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/autogun_rifle_stock_01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			-- Braced Autogun
 			owo_beeg_stock_bag_01 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_bag_03 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_03", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_03", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_bag_04 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_04", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_04", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_bag_06 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_06", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_bag_07 = {
-				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_07", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_07", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_bag_08 = {
-				model = _item_ranged.."/stocks/shotgun_rifle_ak_stock_ml01", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/shotgun_rifle_ak_stock_ml01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			-- Shotgun
 			owo_beeg_stock_sg_01 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_sg_02 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_03", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_sg_03 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_05", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_sg_04 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_06", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_sg_05 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_07", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_sg_06 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_08", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_sg_07 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_09", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_sg_08 = {
 				model = _item_ranged.."/stocks/shotgun_rifle_stock_ml01", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			-- Helbore
 			owo_beeg_stock_h_01 = {
 				model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_h_02 = { 
 				model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_02", type = current_type, 
-				mesh_move = false, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				mesh_move = false, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_h_03 = {
 				model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_04", type = current_type, 
 				mesh_move = false, parent = current_parent,
-				automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+				automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 		})
 	end
@@ -3783,16 +3774,16 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 	mod.inject_models(variant_id, {
 		-- Las
 		owo_beeg_stock_las_01 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_01", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 		owo_beeg_stock_las_02 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_02", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_02", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 		owo_beeg_stock_las_03 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_03", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 		owo_beeg_stock_las_04 = {
-			model = _item_ranged.."/stocks/lasgun_rifle_stock_04", type = current_type, parent = current_parent, automatic_equip = { stock_group_indicator = "owo_stock_group_indicator_beeg", },
+			model = _item_ranged.."/stocks/lasgun_rifle_stock_04", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 		},
 	})
 end
@@ -4200,7 +4191,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 	mod.inject_attachments_owo(variant_id, "sight_secondary_ac2", {
 		{id = "owo_holosight_sight_secondary_helper_02", name = "OwO EOTech Magnifier 2", no_randomize = true},
 	})
-	mod.create_indicator_group(variant_id, "sight", {
+	mod.create_group_indicator(variant_id, "sightac5", {
 		{id = "owo_sight_group_indicator_holosight_eotech", name = "OwO EOTech Group Indicator", },
 		{id = "owo_sight_group_indicator_holosight_razor", name = "OwO Vortex Razor Group Indicator", },
 	})
@@ -4215,7 +4206,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01", 
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4228,7 +4219,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4241,7 +4232,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4254,7 +4245,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4268,7 +4259,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4281,7 +4272,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4294,7 +4285,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4307,7 +4298,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_eotech", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_eotech", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4320,7 +4311,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1}
@@ -4333,7 +4324,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4346,7 +4337,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4359,7 +4350,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4371,7 +4362,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 			automatic_equip = { lens = "scope_lens_default", lens_2 = "scope_lens_default", rail = "rail_01",
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4384,7 +4375,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4397,7 +4388,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4410,7 +4401,7 @@ function mod.owo_holosight(variant_id, given_type, given_parent)
 				sightac1 = "owo_holosight_helper_01", sightac2 = "owo_holosight_helper_02", 
 				sightac3 = "owo_holosight_helper_03_02", sightac4 = "owo_holosight_helper_04",
 				sight_secondary = "owo_holosight_sight_secondary_01", sight_secondary_ac1 = "owo_holosight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_holosight_sight_secondary_helper_02",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_holosight_razor", 
+				sight_2 = "reflex_scopehelper_01", sightac5 =  "owo_sight_group_indicator_holosight_razor", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
@@ -4616,10 +4607,11 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 		{id = "owo_acog_sight_empty", name = "Empty Sight", no_randomize = true},
 		{id = "owo_acog_sight_sight_secondary_helper_02", name = "OwO ACOG Magnifier 2", no_randomize = true},
 	})]]
-	mod.create_indicator_group(variant_id, "sight", {
-		{id = "owo_sight_group_indicator_prismatic_sight_acog", name = "OwO ACOG Group Indicator", },
-		{id = "owo_sight_group_indicator_prismatic_sight_susat", name = "OwO SUSAT Group Indicator", },
-	})
+	-- Sightac7 is the max, so I'd have to create a new slot
+	--mod.create_group_indicator(variant_id, "sight", {
+	--	{id = "owo_sight_group_indicator_prismatic_sight_acog", name = "OwO ACOG Group Indicator", },
+	--	{id = "owo_sight_group_indicator_prismatic_sight_susat", name = "OwO SUSAT Group Indicator", },
+	--})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -4631,7 +4623,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "reflex_scopehelper_01", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4646,7 +4638,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "reflex_scopehelper_01", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4661,7 +4653,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "reflex_scopehelper_01", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4676,7 +4668,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_acog_sight_helper_03", sightac4 = "owo_acog_sight_helper_04",
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "reflex_scopehelper_01", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4692,7 +4684,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "reflex_scopehelper_01", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4708,7 +4700,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "reflex_scopehelper_01", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4724,7 +4716,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "reflex_scopehelper_01", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4740,7 +4732,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sight_2 = "reflex_scopehelper_01", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "reflex_scopehelper_01", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4756,7 +4748,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
-				sight_2 = "owo_reticle_helper_invisible", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "owo_reticle_helper_invisible", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4772,7 +4764,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
-				sight_2 = "owo_reticle_helper_invisible", sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				sight_2 = "owo_reticle_helper_invisible", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4788,7 +4780,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
-				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
+				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4804,7 +4796,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
-				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
+				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4820,7 +4812,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_alt_viewmodel_06",
-				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
+				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4836,7 +4828,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
-				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
+				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4853,7 +4845,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
-				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
+				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4870,7 +4862,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
 				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
-				sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
+				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -4963,8 +4955,8 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 		--  Trijicon ACOG
 		--  --------------------------------------------
 		--  Sight Helpers
-		--		_owo_all_acog_sights
-		{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_acog", },
+		--{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_acog", },
+		{	dependencies = 		{ _owo_all_acog_sights, }, 
 			rail =          	{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			-- Front half
 			sightac1 =      	{ offset = true, position = vector3_box(0, -0.022, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1, 1.3) },
@@ -4991,8 +4983,8 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 		--  --------------------------------------------
 		--  SUSAT
 		--  --------------------------------------------
-		--  _owo_all_susat_sights
-		{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_susat", },
+		--{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_susat", },
+		{	dependencies = 		{ _owo_all_susat_sights, }, 
 			rail =          	{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			-- Cylinder thing
 			sightac1 =      	{ offset = true, position = vector3_box(0, -0.115, 0.147), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 2.47, 2.14) },

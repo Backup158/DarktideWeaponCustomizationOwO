@@ -241,8 +241,9 @@ function mod.on_all_mods_loaded()
 	--			table of id and name strings
 	-- RETURN: N/A
 	-- ######
-	function mod.create_indicator_group(variant_id, slot_name, table_of_indicators)
-		local indicator_slot = slot_name.."_group_indicator"
+	function mod.create_group_indicator(variant_id, slot_name, table_of_indicators)
+		--local indicator_slot = slot_name.."_group_indicator"
+		local indicator_slot = slot_name
 		mod.inject_attachments_owo(variant_id, indicator_slot, table_of_indicators)
 		local models_for_indicators = {}
 		for _, indicator in ipairs(table_of_indicators) do

@@ -23,6 +23,12 @@ Affects:
 I should've just done this when I was developing v2.0.0 but I got lazy and just wanted to push it out. My bad. It will happen again. >:3
 
 **OTHER CHANGES**
+- Removed most group indicators
+    - I did the math, and adding slots creates much more checks than added more dependencies
+    - Mostly due to existing dependencies
+    - Now only exists if I can tack it to an existing slot
+        - that exists on the weapon family already
+        - otherwise im just reinventing the wheel lol
 - Added Standalone Helbore Receiver for Autoguns
     - So you can use the Bolt-action and MAS Receiver Accessories
     - Still has the jank of before
@@ -42,26 +48,22 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - But apparently I can't use the same method as the bolters because noooooo, laspistol receivers just haaave to be special with their nodes im going to shit myself then kick the stool to hang myself
 - Refactored
     - Bistol Shotgun barrels
-        - Added indicator groups for efficiency
+        - Added indicator groups to `barrelshroudac` for efficiency
         - Resized muzzles to fit over the barrel
     - Tactical Stocks
         - Universalized fixes
-        - Added indicator groups for efficiency
+        - Added indicator groups to `stockac2` for efficiency
     - Kalashnikov Stocks
         - Universalized fixes to prepare it for other weapons
-        - Added indicator groups for efficiency
-    - Beeg Stocks (Big ^.^ Stocks!)
-        - Changed indicator from `stockac` to `stock_group_indicator`
+        - Added indicator groups to `stockac` for efficiency
     - Tactical Foregrips
         - Universalized fixes (NOT INCLUDING SHOTGUN) to prepare it for other weapons
     - Straight Foregrips
         - Universalized fixes (NOT INCLUDING SHOTGUN) to prepare it for other weapons
-        - Added indicator groups for efficiency (*especially* for this one because it turns like 25 checks into 8)
+        - Added indicator groups to `foregripac1` for efficiency (*especially* for this one because it turns like 25 checks into 8)
     - Holographic Sights
-        - Added indicator groups for efficiency
+        - Added indicator groups to `sightac5` for efficiency
         - Fixed missing sight alignment check for vortex razors with no magnifier
-    - Prismatic Sights
-        - Added indicator groups for efficiency
 
 # 2025-07-06
 v2.2.0

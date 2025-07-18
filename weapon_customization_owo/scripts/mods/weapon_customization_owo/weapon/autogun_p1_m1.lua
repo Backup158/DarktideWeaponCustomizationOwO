@@ -17,7 +17,12 @@ local this_variant = "autogun_p1_m1" -- Braced/Infantry/Vigilant Autoguns
 -- MT Plugin Compatibility
 -- ###############
 local table_of_mt_slots = {
+    --"sight_2",
+    --"foregrip",
     "gripac",
+    "stockac",
+    "stockac2",
+    "sightac",
     "sightac2",
     "sightac3",
     "sightac4",
@@ -58,7 +63,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "foregripac1",
     "foregripac2",
     "foregripac3",
-    "foregrip_group_indicator",
+    --"foregrip_group_indicator",
 
     "bayonetac1",
     "bayonetac2",
@@ -81,17 +86,17 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
-    "sight_group_indicator",
+    --"sight_group_indicator",
 
     "sight_2_ac1",
     "sight_2_ac2",
     "sight_2_ac3",
 
     "receiverac1",
-    "receiverac1_group_indicator",
+    --"receiverac1_group_indicator",
     "receiverac2",
 
-    "stock_group_indicator",
+    --"stock_group_indicator",
 })
 
 -- ############################################
@@ -272,12 +277,10 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("barrelshroudac5", { "owo_m16_barrelshroudac5_01" }),
     mod.hide_slot("barrelshroudac6", { "owo_m16_barrelshroudac6_01" }),
     -- Foregrips
-    mod.hide_slot("foregripac1", { "owo_tactical_foregrip_ac1_01" }),
+    mod.hide_slot("foregripac1", { "owo_tactical_foregrip_ac1_01|owo_foregrip_group_indicator_heterosexual_gun_grip|owo_foregrip_group_indicator_heterosexual_ogryn_grip|owo_foregrip_group_indicator_heterosexual_knife_grip|owo_foregrip_group_indicator_heterosexual_dclaw_grip" }),
     mod.hide_slot("foregripac2", { "owo_tactical_foregrip_ac2_01" }),
     mod.hide_slot("foregripac3", { "owo_tactical_foregrip_ac3_01" }),
-    mod.hide_slot("foregrip_group_indicator", { "owo_foregrip_group_indicator_heterosexual_gun_grip|owo_foregrip_group_indicator_heterosexual_ogryn_grip|owo_foregrip_group_indicator_heterosexual_knife_grip|owo_foregrip_group_indicator_heterosexual_dclaw_grip" }),
     -- Receivers
-    mod.hide_slot("receiverac1_group_indicator", { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid" }),
     mod.hide_slot("receiverac2", { "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob" }),
     -- Magazines
     mod.hide_slot("owo_magac1", { "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01|owo_magazine_ak_ac1_01" }),
@@ -292,8 +295,8 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sightac2", { "owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_kalashnikov_rear_sight_ac2_01|owo_kalashnikov_rear_sight_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
     mod.hide_slot("sightac3", { "owo_holosight_helper_03|owo_holosight_helper_03_02|owo_rear_sight_ac3_01|owo_kalashnikov_rear_sight_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01" }),
     mod.hide_slot("sightac4", { "owo_holosight_helper_04|owo_rear_sight_ac4_01|owo_kalashnikov_rear_sight_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04" }),
-    mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_kalashnikov_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01" }),
-    mod.hide_slot("sightac6", { "owo_rear_sight_ac6_01|owo_kalashnikov_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac5_01" }),
+    mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_kalashnikov_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_m16_sight_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01|owo_sight_group_indicator_holosight_acog|owo_sight_group_indicator_holosight_razor" }),
+    mod.hide_slot("sightac6", { "owo_rear_sight_ac6_01|owo_kalashnikov_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_m16_sight_helper_06|owo_acog_sight_helper_06|owo_susat_ac6_01" }),
     mod.hide_slot("sightac7", { "owo_m16_sight_helper_07|owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07" }),
     mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
     mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
@@ -305,7 +308,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_2_ac3", { "owo_crosshair_ac3_block|owo_crosshair_ac3_obelisk" }),
     -- Stocks
     mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
-    mod.hide_slot("stock_group_indicator", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
+    mod.hide_slot("stockac2", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
 })
 
 -- #################
