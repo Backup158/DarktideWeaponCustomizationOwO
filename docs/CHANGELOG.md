@@ -29,24 +29,30 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - Now only exists if I can tack it to an existing slot
         - that exists on the weapon family already
         - otherwise I'm just making the same mistake lol
-- Added Standalone Helbore Receiver for Autoguns
-    - So you can use the Bolt-action and MAS Receiver Accessories
-    - Still has the jank of before
-- Added Invisible Grip to Autoguns
-    - For use with Helbore bodies if you use the stock then realize there's a random grip there
-- [VERY WIP] Added Slim Slides (Magazine in grip) for Laspistols 
-    - Even more jank than the chunky slides
-        - Triggers floating
-        - Magazine well lights floating
-        - Switches on side floating
-        - Kill yourself
-        - Random magazine is just sitting there where it'd be normally even though the actually equipped magazine was moved to the grip
-    - Shorter and less wide
-    - Just as with the smol bolters
-        - A RAW DAWG variant that straight up shrinks the gun (so sights can't be used) but everything else should work
-        - The shroud variants that use the invisible base for usable sights but float off your hands (and need more manual patching)
-        - But apparently I can't use the same method as the bolters because noooooo, laspistol receivers just haaave to be special with their nodes im going to shit myself then kick the stool to hang myself
-- Refactored
+    - See refactored section
+- Added 
+    - Standalone Helbore Receiver for Autoguns
+        - So you can use the Bolt-action and MAS Receiver Accessories
+        - Still has the jank of before
+    - Invisible Grip to Autoguns
+        - For use with Helbore bodies if you use the stock then realize there's a random grip there
+    - [VERY WIP] Slim Slides (Magazine in grip) for Laspistols 
+        - Even more jank than the chunky slides
+            - Triggers floating
+            - Magazine well lights floating
+            - Switches on side floating
+            - Kill yourself
+            - Random magazine is just sitting there where it'd be normally even though the actually equipped magazine was moved to the grip
+        - Shorter and less wide
+        - Just as with the smol bolters
+            - A RAW DAWG variant that straight up shrinks the gun (so sights can't be used) but everything else should work
+            - The shroud variants that use the invisible base for usable sights but float off your hands (and need more manual patching)
+            - But apparently I can't use the same method as the bolters because noooooo, laspistol receivers just haaave to be special with their nodes im going to shit myself then kick the stool to hang myself
+    - Added crutches lmfao 
+        - For Thunder Hammers
+        - Under shoulder and elbow crutches
+            - proportions fof for shoulder
+- Refactored (with some minor reworks)
     - Bistol Shotgun barrels
         - Added indicator groups to `barrelshroudac` for efficiency
         - Resized muzzles to fit over the barrel
@@ -70,17 +76,8 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - Variables for fixes to prepare for more variants
     - Smol Bolters
         - Moved indicator groups from `receiver_group_indicator` to `receiverac2`
-
-# 2025-07-06
-v2.2.0
-
-Never actually released this but I'll split it for development reasons
-
-- Added crutches lmfao 
-    - For Thunder Hammers
-    - Under shoulder and elbow crutches
-        - proportions fof for shoulder
-- Moved trinket hook for invisible connector
+    - Invisible Connector
+        - Moved trinket hook towards shaft
 
 # 2025-07-05
 v2.1.0
