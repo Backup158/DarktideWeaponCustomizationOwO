@@ -64,6 +64,8 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - Holographic Sights
         - Added indicator groups to `sightac5` for efficiency
         - Fixed missing sight alignment check for vortex razors with no magnifier
+    - Bolt Action
+        - Variables for fixes to prepare for more variants
 
 # 2025-07-06
 v2.2.0

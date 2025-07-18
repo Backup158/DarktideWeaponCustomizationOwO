@@ -63,7 +63,6 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "foregripac1",
     "foregripac2",
     "foregripac3",
-    --"foregrip_group_indicator",
 
     "bayonetac1",
     "bayonetac2",
@@ -86,17 +85,13 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
-    --"sight_group_indicator",
 
     "sight_2_ac1",
     "sight_2_ac2",
     "sight_2_ac3",
 
     "receiverac1",
-    --"receiverac1_group_indicator",
     "receiverac2",
-
-    --"stock_group_indicator",
 })
 
 -- ############################################
@@ -175,6 +170,8 @@ local _m16_normal_post_barrels = "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16
 local _m16_tall_post_barrels = "owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2"
 local _m16_no_post_barrels = "owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
 local _owo_bolt_helbore_receiverac1s = "owo_bolt_helbore_bolt_01"
+local _owo_stupid_bolt_helbore_receiverac1s = "owo_bolt_helbore_bolt_01s"
+local _owo_all_helbore_bolt_receiverac1s = _owo_bolt_helbore_receiverac1s.."|".._owo_stupid_bolt_helbore_receiverac1s
 local _owo_mas_helbore_receiverac1s = "owo_helbore_mas49_01|owo_helbore_mas49_01_s"
 local _owo_helbore_body_receivers = "owo_helbore_body_01|owo_helbore_body_02|owo_helbore_body_04|owo_helbore_body_05|owo_helbore_body_06|owo_helbore_body_ml01"
 
@@ -301,13 +298,12 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
     mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
-    mod.hide_slot("sight_group_indicator", { "owo_sight_group_indicator_holosight_acog|owo_sight_group_indicator_holosight_razor|owo_sight_group_indicator_prismatic_sight_acog|owo_sight_group_indicator_prismatic_sight_susat" }),
     -- Sight_2
     mod.hide_slot("sight_2_ac1", { "owo_crosshair_ac1_block|owo_crosshair_ac1_obelisk" }),
     mod.hide_slot("sight_2_ac2", { "owo_crosshair_ac2_block|owo_crosshair_ac2_obelisk" }),
     mod.hide_slot("sight_2_ac3", { "owo_crosshair_ac3_block|owo_crosshair_ac3_obelisk" }),
     -- Stocks
-    mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
+    mod.hide_slot("stockac", { "owo_tactical_stockac_01|owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg" }),
     mod.hide_slot("stockac2", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
 })
 
@@ -361,11 +357,11 @@ mod.mt.inject_fixes(this_variant, {
 	-- ReceiverAC1: BOLT ACTION HELBORE
 	-- ######
     -- Wooden Helbore
-    {	dependencies =  { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid", "owo_helbore_body_04" },
+    {	dependencies =  { _owo_all_helbore_bolt_receiverac1s, "owo_helbore_body_04" },
         receiverac1 =   { offset = true, position = vector3_box(0, 0.012, 0.11), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
     },
     -- patch for regular autogun bodies
-	{	dependencies =  { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid", _all_autogun_receivers },
+	{	dependencies =  { _owo_all_helbore_bolt_receiverac1s, _all_autogun_receivers },
 		receiverac1 =   { offset = true, position = vector3_box(0, 0.024, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
 	},
     -- ######

@@ -34,6 +34,7 @@ local table_of_syn_slots = {
     "sightac4",
 
     "stockac",
+    "stockac2",
 
     "muzzle_2",
 }
@@ -53,7 +54,6 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "foregripac1",
     "foregripac2",
     "foregripac3",
-    "foregrip_group_indicator",
 
     "sightac1",
     "sightac5",
@@ -62,10 +62,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
-    "sight_group_indicator",
 
     "stock_2",
-    "stock_group_indicator",
 
     "muzzle_3",
 })
@@ -153,7 +151,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
     -- Stocks
-    mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
+    mod.hide_slot("stockac", { "owo_tactical_stockac_01|owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg" }),
     mod.hide_slot("stockac2", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
 })
 

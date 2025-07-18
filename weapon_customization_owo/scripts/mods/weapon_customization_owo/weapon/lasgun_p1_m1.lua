@@ -65,9 +65,6 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
-    "sight_group_indicator",
-
-    "stock_group_indicator",
 })
 
 -- ############################################
@@ -189,16 +186,14 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sightac2", { "owo_holosight_helper_02|owo_pu_scope_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
     mod.hide_slot("sightac3", { "owo_holosight_helper_03|owo_holosight_helper_03_02|owo_pu_scope_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01" }),
     mod.hide_slot("sightac4", { "owo_holosight_helper_04|owo_pu_scope_helper_04|owo_acog_sight_helper_04" }),
-    mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01" }),
+    mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01|owo_sight_group_indicator_holosight_eotech|owo_sight_group_indicator_holosight_razor" }),
     mod.hide_slot("sightac6", { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_acog_sight_helper_06|owo_susat_ac6_01" }),
     mod.hide_slot("sightac7", { "owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07" }),
     mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
     mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
-    mod.hide_slot("sight_group_indicator", { "owo_sight_group_indicator_holosight_acog|owo_sight_group_indicator_holosight_razor|owo_sight_group_indicator_prismatic_sight_acog|owo_sight_group_indicator_prismatic_sight_susat" }),
     -- Stocks
-    mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
-    mod.hide_slot("stock_group_indicator", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
+    mod.hide_slot("stockac", { "owo_tactical_stockac_01|owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg" }),
 })
 
 -- #################

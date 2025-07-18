@@ -2782,18 +2782,23 @@ function mod.fixes_owo_bolt_action(variant_id, given_type, given_parent)
 	local current_type = given_type or "receiverac1"
 	local current_parent = given_parent or "receiver"
 
+	local _owo_bolt_helbore_receiverac1s = "owo_bolt_helbore_bolt_01"
+	local _owo_stupid_bolt_helbore_receiverac1s = "owo_bolt_helbore_bolt_01s"
+	local _owo_all_helbore_bolt_receiverac1s = _owo_bolt_helbore_receiverac1s.."|".._owo_stupid_bolt_helbore_receiverac1s
+
+
 	mod.mt.inject_fixes(variant_id, {
 		-- ######
 		-- Receiver: BOLT ACTION HELBORE
 		-- ######
 		-- Bolt grip angle
 		--		Angled down
-		{	dependencies =  { "owo_bolt_helbore_bolt_01" },
+		{	dependencies =  { _owo_bolt_helbore_receiverac1s, },
 			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
 			receiverac2 =   { offset = true, position = vector3_box(0.028, -0.016, 0.05), rotation = vector3_box(-90, -65, -90), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},
 		--		Straight up perpendicular
-		{	dependencies =  { "owo_bolt_helbore_bolt_01s" },
+		{	dependencies =  { _owo_stupid_bolt_helbore_receiverac1s, },
 			receiverac1 =   { offset = true, position = vector3_box(0, 0.02, 0.1), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
 			receiverac2 =   { offset = true, position = vector3_box(0.022, 0.0, 0.05), rotation = vector3_box(0, -90, 0), scale = vector3_box(0.55, 0.55, 0.55 ) },
 		},

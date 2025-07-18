@@ -64,7 +64,6 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "bayonetac7",
 
     "receiverac1",
-    "receiverac1_group_indicator",
     "receiverac2",
     
     "sightac1",
@@ -74,7 +73,6 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
-    "sight_group_indicator",
 
     "sight_2_ac1",
     "sight_2_ac2",
@@ -136,6 +134,8 @@ local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_
 local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
 local _owo_bolt_helbore_receiverac1s = "owo_bolt_helbore_bolt_01"
+local _owo_stupid_bolt_helbore_receiverac1s = "owo_bolt_helbore_bolt_01s"
+local _owo_all_helbore_bolt_receiverac1s = _owo_bolt_helbore_receiverac1s.."|".._owo_stupid_bolt_helbore_receiverac1s
 local _owo_mas_helbore_receiverac1s = "owo_helbore_mas49_01|owo_helbore_mas49_01_s"
 
 local _short_infantry_lasgun_mt_barrels = "ilasgun_barrel_03"
@@ -226,19 +226,17 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("bayonetac6", { "owo_underbarrel_shotgun_helper_06|owo_underbarrel_shotgun_helper_06_02" }),
     mod.hide_slot("bayonetac7", { "owo_underbarrel_shotgun_helper_07" }),
     -- Receivers
-    mod.hide_slot("receiverac1_group_indicator", { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid" }),
     mod.hide_slot("receiverac2", { "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob" }),
     -- Sights
     mod.hide_slot("sightac1", { "owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_holosight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
     mod.hide_slot("sightac2", { "owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_holosight_helper_02|owo_pu_scope_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
     mod.hide_slot("sightac3", { "owo_rear_sight_ac3_01|owo_holosight_helper_03|owo_holosight_helper_03_02|owo_pu_scope_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01" }),
     mod.hide_slot("sightac4", { "owo_rear_sight_ac4_01|owo_holosight_helper_04|owo_pu_scope_helper_04|owo_acog_sight_helper_04" }),
-    mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01" }),
+    mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01|owo_sight_group_indicator_holosight_eotech|owo_sight_group_indicator_holosight_razor" }),
     mod.hide_slot("sightac6", { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_acog_sight_helper_06|owo_susat_ac6_01" }),
     mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
     mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
-    mod.hide_slot("sight_group_indicator", { "owo_sight_group_indicator_holosight_acog|owo_sight_group_indicator_holosight_razor|owo_sight_group_indicator_prismatic_sight_acog|owo_sight_group_indicator_prismatic_sight_susat" }),
     -- Stock
     mod.hide_slot("stockac", { "owo_gripstock_grip_01a|owo_gripstock_amr_ac_01" }),
     mod.hide_slot("stockac2", { "owo_gripstock_amr_ac2_01|owo_gripstock_amr_ac2_02|owo_gripstock_amr_ac2_03|owo_gripstock_amr_ac2_04|owo_gripstock_amr_ac2_05|owo_gripstock_amr_ac2_06|owo_gripstock_amr_ac2_07|owo_gripstock_amr_ac2_08|owo_gripstock_amr_ac2_09" }),
@@ -271,7 +269,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Handled universally
     --	Wooden Helbore
-	{	dependencies =  { "owo_receiverac1_group_indicator_bolt|owo_receiverac1_group_indicator_bolt_stupid", "receiver_04" },
+	{	dependencies =  { _owo_all_helbore_bolt_receiverac1s, "receiver_04" },
         receiverac1 =   { offset = true, position = vector3_box(0, 0.012, 0.11), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.5, 1 ) },
     },
 

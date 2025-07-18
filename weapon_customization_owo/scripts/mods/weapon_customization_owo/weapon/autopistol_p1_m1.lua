@@ -46,8 +46,6 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_2",
     "muzzle_2", -- MT and Syn didn't add this to autopistol yet, though syn has it commented out
     "muzzle_3",
-
-    "stock_group_indicator",
 })
 
 -- ############################################
@@ -151,8 +149,7 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
     mod.hide_slot("muzzle_3", { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01" }),
     -- Stocks
-    mod.hide_slot("stockac", { "owo_tactical_stockac_01" }),
-    mod.hide_slot("stock_group_indicator", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
+    mod.hide_slot("stockac", { "owo_tactical_stockac_01|owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg" }),
 })
 
 -- #################
