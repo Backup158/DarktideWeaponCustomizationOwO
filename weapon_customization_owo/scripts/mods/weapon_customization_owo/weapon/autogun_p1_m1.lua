@@ -318,6 +318,7 @@ mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_dreg_gunner_bayonet(this_variant)
 mod.fixes_owo_underbarrel_gl(this_variant)
+mod.fixes_owo_underbarrel_shotgun(this_variant)
 
 mod.fixes_owo_bolt_action(this_variant)
 
@@ -993,7 +994,11 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  Helbore-based Receivers
     --      Bolt Action and MAS
-    {	dependencies =  { "owo_m203", _owo_bolt_helbore_receiverac1s.."|".._owo_mas_helbore_receiverac1s },
+    --{	dependencies =  { "owo_m203", _owo_helbore_body_receivers },
+    --    bayonet =       { offset = true, position = vector3_box(0, 0.36, -0.054), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    --},
+    -- Works for all receivers
+    {	dependencies =  { "owo_m203", },
         bayonet =       { offset = true, position = vector3_box(0, 0.36, -0.054), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
     --  handled universally otherwise
