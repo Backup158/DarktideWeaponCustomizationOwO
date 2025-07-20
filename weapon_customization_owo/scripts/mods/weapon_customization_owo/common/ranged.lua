@@ -2574,9 +2574,9 @@ function mod.fixes_owo_underbarrel_shotgun(variant_id, given_type, given_parent)
 		--      Default Helpers
 		{	dependencies =  { "owo_underbarrel_shotgun_02"},
 			-- Mag
-			bayonetac1 =    { offset = true, position = vector3_box(0, -0.015, -0.079), rotation = vector3_box(15, 0, 0), scale = vector3_box(1, 1.2, 1 ) },
+			bayonetac1 =    { offset = false, parent = current_type, position = vector3_box(0, 0.03, -0.011), rotation = vector3_box(15, 0, 0), scale = vector3_box(1, 1.2, 1 ) },
 			-- Barrel
-			bayonetac2 =    { offset = true, position = vector3_box(0, -0.02, 0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.675, 0.935 ) },
+			bayonetac2 =    { offset = false, parent = current_type, position = vector3_box(0, 0.114, 0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.675, 0.935 ) },
 			-- Muzzle
 			bayonetac3 =    { offset = true, position = vector3_box(0, 0.36, 0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1.0 ) },
 			-- Trigger

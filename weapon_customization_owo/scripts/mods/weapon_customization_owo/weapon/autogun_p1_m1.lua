@@ -104,8 +104,8 @@ mod.owo_wood_krieg(this_variant, "barrel")
 
 mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
 mod.owo_historical_bayonet(this_variant, "bayonet")
-mod.owo_underbarrel_gl(this_variant, "bayonet")
-mod.owo_underbarrel_shotgun(this_variant, "bayonet")
+mod.owo_underbarrel_gl(this_variant)
+mod.owo_underbarrel_shotgun(this_variant)
 
 if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant)
@@ -1218,7 +1218,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     {	dependencies =  { "owo_underbarrel_shotgun_02"},
         -- Receiver
-        bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.25, -0.092), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
+        bayonet =       { offset = true, position = vector3_box(0, 0.25, -0.092), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
     --  M26-MASS Helpers
     --      Connector Patches
