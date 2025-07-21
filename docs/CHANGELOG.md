@@ -87,7 +87,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - So I was copypasting a lot of code, which makes it difficult to propagate changes
     - This was kind of accounted for with the creation of hide_slot(), but that was more of making it less tedious than actually fixing this issue
     - Now I have a file that lists all of the hide_slot options, which gets read by each weapon and accessed by key (slot name)
-    - Slightly worse performance on startup but easier to wrangle
+    - Worse performance on startup but easier to wrangle
         - The difference is ~00:00:00.003 per file
             - before: ~00:00:00.001
             - after: ~00:00:00.004
