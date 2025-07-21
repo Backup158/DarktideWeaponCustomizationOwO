@@ -230,6 +230,8 @@ function mod.on_all_mods_loaded()
 		}
 	end
 
+	-- NOTE: For Hide Slot MASTER, it does NOT work because we'd need to deep copy the tables
+
 	-- ######
 	-- Create Indicator Group
 	-- DESCRIPTION: Creates Indicator groups for fixes efficiency
