@@ -256,7 +256,7 @@ local _all_all_vigilant_autogun_barrels = _all_default_vigilant_autogun_barrels.
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
 for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
-    for _, slot_name in slots_table do
+    for _, slot_name in pairs(slots_table) do
         mod.mt.inject_fixes(this_variant, {
             mod.hide_slot(slot_name, { _hide_slot_table.hide_slot_fixes[slot_name] }),
         })
