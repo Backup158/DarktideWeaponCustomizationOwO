@@ -51,5 +51,5 @@ mod.hide_slots_fixes = {
     ["sight_2_ac3"] = "owo_crosshair_ac3_block|owo_crosshair_ac3_obelisk",
     -- Stocks
     ["stockac"] = "owo_tactical_stockac_01|owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg",
-    ["stockac2"] = "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg"] =,
+    ["stockac2"] = "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg",
 }
