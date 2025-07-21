@@ -8,6 +8,7 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 local this_variant = "combatsword_p1_m1" -- Catachan "Devil's Claw" Sword
+local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/common/hide_slot")
 
 -- ############################################
 -- Add Custom Attachments
@@ -41,9 +42,10 @@ end
 -- ###############
 -- OwO Slot Initialization
 -- ###############
-mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+local table_of_owo_slots = {
     "crossguard",
-})
+}
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
 -- ############################################
 -- Injection Calls: attachments and models

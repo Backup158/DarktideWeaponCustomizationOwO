@@ -8,6 +8,7 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 local this_variant = "combataxe_p3_m1" -- Sapper Shovel
+local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/common/hide_slot")
 
 -- ############################################
 -- Add Custom Attachments
@@ -43,11 +44,12 @@ end
 -- ###############
 -- OwO Slot Initialization
 -- ###############
-mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+local table_of_owo_slots = {
     "head2",
     "pommelac1",
     "pommelac2",
-})
+}
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -71,11 +73,13 @@ mod.owo_shovel_handles(this_variant, "pommel")
 -- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
-mod.mt.inject_fixes(this_variant, {
-    -- Pommel
-    mod.hide_slot("pommelac1", { "owo_shovel_handles_ac1_01|owo_shovel_handles_ac1_02|owo_shovel_handles_ac1_03|owo_shovel_handles_ac1_04|owo_shovel_handles_ac1_05" }),
-    mod.hide_slot("pommelac2", { "owo_shovel_handles_ac2_01|owo_shovel_handles_ac2_02|owo_shovel_handles_ac2_03|owo_shovel_handles_ac2_04" }),
-})
+for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
+    for _, slot_name in pairs(slots_table) do
+        mod.mt.inject_fixes(this_variant, {
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
+        })
+    end
+end
 
 -- #################
 -- Universal Fixes

@@ -8,6 +8,7 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 local this_variant = "combataxe_p2_m1" -- Tactical Axe
+local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/common/hide_slot")
 
 -- ############################################
 -- Add Custom Attachments
@@ -38,14 +39,15 @@ else
     end
 end
 
---[[
+
 -- ###############
 -- OwO Slot Initialization
 -- ###############
-mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+local table_of_owo_slots = {
     
-})
-]]
+}
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
+
 -- ############################################
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
@@ -77,10 +79,13 @@ local _owo_all_tacax_spike_heads = "owo_tacax_spike_01|owo_tacax_spike_02|owo_ta
 -- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
-mod.mt.inject_fixes(this_variant, {
-    -- Head
-    mod.hide_slot("bladeshroud", { "owo_tacax_spike_helper_01" }),
-})
+for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
+    for _, slot_name in pairs(slots_table) do
+        mod.mt.inject_fixes(this_variant, {
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
+        })
+    end
+end
 
 -- #################
 -- Universal Fixes

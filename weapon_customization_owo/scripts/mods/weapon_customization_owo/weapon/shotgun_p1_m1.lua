@@ -8,6 +8,7 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 local this_variant = "shotgun_p1_m1" -- Combat Shotgun
+local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/common/hide_slot")
 
 -- ############################################
 -- Add Custom Attachments
@@ -49,7 +50,7 @@ end
 -- ###############
 -- OwO Slot Initialization
 -- ###############
-mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+local table_of_owo_slots = {
     "foregrip",
     "foregripac1",
     "foregripac2",
@@ -66,7 +67,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "stock_2",
 
     "muzzle_3",
-})
+}
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -131,6 +133,13 @@ local _owo_grip_grip_straight_grips = "owo_heterosexual_foregrip_grip_01|owo_het
 -- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
+for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
+    for _, slot_name in pairs(slots_table) do
+        mod.mt.inject_fixes(this_variant, {
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
+        })
+    end
+end
 mod.mt.inject_fixes(this_variant, {
     -- Muzzles
     mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
@@ -151,8 +160,8 @@ mod.mt.inject_fixes(this_variant, {
     mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
     mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
     -- Stocks
-    mod.hide_slot("stockac", { "owo_tactical_stockac_01|owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg" }),
-    mod.hide_slot("stockac2", { "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
+    mod.hide_slot("stockac", { "owo_tactical_stockac_01|owo_stock_group_indicator_ac2_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg" }),
+    mod.hide_slot("stockac2", { "owo_stock_group_indicator_ac2_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg", }),
 })
 
 -- #################
@@ -379,12 +388,12 @@ mod.mt.inject_fixes(this_variant, {
     -- Stock_2: Tactical Stocks
     -- ######
     --  Folded
-    {   dependencies =  { "owo_stock_group_indicator_tactical_stock_folded", "owo_tactical_stock_01|owo_tactical_stock_02|owo_tactical_stock_03|owo_tactical_stock_04|owo_tactical_stock_05|owo_tactical_stock_06|owo_tactical_stock_07|owo_tactical_stock_08" },
+    {   dependencies =  { "owo_stock_group_indicator_ac2_tactical_stock_folded", "owo_tactical_stock_01|owo_tactical_stock_02|owo_tactical_stock_03|owo_tactical_stock_04|owo_tactical_stock_05|owo_tactical_stock_06|owo_tactical_stock_07|owo_tactical_stock_08" },
         stock_2 =       { position = vector3_box(0.054, -0.044, 0.048), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
         stockac =       { position = vector3_box(-0.0037, -0.014, 0.049), rotation = vector3_box(90, 0, -90), scale = vector3_box(1, 0.45, 0.3 )}
     },
     --  Folded (Left)
-    {   dependencies =  { "owo_stock_group_indicator_tactical_stock_folded_left", "owo_tactical_stock_01l|owo_tactical_stock_02l|owo_tactical_stock_03l|owo_tactical_stock_04l|owo_tactical_stock_05l|owo_tactical_stock_06l|owo_tactical_stock_07l|owo_tactical_stock_08l" },
+    {   dependencies =  { "owo_stock_group_indicator_ac2_tactical_stock_folded_left", "owo_tactical_stock_01l|owo_tactical_stock_02l|owo_tactical_stock_03l|owo_tactical_stock_04l|owo_tactical_stock_05l|owo_tactical_stock_06l|owo_tactical_stock_07l|owo_tactical_stock_08l" },
         stock_2 =       { position = vector3_box(-0.05, -0.076, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
         stockac =       { position = vector3_box(0.0023, -0.036, 0.031), rotation = vector3_box(90, 0, 90), scale = vector3_box(1, 0.45, 0.3 )}
     },

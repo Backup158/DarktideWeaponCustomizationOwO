@@ -8,6 +8,7 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 local this_variant = "lasgun_p3_m1" -- Recon Lasgun
+local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/common/hide_slot")
 
 -- ############################################
 -- Add Custom Attachments
@@ -44,7 +45,7 @@ end
 -- ###############
 -- OwO Slot Initialization
 -- ###############
-mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+local table_of_owo_slots = {
     "muzzle_2", -- MT and Syn didn't add this to Recons yet
     "muzzle_3",
     "muzzle_4",
@@ -68,7 +69,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
-})
+}
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -171,35 +173,13 @@ local _syn_volleygun_receivers = "volley_lasgun_receiver_01|volley_lasgun_receiv
 -- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
-mod.mt.inject_fixes(this_variant, {
-    -- Barrels
-	
-    -- Muzzles
-	mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
-    mod.hide_slot("muzzle_3", { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01" }),
-    mod.hide_slot("muzzle_4", { "owo_muzzle_brake_helper_03_01" }),
-    mod.hide_slot("muzzle_5", { "owo_muzzle_brake_helper_04_01" }),
-    mod.hide_slot("muzzle_6", { "owo_muzzle_brake_helper_05_01" }),
-    -- Bayonet
-    mod.hide_slot("bayonetac1", { "owo_dreg_bayonet_front_01|owo_historical_bayonet_m7_helper_01|owo_historical_bayonet_seitengewehr_helper_01|owo_historical_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_helper_01|owo_underbarrel_shotgun_helper_01_02" }),
-    mod.hide_slot("bayonetac2", { "owo_dreg_bayonet_rear_01|owo_historical_bayonet_m7_helper_02|owo_historical_bayonet_seitengewehr_helper_02|owo_historical_bayonet_epee_helper_02|owo_m203_helper_02|owo_gp25_helper_02|owo_underbarrel_shotgun_helper_02|owo_underbarrel_shotgun_helper_02_02" }),
-    mod.hide_slot("bayonetac3", { "owo_dreg_bayonet_lug_01_01|owo_m203_helper_03|owo_gp25_helper_03|owo_underbarrel_shotgun_helper_03|owo_underbarrel_shotgun_helper_03_02" }),
-    mod.hide_slot("bayonetac4", { "owo_dreg_bayonet_lug_02_01|owo_m203_helper_04|owo_gp25_helper_04|owo_underbarrel_shotgun_helper_04" }),
-    mod.hide_slot("bayonetac5", { "owo_gp25_helper_05|owo_underbarrel_shotgun_helper_05|owo_underbarrel_shotgun_helper_05_02" }),
-    mod.hide_slot("bayonetac6", { "owo_underbarrel_shotgun_helper_06|owo_underbarrel_shotgun_helper_06_02" }),
-    mod.hide_slot("bayonetac7", { "owo_underbarrel_shotgun_helper_07" }),
-	-- Sights
-	mod.hide_slot("sightac1", { "owo_holosight_helper_01|owo_pu_scope_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
-    mod.hide_slot("sightac2", { "owo_holosight_helper_02|owo_pu_scope_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
-    mod.hide_slot("sightac3", { "owo_holosight_helper_03|owo_holosight_helper_03_02|owo_pu_scope_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01" }),
-    mod.hide_slot("sightac4", { "owo_holosight_helper_04|owo_pu_scope_helper_04|owo_acog_sight_helper_04" }),
-    mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01|owo_sight_group_indicator_holosight_eotech|owo_sight_group_indicator_holosight_razor" }),
-    mod.hide_slot("sightac6", { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_acog_sight_helper_06|owo_susat_ac6_01" }),
-    mod.hide_slot("sightac7", { "owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07" }),
-    mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
-    mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
-    mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
-})
+for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
+    for _, slot_name in pairs(slots_table) do
+        mod.mt.inject_fixes(this_variant, {
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
+        })
+    end
+end
 
 -- #################
 -- Universal Fixes

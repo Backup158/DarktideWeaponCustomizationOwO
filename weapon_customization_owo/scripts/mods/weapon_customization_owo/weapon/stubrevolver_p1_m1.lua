@@ -8,6 +8,7 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 local this_variant = "stubrevolver_p1_m1" -- Quickdraw Stub Revolver
+local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/common/hide_slot")
 
 -- ############################################
 -- Add Custom Attachments
@@ -41,7 +42,7 @@ end
 -- ###############
 -- OwO Slot Initialization
 -- ###############
-mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+local table_of_owo_slots = {
     "muzzle_2", -- MT and Syn didn't add this to revolver yet
     "muzzle_3",
     
@@ -55,7 +56,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
     "sight_secondary_ac1",
     "sight_secondary_ac2",
     "sight_group_indicator",
-})
+}
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -106,25 +108,13 @@ local _owo_long_shotgun_barrels_for_muzzles = "owo_revolver_shotgun_barrel_base_
 -- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
-mod.mt.inject_fixes(this_variant, {
-    -- Barrels
-    mod.hide_slot("barrelshroud", { "owo_revolver_shotgun_barrel_04|owo_revolver_shotgun_barrel_05|owo_revolver_shotgun_barrel_06|owo_revolver_shotgun_barrel_08" }),
-    -- Muzzles
-    mod.hide_slot("muzzle_2", { "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01" }),
-    mod.hide_slot("muzzle_3", { "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01" }),
-    -- Sights
-    mod.hide_slot("sightac1", { "owo_holosight_helper_01|owo_rear_sight_ac1_01|owo_rear_sight_ac1_02|owo_rear_sight_ac1_02|owo_rear_sight_ac1_03|owo_kalashnikov_rear_sight_ac1_01|owo_kalashnikov_rear_sight_ac1_02|owo_pu_scope_helper_01|owo_m16_sight_helper_01|owo_acog_sight_helper_01|owo_susat_ac1_01" }),
-    mod.hide_slot("sightac2", { "owo_holosight_helper_02|owo_rear_sight_ac2_01|owo_rear_sight_ac2_02|owo_rear_sight_ac2_03|owo_rear_sight_ac2_04|owo_kalashnikov_rear_sight_ac2_01|owo_kalashnikov_rear_sight_ac2_02|owo_pu_scope_helper_02|owo_m16_sight_helper_02|owo_acog_sight_helper_02|owo_susat_ac2_01" }),
-    mod.hide_slot("sightac3", { "owo_holosight_helper_03|owo_holosight_helper_03_02|owo_rear_sight_ac3_01|owo_kalashnikov_rear_sight_ac3_01|owo_pu_scope_helper_03|owo_m16_sight_helper_03|owo_acog_sight_helper_03|owo_susat_ac3_01" }),
-    mod.hide_slot("sightac4", { "owo_holosight_helper_04|owo_rear_sight_ac4_01|owo_kalashnikov_rear_sight_ac4_01|owo_pu_scope_helper_04|owo_m16_sight_helper_04|owo_acog_sight_helper_04" }),
-    mod.hide_slot("sightac5", { "owo_rear_sight_ac5_01|owo_pu_scope_helper_05|owo_acog_sight_helper_05|owo_susat_ac5_01|owo_sight_group_indicator_holosight_eotech|owo_sight_group_indicator_holosight_razor" }),
-    mod.hide_slot("sightac6", { "owo_rear_sight_ac6_01|owo_pu_scope_helper_06|owo_acog_sight_helper_06|owo_susat_ac6_01" }),
-    mod.hide_slot("sightac7", { "owo_acog_sight_helper_07|owo_susat_ac7_01|owo_pu_scope_helper_07" }),
-    mod.hide_slot("sight_secondary", { "owo_holosight_sight_secondary_01|owo_acog_sight_sight_secondary_01|owo_pu_scope_riser_01" }),
-    mod.hide_slot("sight_secondary_ac1", { "owo_holosight_sight_secondary_helper_01" }),
-    mod.hide_slot("sight_secondary_ac2", { "owo_holosight_sight_secondary_helper_02" }),
-    mod.hide_slot("sight_group_indicator", { "owo_sight_group_indicator_holosight_acog|owo_sight_group_indicator_holosight_razor|owo_sight_group_indicator_prismatic_sight_acog|owo_sight_group_indicator_prismatic_sight_susat" }),
-})
+for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
+    for _, slot_name in pairs(slots_table) do
+        mod.mt.inject_fixes(this_variant, {
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
+        })
+    end
+end
 
 -- #################
 -- Universal Fixes

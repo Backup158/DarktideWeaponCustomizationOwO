@@ -8,6 +8,7 @@ local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
 
 local this_variant = "combatknife_p1_m1" -- Combat Blade
+local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/common/hide_slot")
 
 -- ############################################
 -- Add Custom Attachments
@@ -41,12 +42,13 @@ end
 -- ###############
 -- OwO Slot Initialization
 -- ###############
-mod.initialize_table_of_custom_slot_for_weapon(this_variant, {
+local table_of_owo_slots = {
     "frontguard",
     "frontguardac1",
     "frontguardac2",
     "frontguardac3",
-})
+}
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -83,22 +85,13 @@ local _mt_ogryn_grips = "ogrynbladehandle_01|ogrynbladehandle_02|ogrynbladehandl
 -- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
-mod.mt.inject_fixes(this_variant, {
-    -- Blade Shrouds
-    {	dependencies =  { "owo_historical_blade_helper_gerber|owo_historical_blade_helper_karambit"},
-        bladeshroud =   { hide_mesh = {{"bladeshroud", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    -- Finger Guard
-    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac1"},
-        frontguardac1 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"frontguardac1", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac2"},
-        frontguardac2 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"frontguardac2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-    {	dependencies =  { "owo_trench_dagger_finger_guard_helper_ac3"},
-        frontguardac3 = {position = vector3_box(0, 0, 0.04), hide_mesh = {{"frontguardac3", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-    },
-})
+for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
+    for _, slot_name in pairs(slots_table) do
+        mod.mt.inject_fixes(this_variant, {
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
+        })
+    end
+end
 
 -- #################
 -- Universal Fixes

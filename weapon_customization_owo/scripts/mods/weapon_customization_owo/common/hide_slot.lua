@@ -1,6 +1,9 @@
 local mod = get_mod("weapon_customization_owo")
 
 mod.hide_slot_fixes = {
+    -- ##########
+    -- RANGED
+    -- ##########
     -- Muzzles
     ["muzzle_2"] = "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01",
     ["muzzle_3"] = "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01",
@@ -16,7 +19,8 @@ mod.hide_slot_fixes = {
     ["bayonetac6"] = "owo_underbarrel_shotgun_helper_06|owo_underbarrel_shotgun_helper_06_02",
     ["bayonetac7"] = "owo_underbarrel_shotgun_helper_07",
     -- Barrels
-    ["barrelshroud"] = "owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2|owo_wood_krieg_ac1_01",
+    ["barrelshroud"] = "owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2|owo_wood_krieg_ac1_01|owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08|owo_plasma_krieg_ac0_01|owo_revolver_shotgun_barrel_04|owo_revolver_shotgun_barrel_05|owo_revolver_shotgun_barrel_06|owo_revolver_shotgun_barrel_08",
+    ["barrelshroudac"] = "owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08|owo_plasma_krieg_ac1_01|owo_plasma_krieg_ac1_02|owo_plasma_krieg_ac1_03|owo_plasma_krieg_ac1_04|owo_plasma_krieg_ac1_05|owo_plasma_krieg_ac1_06|owo_plasma_krieg_ac1_07|owo_plasma_krieg_ac1_08|owo_plasma_krieg_ac1_09",
     ["barrelshroudac2"] = "owo_dreg_shroudac2_01|owo_m16_barrelshroudac2_01",
     ["barrelshroudac3"] = "owo_dreg_shroudac3_01|owo_m16_barrelshroudac3_01",
     ["barrelshroudac4"] = "owo_dreg_shroudac4_01|owo_m16_barrelshroudac4_01",
@@ -27,9 +31,10 @@ mod.hide_slot_fixes = {
     ["foregripac2"] = "owo_tactical_foregrip_ac2_01",
     ["foregripac3"] = "owo_tactical_foregrip_ac3_01",
     -- Receivers
-    ["receiverac2"] = "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob",
+    ["receiverac2"] = "owo_bolt_helbore_grip_01|owo_helbore_mas49_knob|owo_receiver_group_indicator_california_bolter|owo_slim_laspistol_grip_mag_helper2_01|owo_chunky_laspistol_grip_mag_helper2_01",
+    ["receiverac3"] = "owo_slim_laspistol_grip_mag_helper3_01|owo_slim_laspistol_grip_mag_helper3_02|owo_chunky_laspistol_grip_mag_helper3_01",
     -- Magazines
-    ["owo_magac1"] = "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01|owo_magazine_ak_ac1_01",
+    ["owo_magac1"] = "owo_jungle_mag_helper_01|owo_jungle_mag_helper_02|owo_jungle_mag_helper_03|owo_jungle_mag_helper_04|owo_magazine_magpull_helper_01|owo_magazine_ak_ac1_01|owo_plasma_mag_helper_01|owo_plasma_mag_helper_02|owo_plasma_mag_helper_03|owo_plasma_mag_helper_04|owo_plasma_melta_mag_helper_01",
     ["owo_magac2"] = "owo_jungle_mag_connector_f_01|owo_magazine_magpull_helper_02",
     ["owo_magac3"] = "owo_jungle_mag_connector_b_01|owo_magazine_magpull_helper_03",
     ["owo_magac4"] = "owo_jungle_mag_connector_l_01",
@@ -52,6 +57,24 @@ mod.hide_slot_fixes = {
     ["sight_2_ac2"] = "owo_crosshair_ac2_block|owo_crosshair_ac2_obelisk",
     ["sight_2_ac3"] = "owo_crosshair_ac3_block|owo_crosshair_ac3_obelisk",
     -- Stocks
-    ["stockac"] = "owo_tactical_stockac_01|owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg",
-    ["stockac2"] = "owo_stock_group_indicator_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg",
+    ["stockac"] = "owo_tactical_stockac_01|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg",
+    ["stockac2"] = "owo_stock_group_indicator_ac2_tactical_stock_folded|owo_stock_group_indicator_tactical_stock_left",
+
+    -- ##########
+    -- MELEE
+    -- ##########
+    -- Head/Blade
+    ["bladeshroud"] = "owo_tacax_spike_helper_01|owo_historical_blade_helper_gerber|owo_historical_blade_helper_karambit|owo_polearm_head_helper_0_01",
+    ["bladeshroudac"] = "owo_polearm_head_helper_1_01|owo_polearm_head_helper_1_02|owo_polearm_head_helper_1_03|owo_polearm_head_helper_1_04|owo_polearm_head_helper_1_l_01|owo_polearm_head_helper_1_l_02|owo_polearm_head_helper_1_p_01|owo_polearm_head_helper_1_p_02|owo_polearm_head_helper_1_p_03|owo_polearm_head_helper_1_p_04|owo_polearm_head_helper_1_p_05|owo_polearm_head_helper_1_p_06|owo_polearm_head_helper_1_p_07|owo_polearm_head_helper_1_p_08|owo_polearm_head_helper_1_p_09",
+    ["bladeshroudac2"] =  "owo_polearm_head_helper_2_01",
+    ["bladeshroudac3"] =  "owo_polearm_head_helper_3_01|owo_polearm_head_helper_3_02",
+    -- Pommel
+    ["pommelac1"] = "owo_shovel_handles_ac1_01|owo_shovel_handles_ac1_02|owo_shovel_handles_ac1_03|owo_shovel_handles_ac1_04|owo_shovel_handles_ac1_05",
+    ["pommelac2"] = "owo_shovel_handles_ac2_01|owo_shovel_handles_ac2_02|owo_shovel_handles_ac2_03|owo_shovel_handles_ac2_04",
+    -- Front Guard
+    ["frontguardac1"] = "owo_trench_dagger_finger_guard_helper_ac1",
+    ["frontguardac3"] = "owo_trench_dagger_finger_guard_helper_ac2",
+    ["frontguardac3"] = "owo_trench_dagger_finger_guard_helper_ac3",
+    -- Shaft
+    ["shaftac1"], { "owo_ogryn_shaft_low_grip_helper_01|owo_ogryn_shaft_low_grip_helper_02|owo_ogryn_shaft_low_grip_helper_03|owo_ogryn_shaft_low_grip_helper_04|owo_ogryn_shaft_low_grip_helper_05|owo_ogryn_shaft_low_grip_helper_06|owo_shaft_low_grip_helper_01|owo_shaft_low_grip_helper_02|owo_shaft_low_grip_helper_03|owo_shaft_low_grip_helper_04|owo_shaft_low_grip_helper_05|owo_shaft_low_grip_helper_06",
 }
