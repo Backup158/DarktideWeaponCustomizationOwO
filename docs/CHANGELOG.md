@@ -29,8 +29,8 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
     - Now only exists if I can tack it to an existing slot
         - that exists on the weapon family already
         - otherwise I'm just making the same mistake lol
-    - See refactored section
-- Added 
+    - See Refactored Attachments section
+- Added Attachments
     - Standalone Helbore Receiver for Autoguns
         - So you can use the Bolt-action and MAS Receiver Accessories
         - Still has the jank of before
@@ -52,7 +52,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - For Thunder Hammers
         - Under shoulder and elbow crutches
             - proportions fof for shoulder
-- Refactored (with some minor reworks)
+- Refactored Attachments (with some minor reworks)
     - Bistol Shotgun barrels
         - Added indicator groups to `barrelshroudac` for efficiency
         - Resized muzzles to fit over the barrel
@@ -78,6 +78,16 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - Moved indicator groups from `receiver_group_indicator` to `receiverac2`
     - Invisible Connector
         - Moved trinket hook towards shaft
+    - Underbarrel Grenade Launchers
+        - M203 alignments for autoguns
+    - Underbarrel Shotguns
+        - M-26 MASS missing parts are moved back
+- Restructure of slot hiding code
+    - These are basically the same for all the weapons
+    - So I was copypasting a lot of code, which makes it difficult to propagate changes
+    - This was kind of accounted for with the creation of hide_slot(), but that was more of making it less tedious than actually fixing this issue
+    - Now I have a file that lists all of the hide_slot options, which gets read by each weapon and accessed by key (slot name)
+    - Slightly worse performance on startup but easier to wrangle
 
 # 2025-07-05
 v2.1.0

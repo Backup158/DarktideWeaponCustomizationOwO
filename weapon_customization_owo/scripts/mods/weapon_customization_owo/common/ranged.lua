@@ -2268,6 +2268,40 @@ function mod.owo_historical_bayonet(variant_id, given_type, given_parent)
 		},	
 	})
 end
+function mod.fixes_owo_historical_bayonet(variant_id, given_type, given_parent)
+	local current_type = given_type or "bayonet"
+	local current_parent = given_parent or "muzzle"
+
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Bayonet: HISTORICAL PACK
+		-- ######
+		--  --------------------------------------------
+		--  M7 Bayonet
+		--  --------------------------------------------
+		{   dependencies =  { "owo_historical_bayonet_m7_01", },
+			bayonet =       { offset = true, position = vector3_box(0, 0.47, -0.048), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1) },
+			bayonetac1 =    { offset = true, position = vector3_box(0, 0.002, -0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+			bayonetac2 =    { offset = true, position = vector3_box(0, -0.012, -0.002), rotation = vector3_box(0, 90, 180), scale = vector3_box(0.25, 0.825, 0.25) },
+		},
+		--  --------------------------------------------
+		--  Seitengewehr 98
+		--  --------------------------------------------
+		{   dependencies =  { "owo_historical_bayonet_seitengewehr", },
+			bayonet =       { offset = true, position = vector3_box(0, 0.575, -0.048), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1, 1, 1.7) },
+			bayonetac1 =    { offset = true, position = vector3_box(0, 0.002, -0.036), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.25, 0.46, 0.25) },
+			bayonetac2 =    { offset = true, position = vector3_box(0, 0, -0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.6, 0.2) },
+		},
+		--  --------------------------------------------
+		--  Épée baïonnette modèle 1886 Lebel
+		--  --------------------------------------------
+		{   dependencies =  { "owo_historical_bayonet_epee", },
+			bayonet =       { offset = true, position = vector3_box(0, 0.47, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 0.7) },
+			bayonetac1 =    { offset = true, position = vector3_box(0, 0.025, -0.012), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.1, 1.35, 0.6) },
+			bayonetac2 =    { offset = true, position = vector3_box(0, 0.06, 0.014), rotation = vector3_box(180, 0, 180), scale = vector3_box(0.25, 0.09, 0.245) },
+		},
+	})
+end
 
 -- Bayonet: Underbarrel Grenade Launcher
 function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
