@@ -1,7 +1,7 @@
 local mod = get_mod("weapon_customization_owo")
 
 -- ############################################
--- PERFORMANCE AND LOADING
+-- PERFORMANCE AND REQUIREMENTS
 -- ############################################
 local vector3_box = Vector3Box
 local _item = "content/items/weapons/player"
@@ -258,7 +258,7 @@ local _all_all_vigilant_autogun_barrels = _all_default_vigilant_autogun_barrels.
 for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
     for _, slot_name in pairs(slots_table) do
         mod.mt.inject_fixes(this_variant, {
-            mod.hide_slot(slot_name, { _hide_slot_table.hide_slot_fixes[slot_name] }),
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
         })
     end
 end

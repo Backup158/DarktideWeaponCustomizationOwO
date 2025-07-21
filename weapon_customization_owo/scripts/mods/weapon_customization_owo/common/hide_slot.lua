@@ -1,6 +1,6 @@
 local mod = get_mod("weapon_customization_owo")
 
-mod.hide_slots_fixes = {
+mod.hide_slot_fixes = {
     -- Muzzles
     ["muzzle_2"] = "owo_suppressor_helper_01|owo_suppressor_helper_02|owo_suppressor_helper_03|owo_suppressor_helper_04|owo_condom_helper_m2_01|owo_muzzle_brake_helper_01_01",
     ["muzzle_3"] = "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01",
