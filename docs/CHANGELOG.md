@@ -85,13 +85,16 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
 - Restructure of slot hiding code
     - These are basically the same for all the weapons
     - So I was copypasting a lot of code, which makes it difficult to propagate changes
-    - This was kind of accounted for with the creation of hide_slot(), but that was more of making it less tedious than actually fixing this issue
+    - This differs from creation of hide_slot(), because that was more of making it less tedious instead of actually addressing this issue
     - Now I have a file that lists all of the hide_slot options, which gets read by each weapon and accessed by key (slot name)
     - Worse performance on startup but easier to wrangle
-        - The difference is ~00:00:00.003 per file
+        - On my end, the difference at startup is ~00:00:00.003 per file
             - before: ~00:00:00.001
             - after: ~00:00:00.004
-        - So in total, about 60 milliseconds worse
+            - In total, we'll call that about 60 milliseconds worse
+        - This also creates some unnecessary dependency checks for hiding helpers
+            - ex: only helbores use `owo_plasma_krieg` in `barrelshroud` but everyone has to check it since i made it universal
+            - lowkey i was already doing this out of laziness so it's actually less of a change than it should've been (which isn't a good thing lol)
 
 # 2025-07-05
 v2.1.0
