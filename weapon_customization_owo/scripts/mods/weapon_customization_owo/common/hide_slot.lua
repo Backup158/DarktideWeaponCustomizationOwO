@@ -76,5 +76,5 @@ mod.hide_slot_fixes = {
     ["frontguardac3"] = "owo_trench_dagger_finger_guard_helper_ac2",
     ["frontguardac3"] = "owo_trench_dagger_finger_guard_helper_ac3",
     -- Shaft
-    ["shaftac1"], { "owo_ogryn_shaft_low_grip_helper_01|owo_ogryn_shaft_low_grip_helper_02|owo_ogryn_shaft_low_grip_helper_03|owo_ogryn_shaft_low_grip_helper_04|owo_ogryn_shaft_low_grip_helper_05|owo_ogryn_shaft_low_grip_helper_06|owo_shaft_low_grip_helper_01|owo_shaft_low_grip_helper_02|owo_shaft_low_grip_helper_03|owo_shaft_low_grip_helper_04|owo_shaft_low_grip_helper_05|owo_shaft_low_grip_helper_06",
+    ["shaftac1"] = "owo_ogryn_shaft_low_grip_helper_01|owo_ogryn_shaft_low_grip_helper_02|owo_ogryn_shaft_low_grip_helper_03|owo_ogryn_shaft_low_grip_helper_04|owo_ogryn_shaft_low_grip_helper_05|owo_ogryn_shaft_low_grip_helper_06|owo_shaft_low_grip_helper_01|owo_shaft_low_grip_helper_02|owo_shaft_low_grip_helper_03|owo_shaft_low_grip_helper_04|owo_shaft_low_grip_helper_05|owo_shaft_low_grip_helper_06",
 }
