@@ -54,8 +54,15 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
             - proportions fof for shoulder
 - Refactored/Reworked Attachments
     - Underbarrel Shotguns
-        - M-26 MASS missing parts are moved back
+        - Universalized fixes
+        - M-26 MASS helper parts are moved to fit
         - Added additional slot `bayonetac8` for Masterkey to make patches easier
+            - Main part (invisible) handles position
+            - `bayonetac1` handles size, by making the other helpers its children
+        - Removed `owo_underbarrel_shotgun_ac6_02` to reuse the other connector
+            - Swapped slots for `owo_underbarrel_shotgun_ac5` and `owo_underbarrel_shotgun_ac6`
+            - Realigned connector for M-26 MASS to account for new parent
+        - Removed a bunch of patches that were basically unnecessary
     - Bistol Shotgun barrels
         - Added indicator groups to `barrelshroudac` for efficiency
         - Resized muzzles to fit over the barrel
