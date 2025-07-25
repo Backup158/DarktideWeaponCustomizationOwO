@@ -105,7 +105,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
             - In total, we'll call that about 60 milliseconds worse
         - This also creates some unnecessary dependency checks for hiding helpers
             - ex: only helbores use `owo_plasma_krieg` in `barrelshroud` but everyone has to check it since i made it universal
-            - lowkey i was already doing this out of laziness so it's actually less of a change than it should've been (which isn't a good thing lol)
+            - lowkey i was already doing this out of laziness so it's actually less of a performance hit than it should've been (which isn't really a good thing lol)
 
 # 2025-07-05
 v2.1.0
