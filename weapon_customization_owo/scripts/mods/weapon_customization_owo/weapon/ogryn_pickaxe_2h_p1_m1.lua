@@ -40,6 +40,8 @@ local table_of_syn_slots = {
     --"bladeshroudac9",
     --"bladeshroudac10",
     --"bladeshroudac11",
+    --"bladeshroudac12",
+    --"bladeshroudac13",
 }
 if not mod.syn then -- these slots already exist in Syn's plugin
     mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
@@ -58,7 +60,7 @@ local table_of_owo_slots = {
     "bladeshroudac",
     "bladeshroudac2",
     "bladeshroudac3",
-    "bladeshroudac4",
+    --"bladeshroudac4",
 
     "shaftac1",
 }

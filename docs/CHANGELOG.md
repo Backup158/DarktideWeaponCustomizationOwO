@@ -57,6 +57,10 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - For Thunder Hammers
         - Under shoulder and elbow crutches
             - proportions fof for shoulder
+    - Added Beaked Pick to Polearms
+        - Bec de Corbin variant
+        - Uses an actual bird head as the pick
+        - CAW CAW MOTHERFUCKERS
 - Refactored/Reworked Attachments
     - Underbarrel Shotguns
         - Universalized fixes
