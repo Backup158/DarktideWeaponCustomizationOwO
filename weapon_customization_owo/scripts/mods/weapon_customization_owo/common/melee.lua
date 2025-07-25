@@ -645,7 +645,7 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 1.6, 1.7 ) },
 		},
 		{	dependencies =  	{ "owo_polearm_head_bc_05" },
-			bladeshroudac3 =	{ offset = true, position = vector3_box(0.0, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(2.0, 2.0, 1.6 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0.006, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(2.0, 2.0, 1.6 ) },
 			--bladeshroudac4 =	{ offset = true, position = vector3_box(0.004, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(2.0, 2.0, 1.6 ) },
 		},
 		-- Default is built for the psword pommel
