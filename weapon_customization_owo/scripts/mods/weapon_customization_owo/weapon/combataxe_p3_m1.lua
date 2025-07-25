@@ -14,7 +14,6 @@ local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/we
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
---[[
 -- ###############
 -- MT Plugin Compatibility
 -- ###############
@@ -24,8 +23,7 @@ local table_of_mt_slots = {
 for _, slot_name in ipairs(table_of_mt_slots) do
     mod.create_default_attachment(this_variant, slot_name)
 end
-]]
---[[
+
 -- ###############
 -- Syn's Edits Compatibility
 -- ###############
@@ -39,7 +37,6 @@ else
         mod.create_default_attachment(this_variant, slot_name)
     end
 end
-]]
 
 -- ###############
 -- OwO Slot Initialization

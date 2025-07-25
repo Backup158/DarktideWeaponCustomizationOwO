@@ -16,7 +16,7 @@ mod.hide_slot_fixes = {
     ["bayonetac3"] = "owo_dreg_bayonet_lug_01_01|owo_m203_helper_03|owo_gp25_helper_03|owo_underbarrel_shotgun_ac3|owo_underbarrel_shotgun_ac3_02",
     ["bayonetac4"] = "owo_dreg_bayonet_lug_02_01|owo_m203_helper_04|owo_gp25_helper_04|owo_underbarrel_shotgun_ac4",
     ["bayonetac5"] = "owo_gp25_helper_05|owo_underbarrel_shotgun_ac5|owo_underbarrel_shotgun_ac5_02",
-    ["bayonetac6"] = "owo_underbarrel_shotgun_ac6|owo_underbarrel_shotgun_ac6_02",
+    ["bayonetac6"] = "owo_underbarrel_shotgun_ac6",
     ["bayonetac7"] = "owo_underbarrel_shotgun_ac7",
     ["bayonetac8"] = "owo_underbarrel_shotgun_ac8",
     -- Barrels

@@ -24,12 +24,11 @@ for _, slot_name in ipairs(table_of_mt_slots) do
     mod.create_default_attachment(this_variant, slot_name)
 end
 
---[[
 -- ###############
 -- Syn's Edits Compatibility
 -- ###############
 local table_of_syn_slots = {
-    "muzzle_2",
+    -- "muzzle_2",
 }
 if not mod.syn then -- these slots already exist in Syn's plugin
     mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
@@ -38,7 +37,6 @@ else
         mod.create_default_attachment(this_variant, slot_name)
     end
 end
-]]
 
 -- ###############
 -- OwO Slot Initialization

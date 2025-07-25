@@ -14,7 +14,6 @@ local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/we
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
---[[
 -- ###############
 -- MT Plugin Compatibility
 -- ###############
@@ -29,10 +28,10 @@ end
 -- Syn's Edits Compatibility
 -- ###############
 local table_of_syn_slots = {
-    "bladeshroud",
-    "bladeshroudac",
-    "bladeshroudac2",
-    "bladeshroudac3",
+    --"bladeshroud",
+    --"bladeshroudac",
+    --"bladeshroudac2",
+    --"bladeshroudac3",
 }
 if not mod.syn then -- these slots already exist in Syn's plugin
     mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
@@ -41,7 +40,7 @@ else
         mod.create_default_attachment(this_variant, slot_name)
     end
 end
-]]
+
 -- ###############
 -- OwO Slot Initialization
 -- ###############
