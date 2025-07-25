@@ -165,7 +165,7 @@ local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_a
 local _owo_rmr_acog_sights = "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
 local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
-local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
+local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_masterkey|owo_underbarrel_shotgun_masterkey_01|owo_underbarrel_shotgun_masterkey_02"
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
 local _m16_all_barrels = "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
 local _m16a1_01_barrels = "owo_m16_barrel_a1|owo_m16_barrel_t_a1|owo_m16_barrel_n_a1"
@@ -1087,57 +1087,57 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --[[
     --      A bit lower
-    {	dependencies =  { "owo_underbarrel_shotgun_01_01", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_01", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.07), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01_02", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_02", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --      A bit and a bit lower
-    {	dependencies =  { "owo_underbarrel_shotgun_01_01", "exitus_barrel_01|".._syn_aquilon_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_01", "exitus_barrel_01|".._syn_aquilon_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01", "exitus_barrel_01|".._syn_aquilon_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey", "exitus_barrel_01|".._syn_aquilon_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.060), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01_02", "exitus_barrel_01|".._syn_aquilon_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_02", "exitus_barrel_01|".._syn_aquilon_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --      M41a
-    {	dependencies =  { "owo_underbarrel_shotgun_01_01", _syn_m41a_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_01", _syn_m41a_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.22, -0.046), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01", _syn_m41a_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey", _syn_m41a_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.22, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01_02", _syn_m41a_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_02", _syn_m41a_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.212, -0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --      SWS Pulse
-    {	dependencies =  { "owo_underbarrel_shotgun_01_01", _syn_pulse_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_01", _syn_pulse_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01", _syn_pulse_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey", _syn_pulse_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.060), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01_02", _syn_pulse_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_02", _syn_pulse_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --      Default
     --          Normal
-    {	dependencies =  { "owo_underbarrel_shotgun_01_01" },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_01" },
         -- Shotgun body
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.042), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
     --          THICC
-    {	dependencies =  { "owo_underbarrel_shotgun_01" },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey" },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
     --          Mini
-    {	dependencies =  { "owo_underbarrel_shotgun_01_02" },
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_02" },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.042), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --  Masterkey Helpers
@@ -1160,39 +1160,39 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  M26-MASS
     --  --------------------------------------------
-    {	dependencies =  { "owo_underbarrel_shotgun_02", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
         bayonet =       { offset = true, position = vector3_box(0, 0.25, -0.1), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_02", "exitus_barrel_01|".._syn_aquilon_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", "exitus_barrel_01|".._syn_aquilon_barrels, },
         bayonet =       { offset = true, position = vector3_box(0, 0.25, -0.114), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_02", _syn_m41a_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", _syn_m41a_barrels, },
         bayonet =       { offset = true, position = vector3_box(0, 0.304, -0.116), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
         bayonetac5 =    { offset = true, position = vector3_box(0, 0.198, 0.082), rotation = vector3_box(-180, -90, 90), scale = vector3_box(0.75, 0.95, 0.335 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_02", _syn_pulse_barrels, },
-        bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.25, -0.128), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", _syn_pulse_barrels, },
+        bayonet =       { offset = true, position = vector3_box(0, 0.25, -0.128), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
         bayonetac5 =    { offset = true, position = vector3_box(0, 0.148, 0.082), rotation = vector3_box(-180, -90, 90), scale = vector3_box(0.75, 0.95, 0.335 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_02" },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass" },
         -- Receiver
         bayonet =       { offset = true, position = vector3_box(0, 0.25, -0.092), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
     --  M26-MASS Helpers
     --      Connector Patches
-    {	dependencies =  { "owo_underbarrel_shotgun_02", _mt_laspistol_barrels.."|".._mt_autopistol_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", _mt_laspistol_barrels.."|".._mt_autopistol_barrels, },
         bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 0.6, 1.0 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_02", _mt_single_stubber_barrels.."|".._mt_ripper_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", _mt_single_stubber_barrels.."|".._mt_ripper_barrels, },
         bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1, 1.7 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_02", _mt_backwards_bolter_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", _mt_backwards_bolter_barrels, },
         bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 0.466, 0.7 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_02", _syn_carry_sniper_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", _syn_carry_sniper_barrels, },
         bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1, 0.7 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_02", _syn_aquilon_barrels, },
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass", _syn_aquilon_barrels, },
         bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1, 1.5 ) },
     },
     

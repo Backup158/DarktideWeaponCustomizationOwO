@@ -52,7 +52,10 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - For Thunder Hammers
         - Under shoulder and elbow crutches
             - proportions fof for shoulder
-- Refactored Attachments (with some minor reworks)
+- Refactored/Reworked Attachments
+    - Underbarrel Shotguns
+        - M-26 MASS missing parts are moved back
+        - Added additional slot `bayonetac8` for Masterkey to make patches easier
     - Bistol Shotgun barrels
         - Added indicator groups to `barrelshroudac` for efficiency
         - Resized muzzles to fit over the barrel
@@ -80,8 +83,6 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - Moved trinket hook towards shaft
     - Underbarrel Grenade Launchers
         - M203 alignments for autoguns
-    - Underbarrel Shotguns
-        - M-26 MASS missing parts are moved back
 - Restructure of slot hiding code
     - These are basically the same for all the weapons
     - So I was copypasting a lot of code, which makes it difficult to propagate changes

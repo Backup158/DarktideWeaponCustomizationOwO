@@ -113,7 +113,7 @@ local _owo_backwards_acog_sights = "owo_acog_sight_01|owo_acog_sight_01_z1|owo_a
 local _owo_rmr_acog_sights = "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_sight_02_top|owo_acog_sight_02f|owo_acog_sight_02f_z1|owo_acog_sight_02f_top"
 local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
 local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
-local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"
+local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_masterkey|owo_underbarrel_shotgun_masterkey_01|owo_underbarrel_shotgun_masterkey_02"
 local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
 
 local _mt_recon_lasgun_barrels = "rlasgun_barrel_01|rlasgun_barrel_02|rlasgun_barrel_03|rlasgun_barrel_04|rlasgun_barrel_05"
@@ -391,7 +391,7 @@ mod.mt.inject_fixes(this_variant, {
     --[[
     --  Syn's Volleygun/Kantrael bodies (uses the same positioning as lasgun_p1_m1 because they're iLas bodies)
     --      THICC
-    {	dependencies = {"owo_underbarrel_shotgun_01",
+    {	dependencies = {"owo_underbarrel_shotgun_masterkey",
             _syn_volleygun_receivers,
         },
         -- Shotgun body
@@ -400,7 +400,7 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.6, 1.0 ) },
     },
     --      Smaller Masterkey
-    {	dependencies = {"owo_underbarrel_shotgun_01_02",
+    {	dependencies = {"owo_underbarrel_shotgun_masterkey_02",
             _syn_volleygun_receivers,
         },
         -- Shotgun body
@@ -410,7 +410,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Recon Receivers
     --      THICC
-    {	dependencies = {"owo_underbarrel_shotgun_01",
+    {	dependencies = {"owo_underbarrel_shotgun_masterkey",
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         -- Shotgun body
@@ -419,7 +419,7 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 0.82, 1.0 ) },
     },
     --      Smaller Masterkey
-    {	dependencies = {"owo_underbarrel_shotgun_01_02",
+    {	dependencies = {"owo_underbarrel_shotgun_masterkey_02",
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         -- Shotgun body
@@ -432,66 +432,66 @@ mod.mt.inject_fixes(this_variant, {
     --      A bit lower
     {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, 
             _syn_volleygun_receivers, 
-            "owo_underbarrel_shotgun_01_01",
+            "owo_underbarrel_shotgun_masterkey_01",
         },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
     {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, 
             _syn_volleygun_receivers, 
-            "owo_underbarrel_shotgun_01",
+            "owo_underbarrel_shotgun_masterkey",
         },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.087), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
     {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, 
             _syn_volleygun_receivers, 
-            "owo_underbarrel_shotgun_01_02",
+            "owo_underbarrel_shotgun_masterkey_02",
         },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.049), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --      A bit and a bit lower
     {	dependencies =  { "exitus_barrel_01|".._syn_aquilon_barrels, 
             _syn_volleygun_receivers,
-            "owo_underbarrel_shotgun_01_01", 
+            "owo_underbarrel_shotgun_masterkey_01", 
         },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.070), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
     {	dependencies =  { "exitus_barrel_01|".._syn_aquilon_barrels, 
             _syn_volleygun_receivers, 
-            "owo_underbarrel_shotgun_01",
+            "owo_underbarrel_shotgun_masterkey",
         },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.092), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
     {	dependencies =  { "exitus_barrel_01|".._syn_aquilon_barrels, 
             _syn_volleygun_receivers, 
-            "owo_underbarrel_shotgun_01_02"
+            "owo_underbarrel_shotgun_masterkey_02"
         },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.054), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --      Default
     --          Normal
-    {	dependencies =  { _syn_volleygun_receivers, "owo_underbarrel_shotgun_01_01"},
+    {	dependencies =  { _syn_volleygun_receivers, "owo_underbarrel_shotgun_masterkey_01"},
         -- Shotgun Body
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.060), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01_01"},
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_01"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.060), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
     },
     --          THICC
-    {	dependencies =  { _syn_volleygun_receivers, "owo_underbarrel_shotgun_01"},
+    {	dependencies =  { _syn_volleygun_receivers, "owo_underbarrel_shotgun_masterkey"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.082), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01"},
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.082), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     },
     --          Mini
-    {	dependencies =  { _syn_volleygun_receivers, "owo_underbarrel_shotgun_01_02"},
+    {	dependencies =  { _syn_volleygun_receivers, "owo_underbarrel_shotgun_masterkey_02"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.044), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
-    {	dependencies =  { "owo_underbarrel_shotgun_01_02"},
+    {	dependencies =  { "owo_underbarrel_shotgun_masterkey_02"},
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.295, -0.044), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
     },
     --  Masterkey Helpers
-	{	dependencies = {"owo_underbarrel_shotgun_01|owo_underbarrel_shotgun_01_01|owo_underbarrel_shotgun_01_02"},
+	{	dependencies = {"owo_underbarrel_shotgun_masterkey|owo_underbarrel_shotgun_masterkey_01|owo_underbarrel_shotgun_masterkey_02"},
         -- Shotgun tube
         bayonetac1 =    { offset = true, position = vector3_box(0, 0.613, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.2, 1, 1.2 ) },
         -- Shotgun barrel 2
@@ -511,21 +511,21 @@ mod.mt.inject_fixes(this_variant, {
     --  M26-MASS
     --  --------------------------------------------
     --      Syn's Volleygun Receivers
-    {	dependencies =  { "owo_underbarrel_shotgun_02",
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass",
             _syn_volleygun_receivers,
         },
         -- Receiver
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.25, -0.088), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
     --      Recon Receivers
-    {	dependencies =  { "owo_underbarrel_shotgun_02",
+    {	dependencies =  { "owo_underbarrel_shotgun_m26mass",
             --"receiver_01|receiver_02|receiver_03|receiver_04|receiver_05|receiver_06|receiver_07",
         },
         -- Receiver
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.313, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
     --  M26-MASS Helpers
-    {	dependencies = {"owo_underbarrel_shotgun_02"},
+    {	dependencies = {"owo_underbarrel_shotgun_m26mass"},
         -- Mag
         bayonetac1 =    { offset = true, position = vector3_box(0, -0.015, -0.079), rotation = vector3_box(15, 0, 0), scale = vector3_box(1, 1.2, 1 ) },
         -- Barrel
