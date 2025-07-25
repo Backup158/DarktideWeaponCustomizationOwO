@@ -233,6 +233,7 @@ mod.fixes_owo_prismatic_sight(this_variant)
 mod.fixes_owo_pu_scope(this_variant)
 
 mod.fixes_owo_underbarrel_gl(this_variant)
+mod.fixes_owo_underbarrel_shotgun(this_variant)
 
 mod.fixes_owo_bolt_action(this_variant)
 
@@ -314,9 +315,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Magazine: REAR
 	-- ######
-	{	dependencies = { "owo_lasgun_magazine_rear_01",
-			"owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03"
-		},
+	{	dependencies = { "owo_lasgun_magazine_rear_01", "owo_gripstock_recon_01|owo_gripstock_recon_02|owo_gripstock_recon_03" },
 		magazine = { offset = true, position = vector3_box(.0, .0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.7 ) },
 		rearmag = { offset = true, position = vector3_box(.0, -0.255, 0.035), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 	},
@@ -366,21 +365,16 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Barrel: WOODEN HELBORE
 	-- ######
-	{	dependencies = {"owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03",
-		},
+	{	dependencies = {"owo_wood_krieg_01|owo_wood_krieg_02|owo_wood_krieg_03", },
 		barrel = { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 		barrelshroud = { offset = true, position = vector3_box(0, 0.19, -0.001), rotation = vector3_box(90, 0, 180), scale = vector3_box(0.78, 0.6, 1.188 ) },
 	},
 	-- Regular Helbore bayonets (barrel parent)
-	{   dependencies = {"owo_wood_krieg_01",
-            "autogun_bayonet_01|autogun_bayonet_02"
-        },
+	{   dependencies = {"owo_wood_krieg_01", "autogun_bayonet_01|autogun_bayonet_02" },
 		bayonet = { offset = true,   position = vector3_box(0, 0.504, -0.03),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
 	-- 	these barrels are shorter
-	{   dependencies = {"owo_wood_krieg_02|owo_wood_krieg_03",
-            "autogun_bayonet_01|autogun_bayonet_02"
-        },
+	{   dependencies = {"owo_wood_krieg_02|owo_wood_krieg_03", "autogun_bayonet_01|autogun_bayonet_02" },
         bayonet = { offset = true,   position = vector3_box(0, 0.428, -0.04),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
 
@@ -767,18 +761,6 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { "owo_gp25", _syn_gauss_barrels },
         bayonet =      { offset = true, position = vector3_box(0, 0.5, -0.056), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
-	--	GP25 Default
-	{	dependencies = {"owo_gp25"},
-        bayonet =      { offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
-    },
-	--	GP25 Helpers
-    {	dependencies = {"owo_gp25"},
-        bayonetac1 =    { offset = true, position = vector3_box(0, -0.022, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.875, 1, 0.875 ) },
-        bayonetac2 =    { offset = true, position = vector3_box(0, 0.09, 0), rotation = vector3_box(90, 0, 180), scale = vector3_box(1.1, 1.1, 1.3 ) },
-        bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.03), rotation = vector3_box(-180, 0, 0), scale = vector3_box(1, 0.566, 0.21 ) },
-        bayonetac4 =    { offset = true, position = vector3_box(0, 0.142, 0.004), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 0.6, 0.35 ) },
-        bayonetac5 =    { offset = true, position = vector3_box(0, 0.158, -0.012), rotation = vector3_box(-173, 0, 0), scale = vector3_box(0.6, 0.7, 0.7 ) },
-    },
     ]]
     --	GP25 Default
 	{	dependencies = { "owo_gp25" },
@@ -792,96 +774,25 @@ mod.mt.inject_fixes(this_variant, {
     --  Masterkey
     --  --------------------------------------------
     --  Main Body Position
+    --[[
     --      A bit lower
-    {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, "owo_underbarrel_shotgun_masterkey_01"},
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
-    },
-    {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, "owo_underbarrel_shotgun_masterkey"},
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.087), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-    },
-    {	dependencies =  { _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, "owo_underbarrel_shotgun_masterkey_02"},
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.049), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
+    {	dependencies =  { _owo_masterkey_bayonets, _syn_hellgun_barrels.."|".._syn_carbine_barrels, },
+        bayonet =       { offset = true, position = vector3_box(0, 0.0, -0.014), },
     },
     --      A bit and a bit lower
-    {	dependencies =  { "exitus_barrel_01|".._syn_aquilon_barrels, "owo_underbarrel_shotgun_masterkey_01"},
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.070), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
+    {	dependencies =  { _owo_masterkey_bayonets, "exitus_barrel_01|", },
+        bayonet =       { offset = true, position = vector3_box(0, 0.0, -0.02), },
     },
-    {	dependencies =  { "exitus_barrel_01|".._syn_aquilon_barrels, "owo_underbarrel_shotgun_masterkey"},
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.092), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-    },
-    {	dependencies =  { "exitus_barrel_01|".._syn_aquilon_barrels, "owo_underbarrel_shotgun_masterkey_02"},
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.054), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
-    },
+    ]]
     --      Default
-    --          Normal
-    {	dependencies = {"owo_underbarrel_shotgun_masterkey_01"},
-        -- Shotgun body
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.060), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
-    },
-    --          THICC
-    {	dependencies = {"owo_underbarrel_shotgun_masterkey"},
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.082), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-    },
-    --          Mini
-    {	dependencies = {"owo_underbarrel_shotgun_masterkey_02"},
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.163, -0.044), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.6, 0.6 ) },
-    },
-    --  Masterkey Helpers
-	--      Connector patches
-    {	dependencies =  { _mt_laspistol_barrels.."|".._mt_autopistol_barrels, _owo_masterkey_bayonets},
-        bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.28, 1.0 ) },
-    },
-    {	dependencies =  { _mt_single_stubber_barrels.."|".._mt_ripper_barrels, _owo_masterkey_bayonets},
-        bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.6, 1.7 ) },
-    },
-    {	dependencies =  { _mt_backwards_bolter_barrels, _owo_masterkey_bayonets},
-        bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 0.8, 0.7 ) },
-    },
-    {	dependencies =  { _syn_carry_sniper_barrels, _owo_masterkey_bayonets},
-        bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.6, 0.7 ) },
-    },
-    {	dependencies =  { _syn_aquilon_barrels, _owo_masterkey_bayonets},
-        bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.5, 1.5 ) },
-    },
-    --      Default
-	{	dependencies = {_owo_masterkey_bayonets},
-        -- Shotgun tube
-        bayonetac1 =    { offset = true, position = vector3_box(0, 0.613, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.2, 1, 1.2 ) },
-        -- Shotgun barrel 2
-        bayonetac2 =    { offset = true, position = vector3_box(0, 0.01, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.675, 0.935 ) },
-        -- Shotgun tube middle extension
-        bayonetac3 =    { offset = true, position = vector3_box(0, 0.42, -0.05), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1.0, 1.0 ) },
-        -- Trigger
-        bayonetac4 =    { offset = true, position = vector3_box(0, 0.036, -0.088), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.85, 0.85 ) },
-        -- Shotgun Trap
-        bayonetac5 =    { offset = true, position = vector3_box(0, 0.06, -0.0818), rotation = vector3_box(-90, 0, -84), scale = vector3_box(0.135, 0.25, 0.365 ) },
-        -- Connector
-        bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.6, 1.0 ) },
-        -- Pump
-        bayonetac7 =    { offset = true, position = vector3_box(0, 0.46, -0.08), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.95, 0.7, 0.85 ) },
-    },
+    -- 
     --  --------------------------------------------
     --  M26-MASS
     --  --------------------------------------------
     --  M26-MASS Default
-    {	dependencies = {"owo_underbarrel_shotgun_m26mass"},
+    {	dependencies = { "owo_underbarrel_shotgun_m26mass" },
         -- Receiver
-        bayonet =      { offset = false, parent = "receiver", position = vector3_box(0, 0.25, -0.098), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
-    },
-    --  M26-MASS Helpers
-    {	dependencies = {"owo_underbarrel_shotgun_m26mass"},
-        -- Mag
-        bayonetac1 =    { offset = true, position = vector3_box(0, -0.015, -0.079), rotation = vector3_box(15, 0, 0), scale = vector3_box(1, 1.2, 1 ) },
-        -- Barrel
-        bayonetac2 =    { offset = true, position = vector3_box(0, -0.02, 0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.675, 0.935 ) },
-        -- Muzzle
-        bayonetac3 =    { offset = true, position = vector3_box(0, 0.36, 0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1.0 ) },
-        -- Trigger
-        bayonetac4 =    { offset = true, position = vector3_box(0, -0.044, -0.026), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.85, 1.085 ) },
-        -- Front Connector is too far up on these short ass guns
-        bayonetac5 =    { offset = true, position = vector3_box(0, 0.246, 0.082), rotation = vector3_box(-180, -90, 90), scale = vector3_box(0.75, 0.95, 0.335 ), hide_mesh = {{"bayonetac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}}},
-        -- Connector
-        bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1, 1.0 ) },
+        bayonet =      { offset = true, position = vector3_box(0, 0.25, -0.098), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
     },
 
 	-- ######

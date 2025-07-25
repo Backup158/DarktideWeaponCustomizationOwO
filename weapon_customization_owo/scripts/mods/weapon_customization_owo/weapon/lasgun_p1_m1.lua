@@ -267,12 +267,12 @@ mod.mt.inject_fixes(this_variant, {
     --  Main Body Position
     --[[
     --      A bit lower
-    {	dependencies =  { _owo_masterkey_bayonets, _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
-        bayonet =       { offset = true, position = vector3_box(0, 0.163, -0.065), },
+    {	dependencies =  { _owo_masterkey_bayonets, _syn_hellgun_barrels.."|".._syn_carbine_barrels, },
+        bayonet =       { offset = true, position = vector3_box(0, 0.0, -0.014), },
     },
     --      A bit and a bit lower
-    {	dependencies =  { _owo_masterkey_bayonets, "exitus_barrel_01|".._syn_aquilon_barrels, },
-        bayonet =       { offset = true, position = vector3_box(0, 0.163, -0.070), },
+    {	dependencies =  { _owo_masterkey_bayonets, "exitus_barrel_01|", },
+        bayonet =       { offset = true, position = vector3_box(0, 0.0, -0.02), },
     },
     ]]
     --[[
