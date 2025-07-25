@@ -2464,11 +2464,11 @@ function mod.owo_underbarrel_shotgun(variant_id, given_type, given_parent)
 		{id = "owo_underbarrel_shotgun_ac4", name = "OwO Masterkey ac4", no_randomize = true}, -- Trigger
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac5", {
-		{id = "owo_underbarrel_shotgun_ac5", name = "OwO Masterkey ac5", no_randomize = true}, -- connector
+		{id = "owo_underbarrel_shotgun_ac5", name = "OwO Masterkey ac5", no_randomize = true}, 
+		{id = "owo_underbarrel_shotgun_ac5_02", name = "OwO Masterkey ac5 2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac6", {
-		{id = "owo_underbarrel_shotgun_ac6", name = "OwO Masterkey ac6", no_randomize = true},
-		{id = "owo_underbarrel_shotgun_ac6_02", name = "OwO MASS ac6", no_randomize = true},
+		{id = "owo_underbarrel_shotgun_ac6", name = "OwO Masterkey ac6", no_randomize = true}, -- Rear connector
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac7", {
 		{id = "owo_underbarrel_shotgun_ac7", name = "OwO Masterkey ac7", no_randomize = true},
