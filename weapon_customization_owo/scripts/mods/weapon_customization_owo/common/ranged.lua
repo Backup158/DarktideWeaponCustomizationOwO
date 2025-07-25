@@ -5126,9 +5126,10 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 	})
 end
 
--- Sight: Soviet PU scope
+-- Sight: Classic Telescopic Sights
+--	Soviet PU scope
 --		Sight rings are too mf fat
-function mod.owo_pu_scope(variant_id, given_type, given_parent)
+function mod.owo_classic_telescopic_sight(variant_id, given_type, given_parent)
 	local current_type = given_type or "sight"
 	local current_parent = given_parent or "receiver"
 
@@ -5252,10 +5253,10 @@ function mod.owo_pu_scope(variant_id, given_type, given_parent)
 	})
 	
 end
-function mod.fixes_owo_pu_scope(variant_id) 
+function mod.fixes_owo_classic_telescopic_sight(variant_id) 
 	mod.mt.inject_fixes(variant_id, {
 		-- ######
-		-- Scope: SOVIET PU SCOPE
+		-- Sight: CLASSIC TELESCOPIC SIGHTS
 		-- ######
 		-- Purposely duplicated the copy pasted code for checks efficiency
 		{	dependencies =  	{ "owo_pu_scope_01" },

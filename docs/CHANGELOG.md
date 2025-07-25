@@ -20,9 +20,11 @@ Affects:
 
 *ALL affected attachments must be reequipped!* Any patches and fixes will also need to reflect this change.
 
-I should've just done this when I was developing v2.0.0 but I got lazy and just wanted to push it out. My bad. It will happen again. >:3
+I should've just done this when I was developing v2.0.0 but I got lazy and just wanted to push it out so I could work on other things. My bad. It will happen again. >:3
 
-**Reworked Masterkey sizing and positioning method, so any patches need to be redone**
+**Reworked Masterkey sizing and positioning method, so any patches need to be redone**.
+
+**Renamed owo_pu_scope function to owo_classic_telescopic_sight**. Only relevant if you called that in your own private plugins or whatever
 
 ## OTHER CHANGES
 - Removed standalone group indicator slots

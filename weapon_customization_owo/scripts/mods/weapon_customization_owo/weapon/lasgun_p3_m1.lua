@@ -424,7 +424,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     
     -- ######
-	-- Sight: SOVIET PU SCOPE
+	-- Sight: CLASSIC TELESCOPIC SIGHTS
 	-- ######
 	{	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02"},
         no_scope_offset =   { offset = true, position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true },

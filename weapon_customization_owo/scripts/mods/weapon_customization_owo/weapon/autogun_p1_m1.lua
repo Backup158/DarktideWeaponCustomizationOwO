@@ -130,7 +130,7 @@ mod.owo_m16_sight(this_variant, "sight")
 mod.owo_kalashnikov_rear_sight(this_variant)
 mod.owo_holosight(this_variant, "sight", "rail")
 mod.owo_prismatic_sight(this_variant, "sight", "rail")
-mod.owo_pu_scope(this_variant, "sight")
+mod.owo_classic_telescopic_sight(this_variant, "sight")
 
 mod.owo_helbore_body(this_variant)
 mod.owo_bolt_action(this_variant)
@@ -283,7 +283,7 @@ mod.fixes_owo_bolt_action(this_variant)
 mod.fixes_owo_scope_crosshair(this_variant)
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
-mod.fixes_owo_pu_scope(this_variant)
+mod.fixes_owo_classic_telescopic_sight(this_variant)
 
 mod.fixes_owo_tactical_stock(this_variant)
 mod.fixes_owo_kalash_stock(this_variant)
@@ -912,7 +912,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     
     -- ######
-	-- Sight: SOVIET PU SCOPE
+	-- Sight: CLASSIC TELESCOPIC SIGHTS
 	-- ######
     --  Position for MAS bodies
     {	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02", _owo_mas_helbore_receiverac1s, },

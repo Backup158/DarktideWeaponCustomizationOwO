@@ -112,7 +112,7 @@ mod.owo_scope_crosshair(this_variant)
 mod.owo_rear_sight(this_variant)
 mod.owo_holosight(this_variant, "sight", "receiver")
 mod.owo_prismatic_sight(this_variant, "sight", "receiver")
-mod.owo_pu_scope(this_variant)
+mod.owo_classic_telescopic_sight(this_variant)
 
 -- ############################################
 -- Define Variables for Fixes
@@ -230,7 +230,7 @@ mod.fixes_owo_condom(this_variant)
 mod.fixes_owo_scope_crosshair(this_variant)
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
-mod.fixes_owo_pu_scope(this_variant)
+mod.fixes_owo_classic_telescopic_sight(this_variant)
 
 mod.fixes_owo_underbarrel_gl(this_variant)
 mod.fixes_owo_underbarrel_shotgun(this_variant)
@@ -937,7 +937,7 @@ mod.mt.inject_fixes(this_variant, {
     },
 
 	-- ######
-	-- Sight: SOVIET PU SCOPE
+	-- Sight: CLASSIC TELESCOPIC SIGHTS
 	-- ######
 	{	dependencies =      {"owo_pu_scope_01|owo_pu_scope_02",},
 		sight =             { offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
