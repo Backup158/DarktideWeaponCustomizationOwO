@@ -1,9 +1,9 @@
 # 2025-UNRELEASED
 v3.0.0
 
-**BREAKING CHANGE(S)**
+## BREAKING CHANGE(S)
 
-Reworked how receiver accessory things work.
+**Reworked how receiver accessory things work.**
 
 Because there is less parts overall (on the technical side), it's should slightly improve performance. Not noticably, but every bit helps with taking down this monster schlong. 
 
@@ -22,7 +22,9 @@ Affects:
 
 I should've just done this when I was developing v2.0.0 but I got lazy and just wanted to push it out. My bad. It will happen again. >:3
 
-**OTHER CHANGES**
+**Reworked Masterkey sizing and positioning method, so any patches need to be redone**
+
+## OTHER CHANGES
 - Removed standalone group indicator slots
     - I did the math, and adding slots creates much more checks than adding more dependencies
     - Mostly due to existing dependencies from other plugins
@@ -48,6 +50,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
             - A RAW DAWG variant that straight up shrinks the gun (so sights can't be used) but everything else should work
             - The shroud variants that use the invisible base for usable sights but float off your hands (and need more manual patching)
             - But apparently I can't use the same method as the bolters because noooooo, laspistol receivers just haaave to be special with their nodes im going to shit myself then kick the stool to hang myself
+        - Why do I keep adding these they end up scuffed every single time lololololol
     - Added crutches lmfao 
         - For Thunder Hammers
         - Under shoulder and elbow crutches
@@ -62,7 +65,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - Removed `owo_underbarrel_shotgun_ac6_02` to reuse the other connector
             - Swapped slots for `owo_underbarrel_shotgun_ac5` and `owo_underbarrel_shotgun_ac6`
             - Realigned connector for M-26 MASS to account for new parent
-        - Removed a bunch of patches that were basically unnecessary
+        - Removed a bunch of patches that were basically unnecessary (minimal changes with lots of checks)
     - Bistol Shotgun barrels
         - Added indicator groups to `barrelshroudac` for efficiency
         - Resized muzzles to fit over the barrel
