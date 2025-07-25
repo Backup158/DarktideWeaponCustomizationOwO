@@ -2650,7 +2650,7 @@ function mod.fixes_owo_underbarrel_shotgun(variant_id, given_type, given_parent)
 			-- Front Connector
 			bayonetac5 =    { offset = true, position = vector3_box(0, 0.246, 0.082), rotation = vector3_box(-180, -90, 90), scale = vector3_box(0.75, 0.95, 0.335 ) },
 			-- Connector
-			bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1, 1.0 ) },
+			bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.108), rotation = vector3_box(-16, 0, 0), scale = vector3_box(0.3, 0.85, 1.0 ) },
 		},
 	})
 end
