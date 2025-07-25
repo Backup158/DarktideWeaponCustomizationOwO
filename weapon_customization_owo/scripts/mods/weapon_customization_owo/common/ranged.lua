@@ -2623,6 +2623,8 @@ function mod.fixes_owo_underbarrel_shotgun(variant_id, given_type, given_parent)
 		},
 		-- Other Helpers
 		{	dependencies =  	{ "owo_underbarrel_shotgun_masterkey|owo_underbarrel_shotgun_masterkey_01|owo_underbarrel_shotgun_masterkey_02"},
+			-- Invisible positioner
+			[current_type] = 	{ offset = true, position =  vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) }, 
 			-- Shotgun tube
 			bayonetac2 =    	{ offset = true, position = vector3_box(0, 0.613, 0), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.2, 1, 1.2 ) },
 			-- Shotgun barrel 2
