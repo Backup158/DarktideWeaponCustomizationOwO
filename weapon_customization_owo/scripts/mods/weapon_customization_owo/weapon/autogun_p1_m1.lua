@@ -74,6 +74,7 @@ local table_of_owo_slots = {
     "bayonetac5",
     "bayonetac6",
     "bayonetac7",
+    "bayonetac8",
 
     "owo_magac1",
     "owo_magac2",
@@ -1084,6 +1085,7 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  Masterkey
     --  --------------------------------------------
+    --[[
     --      A bit lower
     {	dependencies =  { "owo_underbarrel_shotgun_01_01", _mt_combat_shotgun_barrels.."|".._mt_db_shotgun_barrels.."|".._syn_hellgun_barrels.."|".._syn_carbine_barrels, },
         bayonet =       { offset = false, parent = "receiver", position = vector3_box(0, 0.168, -0.065), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.8, 0.8 ) },
@@ -1154,7 +1156,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     {	dependencies =  { _owo_masterkey_bayonets, _syn_aquilon_barrels },
         bayonetac6 =    { offset = true, position = vector3_box(0, 0.002, 0.017), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1.5, 1.5 ) },
-    },
+    },]]
     --  --------------------------------------------
     --  M26-MASS
     --  --------------------------------------------

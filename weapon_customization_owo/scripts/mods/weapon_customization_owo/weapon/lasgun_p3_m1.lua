@@ -61,6 +61,7 @@ local table_of_owo_slots = {
     "bayonetac5",
     "bayonetac6",
     "bayonetac7",
+    "bayonetac8",
 
     "sightac1",
     "sightac5",

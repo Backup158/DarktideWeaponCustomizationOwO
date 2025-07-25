@@ -56,6 +56,7 @@ local table_of_owo_slots = {
     "bayonetac5",
     "bayonetac6",
     "bayonetac7",
+    "bayonetac8",
 
     -- "barrelac", -- was only for scab gunner barrel
 
