@@ -68,7 +68,8 @@ mod.hide_slot_fixes = {
     ["bladeshroud"] = "owo_tacax_spike_helper_01|owo_historical_blade_helper_gerber|owo_historical_blade_helper_karambit|owo_polearm_head_helper_0_01",
     ["bladeshroudac"] = "owo_polearm_head_helper_1_01|owo_polearm_head_helper_1_02|owo_polearm_head_helper_1_03|owo_polearm_head_helper_1_04|owo_polearm_head_helper_1_l_01|owo_polearm_head_helper_1_l_02|owo_polearm_head_helper_1_p_01|owo_polearm_head_helper_1_p_02|owo_polearm_head_helper_1_p_03|owo_polearm_head_helper_1_p_04|owo_polearm_head_helper_1_p_05|owo_polearm_head_helper_1_p_06|owo_polearm_head_helper_1_p_07|owo_polearm_head_helper_1_p_08|owo_polearm_head_helper_1_p_09",
     ["bladeshroudac2"] =  "owo_polearm_head_helper_2_01",
-    ["bladeshroudac3"] =  "owo_polearm_head_helper_3_01|owo_polearm_head_helper_3_02",
+    ["bladeshroudac3"] =  "owo_polearm_head_helper_3_01|owo_polearm_head_helper_3_02|owo_polearm_head_helper_3_03",
+    ["bladeshroudac4"] =  "owo_polearm_head_helper_4_03",
     -- Pommel
     ["pommelac1"] = "owo_shovel_handles_ac1_01|owo_shovel_handles_ac1_02|owo_shovel_handles_ac1_03|owo_shovel_handles_ac1_04|owo_shovel_handles_ac1_05",
     ["pommelac2"] = "owo_shovel_handles_ac2_01|owo_shovel_handles_ac2_02|owo_shovel_handles_ac2_03|owo_shovel_handles_ac2_04",

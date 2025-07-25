@@ -32,6 +32,14 @@ local table_of_syn_slots = {
     --"bladeshroudac",
     --"bladeshroudac2",
     --"bladeshroudac3",
+    --"bladeshroudac4",
+    --"bladeshroudac5",
+    --"bladeshroudac6",
+    --"bladeshroudac7",
+    --"bladeshroudac8",
+    --"bladeshroudac9",
+    --"bladeshroudac10",
+    --"bladeshroudac11",
 }
 if not mod.syn then -- these slots already exist in Syn's plugin
     mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
@@ -50,6 +58,7 @@ local table_of_owo_slots = {
     "bladeshroudac",
     "bladeshroudac2",
     "bladeshroudac3",
+    "bladeshroudac4",
 
     "shaftac1",
 }
@@ -68,7 +77,7 @@ mod.owo_ogryn_shaft_low_grip(this_variant, "shaft")
 -- Define Variables for Fixes
 -- ############################################
 local _owo_all_tacax_spike_heads = "owo_tacax_spike_01|owo_tacax_spike_02|owo_tacax_spike_03|owo_tacax_spike_04|owo_tacax_spike_05|owo_tacax_spike_06|owo_tacax_spike_07"
-local _owo_polearm_bec_heads = "owo_polearm_head_bc_01|owo_polearm_head_bc_02|owo_polearm_head_bc_03|owo_polearm_head_bc_04"
+local _owo_polearm_bec_heads = "owo_polearm_head_bc_01|owo_polearm_head_bc_02|owo_polearm_head_bc_03|owo_polearm_head_bc_04|owo_polearm_head_bc_05"
 local _owo_polearm_lucerne_heads = "owo_polearm_head_l_01|owo_polearm_head_l_02||owo_polearm_head_l_03"
 local _owo_polearm_pollax_shovel_heads = "owo_polearm_head_p_04|owo_polearm_head_p_05|owo_polearm_head_p_06|owo_polearm_head_p_07|owo_polearm_head_p_08|owo_polearm_head_p_09"
 local _owo_polearm_pollax_misc_heads = "owo_polearm_head_p_01|owo_polearm_head_p_02|owo_polearm_head_p_03"
