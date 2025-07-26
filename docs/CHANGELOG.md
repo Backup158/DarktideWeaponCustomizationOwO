@@ -27,13 +27,6 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
 **Renamed owo_pu_scope function to owo_classic_telescopic_sight**. Only relevant if you called that in your own private plugins or whatever
 
 ## OTHER CHANGES
-- Removed standalone group indicator slots
-    - I did the math, and adding slots creates much more checks than adding more dependencies
-    - Mostly due to existing dependencies from other plugins
-    - Now only exists if I can tack it to an existing slot
-        - that exists on the weapon family already
-        - otherwise I'm just making the same mistake lol
-    - See Refactored Attachments section
 - Newly supported weapons
     - Indignatus Crusher
         - Tacax Spike, Polearm heads, Crutches, Invisible Connectors, Shafts with low grip
@@ -75,6 +68,13 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
             - Swapped slots for `owo_underbarrel_shotgun_ac5` and `owo_underbarrel_shotgun_ac6`
             - Realigned connector for M-26 MASS to account for new parent
         - Removed a bunch of patches that were basically unnecessary (minimal changes with lots of checks)
+- Removed standalone group indicator slots
+    - I did the math, and adding slots creates much more checks than adding more dependencies
+    - Mostly due to existing dependencies from other plugins
+    - Now only exists if I can tack it to an existing slot
+        - that exists on the weapon family already
+        - otherwise I'm just making the same mistake lol
+    - See Refactored Attachments section
 - Refactored Attachments
     - Bistol Shotgun barrels
         - Added indicator groups to `barrelshroudac` for efficiency
