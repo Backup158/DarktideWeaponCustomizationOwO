@@ -28,15 +28,15 @@ end
 -- Syn's Edits Compatibility
 -- ###############
 local table_of_syn_slots = {
-    "sight_2",
-    "sightac2",
-    "sightac3",
-    "sightac4",
+    --"sight_2",
+    --"sightac2",
+    --"sightac3",
+    --"sightac4",
 
-    "stockac",
-    "stockac2",
+    --"stockac",
+    --"stockac2",
 
-    "muzzle_2",
+    --"muzzle_2",
 }
 if not mod.syn then -- these slots already exist in Syn's plugin
     mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
@@ -66,6 +66,16 @@ local table_of_owo_slots = {
     --"stock_2",
 
     "muzzle_3",
+
+    "sight_2",
+    "sightac2",
+    "sightac3",
+    "sightac4",
+
+    "stockac",
+    "stockac2",
+
+    "muzzle_2",
 }
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
@@ -75,15 +85,15 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 -- ############################################
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
-mod.owo_holosight(this_variant, "sight", "receiver")
-mod.owo_prismatic_sight(this_variant, "sight", "receiver")
+mod.owo_holosight(this_variant, "sight", "rail")
+mod.owo_prismatic_sight(this_variant, "sight", "rail")
 
 mod.owo_invisible_muzzle(this_variant)
 mod.owo_suppressor(this_variant)
 
 --mod.owo_empty_foregrip(this_variant)
-mod.owo_tactical_foregrip(this_variant, "foregrip")
-mod.owo_heterosexual_foregrip(this_variant, "foregrip")
+mod.owo_tactical_foregrip(this_variant, "foregrip", "underbarrel")
+mod.owo_heterosexual_foregrip(this_variant, "foregrip", "underbarrel")
 
 --mod.owo_heterosexual_foregrip(this_variant, "stock") -- Reusing my foregrips list as the regular stock/grip
 --mod.owo_tactical_stock(this_variant, "stock_2")
@@ -171,19 +181,19 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Sight Alignment
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_no_magnifier_eotech_sights },
-        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_aligned_eotech_sights },
-        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_side_eotech_sights },
-        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -196,13 +206,13 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_no_magnifier_vortex_sights, },
-        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.042, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.022), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  Magnifier moves sight forwards
     {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_magnifier_vortex_sights, },
-        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.022), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -225,12 +235,12 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Main sight
     {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_forwards_acog_sights },
-        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.124, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_backwards_acog_sights },
-        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.052, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
@@ -243,7 +253,7 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.0, -0.084), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_all_susat_sights, },
-        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, -0.032, 0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0.0005, 0.0, -0.020), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
@@ -254,28 +264,28 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- skeletal shotgun
     {   dependencies =  { "owo_tactical_foregrip_01" },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.161, 0.023),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.161, 0.023),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
     },
     -- skeletal shotgun (slant)
     {   dependencies =  { "owo_tactical_foregrip_02" },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.10, 0.045),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.10, 0.045),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
     },
     -- skeletal brauto (slant)
     {   dependencies =  { "owo_tactical_foregrip_03" },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.151, 0.06),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.151, 0.06),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
     },
     -- magpul afg triple threat
     {   dependencies =  { "owo_tactical_foregrip_04" },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0.0, 0.045, 0.035),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
-        foregripac1 =   { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0.002, -0.024, -0.053),   rotation = vector3_box(0, 90, -40),    scale = vector3_box(0.5, 0.45, 0.2) },
-        foregripac2 =   { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(-0.002, -0.024, -0.053),   rotation = vector3_box(-40, -90, 0),    scale = vector3_box(0.5, 0.45, 0.2) },
-        foregripac3 =   { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.0, -0.004),   rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.5, 0.45, 0.2) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0.0, 0.045, 0.035),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
+        foregripac1 =   { offset = true, parent_node = 1, position = vector3_box(0.002, -0.024, -0.053),   rotation = vector3_box(0, 90, -40),    scale = vector3_box(0.5, 0.45, 0.2) },
+        foregripac2 =   { offset = true, parent_node = 1, position = vector3_box(-0.002, -0.024, -0.053),   rotation = vector3_box(-40, -90, 0),    scale = vector3_box(0.5, 0.45, 0.2) },
+        foregripac3 =   { offset = true, parent_node = 1, position = vector3_box(0, 0.0, -0.004),   rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.5, 0.45, 0.2) },
     },
 
     -- ######
-    -- Foregrip/Stock: Straight Grip
-    -- For shotguns, stock is like grip
+    -- Foregrip: Straight Grip
     -- Foregrips attach to underbarrel so it can move when pumped
+    -- Grip (proper) is the parent of everything, so that'll take some more tinkering
     -- ######
     --  No stock_2
     --      reconstocknone is the None option added by syn
@@ -285,63 +295,63 @@ mod.mt.inject_fixes(this_variant, {
     --  Syn's Short Shotgun Barrels
     --      Ogryn handles
     --          "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08",
-    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_ogryn_grip", _syn_short_shotgun_barrels, },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.45, 0.3) },
-    },
+    --{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_ogryn_grip", _syn_short_shotgun_barrels, },
+    --    foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.45, 0.3) },
+    --},
     --      Dclaw
     --          "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14",
-    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_dclaw_grip", _syn_short_shotgun_barrels, },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.9, 0.45) },
-    },
+    --{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_dclaw_grip", _syn_short_shotgun_barrels, },
+    --    foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.9, 0.45) },
+    --},
     --      Knife
-    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1.5, 1) },
-    },
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_06_fat", _syn_short_shotgun_barrels, },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1.5, 1) },
-    },
-    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1.5, 0.5) },
-    },
-    {   dependencies =  { "owo_heterosexual_foregrip_knife_06s_fat", _syn_short_shotgun_barrels, },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1.5, 0.5) },
-    },
+    --{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
+    --    foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1.5, 1) },
+    --},
+    --{   dependencies =  { "owo_heterosexual_foregrip_knife_06_fat", _syn_short_shotgun_barrels, },
+    --    foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1.5, 1) },
+    --},
+    --{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", _syn_short_shotgun_barrels, "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
+    --    foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1.5, 0.5) },
+    --},
+    --{   dependencies =  { "owo_heterosexual_foregrip_knife_06s_fat", _syn_short_shotgun_barrels, },
+    --    foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1.5, 0.5) },
+    --},
     --      Grip grips
     --          _owo_grip_grip_straight_grips
-    {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_gun_grip", _syn_short_shotgun_barrels, },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.09, 0.07),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1.2, 1) },
-    },
+    --{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_gun_grip", _syn_short_shotgun_barrels, },
+    --    foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.09, 0.07),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1.2, 1) },
+    --},
     --  Default
     --      Ogryn handles
     {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
        -- stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.45, 0.3, 0.3) },
     },
     --      Dclaw
     {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
        -- stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.1, 0.6, 0.45) },
     },
     --      Knife
     {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06"},
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
       -- stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
     },
     {   dependencies =  { "owo_heterosexual_foregrip_knife_06_fat"},
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
        -- stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.25, 1, 1) },
     },
     {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s"},
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
        -- stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
     },
     {   dependencies =  { "owo_heterosexual_foregrip_knife_06s_fat"},
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
        -- stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.25, 1, 0.5) },
     },
     --      Grip grips
     {   dependencies =  { "owo_foregrip_group_indicator_heterosexual_gun_grip", },
-        foregrip =      { offset = false, parent = "underbarrel", parent_node = 1, position = vector3_box(0, 0.04, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
+        foregrip =      { offset = true, parent_node = 1, position = vector3_box(0, 0.04, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
        -- stock =         { offset = true,   position = vector3_box(0, 0.042, 0.018),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
     },
 
