@@ -1731,8 +1731,9 @@ function mod.fixes_owo_tactical_foregrip(variant_id, given_type, given_parent)
 end
 
 -- Foregrip: Heterosexual Foregrips
-function mod.owo_heterosexual_foregrip(variant_id, given_type)
+function mod.owo_heterosexual_foregrip(variant_id, given_type, given_parent)
 	local current_type = given_type or "foregrip"
+	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_heterosexual_foregrip_grip_01", name = "OwO Straight Grip (SG) 1"},
@@ -1805,327 +1806,328 @@ function mod.owo_heterosexual_foregrip(variant_id, given_type)
 		-- Grips 
 		owo_heterosexual_foregrip_grip_01 = {
 			model = _item_ranged.."/grips/grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_02 = {
 			model = _item_ranged.."/grips/grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_03 = {
 			model = _item_ranged.."/grips/grip_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_04 = {
 			model = _item_ranged.."/grips/grip_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_05 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_06 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_07 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_08 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_09 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_10 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_11 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_12 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_ak_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_13 = {
 			model = _item_ranged.."/grips/autogun_rifle_grip_killshot_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_14 = {
 			model = _item_ranged.."/grips/boltgun_pistol_grip_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_15 = {
 			model = _item_ranged.."/grips/boltgun_pistol_grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_16 = {
 			model = _item_ranged.."/grips/boltgun_pistol_grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_17 = {
 			model = _item_ranged.."/grips/boltgun_rifle_grip_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_18 = {
 			model = _item_ranged.."/grips/boltgun_rifle_grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_19 = {
 			model = _item_ranged.."/grips/boltgun_rifle_grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_20 = {
 			model = _item_ranged.."/grips/boltgun_rifle_grip_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_21 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_22 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_23 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_24 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_25 = {
 			model = _item_ranged.."/grips/lasgun_pistol_grip_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_26 = {
 			model = _item_ranged.."/grips/flamer_rifle_grip_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_27 = {
 			model = _item_ranged.."/grips/flamer_rifle_grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_28 = {
 			model = _item_ranged.."/grips/flamer_rifle_grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		owo_heterosexual_foregrip_grip_29 = {
 			model = _item_ranged.."/grips/flamer_rifle_grip_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_gun_grip", },
 		},
 		-- Ogryn
 		owo_heterosexual_foregrip_01 = {
 			model = _item_ranged.."/handles/combat_blade_handle_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_02 = {
 			model = _item_ranged.."/handles/combat_blade_handle_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_03 = {
 			model = _item_ranged.."/handles/combat_blade_handle_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_04 = {
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_05 = {
 			model = _item_ranged.."/handles/combat_blade_handle_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_06 = {
 			model = _item_ranged.."/handles/combat_blade_handle_06", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_07 = {
 			model = _item_ranged.."/handles/combat_blade_handle_07", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		owo_heterosexual_foregrip_08 = {
 			model = _item_ranged.."/handles/combat_blade_handle_08", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_ogryn_grip", },
 		},
 		-- Dclaw
 		owo_heterosexual_foregrip_09 = {
 			model = _item_melee.."/grips/combat_sword_grip_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_10 = {
 			model = _item_melee.."/grips/combat_sword_grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_11 = {
 			model = _item_melee.."/grips/combat_sword_grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_12 = {
 			model = _item_melee.."/grips/combat_sword_grip_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_13 = {
 			model = _item_melee.."/grips/combat_sword_grip_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		owo_heterosexual_foregrip_14 = {
 			model = _item_melee.."/grips/combat_sword_grip_06", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_dclaw_grip", },
 		},
 		-- Knife 
 		owo_heterosexual_foregrip_knife_01 = {
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_02 = {
 			model = _item_melee.."/grips/combat_knife_grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_03 = {
 			model = _item_melee.."/grips/combat_knife_grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_04 = {
 			model = _item_melee.."/grips/combat_knife_grip_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_05 = {
 			model = _item_melee.."/grips/combat_knife_grip_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_06 = {
 			model = _item_melee.."/grips/combat_knife_grip_06", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_06_fat = {
 			model = _item_melee.."/grips/combat_knife_grip_06", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_01s = {
 			model = _item_melee.."/grips/combat_knife_grip_01", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_02s = {
 			model = _item_melee.."/grips/combat_knife_grip_02", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_03s = {
 			model = _item_melee.."/grips/combat_knife_grip_03", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_04s = {
 			model = _item_melee.."/grips/combat_knife_grip_04", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_05s = {
 			model = _item_melee.."/grips/combat_knife_grip_05", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_06s = {
 			model = _item_melee.."/grips/combat_knife_grip_06", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 		owo_heterosexual_foregrip_knife_06s_fat = {
 			model = _item_melee.."/grips/combat_knife_grip_06", type = current_type, 
-			mesh_move = false, parent = "receiver",
+			mesh_move = false, parent = current_parent,
 			automatic_equip = { foregripac1 = "owo_foregrip_group_indicator_heterosexual_knife_grip", },
 		},
 	})
 end
-function mod.fixes_owo_heterosexual_foregrip(variant_id, given_type)
+function mod.fixes_owo_heterosexual_foregrip(variant_id, given_type, given_parent)
 	local current_type = given_type or "foregrip"
+	local current_parent = given_type or "receiver"
 
 	mod.mt.inject_fixes(variant_id, {
 		-- ######
 		-- Foregrip: HETEROSEXUAL FOREGRIP
 		-- ######
 		--  Ogryn handles
-		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_ogryn_grip", "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08", },
-			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
+		{   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_ogryn_grip", "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08", },
+			[current_type] =    { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
 		},
 		--  Dclaw
-		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_dclaw_grip", "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14", },
-			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
+		{   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_dclaw_grip", "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14", },
+			[current_type] =    { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
 		},
 		--  Knife
-		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06" },
-			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+		{   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06" },
+			[current_type] =    { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
 		},
 		--		This one is skinnier than average so I also have a fat variant
-		{   dependencies =  { "owo_heterosexual_foregrip_knife_06_fat"},
-			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
+		{   dependencies =  	{ "owo_heterosexual_foregrip_knife_06_fat"},
+			[current_type] =    { offset = true,   position = vector3_box(0, 0.325, -0.041),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
 		},
 		--		Stubby
-		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s" },
-			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
+		{   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_knife_grip", "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s" },
+			[current_type] =    { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
 		},
-		{   dependencies =  { "owo_heterosexual_foregrip_knife_06s_fat" },
-			foregrip =      { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
+		{   dependencies =  	{ "owo_heterosexual_foregrip_knife_06s_fat" },
+			[current_type] =    { offset = true,   position = vector3_box(0, 0.325, -0.036),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
 		},
 		--  Gun grips
-		{   dependencies =  { "owo_foregrip_group_indicator_heterosexual_gun_grip", "owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29", },
-			foregrip =      { offset = true,   position = vector3_box(0, 0.375, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
+		{   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_gun_grip", "owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29", },
+			[current_type] =    { offset = true,   position = vector3_box(0, 0.375, 0.06),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
 		},
 	})
 end

@@ -75,8 +75,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 -- ############################################
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
-mod.owo_holosight(this_variant, "sight", "rail")
-mod.owo_prismatic_sight(this_variant, "sight", "rail")
+mod.owo_holosight(this_variant, "sight", "receiver")
+mod.owo_prismatic_sight(this_variant, "sight", "receiver")
 
 mod.owo_invisible_muzzle(this_variant)
 mod.owo_suppressor(this_variant)
@@ -145,8 +145,8 @@ end
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
-mod.fixes_owo_holosight(this_variant, "sight", "rail")
-mod.fixes_owo_prismatic_sight(this_variant)
+mod.fixes_owo_holosight(this_variant, "sight", "receiver")
+mod.fixes_owo_prismatic_sight(this_variant, "sight", "receiver")
 mod.fixes_owo_suppressors(this_variant)
 --mod.fixes_owo_tactical_stock(this_variant, "stock_2")
 
@@ -171,19 +171,19 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Sight Alignment
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_no_magnifier_eotech_sights },
-        rail =              { offset = false, parent = "receiver", position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_aligned_eotech_sights },
-        rail =              { offset = false, parent = "receiver", position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_side_eotech_sights },
-        rail =              { offset = false, parent = "receiver", position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -196,13 +196,13 @@ mod.mt.inject_fixes(this_variant, {
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_no_magnifier_vortex_sights, },
-        rail =              { offset = false, parent = "receiver", position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.042, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.022), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  Magnifier moves sight forwards
     {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_magnifier_vortex_sights, },
-        rail =              { offset = false, parent = "receiver", position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.022), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -225,12 +225,12 @@ mod.mt.inject_fixes(this_variant, {
     },
     --  Main sight
     {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_forwards_acog_sights },
-        rail =              { offset = false, parent = "receiver", position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.124, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_backwards_acog_sights },
-        rail =              { offset = false, parent = "receiver", position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.052, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
@@ -243,7 +243,7 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.0, -0.084), rotation = vector3_box(0, 0, 0), },
     },
     {   dependencies =      { _owo_all_susat_sights, },
-        rail =              { offset = false, parent = "receiver", position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
+        rail =              { offset = true, position = vector3_box(0, 0.064, 0.12), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, -0.032, 0.052), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0.0005, 0.0, -0.020), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
