@@ -185,9 +185,11 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_no_magnifier_eotech_sights },
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
-        -- to aim with, but the shell rack (top) doesn't rotate
-        no_scope_offset =   { offset = true, position = vector3_box(-0.065, -0.01, 0.105), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
-        scope_offset =      { offset = true, position = vector3_box(-0.065, -0.01, 0.105), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
+        -- to aim with, but the shell rack (top) doesn't rotate much
+        -- sight_2 needs to be counter rotated
+        no_scope_offset =   { offset = true, position = vector3_box(-0.06, -0.02, 0.103), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(-0.06, -0.02, 0.103), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
+        sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(5, 0, 7), scale = vector3_box(1, 1, 0.769), },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_aligned_eotech_sights },
