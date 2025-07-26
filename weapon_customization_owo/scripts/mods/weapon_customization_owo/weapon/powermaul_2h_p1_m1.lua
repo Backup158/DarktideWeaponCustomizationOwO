@@ -86,6 +86,7 @@ local _owo_low_grip_shafts = "owo_shaft_low_grip_01|owo_shaft_low_grip_02|owo_sh
 -- ########
 -- For This Variant Only
 -- ########
+local _crusher_default_shafts = "2h_power_maul_shaft_01|2h_power_maul_shaft_02|2h_power_maul_shaft_03|2h_power_maul_shaft_04|2h_power_maul_shaft_05|2h_power_maul_shaft_06|2h_power_maul_shaft_ml01"
 
 -- ############################################
 -- Inject Fixes
@@ -125,13 +126,16 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Lowers it so the actual axehead is where the hammer head is usually
     {	dependencies =  { _owo_all_tacax_spike_heads },
-        head =   { offset = true, position = vector3_box(0, 0, 0.61) },
+        head =          { offset = true, position = vector3_box(0, 0, 0.61) },
     },
     -- ######
     -- Head: Polearm heads
     -- ######
+    {	dependencies =  { "owo_invisible_connector_01", _crusher_default_shafts, _owo_polearm_heads },
+        head =          { offset = true, position = vector3_box(0, 0, 0.41) },
+    },
     -- Lowers it so the actual axehead is where the hammer head is usually
     {	dependencies =  { _owo_polearm_heads },
-        head =   { offset = true, position = vector3_box(0, 0, 0.61) },
+        head =          { offset = true, position = vector3_box(0, 0, 0.61) },
     },
 })
