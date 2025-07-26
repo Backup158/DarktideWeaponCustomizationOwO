@@ -214,14 +214,14 @@ Additional slot to add to or replace the original receiver. These can get super 
 ## Melee
 
 ### Heads
-- **Tactical Axe Spike**: Combat/Tactical Axes, Thunder Hammers, Delver's Pickaxes  \
+- **Tactical Axe Spike**: Combat/Tactical Axes, Thunder Hammers, Crusher, Delver's Pickaxes  \
 &emsp; Spike on the back of the tactical axe head. Fills in the holes in the blades.
 
 > [!WARNING]
 > 
 > KNOWN ISSUE: Variants 2/3/M do not have the spike aligned properly, so there's a second axe head in the middle of these
 
-- **Polearm Heads**: Thunder Hammers, Delver's Pickaxes  \
+- **Polearm Heads**: Thunder Hammers, Crusher, Delver's Pickaxes  \
 &emsp; Based on Becs de Corbin, Lucerne Hammers, and Poleaxes
 
 ### Body
@@ -241,12 +241,12 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; &emsp; &emsp; Unpatched for most other grips so caveat emptor
 
 ### Connectors
-- **Invisible Connector**: Thunder Hammers  \
+- **Invisible Connector**: Thunder Hammers, Crusher  \
 &emsp; Makes the connector invisible. That's it. \
 &emsp; It doesn't extend the shaft on its own; it's meant to be used with other parts (namely the tacax spikes)
 
 ### Shafts
-- **Long Shafts**: Thunder Hammers  \
+- **Long Hammer Shafts**: Thunder Hammers, Crusher  \
 &emsp; Longer shaft (held at the bottom)  \
 &emsp; When used with an Invisible Connector, it's about forehead height for a max height character.
 - **Long Ogryn Shafts**: Delver's Pickaxes  \
