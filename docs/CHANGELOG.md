@@ -34,6 +34,9 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - that exists on the weapon family already
         - otherwise I'm just making the same mistake lol
     - See Refactored Attachments section
+- Newly supported weapons
+    - Indignatus Crusher
+        - Tacax Spike, Polearm heads, Crutches, Invisible Connectors, Shafts with low grip
 - Added Attachments
     - Standalone Helbore Receiver for Autoguns
         - So you can use the Bolt-action and MAS Receiver Accessories
@@ -61,7 +64,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
         - Bec de Corbin variant
         - Uses an actual bird head as the pick
         - CAW CAW MOTHERFUCKERS
-- Refactored/Reworked Attachments
+- Reworked Attachments (substantial changes only)
     - Underbarrel Shotguns
         - Universalized fixes
         - M-26 MASS helper parts are moved to fit
@@ -72,6 +75,7 @@ I should've just done this when I was developing v2.0.0 but I got lazy and just 
             - Swapped slots for `owo_underbarrel_shotgun_ac5` and `owo_underbarrel_shotgun_ac6`
             - Realigned connector for M-26 MASS to account for new parent
         - Removed a bunch of patches that were basically unnecessary (minimal changes with lots of checks)
+- Refactored Attachments
     - Bistol Shotgun barrels
         - Added indicator groups to `barrelshroudac` for efficiency
         - Resized muzzles to fit over the barrel

@@ -124,6 +124,9 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Head: Tacax Spike
     -- ######
+    {	dependencies =  { "owo_invisible_connector_01", _crusher_default_shafts, _owo_all_tacax_spike_heads },
+        head =          { offset = true, position = vector3_box(0, 0, 0.41) },
+    },
     -- Lowers it so the actual axehead is where the hammer head is usually
     {	dependencies =  { _owo_all_tacax_spike_heads },
         head =          { offset = true, position = vector3_box(0, 0, 0.61) },
