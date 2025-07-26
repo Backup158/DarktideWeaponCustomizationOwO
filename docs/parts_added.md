@@ -224,6 +224,10 @@ Additional slot to add to or replace the original receiver. These can get super 
 - **Polearm Heads**: Thunder Hammers, Crusher, Delver's Pickaxes  \
 &emsp; Based on Becs de Corbin, Lucerne Hammers, and Poleaxes
 
+- **Crutches**: Thunder Hammers, Crusher  \
+&emsp; Yes, the kind people with broken legs use  \
+&emsp; Based on the kinds that go into the armpit (axillary) and the ones that go under the forearm to the elbow (Loftstrand)
+
 ### Body
 - **Rapier Blade**: Catachan "Devil's Claw" Swords, Dueling Swords  \
 &emsp; Thin, straight blades
