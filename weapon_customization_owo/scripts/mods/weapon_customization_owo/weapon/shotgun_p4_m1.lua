@@ -83,6 +83,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+-- mt plugin sight_2
+mod.mt.reflex_scopehelper(this_variant)
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_holosight(this_variant, "sight", "rail")
@@ -184,8 +186,8 @@ mod.mt.inject_fixes(this_variant, {
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         -- to aim with, but the shell rack (top) doesn't rotate
-        no_scope_offset =   { offset = true, position = vector3_box(-0.065, -0.01, 0.105), rotation = vector3_box(-5, 0, -8), lense_transparency = true },
-        scope_offset =      { offset = true, position = vector3_box(-0.065, -0.01, 0.105), rotation = vector3_box(-5, 0, -8), lense_transparency = true },
+        no_scope_offset =   { offset = true, position = vector3_box(-0.065, -0.01, 0.105), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(-0.065, -0.01, 0.105), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
     },
     --      Holo + Magnifier puts the holo a bit more forwards
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_aligned_eotech_sights },
