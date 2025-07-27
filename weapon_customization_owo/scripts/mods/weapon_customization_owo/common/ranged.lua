@@ -6,6 +6,7 @@ local _item = "content/items/weapons/player"
 local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_minion = "content/items/weapons/minions"
+-- local string = string
 
 -- #############################
 -- WAKEUP
@@ -3722,7 +3723,8 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 		{id = "owo_stock_group_indicator_beeg", name = "OwO Beeg Stock Indicator", },
 	})
 
-	local variant_is_shotgun = (variant_id == "shotgun_p1_m1")
+	--local variant_is_shotgun = (string.match(variant_id, "shotgun_p._m1"))
+	local variant_is_shotgun = variant_id == "shotgun_p1_m1" -- only combat shotgun restricted
 	
 	-- Generic
 	if not variant_is_shotgun then
