@@ -19,22 +19,10 @@ mod.discord_mode = mod:get("discord_mode")
  local _item_minion = "content/items/weapons/minions"
 
 -- #################
--- Alternative Prepend Function
--- 	Which isn't even necessary to have here
---	The original prepends the whole table as is, preserving the order
---	This way prepends each item, so in the end it'll be be in reverse order
--- 	Since this is used for fixes, this'll end up putting the dependencies at the end
--- 		which probably messes things up lol
+-- Command to call Reload Definitions
+-- Type command to reapply fixes after editing the files mid-game
 -- #################
---function mod.table_prepend_reverse(table_to_prepend_to, items)
---	for _, item in ipairs(items) do
---		table.insert(table_to_prepend_to, 1, item)
---	end
---end
---local ewc_inventory_weapon_cosmetics_view = mod:io_dofile("weapon_customization/scripts/mods/weapon_customization/patches/inventory_weapon_cosmetics_view")
--- HELPER COMMAND TO CALL RELOAD DEFINITIONS
-local ewc_reload = "Call reload definitions" --mod:localize("ack_remap_description")
-mod:command("ewc_reload", ewc_reload, function ()
+mod:command("ewc_reload", "Call reload definitions", function ()
     -- from weapon_customization/scripts/mods/weapon_customization/patches/inventory_weapon_cosmetics_view.lua 
 
 	-- Reload weapon definitions
