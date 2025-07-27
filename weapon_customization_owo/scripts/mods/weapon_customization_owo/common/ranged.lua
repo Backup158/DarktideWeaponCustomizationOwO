@@ -3909,7 +3909,7 @@ end
 function mod.fixes_owo_beeg_stock(variant_id, given_type, given_parent)
 	local current_type = given_type or "stock"
 	local current_parent = given_parent or "receiver"
-	
+
 	local _owo_iag_beeg_stocks = "owo_beeg_stock_iag_01|owo_beeg_stock_iag_02|owo_beeg_stock_iag_03|owo_beeg_stock_iag_04|owo_beeg_stock_iag_05"
 	local _owo_bag_beeg_stocks = "owo_beeg_stock_bag_01|owo_beeg_stock_bag_02|owo_beeg_stock_bag_03|owo_beeg_stock_bag_04|owo_beeg_stock_bag_05|owo_beeg_stock_bag_06|owo_beeg_stock_bag_07|owo_beeg_stock_bag_08"
 	local _owo_sg_beeg_stocks = "owo_beeg_stock_sg_01|owo_beeg_stock_sg_02|owo_beeg_stock_sg_03|owo_beeg_stock_sg_04|owo_beeg_stock_sg_05|owo_beeg_stock_sg_06|owo_beeg_stock_sg_07|owo_beeg_stock_sg_08"
@@ -3917,10 +3917,15 @@ function mod.fixes_owo_beeg_stock(variant_id, given_type, given_parent)
 	local _owo_h_beeg_stocks = "owo_beeg_stock_h_01|owo_beeg_stock_h_02|owo_beeg_stock_h_03"
 	local _owo_all_beeg_stocks = _owo_iag_beeg_stocks.."|".._owo_bag_beeg_stocks.."|".._owo_sg_beeg_stocks.."|".._owo_las_beeg_stocks.."|".._owo_h_beeg_stocks
 	
-	--  _owo_all_beeg_stocks
-    {   dependencies =  	{ "owo_stock_group_indicator_beeg", },
-        [current_type] =    { offset = true, position = vector3_box(0.0, 0.020, 0.045), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1.5, 1.2 ) },
-    },
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Stock: Beeg Stocks
+		-- ######
+		--  _owo_all_beeg_stocks
+		{   dependencies =  	{ "owo_stock_group_indicator_beeg", },
+			[current_type] =    { offset = true, position = vector3_box(0.0, 0.020, 0.045), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1.5, 1.2 ) },
+		},
+	})
 end
 
 -- Sight: Rear sights with flip up. Ladder Aperture Sights
@@ -4745,8 +4750,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 	-- Sightac7 is the max, so I'd have to create a new slot
 	--mod.create_group_indicator(variant_id, "sight", {
 	--	{id = "owo_sight_group_indicator_prismatic_sight_acog", name = "OwO ACOG Group Indicator", },
-	--	{id = --"owo_sight_group_indicator_prismatic_sight_susat", 
-            name = "OwO SUSAT Group Indicator", },
+	--	{id = --"owo_sight_group_indicator_prismatic_sight_susat", name = "OwO SUSAT Group Indicator", },
 	--})
 
 	mod.inject_models(variant_id, {
