@@ -3832,7 +3832,7 @@ function mod.owo_beeg_stock(variant_id, given_type, given_parent)
 				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_07", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			owo_beeg_stock_bag_08 = {
-				model = _item_ranged.."/stocks/shotgun_rifle_ak_stock_ml01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
+				model = _item_ranged.."/stocks/autogun_rifle_ak_stock_ml01", type = current_type, parent = current_parent, automatic_equip = { stockac = "owo_stock_group_indicator_beeg", },
 			},
 			-- Shotgun
 			owo_beeg_stock_sg_01 = {

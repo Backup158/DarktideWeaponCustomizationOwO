@@ -405,36 +405,28 @@ mod.mt.inject_fixes(this_variant, {
     },
 
     -- ######
-    -- Stock_2: Beeg Stocks
+    -- Stock: Beeg Stocks
     -- ######
-    --{   dependencies =  { _owo_basic_beeg_stocks },
-    --    --stock_2 =       { position = vector3_box(0.0, -0.146, -0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-    --    stock_2 =       { offset = false, parent = "receiver", parent_node = 2, position = vector3_box(-0.03, -0.064, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.75, 1.5, 1 ) },
+    --{   dependencies =  { "owo_stock_group_indicator_beeg", },
+    --    stock =         { offset = true, position = vector3_box(0.0, 0.020, 0.045), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1.5, 1.2 ) },
     --},
-    --{   dependencies =  { _owo_basic_bigga_stocks },
-    --    stock_2 =       { offset = false, parent = "receiver", parent_node = 2, position = vector3_box(0.0, -0.208, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.75, 1.35 ) },
-    --},
-    --  _owo_all_beeg_stocks
-   -- {   dependencies =  { "owo_stock_group_indicator_beeg", },
-   --     stock_2 =       { offset = true, position = vector3_box(0.0, 0.020, 0.045), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1.5, 1.2 ) },
-   -- },
 
     -- ######
-    -- Stock_2: Tactical Stocks
+    -- Stock: Tactical Stocks
     -- ######
     --  Folded
    -- {   dependencies =  { "owo_stock_group_indicator_ac2_tactical_stock_folded", "owo_tactical_stock_01|owo_tactical_stock_02|owo_tactical_stock_03|owo_tactical_stock_04|owo_tactical_stock_05|owo_tactical_stock_06|owo_tactical_stock_07|owo_tactical_stock_08" },
-   --     stock_2 =       { position = vector3_box(0.054, -0.044, 0.048), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
+   --     stock =         { position = vector3_box(0.054, -0.044, 0.048), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
    --     stockac =       { position = vector3_box(-0.0037, -0.014, 0.049), rotation = vector3_box(90, 0, -90), scale = vector3_box(1, 0.45, 0.3 )}
    -- },
    -- --  Folded (Left)
    -- {   dependencies =  { "owo_stock_group_indicator_ac2_tactical_stock_folded_left", "owo_tactical_stock_01l|owo_tactical_stock_02l|owo_tactical_stock_03l|owo_tactical_stock_04l|owo_tactical_stock_05l|owo_tactical_stock_06l|owo_tactical_stock_07l|owo_tactical_stock_08l" },
-   --     stock_2 =       { position = vector3_box(-0.05, -0.076, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
+   --     stock =         { position = vector3_box(-0.05, -0.076, 0.034), rotation = vector3_box(0, 0, 180), scale = vector3_box(1, 1.0, 1 ) },
    --     stockac =       { position = vector3_box(0.0023, -0.036, 0.031), rotation = vector3_box(90, 0, 90), scale = vector3_box(1, 0.45, 0.3 )}
    -- },
    -- --  Natural (Under)
    -- {   dependencies =  { "owo_tactical_stock_f_03u" },
-   --     stock_2 =       { position = vector3_box(0.0, -0.112, 0.0625), rotation = vector3_box(174, 0, 0), scale = vector3_box(2.52, 1.45, 1 ) },
+   --     stock =         { position = vector3_box(0.0, -0.112, 0.0625), rotation = vector3_box(174, 0, 0), scale = vector3_box(2.52, 1.45, 1 ) },
    -- },
     --  Rest are handled universally
 })
