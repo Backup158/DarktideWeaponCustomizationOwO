@@ -185,6 +185,7 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_no_magnifier_eotech_sights },
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        --scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
         scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
