@@ -28,6 +28,7 @@ local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/we
 -- from ranged.lua and melee.lua
 -- ############################################
 mod.owo_slim_blade(this_variant, "head", "shaft")
+mod.owo_invisible_connector(this_variant)
 --mod.owo_crossguard(this_variant, "hilt", "grip")
 
 -- ############################################
@@ -70,8 +71,8 @@ local _power_sword_grips = "power_sword_grip_01|power_sword_grip_02|power_sword_
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
-mod.fixes_owo_slim_blade(this_variant)
-mod.fixes_owo_crossguard(this_variant)
+mod.fixes_owo_slim_blade(this_variant, "head", "shaft")
+--mod.fixes_owo_crossguard(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -80,12 +81,12 @@ mod.mt.inject_fixes(this_variant, {
     -- PSword
     --      Flat Power Sword
     --          Hilt Patches
-    {   dependencies =  { _owo_flat_psword_g_blades, _power_sword_grips },
-        hilt =  { position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-    },
-    --      Slim Power Sword
-    --          Hilt Patches
-    {   dependencies =  { _owo_slim_psword_g_blades, _power_sword_grips },
-        hilt =  { position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-    },
+    --{   dependencies =  { _owo_flat_psword_g_blades, _power_sword_grips },
+    --    hilt =  { position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+    --},
+    ----      Slim Power Sword
+    ----          Hilt Patches
+    --{   dependencies =  { _owo_slim_psword_g_blades, _power_sword_grips },
+    --    hilt =  { position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+    --},
 })
