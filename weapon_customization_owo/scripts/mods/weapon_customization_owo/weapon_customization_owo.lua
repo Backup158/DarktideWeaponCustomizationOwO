@@ -4,8 +4,12 @@ local mt
 local syn
 
 -- Prints a message to the console log containing the current version number
-local mod_version = "2.1.0"
-mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
+mod.version = "3.0.0"
+mod:info('WeaponCustomizationOwO v' .. mod.version .. ' loaded uwu nya :3')
+
+-- Discord mode
+-- Only needs to be checked at launch because the stuff it affects only runs at startup
+mod.discord_mode = mod:get("discord_mode")
 
  -- Locals from Weapon Customization plugin template
  local vector3_box = Vector3Box
@@ -88,8 +92,6 @@ function mod.on_all_mods_loaded()
 	local attachment_ids = {}
 	local model_ids = {}
 	local debug = mod:get("debug_mode")
-	local discord = mod:get("discord_mode")
-
 	
 	-- Reload Callback
 	--	Reinject fixes
