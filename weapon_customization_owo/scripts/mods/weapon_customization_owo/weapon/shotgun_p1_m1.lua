@@ -120,7 +120,7 @@ local _owo_bag_beeg_stocks = "owo_beeg_stock_bag_01|owo_beeg_stock_bag_02|owo_be
 local _owo_sg_beeg_stocks = "owo_beeg_stock_sg_01|owo_beeg_stock_sg_02|owo_beeg_stock_sg_03|owo_beeg_stock_sg_04|owo_beeg_stock_sg_05|owo_beeg_stock_sg_06|owo_beeg_stock_sg_07|owo_beeg_stock_sg_08"
 local _owo_las_beeg_stocks = "owo_beeg_stock_las_01|owo_beeg_stock_las_02|owo_beeg_stock_las_03|owo_beeg_stock_las_04"
 local _owo_h_beeg_stocks = "owo_beeg_stock_h_01|owo_beeg_stock_h_02|owo_beeg_stock_h_03"
-local _owo_all_beeg_stocks = "owo_beeg_stockac_01"
+local _owo_all_beeg_stocks = _owo_iag_beeg_stocks.."|".._owo_bag_beeg_stocks.."|".._owo_sg_beeg_stocks.."|".._owo_las_beeg_stocks.."|".._owo_h_beeg_stocks
 -- What a fucking mess
 local _owo_grip_grip_straight_grips = "owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29"
 
@@ -147,8 +147,11 @@ end
 -- #################
 mod.fixes_owo_holosight(this_variant, "sight", "rail")
 mod.fixes_owo_prismatic_sight(this_variant)
+
 mod.fixes_owo_suppressors(this_variant)
+
 mod.fixes_owo_tactical_stock(this_variant, "stock_2")
+mod.fixes_owo_beeg_stock(this_variant, "stock_2")
 
 -- #################
 -- Custom Fixes
@@ -358,10 +361,7 @@ mod.mt.inject_fixes(this_variant, {
     --{   dependencies =  { _owo_basic_bigga_stocks },
     --    stock_2 =       { offset = false, parent = "receiver", parent_node = 2, position = vector3_box(0.0, -0.208, -0.04), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.75, 1.35 ) },
     --},
-    --  _owo_all_beeg_stocks
-    {   dependencies =  { "owo_stock_group_indicator_beeg", },
-        stock_2 =       { offset = true, position = vector3_box(0.0, 0.020, 0.045), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.3, 1.5, 1.2 ) },
-    },
+    -- Handled universally
 
     -- ######
     -- Stock_2: Tactical Stocks

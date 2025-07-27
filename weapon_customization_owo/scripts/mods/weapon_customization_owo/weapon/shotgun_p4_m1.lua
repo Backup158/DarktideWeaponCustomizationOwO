@@ -107,8 +107,8 @@ mod.owo_tactical_foregrip(this_variant, "foregrip", "underbarrel")
 mod.owo_heterosexual_foregrip(this_variant, "foregrip", "underbarrel")
 
 --mod.owo_heterosexual_foregrip(this_variant, "stock") -- Reusing my foregrips list as the regular stock/grip
---mod.owo_tactical_stock(this_variant, "stock_2")
---mod.owo_beeg_stock(this_variant, "stock_2")
+mod.owo_tactical_stock(this_variant, "stock")
+mod.owo_beeg_stock(this_variant, "stock")
 
 -- ############################################
 -- Define Variables for Fixes
@@ -168,8 +168,11 @@ end
 -- #################
 mod.fixes_owo_holosight(this_variant, "sight", "receiver")
 mod.fixes_owo_prismatic_sight(this_variant, "sight", "receiver")
+
 mod.fixes_owo_suppressors(this_variant)
---mod.fixes_owo_tactical_stock(this_variant, "stock_2")
+
+mod.fixes_owo_tactical_stock(this_variant, "stock")
+mod.fixes_owo_beeg_stock(this_variant, "stock")
 
 -- #################
 -- Custom Fixes
