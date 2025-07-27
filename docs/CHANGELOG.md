@@ -28,8 +28,9 @@ Developers only: **Renamed owo_pu_scope function to owo_classic_telescopic_sight
 
 ## OTHER CHANGES
 - Newly supported weapons
-    - Indignatus Crusher
-        - Tacax Spike, Polearm heads, Crutches, Invisible Connectors, Shafts with low grip
+    - Crusher: Tacax Spike, Polearm heads, Crutches, Invisible Connector, Shafts with low grip
+    - Exterminator Shotgun: MT plugin helper sights, Holographic Sights, Prismatic Sights, Suppressors, Tactical Foregrips, Straight Foregrips, Tactical Stocks, Big Stocks!
+    - Shock Maul and Suppression Shield: Slim Blades, Invisible Connector
 - Added Attachments
     - Standalone Helbore Receiver for Autoguns
         - So you can use the Bolt-action and MAS Receiver Accessories
