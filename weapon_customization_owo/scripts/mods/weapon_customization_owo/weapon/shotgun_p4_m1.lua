@@ -187,7 +187,6 @@ mod.mt.inject_fixes(this_variant, {
         sight =             { offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        --no_scope_offset =   { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
@@ -199,9 +198,8 @@ mod.mt.inject_fixes(this_variant, {
         --scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        --no_scope_offset =   { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
-        scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
-        sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
+        scope_offset =      { offset = true, position = vector3_box(-0.073, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
+        sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(3, 0, 3), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_side_eotech_sights },
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
@@ -210,9 +208,8 @@ mod.mt.inject_fixes(this_variant, {
         --scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        --no_scope_offset =   { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
-        scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
-        sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
+        scope_offset =      { offset = true, position = vector3_box(-0.073, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
+        sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(3, 0, 3), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
     --  --------------------------------------------
     --  Vortex Razor
@@ -227,7 +224,6 @@ mod.mt.inject_fixes(this_variant, {
         --scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.022), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        --no_scope_offset =   { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
@@ -239,7 +235,6 @@ mod.mt.inject_fixes(this_variant, {
         --scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.022), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        --no_scope_offset =   { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
@@ -266,7 +261,6 @@ mod.mt.inject_fixes(this_variant, {
         --scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        --no_scope_offset =   { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
@@ -276,7 +270,6 @@ mod.mt.inject_fixes(this_variant, {
         --scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        --no_scope_offset =   { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
@@ -294,7 +287,6 @@ mod.mt.inject_fixes(this_variant, {
         --scope_offset =      { offset = true, position = vector3_box(0.0005, 0.0, -0.020), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        --no_scope_offset =   { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         --sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
