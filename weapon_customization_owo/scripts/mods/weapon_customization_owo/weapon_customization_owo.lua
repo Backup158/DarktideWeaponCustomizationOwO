@@ -27,6 +27,24 @@ mod:info('WeaponCustomizationOwO v' .. mod_version .. ' loaded uwu nya :3')
 --		table.insert(table_to_prepend_to, 1, item)
 --	end
 --end
+--local ewc_inventory_weapon_cosmetics_view = mod:io_dofile("weapon_customization/scripts/mods/weapon_customization/patches/inventory_weapon_cosmetics_view")
+-- HELPER COMMAND TO CALL RELOAD DEFINITIONS
+local ewc_reload = "Call reload definitions" --mod:localize("ack_remap_description")
+mod:command("ewc_reload", ewc_reload, function ()
+    -- from weapon_customization/scripts/mods/weapon_customization/patches/inventory_weapon_cosmetics_view.lua 
+
+	-- Reload weapon definitions
+	--instance.cb_on_reload_definitions_pressed()
+	local REFERENCE = "weapon_customization"
+	mod.wc:io_dofile("weapon_customization/scripts/mods/weapon_customization/weapon_customization_anchors")
+	-- Reload plugins via registered definition callback
+	local reload_definitions = mod.wc:persistent_table(REFERENCE).reload_definitions
+	for _, callback in pairs(reload_definitions) do
+		if callback and type(callback) == "function" then callback() end
+	end
+
+	mod:echo("take me out the oven papi~")
+end)
 
 -- #########################################
 -- ############### ATTENTION ###############
