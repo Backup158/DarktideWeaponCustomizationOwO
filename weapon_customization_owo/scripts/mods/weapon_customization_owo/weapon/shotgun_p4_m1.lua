@@ -28,15 +28,33 @@ end
 -- Syn's Edits Compatibility
 -- ###############
 local table_of_syn_slots = {
-    --"sight_2",
-    --"sightac2",
-    --"sightac3",
-    --"sightac4",
+    "sight_2",
+--	"carryhandle",
+	"foregrip",
+	"sightac",
+	"sightac2",
+	"sightac3",
+	"sightac4",
+	--"accessory",
+	--"magac",
 
-    --"stockac",
-    --"stockac2",
-
-    --"muzzle_2",
+	"bayonet",
+	"stock",
+	"stockac",
+	"stockac2",
+	--"synstockac3",
+--	"synstockac4",
+	--"receiver_special_04",
+	--"receiver_special_05",
+	--"receiver_special_06",
+	--"receiver_special_07",
+	--"receiver_special_08",
+	--"receiver_special_09",
+	--"receiver_special_10",
+	--"receiver_special_11",
+	--"receiver_special_12",
+	--"syn_muzzleac",
+	--"syn_muzzleac2",
 }
 if not mod.syn then -- these slots already exist in Syn's plugin
     mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
@@ -50,7 +68,7 @@ end
 -- OwO Slot Initialization
 -- ###############
 local table_of_owo_slots = {
-    "foregrip",
+    --"foregrip",
     "foregripac1",
     "foregripac2",
     "foregripac3",
@@ -65,17 +83,8 @@ local table_of_owo_slots = {
 
     --"stock_2",
 
-    "muzzle_3",
-
-    "sight_2",
-    "sightac2",
-    "sightac3",
-    "sightac4",
-
-    "stockac",
-    "stockac2",
-
     "muzzle_2",
+    "muzzle_3",
 }
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
