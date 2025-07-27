@@ -370,7 +370,8 @@ mod.mt.inject_fixes(this_variant, {
     -- Trijicon ACOG
     --  --------------------------------------------
     --  Patch to hide alt viewmodel sights
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_sight_2s, },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_sight_2s, },
         sight_2 =           { offset = false, parent = "sight", position = vector3_box(0, -0.04, 0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --      Syn's Hellgun Receivers
@@ -417,7 +418,8 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.3, -0.097), rotation = vector3_box(0, 0, 0), },
     },
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_susat", },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_susat", 
+            _owo_all_susat_sights, },
         rail =              { automatic_equip = { rail = "rail_default"}, },
         sight =             { offset = true, position = vector3_box(0, 0.016, 0.221), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.02, -0.034), rotation = vector3_box(0, 0, 0), lense_transparency = true },

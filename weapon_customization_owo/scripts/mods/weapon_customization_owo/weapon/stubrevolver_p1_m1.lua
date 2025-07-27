@@ -185,7 +185,8 @@ mod.mt.inject_fixes(this_variant, {
     --  Trijicon ACOG
     --  --------------------------------------------
     --  Patch for alt vms
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_sight_2s, },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.046, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  Aiming with RMR on ACOG
@@ -194,12 +195,14 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.127), rotation = vector3_box(0, 0, 0), },
     },
     --  Sight Position
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_forwards_acog_sights },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_forwards_acog_sights },
         rail =              { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
         sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.102, 0.038), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0528), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_backwards_acog_sights },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_backwards_acog_sights },
         rail =              { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
         sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.074, 0.038), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
         scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.0528), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -212,7 +215,8 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.112), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.112), rotation = vector3_box(0, 0, 0), },
     },
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_susat", },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_susat", 
+            _owo_all_susat_sights, },
         rail =              { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.02, 0.018), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.65, 0.8), },
         sight =             { offset = false, parent = "barrel", parent_node = 9, position = vector3_box(0, 0.008, 0.060), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1),},
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.042), rotation = vector3_box(0, 0, 0), lense_transparency = true },

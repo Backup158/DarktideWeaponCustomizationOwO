@@ -247,7 +247,8 @@ mod.mt.inject_fixes(this_variant, {
     --  Trijicon ACOG
     --  --------------------------------------------
     --  Patch to hide alt viewmodel sights
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_sight_2s, },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.046, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  RMR Aim
@@ -256,7 +257,8 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { offset = true, position = vector3_box(0.0004, 0.0, -0.0990), rotation = vector3_box(0, 0, 0), },
     },
     --  Main sight
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_forwards_acog_sights },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_forwards_acog_sights },
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.124, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         --scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
@@ -265,7 +267,8 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(-0.062, -0.02, 0.102), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
         sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2, 0, 2), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_backwards_acog_sights },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_backwards_acog_sights },
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.052, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         --scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },

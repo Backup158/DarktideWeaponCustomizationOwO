@@ -4729,7 +4729,8 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 	-- Sightac7 is the max, so I'd have to create a new slot
 	--mod.create_group_indicator(variant_id, "sight", {
 	--	{id = "owo_sight_group_indicator_prismatic_sight_acog", name = "OwO ACOG Group Indicator", },
-	--	{id = "owo_sight_group_indicator_prismatic_sight_susat", name = "OwO SUSAT Group Indicator", },
+	--	{id = --"owo_sight_group_indicator_prismatic_sight_susat", 
+            name = "OwO SUSAT Group Indicator", },
 	--})
 
 	mod.inject_models(variant_id, {
@@ -5096,7 +5097,8 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 	    	lens_2 =            { offset = false, parent = "sight", position = vector3_box(0, -0.098, 0.0325), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.65, 0.155, 0.65), data = {lens = 2}},
 		},
 		--  ACOG with RMR on top
-		{   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_rmr_acog_sights },
+		{   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+				_owo_rmr_acog_sights },
 			sight_secondary =   { offset = true, position = vector3_box(0, -0.062, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.7, 1) },
 		},
 		--  --------------------------------------------

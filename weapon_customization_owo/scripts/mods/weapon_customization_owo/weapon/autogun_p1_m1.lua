@@ -869,7 +869,8 @@ mod.mt.inject_fixes(this_variant, {
     --  Trijicon ACOG
     --  --------------------------------------------
     --  Patch to hide alt viewmodel sights
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_sight_2s, },
+    --{   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_sight_2s, },
+    {	dependencies = 		{ _owo_all_acog_sights, _owo_sight_2s, }, 
         sight_2 =           { offset = false, parent = "sight", position = vector3_box(0, -0.04, 0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  ACOG only
@@ -880,18 +881,22 @@ mod.mt.inject_fixes(this_variant, {
     },
     --      Sight Alignment
     --          Main sight and reticle (forwards)
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _vigilant_autogun_receivers, _owo_forwards_acog_sights, },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _vigilant_autogun_receivers, _owo_forwards_acog_sights, },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.033), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_forwards_acog_sights },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_forwards_acog_sights },
         sight =             { offset = true, position = vector3_box(0, 0.074, 0.024), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.031), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --          Main sight and reticle (backwards)
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _vigilant_autogun_receivers, _owo_backwards_acog_sights, },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _vigilant_autogun_receivers, _owo_backwards_acog_sights, },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0329), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_acog", _owo_backwards_acog_sights },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
+            _owo_backwards_acog_sights },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.033), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --  --------------------------------------------
@@ -902,11 +907,13 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
         no_scope_offset =   { offset = true, position = vector3_box(0.0002, 0.001, -0.0872), rotation = vector3_box(0, 0, 0), },
     },
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_susat", _vigilant_autogun_receivers, _owo_all_susat_sights, },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_susat", 
+            _vigilant_autogun_receivers, _owo_all_susat_sights, },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0238), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
     --      _owo_all_susat_sights
-    {   dependencies =      { "owo_sight_group_indicator_prismatic_sight_susat", },
+    {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_susat", 
+            _owo_all_susat_sights, },
         sight =             { offset = true, position = vector3_box(0, -0.06, 0.046), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
@@ -914,13 +921,6 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Sight: CLASSIC TELESCOPIC SIGHTS
 	-- ######
-    --  Position for MAS bodies
-    {	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02", _owo_mas_helbore_receiverac1s, },
-        sight = 	        { offset = true, position = vector3_box(0, -0.028, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
-        -- Scope body
-        sightac1 =          { offset = true, position = vector3_box(0, 0.166 , 0.167), rotation = vector3_box(-180, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
-        sightac7 =          { offset = true, position = vector3_box(0, 0.0 , 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-    },
 	{	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02"},
         sight = 	        { offset = true, position = vector3_box(0, -0.09, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
         -- Aligning with Crosshair
@@ -928,11 +928,6 @@ mod.mt.inject_fixes(this_variant, {
         scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true },
 
     },
-    -- Riser alightment
-    {	dependencies =      { "owo_pu_scope_01", _owo_mas_helbore_receiverac1s },
-        sight_secondary =   { offset = true, position = vector3_box(0, 0.066, 0.096), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.67, 0.4, 0.5 ) },
-    },
-    
 
     -- ######
 	-- Stock: TACTICAL STOCK
