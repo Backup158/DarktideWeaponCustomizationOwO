@@ -6087,4 +6087,13 @@ local table_of_owo_slots = {
 }
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
+
+
+for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
+    for _, slot_name in pairs(slots_table) do
+        mod.mt.inject_fixes(this_variant, {
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
+        })
+    end
+end
 ]]

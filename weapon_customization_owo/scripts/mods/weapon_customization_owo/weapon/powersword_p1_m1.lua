@@ -14,14 +14,43 @@ local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/we
 -- Add Custom Attachments
 -- Makes new tables for attachment anchors
 -- ############################################
--- Covered by Syn
---mod.wc.attachment[this_variant].bladeshroud = {}
---mod.wc.attachment[this_variant].bladeshroudac = {}
---mod.wc.attachment[this_variant].bladeshroudac2 = {}
---mod.wc.attachment[this_variant].bladeshroudac10 = {}
---mod.wc.attachment[this_variant].bladeshroudac11 = {}
---mod.wc.attachment[this_variant].bladeshroudac12 = {}
---mod.wc.attachment[this_variant].bladeshroudac13 = {}
+-- ###############
+-- MT Plugin Compatibility
+-- ###############
+local table_of_mt_slots = {
+    
+}
+for _, slot_name in ipairs(table_of_mt_slots) do
+    mod.create_default_attachment(this_variant, slot_name)
+end
+
+-- ###############
+-- Syn's Edits Compatibility
+-- ###############
+local table_of_syn_slots = {
+    "bladeshroud",
+    "bladeshroudac",
+    "bladeshroudac2",
+    "bladeshroudac10",
+    "bladeshroudac11",
+    "bladeshroudac12",
+    "bladeshroudac13",
+}
+if not mod.syn then -- these slots already exist in Syn's plugin
+    mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
+else
+    for _, slot_name in ipairs(table_of_syn_slots) do
+        mod.create_default_attachment(this_variant, slot_name)
+    end
+end
+
+-- ###############
+-- OwO Slot Initialization
+-- ###############
+local table_of_owo_slots = {
+    
+}
+mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
 -- ############################################
 -- Injection Calls: attachments and models
@@ -61,9 +90,13 @@ local _power_sword_grips = "power_sword_grip_01|power_sword_grip_02|power_sword_
 -- By putting it up here, it ends up at the bottom of the list, so they will only be hidden if the fixes from above are not found
 -- Because they match the main parts first, if there is no match it means the main part is not attached
 -- #################
---mod.mt.inject_fixes(this_variant, {
-    
---})
+for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_owo_slots}) do
+    for _, slot_name in pairs(slots_table) do
+        mod.mt.inject_fixes(this_variant, {
+            mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
+        })
+    end
+end
 
 -- #################
 -- Universal Fixes

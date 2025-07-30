@@ -177,7 +177,7 @@ for _, slots_table in ipairs({table_of_mt_slots, table_of_syn_slots, table_of_ow
         mod.mt.inject_fixes(this_variant, {
             mod.hide_slot(slot_name, { mod.hide_slot_fixes[slot_name] }),
         })
-        mod:info("Injecting hiding for "..slot_name.." ---- "..mod.hide_slot_fixes[slot_name])
+        -- mod:info("Injecting hiding for "..slot_name.." ---- "..mod.hide_slot_fixes[slot_name])
     end
 end
 
