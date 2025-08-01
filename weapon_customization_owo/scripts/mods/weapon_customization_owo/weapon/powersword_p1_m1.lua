@@ -114,11 +114,11 @@ mod.mt.inject_fixes(this_variant, {
     --      Flat Power Sword
     --          Hilt Patches
     {   dependencies =  { _owo_flat_psword_g_blades, _power_sword_grips },
-        hilt =  { position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+        hilt =  { offset = true, position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
     },
     --      Slim Power Sword
     --          Hilt Patches
     {   dependencies =  { _owo_slim_psword_g_blades, _power_sword_grips },
-        hilt =  { position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+        hilt =  { offset = true, position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
     },
 })
