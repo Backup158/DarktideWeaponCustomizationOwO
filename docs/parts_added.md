@@ -144,8 +144,9 @@ Additional slot to add to or replace the original receiver. These can get super 
 > 
 > KNOWN ISSUE: SUSATs will steal the lasers from lasguns and shotguns (???).
 
-- **Soviet PU Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
-&emsp; Uses German #1 style reticle. The one that looks like a T
+- **Classic Telescopic Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
+&emsp; Soviet PU Scopes  \
+&emsp; &emsp; Uses German #1 style reticle. The one that looks like a T
 
 ### Grips
 - **Fin Grips**: Infantry/Braced/Vigilant Autoguns  \
@@ -225,13 +226,19 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; Based on Becs de Corbin, Lucerne Hammers, and Poleaxes  \
 &emsp; &emsp; Becs de Corbin/The Crow's Beak: A hammer head with a spike on top and a curved pick in the back  \
 &emsp; &emsp; Lucerne Hammer: Like a Bec de Corbin with a longer, thinner back pick and with a hammer head that typically has more protrusions  \
-&emsp; &emsp; Poleaxes/Pollaxes: An axe head with a wide spike on top and a hammer in the back  \
-&emsp; Recommended to be used with the Invisible Connector
+&emsp; &emsp; Poleaxes/Pollaxes: An axe head with a wide spike on top and a hammer in the back
+
+> [!TIP]
+> 
+> Recommended to be used with the Invisible Connector
 
 - **Crutches**: Thunder Hammers, Crusher  \
 &emsp; Yes, the kind people with broken legs use  \
-&emsp; Based on the kinds that go into the armpit (axillary) and the ones that go under the forearm to the elbow (Loftstrand)  \
-&emsp; Recommended to be used with the Invisible Connector
+&emsp; Based on the kinds that go into the armpit (axillary) and the ones that go under the forearm to the elbow (Loftstrand)
+
+> [!TIP]
+> 
+> Recommended to be used with the Invisible Connector
 
 ### Body
 - **Rapier Blade**: Catachan "Devil's Claw" Swords, Dueling Swords  \
@@ -247,7 +254,11 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; &emsp; Flat: Less thick, but same width and height  \
 &emsp; &emsp; Slim: Less thick and wide, but same height  \
 &emsp; &emsp; Grip (G) variants of both: Also halves the thickness of whatever hilt you equipped  \
-&emsp; &emsp; &emsp; Unpatched for most other grips so caveat emptor
+&emsp; Grip (G) variants are unpatched for most other grips so caveat emptor (main for MT Ogryn grips)
+
+> [!TIP]
+> 
+> For the Arbitrator's Shield and Maul, recommended to be used with the Invisible Connector
 
 ### Connectors
 - **Invisible Connector**: Thunder Hammers, Crusher  \
