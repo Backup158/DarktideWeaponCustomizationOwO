@@ -13,6 +13,8 @@ v3.0.1
     - Holographic Sights
         - Fixed wonkiness with group indicators being overwritten because of hiding slots
         - Aligned Vortex Razor sights for Exterminator Shotguns
+    - Prismatic Sights: Specifical for Exterminator Shotguns
+        - Aligned ACOG forwards/backwards when aiming through main sights
 
 # 2025-07-26
 v3.0.0
