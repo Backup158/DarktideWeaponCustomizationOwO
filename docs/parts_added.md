@@ -15,7 +15,7 @@ Parts are prefixed with `OwO` in the customization menu.
 
 ### Muzzles
 
-- **Suppressors**: Infantry/Braced/Vigilant Autoguns, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Combat Shotguns, Quickdraw Stub Revolvers  \
+- **Suppressors**: Infantry/Braced/Vigilant Autoguns, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Combat Shotguns, Exterminator Shotguns, Quickdraw Stub Revolvers  \
   &emsp; 1 and 2 are generic suppressors  \
   &emsp; 3 is based on the PBS-1  \
   &emsp; 4 and 5 are different generic suppressors, but they're bigger and more metallic
@@ -44,11 +44,11 @@ Parts are prefixed with `OwO` in the customization menu.
 &emsp; &emsp; Long goes a bit beyond that.
 
 ### Foregrips
-- **Tactical Foregrips**: Infantry/Braced/Vigilant Autoguns  \
+- **Tactical Foregrips**: Infantry/Braced/Vigilant Autoguns, Combat Shotguns, Exterminator Shotguns  \
 &emsp; Adds Angled Foregrips  \
 &emsp; &emsp; Based on the iconic Magpul angled grip  \
 &emsp; &emsp; Some generic slanted grips
-- **Straight Foregrips**: Infantry/Braced/Vigilant Autoguns  \
+- **Straight Foregrips**: Infantry/Braced/Vigilant Autoguns, Combat Shotguns, Exterminator Shotguns  \
 &emsp; Adds Generic Grips, Braced Autogun Grips, Bolter Grips, Laspistol Grips, Flamer Grips, Knife Handle Grips (Normal and Stubby), Ogryn Cleaver Grips, "Devil's Claw" Combat Sword Grips  \
 &emsp; Foregrips perpendicular to the barrel, which will clip with your off hand (this is why the MT plugin uses slanted foregrips).
 
@@ -95,10 +95,10 @@ Additional slot to add to or replace the original receiver. These can get super 
 > 
 > KNOWN ISSUE: The RAW versions have unusable scopes. There's way too many scopes to manually fix, especially considering that this attachment started off as a joke. They work fine on the other variants (those have fucky barrels and float in your hands). Such is the way of tradeoffs.
 
-- **Bolt Action Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
+- **Bolt Action**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; Adds a grip to the back to mimic a bolt
-- **MAS-49 Helbore Receivers**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
-&emsp; Makes the rear blockier and metallic... er (it's the dovetail rail)  \
+- **MAS-49 Dovetail Rail**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
+&emsp; Makes the rear blockier and metallic... er  \
 - **Massive Slide**: Heavy Laspistols  \
 &emsp; (WIP) Makes the top a giant slide. Moves magazine inside the grip (with a little bulge :3). Be warned when using this because I only spent an hour before deciding I didn't care enough.  \
 &emsp; Fallout 4 10mm lookin ass mf
@@ -106,6 +106,13 @@ Additional slot to add to or replace the original receiver. These can get super 
 > [!WARNING]
 > 
 > KNOWN ISSUE: Has a random magazine in first person
+
+- **Slim Slide**: Heavy Laspistols  \
+&emsp; (WIP) Makes the top a shorter, less wide slide. Moves magazine inside the grip (with a little bulge :3). Be warned when using this because I gave up after a few hours of making this.
+
+> [!WARNING]
+> 
+> KNOWN ISSUE: Floating default parts (trigger, glowing magazine well, and switches on the side)
 
 ### Sights
 - Sight_2, **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers  \
@@ -122,14 +129,14 @@ Additional slot to add to or replace the original receiver. These can get super 
 - **M16 Carry Handle Irons**: Infantry/Braced/Vigilant Autoguns  \
 &emsp; Versions with and without the rear elevation wheel since I don't think a1's have them.  \
 &emsp; Sight aligned with M16 Barrels (Tall).
-- **Holographic Sights with optional Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
+- **Holographic Sights with optional Magnifier**: Braced/Infantry/Vigilant Autoguns, Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Exterminator Shotguns, Snubnosed Revolvers  \
 &emsp; Based on EOTech HWS and Vortex Razor AMG.  \
 &emsp; Adds standalone holographic sight, holo with magnifier to the side, and holo with magnifier lined up (with options for 2 zoom levels).  \
 &emsp; You can choose all 3 sight pictures by using the sight_2 options from the MT Plugin.  \
 &emsp; Holo with magnifier lined up includes variants for zoom.  \
 &emsp; Includes short variants that doesn't clip with the receiver, but blocks more of the sight picture.  \
 &emsp; Supports the Volleygun receivers from Syn's Edits.
-- **Prismatic Sights with optional Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Snubnosed Revolvers  \
+- **Prismatic Sights with optional Red Dot Sight**: Braced/Infantry/Vigilant Autoguns, Infantry/Helbore/Recon Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Exterminator Shotguns, Snubnosed Revolvers  \
 &emsp; Based on Trijicon ACOG (Advanced Combat Optical Gunsight) and SUSAT (Small Unit Small Arms, Trilux).  \
 &emsp; Adds standalone prism sight and prism sight with a RDS stacked on top (both having options for 2 zoom levels).  \
 &emsp; &emsp; Includes backwards variants where it's placed closer to the back of the weapon; certain (small) weapons don't have enough space to do this so both positions are the same.  \
@@ -142,7 +149,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 
 > [!WARNING]
 > 
-> KNOWN ISSUE: SUSATs will steal the lasers from lasguns and shotguns (???).
+> KNOWN ISSUE: SUSATs will steal the shot trails from lasguns and shotguns (???).
 
 - **Classic Telescopic Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; Soviet PU Scopes  \
@@ -160,7 +167,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; Recon stocks with revolver grips, based on Elysian Drop Troop sniper lasguns.  \
 &emsp; Anti-materiel rifle stocks, based on the Barrett M82 with the rear grip.  \
 &emsp; These will clip into your hands during regular use, which why the other plugins use slanted grips
-- **Tactical Stocks**: Braced/Infantry/Vigilant Autoguns, Autopistols, Infantry Lasguns, Bolter, Bolt Pistol, Combat Shotguns   \
+- **Tactical Stocks**: Braced/Infantry/Vigilant Autoguns, Autopistols, Infantry Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Exterminator Shotguns   \
 &emsp; Skeletal stock  \
 &emsp; Folded stocks: Stock attached to a hinge and folded to the left or right  \
 &emsp; Folded stocks (natural): Stocks with hinges built-in. Folded left/right/under
@@ -176,7 +183,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 > For example, using an straight ogryn foregrip with a lasgun grip (stock) will make a giant straight ogryn foregrip. Using a straight laspistol foregrip with an MT plasmagun grip (stock) is fine, however.
 > Fixing this would take much more time and effort I'd like to put into this single attachment, especially when most of us just us the angled foregrips
 
-- Technically `stock_2`, **Big Stocks**: Combat Shotguns  \
+- Also `stock_2`, **Big Stocks!**: Combat Shotguns, Exterminator Shotguns  \
 &emsp; Rifle stocks sized up
 
 ### Magazines
@@ -206,7 +213,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 - **Trigger Guard Laser**: Heavy Laspistols, Quickdraw Stub Revolvers  \
 &emsp; (WIP) Moves the laser pointer in front of the trigger guard.
 
-> [!NOTE]
+> [!IMPORTANT]
 > 
 > The lasers will NOT work unless you modify files in weapon customization manually.
 > \
@@ -249,7 +256,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; Tantos are basically the MT Combat Sword blades but skinnier and shorter, so I didn't bother aligning them outside the default case.
 
 ### Blades
-- **Slim Blades**: Power Swords, Catachan "Devil's Claw" Swords \
+- **Slim Blades**: Power Swords, Catachan "Devil's Claw" Swords, Shock Maul and Suppression Shield \
 &emsp; 1h Power Sword blades and "Devil's Claw" blades scaled down  \
 &emsp; &emsp; Flat: Less thick, but same width and height  \
 &emsp; &emsp; Slim: Less thick and wide, but same height  \
@@ -261,7 +268,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 > For the Arbitrator's Shield and Maul, recommended to be used with the Invisible Connector
 
 ### Connectors
-- **Invisible Connector**: Thunder Hammers, Crusher  \
+- **Invisible Connector**: Thunder Hammers, Crusher, Shock Maul and Suppression Shield  \
 &emsp; Makes the connector invisible. That's it. \
 &emsp; It doesn't extend the shaft on its own; it's meant to be used with other parts (namely the tacax spikes)
 
