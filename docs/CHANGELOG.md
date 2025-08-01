@@ -1,7 +1,15 @@
 # 2025-UNRELEASED
 v3.0.1
 
-
+- Added attachments
+    - Polearms heads: Becs de Corbin expansion
+        - Added second half of the crow head
+        - Added variants for each of the front heads
+        - Resized crow heads to be more spike-like
+- Reworked attachments
+    - Slim blades: the ones for Arbitrator shield/mauls
+        - Realigned blades vertically
+        - Flipped dclaw blades to face forwards
 
 # 2025-07-26
 v3.0.0
