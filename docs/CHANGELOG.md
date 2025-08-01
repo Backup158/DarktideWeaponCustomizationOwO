@@ -1,5 +1,5 @@
 # 2025-UNRELEASED
-v3.0.1
+v3.1.0
 
 - Added attachments
     - Polearms heads: Becs de Corbin expansion
