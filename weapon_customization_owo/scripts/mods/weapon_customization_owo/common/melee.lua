@@ -275,7 +275,10 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 		{id = "owo_polearm_head_bc_02", name = "OwO Bec de Corbin 2"},
 		{id = "owo_polearm_head_bc_03", name = "OwO Bec de Corbin 3"},
 		{id = "owo_polearm_head_bc_04", name = "OwO Bec de Corbin 4"},
-		{id = "owo_polearm_head_bc_05", name = "OwO CAW CAW MOTHERF-"},
+		{id = "owo_polearm_head_bc_01b", name = "OwO CAW MOTHERF-"},
+		{id = "owo_polearm_head_bc_02b", name = "OwO CAW CAW MOTHERF-"},
+		{id = "owo_polearm_head_bc_03b", name = "OwO CAW CAW CAW MOTHERF-"},
+		{id = "owo_polearm_head_bc_04b", name = "OwO CAW CAW CAW CAW MOTHERF-"},
 		{id = "owo_polearm_head_l_01", name = "OwO Lucerne 1"},
 		{id = "owo_polearm_head_l_02", name = "OwO Lucerne 2"},
 		{id = "owo_polearm_head_l_03", name = "OwO Lucerne 3"},
@@ -369,7 +372,43 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
-		owo_polearm_head_bc_05 = {
+		owo_polearm_head_bc_01b = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_01",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_03",
+				bladeshroudac4 = "owo_polearm_head_helper_4_03",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_bc_02b = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_02",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_03",
+				bladeshroudac4 = "owo_polearm_head_helper_4_03",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_bc_03b = {
+			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_03",
+				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_03",
+				bladeshroudac4 = "owo_polearm_head_helper_4_03",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_polearm_head_bc_04b = {
 			model = _item_melee.."/heads/hatchet_head_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
@@ -616,7 +655,7 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 	})
 end
 function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
-	local _owo_polearm_bec_heads = "owo_polearm_head_bc_01|owo_polearm_head_bc_02|owo_polearm_head_bc_03|owo_polearm_head_bc_04|owo_polearm_head_bc_05"
+	local _owo_polearm_bec_heads = "owo_polearm_head_bc_01|owo_polearm_head_bc_02|owo_polearm_head_bc_03|owo_polearm_head_bc_04|owo_polearm_head_bc_01b|owo_polearm_head_bc_02b|owo_polearm_head_bc_03b|owo_polearm_head_bc_04b"
 	local _owo_polearm_lucerne_heads = "owo_polearm_head_l_01|owo_polearm_head_l_02|owo_polearm_head_l_03"
 	local _owo_polearm_pollax_shovel_heads = "owo_polearm_head_p_04|owo_polearm_head_p_05|owo_polearm_head_p_06|owo_polearm_head_p_07|owo_polearm_head_p_08|owo_polearm_head_p_09"
 	local _owo_polearm_pollax_misc_heads = "owo_polearm_head_p_01|owo_polearm_head_p_02|owo_polearm_head_p_03"
@@ -632,20 +671,20 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 		-- ######
 		-- Overwrites
 		--		axe pommel flared
-		{	dependencies =  	{ "owo_polearm_head_bc_02" },
+		{	dependencies =  	{ "owo_polearm_head_bc_02|owo_polearm_head_bc_02b" },
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.1, 1.1, 1.5 ) },
 		},
 		--		Shovel head
-		{	dependencies =  	{ "owo_polearm_head_bc_03" },
+		{	dependencies =  	{ "owo_polearm_head_bc_03|owo_polearm_head_bc_03b" },
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.01, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 0.7, 1.8 ) },
 		},
 		--		axe head
-		{	dependencies =  	{ "owo_polearm_head_bc_04" },
+		{	dependencies =  	{ "owo_polearm_head_bc_04|owo_polearm_head_bc_04b" },
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 1.6, 1.7 ) },
 		},
-		{	dependencies =  	{ "owo_polearm_head_bc_05" },
-			bladeshroudac3 =	{ offset = true, position = vector3_box(0.006, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(2.0, 2.3, 2.0 ) },
-			bladeshroudac4 =	{ offset = true, position = vector3_box(0.004, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(-2.0, 2.3, 2.0 ) },
+		{	dependencies =  	{ "owo_polearm_head_bc_01b|owo_polearm_head_bc_02b|owo_polearm_head_bc_03b|owo_polearm_head_bc_04b" },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0.0, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.3, 2.0 ) },
+			bladeshroudac4 =	{ offset = true, position = vector3_box(0.0, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(-1.3, 2.3, 2.0 ) },
 		},
 		-- Default is built for the psword pommel
 		{	dependencies =  	{ _owo_polearm_bec_heads },
