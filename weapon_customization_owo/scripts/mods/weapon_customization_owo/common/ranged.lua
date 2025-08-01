@@ -2924,7 +2924,7 @@ end
 function mod.owo_helbore_mas49(variant_id)
 	mod.inject_attachments_owo(variant_id, "receiverac1", {
 		{id = "owo_helbore_mas49_01", name = "OwO MAS-49 Dovetail", no_randomize = true},
-		{id = "owo_helbore_mas49_01_s", name = "OwO MAS-49 Slim Body"},
+		{id = "owo_helbore_mas49_01_s", name = "OwO MAS-49 Dovetail (Slim Body)"},
 	})
 	mod.inject_attachments_owo(variant_id, "receiverac2", {
 		{id = "owo_helbore_mas49_knob", name = "OwO MAS-49 Knob", no_randomize = true},
