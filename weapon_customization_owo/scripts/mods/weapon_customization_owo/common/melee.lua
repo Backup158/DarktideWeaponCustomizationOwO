@@ -670,21 +670,21 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 		-- Head: POLEARM HEADS
 		-- ######
 		-- Overwrites
-		--		axe pommel flared
+		--		very studded axe pommel flared
 		{	dependencies =  	{ "owo_polearm_head_bc_02|owo_polearm_head_bc_02b" },
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.1, 1.1, 1.5 ) },
 		},
-		--		Shovel head
+		--		Shovel pommel head
 		{	dependencies =  	{ "owo_polearm_head_bc_03|owo_polearm_head_bc_03b" },
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.01, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.8, 0.7, 1.8 ) },
 		},
-		--		axe head
+		--		nipple studded axe pommel head
 		{	dependencies =  	{ "owo_polearm_head_bc_04|owo_polearm_head_bc_04b" },
 			bladeshroudac =		{ offset = true, position = vector3_box(0, 0.02, 0.16), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.6, 1.6, 1.7 ) },
 		},
 		{	dependencies =  	{ "owo_polearm_head_bc_01b|owo_polearm_head_bc_02b|owo_polearm_head_bc_03b|owo_polearm_head_bc_04b" },
-			bladeshroudac3 =	{ offset = true, position = vector3_box(0.0, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 2.3, 2.0 ) },
-			bladeshroudac4 =	{ offset = true, position = vector3_box(0.0, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(-1.3, 2.3, 2.0 ) },
+			bladeshroudac3 =	{ offset = true, position = vector3_box(0.0, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.3, 3.3, 2.0 ) },
+			bladeshroudac4 =	{ offset = true, position = vector3_box(0.0, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(-1.3, 3.3, 2.0 ) },
 		},
 		-- Default is built for the psword pommel
 		{	dependencies =  	{ _owo_polearm_bec_heads },
