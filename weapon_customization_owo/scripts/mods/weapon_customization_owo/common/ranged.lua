@@ -4650,12 +4650,13 @@ function mod.fixes_owo_holosight(variant_id)
 			sightac3 =      		{ offset = true, position = vector3_box(0, -0.032, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.05, 0.666, 1.282) },
 		},
 		-- _owo_all_vortex_sights
-		{   dependencies =  		{ "owo_sight_group_indicator_holosight_razor", },
+		{   dependencies =  		{ "owo_sight_group_indicator_holosight_razor", _owo_all_vortex_sights },
 			rail =          		{ offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			sightac1 =      		{ offset = true, position = vector3_box(-0.002, -0.018, 0.004), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.292) },
 			sightac2 =      		{ offset = true, position = vector3_box(0.00, -0.018, 0.004), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.56, 0.286) },
 			sightac3 =      		{ offset = true, position = vector3_box(0, -0.032, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.05, 0.666, 0.884) },
 			sightac4 =      		{ offset = true, position = vector3_box(0, -0.002, 0.002), rotation = vector3_box(90, -90, 180), scale = vector3_box(0.98, 0.24, 0.16) },
+			sightac5 =				{ hide_mesh = { "sightac5", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }},
 			sight_2 =           	{ parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
 		},
 		--  Magnifier
