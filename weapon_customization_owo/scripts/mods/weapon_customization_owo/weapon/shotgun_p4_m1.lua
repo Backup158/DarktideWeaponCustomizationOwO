@@ -216,7 +216,7 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =      { "owo_sight_group_indicator_holosight_eotech", _owo_magnifier_side_eotech_sights },
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
-        sight =             { offset = true, position = vector3_box(0, 0.11, 0.136), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
+        sight =             { offset = true, position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1.3) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.042, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
         --scope_offset =      { offset = true, position = vector3_box(0.0005, -0.0, -0.0165), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
