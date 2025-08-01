@@ -32,7 +32,7 @@ local table_of_syn_slots = {
     "bladeshroudac",
     "bladeshroudac2",
     "bladeshroudac3",
-    --"bladeshroudac4",
+    "bladeshroudac4",
     --"bladeshroudac5",
     --"bladeshroudac6",
     --"bladeshroudac7",

@@ -318,9 +318,9 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 		{id = "owo_polearm_head_helper_3_02", name = "OwO Polearm'vesa ac3 pick hammer", no_randomize = true},
 		{id = "owo_polearm_head_helper_3_03", name = "OwO Polearm'vesa ac3 pick crow", no_randomize = true},
 	})
-	--mod.inject_attachments_owo(variant_id, "bladeshroudac4", {
-	--	{id = "owo_polearm_head_helper_4_03", name = "OwO Polearm'vesa ac3 pick crow", no_randomize = true},
-	--})
+	mod.inject_attachments_owo(variant_id, "bladeshroudac4", {
+		{id = "owo_polearm_head_helper_4_03", name = "OwO Polearm'vesa ac3 pick crow", no_randomize = true},
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -375,7 +375,7 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 			automatic_equip = {
 				bladeshroud = "owo_polearm_head_helper_0_01", bladeshroudac = "owo_polearm_head_helper_1_04",
 				bladeshroudac2 = "owo_polearm_head_helper_2_01", bladeshroudac3 = "owo_polearm_head_helper_3_03",
-				--bladeshroudac4 = "owo_polearm_head_helper_4_03",
+				bladeshroudac4 = "owo_polearm_head_helper_4_03",
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -609,11 +609,10 @@ function mod.owo_polearm_head(variant_id, given_type, given_parent)
 		},
 		-- Bladeshroudac4: rear
 		-- Crow's Beak half 2
-		-- 	this shit doesn't flip
-		--owo_polearm_head_helper_4_03 = {
-		--	model = _item_ranged.."/emblems/emblemright_02", type = "bladeshroudac4", 
-		--	mesh_move = false, parent = current_type,
-		--},
+		owo_polearm_head_helper_4_03 = {
+			model = _item_ranged.."/emblems/emblemright_15", type = "bladeshroudac4", 
+			mesh_move = false, parent = current_type,
+		},
 	})
 end
 function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
@@ -646,7 +645,7 @@ function mod.fixes_owo_polearm_head(variant_id, given_type, given_parent)
 		},
 		{	dependencies =  	{ "owo_polearm_head_bc_05" },
 			bladeshroudac3 =	{ offset = true, position = vector3_box(0.006, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(2.0, 2.3, 2.0 ) },
-			--bladeshroudac4 =	{ offset = true, position = vector3_box(0.004, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(2.0, 2.0, 1.6 ) },
+			bladeshroudac4 =	{ offset = true, position = vector3_box(0.004, -0.048, 0.16), rotation = vector3_box(0, 0, 180), scale = vector3_box(-2.0, 2.3, 2.0 ) },
 		},
 		-- Default is built for the psword pommel
 		{	dependencies =  	{ _owo_polearm_bec_heads },
