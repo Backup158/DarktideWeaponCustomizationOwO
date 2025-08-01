@@ -276,7 +276,7 @@ mod.mt.inject_fixes(this_variant, {
         --scope_offset =      { offset = true, position = vector3_box(0, 0.0, -0.0237), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        scope_offset =      { offset = true, position = vector3_box(-0.042, -0.02, 0.085), rotation = vector3_box(-5, 0, -9), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(-0.052, -0.02, 0.085), rotation = vector3_box(-5, 0, -8), lense_transparency = true },
         sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
     {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
