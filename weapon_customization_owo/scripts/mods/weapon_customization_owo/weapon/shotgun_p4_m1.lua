@@ -260,7 +260,7 @@ mod.mt.inject_fixes(this_variant, {
     --  --------------------------------------------
     --  Patch to hide alt viewmodel sights
     {   dependencies =      { --"owo_sight_group_indicator_prismatic_sight_acog", 
-            _owo_sight_2s, },
+            _owo_sight_2s, _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.046, 0.028), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
     --  RMR Aim
