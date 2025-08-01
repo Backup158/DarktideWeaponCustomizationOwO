@@ -9,7 +9,7 @@ v3.0.1
 - Reworked attachments
     - Slim blades: the ones for Arbitrator shield/mauls
         - Realigned blades vertically
-        - Flipped dclaw blades to face forwards
+        - Flipped DClaw blades to face forwards
 
 # 2025-07-26
 v3.0.0
