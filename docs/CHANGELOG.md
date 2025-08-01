@@ -7,9 +7,12 @@ v3.0.1
         - Added variants for each of the front heads
         - Resized crow heads to be more spike-like
 - Reworked attachments
-    - Slim blades: the ones for Arbitrator shield/mauls
+    - Slim blades: Specifically for Arbitrator shield/mauls
         - Realigned blades vertically
         - Flipped DClaw blades to face forwards
+    - Holographic Sights
+        - Fixed wonkiness with group indicators being overwritten because of hiding slots
+        - Aligned Vortex Razor sights for Exterminator Shotguns
 
 # 2025-07-26
 v3.0.0
