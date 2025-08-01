@@ -231,19 +231,17 @@ mod.mt.inject_fixes(this_variant, {
     {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_sight_2s, },
         sight_2 =           { parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}} },
     },
-    {   dependencies =      { --"owo_sight_group_indicator_holosight_razor", 
-    _owo_no_magnifier_vortex_sights, },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_no_magnifier_vortex_sights, },
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.042, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         --scope_offset =      { offset = true, position = vector3_box(0, -0.0, -0.022), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         -- to aim with, but the shell rack (top) doesn't rotate much
         -- sight_2 needs to be counter rotated and shift a bit right/down, since it's not looking straight through the sights
-        scope_offset =      { offset = true, position = vector3_box(-0.076, -0.02, 0.105), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
-        sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(1, 0, 1), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
+        scope_offset =      { offset = true, position = vector3_box(-0.072, -0.02, 0.105), rotation = vector3_box(-5, 0, -7), lense_transparency = true },
+        sight_2 =           { parent = "sight", position = vector3_box(0.00, -0.02, 0.004), rotation = vector3_box(2.5, 0, 2.5), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6,}}, },
     },
     --  Magnifier moves sight forwards
-    {   dependencies =      { --"owo_sight_group_indicator_holosight_razor", 
-    _owo_magnifier_vortex_sights, },
+    {   dependencies =      { "owo_sight_group_indicator_holosight_razor", _owo_magnifier_vortex_sights, },
         rail =              { offset = true, position = vector3_box(-0.032, 0.05, 0.14), rotation = vector3_box(0, -45, 0), scale = vector3_box(1, 1, 1) },
         sight =             { offset = true, position = vector3_box(0, 0.11, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1) },
         sight_secondary =   { offset = true, position = vector3_box(0, -0.082, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(0.95, 0.184, 0.104) },
