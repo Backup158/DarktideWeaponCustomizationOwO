@@ -222,11 +222,16 @@ Additional slot to add to or replace the original receiver. These can get super 
 > KNOWN ISSUE: Variants 2/3/M do not have the spike aligned properly, so there's a second axe head in the middle of these
 
 - **Polearm Heads**: Thunder Hammers, Crusher, Delver's Pickaxes  \
-&emsp; Based on Becs de Corbin, Lucerne Hammers, and Poleaxes
+&emsp; Based on Becs de Corbin, Lucerne Hammers, and Poleaxes  \
+&emsp; &emsp; Becs de Corbin/The Crow's Beak: A hammer head with a spike on top and a curved pick in the back  \
+&emsp; &emsp; Lucerne Hammer: Like a Bec de Corbin with a longer, thinner back pick and with a hammer head that typically has more protrusions  \
+&emsp; &emsp; Poleaxes/Pollaxes: An axe head with a wide spike on top and a hammer in the back  \
+&emsp; Recommended to be used with the Invisible Connector
 
 - **Crutches**: Thunder Hammers, Crusher  \
 &emsp; Yes, the kind people with broken legs use  \
-&emsp; Based on the kinds that go into the armpit (axillary) and the ones that go under the forearm to the elbow (Loftstrand)
+&emsp; Based on the kinds that go into the armpit (axillary) and the ones that go under the forearm to the elbow (Loftstrand)  \
+&emsp; Recommended to be used with the Invisible Connector
 
 ### Body
 - **Rapier Blade**: Catachan "Devil's Claw" Swords, Dueling Swords  \
