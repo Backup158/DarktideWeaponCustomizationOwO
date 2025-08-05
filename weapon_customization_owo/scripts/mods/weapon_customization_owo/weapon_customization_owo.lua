@@ -40,6 +40,11 @@ mod:command("ewc_reload", "Call reload definitions", function ()
 	-- it'll be regenerated on the next game tick
 	-- WAIT WHAT
 
+	-- Open and close inventory to reequip weapon
+	local ui_manager = Managers.ui
+	ui_manager:open_view("inventory_weapon_details_view")
+	ui_manager:close_view("inventory_weapon_details_view")
+
 	mod:echo("take me out the oven papi~")
 end)
 
