@@ -35,6 +35,11 @@ mod:command("ewc_reload", "Call reload definitions", function ()
 		if callback and type(callback) == "function" then callback() end
 	end
 
+	-- Destroy cache
+	wc.data_cache:destroy()
+	-- it'll be regenerated on the next game tick
+	-- WAIT WHAT
+
 	mod:echo("take me out the oven papi~")
 end)
 
