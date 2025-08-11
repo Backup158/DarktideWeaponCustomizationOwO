@@ -4,6 +4,10 @@ v3.2.0
 - Newly supported weapons:
     - Shock Maul: Slim Blades, Invisible Connector, Tacax Spikes, Polearm Heads
     - Arbites Shock Maul: Slim Blades, Invisible Connector, Tacax Spikes, Polearm Heads
+- Refactored attachments:
+    - Dreg Gunner Barrel
+        - Universalized fixes
+        - Changed parents for helpers for modularity and easier patching
 
 # 2025-07-31
 v3.1.0
