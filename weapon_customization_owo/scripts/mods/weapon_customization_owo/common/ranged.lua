@@ -1268,7 +1268,7 @@ function mod.owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
 		},
 		owo_dreg_shroud_01 = {
 			model = _item_ranged.."/barrels/stubgun_ogryn_barrel_01", type = "barrelshroud", 
-			mesh_move = false, parent = current_parent
+			mesh_move = false, parent = current_type
 		},
 		--[[owo_dreg_shroudac_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = "barrelshroudac", 
@@ -1276,15 +1276,36 @@ function mod.owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
 		},]]
 		owo_dreg_shroudac2_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_02", type = "barrelshroudac2", 
-			mesh_move = false, parent = 'barrel'
+			mesh_move = false, parent = current_type
 		},
 		owo_dreg_shroudac3_01 = {
 			model = _item_ranged.."/underbarrels/boltgun_rifle_underbarrel_03", type = "barrelshroudac3", 
-			mesh_move = false, parent = 'barrel'
+			mesh_move = false, parent = current_type
 		},
 		owo_dreg_shroudac4_01 = {
 			model = _item_ranged.."/underbarrels/shotgun_rifle_underbarrel_04", type = "barrelshroudac4", 
-			mesh_move = false, parent = 'barrel'
+			mesh_move = false, parent = current_type
+		},
+	})
+end
+function mod.fixes_owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
+	local current_type = given_type or "barrel"
+	local current_parent = given_parent or "receiver"
+
+	mod.mt.inject_fixes(variant_id, {
+		{   dependencies =  	{ "owo_dreg_barrel_01" },
+			-- barrel: inner barrel
+			barrel =        	{ offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
+			-- barrelshroud: outer barrel with front post
+			barrelshroud =  	{ offset = true,    position = vector3_box(0, 0, -0.008),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.76, 1.1, 1.1) }, 
+			-- bayonet lug
+			barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0, -0.115),       rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 2.45, 0.8) }, 
+			-- hand grip to extend receiver
+			barrelshroudac3 =   { offset = true,    position = vector3_box(0, 0, -0.215),       rotation = vector3_box(0, 0, 0),    scale = vector3_box(2, 1.5, 2.5) }, 
+			-- hand grip (top)
+			barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.153, 0.115),    rotation = vector3_box(180, 0, 0),  scale = vector3_box(2.4, 0.969, 2.85) }, 
+			flashlight =        { offset = true,     position = vector3_box(0.096, 0.17, 0.0),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.7, 2.7, 2.7) },
+			muzzle =            { offset = true,     position = vector3_box(0, 1, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.2, 2.2, 2.2) },
 		},
 	})
 end

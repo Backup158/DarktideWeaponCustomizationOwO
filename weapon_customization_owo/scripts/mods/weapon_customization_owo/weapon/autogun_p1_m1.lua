@@ -273,6 +273,8 @@ mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
 
+mod.fixes_owo_dreg_gunner_barrel(this_variant)
+
 mod.fixes_owo_dreg_gunner_bayonet(this_variant)
 mod.fixes_owo_historical_bayonet(this_variant)
 mod.fixes_owo_underbarrel_gl(this_variant)
@@ -371,36 +373,16 @@ mod.mt.inject_fixes(this_variant, {
     --  Iag
     {   dependencies =  { "owo_dreg_barrel_01", _infantry_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
-        barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
     },
     --  Brautos
     {   dependencies =  { "owo_dreg_barrel_01", _braced_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, 0.025),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
-        barrelshroud =  { offset = true,    position = vector3_box(0, 0, 0.025),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
     },
     --  Headhunters
     {   dependencies =  { "owo_dreg_barrel_01", _vigilant_autogun_receivers, },
         barrel =        { offset = true,    position = vector3_box(0, 0, -0.012),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
-        barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.012),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24)}, 
     },
-    --  Default
-    {   dependencies =  { "owo_dreg_barrel_01", },
-        barrel =        { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.27, 0.63, 0.27) },
-        barrelshroud =  { offset = true,    position = vector3_box(0, 0, -0.014),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.24, 0.7, 0.24) }, 
-    },
-    --  Dreg Gunner Helpers
-	{   dependencies =  { "owo_dreg_barrel_01" },
-        -- barrel: inner barrel
-        -- barrelshroud: outer barrel with front post
-        -- bayonet lug
-        barrelshroudac2 =   { offset = true,    position = vector3_box(0, 0, -0.115),       rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 2.45, 0.8) }, 
-        -- hand grip to extend receiver
-        barrelshroudac3 =   { offset = true,    position = vector3_box(0, 0, -0.215),       rotation = vector3_box(0, 0, 0),    scale = vector3_box(2, 1.5, 2.5) }, 
-        -- hand grip (top)
-        barrelshroudac4 =   { offset = true,    position = vector3_box(0, 0.153, 0.115),    rotation = vector3_box(180, 0, 0),  scale = vector3_box(2.4, 0.969, 2.85) }, 
-        flashlight =        { offset = true,     position = vector3_box(0.096, 0.17, 0.0),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.7, 2.7, 2.7) },
-        muzzle =            { offset = true,     position = vector3_box(0, 1, 0),            rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.2, 2.2, 2.2) },
-    },
+    -- Rest handled universally
     -- Helbore bayonets
 	{   dependencies =  { "owo_dreg_barrel_01", "autogun_bayonet_01|autogun_bayonet_02" },
         bayonet = { offset = true,   position = vector3_box(0, 0.699, -0.095),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.5, 1.7, 3.0) },
