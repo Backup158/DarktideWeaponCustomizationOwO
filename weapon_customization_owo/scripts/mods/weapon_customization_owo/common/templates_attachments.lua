@@ -39,5 +39,8 @@ function mod.fixes_owo_<NAME>(variant_id, given_type, given_parent)
 		-- ######
 		-- Slot: NAME
 		-- ######
+		{ 	dependencies = 		{ "" }, 
+			[current_type] = 	{ offset = true, position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
+		},
 	})
 end
