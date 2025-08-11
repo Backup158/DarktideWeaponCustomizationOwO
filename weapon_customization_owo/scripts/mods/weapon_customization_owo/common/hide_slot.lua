@@ -24,8 +24,8 @@ mod.hide_slot_fixes = {
     ["barrelshroudac"] = "owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08|owo_plasma_krieg_ac1_01|owo_plasma_krieg_ac1_02|owo_plasma_krieg_ac1_03|owo_plasma_krieg_ac1_04|owo_plasma_krieg_ac1_05|owo_plasma_krieg_ac1_06|owo_plasma_krieg_ac1_07|owo_plasma_krieg_ac1_08|owo_plasma_krieg_ac1_09|owo_smg_ac1_01",
     ["barrelshroudac2"] = "owo_dreg_shroudac2_01|owo_m16_barrelshroudac2_01|owo_smg_ac2_01",
     ["barrelshroudac3"] = "owo_dreg_shroudac3_01|owo_m16_barrelshroudac3_01|owo_smg_ac3_01",
-    ["barrelshroudac4"] = "owo_dreg_shroudac4_01|owo_m16_barrelshroudac4_01",
-    ["barrelshroudac5"] = "owo_m16_barrelshroudac5_01",
+    ["barrelshroudac4"] = "owo_dreg_shroudac4_01|owo_m16_barrelshroudac4_01|owo_smg_ac4_01",
+    ["barrelshroudac5"] = "owo_m16_barrelshroudac5_01|owo_smg_ac5_01",
     ["barrelshroudac6"] = "owo_m16_barrelshroudac6_01",
     -- Foregrips
     ["foregripac1"] = "owo_tactical_foregrip_ac1_01|owo_foregrip_group_indicator_heterosexual_gun_grip|owo_foregrip_group_indicator_heterosexual_ogryn_grip|owo_foregrip_group_indicator_heterosexual_knife_grip|owo_foregrip_group_indicator_heterosexual_dclaw_grip",
