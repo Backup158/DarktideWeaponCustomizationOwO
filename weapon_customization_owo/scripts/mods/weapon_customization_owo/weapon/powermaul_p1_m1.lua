@@ -31,9 +31,9 @@ end
 local table_of_syn_slots = {
 	"bladeshroud",
 	"bladeshroudac",
-	--"bladeshroudac2",
-	--"bladeshroudac3",
-	--"bladeshroudac4",
+	"bladeshroudac2",
+	"bladeshroudac3",
+	"bladeshroudac4",
 	--"bladeshroudac5",
 	--"bladeshroudac6",
 	--"bladeshroudac7",
@@ -69,8 +69,12 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+mod.owo_tacax_spike(this_variant, "head", "shaft")
+mod.owo_polearm_head(this_variant, "head", "shaft")
 mod.owo_slim_blade(this_variant, "head", "shaft")
+
 mod.owo_invisible_connector(this_variant)
+
 --mod.owo_crossguard(this_variant, "hilt", "grip")
 
 -- ############################################
@@ -90,6 +94,13 @@ local _owo_slim_dclaw_blades = "owo_slim_dclaw_01|owo_slim_dclaw_02|owo_slim_dcl
 local _owo_slim_dclaw_g_blades = "owo_slim_dclaw_01g|owo_slim_dclaw_02g|owo_slim_dclaw_03g|owo_slim_dclaw_04g|owo_slim_dclaw_05g|owo_slim_dclaw_06g|owo_slim_dclaw_07g|owo_slim_dclaw_08g"
 local _owo_slim_all_dclaw_blades = _owo_slim_dclaw_blades.."|".._owo_slim_dclaw_g_blades
 local _owo_all_dclaw_g_blades = _owo_flat_dclaw_g_blades.."|".._owo_slim_dclaw_g_blades
+local _owo_all_tacax_spike_heads = "owo_tacax_spike_01|owo_tacax_spike_02|owo_tacax_spike_03|owo_tacax_spike_04|owo_tacax_spike_05|owo_tacax_spike_06|owo_tacax_spike_07"
+local _owo_polearm_bec_heads = "owo_polearm_head_bc_01|owo_polearm_head_bc_02|owo_polearm_head_bc_03|owo_polearm_head_bc_04|owo_polearm_head_bc_01b|owo_polearm_head_bc_02b|owo_polearm_head_bc_03b|owo_polearm_head_bc_04b"
+local _owo_polearm_lucerne_heads = "owo_polearm_head_l_01|owo_polearm_head_l_02||owo_polearm_head_l_03"
+local _owo_polearm_pollax_shovel_heads = "owo_polearm_head_p_04|owo_polearm_head_p_05|owo_polearm_head_p_06|owo_polearm_head_p_07|owo_polearm_head_p_08|owo_polearm_head_p_09"
+local _owo_polearm_pollax_misc_heads = "owo_polearm_head_p_01|owo_polearm_head_p_02|owo_polearm_head_p_03"
+local _owo_polearm_pollax_heads = _owo_polearm_pollax_shovel_heads.."|".._owo_polearm_pollax_misc_heads
+local _owo_polearm_heads = _owo_polearm_bec_heads.."|".._owo_polearm_lucerne_heads.."|".._owo_polearm_pollax_heads
 
 -- ########
 -- For This Variant Only
@@ -118,6 +129,9 @@ end
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
 --mod.fixes_owo_slim_blade(this_variant, "head", "shaft") -- WAY TOO DIFFERENT
+mod.fixes_owo_polearm_head(this_variant, "head", "shaft")
+mod.fixes_owo_tacax_spike(this_variant, "head", "shaft")
+
 --mod.fixes_owo_crossguard(this_variant)
 
 -- #################
@@ -170,5 +184,30 @@ mod.mt.inject_fixes(this_variant, {
     },
     {   dependencies =  { _owo_slim_dclaw_blades },
         head =          { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.75, 1)},
+    },
+
+    -- ######
+    -- Head: Tacax Spike
+    -- ######
+    -- Lowers it so the actual axehead is where the hammer head is usually
+    --{	dependencies =  { "owo_invisible_connector_01", _owo_all_tacax_spike_heads },
+    --    head =          { offset = true, position = vector3_box(0, 0, 0.13) },
+    --},
+    --{	dependencies =  { _owo_all_tacax_spike_heads },
+    --    head =          { offset = true, position = vector3_box(0, 0, 0.38) },
+    --},
+    {	dependencies =  { _owo_all_tacax_spike_heads },
+        head =          { offset = true, position = vector3_box(0, 0, 0.13) },
+    },
+
+    -- ######
+    -- Head: Polearm heads
+    -- ######
+    -- Raises it so the actual axehead is where the hammer head is usually
+    {	dependencies =  { "owo_invisible_connector_01", _owo_polearm_heads },
+        head =          { offset = true, position = vector3_box(0, 0, 0.14) },
+    },
+    {	dependencies =  { _owo_polearm_heads },
+        head =          { offset = true, position = vector3_box(0, 0, 0.32) },
     },
 })

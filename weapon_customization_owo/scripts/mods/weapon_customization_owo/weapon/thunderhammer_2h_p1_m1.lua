@@ -127,6 +127,7 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =  { _owo_all_tacax_spike_heads },
         head =   { offset = true, position = vector3_box(0, 0, 0.61) },
     },
+    
     -- ######
     -- Head: Polearm heads
     -- ######
