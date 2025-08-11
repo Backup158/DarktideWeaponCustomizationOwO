@@ -6,11 +6,12 @@ mod.wc.KUMQUAT_list = {
 }
 
 -- Functions to create attachments and universal fixes
+-- Slot: Name
 function mod.owo_<NAME>(variant_id, given_type, given_parent)
 	local current_type = given_type or "magazine"
 	local current_parent = given_parent or "receiver"
 
-	mod.inject_attachments_owo(variant_id, "", {
+	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_", name = "OwO "},
 	})
 

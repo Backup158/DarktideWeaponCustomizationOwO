@@ -1311,7 +1311,6 @@ function mod.fixes_owo_dreg_gunner_barrel(variant_id, given_type, given_parent)
 end
 
 -- Barrel: M16 barrels
--- 		Autoguns
 function mod.owo_m16_barrel(variant_id, given_type, given_parent)
 	local current_type = given_type or "barrel"
 	local current_parent = given_parent or "receiver"
@@ -1657,6 +1656,73 @@ function mod.owo_plasma_krieg(variant_id, given_type, given_parent)
 		},
 	})
 
+end
+
+-- Barrel: Submachine Barrels
+function mod.owo_smg_barrel(variant_id, given_type, given_parent)
+	local current_type = given_type or "magazine"
+	local current_parent = given_parent or "receiver"
+
+	mod.inject_attachments_owo(variant_id, "barrelshroud", {
+		{id = "owo_mp5_01", name = "OwO MP5 Barrel"},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroud", {
+		{id = "owo_smg_ac0_01", name = "OwO MP5'vesa "},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac", {
+		{id = "owo_smg_ac1_01", name = "OwO MP5'vesa "},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac2", {
+		{id = "owo_smg_ac2_01", name = "OwO MP5'vesa "},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac3", {
+		{id = "owo_smg_ac3_01", name = "OwO MP5'vesa "},
+	})
+
+	mod.inject_models(variant_id, {
+		-- ### Base Parts ###
+		owo_mp5_01 = {
+			model = _item_ranged.."/barrels/autogun_rifle_barrel_04", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				barrelshroud = "owo_smg_ac0_01", barrelshroudac = "owo_smg_ac1_01",
+				barrelshroudac2 = "owo_smg_ac2_01", barrelshroudac3 = "owo_smg_ac3_01",
+			},
+			hide_mesh = { mod.hide_mesh(current_type) },
+		},
+		-- ### Helper Parts ###
+		-- Barrelshroud
+		--		Actual visible barrel
+		owo_smg_ac0_01 = {
+			model = _item_ranged.."/barrels/autogun_rifle_barrel_ak_02", type = "barrelshroud", 
+			mesh_move = false, parent = current_type,
+		},
+		-- Barrelshroudac
+		owo_smg_ac1_01 = {
+			model = _item_ranged.."/barrels/autogun_rifle_barrel_ak_02", type = "barrelshroudac", 
+			mesh_move = false, parent = current_type,
+		},
+		-- Barrelshroudac2
+		owo_smg_ac2_01 = {
+			model = _item_ranged.."/barrels/autogun_rifle_barrel_ak_02", type = "barrelshroudac2", 
+			mesh_move = false, parent = current_type,
+		},
+		-- Barrelshroudac3
+		owo_smg_ac3_01 = {
+			model = _item_ranged.."/barrels/autogun_rifle_barrel_ak_02", type = "barrelshroudac3", 
+			mesh_move = false, parent = current_type,
+		},
+	})
+end
+function mod.fixes_owo_<NAME>(variant_id, given_type, given_parent)
+	local current_type = given_type or "magazine"
+	local current_parent = given_parent or "receiver"
+
+	mod.mt.inject_fixes(variant_id, {
+		-- ######
+		-- Slot: NAME
+		-- ######
+	})
 end
 
 -- Foregrip: Tactical Foregrips

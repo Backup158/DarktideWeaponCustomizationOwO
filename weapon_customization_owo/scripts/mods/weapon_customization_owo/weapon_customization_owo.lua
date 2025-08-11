@@ -227,6 +227,17 @@ function mod.on_all_mods_loaded()
 	end
 
 	-- ######
+	-- Hide Mesh
+	-- DESCRIPTION: To hide a given mesh completely
+	-- PARAMETER(S):
+	--		string: slot_name
+	-- RETURN: table to be used as an entry in a hide slots = {...}
+	-- ######
+	function mod.hide_mesh(slot_name)
+		return { slot_name, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 }
+	end
+
+	-- ######
 	-- Hide Slot
 	-- DESCRIPTION: To hide unused slots
 	-- 		Not directly injecting them to avoid overhead
