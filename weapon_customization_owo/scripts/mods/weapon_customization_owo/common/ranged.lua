@@ -163,6 +163,11 @@ else
 		"owo_m16_sight_helper_06",
 	}
 end
+mod.wc.add_custom_attachments.barrelshroudac7 = "barrelshroudac7s"
+mod.wc.barrelshroudac7s = {
+	"owo_barrelshroudac7_default",
+	"owo_smg_ac7_01",
+}
 -- FOREGRIP
 mod.mt.table_append(mod.wc.foregrips, {
 	"owo_foregrip_default",
@@ -1684,6 +1689,12 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 	mod.inject_attachments_owo(variant_id, "barrelshroudac5", {
 		{id = "owo_smg_ac5_01", name = "OwO MP5'vesa "},
 	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac6", {
+		{id = "owo_smg_ac6_01", name = "OwO MP5'vesa "},
+	})
+	mod.inject_attachments_owo(variant_id, "barrelshroudac7", {
+		{id = "owo_smg_ac7_01", name = "OwO MP5'vesa "},
+	})
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
@@ -1694,6 +1705,7 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 				barrelshroud = "owo_smg_ac0_01", barrelshroudac = "owo_smg_ac1_01",
 				barrelshroudac2 = "owo_smg_ac2_01", barrelshroudac3 = "owo_smg_ac3_01",
 				barrelshroudac4 = "owo_smg_ac4_01", barrelshroudac5 = "owo_smg_ac5_01", 
+				barrelshroudac6 = "owo_smg_ac6_01", barrelshroudac7 = "owo_smg_ac7_01", 
 			},
 			hide_mesh = { mod.hide_mesh(current_type) },
 		},
@@ -1705,33 +1717,45 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 			mesh_move = false, parent = current_type,
 		},
 		-- Barrelshroudac
-		--		mp5 Handguard
+		--		barrel (bottom and accoutremonts)
 		owo_smg_ac1_01 = {
 			model = _item_ranged.."/barrels/stubgun_heavy_ogryn_barrel_04", type = "barrelshroudac", 
 			mesh_move = false, parent = current_type,
 		},
 		-- Barrelshroudac2
-		--		mp5 Handguard
+		--		mp5 Handguard (bottom)
 		owo_smg_ac2_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "barrelshroudac2", 
 			mesh_move = false, parent = current_type,
 		},
-		-- Barrelshroudac2
-		--		mp5 Handguard
+		-- Barrelshroudac3
+		--		mp5 Handguard (top)
 		owo_smg_ac3_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "barrelshroudac3", 
 			mesh_move = false, parent = current_type,
 		},
-		-- Barrelshroudac3
+		-- Barrelshroudac4
 		--		Charging handle
 		owo_smg_ac4_01 = {
 			model = _item_melee.."/pommels/2h_power_maul_pommel_06", type = "barrelshroudac4", 
 			mesh_move = false, parent = current_type,
 		},
-		-- Barrelshroudac4
+		-- Barrelshroudac5
 		--		Front sight ring
 		owo_smg_ac5_01 = {
 			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_04", type = "barrelshroudac5", 
+			mesh_move = false, parent = current_type,
+		},
+		-- Barrelshroudac6
+		--		Front sight post
+		owo_smg_ac6_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "barrelshroudac6", 
+			mesh_move = false, parent = current_type,
+		},
+		-- Barrelshroudac7
+		--		gas blowback thing plug
+		owo_smg_ac7_01 = {
+			model = _item_melee.."/grips/combat_knife_grip_01", type = "barrelshroudac7", 
 			mesh_move = false, parent = current_type,
 		},
 	})
@@ -1746,15 +1770,22 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 		-- ######
 		{ 	dependencies = 		{ "owo_mp5_01" }, 
 			[current_type] = 	{ offset = true, position = vector3_box(0.0, 0.0, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
+			-- Barrel
+			--	top
 			barrelshroud = 		{ offset = true, position = vector3_box(0.0, 0.2, 0.046), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 0.65, 1.0) },
+			barrelshroudac7 = 	{ offset = true, position = vector3_box(0.0, 0.176, 0.046), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.75, 0.7, 0.5) },
+			--	bottom and connections
 			barrelshroudac = 	{ offset = true, position = vector3_box(0.0, 0.0, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.2, 0.2, 0.2) },
 			-- underbarrel
 			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.185, 0.0), rotation = vector3_box(-170, 0, 180), scale = vector3_box(1.5, 0.85, 0.75) },
-			barrelshroudac3 = 	{ offset = true, position = vector3_box(0.0, 0.185, 0.02), rotation = vector3_box(5, 0, 0), scale = vector3_box(0.76, 0.78, 0.75) },
+			barrelshroudac3 = 	{ offset = true, position = vector3_box(0.0, -0.136, 0.02), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.81, 1.07, 0.6) },
 			-- Charging handle
-			barrelshroudac4 = 	{ offset = true, position = vector3_box(0.0, 0.064, 0.05), rotation = vector3_box(0, 110, 0), scale = vector3_box(0.25, 0.6, 0.65) },
+			barrelshroudac4 = 	{ offset = true, position = vector3_box(0.0, 0.092, 0.048), rotation = vector3_box(0, 110, 0), scale = vector3_box(0.2, 0.55, 0.65) },
 			-- Front sight
 			barrelshroudac5 = 	{ offset = true, position = vector3_box(0.0, -0.052, 0.092), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.13, 0.5) },
+			barrelshroudac6 = 	{ offset = true, position = vector3_box(0.0, 0.187, 0.092), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.08, 0.13, 0.16) },
+			-- Flashlight underbarrel
+			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.65, 0.65, 0.65) },
 		},
 	})
 end

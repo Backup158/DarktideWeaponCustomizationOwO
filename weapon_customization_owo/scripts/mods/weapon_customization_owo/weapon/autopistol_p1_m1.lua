@@ -52,6 +52,8 @@ local table_of_owo_slots = {
     "muzzle_3",
 
     "barrelshroudac5",
+    "barrelshroudac6",
+    "barrelshroudac7",
 }
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 

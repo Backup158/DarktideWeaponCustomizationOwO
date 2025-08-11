@@ -26,7 +26,8 @@ mod.hide_slot_fixes = {
     ["barrelshroudac3"] = "owo_dreg_shroudac3_01|owo_m16_barrelshroudac3_01|owo_smg_ac3_01",
     ["barrelshroudac4"] = "owo_dreg_shroudac4_01|owo_m16_barrelshroudac4_01|owo_smg_ac4_01",
     ["barrelshroudac5"] = "owo_m16_barrelshroudac5_01|owo_smg_ac5_01",
-    ["barrelshroudac6"] = "owo_m16_barrelshroudac6_01",
+    ["barrelshroudac6"] = "owo_m16_barrelshroudac6_01|owo_smg_ac6_01",
+    ["barrelshroudac7"] = "owo_smg_ac7_01",
     -- Foregrips
     ["foregripac1"] = "owo_tactical_foregrip_ac1_01|owo_foregrip_group_indicator_heterosexual_gun_grip|owo_foregrip_group_indicator_heterosexual_ogryn_grip|owo_foregrip_group_indicator_heterosexual_knife_grip|owo_foregrip_group_indicator_heterosexual_dclaw_grip",
     ["foregripac2"] = "owo_tactical_foregrip_ac2_01",
