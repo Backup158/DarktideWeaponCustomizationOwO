@@ -55,6 +55,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant)
 
+mod.owo_smg_barrel(this_variant)
+
 mod.owo_tactical_stock(this_variant)
 
 mod.owo_reticle_helper(this_variant)
@@ -158,6 +160,7 @@ end
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
 mod.fixes_owo_suppressors(this_variant)
+mod.fixes_owo_smg_barrel(this_variant)
 mod.fixes_owo_tactical_stock(this_variant)
 
 -- #################

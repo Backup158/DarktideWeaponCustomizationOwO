@@ -1660,7 +1660,7 @@ end
 
 -- Barrel: Submachine Barrels
 function mod.owo_smg_barrel(variant_id, given_type, given_parent)
-	local current_type = given_type or "magazine"
+	local current_type = given_type or "barrel"
 	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
@@ -1718,7 +1718,7 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 	})
 end
 function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
-	local current_type = given_type or "magazine"
+	local current_type = given_type or "barrel"
 	local current_parent = given_parent or "receiver"
 
 	mod.mt.inject_fixes(variant_id, {
