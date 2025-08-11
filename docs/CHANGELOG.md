@@ -1,3 +1,10 @@
+# 2025-08-UNRELEASED
+v3.2.0
+
+- Newly supported weapons:
+    - Shock Maul: Slim Blades, Invisible Connector
+    - Arbites Shock Maul: Slim Blades, Invisible Connector
+
 # 2025-07-31
 v3.1.0
 

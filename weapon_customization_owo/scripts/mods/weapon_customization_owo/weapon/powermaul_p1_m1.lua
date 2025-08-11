@@ -128,47 +128,47 @@ mod.mt.inject_fixes(this_variant, {
     --      Flat Power Sword
     --          Hilt Patches
     --{   dependencies =  { _owo_flat_psword_g_blades, _power_sword_grips },
-    --    hilt =  { offset = true, position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+    --    hilt =  { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
     --},
     ----      Slim Power Sword
     ----          Hilt Patches
     --{   dependencies =  { _owo_slim_psword_g_blades, _power_sword_grips },
-    --    hilt =  { offset = true, position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+    --    hilt =  { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
     --},
     -- PSword
 		--      Flat Power Sword
 		--          Default
 	{   dependencies =  { _owo_flat_psword_g_blades },
         shaft =         { offset = true, position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        head =          { offset = true, position = vector3_box(0, 0, 0.012), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 1)},
+        head =          { offset = true, position = vector3_box(0, 0, 0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 1)},
     },
     {   dependencies =  { _owo_flat_psword_blades },
-        head =          { offset = true, position = vector3_box(0, 0, 0.012), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
+        head =          { offset = true, position = vector3_box(0, 0, 0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
     },
     --      Slim Power Sword
     --          Default
     {   dependencies =  { _owo_slim_psword_g_blades },
         shaft =         { offset = true, position = vector3_box(0, 0, 0.02), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        head =          { offset = true, position = vector3_box(0, 0, 0.012), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 0.65, 1)},
+        head =          { offset = true, position = vector3_box(0, 0, 0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 0.65, 1)},
     },
     {   dependencies =  { _owo_slim_psword_blades },
-        head =          { offset = true, position = vector3_box(0, 0, 0.012), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.65, 1)},
+        head =          { offset = true, position = vector3_box(0, 0, 0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.65, 1)},
     },
     -- DClaw
     --      Flat DClaw
     {   dependencies =  { _owo_flat_dclaw_g_blades },
         shaft =         { offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        head =          { offset = true, position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.75, 1, 1)},
+        head =          { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 1, 1)},
     },
     {   dependencies =  { _owo_flat_dclaw_blades },
-        head =          { offset = true, position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.5, 1, 1)},
+        head =          { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
     },
     --      Slim DClaw
     {   dependencies =  { _owo_slim_dclaw_g_blades },
         shaft =         { offset = true, position = vector3_box(0, 0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
-        head =          { offset = true, position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.75, 0.75, 1)},
+        head =          { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.75, 0.75, 1)},
     },
     {   dependencies =  { _owo_slim_dclaw_blades },
-        head =          { offset = true, position = vector3_box(0, 0, 0.06), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.5, 0.75, 1)},
+        head =          { offset = true, position = vector3_box(0, 0, 0.13), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.75, 1)},
     },
 })
