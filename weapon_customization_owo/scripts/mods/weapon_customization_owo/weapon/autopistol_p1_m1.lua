@@ -29,6 +29,11 @@ end
 -- ###############
 local table_of_syn_slots = {
     -- "muzzle_2",
+    "barrelshroud",
+    "barrelshroudac",
+    "barrelshroudac2",
+    "barrelshroudac3",
+    "barrelshroudac4",
 }
 if not mod.syn then -- these slots already exist in Syn's plugin
     mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_syn_slots)
@@ -45,6 +50,8 @@ local table_of_owo_slots = {
     "sight_2",
     "muzzle_2", -- MT and Syn didn't add this to autopistol yet, though syn has it commented out
     "muzzle_3",
+
+    "barrelshroudac5",
 }
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
