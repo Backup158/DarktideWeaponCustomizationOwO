@@ -110,6 +110,9 @@ mod.fixes_owo_crossguard(this_variant)
 -- Custom Fixes
 -- #################
 mod.mt.inject_fixes(this_variant, {
+    -- ######
+    -- Blade: Slim Blades
+    -- ######
     -- PSword
     --      Flat Power Sword
     --          Hilt Patches

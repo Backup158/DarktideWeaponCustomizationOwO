@@ -146,6 +146,9 @@ mod.fixes_owo_tacax_spike(this_variant, "head", "shaft")
 -- Custom Fixes
 -- #################
 mod.mt.inject_fixes(this_variant, {
+    -- ######
+    -- Head: Slim Blades
+    -- ######
     -- PSword
     --      Flat Power Sword
     --          Hilt Patches

@@ -105,6 +105,9 @@ end
 -- Custom Fixes
 -- #################
 mod.mt.inject_fixes(this_variant, {
+    -- ######
+    -- Head: Slim Blades
+    -- ######
     -- PSword
     --      Flat Power Sword
     --          Hilt Patches

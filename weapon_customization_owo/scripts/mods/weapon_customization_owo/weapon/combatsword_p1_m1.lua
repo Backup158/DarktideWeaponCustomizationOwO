@@ -187,7 +187,7 @@ mod.mt.inject_fixes(this_variant, {
     },
 
     -- #######
-    -- Blade: Flat Blades
+    -- Blade: Slim Blades
     -- #######
     {   dependencies = { _owo_flat_dclaw_blades, _combat_sword_grips },
         body = { position = vector3_box(0, 0, 0.09), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
