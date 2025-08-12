@@ -5,12 +5,14 @@ v3.2.0
     - Shock Maul: Slim Blades, Invisible Connector, Tacax Spikes, Polearm Heads
     - Arbites Shock Maul: Slim Blades, Invisible Connector, Tacax Spikes, Polearm Heads
 - New attachments:
-    - SMG Barrels
-        - MP5 barrel
-        - Aligned with MT Autopistol Sights (on autoguns)
-        - note that too much of it will heat up while shoohting
+    - SMG Barrels: autopistol and autoguns
+        - MP5 barrels
+            - MP5 Navy, MP5K, and MP5SD
+                - MP5SD doesn't include the integrated suppressor
+            - Aligned with MT Autopistol Sights (on autoguns)
+            - note that the part of the receiver over the barrel will heat up when you shoot
     - Added to Tactical Stocks
-        - Pushed-in adjustible stock
+        - Pushed-in telescopic stock
 - Refactored attachments:
     - Dreg Gunner Barrel
         - Universalized fixes
