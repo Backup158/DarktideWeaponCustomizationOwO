@@ -42,6 +42,12 @@ Parts are prefixed with `OwO` in the customization menu.
 &emsp; Adds short and long variants.  \
 &emsp; &emsp; Short fits typical revolver barrel length.  \
 &emsp; &emsp; Long goes a bit beyond that.
+- **SMG Barrels**: Autopistol, Autoguns  \
+&emsp; Based on the HK MP-5  \
+&emsp; &emsp; MP-5 Navy, MP-5K, and MP-5SD  \
+&emsp; On Autoguns, front post is aligned to the MT Autopistol Sight.  \
+&emsp; On Autoguns, it's best used with the Braced Autogun Receivers.  \
+
 
 ### Foregrips
 - **Tactical Foregrips**: Infantry/Braced/Vigilant Autoguns, Combat Shotguns, Exterminator Shotguns  \
@@ -169,6 +175,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; These will clip into your hands during regular use, which why the other plugins use slanted grips
 - **Tactical Stocks**: Braced/Infantry/Vigilant Autoguns, Autopistols, Infantry Lasguns, Bolter, Bolt Pistol, Combat Shotguns, Exterminator Shotguns   \
 &emsp; Skeletal stock  \
+&emsp; Telescopic stock (pushed in)  \
 &emsp; Folded stocks: Stock attached to a hinge and folded to the left or right  \
 &emsp; Folded stocks (natural): Stocks with hinges built-in. Folded left/right/under
 - **Kalashnikov Stocks**: Braced/Infantry/Vigilant Autoguns  \
@@ -222,14 +229,14 @@ Additional slot to add to or replace the original receiver. These can get super 
 ## Melee
 
 ### Heads
-- **Tactical Axe Spike**: Combat/Tactical Axes, Thunder Hammers, Crusher, Delver's Pickaxes  \
+- **Tactical Axe Spike**: Combat/Tactical Axes, Thunder Hammers, Crusher, Delver's Pickaxes, Shock Maul, Arbites Shock Maul  \
 &emsp; Spike on the back of the tactical axe head. Fills in the holes in the blades.
 
 > [!WARNING]
 > 
 > KNOWN ISSUE: Variants 2/3/M do not have the spike aligned properly, so there's a second axe head in the middle of these
 
-- **Polearm Heads**: Thunder Hammers, Crusher, Delver's Pickaxes  \
+- **Polearm Heads**: Thunder Hammers, Crusher, Delver's Pickaxes, Shock Maul, Arbites Shock Maul  \
 &emsp; Based on Becs de Corbin, Lucerne Hammers, and Poleaxes  \
 &emsp; &emsp; Becs de Corbin/The Crow's Beak: A hammer head with a spike on top and a curved pick in the back  \
 &emsp; &emsp; Lucerne Hammer: Like a Bec de Corbin with a longer, thinner back pick and with a hammer head that typically has more protrusions  \
@@ -256,7 +263,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; Tantos are basically the MT Combat Sword blades but skinnier and shorter, so I didn't bother aligning them outside the default case.
 
 ### Blades
-- **Slim Blades**: Power Swords, Catachan "Devil's Claw" Swords, Shock Maul and Suppression Shield \
+- **Slim Blades**: Power Swords, Catachan "Devil's Claw" Swords, Shock Maul, Arbites Shock Maul, Shock Maul and Suppression Shield \
 &emsp; 1h Power Sword blades and "Devil's Claw" blades scaled down  \
 &emsp; &emsp; Flat: Less thick, but same width and height  \
 &emsp; &emsp; Slim: Less thick and wide, but same height  \
@@ -268,7 +275,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 > For the Arbitrator's Shield and Maul, recommended to be used with the Invisible Connector
 
 ### Connectors
-- **Invisible Connector**: Thunder Hammers, Crusher, Shock Maul and Suppression Shield  \
+- **Invisible Connector**: Thunder Hammers, Crusher, Shock Maul, Arbites Shock Maul, Shock Maul and Suppression Shield  \
 &emsp; Makes the connector invisible. That's it. \
 &emsp; It doesn't extend the shaft on its own; it's meant to be used with other parts (namely the tacax spikes)
 
