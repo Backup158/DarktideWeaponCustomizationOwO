@@ -431,7 +431,7 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Muzzle: CONDOM
 	-- ######
-    {   dependencies =  { _m16_all_barrels, "owo_condom_01" },
+    {   dependencies =  { "owo_condom_01", _m16_all_barrels, },
         muzzle =        { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.001, 1.0, 1.001 ) },
     },
 
