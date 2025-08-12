@@ -3508,6 +3508,7 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_tactical_stock_s_01", name = "OwO Skeletal Stock"},
+		{id = "owo_tactical_stock_a_01", name = "OwO Adjustable (Pushed-in)"},
 		{id = "owo_tactical_stock_f_01", name = "OwO Folded 1 (Natural)"},
 		{id = "owo_tactical_stock_f_02", name = "OwO Folded 2 (Natural)"},
 		{id = "owo_tactical_stock_f_03u", name = "OwO Folded 3 (Natural, Under)"},
@@ -3541,6 +3542,12 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 		-- Skeletal Stock
 		owo_tactical_stock_s_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_02", type = current_type, 
+			mesh_move = false, parent = "receiver",
+		},
+		-- Adjustible Stock
+		--	pushed in
+		owo_tactical_stock_a_01 = {
+			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_05", type = current_type, 
 			mesh_move = false, parent = "receiver",
 		},
 		-- Folded (Natural)
@@ -3688,6 +3695,10 @@ function mod.fixes_owo_tactical_stock(variant_id, given_type, given_parent)
 		--  Skeletal
 		{   dependencies =  	{ "owo_tactical_stock_s_01" },
 			[current_type] =    { position = vector3_box(0.0, 0.11, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.95, 1 ) },
+		},
+		--  Adjustible
+		{   dependencies =  	{ "owo_tactical_stock_a_01" },
+			[current_type] =    { position = vector3_box(0.0, 0.032, 0.074), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1 ) },
 		},
 		--  Folded
 		{   dependencies =  	{ "owo_stock_group_indicator_ac2_tactical_stock_folded", "owo_tactical_stock_01|owo_tactical_stock_02|owo_tactical_stock_03|owo_tactical_stock_04|owo_tactical_stock_05|owo_tactical_stock_06|owo_tactical_stock_07|owo_tactical_stock_08" },
