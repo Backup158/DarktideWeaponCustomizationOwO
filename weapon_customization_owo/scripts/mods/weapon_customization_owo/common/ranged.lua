@@ -1669,7 +1669,9 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_mp5_01", name = "OwO MP5 Barrel"},
+		{id = "owo_mp5_01", name = "OwO MP-5 Navy"},
+		{id = "owo_mp5_02", name = "OwO MP-5K"},
+		{id = "owo_mp5_03", name = "OwO MP-5SD"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
 		{id = "owo_smg_ac0_01", name = "OwO MP5'vesa Barrel fr fr"},
@@ -1679,6 +1681,8 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac2", {
 		{id = "owo_smg_ac2_01", name = "OwO MP5'vesa handguard submissive and breedable"},
+		{id = "owo_smg_ac2_02", name = "OwO MP5k'vesa grip"},
+		{id = "owo_smg_ac2_03", name = "OwO MP5sd'vesa handguard"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac3", {
 		{id = "owo_smg_ac3_01", name = "OwO MP5'vesa handguard top"},
@@ -1709,6 +1713,28 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 			},
 			hide_mesh = { mod.hide_mesh(current_type) },
 		},
+		owo_mp5_02 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				barrelshroud = "owo_smg_ac0_01", barrelshroudac = "owo_smg_ac1_01",
+				barrelshroudac2 = "owo_smg_ac2_02", barrelshroudac3 = "owo_smg_ac3_01",
+				barrelshroudac4 = "owo_smg_ac4_01", barrelshroudac5 = "owo_smg_ac5_01", 
+				barrelshroudac6 = "owo_smg_ac6_01", barrelshroudac7 = "owo_smg_ac7_01", 
+			},
+			hide_mesh = { mod.hide_mesh(current_type) },
+		},
+		owo_mp5_03 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				barrelshroud = "owo_smg_ac0_01", barrelshroudac = "owo_smg_ac1_01",
+				barrelshroudac2 = "owo_smg_ac2_03", barrelshroudac3 = "owo_smg_ac3_01",
+				barrelshroudac4 = "owo_smg_ac4_01", barrelshroudac5 = "owo_smg_ac5_01", 
+				barrelshroudac6 = "owo_smg_ac6_01", barrelshroudac7 = "owo_smg_ac7_01", 
+			},
+			hide_mesh = { mod.hide_mesh(current_type) },
+		},
 		-- ### Helper Parts ###
 		-- Barrelshroud
 		--		Actual visible barrel
@@ -1726,6 +1752,16 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 		--		mp5 Handguard (bottom)
 		owo_smg_ac2_01 = {
 			model = _item_ranged.."/stocks/shotgun_rifle_stock_01", type = "barrelshroudac2", 
+			mesh_move = false, parent = current_type,
+		},
+		--		mp5k foregrip
+		owo_smg_ac2_02 = {
+			model = _item_melee.."/grips/combat_knife_grip_03", type = "barrelshroudac2", 
+			mesh_move = false, parent = current_type,
+		},
+		--		mp5sd handguard
+		owo_smg_ac2_03 = {
+			model = _item_melee.."/grips/axe_grip_04", type = "barrelshroudac2", 
 			mesh_move = false, parent = current_type,
 		},
 		-- Barrelshroudac3
@@ -1768,7 +1804,17 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 		-- ######
 		-- Slot: NAME
 		-- ######
-		{ 	dependencies = 		{ "owo_mp5_01" }, 
+		{ 	dependencies = 		{ "owo_mp5_03" }, 
+			-- underbarrel
+			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.065, -0.006), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.8, 1.8, 0.575) },
+		},
+		{ 	dependencies = 		{ "owo_mp5_02" }, 
+			[current_type] = 	{ offset = true, position = vector3_box(0.0, -0.06, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
+			-- underbarrel
+			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.093, -0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.2, 0.66) },
+			barrelshroudac3 = 	{ offset = true, position = vector3_box(0.0, 0.028, 0.014), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.81, 0.55, 0.6) },
+		},
+		{ 	dependencies = 		{ "owo_mp5_01|owo_mp5_02|owo_mp5_03" }, 
 			[current_type] = 	{ offset = true, position = vector3_box(0.0, 0.0, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
 			-- Barrel
 			--	top
@@ -3508,7 +3554,7 @@ function mod.owo_tactical_stock(variant_id, given_type, given_parent)
 
 	mod.inject_attachments_owo(variant_id, current_type, {
 		{id = "owo_tactical_stock_s_01", name = "OwO Skeletal Stock"},
-		{id = "owo_tactical_stock_a_01", name = "OwO Adjustable (Pushed-in)"},
+		{id = "owo_tactical_stock_a_01", name = "OwO Telescoping (Pushed-in)"},
 		{id = "owo_tactical_stock_f_01", name = "OwO Folded 1 (Natural)"},
 		{id = "owo_tactical_stock_f_02", name = "OwO Folded 2 (Natural)"},
 		{id = "owo_tactical_stock_f_03u", name = "OwO Folded 3 (Natural, Under)"},

@@ -401,12 +401,21 @@ mod.mt.inject_fixes(this_variant, {
     --    barrel =        { offset = true, position = vector3_box(0, 0, -0.032), },
     --},
     --  Brautos
-    {   dependencies =  { "owo_mp5_01", _braced_autogun_receivers, },
+    {   dependencies =  { "owo_mp5_01|owo_mp5_03", _braced_autogun_receivers, },
         barrel =        { offset = true, position = vector3_box(0, 0, 0.0), },
     },
     --  Headhunters
-    {   dependencies =  { "owo_mp5_01", _vigilant_autogun_receivers, },
+    {   dependencies =  { "owo_mp5_01|owo_mp5_03", _vigilant_autogun_receivers, },
         barrel =        { offset = true, position = vector3_box(0, 0, -0.012), },
+    },
+    -- MP5k
+    --  Brautos
+    {   dependencies =  { "owo_mp5_02", _braced_autogun_receivers, },
+        barrel =        { offset = true, position = vector3_box(0, -0.06, 0.0), },
+    },
+    --  Headhunters
+    {   dependencies =  { "owo_mp5_02", _vigilant_autogun_receivers, },
+        barrel =        { offset = true, position = vector3_box(0, -0.06, -0.012), },
     },
     -- Rest handled universally
 
