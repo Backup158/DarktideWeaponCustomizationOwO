@@ -4,7 +4,7 @@ local mt
 local syn
 
 -- Prints a message to the console log containing the current version number
-mod.version = "3.1.0"
+mod.version = "3.2.0"
 mod:info('WeaponCustomizationOwO v' .. mod.version .. ' loaded uwu nya :3')
 
 -- Discord mode

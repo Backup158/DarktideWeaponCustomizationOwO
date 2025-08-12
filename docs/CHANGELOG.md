@@ -1,4 +1,4 @@
-# 2025-08-UNRELEASED
+# 2025-08-11
 v3.2.0
 
 - Newly supported weapons:
@@ -9,6 +9,7 @@ v3.2.0
         - MP5 barrels
             - MP5 Navy, MP5K, and MP5SD
                 - MP5SD doesn't include the integrated suppressor
+                - Navy is best with braced receivers on autogun
             - Aligned with MT Autopistol Sights (on autoguns)
             - note that the part of the receiver over the barrel will heat up when you shoot
     - Added to Tactical Stocks
