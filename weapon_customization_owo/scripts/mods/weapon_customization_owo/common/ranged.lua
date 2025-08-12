@@ -1782,8 +1782,8 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 			-- Charging handle
 			barrelshroudac4 = 	{ offset = true, position = vector3_box(0.0, 0.115, 0.048), rotation = vector3_box(0, 110, 0), scale = vector3_box(0.2, 0.55, 0.65) },
 			-- Front sight
-			barrelshroudac5 = 	{ offset = true, position = vector3_box(0.0, -0.052, 0.092), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.13, 0.5) },
-			barrelshroudac6 = 	{ offset = true, position = vector3_box(0.0, 0.187, 0.092), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.08, 0.13, 0.16) },
+			barrelshroudac5 = 	{ offset = true, position = vector3_box(0.0, -0.052, 0.096), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.13, 0.5) },
+			barrelshroudac6 = 	{ offset = true, position = vector3_box(0.0, 0.187, 0.096), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.08, 0.15, 0.16) },
 			-- Flashlight underbarrel
 			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.65, 0.65, 0.65) },
 		},
