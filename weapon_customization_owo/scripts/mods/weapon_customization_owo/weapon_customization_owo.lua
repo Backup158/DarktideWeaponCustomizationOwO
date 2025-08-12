@@ -63,6 +63,16 @@ function mod.load_mod_file(relative_path)
 	mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/"..relative_path)
 end
 
+function mod.on_setting_changed(setting_id)
+	-- if Discord mode changed
+	if setting_id == "discord_mode" then
+		-- When turned on, print message 
+		if mod:get(setting_id) == true then
+			mod:echo(mod:localize("discord_mode_message"))
+		end
+	end
+end
+
 function mod.on_all_mods_loaded()
 	-- Checks for installed mods. Kept here so it works after reload.
 	---@class WeaponCustomizationMod
