@@ -9,7 +9,7 @@ mod.hide_slot_fixes = {
     ["muzzle_3"] = "owo_muzzle_brake_helper_02_01|owo_suppressor_helper_02_01|owo_suppressor_helper_02_02|owo_suppressor_helper_02_03|owo_suppressor_helper_02_04|owo_condom_helper_m3_01",
     ["muzzle_4"] = "owo_muzzle_brake_helper_03_01",
     ["muzzle_5"] = "owo_muzzle_brake_helper_04_01",
-    ["muzzle_6"] = "owo_muzzle_brake_helper_05_01",
+    ["muzzle_6"] = "owo_muzzle_brake_helper_05_01|owo_muzzle_brake_helper_05_02",
     -- Bayonet
     ["bayonetac1"] = "owo_dreg_bayonet_front_01|owo_historical_bayonet_m7_helper_01|owo_historical_bayonet_seitengewehr_helper_01|owo_historical_bayonet_epee_helper_01|owo_m203_helper_01|owo_gp25_helper_01|owo_underbarrel_shotgun_ac1|owo_underbarrel_shotgun_ac1_02",
     ["bayonetac2"] = "owo_dreg_bayonet_rear_01|owo_historical_bayonet_m7_helper_02|owo_historical_bayonet_seitengewehr_helper_02|owo_historical_bayonet_epee_helper_02|owo_m203_helper_02|owo_gp25_helper_02|owo_underbarrel_shotgun_ac2|owo_underbarrel_shotgun_ac2_02",
