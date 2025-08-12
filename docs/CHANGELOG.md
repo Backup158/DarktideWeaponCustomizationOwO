@@ -18,6 +18,7 @@ v3.2.0
     - Dreg Gunner Barrel
         - Universalized fixes
         - Changed parents for helpers for modularity and easier patching
+- Added info message when enabling discord mode
 
 # 2025-07-31
 v3.1.0
