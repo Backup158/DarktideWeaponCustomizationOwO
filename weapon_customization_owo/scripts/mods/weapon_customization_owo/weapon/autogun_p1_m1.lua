@@ -67,6 +67,8 @@ local table_of_owo_slots = {
     "foregripac2",
     "foregripac3",
 
+    "barrelshroudac7",
+
     "bayonetac1",
     "bayonetac2",
     "bayonetac3",
@@ -106,6 +108,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 mod.owo_dreg_gunner_barrel(this_variant, "barrel")
 mod.owo_m16_barrel(this_variant, "barrel")
 mod.owo_wood_krieg(this_variant, "barrel")
+mod.owo_smg_barrel(this_variant)
 
 mod.owo_dreg_gunner_bayonet(this_variant, "bayonet")
 mod.owo_historical_bayonet(this_variant, "bayonet")
@@ -274,6 +277,7 @@ mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_dreg_gunner_barrel(this_variant)
+mod.fixes_owo_smg_barrel(this_variant)
 
 mod.fixes_owo_dreg_gunner_bayonet(this_variant)
 mod.fixes_owo_historical_bayonet(this_variant)
@@ -387,6 +391,24 @@ mod.mt.inject_fixes(this_variant, {
 	{   dependencies =  { "owo_dreg_barrel_01", "autogun_bayonet_01|autogun_bayonet_02" },
         bayonet = { offset = true,   position = vector3_box(0, 0.699, -0.095),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.5, 1.7, 3.0) },
     },
+
+    -- ######
+    -- Barrel: SMG Barrels
+    -- ######
+    -- MP5 Barrel
+    --  Iag: same as default
+    --{   dependencies =  { "owo_mp5_01", _infantry_autogun_receivers, },
+    --    barrel =        { offset = true, position = vector3_box(0, 0, -0.032), },
+    --},
+    --  Brautos
+    {   dependencies =  { "owo_mp5_01", _braced_autogun_receivers, },
+        barrel =        { offset = true, position = vector3_box(0, 0, 0.0), },
+    },
+    --  Headhunters
+    {   dependencies =  { "owo_mp5_01", _vigilant_autogun_receivers, },
+        barrel =        { offset = true, position = vector3_box(0, 0, -0.012), },
+    },
+    -- Rest handled universally
 
     -- ######
     -- Foregrip: TACTICAL FOREGRIP
