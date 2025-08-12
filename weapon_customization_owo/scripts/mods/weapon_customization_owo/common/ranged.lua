@@ -1821,7 +1821,7 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 			barrelshroud = 		{ offset = true, position = vector3_box(0.0, 0.2, 0.046), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 0.65, 1.0) },
 			barrelshroudac7 = 	{ offset = true, position = vector3_box(0.0, 0.176, 0.046), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.75, 0.7, 0.5) },
 			--	bottom and connections
-			barrelshroudac = 	{ offset = true, position = vector3_box(0.0, 0.0, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.2, 0.2, 0.2) },
+			barrelshroudac = 	{ offset = true, position = vector3_box(0.0, 0.0, 0.046), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.2, 0.2, 0.2) },
 			-- underbarrel
 			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.185, 0.0), rotation = vector3_box(-170, 0, 180), scale = vector3_box(1.5, 0.85, 0.75) },
 			barrelshroudac3 = 	{ offset = true, position = vector3_box(0.0, -0.136, 0.02), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.81, 1.07, 0.6) },
