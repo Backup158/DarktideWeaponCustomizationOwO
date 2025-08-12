@@ -92,7 +92,7 @@ local _owo_rmr_acog_sights = "owo_acog_sight_02|owo_acog_sight_02_z1|owo_acog_si
 --local _owo_all_acog_sights = _owo_forwards_acog_sights.."|".._owo_backwards_acog_sights
 --local _owo_all_susat_sights = "owo_susat_01|owo_susat_01_z1|owo_susat_01_ps|owo_susat_02|owo_susat_02_z1|owo_susat_02_top"
 --local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_masterkey|owo_underbarrel_shotgun_masterkey_01|owo_underbarrel_shotgun_masterkey_02"
---local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
+local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
 --local _m16_all_barrels = "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
 --local _m16a1_01_barrels = "owo_m16_barrel_a1|owo_m16_barrel_t_a1|owo_m16_barrel_n_a1"
 --local _m16a1_02_barrels = "owo_m16_barrel_a1_02|owo_m16_barrel_t_a1_02|owo_m16_barrel_n_a1_02"
@@ -175,11 +175,15 @@ mod.fixes_owo_tactical_stock(this_variant)
 -- #################
 -- Custom Fixes
 -- #################
---[[
 mod.mt.inject_fixes(this_variant, {
     -- ######
     -- Muzzle: SUPPRESSOR
     -- ######
+    --  OwO MP-5SD
+    --      flush with handguard. also syn's suppressor
+    {	dependencies =  { "owo_mp5_03", _owo_all_suppressor_muzzles.."|syn_silencer_muzzle_01", },
+        muzzle =        { offset = true, position = vector3_box(0, -0.03, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
+    },
     -- Handled universally
 
     -- ######
@@ -187,7 +191,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
     -- Handled Universally
 })
-]]
+
 
 -- #################
 -- Sight Fixes

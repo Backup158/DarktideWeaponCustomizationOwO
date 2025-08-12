@@ -20,9 +20,9 @@ mod.hide_slot_fixes = {
     ["bayonetac7"] = "owo_underbarrel_shotgun_ac7",
     ["bayonetac8"] = "owo_underbarrel_shotgun_ac8",
     -- Barrels
-    ["barrelshroud"] = "owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2|owo_wood_krieg_ac1_01|owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08|owo_plasma_krieg_ac0_01|owo_revolver_shotgun_barrel_04|owo_revolver_shotgun_barrel_05|owo_revolver_shotgun_barrel_06|owo_revolver_shotgun_barrel_08|owo_smg_ac0_01",
+    ["barrelshroud"] = "owo_dreg_shroud_01|owo_m16_barrelshroud_a1|owo_m16_barrelshroud_a1_02|owo_m16_barrelshroud_a2|owo_wood_krieg_ac1_01|owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08|owo_plasma_krieg_ac0_01|owo_revolver_shotgun_barrel_04|owo_revolver_shotgun_barrel_05|owo_revolver_shotgun_barrel_06|owo_revolver_shotgun_barrel_08|owo_smg_ac0_01|owo_smg_ac0_02",
     ["barrelshroudac"] = "owo_bistol_shotgun_barrel_short_04|owo_bistol_shotgun_barrel_short_05|owo_bistol_shotgun_barrel_short_06|owo_bistol_shotgun_barrel_short_08|owo_plasma_krieg_ac1_01|owo_plasma_krieg_ac1_02|owo_plasma_krieg_ac1_03|owo_plasma_krieg_ac1_04|owo_plasma_krieg_ac1_05|owo_plasma_krieg_ac1_06|owo_plasma_krieg_ac1_07|owo_plasma_krieg_ac1_08|owo_plasma_krieg_ac1_09|owo_smg_ac1_01",
-    ["barrelshroudac2"] = "owo_dreg_shroudac2_01|owo_m16_barrelshroudac2_01|owo_smg_ac2_01",
+    ["barrelshroudac2"] = "owo_dreg_shroudac2_01|owo_m16_barrelshroudac2_01|owo_smg_ac2_01|owo_smg_ac2_02|owo_smg_ac2_03",
     ["barrelshroudac3"] = "owo_dreg_shroudac3_01|owo_m16_barrelshroudac3_01|owo_smg_ac3_01",
     ["barrelshroudac4"] = "owo_dreg_shroudac4_01|owo_m16_barrelshroudac4_01|owo_smg_ac4_01",
     ["barrelshroudac5"] = "owo_m16_barrelshroudac5_01|owo_smg_ac5_01",

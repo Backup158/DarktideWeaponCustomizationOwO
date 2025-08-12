@@ -455,8 +455,13 @@ mod.mt.inject_fixes(this_variant, {
         muzzle =        { offset = true,   position = vector3_box(0, -0.034, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
     --  OwO Dreg Gunner
-    {	dependencies =  { _owo_all_suppressor_muzzles, "owo_dreg_barrel_01" },
+    {	dependencies =  { "owo_dreg_barrel_01", _owo_all_suppressor_muzzles, },
         muzzle =        { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(2.8, 2.2, 2.8) },
+    },
+    --  OwO MP-5SD
+    --      flush with handguard. also syn's suppressor
+    {	dependencies =  { "owo_mp5_03", _owo_all_suppressor_muzzles.."|syn_silencer_muzzle_01", },
+        muzzle =        { offset = true, position = vector3_box(0, -0.03, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
     },
 
     -- ######

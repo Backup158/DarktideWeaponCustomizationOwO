@@ -1675,6 +1675,7 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
 		{id = "owo_smg_ac0_01", name = "OwO MP5'vesa Barrel fr fr"},
+		{id = "owo_smg_ac0_02", name = "OwO MP5sd'vesa Barrel fr fr"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroudac", {
 		{id = "owo_smg_ac1_01", name = "OwO MP5'vesa Barrel submissive and breedable"},
@@ -1728,8 +1729,8 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = {
-				barrelshroud = "owo_smg_ac0_01", barrelshroudac = "owo_smg_ac1_01",
-				barrelshroudac2 = "owo_smg_ac2_03", barrelshroudac3 = "owo_smg_ac3_01",
+				barrelshroud = "owo_smg_ac0_02", barrelshroudac = "owo_barrelshroudac_default",
+				barrelshroudac2 = "owo_smg_ac2_03", barrelshroudac3 = "owo_barrelshroudac3_default",
 				barrelshroudac4 = "owo_smg_ac4_01", barrelshroudac5 = "owo_smg_ac5_01", 
 				barrelshroudac6 = "owo_smg_ac6_01", barrelshroudac7 = "owo_smg_ac7_01", 
 			},
@@ -1740,6 +1741,10 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 		--		Actual visible barrel
 		owo_smg_ac0_01 = {
 			model = _item_ranged.."/barrels/lasgun_rifle_barrel_02", type = "barrelshroud", 
+			mesh_move = false, parent = current_type,
+		},
+		owo_smg_ac0_02 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_elysian_barrel_04", type = "barrelshroud", 
 			mesh_move = false, parent = current_type,
 		},
 		-- Barrelshroudac
@@ -1805,8 +1810,9 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 		-- Slot: NAME
 		-- ######
 		{ 	dependencies = 		{ "owo_mp5_03" }, 
+			barrelshroud = 		{ offset = true, position = vector3_box(0.0, 0.2, 0.047), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.7, 1.65, 0.7) },
 			-- underbarrel
-			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.065, -0.006), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.8, 1.8, 0.575) },
+			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.065, -0.0), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.8, 1.8, 0.575) },
 		},
 		{ 	dependencies = 		{ "owo_mp5_02" }, 
 			[current_type] = 	{ offset = true, position = vector3_box(0.0, -0.06, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
@@ -1829,7 +1835,7 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 			barrelshroudac4 = 	{ offset = true, position = vector3_box(0.0, 0.115, 0.048), rotation = vector3_box(0, 110, 0), scale = vector3_box(0.2, 0.55, 0.65) },
 			-- Front sight
 			barrelshroudac5 = 	{ offset = true, position = vector3_box(0.0, -0.052, 0.096), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.13, 0.5) },
-			barrelshroudac6 = 	{ offset = true, position = vector3_box(0.0, 0.187, 0.096), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.08, 0.15, 0.16) },
+			barrelshroudac6 = 	{ offset = true, position = vector3_box(0.0, 0.187, 0.096), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.08, 0.17, 0.16) },
 			-- Flashlight underbarrel
 			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.65, 0.65, 0.65) },
 		},
