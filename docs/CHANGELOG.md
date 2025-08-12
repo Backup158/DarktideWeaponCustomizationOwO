@@ -4,6 +4,13 @@ v3.2.0
 - Newly supported weapons:
     - Shock Maul: Slim Blades, Invisible Connector, Tacax Spikes, Polearm Heads
     - Arbites Shock Maul: Slim Blades, Invisible Connector, Tacax Spikes, Polearm Heads
+- New attachments:
+    - SMG Barrels
+        - MP5 barrel
+        - Aligned with MT Autopistol Sights (on autoguns)
+        - note that too much of it will heat up while shoohting
+    - Added to Tactical Stocks
+        - Pushed-in adjustible stock
 - Refactored attachments:
     - Dreg Gunner Barrel
         - Universalized fixes
