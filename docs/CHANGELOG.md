@@ -5,6 +5,10 @@ v3.3.0
     - Underbarrel Grenade Launchers:
         - M203 HECU Variants (from Half Life 1)
             - Two variants with varying grip looks
+    - SMG Barrels:
+        - MP-5SD HECU variant
+        - just a big handguard
+        - maybe the sights are unaligned. The Freeman did not aim down sights with the SMG anyways
     - Suppressors:
         - Slim variants for all 5 I already have
         - Why did I take so long to do this lol

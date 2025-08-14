@@ -1806,6 +1806,17 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 			},
 			hide_mesh = { mod.hide_mesh(current_type) },
 		},
+		owo_mp5_03_hl1 = {
+			model = _item_ranged.."/barrels/lasgun_rifle_barrel_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				barrelshroud = "owo_barrelshroud_default", barrelshroudac = "owo_barrelshroudac_default",
+				barrelshroudac2 = "owo_smg_ac2_03", barrelshroudac3 = "owo_barrelshroudac3_default",
+				barrelshroudac4 = "owo_barrelshroudac4_default", barrelshroudac5 = "owo_smg_ac5_01", 
+				barrelshroudac6 = "owo_smg_ac6_01", barrelshroudac7 = "owo_barrelshroudac7_default", 
+			},
+			hide_mesh = { mod.hide_mesh(current_type) },
+		},
 		-- ### Helper Parts ###
 		-- Barrelshroud
 		--		Actual visible barrel
@@ -1887,15 +1898,15 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 		-- MP-5
 		-- ------
 		-- Flashlight underbarrel (when no bayonet)
-		{ 	dependencies = 		{ "autogun_bayonet_default|autogun_bayonet_none", "owo_mp5_01|owo_mp5_02|owo_mp5_03", }, 
+		{ 	dependencies = 		{ "autogun_bayonet_default|autogun_bayonet_none", "owo_mp5_01|owo_mp5_02|owo_mp5_03|owo_mp5_03_hl1", }, 
 			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.65, 0.65, 0.65) },
 		},
 		-- MP5SD HECU Setup
-		{ 	dependencies = 		{ "owo_mp5_03", "owo_m203_hl1_01|owo_m203_hl1_02", "owo_suppressor_04|owo_suppressor_05" }, 
+		{ 	dependencies = 		{ "owo_mp5_03|owo_mp5_03_hl1", "owo_m203_hl1_01|owo_m203_hl1_02", "owo_suppressor_04|owo_suppressor_05" }, 
 			muzzle =			{ offset = true, position = vector3_box(0, -0.03, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.6, 0.8) },
 		},
 		-- Suppressors flush with handguard. also syn's suppressor
-		{	dependencies =  	{ "owo_mp5_03", _owo_all_suppressor_muzzles.."|syn_silencer_muzzle_01", },
+		{	dependencies =  	{ "owo_mp5_03|owo_mp5_03_hl1", _owo_all_suppressor_muzzles.."|syn_silencer_muzzle_01", },
 			muzzle =        	{ offset = true, position = vector3_box(0, -0.03, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 		},
 		-- Default
@@ -1904,6 +1915,18 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 			barrelshroud = 		{ offset = true, position = vector3_box(0.0, 0.2, 0.047), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.7, 1.65, 0.7) },
 			-- underbarrel
 			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.065, -0.0), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.8, 1.8, 0.575) },
+		},
+		--	MP5SD HECU (Half Life 1)
+		{ 	dependencies = 		{ "owo_mp5_03_hl1" }, 
+			[current_type] = 	{ offset = true, position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
+			barrelshroud = 		{ offset = true, position = vector3_box(0.0, 0.2, 0.047), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.7, 1.65, 0.7) },
+			-- underbarrel
+			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.065, 0.0), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.8, 2.4, 0.575) },
+			-- Front sight
+			--	Ring
+			barrelshroudac5 = 	{ offset = true, position = vector3_box(0.0, -0.052, 0.076), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.13, 0.5) },
+			--	Post
+			barrelshroudac6 = 	{ offset = true, position = vector3_box(0.0, 0.187, 0.076), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.08, 0.17, 0.16) },
 		},
 		-- 	MP5K
 		{ 	dependencies = 		{ "owo_mp5_02" }, 
