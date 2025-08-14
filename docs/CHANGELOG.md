@@ -1,3 +1,15 @@
+# 2025-08-13
+v3.3.0
+
+- New attachments:
+    - Underbarrel Grenade Launchers:
+        - M203 HECU Variants (from Half Life 1)
+            - Two variants with varying grip looks
+- Reworked attachments:
+    - SMG Barrels:
+        - MP-5 barrels only move flashlights to the underbarrel if you have no bayonet equipped
+        - MP-5 barrels have flashlights on the side by default (smaller and closer to the barrel)
+
 # 2025-08-11
 v3.2.0
 

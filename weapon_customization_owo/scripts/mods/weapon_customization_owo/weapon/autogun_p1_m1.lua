@@ -973,7 +973,7 @@ mod.mt.inject_fixes(this_variant, {
         bayonet =       { offset = true, position = vector3_box(0, 0.36, -0.054), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
     },
     {	dependencies =  { "owo_m203_s1|owo_m203_s2", },
-        bayonet =       { offset = true, position = vector3_box(0, 0.3, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
+        bayonet =       { offset = true, position = vector3_box(0, 0.3, -0.016), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
     },
     --  handled universally otherwise
     --  --------------------------------------------
