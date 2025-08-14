@@ -642,6 +642,11 @@ function mod.owo_suppressor(variant_id, given_type, given_parent)
 		{id = "owo_suppressor_03", name = "OwO Suppressor 3 (PBS-1)"},
 		{id = "owo_suppressor_04", name = "OwO Suppressor 4"},
 		{id = "owo_suppressor_05", name = "OwO Suppressor 5"},
+		{id = "owo_suppressor_01s", name = "OwO Supp 1 (Slim)"},
+		{id = "owo_suppressor_02s", name = "OwO Supp 2 (Slim)"},
+		{id = "owo_suppressor_03s", name = "OwO Supp 3 (Slim)"},
+		{id = "owo_suppressor_04s", name = "OwO Supp 4 (Slim)"},
+		{id = "owo_suppressor_05s", name = "OwO Supp 5 (Slim)"},
 	})
 	mod.inject_attachments_owo(variant_id, "muzzle_2", {
 		{id = "owo_suppressor_helper_01", name = "OwO Suppressor'vesa 1", no_randomize = true},
@@ -704,6 +709,52 @@ function mod.owo_suppressor(variant_id, given_type, given_parent)
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
 			},
 		},
+		-- Slim
+		owo_suppressor_01s = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = current_type, mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				muzzle_2 = "owo_suppressor_helper_01", muzzle_3 = "owo_suppressor_helper_02_01",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_suppressor_02s = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = current_type, mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				muzzle_2 = "owo_suppressor_helper_02", muzzle_3 = "owo_suppressor_helper_02_02",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_suppressor_03s = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = current_type, mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				muzzle_2 = "owo_suppressor_helper_03", muzzle_3 = "owo_suppressor_helper_02_03",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_suppressor_04s = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = current_type, mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				muzzle_2 = "owo_suppressor_helper_04", muzzle_3 = "owo_suppressor_helper_02_01",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
+		owo_suppressor_05s = {
+			model = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02", type = current_type, mesh_move = false, parent = current_parent,
+			automatic_equip = {
+				muzzle_2 = "owo_suppressor_helper_04", muzzle_3 = "owo_suppressor_helper_02_04",
+			},
+			hide_mesh = {
+				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
+			},
+		},
 		-- ### Helpers ###
 		-- muzzle_2
 		owo_suppressor_helper_01 = {
@@ -734,7 +785,9 @@ function mod.owo_suppressor(variant_id, given_type, given_parent)
 	})
 end
 function mod.fixes_owo_suppressors(variant_id)
-	local _owo_all_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
+	local _owo_chunky_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
+	local _owo_slim_suppressor_muzzles = "owo_suppressor_01s|owo_suppressor_02s|owo_suppressor_03s|owo_suppressor_04s|owo_suppressor_05s"
+	local _owo_all_suppressor_muzzles = _owo_chunky_suppressor_muzzles.."|".._owo_slim_suppressor_muzzles
 
 	local _short_braced_autogun_mt_barrels = "bagun_barrel_01|bagun_barrel_05|bagun_barrel_06|bagun_barrel_07|bagun_barrel_08"
 	local _long_braced_autogun_mt_barrels = "bagun_barrel_03|bagun_barrel_04"
@@ -824,9 +877,17 @@ function mod.fixes_owo_suppressors(variant_id)
 			muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 22, 0),   scale = vector3_box(1.2, 1.8, 1.2) },	
 			muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
 		},
+		{	dependencies =  { "owo_suppressor_01s" },
+			muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 22, 0),   scale = vector3_box(0.85, 1.8, 0.85) },	
+			muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.85, 1.8, 0.85) },
+		},
 		{	dependencies =  { "owo_suppressor_02" },
 			muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 17, 0),   scale = vector3_box(1.2, 1.8, 1.2) },
 			muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+		},
+		{	dependencies =  { "owo_suppressor_02s" },
+			muzzle_2 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 17, 0),   scale = vector3_box(0.85, 1.8, 0.85) },
+			muzzle_3 =      { offset = true,   position = vector3_box(0, 0, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.85, 1.8, 0.85) },
 		},
 		--  --------------------------------------------
 		--  PBS-1
@@ -836,12 +897,20 @@ function mod.fixes_owo_suppressors(variant_id)
 			muzzle_2 =      { offset = true,   position = vector3_box(0, 0.055, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.3, 1.3, 1.11) },
 			muzzle_3 =      { offset = true,   position = vector3_box(0, 0.265, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.36, 0.4, 0.36) },
 		},
+		{	dependencies =  { "owo_suppressor_03s" },
+			muzzle_2 =      { offset = true,   position = vector3_box(0, 0.055, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(0.95, 0.95, 1.11) },
+			muzzle_3 =      { offset = true,   position = vector3_box(0, 0.265, 0),    rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.255, 0.4, 0.24) },
+		},
 		--  --------------------------------------------
 		--  Can and Seat
 		--  --------------------------------------------
 		{	dependencies =  { "owo_suppressor_04|owo_suppressor_05" },
 			muzzle_2 =      { offset = true,   position = vector3_box(0, 0.13, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.80, 1.80, 1.5) },
 			muzzle_3 =      { offset = true,   position = vector3_box(0, 0.086, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 1.8, 1.2) },
+		},
+		{	dependencies =  { "owo_suppressor_04s|owo_suppressor_05s" },
+			muzzle_2 =      { offset = true,   position = vector3_box(0, 0.13, 0),    rotation = vector3_box(-90, 0, 0),    scale = vector3_box(1.1, 1.1, 1.5) },
+			muzzle_3 =      { offset = true,   position = vector3_box(0, 0.086, 0),    rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.655, 1.8, 0.655) },
 		},
 	})
 end
