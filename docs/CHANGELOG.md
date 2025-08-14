@@ -2,6 +2,9 @@
 v3.3.0
 
 - New attachments:
+    - Tactical Flashlights: Autopistol
+        - MP-5 classic flashlights (big ones that go over the receiver)
+        - Use with braced aim (or something like Point Shooting on ADS guns)
     - Underbarrel Grenade Launchers:
         - M203 HECU Variants (from Half Life 1)
             - Two variants with varying grip looks
