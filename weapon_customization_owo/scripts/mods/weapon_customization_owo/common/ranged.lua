@@ -1874,6 +1874,10 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 	local current_type = given_type or "barrel"
 	local current_parent = given_parent or "receiver"
 
+	local _owo_chunky_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
+	local _owo_slim_suppressor_muzzles = "owo_suppressor_01s|owo_suppressor_02s|owo_suppressor_03s|owo_suppressor_04s|owo_suppressor_05s"
+	local _owo_all_suppressor_muzzles = _owo_chunky_suppressor_muzzles.."|".._owo_slim_suppressor_muzzles
+
 	mod.mt.inject_fixes(variant_id, {
 		-- ######
 		-- Barrel: SMG Barrels
@@ -1884,6 +1888,14 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 		-- Flashlight underbarrel (when no bayonet)
 		{ 	dependencies = 		{ "autogun_bayonet_default|autogun_bayonet_none", "owo_mp5_01|owo_mp5_02|owo_mp5_03", }, 
 			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.65, 0.65, 0.65) },
+		},
+		-- MP5SD HECU Setup
+		{ 	dependencies = 		{ "owo_mp5_03", "owo_m203_s1|owo_m203_s2", "owo_suppressor_04|owo_suppressor_05" }, 
+			muzzle =			{ offset = true, position = vector3_box(0, -0.03, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.6, 0.8) },
+		},
+		-- Suppressors flush with handguard. also syn's suppressor
+		{	dependencies =  	{ "owo_mp5_03", _owo_all_suppressor_muzzles.."|syn_silencer_muzzle_01", },
+			muzzle =        	{ offset = true, position = vector3_box(0, -0.03, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 		},
 		-- Default
 		--	MP5SD
