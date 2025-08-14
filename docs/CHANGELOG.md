@@ -26,7 +26,9 @@ v3.3.0
         - MP-5SD HECU Combination secret (M203 HECU 1/2 + Suppressor 4/5)
 - DEVS ONLY
     - Renamed `create_custom_slot` to `create_named_custom_slot`
-    - Created 
+    - Created `create_new_helper_slot` function
+        - Creates a slot of the given name in `mod.wc.add_custom_attachments` and assigns it to `slot_name_list`
+        - not `slot_names` because ac1 and such make it inconsistent
 
 # 2025-08-11
 v3.2.0
