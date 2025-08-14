@@ -1741,6 +1741,7 @@ function mod.owo_smg_barrel(variant_id, given_type, given_parent)
 		{id = "owo_mp5_01", name = "OwO MP-5 Navy"},
 		{id = "owo_mp5_02", name = "OwO MP-5K"},
 		{id = "owo_mp5_03", name = "OwO MP-5SD"},
+		{id = "owo_mp5_03_hl1", name = "OwO MP-5SD HECU"},
 	})
 	mod.inject_attachments_owo(variant_id, "barrelshroud", {
 		{id = "owo_smg_ac0_01", name = "OwO MP5'vesa Barrel fr fr"},
@@ -1890,7 +1891,7 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.65, 0.65, 0.65) },
 		},
 		-- MP5SD HECU Setup
-		{ 	dependencies = 		{ "owo_mp5_03", "owo_m203_s1|owo_m203_s2", "owo_suppressor_04|owo_suppressor_05" }, 
+		{ 	dependencies = 		{ "owo_mp5_03", "owo_m203_hl1_01|owo_m203_hl1_02", "owo_suppressor_04|owo_suppressor_05" }, 
 			muzzle =			{ offset = true, position = vector3_box(0, -0.03, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.6, 0.8) },
 		},
 		-- Suppressors flush with handguard. also syn's suppressor
@@ -2617,8 +2618,8 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 
 	mod.inject_attachments_owo(variant_id, given_type or current_type, {
 		{id = "owo_m203", name = "OwO M203 Grenade Launcher"},
-		{id = "owo_m203_s1", name = "OwO M203 HECU 1"},
-		{id = "owo_m203_s2", name = "OwO M203 HECU 2"},
+		{id = "owo_m203_hl1_01", name = "OwO M203 HECU 1"},
+		{id = "owo_m203_hl1_02", name = "OwO M203 HECU 2"},
 		{id = "owo_gp25", name = "OwO GP-25 Grenade Launcher"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
@@ -2654,14 +2655,14 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 				bayonetac3 = "owo_m203_helper_03", bayonetac4 = "owo_m203_helper_04", 
 			}
 		},
-		owo_m203_s1 = {
+		owo_m203_hl1_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = { bayonetac1 = "owo_m203_helper_01_02", bayonetac2 = "owo_m203_helper_02_02", 
 				bayonetac3 = "owo_bayonetac3_default", bayonetac4 = "owo_m203_helper_04_02", 
 			}
 		},
-		owo_m203_s2 = {
+		owo_m203_hl1_02 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 			automatic_equip = { bayonetac1 = "owo_m203_helper_01_02", bayonetac2 = "owo_m203_helper_02_03", 
@@ -2756,13 +2757,13 @@ function mod.fixes_owo_underbarrel_gl(variant_id)
 			bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
 			bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
 		},
-		{	dependencies =  { "owo_m203_s1" },
+		{	dependencies =  { "owo_m203_hl1_01" },
 			bayonet =       { offset = true, position = vector3_box(0, 0.025, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
 			bayonetac1 =    { offset = true, position = vector3_box(0, 0.024, -0.002), rotation = vector3_box(0, -28, 0), scale = vector3_box(1, 1, 1 ) },
 			bayonetac2 =    { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.6, 1.6, 0.8 ) },
 			bayonetac4 =    { offset = true, position = vector3_box(0, -0.124, 0.002), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.4, 0.515, 0.33 ) },
 		},
-		{	dependencies =  { "owo_m203_s2" },
+		{	dependencies =  { "owo_m203_hl1_02" },
 			bayonet =       { offset = true, position = vector3_box(0, 0.025, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
 			bayonetac1 =    { offset = true, position = vector3_box(0, 0.024, -0.002), rotation = vector3_box(0, -28, 0), scale = vector3_box(1, 1, 1 ) },
 			bayonetac2 =    { offset = true, position = vector3_box(0, -0.0, -0.002), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.57, 0.48, 0.63 ) },
