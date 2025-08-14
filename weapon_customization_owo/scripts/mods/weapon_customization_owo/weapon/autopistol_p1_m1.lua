@@ -47,6 +47,8 @@ end
 -- OwO Slot Initialization
 -- ###############
 local table_of_owo_slots = {
+    "flashlightac1",
+
     "sight_2",
     "muzzle_2", -- MT and Syn didn't add this to autopistol yet, though syn has it commented out
     "muzzle_3",
@@ -61,6 +63,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+mod.owo_tactical_flashlight(this_variant)
+
 if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
 mod.owo_suppressor(this_variant)
 
@@ -200,4 +204,5 @@ mod.mt.inject_fixes(this_variant, {
 -- These are shared among multiple weapons but are the same each time
 -- Down here so prepend puts it before everything else
 -- #################
+mod.fixes_owo_tactical_flashlight(this_variant)
 mod.fixes_owo_alt_viewmodel(this_variant)
