@@ -1807,19 +1807,30 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 
 	mod.mt.inject_fixes(variant_id, {
 		-- ######
-		-- Slot: NAME
+		-- Barrel: SMG Barrels
 		-- ######
+		-- ------
+		-- MP-5
+		-- ------
+		-- Flashlight underbarrel (when no bayonet)
+		{ 	dependencies = 		{ "autogun_bayonet_default|autogun_bayonet_none", "owo_mp5_01|owo_mp5_02|owo_mp5_03", }, 
+			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.65, 0.65, 0.65) },
+		},
+		-- Default
+		--	MP5SD
 		{ 	dependencies = 		{ "owo_mp5_03" }, 
 			barrelshroud = 		{ offset = true, position = vector3_box(0.0, 0.2, 0.047), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.7, 1.65, 0.7) },
 			-- underbarrel
 			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.065, -0.0), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.8, 1.8, 0.575) },
 		},
+		-- 	MP5K
 		{ 	dependencies = 		{ "owo_mp5_02" }, 
 			[current_type] = 	{ offset = true, position = vector3_box(0.0, -0.06, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
 			-- underbarrel
 			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.093, -0.06), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.2, 1.2, 0.66) },
 			barrelshroudac3 = 	{ offset = true, position = vector3_box(0.0, 0.028, 0.014), rotation = vector3_box(180, 0, 0), scale = vector3_box(0.81, 0.55, 0.6) },
 		},
+		--	All (and Navy)
 		{ 	dependencies = 		{ "owo_mp5_01|owo_mp5_02|owo_mp5_03" }, 
 			[current_type] = 	{ offset = true, position = vector3_box(0.0, 0.0, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0) },
 			-- Barrel
@@ -1834,10 +1845,12 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 			-- Charging handle
 			barrelshroudac4 = 	{ offset = true, position = vector3_box(0.0, 0.115, 0.048), rotation = vector3_box(0, 110, 0), scale = vector3_box(0.2, 0.55, 0.65) },
 			-- Front sight
+			--	Ring
 			barrelshroudac5 = 	{ offset = true, position = vector3_box(0.0, -0.052, 0.096), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 0.13, 0.5) },
+			--	Post
 			barrelshroudac6 = 	{ offset = true, position = vector3_box(0.0, 0.187, 0.096), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.08, 0.17, 0.16) },
-			-- Flashlight underbarrel
-			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.01), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.65, 0.65, 0.65) },
+			-- Flashlight flush to the side
+			flashlight = 		{ offset = true, position = vector3_box(-0.018, -0.08, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.65, 0.65) },
 		},
 	})
 end
@@ -2516,20 +2529,26 @@ function mod.fixes_owo_historical_bayonet(variant_id, given_type, given_parent)
 end
 
 -- Bayonet: Underbarrel Grenade Launcher
+--	M203, GP-25, ISTEC 200 
 function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 	local current_type = given_type or "bayonet"
 	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, given_type or current_type, {
 		{id = "owo_m203", name = "OwO M203 Grenade Launcher"},
+		{id = "owo_m203_s1", name = "OwO M203 HECU 1"},
+		{id = "owo_m203_s2", name = "OwO M203 HECU 2"},
 		{id = "owo_gp25", name = "OwO GP-25 Grenade Launcher"},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac1", {
 		{id = "owo_m203_helper_01", name = "OwO M203 ac1", no_randomize = true},
+		{id = "owo_m203_helper_01_02", name = "OwO M203 ac1", no_randomize = true},
 		{id = "owo_gp25_helper_01", name = "OwO GP25 ac1", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac2", {
 		{id = "owo_m203_helper_02", name = "OwO M203 ac2", no_randomize = true},
+		{id = "owo_m203_helper_02_02", name = "OwO M203 ac2 2", no_randomize = true},
+		{id = "owo_m203_helper_02_03", name = "OwO M203 ac2 2", no_randomize = true},
 		{id = "owo_gp25_helper_02", name = "OwO GP25 ac2", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac3", {
@@ -2538,6 +2557,7 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac4", {
 		{id = "owo_m203_helper_04", name = "OwO M203 ac4", no_randomize = true},
+		{id = "owo_m203_helper_04_02", name = "OwO M203 ac4", no_randomize = true},
 		{id = "owo_gp25_helper_04", name = "OwO GP25 ac4", no_randomize = true},
 	})
 	mod.inject_attachments_owo(variant_id, "bayonetac5", {
@@ -2551,6 +2571,20 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 			mesh_move = false, parent = current_parent,
 			automatic_equip = { bayonetac1 = "owo_m203_helper_01", bayonetac2 = "owo_m203_helper_02", 
 				bayonetac3 = "owo_m203_helper_03", bayonetac4 = "owo_m203_helper_04", 
+			}
+		},
+		owo_m203_s1 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = { bayonetac1 = "owo_m203_helper_01_02", bayonetac2 = "owo_m203_helper_02_02", 
+				bayonetac3 = "owo_bayonetac3_default", bayonetac4 = "owo_m203_helper_04_02", 
+			}
+		},
+		owo_m203_s2 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_01", type = current_type, 
+			mesh_move = false, parent = current_parent,
+			automatic_equip = { bayonetac1 = "owo_m203_helper_01_02", bayonetac2 = "owo_m203_helper_02_03", 
+				bayonetac3 = "owo_bayonetac3_default", bayonetac4 = "owo_m203_helper_04_02", 
 			}
 		},
 		owo_gp25 = {
@@ -2568,6 +2602,10 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 			model = _item_ranged.."/muzzles/lasgun_rifle_elysian_muzzle_02", type = "bayonetac1", 
 			mesh_move = false, parent = current_type
 		},
+		owo_m203_helper_01_02 = {
+			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_02", type = "bayonetac1", 
+			mesh_move = false, parent = current_type
+		},
 		owo_gp25_helper_01 = {
 			model = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_04", type = "bayonetac1", 
 			mesh_move = false, parent = current_type
@@ -2576,6 +2614,14 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 		--	Barrel Texture
 		owo_m203_helper_02 = {
 			model = _item_melee.."/grips/combat_knife_grip_03", type = "bayonetac2", 
+			mesh_move = false, parent = current_type
+		},
+		owo_m203_helper_02_02 = {
+			model = _item_melee.."/grips/hatchet_grip_04", type = "bayonetac2", 
+			mesh_move = false, parent = current_type
+		},
+		owo_m203_helper_02_03 = {
+			model = _item_ranged.."/handles/combat_blade_handle_03", type = "bayonetac2", 
 			mesh_move = false, parent = current_type
 		},
 		owo_gp25_helper_02 = {
@@ -2596,6 +2642,10 @@ function mod.owo_underbarrel_gl(variant_id, given_type, given_parent)
 		--	Trigger
 		owo_m203_helper_04 = {
 			model = _item_ranged.."/recievers/shotgun_double_barrel_receiver_01", type = "bayonetac4", 
+			mesh_move = false, parent = current_type
+		},
+		owo_m203_helper_04_02 = {
+			model = _item_ranged.."/stocks/lasgun_rifle_krieg_stock_01", type = "bayonetac4", 
 			mesh_move = false, parent = current_type
 		},
 		owo_gp25_helper_04 = {
@@ -2620,10 +2670,22 @@ function mod.fixes_owo_underbarrel_gl(variant_id)
 		--  --------------------------------------------
 		{	dependencies =  { "owo_m203" },
 			bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
-			bayonetac1 =    { offset = true, position = vector3_box(0, 0.138, 0.), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
+			bayonetac1 =    { offset = true, position = vector3_box(0, 0.138, -0.002), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
 			bayonetac2 =    { offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
 			bayonetac3 =    { offset = true, position = vector3_box(0, 0.06, 0.042), rotation = vector3_box(-180, 0, -180), scale = vector3_box(1, 0.51, 0.51 ) },
 			bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
+		},
+		{	dependencies =  { "owo_m203_s1" },
+			bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
+			bayonetac1 =    { offset = true, position = vector3_box(0, 0.024, -0.002), rotation = vector3_box(0, -28, 0), scale = vector3_box(1, 1, 1 ) },
+			bayonetac2 =    { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.6, 1.6, 0.8 ) },
+			bayonetac4 =    { offset = true, position = vector3_box(0, -0.124, 0.002), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.4, 0.515, 0.33 ) },
+		},
+		{	dependencies =  { "owo_m203_s2" },
+			bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
+			bayonetac1 =    { offset = true, position = vector3_box(0, 0.024, -0.002), rotation = vector3_box(0, -28, 0), scale = vector3_box(1, 1, 1 ) },
+			bayonetac2 =    { offset = true, position = vector3_box(0, -0.0, -0.002), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.57, 0.48, 0.63 ) },
+			bayonetac4 =    { offset = true, position = vector3_box(0, -0.124, 0.002), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.4, 0.515, 0.33 ) },
 		},
 		--  --------------------------------------------
 		--  GP-25
