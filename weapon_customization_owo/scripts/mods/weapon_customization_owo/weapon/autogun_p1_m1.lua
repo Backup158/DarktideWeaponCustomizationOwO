@@ -58,6 +58,9 @@ end
 -- OwO Slot Initialization
 -- ###############
 local table_of_owo_slots = {
+    "flashlightac1",
+    "flashlightac2",
+
     "muzzle_2", -- MT and Syn didn't add this to autoguns yet
     "muzzle_3",
     "muzzle_4",
@@ -105,6 +108,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+mod.owo_tactical_flashlight(this_variant)
 mod.owo_dreg_gunner_barrel(this_variant, "barrel")
 mod.owo_m16_barrel(this_variant, "barrel")
 mod.owo_wood_krieg(this_variant, "barrel")
@@ -299,10 +303,19 @@ mod.fixes_owo_kalash_stock(this_variant)
 mod.fixes_owo_tactical_foregrip(this_variant)
 mod.fixes_owo_heterosexual_foregrip(this_variant)
 
+mod.fixes_owo_tactical_flashlight(this_variant)
+
 -- #################
 -- Custom Fixes
 -- #################
 mod.mt.inject_fixes(this_variant, {
+    -- ######
+    -- Flashlight: Tactical
+    -- ######
+    {	dependencies = 	{ "owo_tactical_flashlight_01"},
+        flashlight = 	{ offset = true, position = vector3_box(0.016, 0.355, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+    },
+
     -- ######
     -- Receiver: HELBORE
     -- ######

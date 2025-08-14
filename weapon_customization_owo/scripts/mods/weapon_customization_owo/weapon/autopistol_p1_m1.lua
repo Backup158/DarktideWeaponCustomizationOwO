@@ -179,6 +179,8 @@ mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_smg_barrel(this_variant)
 mod.fixes_owo_tactical_stock(this_variant)
 
+mod.fixes_owo_tactical_flashlight(this_variant)
+
 -- #################
 -- Custom Fixes
 -- #################
@@ -205,5 +207,4 @@ mod.mt.inject_fixes(this_variant, {
 -- These are shared among multiple weapons but are the same each time
 -- Down here so prepend puts it before everything else
 -- #################
-mod.fixes_owo_tactical_flashlight(this_variant)
 mod.fixes_owo_alt_viewmodel(this_variant)

@@ -702,7 +702,7 @@ end
 function mod.fixes_owo_tactical_flashlight(variant_id)
 	mod.mt.inject_fixes(variant_id, {
 		{	dependencies = 	{ "owo_tactical_flashlight_01"},
-			flashlight = 	{ offset = true, position = vector3_box(0.01, 0.202, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+			flashlight = 	{ offset = true, position = vector3_box(0.016, 0.202, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
 			flashlightac1 =	{ offset = true, position = vector3_box(0.058, -0.128, -0.014), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.75, 1.6, 1.75 ) },
 			flashlightac2 =	{ offset = true, position = vector3_box(0.058, -0.18, -0.014), rotation = vector3_box(0, -70, 0), scale = vector3_box(1.15, 0.5, 1.15 ) },
 		},
