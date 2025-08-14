@@ -2668,7 +2668,7 @@ function mod.fixes_owo_underbarrel_gl(variant_id)
 		--  --------------------------------------------
 		--  M203
 		--  --------------------------------------------
-		{	dependencies =  { "owo_m203" },
+		{	dependencies =  { "owo_m203", },
 			bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
 			bayonetac1 =    { offset = true, position = vector3_box(0, 0.138, -0.002), rotation = vector3_box(180, 0, 0), scale = vector3_box(1, 1, 1 ) },
 			bayonetac2 =    { offset = true, position = vector3_box(0, -0.046, 0), rotation = vector3_box(90, 0, 0), scale = vector3_box(1.4, 1.4, 0.8 ) },
@@ -2676,13 +2676,13 @@ function mod.fixes_owo_underbarrel_gl(variant_id)
 			bayonetac4 =    { offset = true, position = vector3_box(0, -0.112, -0.006), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.28, 0.69 ) },
 		},
 		{	dependencies =  { "owo_m203_s1" },
-			bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
+			bayonet =       { offset = true, position = vector3_box(0, 0.025, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
 			bayonetac1 =    { offset = true, position = vector3_box(0, 0.024, -0.002), rotation = vector3_box(0, -28, 0), scale = vector3_box(1, 1, 1 ) },
 			bayonetac2 =    { offset = true, position = vector3_box(0, -0.02, 0), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.6, 1.6, 0.8 ) },
 			bayonetac4 =    { offset = true, position = vector3_box(0, -0.124, 0.002), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.4, 0.515, 0.33 ) },
 		},
 		{	dependencies =  { "owo_m203_s2" },
-			bayonet =       { offset = true, position = vector3_box(0, 0.036, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
+			bayonet =       { offset = true, position = vector3_box(0, 0.025, -0.068), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
 			bayonetac1 =    { offset = true, position = vector3_box(0, 0.024, -0.002), rotation = vector3_box(0, -28, 0), scale = vector3_box(1, 1, 1 ) },
 			bayonetac2 =    { offset = true, position = vector3_box(0, -0.0, -0.002), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.57, 0.48, 0.63 ) },
 			bayonetac4 =    { offset = true, position = vector3_box(0, -0.124, 0.002), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.4, 0.515, 0.33 ) },

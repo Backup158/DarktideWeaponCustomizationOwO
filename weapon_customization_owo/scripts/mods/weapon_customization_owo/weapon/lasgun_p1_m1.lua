@@ -225,8 +225,11 @@ mod.mt.inject_fixes(this_variant, {
     --    flashlight =    { offset = true, position = vector3_box(0.033, 0.568, 0.062), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
     --},
     --	M203 Default for iLas
-    {	dependencies =  { "owo_m203" },
+    {	dependencies =  { "owo_m203", },
         bayonet =       { offset = true, position = vector3_box(0, 0.354, -0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.5, 1 ) },
+    },
+    {	dependencies =  { "owo_m203_s1|owo_m203_s2", },
+        bayonet =       { offset = true, position = vector3_box(0, 0.272, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.9, 1 ) },
     },
     --  --------------------------------------------
 	--	GP25
