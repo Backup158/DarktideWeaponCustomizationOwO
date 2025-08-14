@@ -640,9 +640,11 @@ function mod.owo_tactical_flashlight(variant_id)
 	mod.inject_attachments_owo(variant_id, "flashlightac1", {
 		{id = "owo_tactical_flashlight_ac1_01", name = "OwO TactiFlash'vesa 1"},
 		{id = "owo_tactical_flashlight_ac1_02", name = "OwO TactiFlash'vesa 2"},
+		{id = "owo_tactical_flashlight_ac1_03", name = "OwO TactiFlash'vesa 3"},
 	})
 	mod.inject_attachments_owo(variant_id, "flashlightac2", {
 		{id = "owo_tactical_flashlight_ac2_01", name = "OwO TactiFlash'vesa 1"},
+		{id = "owo_tactical_flashlight_ac2_02", name = "OwO TactiFlash'vesa 1"},
 	})
 
 	mod.inject_models(variant_id, {
@@ -654,7 +656,8 @@ function mod.owo_tactical_flashlight(variant_id)
 				{loc_flashlight_intensity = 2}, 
 				{loc_flashlight_battery = 2}
 			},
-			mesh_move = false, parent = "receiver"
+			mesh_move = false, parent = "receiver",
+			automatic_equip = { flashlightac1 = "owo_tactical_flashlight_ac1_03", flashlightac2 = "owo_tactical_flashlight_ac2_02", },
 		},
 		owo_tactical_flashlight_mp5_01 = {
 			name = "owo_tactical_flashlight_mp5_01",
@@ -684,17 +687,24 @@ function mod.owo_tactical_flashlight(variant_id)
 		owo_tactical_flashlight_ac1_02 = {
 			model = _item_melee.."/grips/combat_sword_grip_05", type = "flashlightac1", mesh_move = false, parent = "flashlight", parent_node = 1, 
 		},
+		owo_tactical_flashlight_ac1_03 = {
+			model = _item_melee.."/grips/combat_knife_grip_04", type = "flashlightac1", mesh_move = false, parent = "flashlight", parent_node = 1, 
+		},
 		-- Riser
 		owo_tactical_flashlight_ac2_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_stock_03", type = "flashlightac2", mesh_move = false, parent = "flashlight", parent_node = 1, 
+		},
+		owo_tactical_flashlight_ac2_02 = {
+			model = _item_ranged.."/muzzles/autogun_pistol_muzzle_01", type = "flashlightac2", mesh_move = false, parent = "flashlight", parent_node = 1, 
 		},
 	})
 end
 function mod.fixes_owo_tactical_flashlight(variant_id)
 	mod.mt.inject_fixes(variant_id, {
 		{	dependencies = 	{ "owo_tactical_flashlight_01"},
-			flashlight =   	{ offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
-			--flashlightac1 =	{ offset = true, position = vector3_box(0, 0, 0.5), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+			flashlight = 	{ offset = true, position = vector3_box(0.01, 0.202, 0.05), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
+			flashlightac1 =	{ offset = true, position = vector3_box(0.058, -0.128, -0.014), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.75, 1.6, 1.75 ) },
+			flashlightac2 =	{ offset = true, position = vector3_box(0.058, -0.18, -0.014), rotation = vector3_box(0, -70, 0), scale = vector3_box(1.15, 0.5, 1.15 ) },
 		},
 		{	dependencies = 	{ "owo_tactical_flashlight_mp5_01"},
 			flashlight =   	{ offset = true, position = vector3_box(-0.054, 0.244, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
