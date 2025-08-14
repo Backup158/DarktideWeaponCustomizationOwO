@@ -704,6 +704,7 @@ function mod.fixes_owo_tactical_flashlight(variant_id)
 		{	dependencies = 	{ "owo_tactical_flashlight_mp5_02"},
 			flashlight =   	{ offset = true, position = vector3_box(-0.054, 0.244, 0.19), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 1.0 ) },
 			flashlightac1 =	{ offset = true, position = vector3_box(0.058, -0.108, -0.012), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.80, 0.80, 1.0 ) },
+			flashlightac2 =	{ offset = true, position = vector3_box(0.058, -0.13, -0.014), rotation = vector3_box(-90, 0, -180), scale = vector3_box(1.0, 0.45, 1.0 ) },
 		},
 	})
 end
