@@ -2049,6 +2049,9 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 			barrelshroudac6 = 	{ offset = true, position = vector3_box(0.0, 0.187, 0.096), rotation = vector3_box(-90, 0, -180), scale = vector3_box(0.08, 0.17, 0.16) },
 			-- Flashlight flush to the side
 			flashlight = 		{ offset = true, position = vector3_box(-0.018, -0.08, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.65, 0.65) },
+			-- Trinket hook on grip
+			--	idc to patch this very hard
+			trinket_hook = 		{ offset = false, parent = "grip", position = vector3_box(-0.0, -0.15, -0.115), rotation = vector3_box(-33, 0, 0), },
 		},
 	})
 end
