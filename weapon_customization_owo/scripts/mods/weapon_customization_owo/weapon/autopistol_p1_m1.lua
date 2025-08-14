@@ -48,6 +48,7 @@ end
 -- ###############
 local table_of_owo_slots = {
     "flashlightac1",
+    "flashlightac2",
 
     "sight_2",
     "muzzle_2", -- MT and Syn didn't add this to autopistol yet, though syn has it commented out
