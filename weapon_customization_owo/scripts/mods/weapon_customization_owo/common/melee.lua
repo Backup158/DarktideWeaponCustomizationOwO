@@ -63,7 +63,7 @@ mod.wc.crossguard_list = {
 	"owo_crossguard_default",
 	"owo_crossguard_plate_01",
 }
-mod.create_custom_slot("crossguard", 
+mod.create_named_custom_slot("crossguard", 
 	{
 		en = "Crossguard",
 	}
@@ -121,7 +121,7 @@ mod.wc.frontguard_list = {
 	"owo_trench_dagger_finger_guard_05",
 	"owo_trench_dagger_finger_guard_06",
 }
-mod.create_custom_slot("frontguard", {
+mod.create_named_custom_slot("frontguard", {
 	en = "Front Guard",
 })
 mod.wc.add_custom_attachments.frontguardac1 = "frontguardac1_list"

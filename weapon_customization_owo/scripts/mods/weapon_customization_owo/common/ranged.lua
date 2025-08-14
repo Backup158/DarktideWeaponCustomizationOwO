@@ -28,12 +28,8 @@ mod.mt.table_append(mod.wc.flashlights, {
 	"owo_tactical_flashlight_mp5_01",
 	"owo_tactical_flashlight_mp5_02",
 })
-mod.wc.add_custom_attachments.flashlightac1 = "muzzle_3_list"
-mod.wc.muzzle_3_list = {
-	"owo_muzzle_3_default",
-	"owo_condom_helper_m3_01",
-	"owo_muzzle_brake_helper_02_01",
-}
+mod.create_new_helper_slot("flashlightac1")
+
 --	Lasers
 mod.mt.table_append(mod.wc.laser_pointers, {
 	"owo_grip_laser_01",
@@ -530,7 +526,7 @@ mod.wc.receiverac1_list = {
 	"owo_slim_laspistol_grip_mag_01",
 	"owo_helbore_mas49_ass",
 }
-mod.create_custom_slot("receiverac1", 
+mod.create_named_custom_slot("receiverac1", 
 	{
 		en = "Receiver Accessory",
 	}

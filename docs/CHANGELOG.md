@@ -18,6 +18,9 @@ v3.3.0
         - MP-5 barrels have flashlights on the side by default (smaller and closer to the barrel)
         - MP-5SD suppressor patches have been universalized
         - MP-5SD HECU Combination secret (M203 HECU 1/2 + Suppressor 4/5)
+- DEVS ONLY
+    - Renamed `create_custom_slot` to `create_named_custom_slot`
+    - Created 
 
 # 2025-08-11
 v3.2.0
