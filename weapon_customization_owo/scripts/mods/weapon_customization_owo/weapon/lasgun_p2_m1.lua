@@ -951,7 +951,7 @@ mod.mt.inject_fixes(this_variant, {
 	},
     {	dependencies =      { "owo_crosshair_german_01h", "owo_pu_scope_01|owo_pu_scope_02", },
 		sight_2 = 		    { offset = true, position = vector3_box(0.0, 0.0, -0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
-        scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0485), rotation = vector3_box(0, -3, 0), lense_transparency = true },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0485), rotation = vector3_box(-3, 0, 0), lense_transparency = true },
 	},
 	{	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02", },
 		sight =             { offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
