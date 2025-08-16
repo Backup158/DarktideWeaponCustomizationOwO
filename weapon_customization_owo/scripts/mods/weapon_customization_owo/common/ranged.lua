@@ -5851,6 +5851,7 @@ function mod.fixes_owo_classic_telescopic_sight(variant_id)
 		-- ######
 		-- Sight: CLASSIC TELESCOPIC SIGHTS
 		-- ######
+		-- Scope alignment
 		-- Purposely duplicated the copy pasted code for checks efficiency
 		{	dependencies =  	{ "owo_pu_scope_01" },
 			-- Scope body

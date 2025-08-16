@@ -955,12 +955,17 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Sight: CLASSIC TELESCOPIC SIGHTS
 	-- ######
-	{	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02"},
+    -- Crosshair patches
+    {	dependencies =      { "owo_crosshair_german_01h", "owo_pu_scope_01|owo_pu_scope_02", },
+		sight_2 = 		    { offset = true, position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0355), rotation = vector3_box(-2, 0, 0), lense_transparency = true },
+	},
+    -- Scope position
+	{	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02", },
         sight = 	        { offset = true, position = vector3_box(0, -0.09, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
         -- Aligning with Crosshair
         --no_scope_offset =   { offset = true, position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true },
         scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0307), rotation = vector3_box(0, 0, 0), lense_transparency = true },
-
     },
 
     -- ######
