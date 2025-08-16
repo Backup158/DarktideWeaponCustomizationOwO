@@ -7,9 +7,8 @@ v3.4.0
         - I've known about this for a while but never found a satisfactory solution 
     - Now you have to choose the reticle yourself
         - If you are using the empty `sight_2` "sight_default" it'll automatically equip the right one
-        - If you want to have no reticle, use my "Empty Sight_2" option or else it'll get overwritten
-- Renamed MP-5 to MP5 (idc)
-- New attachments:
+        - If you want to have no reticle, use my "Invisible Sight_2" option or else it'll get overwritten
+- Added attachments:
     - SMG Barrels
         - MP5 MLI Barrel
             - square and more grippy
@@ -19,6 +18,7 @@ v3.4.0
             - the flashlights do not look good
             - it also clips with every underbarrel weapon
             - but im lazy lol
+    - Bolter now supports Classic Telescopic Scopes and Classic Crosshair Reticles
 - Reworked attachments:
     - Underbarrel Grenade Launchers
         - GP-25 on Helbore is now aligned
@@ -28,8 +28,9 @@ v3.4.0
         - Aligned with PU Scope now (both Helbore and Autogun)
     - Plasma Mags for Helbores
         - Fixed helpers not being hidden when not used (they were in the wrong slot before)
+- Renamed MP-5 to MP5 (idc)
+- Gave a real name to Classic Crosshair Reticles
         
-
 # 2025-08-13
 v3.3.0
 
