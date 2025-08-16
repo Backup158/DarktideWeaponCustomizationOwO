@@ -58,8 +58,8 @@ mod.hide_slot_fixes = {
     ["sight_secondary_ac1"] = "owo_holosight_sight_secondary_helper_01",
     ["sight_secondary_ac2"] = "owo_holosight_sight_secondary_helper_02",
     -- Sight_2
-    ["sight_2_ac1"] = "owo_crosshair_ac1_block|owo_crosshair_ac1_obelisk",
-    ["sight_2_ac2"] = "owo_crosshair_ac2_block|owo_crosshair_ac2_obelisk",
+    ["sight_2_ac1"] = "owo_crosshair_ac1_block|owo_crosshair_ac1_obelisk|owo_crosshair_ac1_light_bar",
+    ["sight_2_ac2"] = "owo_crosshair_ac2_block|owo_crosshair_ac2_obelisk|owo_crosshair_ac2_light_bar",
     ["sight_2_ac3"] = "owo_crosshair_ac3_block|owo_crosshair_ac3_obelisk",
     -- Stocks
     ["stockac"] = "owo_tactical_stockac_01|owo_stock_group_indicator_kalashnikov|owo_stock_group_indicator_kalashnikov_wood|owo_stock_group_indicator_kalashnikov_compact|owo_stock_group_indicator_beeg",

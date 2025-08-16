@@ -5995,14 +5995,14 @@ function mod.owo_scope_crosshair(variant_id)
 			model = _item_melee.."/blades/combat_knife_blade_03", type = "sight_2_ac1", parent = "sight_2", mesh_move = false, 
 		},
 		owo_crosshair_ac1_light_bar = {
-			model = _item_ranged.."/sights/reflex_sight_03", type = "sight_2_ac1", parent = "sight_2", mesh_move = false, hide_mesh = { {sight_2_ac1, 5,6}, },
+			model = _item_ranged.."/sights/reflex_sight_03", type = "sight_2_ac1", parent = "sight_2", mesh_move = false, hide_mesh = { {"sight_2_ac1", 5}, },
 		},
 		-- AC2
 		owo_crosshair_ac2_block = {
 			model = _item_ranged.."/handles/combat_blade_handle_04", type = "sight_2_ac2", parent = "sight_2", mesh_move = false, 
 		},
 		owo_crosshair_ac2_light_bar = {
-			model = _item_ranged.."/sights/reflex_sight_03", type = "sight_2_ac2", parent = "sight_2", mesh_move = false,  hide_mesh = { {sight_2_ac2, 5,6}, },
+			model = _item_ranged.."/sights/reflex_sight_03", type = "sight_2_ac2", parent = "sight_2", mesh_move = false,  hide_mesh = { {"sight_2_ac2", 5}, },
 		},
 		-- AC3
 		owo_crosshair_ac3_block = {
@@ -6036,10 +6036,10 @@ function mod.fixes_owo_scope_crosshair(variant_id)
 		{	dependencies = 	{ "owo_crosshair_chevron", },
 			sight_2 = 		{ offset = true, position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 			-- Left
-			sight_2_ac1 = 	{ offset = false, parent = "sight_2", position = vector3_box(0, 0.08, -0.31), rotation = vector3_box(90, 0, 45), scale = vector3_box(0.5, 0.5, 0.5 ) },
+			sight_2_ac1 = 	{ offset = false, parent = "sight_2", position = vector3_box(0.008, 0.08, -0.013), rotation = vector3_box(0, 45, 0), scale = vector3_box(-0.08, 0.5, 0.3 ), },
 			-- Right
 			--	vertical, forwards, horiz
-			sight_2_ac2 = 	{ offset = false, parent = "sight_2", position = vector3_box(0.125, 0.08, 0.21), rotation = vector3_box(90, 0, -45), scale = vector3_box(0.5, 0.5, 0.5 ) },
+			sight_2_ac2 = 	{ offset = false, parent = "sight_2", position = vector3_box(-0.008, 0.08, -0.013), rotation = vector3_box(0, -45, 0), scale = vector3_box(-0.08, 0.5, 0.3 ), },
 		},
 	})
 end
