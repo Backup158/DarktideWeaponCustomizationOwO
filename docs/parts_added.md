@@ -43,10 +43,11 @@ Parts are prefixed with `OwO` in the customization menu.
 &emsp; &emsp; Short fits typical revolver barrel length.  \
 &emsp; &emsp; Long goes a bit beyond that.
 - **SMG Barrels**: Autopistol, Autoguns  \
-&emsp; Based on the HK MP-5  \
-&emsp; &emsp; MP-5 Navy, MP-5K, and MP-5SD  \
+&emsp; Based on the HK MP5  \
+&emsp; &emsp; MP5 Navy, MP5K, MP5SD, MP5SD HECU, MP5 MLI, MP5 Surefire Light  \
+&emsp; &emsp; MP5SD HECU is used by Half Life 1 HECU Marines  \
 &emsp; On Autoguns, front post is aligned to the MT Autopistol Sight.  \
-&emsp; On Autoguns, it's best used with the Braced Autogun Receivers.  \
+&emsp; On Autoguns, the Navy barrel is best used with the Braced Autogun Receivers.  \
 
 
 ### Foregrips
@@ -121,10 +122,6 @@ Additional slot to add to or replace the original receiver. These can get super 
 > KNOWN ISSUE: Floating default parts (trigger, glowing magazine well, and switches on the side)
 
 ### Sights
-- Sight_2, **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers  \
-&emsp; Point shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim  \
-&emsp; Equipped in the helper sight section  \
-&emsp; These change how you hold the gun while ADSing while keeping the physical appearance of the scope on your gun.
 - **Ladder Aperture Sights**: Helbore Lasguns  \
 &emsp; Based on WWI era iron sights. No front posts though so good luck aiming with just the U notch.  \
 &emsp; Includes very shoddily made MAS49 inspired sights. These look ugly as sin since the receiver is so wide and I'm too lazy to resize them.
@@ -160,6 +157,16 @@ Additional slot to add to or replace the original receiver. These can get super 
 - **Classic Telescopic Scopes**: Infantry/Braced/Vigilant Autoguns, Helbore Lasguns  \
 &emsp; Soviet PU Scopes  \
 &emsp; &emsp; Uses German #1 style reticle. The one that looks like a T
+
+### Sight 2
+- **Alternative Viewmodels**: Braced/Infantry/Vigilant Autoguns, Autopistol, Bolter, Bolt Pistol, Infantry/Helbore/Recon Lasguns, Laspistol, Combat/Double Barrel Shotguns, Stub Revolvers  \
+&emsp; Point shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim  \
+&emsp; Equipped in the helper sight section  \
+&emsp; These change how you hold the gun while ADSing while keeping the physical appearance of the scope on your gun.
+- **Crosshairs for Scopes**: Braced/Infantry/Vigilant Autoguns, Helbore Lasguns
+&emsp; Based on
+&emsp; &emsp; German Reticle #1 (with high variant)
+&emsp; Meant to work with Classic Telescopic Scopes
 
 ### Grips
 - **Fin Grips**: Infantry/Braced/Vigilant Autoguns  \

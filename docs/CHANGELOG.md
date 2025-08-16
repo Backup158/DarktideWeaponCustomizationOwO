@@ -24,6 +24,8 @@ v3.4.0
         - GP-25 on Helbore is now aligned
     - Crosshairs for Scopes
         - Aligned with PU Scope now (both Helbore and Autogun)
+    - Plasma Mags for Helbores
+        - Fixed helpers not being hidden when not used (they were in the wrong slot before)
         
 
 # 2025-08-13
