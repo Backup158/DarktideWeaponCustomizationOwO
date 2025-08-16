@@ -411,6 +411,7 @@ mod.mt.inject_fixes(this_variant, {
     {	dependencies =      { "owo_plasma_sniper_02|owo_plasma_sniper_03|owo_plasma_sniper_04|owo_plasma_sniper_05|owo_plasma_sniper_06|owo_plasma_sniper_07|owo_plasma_sniper_08|owo_plasma_sniper_09", },
         barrelshroud =      { offset = true, position = vector3_box(0, 0.336, -0.029), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.83, 1.3, 0.69 ) },
 		barrelshroudac =    { offset = true, position = vector3_box(0, 0.202, -0.005), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 0.42, 1 ) },
+        muzzle =            { offset = true, position = vector3_box(0, 0.09, 0), },
 	},
 	-- Regular Helbore bayonets (barrel parent)
 	{   dependencies =      { "owo_plasma_krieg_01f", "autogun_bayonet_01|autogun_bayonet_02" },

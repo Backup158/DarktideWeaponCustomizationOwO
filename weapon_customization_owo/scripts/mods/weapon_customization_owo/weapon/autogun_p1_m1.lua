@@ -412,30 +412,30 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     -- MP5 Barrel
     --  Iag: same as default
-    --{   dependencies =  { "owo_mp5_01", _infantry_autogun_receivers, },
+    --{   dependencies =  { "owo_mp5_navy", _infantry_autogun_receivers, },
     --    barrel =        { offset = true, position = vector3_box(0, 0, -0.032), },
     --},
     --  Brautos
-    {   dependencies =  { "owo_mp5_01|owo_mp5_03", _braced_autogun_receivers, },
+    {   dependencies =  { "owo_mp5_navy|owo_mp5_sd|owo_mp5_mli|owo_mp5_sf", _braced_autogun_receivers, },
         barrel =        { offset = true, position = vector3_box(0, 0, 0.0), },
     },
-    {   dependencies =  { "owo_mp5_03_hl1", _braced_autogun_receivers, },
+    {   dependencies =  { "owo_mp5_sd_hl1", _braced_autogun_receivers, },
         barrel =        { offset = true, position = vector3_box(0, 0, 0.016), },
     },
     --  Headhunters
-    {   dependencies =  { "owo_mp5_01|owo_mp5_03", _vigilant_autogun_receivers, },
+    {   dependencies =  { "owo_mp5_navy|owo_mp5_sd|owo_mp5_mli|owo_mp5_sf", _vigilant_autogun_receivers, },
         barrel =        { offset = true, position = vector3_box(0, 0, -0.012), },
     },
-    {   dependencies =  { "owo_mp5_03_hl1", _vigilant_autogun_receivers, },
+    {   dependencies =  { "owo_mp5_sd_hl1", _vigilant_autogun_receivers, },
         barrel =        { offset = true, position = vector3_box(0, 0, 0.004), },
     },
     -- MP5k
     --  Brautos
-    {   dependencies =  { "owo_mp5_02", _braced_autogun_receivers, },
+    {   dependencies =  { "owo_mp5_k", _braced_autogun_receivers, },
         barrel =        { offset = true, position = vector3_box(0, -0.06, 0.0), },
     },
     --  Headhunters
-    {   dependencies =  { "owo_mp5_02", _vigilant_autogun_receivers, },
+    {   dependencies =  { "owo_mp5_k", _vigilant_autogun_receivers, },
         barrel =        { offset = true, position = vector3_box(0, -0.06, -0.012), },
     },
     -- Rest handled universally

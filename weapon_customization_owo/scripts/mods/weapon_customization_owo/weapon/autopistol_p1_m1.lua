@@ -190,7 +190,7 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
     --  OwO MP-5SD
     --      flush with handguard. also syn's suppressor
-    {	dependencies =  { "owo_mp5_03|owo_mp5_03_hl1", _owo_all_suppressor_muzzles.."|syn_silencer_muzzle_01", },
+    {	dependencies =  { "owo_mp5_sd|owo_mp5_sd_hl1", _owo_all_suppressor_muzzles.."|syn_silencer_muzzle_01", },
         muzzle =        { offset = true, position = vector3_box(0, -0.03, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
     },
     -- Handled universally

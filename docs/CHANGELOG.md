@@ -1,3 +1,12 @@
+# 2025-08-15
+v3.4.0
+
+- Renamed MP-5 to MP5 (idc)
+- New attachments:
+    - SMG Barrels:
+        - MP5 MLI Barrel
+        
+
 # 2025-08-13
 v3.3.0
 
