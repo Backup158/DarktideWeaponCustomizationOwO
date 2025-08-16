@@ -3176,7 +3176,7 @@ function mod.fixes_owo_underbarrel_shotgun(variant_id, given_type, given_parent)
 			-- Muzzle
 			bayonetac3 =    { offset = true, position = vector3_box(0, 0.36, 0.086), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.0, 1.0 ) },
 			-- Trigger
-			bayonetac4 =    { offset = true, position = vector3_box(0, -0.044, -0.026), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.85, 1.085 ) },
+			bayonetac4 =    { offset = false, parent = "bayonet", position = vector3_box(0, -0.044, -0.026), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.4, 0.85, 1.085 ) },
 			-- Front Connector
 			bayonetac5 =    { offset = true, position = vector3_box(0, 0.246, 0.082), rotation = vector3_box(-180, -90, 90), scale = vector3_box(0.75, 0.95, 0.335 ) },
 			-- Connector
@@ -5670,6 +5670,9 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 		--  Trijicon ACOG
 		--  --------------------------------------------
 		-- 	Default Reticle Choice
+		{   dependencies =  		{ "sight_default", "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
+			sight_2 =       		{ automatic_equip = { sight_2 = "owo_reticle_helper_invisible", }, offset = false, parent = "sight", position = vector3_box(0, -0.1, 0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), animation_wait_attach = { "rail" }, },
+		},
 		{   dependencies =  		{ "sight_default", _owo_all_acog_sights },
 			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, offset = false, parent = "sight", position = vector3_box(0, -0.1, 0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), animation_wait_attach = { "rail" }, },
 		},
@@ -5706,6 +5709,9 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 		-- 	Default Reticle Choice
 		{   dependencies =  	{ "sight_default", "owo_susat_01_ps" },
 			sight_2 =       	{ automatic_equip = { sight_2 = "owo_alt_viewmodel_06", }, },
+		},
+		{   dependencies =  	{ "sight_default", _owo_all_susat_sights },
+			sight_2 =       	{ automatic_equip = { sight_2 = "owo_reticle_helper_invisible", }, },
 		},
 		--{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_susat", },
 		{	dependencies = 		{ _owo_all_susat_sights, }, 
@@ -5867,6 +5873,10 @@ function mod.fixes_owo_classic_telescopic_sight(variant_id)
 		-- ######
 		-- Sight: CLASSIC TELESCOPIC SIGHTS
 		-- ######
+		-- Crosshair Patches
+		{   dependencies =  	{ "sight_default", "owo_pu_scope_01|owo_pu_scope_02" },
+			sight_2 =       	{ automatic_equip = { sight_2 = "owo_reticle_helper_invisible", }, },
+		},
 		-- Scope alignment
 		-- Purposely duplicated the copy pasted code for checks efficiency
 		{	dependencies =  	{ "owo_pu_scope_01" },

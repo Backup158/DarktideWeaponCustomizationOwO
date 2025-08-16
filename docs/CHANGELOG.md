@@ -22,6 +22,8 @@ v3.4.0
 - Reworked attachments:
     - Underbarrel Grenade Launchers
         - GP-25 on Helbore is now aligned
+    - Underbarrel Shotguns
+        - M26-MASS trigger was rotated
     - Classic Crosshair Reticles
         - Aligned with PU Scope now (both Helbore and Autogun)
     - Plasma Mags for Helbores
