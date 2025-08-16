@@ -6131,23 +6131,23 @@ function mod.owo_plasma_mag(variant_id, given_type, given_parent)
 		},
 		owo_plasma_mag_01ss = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = current_type, parent = current_parent, 
-			automatic_equip = { magac = "owo_plasma_mag_helper_01", },
+			automatic_equip = { owo_magac1 = "owo_plasma_mag_helper_01", },
 		},
 		owo_plasma_mag_02ss = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = current_type, parent = current_parent, 
-			automatic_equip = { magac = "owo_plasma_mag_helper_02", },
+			automatic_equip = { owo_magac1 = "owo_plasma_mag_helper_02", },
 		},
 		owo_plasma_mag_03ss = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = current_type, parent = current_parent, 
-			automatic_equip = { magac = "owo_plasma_mag_helper_03", },
+			automatic_equip = { owo_magac1 = "owo_plasma_mag_helper_03", },
 		},
 		owo_plasma_mag_04ss = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = current_type, parent = current_parent, 
-			automatic_equip = { magac = "owo_plasma_mag_helper_04", },
+			automatic_equip = { owo_magac1 = "owo_plasma_mag_helper_04", },
 		},
 		owo_plasma_melta_mag_01ss = {
 			model = _item_ranged.."/magazines/lasgun_rifle_magazine_01", type = current_type, parent = current_parent, 
-			automatic_equip = { magac = "owo_plasma_melta_mag_helper_01", },
+			automatic_equip = { owo_magac1 = "owo_plasma_melta_mag_helper_01", },
 		},
 		-- ### Helper Parts ###
 		owo_plasma_mag_helper_01 = {
