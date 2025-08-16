@@ -3,7 +3,11 @@ v3.4.0
 
 - **REWORKED HOW SCOPES CHOOSE THEIR RETICLES**
     - Before, it would automatically equip the most appropriate one, with the idea that you could then choose whichever one you want
-    - However, automatic_equip runs every time something changes (game opens) so 
+        - However, `automatic_equip` runs every time something changes (including when the game opens) so your custom choice would get overwritten
+        - I've known about this for a while but never found a satisfactory solution 
+    - Now you have to choose the reticle yourself
+        - If you are using the empty `sight_2` "sight_default" it'll automatically equip the right one
+        - If you want to have no reticle, use my "Empty Sight_2" option or else it'll get overwritten
 - Renamed MP-5 to MP5 (idc)
 - New attachments:
     - SMG Barrels
@@ -18,8 +22,8 @@ v3.4.0
 - Reworked attachments:
     - Underbarrel Grenade Launchers
         - GP-25 on Helbore is now aligned
-    - Crosshairs
-        - Aligned on Helbore with PU Scope now
+    - Crosshairs for Scopes
+        - Aligned with PU Scope now (both Helbore and Autogun)
         
 
 # 2025-08-13

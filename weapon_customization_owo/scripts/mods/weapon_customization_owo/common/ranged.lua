@@ -5164,13 +5164,17 @@ function mod.fixes_owo_holosight(variant_id)
 		--  --------------------------------------------
 		--  EOTech
 		--  --------------------------------------------
+		-- 	Default Reticle Choice
+		{   dependencies =  		{ "sight_default", "owo_sight_group_indicator_holosight_eotech", _owo_all_eotech_sights },
+			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
+		},
 		--  Sight Body Components
 		--      Short Variant
 		{   dependencies =  		{ "owo_sight_group_indicator_holosight_eotech", _owo_short_eotech_sights },
 			sightac1 =      		{ offset = true, position = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.366, 0.256) },
 			sightac2 =      		{ offset = true, position = vector3_box(0.00, 0.018, 0.018), rotation = vector3_box(90, -90, 0), scale = vector3_box(1.25, 0.366, 0.256) },
 		},
-		-- 			_owo_all_eotech_sights
+		-- 		_owo_all_eotech_sights
 		{   dependencies =  		{ "owo_sight_group_indicator_holosight_eotech", _owo_all_eotech_sights },
 			rail =          		{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
 			sightac1 =      		{ offset = true, position = vector3_box(0.00, 0.018, 0.0), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.56, 0.286) },
@@ -5198,6 +5202,10 @@ function mod.fixes_owo_holosight(variant_id)
 		--  --------------------------------------------
 		--  Vortex Razor
 		--  --------------------------------------------
+		-- 	Default Reticle Choice
+		{   dependencies =  		{ "sight_default", "owo_sight_group_indicator_holosight_razor", _owo_all_vortex_sights },
+			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
+		},
 		--  Short Variant
 		{   dependencies =  		{ "owo_sight_group_indicator_holosight_razor", _owo_short_vortex_sights },
 			sightac1 =      		{ offset = true, position = vector3_box(-0.002, -0.018, 0.018), rotation = vector3_box(180, 90, -90), scale = vector3_box(1.25, 0.4, 0.292) },
@@ -5661,6 +5669,10 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 		--  --------------------------------------------
 		--  Trijicon ACOG
 		--  --------------------------------------------
+		-- 	Default Reticle Choice
+		{   dependencies =  		{ "sight_default", _owo_all_acog_sights },
+			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, offset = false, parent = "sight", position = vector3_box(0, -0.1, 0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), animation_wait_attach = { "rail" }, },
+		},
 		--  Sight Helpers
 		--{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_acog", },
 		{	dependencies = 		{ _owo_all_acog_sights, }, 
@@ -5691,6 +5703,10 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 		--  --------------------------------------------
 		--  SUSAT
 		--  --------------------------------------------
+		-- 	Default Reticle Choice
+		{   dependencies =  	{ "sight_default", "owo_susat_01_ps" },
+			sight_2 =       	{ automatic_equip = { sight_2 = "owo_alt_viewmodel_06", }, },
+		},
 		--{   dependencies =  	{ "owo_sight_group_indicator_prismatic_sight_susat", },
 		{	dependencies = 		{ _owo_all_susat_sights, }, 
 			rail =          	{ offset = true, position = vector3_box(0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), },
@@ -5904,7 +5920,7 @@ function mod.owo_reticle_helper(variant_id)
 	})
 end
 
--- Sight_2: Crosshairs
+-- Sight_2: Crosshairs for Scopes
 function mod.owo_scope_crosshair(variant_id)
 	mod.inject_attachments_owo(variant_id, "sight_2", {
 		-- fuck it. i'll just use the ones mt already added and hide the mesh in the weapon classes
