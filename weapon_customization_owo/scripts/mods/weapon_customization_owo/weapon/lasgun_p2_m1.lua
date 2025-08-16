@@ -770,7 +770,7 @@ mod.mt.inject_fixes(this_variant, {
     ]]
     --	GP25 Default
 	{	dependencies = { "owo_gp25" },
-        bayonet =      { offset = true, position = vector3_box(0, -0.072, -0.112), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
+        bayonet =      { offset = true, position = vector3_box(0, 0.482, -0.066), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.5, 1.2, 1.5 ) },
     },
 
 	-- ######
