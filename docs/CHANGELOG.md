@@ -3,8 +3,20 @@ v3.4.0
 
 - Renamed MP-5 to MP5 (idc)
 - New attachments:
-    - SMG Barrels:
+    - SMG Barrels
         - MP5 MLI Barrel
+            - square and more grippy
+            - the real one has three picatinny rails but i am NOT doing that lmao
+        - MP5 Surefire Light Barrel
+            - square with a bulge at the bottom for the flashlight
+            - the flashlights do not look good
+            - it also clips with every underbarrel weapon
+            - but im lazy lol
+- Reworked attachments:
+    - Underbarrel Grenade Launchers
+        - GP-25 on Helbore is now aligned
+    - Crosshairs
+        - Aligned on Helbore with PU Scope now
         
 
 # 2025-08-13
