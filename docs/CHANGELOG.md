@@ -1,6 +1,9 @@
 # 2025-08-15
 v3.4.0
 
+- **REWORKED HOW SCOPES CHOOSE THEIR RETICLES**
+    - Before, it would automatically equip the most appropriate one, with the idea that you could then choose whichever one you want
+    - However, automatic_equip runs every time something changes (game opens) so 
 - Renamed MP-5 to MP5 (idc)
 - New attachments:
     - SMG Barrels

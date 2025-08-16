@@ -468,6 +468,12 @@ mod.wc.sight_secondary_ac2_list = {
 	--"owo_pu_scope2_helper_02",
 }
 -- SIGHT_2
+-- doesn't work like that lol
+--mod:add_global_localize_strings({
+--  loc_weapon_cosmetics_customization_sight_2 = {
+-- 	   	en = "Sight 2",
+--	},
+--})
 mod.mt.table_append(mod.wc.reflex_sights, { 	-- For some reason this is what sight_2 is called
 	"owo_alt_viewmodel_01",
 	"owo_alt_viewmodel_02",
