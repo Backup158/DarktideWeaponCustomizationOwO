@@ -5462,7 +5462,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
-				sight_2 = "owo_reticle_helper_invisible", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				--sight_2 = "owo_reticle_helper_invisible", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -5478,7 +5478,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac5 = "owo_acog_sight_helper_05", sightac6 = "owo_acog_sight_helper_06",
 				sightac7 = "owo_acog_sight_helper_07",
 				sight_secondary = "owo_acog_sight_sight_secondary_01", -- sight_secondary_ac1 = "owo_acog_sight_sight_secondary_helper_01", sight_secondary_ac2 = "owo_acog_sight_sight_secondary_helper_02"
-				sight_2 = "owo_reticle_helper_invisible", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
+				--sight_2 = "owo_reticle_helper_invisible", -- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_acog", 
 			},
 			hide_mesh = {
 				{current_type, 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15},
@@ -5493,7 +5493,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
-				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sightac7 = "owo_susat_ac7_01", -- sight_2 = "owo_reticle_helper_invisible",
 				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
@@ -5509,7 +5509,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac1 = "owo_acog_sight_empty", sightac2 = "owo_susat_ac2_01", 
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
-				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sightac7 = "owo_susat_ac7_01", -- sight_2 = "owo_reticle_helper_invisible",
 				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
@@ -5542,7 +5542,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sightac7 = "owo_susat_ac7_01", -- sight_2 = "owo_reticle_helper_invisible",
 				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
@@ -5559,7 +5559,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sightac7 = "owo_susat_ac7_01", -- sight_2 = "owo_reticle_helper_invisible",
 				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {
@@ -5576,7 +5576,7 @@ function mod.owo_prismatic_sight(variant_id, given_type, given_parent)
 				sightac3 = "owo_susat_ac3_01", sightac4 = "owo_acog_sight_helper_04", 
 				sightac5 = "owo_susat_ac5_01", sightac6 = "owo_susat_ac6_01", 
 				sight_secondary = "owo_acog_sight_sight_secondary_01",
-				sightac7 = "owo_susat_ac7_01", sight_2 = "owo_reticle_helper_invisible",
+				sightac7 = "owo_susat_ac7_01", -- sight_2 = "owo_reticle_helper_invisible",
 				-- sight_group_indicator = "owo_sight_group_indicator_prismatic_sight_susat", 
 			},
 			hide_mesh = {

@@ -61,6 +61,10 @@ local table_of_owo_slots = {
     "sight_secondary",
     "sight_secondary_ac1",
     "sight_secondary_ac2",
+
+    "sight_2_ac1",
+    "sight_2_ac2",
+    "sight_2_ac3",
     
     "bayonetac1",
     "bayonetac2",
@@ -96,6 +100,8 @@ mod.owo_alt_viewmodel(this_variant)
 
 mod.owo_holosight(this_variant, "sight", "rail")
 mod.owo_prismatic_sight(this_variant, "sight", "receiver")
+mod.owo_classic_telescopic_sight(this_variant)
+mod.owo_scope_crosshair(this_variant)
 
 mod.owo_tactical_stock(this_variant, "stock")
 
@@ -198,6 +204,8 @@ mod.fixes_owo_muzzle_brake(this_variant)
 
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
+mod.fixes_owo_classic_telescopic_sight(this_variant)
+mod.fixes_owo_scope_crosshair(this_variant)
 
 mod.fixes_owo_underbarrel_gl(this_variant)
 mod.fixes_owo_underbarrel_shotgun(this_variant)
@@ -404,6 +412,23 @@ mod.mt.inject_fixes(this_variant, {
         rail =              { offset = true, position = vector3_box(0, 0.036, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1.1, 0.8), },
         scope_offset =      { offset = true, position = vector3_box(0, 0.04, -0.03), rotation = vector3_box(0, 0, 0), lense_transparency = true },
     },
+
+    -- ######
+	-- Sight: CLASSIC TELESCOPIC SIGHTS
+	-- ######
+    --{	dependencies =      { "owo_crosshair_german_01", "owo_pu_scope_01|owo_pu_scope_02", },
+	--	sight_2 = 		    { offset = true, position = vector3_box(0.0, 0.0, -0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+	--},
+    {	dependencies =      { "owo_crosshair_german_01h", "owo_pu_scope_01|owo_pu_scope_02", },
+		--sight_2 = 		    { offset = true, position = vector3_box(0.0, 0.0, -0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0475), rotation = vector3_box(-3, 0, 0), lense_transparency = true },
+	},
+	{	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02", },
+		sight =             { offset = true, position = vector3_box(0, 0, 0.217), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
+		-- Aligning to Crosshair
+        --no_scope_offset =   { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+		scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0455), rotation = vector3_box(0, 0, 0), lense_transparency = true },
+	},
 
     -- ######
 	-- Stock: TACTICAL STOCK
