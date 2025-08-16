@@ -2046,16 +2046,16 @@ function mod.fixes_owo_smg_barrel(variant_id, given_type, given_parent)
 		--  MP5 Surefire Light Handguard
 		{ 	dependencies = 		{ "owo_mp5_sf" }, 
 			-- Handguard
-			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.065, -0.0), rotation = vector3_box(-90, 0, 0), scale = vector3_box(1.8, 1.8, 0.575) },
+			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.2, -0.043), rotation = vector3_box(-13, 0, 0), scale = vector3_box(1.2, 0.87, 0.575) },
 			barrelshroudac3 = 	{ offset = true, position = vector3_box(0.0, -0.136, 0.02), rotation = vector3_box(0, 0, 180), scale = vector3_box(0.81, 1.07, 0.6) },
 			-- Flashlight in the guard
-			flashlight = 		{ offset = true, position = vector3_box(-0.018, -0.08, 0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.65, 0.65, 0.65) },
+			flashlight = 		{ offset = true, position = vector3_box(-0.03, 0.0, -0.022), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.55, 0.65, 0.34) },
 		},
 		--	MP5 MLI
 		{ 	dependencies = 		{ "owo_mp5_mli" }, 
 			-- underbarrel
-			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.175, 0.032), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 1.15, 0.61) },
-			barrelshroudac3 = 	{ offset = true, position = vector3_box(0.0, -0.112, 0.05), rotation = vector3_box(171, 0, 0), scale = vector3_box(1.2, 0.9, 0.6) },
+			barrelshroudac2 = 	{ offset = true, position = vector3_box(0.0, 0.175, 0.028), rotation = vector3_box(0, 0, 180), scale = vector3_box(1.0, 1.15, 0.61) },
+			barrelshroudac3 = 	{ offset = true, position = vector3_box(0.0, -0.081, 0.037), rotation = vector3_box(177, 0, 0), scale = vector3_box(1.32, 0.9, 0.48) },
 		},
 		--	MP5SD
 		{ 	dependencies = 		{ "owo_mp5_sd" }, 
