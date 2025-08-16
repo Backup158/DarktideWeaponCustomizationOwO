@@ -22,7 +22,7 @@ v3.4.0
 - Reworked attachments:
     - Underbarrel Grenade Launchers
         - GP-25 on Helbore is now aligned
-    - Crosshairs for Scopes
+    - Classic Crosshair Reticles
         - Aligned with PU Scope now (both Helbore and Autogun)
     - Plasma Mags for Helbores
         - Fixed helpers not being hidden when not used (they were in the wrong slot before)

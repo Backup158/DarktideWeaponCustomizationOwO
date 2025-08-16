@@ -163,7 +163,7 @@ Additional slot to add to or replace the original receiver. These can get super 
 &emsp; Point shooting, DOOM aiming, CS:S Zoom (think SG-552 Commando zoom), and Hipfire aim  \
 &emsp; Equipped in the helper sight section  \
 &emsp; These change how you hold the gun while ADSing while keeping the physical appearance of the scope on your gun.
-- **Crosshairs for Scopes**: Braced/Infantry/Vigilant Autoguns, Helbore Lasguns
+- **Classic Crosshair Reticles**: Braced/Infantry/Vigilant Autoguns, Helbore Lasguns
 &emsp; Based on
 &emsp; &emsp; German Reticle #1 (with high variant)
 &emsp; Meant to work with Classic Telescopic Scopes

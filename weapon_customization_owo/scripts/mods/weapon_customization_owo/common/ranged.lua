@@ -5920,7 +5920,7 @@ function mod.owo_reticle_helper(variant_id)
 	})
 end
 
--- Sight_2: Crosshairs for Scopes
+-- Sight_2: Classic Crosshair Reticles
 function mod.owo_scope_crosshair(variant_id)
 	mod.inject_attachments_owo(variant_id, "sight_2", {
 		-- fuck it. i'll just use the ones mt already added and hide the mesh in the weapon classes
