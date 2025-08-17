@@ -307,10 +307,10 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Magazine: FLAT
 	-- ######
-	{	dependencies =  { "owo_lasgun_magazine_flat_01"},
+	{	dependencies =  { "owo_lasgun_magazine_flat_01", },
 		magazine =      { offset = true,scale = vector3_box(1, 1, 0.5 ) },
 	},
-	{	dependencies =  { "owo_autogun_magazine_flat_03"},
+	{	dependencies =  { "owo_autogun_magazine_flat_03", },
 		magazine =      { offset = true, scale = vector3_box(1, 1, 0.6 ) },
 	},
 
