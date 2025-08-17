@@ -24,10 +24,14 @@ v3.4.0
         - GP-25 on Helbore is now aligned
     - Underbarrel Shotguns
         - M26-MASS trigger was rotated
+        - Now it's back to being straight *zaaaap*
     - Classic Crosshair Reticles
         - Aligned with PU Scope now (both Helbore and Autogun)
     - Plasma Mags for Helbores
         - Fixed helpers not being hidden when not used (they were in the wrong slot before)
+    - Grip+Stocks for Helbores
+        - Fixed some cursed effects that made it a pain to work with (i forgot to add a line lol)
+        - No changes from a user perspective
 - Renamed MP-5 to MP5 (idc)
 - Gave a real name to Classic Crosshair Reticles
         
