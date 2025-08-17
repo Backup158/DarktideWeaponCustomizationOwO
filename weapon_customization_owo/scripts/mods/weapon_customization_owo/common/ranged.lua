@@ -6036,10 +6036,10 @@ function mod.fixes_owo_scope_crosshair(variant_id)
 		{	dependencies = 	{ "owo_crosshair_chevron", },
 			sight_2 = 		{ offset = true, position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 			-- Left
-			sight_2_ac1 = 	{ offset = false, parent = "sight_2", position = vector3_box(0.008, 0.08, -0.013), rotation = vector3_box(0, 45, 0), scale = vector3_box(-0.08, 0.5, 0.3 ), },
+			sight_2_ac1 = 	{ offset = false, parent = "sight_2", position = vector3_box(-0.002, 0.08, -0.01), rotation = vector3_box(0, 45, 0), scale = vector3_box(-0.08, 0.5, 0.3 ), },
 			-- Right
 			--	vertical, forwards, horiz
-			sight_2_ac2 = 	{ offset = false, parent = "sight_2", position = vector3_box(-0.008, 0.08, -0.013), rotation = vector3_box(0, -45, 0), scale = vector3_box(-0.08, 0.5, 0.3 ), },
+			sight_2_ac2 = 	{ offset = false, parent = "sight_2", position = vector3_box(0.002, 0.08, -0.01), rotation = vector3_box(0, -45, 0), scale = vector3_box(-0.08, 0.5, 0.3 ), },
 		},
 	})
 end
