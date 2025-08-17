@@ -280,29 +280,19 @@ mod.mt.inject_fixes(this_variant, {
     --  Stock and Grip
     {	dependencies =  { "owo_gripstock_amr_01|owo_gripstock_amr_02|owo_gripstock_amr_03|owo_gripstock_amr_04|owo_gripstock_amr_05|owo_gripstock_amr_06|owo_gripstock_amr_07|owo_gripstock_amr_08|owo_gripstock_amr_09" },
 		stock =         { offset = true, position = vector3_box(0, -0.03, 0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.25, 1.5, 1.25 ) },
-		stockac =       { offset = true, position = vector3_box(0, 0, 0), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.67, 1 ) },
+		stockac =       { offset = true, position = vector3_box(0, 0.018, -0.022), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.67, 1 ) },
     },
     --  Rear Handle options
-    {	dependencies =  { "owo_gripstock_amr_01" },
-		--stockac2 =      { offset = true, position = vector3_box(0.5, -0.28, -0.037), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.45, 0.5, 0.6 ) },
-        stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -0.07, -0.33), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.6, 0.75, 0.8 ) },
-	},
-    {	dependencies =  { "owo_gripstock_amr_02" },
-		stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -0.07, -0.3), rotation = vector3_box(-90, 0, 180), scale = vector3_box(0.6, 0.75, 0.8 ) },
+    {	dependencies =  { "owo_gripstock_amr_01|owo_gripstock_amr_02" },
+		stockac2 =      { offset = true, position = vector3_box(0.0, -0.18, -0.096), rotation = vector3_box(90, 0, 0), scale = vector3_box(0.6, 0.75, 0.6 ) },
 	},
     --  For this rotation, moving (+0, +x, +x) is equal to moving forwards
     {	dependencies =  { "owo_gripstock_amr_03" },
-        --stockac2 =      { offset = true, position = vector3_box(0.0, -0.66, -0.047), rotation = vector3_box(-125, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
-		--stockac2 =      { offset = false, position = vector3_box(0.0, -0.66, -0.047), rotation = vector3_box(-125, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
-        stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -1.195, -1.078), rotation = vector3_box(-120, 0, 180), scale = vector3_box(0.1, 0.14, 0.2 ) },
-    },
-    {	dependencies =  { "owo_gripstock_amr_04|owo_gripstock_amr_07|owo_gripstock_amr_08|owo_gripstock_amr_09" },
-		stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, 0.037, -0.373), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.25, 0.35, 0.45 ) },
+        stockac2 =      { offset = true, position = vector3_box(0.0, -0.175, -0.085), rotation = vector3_box(-119, 0, 180), scale = vector3_box(0.1, 0.12, 0.15 ) },
 	},
-    {	dependencies =  { "owo_gripstock_amr_05|owo_gripstock_amr_06" },
-		stockac2 =      { offset = false, parent="receiver", position = vector3_box(0.0, -0.01, -0.373), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.25, 0.35, 0.45 ) },
+    {	dependencies =  { "owo_gripstock_amr_04|owo_gripstock_amr_05|owo_gripstock_amr_06|owo_gripstock_amr_07|owo_gripstock_amr_08|owo_gripstock_amr_09" },
+		stockac2 =      { offset = true, position = vector3_box(0.0, -0.115, -0.06), rotation = vector3_box(-90, 0, 0), scale = vector3_box(0.25, 0.25, 0.3 ) },
 	},
-	
 
 	-- ######
 	-- Magazine: FLAT
