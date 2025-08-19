@@ -39,7 +39,7 @@ end
 -- ###############
 local table_of_syn_slots = {
     "barrelshroud",
-    -- "barrelshroudac", -- I don't use these here
+    "barrelshroudac",
     "barrelshroudac2",
     "barrelshroudac3",
     "barrelshroudac4",
