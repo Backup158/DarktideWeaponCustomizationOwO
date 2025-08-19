@@ -8,6 +8,7 @@ v3.4.0
     - Now you have to choose the reticle yourself
         - If you are using the empty `sight_2` "sight_default" it'll automatically equip the right one
         - If you want to have no reticle, use my "Invisible Sight_2" option or else it'll get overwritten
+- Fixed missing `barrelshroud` slot declaration for autoguns if not using Syn's edits
 - Added attachments:
     - SMG Barrels
         - MP5 MLI Barrel
@@ -18,15 +19,17 @@ v3.4.0
             - the flashlights do not look good
             - it also clips with every underbarrel weapon
             - but im lazy lol
-    - Bolter now supports Classic Telescopic Scopes and Classic Crosshair Reticles
 - Reworked attachments:
     - Underbarrel Grenade Launchers
         - GP-25 on Helbore is now aligned
     - Underbarrel Shotguns
         - M26-MASS trigger was rotated
         - Now it's back to being straight *zaaaap*
+    - Classic Telescopic Scopes 
+        - Added to Bolter
     - Classic Crosshair Reticles
         - Aligned with PU Scope now (both Helbore and Autogun)
+        - Added to Bolter
     - Plasma Mags for Helbores
         - Fixed helpers not being hidden when not used (they were in the wrong slot before)
     - Grip+Stocks for Helbores
