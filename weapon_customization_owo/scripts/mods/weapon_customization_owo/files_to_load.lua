@@ -29,9 +29,7 @@ mod.load_mod_file("weapon/bolter_p1_m1")
 mod.load_mod_file("weapon/boltpistol_p1_m1")
 mod.load_mod_file("weapon/shotgun_p1_m1") -- Combat Shotgun
 -- mod.load_mod_file("weapon/shotgun_p2_m1") -- Double-Barrelled Shotgun
-if mod.discord_mode then
-    mod.load_mod_file("weapon/shotgun_p4_m1") -- Exterminator Shotgun
-end
+mod.load_mod_file("weapon/shotgun_p4_m1") -- Exterminator Shotgun
 -- mod.load_mod_file("weapon/shotpistol_p1_m1") -- Subductor Shotpistol and Riot Shield
 mod.load_mod_file("weapon/stubrevolver_p1_m1")
 -- mod.load_mod_file("weapon/forcestaff_p1_m1")
@@ -54,10 +52,8 @@ mod.load_mod_file("weapon/ogryn_pickaxe_2h_p1_m1") -- Delver's Pickaxe
 -- mod.load_mod_file("weapon/ogryn_powermaul_slabshield_p1_m1")
 mod.load_mod_file("weapon/powermaul_2h_p1_m1") -- Crusher
 mod.load_mod_file("weapon/powermaul_p1_m1") -- Shock Maul
-if mod.discord_mode then 
-    mod.load_mod_file("weapon/powermaul_p2_m1") -- Arbites Shock Maul
-    mod.load_mod_file("weapon/powermaul_shield_p1_m1") -- Shock Maul and Suppression Shield
-end
+mod.load_mod_file("weapon/powermaul_p2_m1") -- Arbites Shock Maul
+mod.load_mod_file("weapon/powermaul_shield_p1_m1") -- Shock Maul and Suppression Shield
 mod.load_mod_file("weapon/thunderhammer_2h_p1_m1")
 mod.load_mod_file("weapon/combataxe_p1_m1") -- Combat Axe
 mod.load_mod_file("weapon/combataxe_p2_m1") -- Tactical Axe

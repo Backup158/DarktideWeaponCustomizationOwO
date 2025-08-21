@@ -1,3 +1,8 @@
+# 2025-08-20
+v3.4.1
+
+Removed Discord mode descriptions
+
 # 2025-08-18
 v3.4.0
 
