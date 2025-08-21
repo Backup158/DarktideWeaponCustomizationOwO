@@ -7,7 +7,7 @@ v3.4.0
         - I've known about this for a while but never found a satisfactory solution 
     - Now you have to choose the reticle yourself
         - If you are using the empty `sight_2` "sight_default" it'll automatically equip the right one
-        - If you want to have no reticle, use my "Invisible Sight_2" option or else it'll get overwritten
+        - If you want to have no reticle, use my "Invisible Sight_2" option instead of "Default," or else it'll get overwritten
 - Fixed missing `barrelshroudac` slot declaration for autoguns if not using Syn's edits
     - because of mp5 barrel
 - Added attachments:
