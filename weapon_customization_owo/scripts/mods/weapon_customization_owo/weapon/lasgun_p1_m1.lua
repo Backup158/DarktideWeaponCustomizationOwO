@@ -44,10 +44,16 @@ end
 -- OwO Slot Initialization
 -- ###############
 local table_of_owo_slots = {
+    "flashlightac1",
+    "flashlightac2",
+    
     "muzzle_3",
     "muzzle_4",
     "muzzle_5",
     "muzzle_6",
+    "foregripac1",
+    "foregripac2",
+    "foregripac3",
 
     "bayonetac1",
     "bayonetac2",
@@ -74,6 +80,8 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+mod.owo_tactical_flashlight(this_variant)
+
 mod.owo_magazine_flat(this_variant)
 
 if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
@@ -89,6 +97,9 @@ mod.owo_holosight(this_variant, "sight", "rail")
 mod.owo_prismatic_sight(this_variant, "sight", "rail")
 
 mod.owo_tactical_stock(this_variant)
+
+mod.owo_tactical_foregrip(this_variant)
+mod.owo_heterosexual_foregrip(this_variant)
 
 -- ############################################
 -- Define Variables for Fixes
@@ -183,6 +194,8 @@ end
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
+mod.fixes_owo_tactical_flashlight(this_variant)
+
 mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
@@ -194,6 +207,9 @@ mod.fixes_owo_underbarrel_gl(this_variant)
 mod.fixes_owo_underbarrel_shotgun(this_variant)
 
 mod.fixes_owo_tactical_stock(this_variant)
+
+mod.fixes_owo_tactical_foregrip(this_variant)
+mod.fixes_owo_heterosexual_foregrip(this_variant)
 
 -- #################
 -- Custom Fixes

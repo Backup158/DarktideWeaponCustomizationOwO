@@ -44,11 +44,17 @@ end
 -- OwO Slot Initialization
 -- ###############
 local table_of_owo_slots = {
+    "flashlightac1",
+    "flashlightac2",
+    
     "muzzle_2", -- MT and Syn didn't add this to Recons yet
     "muzzle_3",
     "muzzle_4",
     "muzzle_5",
     "muzzle_6",
+    "foregripac1",
+    "foregripac2",
+    "foregripac3",
 
     -- "barrelac", -- only scab gunner barrel
 
@@ -75,6 +81,7 @@ mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 -- Injection Calls: attachments and models
 -- from ranged.lua and melee.lua
 -- ############################################
+mod.owo_tactical_flashlight(this_variant)
 mod.owo_magazine_flat(this_variant)
 
 if not mod.syn then mod.owo_invisible_muzzle(this_variant) end
@@ -89,6 +96,9 @@ mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
 mod.owo_holosight(this_variant, "sight", "receiver")
 mod.owo_prismatic_sight(this_variant)
+
+mod.owo_tactical_foregrip(this_variant, "foregrip")
+mod.owo_heterosexual_foregrip(this_variant)
 
 -- ############################################
 -- Define Variables for Fixes
@@ -188,6 +198,8 @@ end
 -- These are shared among multiple weapons but are the same each time
 -- Up here so the custom fixes are ahead of the generic cases
 -- #################
+mod.fixes_owo_tactical_flashlight(this_variant)
+
 mod.fixes_owo_suppressors(this_variant)
 mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
@@ -197,6 +209,9 @@ mod.fixes_owo_prismatic_sight(this_variant, "sight", "receiver")
 
 mod.fixes_owo_underbarrel_gl(this_variant)
 mod.fixes_owo_underbarrel_shotgun(this_variant)
+
+mod.fixes_owo_tactical_foregrip(this_variant)
+mod.fixes_owo_heterosexual_foregrip(this_variant)
 
 -- #################
 -- Custom Fixes
@@ -284,6 +299,37 @@ mod.mt.inject_fixes(this_variant, {
         },
         -- Receiver
         bayonet =       { offset = true, position = vector3_box(0, 0.313, -0.11), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.8, 0.85, 0.65 ) },
+    },
+
+    -- ######
+    -- Foregrip: HETEROSEXUAL FOREGRIP
+    -- ######
+    --  Ogryn handles
+    {   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_ogryn_grip", _syn_volleygun_receivers, "owo_heterosexual_foregrip_01|owo_heterosexual_foregrip_02|owo_heterosexual_foregrip_03|owo_heterosexual_foregrip_04|owo_heterosexual_foregrip_05|owo_heterosexual_foregrip_06|owo_heterosexual_foregrip_07|owo_heterosexual_foregrip_08", },
+        foregrip =          { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.325, -0.021),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.3, 0.3, 0.3) },
+    },
+    --  Dclaw
+    {   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_dclaw_grip", _syn_volleygun_receivers, "owo_heterosexual_foregrip_09|owo_heterosexual_foregrip_10|owo_heterosexual_foregrip_11|owo_heterosexual_foregrip_12|owo_heterosexual_foregrip_13|owo_heterosexual_foregrip_14", },
+        foregrip =          { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.325, -0.021),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(0.6, 0.6, 0.45) },
+    },
+    --  Knife
+    {   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_knife_grip", _syn_volleygun_receivers, "owo_heterosexual_foregrip_knife_01|owo_heterosexual_foregrip_knife_02|owo_heterosexual_foregrip_knife_03|owo_heterosexual_foregrip_knife_04|owo_heterosexual_foregrip_knife_05|owo_heterosexual_foregrip_knife_06" },
+        foregrip =          { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.325, -0.021),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 1) },
+    },
+    --		This one is skinnier than average so I also have a fat variant
+    {   dependencies =  	{ "owo_heterosexual_foregrip_knife_06_fat", _syn_volleygun_receivers, },
+        foregrip =          { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.325, -0.021),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 1) },
+    },
+    --		Stubby
+    {   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_knife_grip", _syn_volleygun_receivers, "owo_heterosexual_foregrip_knife_01s|owo_heterosexual_foregrip_knife_02s|owo_heterosexual_foregrip_knife_03s|owo_heterosexual_foregrip_knife_04s|owo_heterosexual_foregrip_knife_05s|owo_heterosexual_foregrip_knife_06s" },
+        foregrip =          { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.325, -0.016),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1, 1, 0.5) },
+    },
+    {   dependencies =  	{ "owo_heterosexual_foregrip_knife_06s_fat", _syn_volleygun_receivers, },
+        foregrip =          { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.325, -0.016),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.5, 1, 0.5) },
+    },
+    --  Gun grips
+    {   dependencies =  	{ "owo_foregrip_group_indicator_heterosexual_gun_grip", _syn_volleygun_receivers, "owo_heterosexual_foregrip_grip_01|owo_heterosexual_foregrip_grip_02|owo_heterosexual_foregrip_grip_03|owo_heterosexual_foregrip_grip_04|owo_heterosexual_foregrip_grip_05|owo_heterosexual_foregrip_grip_06|owo_heterosexual_foregrip_grip_07|owo_heterosexual_foregrip_grip_08|owo_heterosexual_foregrip_grip_09|owo_heterosexual_foregrip_grip_10|owo_heterosexual_foregrip_grip_11|owo_heterosexual_foregrip_grip_12|owo_heterosexual_foregrip_grip_13|owo_heterosexual_foregrip_grip_14|owo_heterosexual_foregrip_grip_15|owo_heterosexual_foregrip_grip_16|owo_heterosexual_foregrip_grip_17|owo_heterosexual_foregrip_grip_18|owo_heterosexual_foregrip_grip_19|owo_heterosexual_foregrip_grip_20|owo_heterosexual_foregrip_grip_21|owo_heterosexual_foregrip_grip_22|owo_heterosexual_foregrip_grip_23|owo_heterosexual_foregrip_grip_24|owo_heterosexual_foregrip_grip_25|owo_heterosexual_foregrip_grip_26|owo_heterosexual_foregrip_grip_27|owo_heterosexual_foregrip_grip_28|owo_heterosexual_foregrip_grip_29", },
+        foregrip =          { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.375, 0.084),   rotation = vector3_box(30, 0, 0),    scale = vector3_box(1, 1, 1) },
     },
 
     -- ######
