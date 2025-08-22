@@ -6,6 +6,11 @@ v3.5.0
         - PU Scopes now autoequip the German #1 Reticle
     - Classic Crosshair Reticles
         - Custom alignments for Helbore for German #1 Reticle
+    - Tactical Foregrips
+        - Added to Infantry/Recon Lasguns
+        - Magpul AFG reworked to be easier to patch (helpers parented to current type, not current parent)
+    - Tactical Flashlights
+        - Added to Infantry/Recon Lasguns
 
 # 2025-08-20
 v3.4.1
