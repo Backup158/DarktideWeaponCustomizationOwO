@@ -228,6 +228,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Muzzle: CONDOM
 	-- ######
+    -- Handled universally
 
     -- ######
 	-- Bayonet: UNDERBARREL GRENADE LAUNCHER
@@ -338,6 +339,26 @@ mod.mt.inject_fixes(this_variant, {
         bayonetac6 =    { offset = true, position = vector3_box(0, -0.066, 0.097), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.3, 1, 1.5 ) },
     },
     ]]
+
+    -- ######
+    -- Foregrip: TACTICAL FOREGRIP
+    -- ######
+    -- skeletal shotgun
+    {   dependencies =  { "owo_tactical_foregrip_01", },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.507, -0.039),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
+    },
+    -- skeletal shotgun (slant)
+    {   dependencies =  { "owo_tactical_foregrip_02", },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.46, -0.035),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
+    },
+    -- skeletal brauto (slant)
+    {   dependencies =  { "owo_tactical_foregrip_03", },
+        foregrip =      { offset = true,   position = vector3_box(0, 0.47, -0.02),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
+    },
+    -- magpul afg triple threat
+    {   dependencies =  { "owo_tactical_foregrip_04", },
+        foregrip =      { offset = true,   position = vector3_box(-0.0, 0.27, 0.022),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
+    },
 
 	-- ######
     -- Sight: Holographic Sights + Magnifier
