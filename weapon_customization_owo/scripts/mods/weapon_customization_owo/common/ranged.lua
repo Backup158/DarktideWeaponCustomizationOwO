@@ -2163,19 +2163,19 @@ function mod.owo_tactical_foregrip(variant_id, given_type, given_parent)
 		--  magpul afg back part 1
 		owo_tactical_foregrip_ac1_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac1", 
-			mesh_move = false, parent = current_parent,
+			mesh_move = false, parent = current_type,
 		},
 		-- AC2
 		-- 	magpul afg back part 2
 		owo_tactical_foregrip_ac2_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac2", 
-			mesh_move = false, parent = current_parent,
+			mesh_move = false, parent = current_type,
 		},
 		-- AC3
 		-- 	magpul afg front
 		owo_tactical_foregrip_ac3_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "foregripac3", 
-			mesh_move = false, parent = current_parent,
+			mesh_move = false, parent = current_type,
 		},
 	})
 end
@@ -2202,9 +2202,11 @@ function mod.fixes_owo_tactical_foregrip(variant_id, given_type, given_parent)
 		-- magpul afg triple threat
 		{   dependencies =  { "owo_tactical_foregrip_04", },
 			foregrip =      { offset = true,   position = vector3_box(-0.0, 0.34, 0.022),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
-			foregripac1 =   { offset = true,   position = vector3_box(0.002, 0.415, -0.102),   rotation = vector3_box(0, 90, -40),    scale = vector3_box(0.5, 0.45, 0.2) },
-			foregripac2 =   { offset = true,   position = vector3_box(-0.002, 0.415, -0.102),   rotation = vector3_box(-40, -90, 0),    scale = vector3_box(0.5, 0.45, 0.2) },
-			foregripac3 =   { offset = true,   position = vector3_box(0, 0.47, -0.060),   rotation = vector3_box(0, 0, 180),    scale = vector3_box(0.5, 0.45, 0.2) },
+			-- 2 grips to make behind
+			foregripac1 =   { offset = true,   position = vector3_box(0.002, -0.156, -0.136),   rotation = vector3_box(-168, 90, -22),    scale = vector3_box(0.5, 0.76, 0.2) },
+			foregripac2 =   { offset = true,   position = vector3_box(-0.002, -0.156, -0.136),   rotation = vector3_box(-27, -90, 162),    scale = vector3_box(0.5, 0.76, 0.2) },
+			-- front hump
+			foregripac3 =   { offset = true,   position = vector3_box(0, -0.128, -0.022),   rotation = vector3_box(-50, 0, 0),    scale = vector3_box(0.5, 0.45, 0.3) },
 		},
 	})
 end
