@@ -1,7 +1,11 @@
 # 2025-08-UNRELEASED
 v3.5.0
 
-
+- Reworked attachments
+    - Classic Telescopic Sights
+        - PU Scopes now autoequip the German #1 Reticle
+    - Classic Crosshair Reticles
+        - Custom alignments for Helbore for German #1 Reticle
 
 # 2025-08-20
 v3.4.1
