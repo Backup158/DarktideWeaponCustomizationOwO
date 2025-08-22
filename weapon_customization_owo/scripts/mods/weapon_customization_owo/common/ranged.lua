@@ -5162,6 +5162,7 @@ function mod.fixes_owo_holosight(variant_id)
 		--  EOTech
 		--  --------------------------------------------
 		-- 	Default Reticle Choice
+		--		Holosight reticle
 		{   dependencies =  		{ "sight_default", "owo_sight_group_indicator_holosight_eotech", _owo_all_eotech_sights },
 			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
 		},
@@ -5200,6 +5201,7 @@ function mod.fixes_owo_holosight(variant_id)
 		--  Vortex Razor
 		--  --------------------------------------------
 		-- 	Default Reticle Choice
+		--		Holosight reticle
 		{   dependencies =  		{ "sight_default", "owo_sight_group_indicator_holosight_razor", _owo_all_vortex_sights },
 			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, parent = "sight", position = vector3_box(0, -0.02, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), hide_mesh = {{"sight_2", 5,6}} },
 		},
@@ -5667,9 +5669,11 @@ function mod.fixes_owo_prismatic_sight(variant_id)
 		--  Trijicon ACOG
 		--  --------------------------------------------
 		-- 	Default Reticle Choice
+		--		RMR
 		{   dependencies =  		{ "sight_default", "owo_acog_sight_02_top|owo_acog_sight_02f_top" },
 			sight_2 =       		{ automatic_equip = { sight_2 = "owo_reticle_helper_invisible", }, offset = false, parent = "sight", position = vector3_box(0, -0.1, 0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), animation_wait_attach = { "rail" }, },
 		},
+		--		Other sights (holo sight reticle)
 		{   dependencies =  		{ "sight_default", _owo_all_acog_sights },
 			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, offset = false, parent = "sight", position = vector3_box(0, -0.1, 0.00), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1), animation_wait_attach = { "rail" }, },
 		},
@@ -5872,7 +5876,7 @@ function mod.fixes_owo_classic_telescopic_sight(variant_id)
 		-- ######
 		-- Crosshair Patches
 		{   dependencies =  	{ "sight_default", "owo_pu_scope_01|owo_pu_scope_02" },
-			sight_2 =       	{ automatic_equip = { sight_2 = "owo_reticle_helper_invisible", }, },
+			sight_2 =       	{ automatic_equip = { sight_2 = "owo_crosshair_german_01", }, },
 		},
 		-- Scope alignment
 		-- Purposely duplicated the copy pasted code for checks efficiency
