@@ -302,6 +302,42 @@ mod.mt.inject_fixes(this_variant, {
     },
 
     -- ######
+    -- Foregrip: TACTICAL FOREGRIP
+    -- ######
+    -- skeletal shotgun
+    {   dependencies =  { "owo_tactical_foregrip_01", _syn_volleygun_receivers, },
+        foregrip =      { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.415, -0.029),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
+    },
+    -- skeletal shotgun (slant)
+    {   dependencies =  { "owo_tactical_foregrip_02", _syn_volleygun_receivers, },
+        foregrip =      { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.35, 0.031),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
+    },
+    -- skeletal brauto (slant)
+    {   dependencies =  { "owo_tactical_foregrip_03", _syn_volleygun_receivers, },
+        foregrip =      { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.39, 0.03),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
+    },
+    -- magpul afg triple threat
+    {   dependencies =  { "owo_tactical_foregrip_04", _syn_volleygun_receivers, },
+        foregrip =      { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(-0.0, 0.29, 0.045),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
+    },
+    -- skeletal shotgun
+    {   dependencies =  { "owo_tactical_foregrip_01", },
+        foregrip =      { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.413, 0.007),   rotation = vector3_box(0, 0, 0),    scale = vector3_box(1.2, 0.8, 1.0) },
+    },
+    -- skeletal shotgun (slant)
+    {   dependencies =  { "owo_tactical_foregrip_02", },
+        foregrip =      { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.35, 0.01),   rotation = vector3_box(15, 0, 0),    scale = vector3_box(1.2, 0.6, 0.7) },
+    },
+    -- skeletal brauto (slant)
+    {   dependencies =  { "owo_tactical_foregrip_03", },
+        foregrip =      { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(0, 0.39, 0.022),   rotation = vector3_box(10, 0, 0),    scale = vector3_box(0.8, 1.0, 0.8) },
+    },
+    -- magpul afg triple threat
+    {   dependencies =  { "owo_tactical_foregrip_04", },
+        foregrip =      { offset = false, parent = "receiver", parent_node = 1, position = vector3_box(-0.0, 0.29, 0.023),   rotation = vector3_box(-67, 0, -180),    scale = vector3_box(0.85, 0.37, 0.74) },
+    },
+
+    -- ######
     -- Foregrip: HETEROSEXUAL FOREGRIP
     -- ######
     --  Ogryn handles
