@@ -198,6 +198,7 @@ local _long_infantry_lasgun_barrels = "barrel_01|barrel_02|barrel_04|barrel_05|b
 local _all_infantry_lasgun_barrels = _short_infantry_lasgun_barrels.."|".._long_infantry_lasgun_barrels
 local _recon_lasgun_barrels = "barrel_14|barrel_15|barrel_16|barrel_17|barrel_18"
 local _all_recon_lasgun_barrels = _recon_lasgun_barrels.."|".._mt_recon_lasgun_barrels
+local _vostroyan_receiver = "receiver_04"
 
 -- ############################################
 -- Inject Fixes
@@ -882,6 +883,7 @@ mod.mt.inject_fixes(this_variant, {
 	-- ######
 	-- Sight: CLASSIC TELESCOPIC SIGHTS
 	-- ######
+    -- Crosshair Patches
     {	dependencies =      { "owo_crosshair_german_01", "owo_pu_scope_01|owo_pu_scope_02", },
 		sight_2 = 		    { offset = true, position = vector3_box(0.0, 0.0, -0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
 	},
@@ -889,12 +891,26 @@ mod.mt.inject_fixes(this_variant, {
 		sight_2 = 		    { offset = true, position = vector3_box(0.0, 0.0, -0.03), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
         scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0485), rotation = vector3_box(-3, 0, 0), lense_transparency = true },
 	},
+    -- Scope
 	{	dependencies =      { "owo_pu_scope_01|owo_pu_scope_02", },
 		sight =             { offset = true, position = vector3_box(0, -0.002, 0.167), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.6, 1, 0.6 ) },
 		-- Aligning to Crosshair
         --no_scope_offset =   { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
 		scope_offset =      { offset = true, position = vector3_box(0, -0.002, -0.0467), rotation = vector3_box(0, 0, 0), lense_transparency = true },
 	},
+
+    -- ######
+	-- Sight_2: CLASSIC CROSSHAIR RETICLES
+	-- ######
+    {	dependencies = 	    { "owo_crosshair_german_01", },
+        sight_2 = 		    { offset = true, position = vector3_box(0.0, 0.0, 0.0), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 1 ) },
+        -- Bottom obelisk
+        sight_2_ac1 = 	    { offset = true, position = vector3_box(0, 0.04, 0.008), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.1, 0.02, 0.075 ) },
+        -- Left and Right
+        --	vertical, forwards, horiz
+        sight_2_ac2 = 	    { offset = true, position = vector3_box(0.015, 0.04, 0.03), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.008, 0.2, 0.065 ) },
+        sight_2_ac3 = 	    { offset = true, position = vector3_box(-0.015, 0.04, 0.03), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.008, 0.2, 0.065 ) },
+    },
 })
 
 -- #################
