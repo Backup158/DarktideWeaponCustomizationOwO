@@ -5166,7 +5166,7 @@ function mod.fixes_owo_holosight(variant_id)
 		-- 	Default Reticle Choice
 		--		Holosight reticle
 		{   dependencies =  		{ "sight_default", "owo_sight_group_indicator_holosight_eotech", _owo_all_eotech_sights },
-			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
+			sight_2 =       		{ automatic_equip = { sight_2 = "reflex_scopehelper_01", }, offset = false, parent = "sight", position = vector3_box(0, -0.02, 0.01), rotation = vector3_box(0, 0, 0), scale = vector3_box(1, 1, 0.769), hide_mesh = {{"sight_2", 5,6}} },
 		},
 		--  Sight Body Components
 		--      Short Variant
