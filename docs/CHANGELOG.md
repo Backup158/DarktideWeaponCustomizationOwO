@@ -11,6 +11,9 @@ v3.5.0
         - Magpul AFG reworked to be easier to patch (helpers parented to current type, not current parent)
     - Tactical Flashlights
         - Added to Infantry/Recon Lasguns
+    - M16 Carryhandle Sights
+        - Universalized fixes
+        - Added to Autopistol
 
 # 2025-08-20
 v3.4.1
