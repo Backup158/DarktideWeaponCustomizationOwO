@@ -12,7 +12,10 @@ v3.5.0
     - Tactical Flashlights
         - Added to Infantry/Recon Lasguns
     - M16 Carryhandle Sights
-        - Universalized fixes
+        - Universalized fixes (with some tweaks)
+            - Fixed parenting for `sightac1` and `sightac2` to simplify fixes across weapons
+            - Before, it kept deciding to parent to the receiver
+            - Slightly tweaked `sightac5` to hug the rear sight aperture 
         - Added to Autopistol
 
 # 2025-08-20
