@@ -176,13 +176,13 @@ local _owo_masterkey_bayonets = "owo_underbarrel_shotgun_masterkey|owo_underbarr
 local _owo_chunky_suppressor_muzzles = "owo_suppressor_01|owo_suppressor_02|owo_suppressor_03|owo_suppressor_04|owo_suppressor_05"
 local _owo_slim_suppressor_muzzles = "owo_suppressor_01s|owo_suppressor_02s|owo_suppressor_03s|owo_suppressor_04s|owo_suppressor_05s"
 local _owo_all_suppressor_muzzles = _owo_chunky_suppressor_muzzles.."|".._owo_slim_suppressor_muzzles
-local _m16_all_barrels = "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2|owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2|owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
 local _m16a1_01_barrels = "owo_m16_barrel_a1|owo_m16_barrel_t_a1|owo_m16_barrel_n_a1"
 local _m16a1_02_barrels = "owo_m16_barrel_a1_02|owo_m16_barrel_t_a1_02|owo_m16_barrel_n_a1_02"
 local _m16a2_barrels = "owo_m16_barrel_a2|owo_m16_barrel_t_a2|owo_m16_barrel_n_a2"
 local _m16_normal_post_barrels = "owo_m16_barrel_a1|owo_m16_barrel_a1_02|owo_m16_barrel_a2"
 local _m16_tall_post_barrels = "owo_m16_barrel_t_a1|owo_m16_barrel_t_a1_02|owo_m16_barrel_t_a2"
 local _m16_no_post_barrels = "owo_m16_barrel_n_a1|owo_m16_barrel_n_a1_02|owo_m16_barrel_n_a2"
+local _m16_all_barrels = _m16_normal_post_barrels.."|".._m16_tall_post_barrels.."|".._m16_no_post_barrels
 local _owo_bolt_helbore_receiverac1s = "owo_bolt_helbore_bolt_01"
 local _owo_stupid_bolt_helbore_receiverac1s = "owo_bolt_helbore_bolt_01s"
 local _owo_all_helbore_bolt_receiverac1s = _owo_bolt_helbore_receiverac1s.."|".._owo_stupid_bolt_helbore_receiverac1s
@@ -283,6 +283,7 @@ mod.fixes_owo_muzzle_brake(this_variant)
 mod.fixes_owo_condom(this_variant)
 
 mod.fixes_owo_dreg_gunner_barrel(this_variant)
+mod.fixes_owo_m16_barrel(this_variant)
 mod.fixes_owo_smg_barrel(this_variant)
 
 mod.fixes_owo_dreg_gunner_bayonet(this_variant)
@@ -296,6 +297,7 @@ mod.fixes_owo_scope_crosshair(this_variant)
 mod.fixes_owo_holosight(this_variant)
 mod.fixes_owo_prismatic_sight(this_variant)
 mod.fixes_owo_classic_telescopic_sight(this_variant)
+mod.fixes_owo_m16_sight(this_variant)
 
 mod.fixes_owo_tactical_stock(this_variant)
 mod.fixes_owo_kalash_stock(this_variant)
@@ -770,26 +772,11 @@ mod.mt.inject_fixes(this_variant, {
         no_scope_offset =   { offset = true, position = vector3_box(0, 0.05, -0.0273), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { offset = true, position = vector3_box(0, 0.05, -0.0273), rotation = vector3_box(0, 0, 0)},
         sight =             { offset = true, position = vector3_box(0, -0.038, 0.024), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
-        sightac1 =          { offset = true, position = vector3_box(0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
-        sightac2 =          { offset = true, position = vector3_box(-0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
     },
     {	dependencies =      { "owo_m16_sight_01|owo_m16_sight_02" },
         no_scope_offset =   { offset = true, position = vector3_box(0, 0.05, -0.0223), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { offset = true, position = vector3_box(0, 0.05, -0.0223), rotation = vector3_box(0, 0, 0)},
         sight =             { offset = true, position = vector3_box(0, -0.038, 0.019), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
-        sightac1 =          { offset = true, position = vector3_box(0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
-        sightac2 =          { offset = true, position = vector3_box(-0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
-    },
-    --  M16 Helpers
-	{	dependencies =  { "owo_m16_sight_01|owo_m16_sight_02" },
-        -- Rear Sight Aperture. the peep hole then the 2 bases
-        sightac3 =      { offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
-        sightac4 =      { offset = true, position = vector3_box(0.001, 0.024, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
-        sightac5 =      { offset = true, position = vector3_box(-0.003, 0.024, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
-        -- Windage Knob on the right side of the sight
-        sightac6 =      { offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
-        -- Rear Elevation Knob in the base, below the rear sight
-        sightac7 =      { offset = true, position = vector3_box(0, 0.012, 0.146), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
     },
 
     -- ######
