@@ -15,8 +15,10 @@ v3.5.0
         - Universalized fixes (with some tweaks)
             - Fixed parenting for `sightac1` and `sightac2` to simplify fixes across weapons
             - Before, it kept deciding to parent to the receiver
-            - Slightly tweaked `sightac5` to hug the rear sight aperture 
+            - Slightly tweaked `sightac4` and `sightac5` to hug the rear sight aperture more evenly without clipping out the side
         - Added to Autopistol
+        - Separated long variants
+            - Before the "No Rear Elevation Wheel" variant was also longer
 
 # 2025-08-20
 v3.4.1
