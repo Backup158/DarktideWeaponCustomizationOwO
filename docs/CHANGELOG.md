@@ -18,7 +18,8 @@ v3.5.0
             - Slightly tweaked `sightac4` and `sightac5` to hug the rear sight aperture more evenly without clipping out the side
         - Added to Autopistol
         - Separated long variants
-            - Before the "No Rear Elevation Wheel" variant was also longer
+            - Before the "No Rear Elevation Wheel" variant was longer for some reason
+        - Renamed "No Rear Elevation Wheel" to "A1"
 
 # 2025-08-20
 v3.4.1

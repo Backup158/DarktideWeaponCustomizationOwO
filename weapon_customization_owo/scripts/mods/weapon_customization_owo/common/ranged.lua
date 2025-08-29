@@ -4761,8 +4761,10 @@ function mod.owo_m16_sight(variant_id, given_type, given_parent)
 	local current_parent = given_parent or "receiver"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_m16_sight_01", name = "OwO M16 Carry Sight"},
-		{id = "owo_m16_sight_02", name = "OwO M16 Carry Sight (No Rear Elevation Wheel)"},
+		{id = "owo_m16_sight_01", name = "OwO M16 Carryhandle"},
+		{id = "owo_m16_sight_02", name = "OwO M16 Carryhandle A1"},
+		{id = "owo_m16_sight_01_l", name = "OwO M16 Carryhandle (Long)"},
+		{id = "owo_m16_sight_02_l", name = "OwO M16 Carryhandle A1 (L)"},
 	})
 	mod.inject_attachments_owo(variant_id, "sightac1", {
 		{id = "owo_m16_sight_helper_01", name = "OwO M16 Carry Sight'vesa", no_randomize = true},
@@ -4788,6 +4790,7 @@ function mod.owo_m16_sight(variant_id, given_type, given_parent)
 
 	mod.inject_models(variant_id, {
 		-- ### Base Parts ###
+		--	Normal Length
 		owo_m16_sight_01  = {
 			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = current_type, 
 			mesh_move = false, parent = current_parent, hide_mesh = {{current_type, 1}}, -- hiding the stock. I stole this from MT
@@ -4798,6 +4801,25 @@ function mod.owo_m16_sight(variant_id, given_type, given_parent)
 			}
 		},
 		owo_m16_sight_02  = {
+			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_01", type = current_type, 
+			mesh_move = false, parent = current_parent, hide_mesh = {{current_type, 1}},
+			automatic_equip = { sightac1 = "owo_m16_sight_helper_01", sightac2 = "owo_m16_sight_helper_02", 
+				sightac3 = "owo_m16_sight_helper_03", 
+				sightac4 = "owo_m16_sight_helper_04", sightac5 = "owo_m16_sight_helper_05", 
+				sightac6 = "owo_m16_sight_helper_06", sightac7 = "owo_m16_sight_empty_07", 
+			}
+		},
+		--	Long carryhandle (bigger bulge up front on barrel)
+		owo_m16_sight_01_l  = {
+			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_02", type = current_type, 
+			mesh_move = false, parent = current_parent, hide_mesh = {{current_type, 5}},
+			automatic_equip = { sightac1 = "owo_m16_sight_helper_01", sightac2 = "owo_m16_sight_helper_02", 
+				sightac3 = "owo_m16_sight_helper_03", 
+				sightac4 = "owo_m16_sight_helper_04", sightac5 = "owo_m16_sight_helper_05", 
+				sightac6 = "owo_m16_sight_helper_06", sightac7 = "owo_m16_sight_helper_07", 
+			}
+		},
+		owo_m16_sight_02_l  = {
 			model = _item_ranged.."/recievers/lasgun_rifle_elysian_receiver_02", type = current_type, 
 			mesh_move = false, parent = current_parent, hide_mesh = {{current_type, 5}},
 			automatic_equip = { sightac1 = "owo_m16_sight_helper_01", sightac2 = "owo_m16_sight_helper_02", 
@@ -4846,17 +4868,38 @@ function mod.fixes_owo_m16_sight(variant_id, given_type, given_parent)
 	local current_type = given_type or "sight"
 	local current_parent = given_parent or "receiver"
 
+	local _owo_normal_m16_sights = "owo_m16_sight_01|owo_m16_sight_02"
+	local _owo_long_m16_sights = "owo_m16_sight_01_l|owo_m16_sight_02_l"
+	--local _owo_all_m16_sights = _owo_normal_m16_sights.."|".._owo_long_m16_sights
+
 	mod.mt.inject_fixes(variant_id, {
 		-- ######
 		-- Sight: M16 Sights
 		-- ######
-		--  M16 Helpers
-		{	dependencies =  	{ "owo_m16_sight_01|owo_m16_sight_02" },
+		--	Normal
+		{	dependencies =  	{ _owo_normal_m16_sights, },
 			-- Base carryhandle. take care to make sure it clips properly
 			[current_type] =	{ offset = true, position = vector3_box(0, -0.038, 0.019), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
 			-- Side ears to protect the rear sight aperture
 			sightac1 =      	{ offset = false, parent = current_type, position = vector3_box(0.006, 0.255, 0.178), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.094, 0.104 ) },
 			sightac2 =      	{ offset = false, parent = current_type, position = vector3_box(-0.006, 0.255, 0.178), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.094, 0.104 ) },
+			-- Rear Sight Aperture. the peep hole then the 2 bases
+			sightac3 =      	{ offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
+			sightac4 =      	{ offset = true, position = vector3_box(0.0015, 0.024, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
+			sightac5 =      	{ offset = true, position = vector3_box(-0.0025, 0.024, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
+			-- Windage Knob on the right side of the sight
+			sightac6 =      	{ offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
+			-- Rear Elevation Knob in the base, below the rear sight
+			sightac7 =      	{ offset = true, position = vector3_box(0, 0.012, 0.146), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
+		},
+		--	Long - ONLY DIFFERS IN SIGHTAC1/2
+		--		REST ARE DUPLICATED FOR EFFICIENCY
+		{	dependencies =  	{ _owo_long_m16_sights, },
+			-- Base carryhandle. take care to make sure it clips properly
+			[current_type] =	{ offset = true, position = vector3_box(0, -0.038, 0.019), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
+			-- Side ears to protect the rear sight aperture
+			sightac1 =      	{ offset = false, parent = current_type, position = vector3_box(0.006, 0.323, 0.178), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.366, 0.104 ) },
+			sightac2 =      	{ offset = false, parent = current_type, position = vector3_box(-0.006, 0.323, 0.178), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.366, 0.104 ) },
 			-- Rear Sight Aperture. the peep hole then the 2 bases
 			sightac3 =      	{ offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
 			sightac4 =      	{ offset = true, position = vector3_box(0.0015, 0.024, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },

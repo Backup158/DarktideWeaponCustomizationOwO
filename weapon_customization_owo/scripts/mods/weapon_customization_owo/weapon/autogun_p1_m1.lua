@@ -156,6 +156,9 @@ mod.owo_kalash_stock(this_variant)
 -- Define Variables for Fixes
 -- ############################################
 local _owo_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06|owo_reticle_helper_invisible"
+local _owo_normal_m16_sights = "owo_m16_sight_01|owo_m16_sight_02"
+local _owo_long_m16_sights = "owo_m16_sight_01_l|owo_m16_sight_02_l"
+local _owo_all_m16_sights = _owo_normal_m16_sights.."|".._owo_long_m16_sights
 local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
 local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
 local _owo_magnifier_side_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
@@ -768,12 +771,12 @@ mod.mt.inject_fixes(this_variant, {
     -- ######
 	-- Sight: M16 Sights
 	-- ######
-    {	dependencies =      { "owo_m16_sight_01|owo_m16_sight_02", _vigilant_autogun_receivers, },
+    {	dependencies =      { _owo_all_m16_sights, _vigilant_autogun_receivers, },
         no_scope_offset =   { offset = true, position = vector3_box(0, 0.05, -0.0273), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { offset = true, position = vector3_box(0, 0.05, -0.0273), rotation = vector3_box(0, 0, 0)},
         sight =             { offset = true, position = vector3_box(0, -0.038, 0.024), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
     },
-    {	dependencies =      { "owo_m16_sight_01|owo_m16_sight_02" },
+    {	dependencies =      { _owo_all_m16_sights, },
         no_scope_offset =   { offset = true, position = vector3_box(0, 0.05, -0.0223), rotation = vector3_box(0, 0, 0)},
         scope_offset =      { offset = true, position = vector3_box(0, 0.05, -0.0223), rotation = vector3_box(0, 0, 0)},
         sight =             { offset = true, position = vector3_box(0, -0.038, 0.019), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
