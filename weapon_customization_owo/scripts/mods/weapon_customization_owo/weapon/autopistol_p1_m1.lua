@@ -90,6 +90,9 @@ mod.owo_m16_sight(this_variant)
 -- Define Variables for Fixes
 -- ############################################
 local _owo_sight_2s = "owo_alt_viewmodel_01|owo_alt_viewmodel_02|owo_alt_viewmodel_03|owo_alt_viewmodel_04|owo_alt_viewmodel_05|owo_alt_viewmodel_06|owo_reticle_helper_invisible"
+--local _owo_normal_m16_sights = "owo_m16_sight_01|owo_m16_sight_02"
+--local _owo_long_m16_sights = "owo_m16_sight_01_l|owo_m16_sight_02_l"
+--local _owo_all_m16_sights = _owo_normal_m16_sights.."|".._owo_long_m16_sights
 --local _owo_no_magnifier_eotech_sights = "owo_holosight_01_01|owo_holosight_01_01ss"
 --local _owo_magnifier_aligned_eotech_sights = "owo_holosight_01_02_z1|owo_holosight_01_02_z2|owo_holosight_01_02ss_z1|owo_holosight_01_02ss_z2"
 --local _owo_magnifier_side_eotech_sights = "owo_holosight_01_03|owo_holosight_01_03ss"
@@ -211,6 +214,12 @@ mod.mt.inject_fixes(this_variant, {
 	-- Stock: TACTICAL STOCK
 	-- ######
     -- Handled Universally
+
+    -- ######
+    -- Sight: M16 Sights
+    -- ######
+    -- No sight alignment required
+    -- Handled universally
 })
 
 
