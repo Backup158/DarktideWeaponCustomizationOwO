@@ -19,6 +19,10 @@ local _hide_slot_table = mod:io_dofile("weapon_customization_owo/scripts/mods/we
 -- ###############
 local table_of_mt_slots = {
     "stockac",
+    
+    "sightac2",
+    "sightac3",
+    "sightac4",
 }
 for _, slot_name in ipairs(table_of_mt_slots) do
     mod.create_default_attachment(this_variant, slot_name)
@@ -57,6 +61,11 @@ local table_of_owo_slots = {
     "barrelshroudac5",
     "barrelshroudac6",
     "barrelshroudac7",
+
+    "sightac1",
+    "sightac5",
+    "sightac6",
+    "sightac7",
 }
 mod.initialize_table_of_custom_slot_for_weapon(this_variant, table_of_owo_slots)
 
@@ -75,6 +84,7 @@ mod.owo_tactical_stock(this_variant)
 
 mod.owo_reticle_helper(this_variant)
 mod.owo_alt_viewmodel(this_variant)
+mod.owo_m16_sight(this_variant)
 
 -- ############################################
 -- Define Variables for Fixes
@@ -180,6 +190,8 @@ mod.fixes_owo_smg_barrel(this_variant)
 mod.fixes_owo_tactical_stock(this_variant)
 
 mod.fixes_owo_tactical_flashlight(this_variant)
+
+mod.fixes_owo_m16_sight(this_variant)
 
 -- #################
 -- Custom Fixes

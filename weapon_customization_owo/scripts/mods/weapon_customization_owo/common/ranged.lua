@@ -4810,11 +4810,11 @@ function mod.owo_m16_sight(variant_id, given_type, given_parent)
 		-- Carry handle side rails
 		owo_m16_sight_helper_01 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac1",
-			mesh_move = false, parent = current_type
+			mesh_move = false, parent = current_type, 
 		},
 		owo_m16_sight_helper_02 = {
 			model = _item_ranged.."/stocks/autogun_rifle_ak_stock_01", type = "sightac2",
-			mesh_move = false, parent = current_type
+			mesh_move = false, parent = current_type, 
 		},
 		-- Rear sight aperture
 		owo_m16_sight_helper_03 = {
@@ -4851,20 +4851,20 @@ function mod.fixes_owo_m16_sight(variant_id, given_type, given_parent)
 		-- Sight: M16 Sights
 		-- ######
 		--  M16 Helpers
-		{	dependencies =  { "owo_m16_sight_01|owo_m16_sight_02" },
+		{	dependencies =  	{ "owo_m16_sight_01|owo_m16_sight_02" },
 			-- Base carryhandle. take care to make sure it clips properly
-			sight =         { offset = true, position = vector3_box(0, -0.038, 0.019), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
+			[current_type] =	{ offset = true, position = vector3_box(0, -0.038, 0.019), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.745, 0.714, 0.758 ) },
 			-- Side ears to protect the rear sight aperture
-			sightac1 =      { offset = true, position = vector3_box(0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
-			sightac2 =      { offset = true, position = vector3_box(-0.005, 0.247, 0.098), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.03, 0.804, 0.104 ) },
+			sightac1 =      	{ offset = false, parent = current_type, position = vector3_box(0.006, 0.255, 0.184), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.094, 0.104 ) },
+			sightac2 =      	{ offset = false, parent = current_type, position = vector3_box(-0.006, 0.255, 0.184), rotation = vector3_box(-180, 0, -180), scale = vector3_box(0.05, 1.094, 0.104 ) },
 			-- Rear Sight Aperture. the peep hole then the 2 bases
-			sightac3 =      { offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
-			sightac4 =      { offset = true, position = vector3_box(0.001, 0.024, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
-			sightac5 =      { offset = true, position = vector3_box(-0.003, 0.024, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
+			sightac3 =      	{ offset = true, position = vector3_box(0, 0.022, 0.185), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.15, 0.06, 0.15 ) },
+			sightac4 =      	{ offset = true, position = vector3_box(0.001, 0.024, 0.177), rotation = vector3_box(180, 90, 0), scale = vector3_box(0.08, 0.1, 0.03 ) },
+			sightac5 =      	{ offset = true, position = vector3_box(-0.002, 0.024, 0.177), rotation = vector3_box(-90, -90, -180), scale = vector3_box(0.08, 0.1, 0.03 ) },
 			-- Windage Knob on the right side of the sight
-			sightac6 =      { offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
+			sightac6 =      	{ offset = true, position = vector3_box(0.006, 0.016, 0.174), rotation = vector3_box(0, 90, 0), scale = vector3_box(0.14, 0.14, 0.056 ) },
 			-- Rear Elevation Knob in the base, below the rear sight
-			sightac7 =      { offset = true, position = vector3_box(0, 0.012, 0.146), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
+			sightac7 =      	{ offset = true, position = vector3_box(0, 0.012, 0.146), rotation = vector3_box(45, 90, 45), scale = vector3_box(0.77, 0.09, 0.77 ) },
 		},
 	})
 end
