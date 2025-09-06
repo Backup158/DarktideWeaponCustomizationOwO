@@ -110,9 +110,11 @@ mod.fixes_owo_crossguard(this_variant, "crossguard", "grip")
 -- Custom Fixes
 -- #################
 mod.mt.inject_fixes(this_variant, {
+    -- ######
     -- Body: Rapier Blade
     --  Why did I choose 5 blades with wildly different proportions
     --  Just love making more work for myself eh
+    -- ######
     -- MT Combat knife grip patch
     {   dependencies = { "owo_rapier_blade_01", _mt_knife_grips },
         -- grip = {mesh_move = true, position = vector3_box(0, 0, 0), rotation = vector3_box(-1, 0, 0), scale = vector3_box(1, 1, 1.6), scale_node = 1},
@@ -187,9 +189,14 @@ mod.mt.inject_fixes(this_variant, {
     },
 
     -- #######
-    -- Blade: Slim Blades
+    -- Body: Slim Blades
     -- #######
     {   dependencies = { _owo_flat_dclaw_blades, _combat_sword_grips },
         body = { position = vector3_box(0, 0, 0.09), rotation = vector3_box(0, 0, 0), scale = vector3_box(0.5, 1, 1)},
     },
+
+    -- ######
+    -- Crossguard: CROSSGUARDS
+    -- ######
+    -- Handled universally
 })

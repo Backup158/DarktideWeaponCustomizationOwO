@@ -852,7 +852,9 @@ function mod.owo_crossguard(variant_id, given_type, given_parent)
 	local current_parent = given_parent or "grip"
 
 	mod.inject_attachments_owo(variant_id, current_type, {
-		{id = "owo_crossguard_plate_01", name = "OwO Crossguard Plate"},
+		{id = "owo_crossguard_plate_01", name = "OwO Crossguard Plate 1"},
+		{id = "owo_crossguard_plate_02", name = "OwO Crossguard Plate 2"},
+		{id = "owo_crossguard_plate_03", name = "OwO Crossguard Plate 3"},
 	})
 
 	mod.inject_models(variant_id, {
@@ -861,18 +863,29 @@ function mod.owo_crossguard(variant_id, given_type, given_parent)
 			model = _item_melee.."/pommels/axe_pommel_01", type = current_type, 
 			mesh_move = false, parent = current_parent,
 		},
+		owo_crossguard_plate_02 = {
+			model = _item_melee.."/pommels/axe_pommel_02", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
+		owo_crossguard_plate_03 = {
+			model = _item_melee.."/pommels/axe_pommel_03", type = current_type, 
+			mesh_move = false, parent = current_parent,
+		},
 	})
 end
 function mod.fixes_owo_crossguard(variant_id, given_type, given_parent)
 	local current_type = given_type or "crossguard"
 	local current_parent = given_parent or "grip"
 
-	local _owo_crossguards = "owo_crossguard_plate_01"
+	local _owo_crossguards = "owo_crossguard_plate_01|owo_crossguard_plate_02|owo_crossguard_plate_03"
 
-	mod.mt.inject_fixes(variant_id, {
-		{   dependencies =  { "owo_crossguard_plate_01" },
+	mod.mt.inject_fixes(variant_id, {\
+		-- ######
+		-- Crossguard: CROSSGUARDS
+		-- ######
+		{   dependencies =  	{ _owo_crossguards, },
 			-- Hilt
-			hilt =  { offset = true, position = vector3_box(0, 0, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 0.2)},
+			[current_type] =  	{ offset = true, position = vector3_box(0, 0, -0.032), rotation = vector3_box(0, 0, 0), scale = vector3_box(1.0, 1.0, 0.2)},
 		},
 	})
 end
