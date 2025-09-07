@@ -879,7 +879,7 @@ function mod.fixes_owo_crossguard(variant_id, given_type, given_parent)
 
 	local _owo_crossguards = "owo_crossguard_plate_01|owo_crossguard_plate_02|owo_crossguard_plate_03"
 
-	mod.mt.inject_fixes(variant_id, {\
+	mod.mt.inject_fixes(variant_id, {
 		-- ######
 		-- Crossguard: CROSSGUARDS
 		-- ######
