@@ -44,7 +44,14 @@ end
 
 -- ###################################################################
 -- ATTACHMENT CREATION
--- This needs to happen BEFORE all mods load, since that's when the base mod
+-- This needs to happen BEFORE all mods load, since that's when the base mod gets the tables from the plugins
+--
+-- Placeholder for notes
+-- replacement_path is added to master items table? it's the name for our item
+--  causes issue with how did i get that (and presumably any other mod that tries to work with that table)
+--  if you use a default item name, you wont load the kitbash stuff
+-- kitbash key name is your item's name
+--  using a default one crashes
 -- ###################################################################
 
 local extended_weapon_customization_plugin = {
@@ -53,6 +60,7 @@ local extended_weapon_customization_plugin = {
 			muzzle = {
 				owo_suppressor_01 = {
 					replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
+                    --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
                     icon_render_unit_rotation_offset = {90, 0, 45},
                     icon_render_camera_position_offset = {-0.2, -2.75, 0.25},
 				},
@@ -104,7 +112,7 @@ local extended_weapon_customization_plugin = {
             },
             display_name = "loc_owo_suppressor_01",
             description = "loc_description_owo_suppressor_01",
-            attach_node = "ap_sight",
+            attach_node = "ap_muzzle_01",
             dev_name = "owo_suppressor_01",
         },
 	}
