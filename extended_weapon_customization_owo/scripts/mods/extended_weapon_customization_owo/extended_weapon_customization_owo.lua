@@ -14,8 +14,12 @@ mod.discord_mode = mod:get("discord_mode")
 -- Locals from Weapon Customization plugin template
 local pairs = pairs
 local table = table
+local vector3 = Vector3
 local vector3_box = Vector3Box
+local vector3_one = vector3.one
+local vector3_zero = vector3.zero
 local table_clone = table.clone
+local table_clone_safe = table.clone_safe
 
 local _item = "content/items/weapons/player"
 local _item_ranged = _item.."/ranged"
@@ -34,12 +38,41 @@ local _item_minion = "content/items/weapons/minions"
 --
 --		}
 -- ######
-local function add_attachment_to_weapon(attachment_tables, weapon_id) 
-	for slot, attachment_table_in_slot in pairs(attachment_tables) do
-		for attachment_id, attachment_models in pairs(attachment_table_in_slot) do
-			extended_weapon_customization_plugin.attachments[weapon_id][slot][attachment_id] = attachment_models
-		end
-	end
+local function add_attachment_to_weapon(attachment_tables, weapon_id, slot) 
+	for attachment_id, attachment_models in pairs(attachment_tables) do
+        if not extended_weapon_customization_plugin.attachments[weapon_id][slot][attachment_id] then
+		    extended_weapon_customization_plugin.attachments[weapon_id][slot][attachment_id] = attachment_models
+        end
+    end
+end
+
+-- ######
+-- 
+-- ######
+local function add_fixes_to_weapon(fixes_tables, weapon_id) 
+	for _, fix_table in pairs(fixes_tables) do
+		table.append(extended_weapon_customization_plugin.fixes[weapon_id], fix_table)
+    end
+end
+
+-- ######
+-- 
+-- ######
+local function add_kitbashes_to_weapon(kitbash_tables, weapon_id) 
+	for kitbash_key, kitbash_table in pairs(kitbash_tables) do
+        if not extended_weapon_customization_plugin.kitbash[kitbash_key] then
+		    extended_weapon_customization_plugin.kitbash[kitbash_key] = kitbash_table
+        end
+    end
+end
+
+local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
+    if not slot then
+        mod:error("Weapon slot missing! "..weapon_id..": "..attachment_blob[name])
+    end
+    add_attachment_to_weapon(attachment_blob[attachments], weapon_id, slot)
+    add_fixes_to_weapon(attachment_blob[fixes], weapon_id)
+    add_kitbashes_to_weapon(attachment_blob[kitbash], weapon_id)
 end
 
 -- ###################################################################
@@ -54,17 +87,80 @@ end
 -- kitbash key name is your item's name
 --  using an existing one crashes
 -- ###################################################################
+-- ################################
+-- Defining Attachment Functions
+-- ################################
+local function owo_suppressor()
+    return {
+        name = "owo_suppressor",
+        attachments = {
+            owo_suppressor_01 = {
+                replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
+                --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
+                icon_render_unit_rotation_offset = {90, 0, 45},
+                icon_render_camera_position_offset = {-0.2, -2.75, 0.25},
+            },
+        },
+        fixes = {
 
+        },
+        kitbash = {
+            [_item_ranged.."/muzzles/owo_suppressor_01"] = {
+                attachments = {
+                    base = {
+                        item = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
+                        fix = {
+                            disable_in_ui = true,
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0, 0, 0.0),
+                                rotation = vector3_box(0, 0, 0),
+                                scale = vector3_box(1, 1, 1),
+                            },
+                        },
+                        children = {
+                            body_1 = {
+                                item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = vector3_box(0, 0.0, 0.0),
+                                        rotation = vector3_box(0, 0, 0),
+                                        scale = vector3_box(1.2, 1.8, 1.2),
+                                    },
+                                },
+                            },
+                            body_2 = {
+                                item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = vector3_box(0, 0.0, 0.0),
+                                        rotation = vector3_box(0, 22, 0),
+                                        scale = vector3_box(1.2, 1.8, 1.2),
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                display_name = "loc_owo_suppressor_01",
+                description = "loc_description_owo_suppressor_01",
+                attach_node = "ap_muzzle_01",
+                dev_name = "owo_suppressor_01",
+            },
+        }
+    }
+end
+
+-- ################################
+-- Adding Attachments
+-- ################################
 local extended_weapon_customization_plugin = {
 	attachments = {
 		autogun_p1_m1 = {
 			muzzle = {
-				owo_suppressor_01 = {
-					replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
-                    --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
-                    icon_render_unit_rotation_offset = {90, 0, 45},
-                    icon_render_camera_position_offset = {-0.2, -2.75, 0.25},
-				},
+
 			},
 		},
 	}, 
@@ -72,50 +168,7 @@ local extended_weapon_customization_plugin = {
 
 	},
 	kitbash = {
-		[_item_ranged.."/muzzles/owo_suppressor_01"] = {
-            attachments = {
-                base = {
-                    item = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
-                    fix = {
-                        disable_in_ui = true,
-                        offset = {
-                            node = 1,
-                            position = vector3_box(0, 0, 0.0),
-                            rotation = vector3_box(0, 0, 0),
-                            scale = vector3_box(1, 1, 1),
-                        },
-                    },
-                    children = {
-                        body_1 = {
-                            item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
-                            fix = {
-                                offset = {
-                                    node = 1,
-                                    position = vector3_box(0, 0.0, 0.0),
-                                    rotation = vector3_box(0, 0, 0),
-                                    scale = vector3_box(1.2, 1.8, 1.2),
-                                },
-                            },
-                        },
-						body_2 = {
-                            item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
-                            fix = {
-                                offset = {
-                                    node = 1,
-                                    position = vector3_box(0, 0.0, 0.0),
-                                    rotation = vector3_box(0, 22, 0),
-                                    scale = vector3_box(1.2, 1.8, 1.2),
-                                },
-                            },
-                        },
-                    },
-                },
-            },
-            display_name = "loc_owo_suppressor_01",
-            description = "loc_description_owo_suppressor_01",
-            attach_node = "ap_muzzle_01",
-            dev_name = "owo_suppressor_01",
-        },
+		
 	}
 }
 
