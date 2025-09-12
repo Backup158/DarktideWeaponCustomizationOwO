@@ -1,10 +1,10 @@
 local mod = get_mod("weapon_customization_owo")
-local wc
+local ewc
 local mt
 local syn
 
 -- Prints a message to the console log containing the current version number
-mod.version = "3.4.1"
+mod.version = "4.0.0"
 mod:info('WeaponCustomizationOwO v' .. mod.version .. ' loaded uwu nya :3')
 
 -- Discord mode
@@ -12,25 +12,25 @@ mod:info('WeaponCustomizationOwO v' .. mod.version .. ' loaded uwu nya :3')
 mod.discord_mode = mod:get("discord_mode")
 
  -- Locals from Weapon Customization plugin template
- local vector3_box = Vector3Box
- local _item = "content/items/weapons/player"
- local _item_ranged = _item.."/ranged"
- local _item_melee = _item.."/melee"
- local _item_minion = "content/items/weapons/minions"
+local pairs = pairs
+local table = table
+local vector3_box = Vector3Box
+local table_clone = table.clone
 
 -- #################
 -- Command to call Reload Definitions
 -- Type command to reapply fixes after editing the files mid-game
 -- #################
+--[[
 mod:command("ewc_reload", "Call reload definitions", function ()
     -- from weapon_customization/scripts/mods/weapon_customization/patches/inventory_weapon_cosmetics_view.lua 
 
 	-- Reload weapon definitions
 	--instance.cb_on_reload_definitions_pressed()
 	local REFERENCE = "weapon_customization"
-	mod.wc:io_dofile("weapon_customization/scripts/mods/weapon_customization/weapon_customization_anchors")
+	mod.ewc:io_dofile("weapon_customization/scripts/mods/weapon_customization/weapon_customization_anchors")
 	-- Reload plugins via registered definition callback
-	local reload_definitions = mod.wc:persistent_table(REFERENCE).reload_definitions
+	local reload_definitions = mod.ewc:persistent_table(REFERENCE).reload_definitions
 	for _, callback in pairs(reload_definitions) do
 		if callback and type(callback) == "function" then callback() end
 	end
@@ -47,17 +47,7 @@ mod:command("ewc_reload", "Call reload definitions", function ()
 
 	mod:echo("take me out the oven papi~")
 end)
-
--- #########################################
--- ############### ATTENTION ###############
--- #########################################
--- The rest of this is basically a copy of the core MT plugin file
--- 	When possible, I called functions directly from the MT plugin to reuse code with minimal copy-pasting
---	Otherwise, many of the commands executed during on_all_mods_loaded are written directly into that function
---	In other cases, the tables the function references are ones created directly in the function body
--- My original works are wrapped in the :3 banners
--- Feel free to steal those
--- #########################################
+]]
 
 function mod.load_mod_file(relative_path)
 	mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/"..relative_path)
@@ -76,16 +66,16 @@ end
 function mod.on_all_mods_loaded()
 	-- Checks for installed mods. Kept here so it works after reload.
 	---@class WeaponCustomizationMod
-	wc = get_mod("weapon_customization")
+	ewc = get_mod("extended_weapon_customization")
 	if not wc then
 		mod:error("Extended Weapon Customization mod required")
 		return
 	end
-	mod.wc = wc
+	mod.ewc = ewc
 	---@class WeaponCustomizationMod_MTStuff
 	mt = get_mod("weapon_customization_mt_stuff")
-    if not mt then
-    	mod:error("Weapon Customization MT plugin required")
+    if mt then
+    	mod:info("Uwusa haz MT stuffs :3")
     	return 
     end
     mod.mt = mt
@@ -93,7 +83,7 @@ function mod.on_all_mods_loaded()
 	--		Checking to apply compatibility patches later
 	syn = get_mod("weapon_customization_syn_edits")
     if syn then
-		mod:info("Uwusa haz Syn's edits :3")
+		mod:info("Uwusa haz Syn's Edits :3")
     end
     mod.syn = syn
 
@@ -103,7 +93,7 @@ function mod.on_all_mods_loaded()
 	
 	-- Reload Callback
 	--	Reinject fixes
-	mod.wc.register_definition_callback(function()
+	mod.ewc.register_definition_callback(function()
 		mod.load_mod_file("files_to_load")
 		mod:info("weapon attachment wewoad :3")
 	end)
@@ -180,7 +170,7 @@ function mod.on_all_mods_loaded()
 	-- RETURN: N/A
 	-- ######
 	function mod.create_named_custom_slot(slot_name, slot_localization_table)
-		table.insert(mod.wc.attachment_slots, slot_name)
+		table.insert(mod.ewc.attachment_slots, slot_name)
 		mod:add_global_localize_strings({
 			["loc_weapon_cosmetics_customization_"..slot_name] = slot_localization_table
 		})
@@ -194,8 +184,8 @@ function mod.on_all_mods_loaded()
 	-- RETURN: N/A
 	-- ######
 	function mod.create_new_helper_slot(slot_name)
-		mod.wc.add_custom_attachments[slot_name] = slot_name.."_list"
-		mod.wc[slot_name.."_list"] = {
+		mod.ewc.add_custom_attachments[slot_name] = slot_name.."_list"
+		mod.ewc[slot_name.."_list"] = {
 			"owo_"..slot_name.."_default",
 		}
 	end
@@ -231,7 +221,7 @@ function mod.on_all_mods_loaded()
 	-- RETURN: N/A
 	-- ######
 	function mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
-		mod.wc.attachment[this_variant][slot_name] = {}
+		mod.ewc.attachment[this_variant][slot_name] = {}
 		mod.create_default_attachment(this_variant, slot_name)
 	end
 
