@@ -71,7 +71,7 @@ local extended_weapon_customization_plugin = {
                         disable_in_ui = true,
                         offset = {
                             node = 1,
-                            position = vector3_box(0, 0, .115),
+                            position = vector3_box(0, 0, 0.0),
                             rotation = vector3_box(0, 0, 0),
                             scale = vector3_box(1, 1, 1),
                         },
