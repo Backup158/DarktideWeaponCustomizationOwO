@@ -109,6 +109,7 @@ local function owo_suppressor()
                 attachments = {
                     base = {
                         item = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
+                        --item = _item_empty_trinket,
                         fix = {
                             disable_in_ui = true,
                             offset = {
