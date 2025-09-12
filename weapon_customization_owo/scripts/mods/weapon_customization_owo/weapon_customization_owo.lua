@@ -181,7 +181,7 @@ function mod.on_all_mods_loaded()
 	-- Checks for installed mods. Kept here so it works after reload.
 	--	Base Mod
 	ewc = get_mod("extended_weapon_customization")
-	if not wc then
+	if not ewc then
 		mod:error("Extended Weapon Customization mod (the rebuild) required")
 		return
 	end
