@@ -40,6 +40,12 @@ local localizations = {
 		--en = "You have enabled Discord compatibility mode. Make sure you have the latest beta releases for the base EWC mod (and Syn's Edits if you use it)! These are found in the Darktide Modders Discord [https://discord.gg/rKYWtaDx4D], in the pinned messages of the #weapon-customization-mod channel and the Syndonai's Edits thread in #creation-showcase, respectively. Remember to restart/reload the game.",
 		en = "You have enabled Discord compatibility mode, which currently does nothing."
 	},
+	loc_owo_suppressor_01 = {
+		en = "OwO Suppressor 1",
+	},
+	loc_description_owo_suppressor_01 = {
+		en = "Metal suppressor"
+	},
 }
 
 if mod:get("owo_mode") then

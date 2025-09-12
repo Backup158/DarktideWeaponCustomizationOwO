@@ -52,9 +52,9 @@ local extended_weapon_customization_plugin = {
 		autogun_p1_m1 = {
 			muzzle = {
 				owo_suppressor_01 = {
-					replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
+					replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
                     icon_render_unit_rotation_offset = {90, 0, 45},
-                    icon_render_camera_position_offset = {-.2, -2.75, .25},
+                    icon_render_camera_position_offset = {-0.2, -2.75, 0.25},
 				},
 			},
 		},
