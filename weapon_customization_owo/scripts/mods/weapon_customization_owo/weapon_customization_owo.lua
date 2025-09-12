@@ -1,150 +1,36 @@
 local mod = get_mod("weapon_customization_owo")
-local ewc
+local wc
 local mt
 local syn
 
 -- Prints a message to the console log containing the current version number
-mod.version = "4.0.0"
+mod.version = "3.4.1"
 mod:info('WeaponCustomizationOwO v' .. mod.version .. ' loaded uwu nya :3')
 
 -- Discord mode
 -- Only needs to be checked at launch because the stuff it affects only runs at startup
 mod.discord_mode = mod:get("discord_mode")
 
--- Locals from Weapon Customization plugin template
-local pairs = pairs
-local table = table
-local vector3_box = Vector3Box
-local table_clone = table.clone
-
-local _item = "content/items/weapons/player"
-local _item_ranged = _item.."/ranged"
-local _item_melee = _item.."/melee"
-local _item_empty_trinket = _item.."/trinkets/unused_trinket"
-local _item_minion = "content/items/weapons/minions"
-
--- ###################################################################
--- HELPER FUNCTIONS
--- ###################################################################
--- ######
--- 
--- *Directly* accesses the table
---		weapon {
---			slot1 = { }
---
---		}
--- ######
-local function add_attachment_to_weapon(attachment_tables, weapon_id) 
-	for slot, attachment_table_in_slot in pairs(attachment_tables) do
-		for attachment_id, attachment_models in pairs(attachment_table_in_slot) do
-			extended_weapon_customization_plugin.attachments[weapon_id][slot][attachment_id] = attachment_models
-		end
-	end
-end
-
--- ###################################################################
--- ATTACHMENT CREATION
--- This needs to happen BEFORE all mods load, since that's when the base mod
--- ###################################################################
-
-local extended_weapon_customization_plugin = {
-	attachments = {
-		autogun_p1_m1 = {
-			muzzle = {
-				owo_suppressor_01 = {
-					replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
-                    icon_render_unit_rotation_offset = {90, 0, 45},
-                    icon_render_camera_position_offset = {-0.2, -2.75, 0.25},
-				},
-			},
-		},
-	}, 
-	fixes = {
-
-	},
-	kitbash = {
-		[_item_ranged.."/muzzles/owo_suppressor_01"] = {
-            attachments = {
-                base = {
-                    item = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
-                    fix = {
-                        disable_in_ui = true,
-                        offset = {
-                            node = 1,
-                            position = vector3_box(0, 0, 0.0),
-                            rotation = vector3_box(0, 0, 0),
-                            scale = vector3_box(1, 1, 1),
-                        },
-                    },
-                    children = {
-                        body_1 = {
-                            item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
-                            fix = {
-                                offset = {
-                                    node = 1,
-                                    position = vector3_box(0, 0.0, 0.0),
-                                    rotation = vector3_box(0, 0, 0),
-                                    scale = vector3_box(1.2, 1.8, 1.2),
-                                },
-                            },
-                        },
-						body_2 = {
-                            item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
-                            fix = {
-                                offset = {
-                                    node = 1,
-                                    position = vector3_box(0, 0.0, 0.0),
-                                    rotation = vector3_box(0, 22, 0),
-                                    scale = vector3_box(1.2, 1.8, 1.2),
-                                },
-                            },
-                        },
-                    },
-                },
-            },
-            display_name = "loc_owo_suppressor_01",
-            description = "loc_description_owo_suppressor_01",
-            attach_node = "ap_sight",
-            dev_name = "owo_suppressor_01",
-        },
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-mod.extended_weapon_customization_plugin = extended_weapon_customization_plugin
-
-
+ -- Locals from Weapon Customization plugin template
+ local vector3_box = Vector3Box
+ local _item = "content/items/weapons/player"
+ local _item_ranged = _item.."/ranged"
+ local _item_melee = _item.."/melee"
+ local _item_minion = "content/items/weapons/minions"
 
 -- #################
 -- Command to call Reload Definitions
 -- Type command to reapply fixes after editing the files mid-game
 -- #################
---[[
 mod:command("ewc_reload", "Call reload definitions", function ()
     -- from weapon_customization/scripts/mods/weapon_customization/patches/inventory_weapon_cosmetics_view.lua 
 
 	-- Reload weapon definitions
 	--instance.cb_on_reload_definitions_pressed()
 	local REFERENCE = "weapon_customization"
-	mod.ewc:io_dofile("weapon_customization/scripts/mods/weapon_customization/weapon_customization_anchors")
+	mod.wc:io_dofile("weapon_customization/scripts/mods/weapon_customization/weapon_customization_anchors")
 	-- Reload plugins via registered definition callback
-	local reload_definitions = mod.ewc:persistent_table(REFERENCE).reload_definitions
+	local reload_definitions = mod.wc:persistent_table(REFERENCE).reload_definitions
 	for _, callback in pairs(reload_definitions) do
 		if callback and type(callback) == "function" then callback() end
 	end
@@ -162,10 +48,20 @@ mod:command("ewc_reload", "Call reload definitions", function ()
 	mod:echo("take me out the oven papi~")
 end)
 
+-- #########################################
+-- ############### ATTENTION ###############
+-- #########################################
+-- The rest of this is basically a copy of the core MT plugin file
+-- 	When possible, I called functions directly from the MT plugin to reuse code with minimal copy-pasting
+--	Otherwise, many of the commands executed during on_all_mods_loaded are written directly into that function
+--	In other cases, the tables the function references are ones created directly in the function body
+-- My original works are wrapped in the :3 banners
+-- Feel free to steal those
+-- #########################################
+
 function mod.load_mod_file(relative_path)
 	mod:io_dofile("weapon_customization_owo/scripts/mods/weapon_customization_owo/"..relative_path)
 end
-]]
 
 function mod.on_setting_changed(setting_id)
 	-- if Discord mode changed
@@ -179,41 +75,40 @@ end
 
 function mod.on_all_mods_loaded()
 	-- Checks for installed mods. Kept here so it works after reload.
-	--	Base Mod
-	ewc = get_mod("extended_weapon_customization")
-	if not ewc then
-		mod:error("Extended Weapon Customization mod (the rebuild) required")
+	---@class WeaponCustomizationMod
+	wc = get_mod("weapon_customization")
+	if not wc then
+		mod:error("Extended Weapon Customization mod required")
 		return
 	end
-	mod.ewc = ewc
-	--	Plugins
-	--		Just so I know. Compatibility is only an issue of name collisions
+	mod.wc = wc
+	---@class WeaponCustomizationMod_MTStuff
 	mt = get_mod("weapon_customization_mt_stuff")
-    if mt then
-    	mod:info("Uwusa haz MT stuffs :3")
+    if not mt then
+    	mod:error("Weapon Customization MT plugin required")
     	return 
     end
     mod.mt = mt
+	---@class WeaponCustomization_synedits
+	--		Checking to apply compatibility patches later
 	syn = get_mod("weapon_customization_syn_edits")
     if syn then
-		mod:info("Uwusa haz Syn's Edits :3")
+		mod:info("Uwusa haz Syn's edits :3")
     end
     mod.syn = syn
 
-	--[[
 	local attachment_ids = {}
 	local model_ids = {}
 	local debug = mod:get("debug_mode")
 	
 	-- Reload Callback
 	--	Reinject fixes
-	mod.ewc.register_definition_callback(function()
+	mod.wc.register_definition_callback(function()
 		mod.load_mod_file("files_to_load")
 		mod:info("weapon attachment wewoad :3")
 	end)
-	]]
 	
-	--[[
+
 	-- Renamed because initially I was worried about collisions
 	-- 		Not an actual issue since methods are called with the class name, like class.method
 	--		so mod.inject_attachments is different from mod.mt.inject_attachments
@@ -256,7 +151,6 @@ function mod.on_all_mods_loaded()
 		model_ids[variant_id] = model_ids[variant_id] or {}
 		mod.mt.table_append(model_ids[variant_id], table.keys(model_tables))
 	end
-	]]
 
 	--[[
 	---@param variant_id VariantID
@@ -277,7 +171,6 @@ function mod.on_all_mods_loaded()
 	-- I need these here because they rely on mod.inject_attachments_owo() and mod.inject_models(), which are only defined on all mods loaded
 	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
 	-- ############################################################################
-	--[[
 	-- ######
 	-- Creating a New (Named) Custom Slot
 	-- DESCRIPTION: In the melee/ranged files, create a slot and inserts to the slot table
@@ -287,7 +180,7 @@ function mod.on_all_mods_loaded()
 	-- RETURN: N/A
 	-- ######
 	function mod.create_named_custom_slot(slot_name, slot_localization_table)
-		table.insert(mod.ewc.attachment_slots, slot_name)
+		table.insert(mod.wc.attachment_slots, slot_name)
 		mod:add_global_localize_strings({
 			["loc_weapon_cosmetics_customization_"..slot_name] = slot_localization_table
 		})
@@ -301,8 +194,8 @@ function mod.on_all_mods_loaded()
 	-- RETURN: N/A
 	-- ######
 	function mod.create_new_helper_slot(slot_name)
-		mod.ewc.add_custom_attachments[slot_name] = slot_name.."_list"
-		mod.ewc[slot_name.."_list"] = {
+		mod.wc.add_custom_attachments[slot_name] = slot_name.."_list"
+		mod.wc[slot_name.."_list"] = {
 			"owo_"..slot_name.."_default",
 		}
 	end
@@ -338,7 +231,7 @@ function mod.on_all_mods_loaded()
 	-- RETURN: N/A
 	-- ######
 	function mod.initialize_custom_slot_for_weapon(this_variant, slot_name)
-		mod.ewc.attachment[this_variant][slot_name] = {}
+		mod.wc.attachment[this_variant][slot_name] = {}
 		mod.create_default_attachment(this_variant, slot_name)
 	end
 
@@ -392,7 +285,6 @@ function mod.on_all_mods_loaded()
 
 	-- NOTE: For Hide Slot MASTER, it does NOT work because we'd need to deep copy the tables
 
-	]]
 	-- ######
 	-- Create Indicator Group
 	-- DESCRIPTION: Creates Indicator groups for fixes efficiency
@@ -404,22 +296,22 @@ function mod.on_all_mods_loaded()
 	--			table of id and name strings
 	-- RETURN: N/A
 	-- ######
-	--function mod.create_group_indicator(variant_id, slot_name, table_of_indicators)
-	--	--local indicator_slot = slot_name.."_group_indicator"
-	--	local indicator_slot = slot_name
-	--	mod.inject_attachments_owo(variant_id, indicator_slot, table_of_indicators)
-	--	local models_for_indicators = {}
-	--	for _, indicator in ipairs(table_of_indicators) do
-	--		models_for_indicators[indicator["id"]] = { model = "", type = indicator_slot, }
-	--	end
-	--	mod.inject_models(variant_id, models_for_indicators)
-	--end
+	function mod.create_group_indicator(variant_id, slot_name, table_of_indicators)
+		--local indicator_slot = slot_name.."_group_indicator"
+		local indicator_slot = slot_name
+		mod.inject_attachments_owo(variant_id, indicator_slot, table_of_indicators)
+		local models_for_indicators = {}
+		for _, indicator in ipairs(table_of_indicators) do
+			models_for_indicators[indicator["id"]] = { model = "", type = indicator_slot, }
+		end
+		mod.inject_models(variant_id, models_for_indicators)
+	end
 
 	-- ############################################################################
 	-- :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 
 	-- ############################################################################
 
-	--[[
+	
 	-- Applies all the fixes you injected into each weapon
 	mod.load_mod_file("files_to_load")
 
@@ -459,5 +351,4 @@ function mod.on_all_mods_loaded()
 	if missing then
 		mod:error("Check console log. A-a-attachmeownt ow ***whispers to self*** modew i-issues found >.<")
 	end
-	]]
 end
