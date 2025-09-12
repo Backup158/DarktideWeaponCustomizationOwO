@@ -1,4 +1,4 @@
-local mod = get_mod("weapon_customization_owo")
+local mod = get_mod("extended_weapon_customization_owo")
 
 local localizations = {
 	mod_name = {
