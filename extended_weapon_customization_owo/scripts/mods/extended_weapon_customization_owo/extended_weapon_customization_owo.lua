@@ -75,6 +75,12 @@ local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     add_kitbashes_to_weapon(attachment_blob[kitbash], weapon_id)
 end
 
+local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
+    for _, weapon_id in ipairs(weapons_list) do
+        add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
+    end
+end
+
 -- ###################################################################
 -- ATTACHMENT CREATION
 -- This needs to happen BEFORE all mods load, since that's when the base mod gets the tables from the plugins
