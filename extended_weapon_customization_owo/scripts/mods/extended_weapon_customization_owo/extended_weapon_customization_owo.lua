@@ -50,8 +50,9 @@ end
 -- replacement_path is added to master items table? it's the name for our item
 --  causes issue with how did i get that (and presumably any other mod that tries to work with that table)
 --  if you use a default item name, you wont load the kitbash stuff
+--  match with kitbash key name or else master items will kill itself in the console log
 -- kitbash key name is your item's name
---  using a default one crashes
+--  using an existing one crashes
 -- ###################################################################
 
 local extended_weapon_customization_plugin = {
