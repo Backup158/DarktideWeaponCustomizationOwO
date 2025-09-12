@@ -40,6 +40,15 @@ local _item_minion = "content/items/weapons/minions"
 -- ######
 local function add_attachment_to_weapon(attachment_tables, weapon_id, slot) 
 	for attachment_id, attachment_models in pairs(attachment_tables) do
+        -- Creates table keys if they don't exist
+        if not extended_weapon_customization_plugin.attachments[weapon_id] then
+		    extended_weapon_customization_plugin.attachments[weapon_id] = {}
+            extended_weapon_customization_plugin.attachments[weapon_id][slot] = {}
+        elseif not extended_weapon_customization_plugin.attachments[weapon_id][slot] then
+		    extended_weapon_customization_plugin.attachments[weapon_id][slot] = {}
+        end
+        -- Adds attachments
+        --  Check to prevent overwriting
         if not extended_weapon_customization_plugin.attachments[weapon_id][slot][attachment_id] then
 		    extended_weapon_customization_plugin.attachments[weapon_id][slot][attachment_id] = attachment_models
         end
