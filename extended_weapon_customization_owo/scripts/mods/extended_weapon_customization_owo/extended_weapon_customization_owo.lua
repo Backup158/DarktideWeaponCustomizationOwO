@@ -71,6 +71,15 @@ local function string_is_key_in_table(string_to_find, table_to_search)
     return false
 end
 
+-- ######
+-- Load Mod File
+-- PARAM:
+--  relative_path: string
+-- ######
+local function load_mod_file(relative_path)
+	mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
+end
+
 -- ################################
 -- Adding Directly to the Attachments Table
 -- ################################
