@@ -1,8 +1,8 @@
 local mod = get_mod("extended_weapon_customization_owo")
-local ewc
-local mt
-local syn
 
+-- ###################################################################
+-- DATA
+-- ###################################################################
 -- Prints a message to the console log containing the current version number
 mod.version = "0.1.0"
 mod:info('v' .. mod.version .. ' loaded uwu nya :3')
@@ -27,6 +27,22 @@ local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
 
+-- ################################
+-- Table to Hold all Attachments
+-- ################################
+-- local extended_weapon_customization_plugin = {
+local attachments_table_for_ewc = {
+	attachments = {
+
+	}, 
+	fixes = {
+
+	},
+	kitbash = {
+		
+	}
+}
+
 -- ###################################################################
 -- HELPER FUNCTIONS
 -- ###################################################################
@@ -41,16 +57,16 @@ local _item_minion = "content/items/weapons/minions"
 local function add_attachment_to_weapon(attachment_tables, weapon_id, slot) 
 	for attachment_id, attachment_models in pairs(attachment_tables) do
         -- Creates table keys if they don't exist
-        if not extended_weapon_customization_plugin.attachments[weapon_id] then
-		    extended_weapon_customization_plugin.attachments[weapon_id] = {}
-            extended_weapon_customization_plugin.attachments[weapon_id][slot] = {}
-        elseif not extended_weapon_customization_plugin.attachments[weapon_id][slot] then
-		    extended_weapon_customization_plugin.attachments[weapon_id][slot] = {}
+        if not attachments_table_for_ewc.attachments[weapon_id] then
+		    attachments_table_for_ewc.attachments[weapon_id] = {}
+            attachments_table_for_ewc.attachments[weapon_id][slot] = {}
+        elseif not attachments_table_for_ewc.attachments[weapon_id][slot] then
+		    attachments_table_for_ewc.attachments[weapon_id][slot] = {}
         end
         -- Adds attachments
         --  Check to prevent overwriting
-        if not extended_weapon_customization_plugin.attachments[weapon_id][slot][attachment_id] then
-		    extended_weapon_customization_plugin.attachments[weapon_id][slot][attachment_id] = attachment_models
+        if not attachments_table_for_ewc.attachments[weapon_id][slot][attachment_id] then
+		    attachments_table_for_ewc.attachments[weapon_id][slot][attachment_id] = attachment_models
         end
     end
 end
@@ -60,7 +76,7 @@ end
 -- ######
 local function add_fixes_to_weapon(fixes_tables, weapon_id) 
 	for _, fix_table in pairs(fixes_tables) do
-		table.append(extended_weapon_customization_plugin.fixes[weapon_id], fix_table)
+		table.append(attachments_table_for_ewc.fixes[weapon_id], fix_table)
     end
 end
 
@@ -69,8 +85,8 @@ end
 -- ######
 local function add_kitbashes_to_weapon(kitbash_tables, weapon_id) 
 	for kitbash_key, kitbash_table in pairs(kitbash_tables) do
-        if not extended_weapon_customization_plugin.kitbash[kitbash_key] then
-		    extended_weapon_customization_plugin.kitbash[kitbash_key] = kitbash_table
+        if not attachments_table_for_ewc.kitbash[kitbash_key] then
+		    attachments_table_for_ewc.kitbash[kitbash_key] = kitbash_table
         end
     end
 end
@@ -78,10 +94,11 @@ end
 local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     if not slot then
         mod:error("Weapon slot missing! "..weapon_id..": "..attachment_blob[name])
+        return
     end
-    add_attachment_to_weapon(attachment_blob[attachments], weapon_id, slot)
-    add_fixes_to_weapon(attachment_blob[fixes], weapon_id)
-    add_kitbashes_to_weapon(attachment_blob[kitbash], weapon_id)
+    add_attachment_to_weapon(attachment_blob.attachments, weapon_id, slot)
+    add_fixes_to_weapon(attachment_blob.fixes, weapon_id)
+    add_kitbashes_to_weapon(attachment_blob.kitbash, weapon_id)
 end
 
 local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
@@ -104,6 +121,7 @@ end
 -- ###################################################################
 -- ################################
 -- Defining Attachment Functions
+-- also has a NAME key that gets used for debugging
 -- ################################
 local function owo_suppressor()
     return {
@@ -169,22 +187,23 @@ local function owo_suppressor()
     }
 end
 
+
+
 -- ################################
 -- Adding Attachments
 -- ################################
-local extended_weapon_customization_plugin = {
-	attachments = {
+add_attachments_to_list_of_weapons(owo_suppressor(), {"autogun_p1_m1"}, "muzzle")
 
-	}, 
-	fixes = {
-
-	},
-	kitbash = {
-		
-	}
-}
-
-mod.extended_weapon_customization_plugin = extended_weapon_customization_plugin
+attachments_table_for_ewc.attachments.autogun_p1_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+attachments_table_for_ewc.attachments.autogun_p1_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+attachments_table_for_ewc.attachments.autogun_p2_m1 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+attachments_table_for_ewc.attachments.autogun_p2_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+attachments_table_for_ewc.attachments.autogun_p2_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+attachments_table_for_ewc.attachments.autogun_p3_m1 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+attachments_table_for_ewc.attachments.autogun_p3_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+attachments_table_for_ewc.attachments.autogun_p3_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+-- **Sending it to the actual table that gets read by the base mod**
+mod.extended_weapon_customization_plugin = attachments_table_for_ewc
 
 -- ###################################################################
 -- HOOKS
@@ -208,7 +227,6 @@ function mod.on_all_mods_loaded()
 		mod:error("Extended Weapon Customization mod (the rebuild) required")
 		return
 	end
-	mod.ewc = ewc
     --  Outdated base mod
     wc = get_mod("weapon_customization")
 	if wc then
@@ -222,10 +240,8 @@ function mod.on_all_mods_loaded()
     	mod:info("Uwusa haz MT stuffs :3")
     	return 
     end
-    mod.mt = mt
 	syn = get_mod("weapon_customization_syn_edits")
     if syn then
 		mod:info("Uwusa haz Syn's Edits :3")
     end
-    mod.syn = syn
 end
