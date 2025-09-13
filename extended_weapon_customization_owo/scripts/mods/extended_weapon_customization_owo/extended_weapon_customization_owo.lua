@@ -219,6 +219,16 @@ attachments_table_for_ewc.attachments.autogun_p3_m1 = table_clone(attachments_ta
 attachments_table_for_ewc.attachments.autogun_p3_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
 attachments_table_for_ewc.attachments.autogun_p3_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
 
+-- Lasguns
+--  Infantry
+attachments_table_for_ewc.attachments.lasgun_p1_m2 = table_clone(attachments_table_for_ewc.attachments.lasgun_p1_m1)
+attachments_table_for_ewc.attachments.lasgun_p1_m3 = table_clone(attachments_table_for_ewc.attachments.lasgun_p1_m1)
+--  Helbore
+attachments_table_for_ewc.attachments.lasgun_p2_m2 = table_clone(attachments_table_for_ewc.attachments.lasgun_p2_m1)
+attachments_table_for_ewc.attachments.lasgun_p2_m3 = table_clone(attachments_table_for_ewc.attachments.lasgun_p2_m1)
+--  Recon
+attachments_table_for_ewc.attachments.lasgun_p3_m2 = table_clone(attachments_table_for_ewc.attachments.lasgun_p3_m1)
+attachments_table_for_ewc.attachments.lasgun_p3_m3 = table_clone(attachments_table_for_ewc.attachments.lasgun_p3_m1)
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
