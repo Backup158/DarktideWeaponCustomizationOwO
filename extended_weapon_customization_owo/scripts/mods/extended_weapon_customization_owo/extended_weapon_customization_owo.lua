@@ -174,7 +174,7 @@ end
 -- ################################
 local extended_weapon_customization_plugin = {
 	attachments = {
-        
+
 	}, 
 	fixes = {
 
@@ -186,6 +186,10 @@ local extended_weapon_customization_plugin = {
 
 mod.extended_weapon_customization_plugin = extended_weapon_customization_plugin
 
+-- ###################################################################
+-- HOOKS
+-- Mostly for debugging stuff
+-- ###################################################################
 function mod.on_setting_changed(setting_id)
 	-- if Discord mode changed
 	if setting_id == "discord_mode" then
@@ -205,6 +209,12 @@ function mod.on_all_mods_loaded()
 		return
 	end
 	mod.ewc = ewc
+    --  Outdated base mod
+    wc = get_mod("weapon_customization")
+	if wc then
+		mod:error("You are using the OLD version of Weapon Customization! This plugin is for the new, rebuilt version.")
+		return
+	end
 	--	Plugins
 	--		Just so I know. Compatibility is only an issue of name collisions
 	mt = get_mod("weapon_customization_mt_stuff")
