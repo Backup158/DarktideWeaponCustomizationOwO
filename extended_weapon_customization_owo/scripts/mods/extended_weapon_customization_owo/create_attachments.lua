@@ -58,7 +58,7 @@ end
 --  attachment_point: string; attachment point for previous kitbhas
 -- ######
 local function create_an_attachment(table_to_add_to, internal_name, darktide_slot_name, attachment_data, fixes_data, kitbash_data, attachment_point)
-    table_to_add_to.attachments[internal_name] = attachment_data
+    table_to_add_to.attachments[internal_name] = table_clone(attachment_data)
     if fixes_data then
         for _, fix in pairs(fixes_data) do
             table_append(table_to_add_to.fixes, fix)
@@ -71,7 +71,7 @@ local function create_an_attachment(table_to_add_to, internal_name, darktide_slo
         --kitbash_address = kitbash_address.."/"..darktide_slot_name.."/"..internal_name
         -- Add table
         table_to_add_to.kitbashs[kitbash_address] = {
-            attachments = table_clone(kitbash_data)
+            attachments = table_clone(kitbash_data),
             display_name = "loc_"..internal_name,
             description = "loc_description_"..internal_name,
             attach_node = attachment_point,
@@ -87,6 +87,7 @@ end
 function mod.owo_suppressor()    
     local table_to_return = init_table_to_return("owo_suppressor")
 
+    --[[
     -- Double Cans
     local suppressor_generic_scale = vector3_box(1.2, 1.8, 1.2)
     local suppressor_generic_scale_small = vector3_box(0.85, 1.8, 0.85)
@@ -326,6 +327,7 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
+        ]]
 
     return table_to_return
 
