@@ -51,13 +51,12 @@ end
 -- PARAM:
 --  table_to_add_to: table; the one to add to the attachments table in the base mod
 --  internal_name: string; attachment name used internally
---  darktide_slot_name: string; slot it goes into
 --  attachment_data: table; contains data for an attachment
 --  fixes_data: table; contains data for any fixes
 --  kitbash_data: table; contains data for a kitbash
 --  attachment_point: string; attachment point for previous kitbhas
 -- ######
-local function create_an_attachment(table_to_add_to, internal_name, darktide_slot_name, attachment_data, fixes_data, kitbash_data, attachment_point)
+local function create_an_attachment(table_to_add_to, internal_name, attachment_data, fixes_data, kitbash_data, attachment_point)
     table_to_add_to.attachments[internal_name] = table_clone(attachment_data)
     if fixes_data then
         for _, fix in pairs(fixes_data) do
