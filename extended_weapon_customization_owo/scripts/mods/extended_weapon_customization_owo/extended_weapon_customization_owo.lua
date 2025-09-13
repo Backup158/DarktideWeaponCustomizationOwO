@@ -48,7 +48,7 @@ local attachments_table_for_ewc = {
 	fixes = {
 
 	},
-	kitbash = {
+	kitbashs = {
 		
 	}
 }
@@ -108,8 +108,8 @@ end
 -- ######
 local function add_kitbashes_to_weapon(kitbash_tables, weapon_id) 
 	for kitbash_key, kitbash_table in pairs(kitbash_tables) do
-        if not attachments_table_for_ewc.kitbash[kitbash_key] then
-		    attachments_table_for_ewc.kitbash[kitbash_key] = kitbash_table
+        if not attachments_table_for_ewc.kitbashs[kitbash_key] then
+		    attachments_table_for_ewc.kitbashs[kitbash_key] = kitbash_table
         end
     end
 end
@@ -125,7 +125,7 @@ local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     end
     add_attachment_to_weapon(attachment_blob.attachments, weapon_id, slot)
     add_fixes_to_weapon(attachment_blob.fixes, weapon_id)
-    add_kitbashes_to_weapon(attachment_blob.kitbash, weapon_id)
+    add_kitbashes_to_weapon(attachment_blob.kitbashs, weapon_id)
 end
 
 -- ######
@@ -199,7 +199,7 @@ local function owo_suppressor()
         fixes = {
 
         },
-        kitbash = {
+        kitbashs = {
             [_item_ranged.."/muzzles/owo_suppressor_01"] = {
                 attachments = {
                     base = {
