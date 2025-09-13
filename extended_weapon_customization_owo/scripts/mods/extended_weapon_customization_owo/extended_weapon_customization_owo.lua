@@ -155,7 +155,8 @@ end
 -- Copy Attachments to Siblings
 -- ######
 local function copy_attachments_to_siblings(first_mark_id)
-    for i in range(2, 3) do
+    -- from 2 to 3
+    for i = 2, 3 do
         local weapon_id = string.gsub(first_mark_id, "1$", tostring(i))
         if string_is_key_in_table(weapon_id, WeaponTemplates) then
             if debug_mode then mod:info("Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
@@ -263,30 +264,6 @@ for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
         copy_attachments_to_siblings(weapon_id)
     end
 end
--- Autoguns
--- Add to infantry then everyone else copies it
---  Infantry
-attachments_table_for_ewc.attachments.autogun_p1_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
-attachments_table_for_ewc.attachments.autogun_p1_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
---  Braced
-attachments_table_for_ewc.attachments.autogun_p2_m1 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
-attachments_table_for_ewc.attachments.autogun_p2_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
-attachments_table_for_ewc.attachments.autogun_p2_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
---  Vigilant
-attachments_table_for_ewc.attachments.autogun_p3_m1 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
-attachments_table_for_ewc.attachments.autogun_p3_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
-attachments_table_for_ewc.attachments.autogun_p3_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
-
--- Lasguns
---  Infantry
-attachments_table_for_ewc.attachments.lasgun_p1_m2 = table_clone(attachments_table_for_ewc.attachments.lasgun_p1_m1)
-attachments_table_for_ewc.attachments.lasgun_p1_m3 = table_clone(attachments_table_for_ewc.attachments.lasgun_p1_m1)
---  Helbore
-attachments_table_for_ewc.attachments.lasgun_p2_m2 = table_clone(attachments_table_for_ewc.attachments.lasgun_p2_m1)
-attachments_table_for_ewc.attachments.lasgun_p2_m3 = table_clone(attachments_table_for_ewc.attachments.lasgun_p2_m1)
---  Recon
-attachments_table_for_ewc.attachments.lasgun_p3_m2 = table_clone(attachments_table_for_ewc.attachments.lasgun_p3_m1)
-attachments_table_for_ewc.attachments.lasgun_p3_m3 = table_clone(attachments_table_for_ewc.attachments.lasgun_p3_m1)
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
