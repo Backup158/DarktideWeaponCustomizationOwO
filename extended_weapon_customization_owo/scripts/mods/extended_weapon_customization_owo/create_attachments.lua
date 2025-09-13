@@ -8,6 +8,9 @@ local vector3_box = Vector3Box
 local vector3_one = vector3.one
 local vector3_zero = vector3.zero
 
+local table = table
+local table_append = table.append
+
 -- ################################
 -- Game Content Addresses
 -- ################################
@@ -16,6 +19,39 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
+
+-- ################################
+-- Helper Functions
+-- ################################
+-- ######
+-- Initialize Table to Return
+-- PARAM:
+--  internal_name: string; name for what attachments these are; "owo_suppressor"
+-- ######
+local function init_table_to_return(internal_name)
+    return {
+        name = internal_name or "owo_UNKNOWN",
+        attachments = {
+
+        },
+        fixes = {
+
+        },
+        kitbashs = {
+
+        },
+    }
+end
+
+-- ######
+-- Create Attachment
+-- PARAM:
+--  table_to_add_to: table; the one to add to the attachments table in the base mod
+--  kitbash_data: table; contains data for a kitbash
+--  attachment_name: string; internal name
+--  darktide_slot_name: string; slot it goes into
+--  is_ranged: bool; if it's for ranged weapons
+-- ######
 
 -- ################################
 -- Defining Attachment Functions
@@ -42,8 +78,13 @@ function mod.owo_suppressor()
     local suppressor_metal_helper2_rot = vector3_box(0, 0, 0)
     local suppressor_metal_helper2_scale = vector3_box(1.2, 1.8, 1.2)
     local suppressor_metal_helper2_scale_small = vector3_box(0.655, 1.8, 0.655)
+    
+    local table_to_return = init_table_to_return("owo_suppressor")
 
-    return {
+
+    return table_to_return
+    
+    {
         name = "owo_suppressor",
         attachments = {
             owo_suppressor_01 = {
