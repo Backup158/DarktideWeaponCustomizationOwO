@@ -139,17 +139,27 @@ local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list,
 end
 
 -- ######
+-- Copy Attachments from A to B
+-- ######
+local function copy_attachments_from_A_to_B(weapon_id_A, weapon_id_B)
+    -- If source does not exist
+    if not attachments_table_for_ewc.attachments[weapon_id_A] then
+        mod:error("No attachments found for "..weapon_id_A)
+        return
+    end
+    attachments_table_for_ewc.attachments[weapon_id_B] = table_clone(attachments_table_for_ewc.attachments[weapon_id_A])
+end
+
+-- ######
 -- Copy Attachments from First Mark
 -- ######
 local function copy_attachments_from_first_mark(weapon_id)
     -- Replaces the final character (if it's a digit) with 1
     --  autogun_p1_m2 --> autogun_p1_m1
-    local first_mark = string.gsub(weapon_id, "%d$", "1")
-    if not attachments_table_for_ewc.attachments[first_mark] then
-        mod:error("No attachments found for "..first_mark)
-        return
-    end
-    attachments_table_for_ewc.attachments[weapon_id] = table_clone(attachments_table_for_ewc.attachments[first_mark])
+    local first_mark_id = string.gsub(weapon_id, "%d$", "1")
+
+    -- error checkign done in copy attachment
+    copy_attachments_from_A_to_B(first_mark_id, weapon_id)
 end
 
 -- ######
@@ -161,7 +171,7 @@ local function copy_attachments_to_siblings(first_mark_id)
         local weapon_id = string.gsub(first_mark_id, "1$", tostring(i))
         if string_is_key_in_table(weapon_id, WeaponTemplates) then
             if debug_mode then mod:info("Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
-            attachments_table_for_ewc.attachments[weapon_id] = table_clone(attachments_table_for_ewc.attachments[first_mark_id])
+            copy_attachments_from_A_to_B(first_mark_id, weapon_id)
         else
             if debug_mode then mod:info("This is not a real weapon: "..weapon_id) end
             return
@@ -186,6 +196,27 @@ end
 -- also has a NAME key that gets used for debugging
 -- ################################
 local function owo_suppressor()
+    local suppressor_generic_scale = vector3_box(1.2, 1.8, 1.2)
+    local suppressor_generic_scale_small = vector3_box(0.85, 1.8, 0.85)
+    local suppressor_generic_helper1_rotation = vector3_box(0, 22, 0)
+    local suppressor_generic_helper2_rotation = vector3_box(0, 17, 0)
+    local suppressor_pbs1_helper1_pos = vector3_box(0, 0.055, 0)
+    local suppressor_pbs1_helper1_rot = vector3_box(-90, 0, 0)
+    local suppressor_pbs1_helper1_scale = vector3_box(1.3, 1.3, 1.11)
+    local suppressor_pbs1_helper1_scale_small = vector3_box(0.95, 0.95, 1.11)
+    local suppressor_pbs1_helper2_pos = vector3_box(0, 0.265, 0)
+    local suppressor_pbs1_helper2_rot = vector3_box(0, 0, 180)
+    local suppressor_pbs1_helper2_scale = vector3_box(0.36, 0.4, 0.36)
+    local suppressor_pbs1_helper2_scale_small = vector3_box(0.255, 0.4, 0.24)
+    local suppressor_metal_helper1_pos = vector3_box(0, 0.13, 0)
+    local suppressor_metal_helper1_rot = vector3_box(-90, 0, 0)
+    local suppressor_metal_helper1_scale = vector3_box(1.80, 1.80, 1.5)
+    local suppressor_metal_helper1_scale_small = vector3_box(1.1, 1.1, 1.5)
+    local suppressor_metal_helper2_pos = vector3_box(0, 0.086, 0)
+    local suppressor_metal_helper2_rot = vector3_box(0, 0, 0)
+    local suppressor_metal_helper2_scale = vector3_box(1.2, 1.8, 1.2)
+    local suppressor_metal_helper2_scale_small = vector3_box(0.655, 1.8, 0.655)
+
     return {
         name = "owo_suppressor",
         attachments = {
@@ -200,6 +231,21 @@ local function owo_suppressor()
                 icon_render_unit_rotation_offset = {90, 0, 30},
                 icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
             },
+            owo_suppressor_03 = {
+                replacement_path = _item_ranged.."/muzzles/owo_suppressor_03",
+                icon_render_unit_rotation_offset = {90, 0, 30},
+                icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            },
+            owo_suppressor_04 = {
+                replacement_path = _item_ranged.."/muzzles/owo_suppressor_04",
+                icon_render_unit_rotation_offset = {90, 0, 30},
+                icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            },
+            owo_suppressor_05 = {
+                replacement_path = _item_ranged.."/muzzles/owo_suppressor_05",
+                icon_render_unit_rotation_offset = {90, 0, 30},
+                icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            },
         },
         fixes = {
 
@@ -209,7 +255,7 @@ local function owo_suppressor()
                 attachments = {
                     owo_suppressor_01 = {
                         --item = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
-                        item = _item_empty_trinket,
+                        item = _item_empty_trinket, -- invisible base
                         fix = {
                             disable_in_ui = true,
                             offset = {
@@ -227,7 +273,7 @@ local function owo_suppressor()
                                         node = 1,
                                         position = vector3_box(0, 0.0, 0.0),
                                         rotation = vector3_box(0, 0, 0),
-                                        scale = vector3_box(1.2, 1.8, 1.2),
+                                        scale = suppressor_generic_scale,
                                     },
                                 },
                             },
@@ -237,8 +283,8 @@ local function owo_suppressor()
                                     offset = {
                                         node = 1,
                                         position = vector3_box(0, 0.0, 0.0),
-                                        rotation = vector3_box(0, 22, 0),
-                                        scale = vector3_box(1.2, 1.8, 1.2),
+                                        rotation = suppressor_generic_helper1_rotation,
+                                        scale = suppressor_generic_scale,
                                     },
                                 },
                             },
@@ -249,6 +295,183 @@ local function owo_suppressor()
                 description = "loc_description_owo_suppressor_01",
                 attach_node = "ap_muzzle_01",
                 dev_name = "owo_suppressor_01",
+            },
+            [_item_ranged.."/muzzles/owo_suppressor_02"] = {
+                attachments = {
+                    owo_suppressor_02 = {
+                        item = _item_empty_trinket, -- invisible base
+                        fix = {
+                            disable_in_ui = true,
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0, 0, 0.0),
+                                rotation = vector3_box(0, 0, 0),
+                                scale = vector3_box(1, 1, 1),
+                            },
+                        },
+                        children = {
+                            muzzle_ac1 = {
+                                item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = vector3_box(0, 0.0, 0.0),
+                                        rotation = vector3_box(0, 0, 0),
+                                        scale = suppressor_generic_scale,
+                                    },
+                                },
+                            },
+                            muzzle_ac2 = {
+                                item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = vector3_box(0, 0.0, 0.0),
+                                        rotation = suppressor_generic_helper2_rotation,
+                                        scale = suppressor_generic_scale,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                display_name = "loc_owo_suppressor_02",
+                description = "loc_description_owo_suppressor_02",
+                attach_node = "ap_muzzle_01",
+                dev_name = "owo_suppressor_02",
+            },
+            -- PBS-1
+            [_item_ranged.."/muzzles/owo_suppressor_03"] = {
+                attachments = {
+                    owo_suppressor_03 = {
+                        item = _item_empty_trinket, -- invisible base
+                        fix = {
+                            disable_in_ui = true,
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0, 0, 0.0),
+                                rotation = vector3_box(0, 0, 0),
+                                scale = vector3_box(1, 1, 1),
+                            },
+                        },
+                        children = {
+                            muzzle_ac1 = {
+                                item = _item_melee.."/pommels/axe_pommel_03",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = suppressor_pbs1_helper1_pos,
+                                        rotation = suppressor_pbs1_helper1_rot,
+                                        scale = suppressor_pbs1_helper1_scale,
+                                    },
+                                },
+                            },
+                            muzzle_ac2 = {
+                                item = _item_ranged.."/barrels/rippergun_rifle_barrel_03",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = suppressor_pbs1_helper2_pos,
+                                        rotation = suppressor_pbs1_helper2_rot,
+                                        scale = suppressor_pbs1_helper2_scale,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                display_name = "loc_owo_suppressor_03",
+                description = "loc_description_owo_suppressor_03",
+                attach_node = "ap_muzzle_01",
+                dev_name = "owo_suppressor_03",
+            },
+            [_item_ranged.."/muzzles/owo_suppressor_04"] = {
+                attachments = {
+                    owo_suppressor_04 = {
+                        item = _item_empty_trinket, -- invisible base
+                        fix = {
+                            disable_in_ui = true,
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0, 0, 0.0),
+                                rotation = vector3_box(0, 0, 0),
+                                scale = vector3_box(1, 1, 1),
+                            },
+                        },
+                        children = {
+                            muzzle_ac1 = {
+                                item = _item_melee.."/grips/hatchet_grip_03",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = suppressor_metal_helper1_pos,
+                                        rotation = suppressor_metal_helper1_rot,
+                                        scale = suppressor_metal_helper1_scale,
+                                    },
+                                },
+                            },
+                            muzzle_ac2 = {
+                                item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = suppressor_metal_helper2_pos,
+                                        rotation = suppressor_metal_helper2_rot,
+                                        scale = suppressor_metal_helper2_scale,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                display_name = "loc_owo_suppressor_04",
+                description = "loc_description_owo_suppressor_04",
+                attach_node = "ap_muzzle_01",
+                dev_name = "owo_suppressor_04",
+            },
+            [_item_ranged.."/muzzles/owo_suppressor_05"] = {
+                attachments = {
+                    owo_suppressor_05 = {
+                        item = _item_empty_trinket, -- invisible base
+                        fix = {
+                            disable_in_ui = true,
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0, 0, 0.0),
+                                rotation = vector3_box(0, 0, 0),
+                                scale = vector3_box(1, 1, 1),
+                            },
+                        },
+                        children = {
+                            muzzle_ac1 = {
+                                item = _item_melee.."/grips/hatchet_grip_03",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = suppressor_metal_helper1_pos,
+                                        rotation = suppressor_metal_helper1_rot,
+                                        scale = suppressor_metal_helper1_scale,
+                                    },
+                                },
+                            },
+                            muzzle_ac2 = {
+                                item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = suppressor_metal_helper2_pos,
+                                        rotation = suppressor_metal_helper2_rot,
+                                        scale = suppressor_metal_helper2_scale,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+                display_name = "loc_owo_suppressor_05",
+                description = "loc_description_owo_suppressor_05",
+                attach_node = "ap_muzzle_01",
+                dev_name = "owo_suppressor_05",
             },
         }
     }
@@ -262,6 +485,9 @@ add_attachments_to_list_of_weapons(owo_suppressor(), {"autogun_p1_m1", "lasgun_p
 -- ################################
 -- Copying to Different Marks
 -- ################################
+copy_attachments_from_A_to_B("autogun_p1_m1", "autogun_p2_m1")
+copy_attachments_from_A_to_B("autogun_p1_m1", "autogun_p3_m1")
+
 for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
     -- If first mark of pattern, copy to the siblings
     --  Check last two characters of the name
