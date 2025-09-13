@@ -2,7 +2,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 
 local localizations = {
 	mod_name = {
-		en = "Weapon Customization - OwO (Ostracized without Objection)",
+		en = "EWC - OwO (Ostracized without Objection)",
 		["zh-cn"] = "武器自定义扩展 - OwO（Ostracized without Objection）",
 		ru = "Настройка оружия - OwO (Ой мне так нравится мм долбиться в задницу)",
 		-- ru = "Настройка оружия - пизда",
@@ -20,15 +20,13 @@ local localizations = {
 	},
 	owo_mode = {
 		en = "OwO Mode",
-		--en = "OwO",
 	},
 	owo_mode_description = {
 		en = "UwUified descriptions on the mod options page >:3\nRequires a game restart/reload to apply.",
-		--en = ">:3",
 		ru = "гей порно с обезьянами и с энди",
 	},
 	discord_mode = {
-		en = "Compatibility for EWC Beta Release",
+		en = "Discord Compatibility for EWC Beta Release",
 		ru = "Виртуальная служба знакомств",
 	},
 	discord_mode_description = {
@@ -49,12 +47,12 @@ local localizations = {
 }
 
 if mod:get("owo_mode") then
-	localizations["mod_name"]["en"] = "Weapon Customization - OwO (O-ostwacized *runs away* without Objection >w<)"
-	localizations["mod_description"]["en"] = "Weapon Customization plugin adding vawious pawts, typicawwy inspiwed >w< by *whispers to self* histowicaw and tacticoow weapons."
+	localizations["mod_name"]["en"] = "EWC - OwO (O-ostwacized *runs away* without Objection >w<)"
+	localizations["mod_description"]["en"] = "E-e-extended Weapon ^w^ Customization plugin ;;w;; adding vawious pawts, typicawwy inspiwed >w< by *whispers to self* histowicaw and tacticoow weapons."
 	localizations["mod_description"]["ru"] = "У меня в арсенале всего одна маленькая анальная пробка, так что мне явно нужно еще много времени, чтобы научиться комфортно принимать член"
 	localizations["debug_mode"]["en"] = "Debug M-m-mode *walks away*"
 	localizations["debug_mode_description"]["en"] = "V-Vewbose pwinting"
-	localizations["owo_mode"]["en"] = "OwO Mode"
+	localizations["owo_mode"]["en"] = "Notices Buldge OWO what's this?"
 	localizations["owo_mode_description"]["en"] = "UwUified ;;w;; descwiptions on the x3 mod options *whispers to self* page *twerks* >:3 Wequiwes a game westawt/wewoad (・`ω´・) to *looks at you* apply."
 	localizations["discord_mode_description"]["ru"] = "Меня заставили стать котом. Помогите Как выйти из этого порочного круга."
 	localizations["discord_mode_message"]["en"] = "Y-y-you *cries* have enyabwed Discord compatibiwity mode. Make suwe you have the x3 watest beta >w< weweases *huggles tightly* fow the xd base EWC mod (and Syn's Edits if you use it)?!?! These awe found in the x3 Darktide Modders Discord [https://discord.gg/rKYWtaDx4D], ;;w;; in the x3 pinnyed messages of the x3 #weapon-customization-mod channyew and the x3 Syndonyai's Edits thwead ÚwÚ in #cweation-showcase, wespectivewy. remembew *whispers to self* to *looks at you* westawt/wewoad (・`ω´・) the x3 game."
