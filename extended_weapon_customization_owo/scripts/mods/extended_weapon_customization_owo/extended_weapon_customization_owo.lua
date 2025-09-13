@@ -202,7 +202,7 @@ local function owo_suppressor()
         kitbashs = {
             [_item_ranged.."/muzzles/owo_suppressor_01"] = {
                 attachments = {
-                    base = {
+                    owo_suppressor_01 = {
                         --item = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
                         item = _item_empty_trinket,
                         fix = {
