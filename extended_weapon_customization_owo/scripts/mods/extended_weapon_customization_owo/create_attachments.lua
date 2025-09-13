@@ -65,7 +65,7 @@ local function create_an_attachment(table_to_add_to, internal_name, attachment_d
     end
     if kitbash_data then
         table_to_add_to.kitbashs[attachment_data.replacement_path] = {
-            attachments = table_clone(kitbash_data),
+            attachments = { [internal_name] = table_clone(kitbash_data) },
             display_name = "loc_"..internal_name,
             description = "loc_description_"..internal_name,
             attach_node = attachment_point,
