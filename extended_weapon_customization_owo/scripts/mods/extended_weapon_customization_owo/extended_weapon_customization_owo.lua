@@ -11,6 +11,7 @@ mod:info('v' .. mod.version .. ' loaded uwu nya :3')
 -- Only needs to be checked at launch because the stuff it affects only runs at startup
 mod.discord_mode = mod:get("discord_mode")
 local debug_mode = mod:get("debug_mode")
+if debug_mode then mod:info('Debug mode active. Verbose logging in effect.') end
 
 -- ################################
 -- Local References for Performance
@@ -257,9 +258,10 @@ add_attachments_to_list_of_weapons(owo_suppressor(), {"autogun_p1_m1", "lasgun_p
 -- Copying to Different Marks
 -- ################################
 for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
-    -- If first mark of pattern, copy to the children
+    -- If first mark of pattern, copy to the siblings
     --  Check last two characters of the name
     --  if mark 1, copy to mk 2 and 3 if they exist (handled in that function)
+    -- Since we're adding the siblings to the 
     if (string.sub(weapon_id, -2) == "m1") then
         copy_attachments_to_siblings(weapon_id)
     end
@@ -281,6 +283,16 @@ function mod.on_setting_changed(setting_id)
 		if mod:get(setting_id) == true then
 			mod:echo(mod:localize("discord_mode_message"))
 		end
+    --[[
+    -- debug mode only matters at startup so idc if you change it midgame
+    elseif setting_id == "debug_mode" then
+        debug_mode = mod:get(setting_id)
+        if debug_mode then
+            mod:info('Debug mode active. Verbose logging in effect.')
+        else
+            mod:info('Debug mode disabled.')
+        end
+    ]]
 	end
 end
 
