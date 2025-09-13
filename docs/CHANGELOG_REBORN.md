@@ -9,6 +9,11 @@ Laying the framework for me to readd parts
 - functions to copy over attachments to another weapon
     - used to propagate changes from mark to mark
     - and from family to family (ex ilas --> recon)
+- defining the attachment functions globally in another file
+    - worse performance but cleaner code
+    - at startup and it's only a few function calls
+    - i'm sure the auto mark propagation is worse than this
+    - esp the table search lol
 
 Added
 - Suppressors
