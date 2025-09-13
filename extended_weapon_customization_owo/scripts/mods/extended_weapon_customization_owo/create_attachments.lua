@@ -87,7 +87,6 @@ end
 function mod.owo_suppressor()    
     local table_to_return = init_table_to_return("owo_suppressor")
 
-    --[[
     -- Double Cans
     local suppressor_generic_scale = vector3_box(1.2, 1.8, 1.2)
     local suppressor_generic_scale_small = vector3_box(0.85, 1.8, 0.85)
@@ -327,7 +326,6 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-        ]]
 
     return table_to_return
 
