@@ -8,6 +8,8 @@ local vector3_box = Vector3Box
 local vector3_one = vector3.one
 local vector3_zero = vector3.zero
 
+local pairs = pairs
+--local string = string
 local table = table
 local table_append = table.append
 
@@ -47,11 +49,32 @@ end
 -- Create Attachment
 -- PARAM:
 --  table_to_add_to: table; the one to add to the attachments table in the base mod
---  kitbash_data: table; contains data for a kitbash
---  attachment_name: string; internal name
+--  internal_name: string; attachment name used internally
 --  darktide_slot_name: string; slot it goes into
---  is_ranged: bool; if it's for ranged weapons
+--  attachment_data: table; contains data for an attachment
+--  fixes_data: table; contains data for any fixes
+--  kitbash_data: table; contains data for a kitbash
 -- ######
+local function create_attachment(table_to_add_to, internal_name, darktide_slot_name, attachment_data, fixes_data, kitbash_data)
+    table_to_add_to.attachments[internal_name] = attachment_data
+    if fixes_data then
+        for _, fix in pairs(fixes_data) do
+            table_append(table_to_add_to.fixes, fix)
+        end
+    end
+    if kitbash_data then
+        -- Generate key name
+        local kitbash_address = attachment_data.replacement_path
+        --if is_ranged then kitbash_address = _item_ranged else kitbash_address = _item_melee end
+        --kitbash_address = kitbash_address.."/"..darktide_slot_name.."/"..internal_name
+        -- Creates names to use
+        kitbash_data.display_name = "loc_"..internal_name,
+        kitbash_data.description = "loc_description_"..internal_name,
+        kitbash_data.dev_name = internal_name,
+        -- Add table
+        table_to_add_to.kitbashs[kitbash_address] = kitbash_data
+    end
+end
 
 -- ################################
 -- Defining Attachment Functions
