@@ -151,8 +151,8 @@ local function owo_suppressor()
             [_item_ranged.."/muzzles/owo_suppressor_01"] = {
                 attachments = {
                     base = {
-                        item = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
-                        --item = _item_empty_trinket,
+                        --item = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
+                        item = _item_empty_trinket,
                         fix = {
                             disable_in_ui = true,
                             offset = {
@@ -163,7 +163,7 @@ local function owo_suppressor()
                             },
                         },
                         children = {
-                            body_1 = {
+                            muzzle_ac1 = {
                                 item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
                                 fix = {
                                     offset = {
@@ -174,7 +174,7 @@ local function owo_suppressor()
                                     },
                                 },
                             },
-                            body_2 = {
+                            muzzle_ac2 = {
                                 item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
                                 fix = {
                                     offset = {
