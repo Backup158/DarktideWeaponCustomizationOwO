@@ -130,8 +130,8 @@ local function owo_suppressor()
             owo_suppressor_01 = {
                 replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
                 --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
-                icon_render_unit_rotation_offset = {90, 0, 45},
-                icon_render_camera_position_offset = {-0.2, -2.75, 0.25},
+                icon_render_unit_rotation_offset = {90, 0, 30},
+                icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
             },
         },
         fixes = {
