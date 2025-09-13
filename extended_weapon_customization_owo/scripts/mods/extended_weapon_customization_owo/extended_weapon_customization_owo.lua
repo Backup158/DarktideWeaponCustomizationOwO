@@ -19,8 +19,8 @@ if debug_mode then mod:info('Debug mode active. Verbose logging in effect.') end
 local pairs = pairs
 local string = string
 local table = table
+local table_append = table.append
 local table_clone = table.clone
-local table_clone_safe = table.clone_safe
 
 -- ################################
 -- Requires
@@ -98,7 +98,7 @@ end
 -- ######
 local function add_fixes_to_weapon(fixes_tables, weapon_id) 
 	for _, fix_table in pairs(fixes_tables) do
-		table.append(attachments_table_for_ewc.fixes[weapon_id], fix_table)
+		table_append(attachments_table_for_ewc.fixes[weapon_id], fix_table)
     end
 end
 
