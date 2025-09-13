@@ -200,19 +200,25 @@ end
 -- ################################
 -- Adding Attachments
 -- ################################
-add_attachments_to_list_of_weapons(owo_suppressor(), {"autogun_p1_m1"}, "muzzle")
+add_attachments_to_list_of_weapons(owo_suppressor(), {"autogun_p1_m1", "lasgun_p1_m1"}, "muzzle")
 
 -- ################################
 -- Copying to Different Marks
 -- ################################
+-- Autoguns
+-- Add to infantry then everyone else copies it
+--  Infantry
 attachments_table_for_ewc.attachments.autogun_p1_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
 attachments_table_for_ewc.attachments.autogun_p1_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+--  Braced
 attachments_table_for_ewc.attachments.autogun_p2_m1 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
 attachments_table_for_ewc.attachments.autogun_p2_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
 attachments_table_for_ewc.attachments.autogun_p2_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+--  Vigilant
 attachments_table_for_ewc.attachments.autogun_p3_m1 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
 attachments_table_for_ewc.attachments.autogun_p3_m2 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
 attachments_table_for_ewc.attachments.autogun_p3_m3 = table_clone(attachments_table_for_ewc.attachments.autogun_p1_m1)
+
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
