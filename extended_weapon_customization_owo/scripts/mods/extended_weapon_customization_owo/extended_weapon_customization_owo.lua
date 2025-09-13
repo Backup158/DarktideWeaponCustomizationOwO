@@ -195,6 +195,11 @@ local function owo_suppressor()
                 icon_render_unit_rotation_offset = {90, 0, 30},
                 icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
             },
+            owo_suppressor_02 = {
+                replacement_path = _item_ranged.."/muzzles/owo_suppressor_02",
+                icon_render_unit_rotation_offset = {90, 0, 30},
+                icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            },
         },
         fixes = {
 
