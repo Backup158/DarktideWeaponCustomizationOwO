@@ -11,7 +11,9 @@ mod:info('v' .. mod.version .. ' loaded uwu nya :3')
 -- Only needs to be checked at launch because the stuff it affects only runs at startup
 mod.discord_mode = mod:get("discord_mode")
 
--- Locals from Weapon Customization plugin template
+-- ################################
+-- Local References for Performance
+-- ################################
 local pairs = pairs
 local table = table
 local vector3 = Vector3
@@ -21,6 +23,9 @@ local vector3_zero = vector3.zero
 local table_clone = table.clone
 local table_clone_safe = table.clone_safe
 
+-- ################################
+-- Game Content Address Shortcuts
+-- ################################
 local _item = "content/items/weapons/player"
 local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
@@ -30,7 +35,6 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- Table to Hold all Attachments
 -- ################################
--- local extended_weapon_customization_plugin = {
 local attachments_table_for_ewc = {
 	attachments = {
 
@@ -46,13 +50,11 @@ local attachments_table_for_ewc = {
 -- ###################################################################
 -- HELPER FUNCTIONS
 -- ###################################################################
+-- ################################
+-- Adding Directly to the Attachments Table
+-- ################################
 -- ######
--- 
--- *Directly* accesses the table
---		weapon {
---			slot1 = { }
---
---		}
+-- Add Attachment to Weapon
 -- ######
 local function add_attachment_to_weapon(attachment_tables, weapon_id, slot) 
 	for attachment_id, attachment_models in pairs(attachment_tables) do
@@ -72,7 +74,7 @@ local function add_attachment_to_weapon(attachment_tables, weapon_id, slot)
 end
 
 -- ######
--- 
+-- Add Fixes to Weapon
 -- ######
 local function add_fixes_to_weapon(fixes_tables, weapon_id) 
 	for _, fix_table in pairs(fixes_tables) do
@@ -81,7 +83,7 @@ local function add_fixes_to_weapon(fixes_tables, weapon_id)
 end
 
 -- ######
--- 
+-- Add Kitbashes to Weapon
 -- ######
 local function add_kitbashes_to_weapon(kitbash_tables, weapon_id) 
 	for kitbash_key, kitbash_table in pairs(kitbash_tables) do
@@ -91,6 +93,10 @@ local function add_kitbashes_to_weapon(kitbash_tables, weapon_id)
     end
 end
 
+-- ######
+-- Add an Attachment with Fixes to Weapon
+-- Calls the previous three functions
+-- ######
 local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     if not slot then
         mod:error("Weapon slot missing! "..weapon_id..": "..attachment_blob[name])
@@ -101,6 +107,10 @@ local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     add_kitbashes_to_weapon(attachment_blob.kitbash, weapon_id)
 end
 
+-- ######
+-- Add an Attachment with Fixes to Multiple Weapons
+-- Calls the previous function for all given weapons
+-- ######
 local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
     for _, weapon_id in ipairs(weapons_list) do
         add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
