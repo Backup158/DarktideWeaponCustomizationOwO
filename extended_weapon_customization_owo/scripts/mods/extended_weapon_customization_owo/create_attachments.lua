@@ -64,12 +64,7 @@ local function create_an_attachment(table_to_add_to, internal_name, attachment_d
         end
     end
     if kitbash_data then
-        -- Generate key name
-        local kitbash_address = attachment_data.replacement_path
-        --if is_ranged then kitbash_address = _item_ranged else kitbash_address = _item_melee end
-        --kitbash_address = kitbash_address.."/"..darktide_slot_name.."/"..internal_name
-        -- Add table
-        table_to_add_to.kitbashs[kitbash_address] = {
+        table_to_add_to.kitbashs[attachment_data.replacement_path] = {
             attachments = table_clone(kitbash_data),
             display_name = "loc_"..internal_name,
             description = "loc_description_"..internal_name,
