@@ -158,9 +158,10 @@ local function copy_attachments_to_siblings(first_mark_id)
     for i in range(2, 3) do
         local weapon_id = string.gsub(first_mark_id, "1$", tostring(i))
         if string_is_key_in_table(weapon_id, WeaponTemplates) then
+            if debug_mode then mod:info("Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
             attachments_table_for_ewc.attachments[weapon_id] = table_clone(attachments_table_for_ewc.attachments[first_mark_id])
         else
-            
+            if debug_mode then mod:info("This is not a real weapon: "..weapon_id) end
             return
         end
     end
@@ -256,7 +257,10 @@ add_attachments_to_list_of_weapons(owo_suppressor(), {"autogun_p1_m1", "lasgun_p
 -- ################################
 for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
     -- If first mark of pattern, copy to the children
+    --  Check last two characters of the name
+    --  if mark 1, copy to mk 2 and 3 if they exist (handled in that function)
     if (string.sub(weapon_id, -2) == "m1") then
+        copy_attachments_to_siblings(weapon_id)
     end
 end
 -- Autoguns
