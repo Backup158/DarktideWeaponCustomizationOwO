@@ -174,11 +174,7 @@ end
 -- ################################
 local extended_weapon_customization_plugin = {
 	attachments = {
-		autogun_p1_m1 = {
-			muzzle = {
-
-			},
-		},
+        
 	}, 
 	fixes = {
 
