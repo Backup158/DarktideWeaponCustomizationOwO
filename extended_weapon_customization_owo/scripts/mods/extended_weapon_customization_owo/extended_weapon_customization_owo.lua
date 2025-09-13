@@ -10,11 +10,13 @@ mod:info('v' .. mod.version .. ' loaded uwu nya :3')
 -- Discord mode
 -- Only needs to be checked at launch because the stuff it affects only runs at startup
 mod.discord_mode = mod:get("discord_mode")
+local debug_mode = mod:get("debug_mode")
 
 -- ################################
 -- Local References for Performance
 -- ################################
 local pairs = pairs
+local string = string
 local table = table
 local vector3 = Vector3
 local vector3_box = Vector3Box
@@ -26,6 +28,9 @@ local table_clone_safe = table.clone_safe
 -- ################################
 -- Game Content Address Shortcuts
 -- ################################
+-- List of weapons from game code
+local WeaponTemplates = require("scripts/settings/equipment/weapon_templates/weapon_templates")
+
 local _item = "content/items/weapons/player"
 local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
@@ -50,6 +55,21 @@ local attachments_table_for_ewc = {
 -- ###################################################################
 -- HELPER FUNCTIONS
 -- ###################################################################
+-- ################################
+-- Other Helpers
+-- ################################
+-- ######
+-- String is key in table?
+-- ######
+local function string_is_key_in_table(string_to_find, table_to_search)
+    for key, _ in pairs(table_to_search) do
+        if string_to_find == key then
+            return true
+        end
+    end
+    return false
+end
+
 -- ################################
 -- Adding Directly to the Attachments Table
 -- ################################
@@ -114,6 +134,35 @@ end
 local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
     for _, weapon_id in ipairs(weapons_list) do
         add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
+    end
+end
+
+-- ######
+-- Copy Attachments from First Mark
+-- ######
+local function copy_attachments_from_first_mark(weapon_id)
+    -- Replaces the final character (if it's a digit) with 1
+    --  autogun_p1_m2 --> autogun_p1_m1
+    local first_mark = string.gsub(weapon_id, "%d$", "1")
+    if not attachments_table_for_ewc.attachments[first_mark] then
+        mod:error("No attachments found for "..first_mark)
+        return
+    end
+    attachments_table_for_ewc.attachments[weapon_id] = table_clone(attachments_table_for_ewc.attachments[first_mark])
+end
+
+-- ######
+-- Copy Attachments to Siblings
+-- ######
+local function copy_attachments_to_siblings(first_mark_id)
+    for i in range(2, 3) do
+        local weapon_id = string.gsub(first_mark_id, "1$", tostring(i))
+        if string_is_key_in_table(weapon_id, WeaponTemplates) then
+            attachments_table_for_ewc.attachments[weapon_id] = table_clone(attachments_table_for_ewc.attachments[first_mark_id])
+        else
+            
+            return
+        end
     end
 end
 
@@ -205,6 +254,11 @@ add_attachments_to_list_of_weapons(owo_suppressor(), {"autogun_p1_m1", "lasgun_p
 -- ################################
 -- Copying to Different Marks
 -- ################################
+for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
+    -- If first mark of pattern, copy to the children
+    if (string.sub(weapon_id, -2) == "m1") then
+    end
+end
 -- Autoguns
 -- Add to infantry then everyone else copies it
 --  Infantry
