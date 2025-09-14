@@ -72,7 +72,7 @@ function mod.NORMAL_ITEM()
         nil,
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
-        "ap_muzzle_01"
+        nil
     )
 
     return table_to_return
