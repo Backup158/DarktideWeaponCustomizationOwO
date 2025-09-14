@@ -557,11 +557,14 @@ function mod.owo_suppressor()
 end
 
 function mod.owo_tactical_stock()
-    local table_to_return = init_table_to_return("owo_tactical_stock")
+    local attachment_group_name = "owo_tactical_stock"
+    local attachment_group_prefix = attachment_group_name.."_-_"
+    local table_to_return = init_table_to_return(attachment_group_name)
 
-    create_an_attachment(table_to_return, "owo_tactical_stock_-_skeletal",
+    -- Skeletal Stock
+    create_an_attachment(table_to_return, attachment_group_prefix.."skeletal",
         -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/owo_tactical_stock_-_skeletal",
+        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."skeletal",
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
@@ -574,9 +577,111 @@ function mod.owo_tactical_stock()
                 disable_in_ui = true,
                 offset = {
                     node = 1,
-                    position = vector3_box(0.0, 0.12, 0.0),
+                    position = vector3_box(0.0, 0.2, 0.024),
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1.95, 1),
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        "ap_stock_01"
+    )
+    -- Telescoping Stock
+    create_an_attachment(table_to_return, attachment_group_prefix.."telescoping_(Pushed-in)",
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."telescoping_(Pushed-in)",
+            icon_render_unit_rotation_offset = {90, 0, 30},
+            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_05",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, 0.12, 0.015),
+                    rotation = vector3_box(0, 0.035, 0),
+                    scale = vector3_box(1, 1.0, 1),
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        "ap_stock_01"
+    )
+    -- Folded (Natural)
+    create_an_attachment(table_to_return, attachment_group_prefix.."folded_01_(Natural_-_Left)",
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."folded_01_(Natural_-_Left)",
+            icon_render_unit_rotation_offset = {90, 0, 30},
+            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(-0.012, -0.108, 0.064),
+                    rotation = vector3_box(0, 0, -176),
+                    scale = vector3_box(1, 1.0, 1),
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        "ap_stock_01"
+    )
+    create_an_attachment(table_to_return, attachment_group_prefix.."folded_M_(Natural_-_Left)",
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."folded_M_(Natural_-_Left)",
+            icon_render_unit_rotation_offset = {90, 0, 30},
+            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, -0.108, 0.012),
+                    rotation = vector3_box(0, 0, -176),
+                    scale = vector3_box(1, 1.0, 1),
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        "ap_stock_01"
+    )
+    create_an_attachment(table_to_return, attachment_group_prefix.."folded_03_(Natural_-_Under)",
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."folded_03_(Natural_-_Under)",
+            icon_render_unit_rotation_offset = {90, 0, 30},
+            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, -0.112, 0.0625),
+                    rotation = vector3_box(174, 0, 0),
+                    scale = vector3_box(2.52, 1.3, 1),
                 },
             },
         },
