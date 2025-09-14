@@ -214,6 +214,7 @@ end
 local function copy_attachments_to_siblings(first_mark_id)
     if not type(first_mark_id) == "string" then
         mod:error("uwu first_mark_id is not a string")
+        return
     end
     -- from 2 to 3
     for i = 2, 3 do
