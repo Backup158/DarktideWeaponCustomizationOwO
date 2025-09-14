@@ -19,6 +19,8 @@ if debug_mode then mod:info('UwU Debug mowode a-active :3. Vewbose w-w-wogging i
 local pairs = pairs
 local string = string
 local string_sub = string.sub
+local string_gsub = string.gsub
+local tostring = tostring
 local table = table
 local table_append = table.append
 local table_clone = table.clone
@@ -218,7 +220,7 @@ local function copy_attachments_to_siblings(first_mark_id)
     end
     -- from 2 to 3
     for i = 2, 3 do
-        local weapon_id = string.gsub(first_mark_id, "1$", tostring(i))
+        local weapon_id = string_gsub(first_mark_id, "1$", tostring(i))
         if string_is_key_in_table(weapon_id, WeaponTemplates) then
             if debug_mode then mod:info("uwu Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
             copy_attachments_from_A_to_B(first_mark_id, weapon_id)
