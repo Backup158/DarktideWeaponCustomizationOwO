@@ -82,7 +82,7 @@ end
 -- ################################
 -- Defining Attachment Functions
 -- ################################
-function mod.owo_suppressor()    
+function mod.owo_suppressor()
     local table_to_return = init_table_to_return("owo_suppressor")
 
     -- Double Cans
@@ -550,6 +550,39 @@ function mod.owo_suppressor()
             },
         },
         "ap_muzzle_01"
+    )
+
+    return table_to_return
+
+end
+
+function mod.owo_tactical_stock()
+    local table_to_return = init_table_to_return("owo_tactical_stock")
+
+    create_an_attachment(table_to_return, "owo_tactical_stock_-_skeletal",
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/owo_tactical_stock_-_skeletal",
+            icon_render_unit_rotation_offset = {90, 0, 30},
+            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_02",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, 0.12, 0.0),
+                    rotation = vector3_box(0, 0, 0),
+                    scale = vector3_box(1, 1.95, 1),
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        "ap_stock_01"
     )
 
     return table_to_return
