@@ -28,7 +28,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- ######
 -- Initialize Table to Return
--- DESCRIPTION: Use in a function for defining a group of attachments. This is to create the table that will have attachments added to it, before it finally sends back a table of attachments, which will finally be put into the table that gets copied back into the base mod
+-- DESCRIPTION: Use in a function for defining a group of attachments. This is to create the table that will have attachments added to it, before it finally sends back a table of attachments, which will finally be put into the table that gets copied back into the base mod. Creates an internal name for debugging purposes
 -- PARAMETERS:
 --  internal_name: string; name for what attachments these are; "owo_suppressor"
 -- RETURN: N/A
