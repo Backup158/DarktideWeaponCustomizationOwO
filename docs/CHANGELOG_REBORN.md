@@ -1,7 +1,7 @@
 # 2025-09-UNRELEASED
-v0.1.0
+v4.0.0
 
-Initial release for the rebuilt version in Discord
+Initial release for the rebuilt version in Discord. Continuing the version count from the old plugin to keep git in order.
 
 Laying the framework for me to readd parts
 - functions for each group of attachments (ex suppressors together)
