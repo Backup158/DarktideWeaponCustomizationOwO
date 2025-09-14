@@ -36,7 +36,18 @@ local WeaponTemplates = require("scripts/settings/equipment/weapon_templates/wea
 -- ################################
 local attachments_table_for_ewc = {
 	attachments = {
-
+        --[[
+        -- for muzzle flash test
+        autogun_p1_m1 = {
+            muzzle = {
+                owo_nyaaaaa = {   
+                    replacement_path = "content/items/weapons/player/ranged/muzzles/autogun_rifle_muzzle_01",
+                    icon_render_unit_rotation_offset = {90, 0, 30},
+                    icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+                },
+            }
+        }
+        ]]
 	}, 
 	fixes = {
 
