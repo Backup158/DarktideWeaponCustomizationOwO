@@ -51,6 +51,7 @@ end
 -- ######
 -- Create an Attachment
 -- DESCRIPTION: Use in a function for defining a group of attachments. The attachment definition function initializes a table, then this function adds an attachment (and optionally fixes and/or a kitbash) to it. The main thing is to avoid having to copypaste the name so many times, even though this is less performant
+--  kitbash key name is your item's name (in the replacement_path). using an existing one crashes, and if it just doesn't match the masteritems goes nuts in the console log
 -- PARAMETERS:
 --  table_to_add_to: table; the one to add to the attachments table in the base mod
 --  internal_name: string; attachment name used internally

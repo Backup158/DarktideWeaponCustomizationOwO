@@ -227,14 +227,6 @@ end
 -- ###################################################################
 -- ATTACHMENT CREATION
 -- This needs to happen BEFORE all mods load, since that's when the base mod gets the tables from the plugins
---
--- Placeholder for notes
--- replacement_path is added to master items table? it's the name for our item
---  causes issue with how did i get that (and presumably any other mod that tries to work with that table)
---  if you use a default item name, you wont load the kitbash stuff
---  match with kitbash key name or else master items will kill itself in the console log
--- kitbash key name is your item's name
---  using an existing one crashes
 -- ###################################################################
 load_mod_file("create_attachments")
 
@@ -242,6 +234,10 @@ load_mod_file("create_attachments")
 -- Adding Attachments
 -- ################################
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), {"autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1"}, "muzzle")
+
+-- ################################
+-- Manual Overrides for Attachments
+-- ################################
 
 -- ################################
 -- Copying to Different Marks
