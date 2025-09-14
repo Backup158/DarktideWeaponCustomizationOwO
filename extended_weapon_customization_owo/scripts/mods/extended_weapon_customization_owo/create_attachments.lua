@@ -58,6 +58,7 @@ end
 --  fixes_data: table; contains data for any fixes
 --  kitbash_data: table; contains data for a kitbash
 --  attachment_point: string; attachment point for the given kitbash
+-- RETURN: N/A
 -- ######
 local function create_an_attachment(table_to_add_to, internal_name, attachment_data, fixes_data, kitbash_data, attachment_point)
     table_to_add_to.attachments[internal_name] = table_clone(attachment_data)

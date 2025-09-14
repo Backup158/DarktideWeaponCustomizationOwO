@@ -1,6 +1,16 @@
+-- function Comment
+
+-- ######
+-- Name
+-- DESCRIPTION:
+-- PARAMETERS: 
+-- RETURN: N/A
+-- ######
+
 -- ##############################
 -- TEMPLATES FOR CREATING ATTACHMENTS
--- 
+-- ##############################
+-- For kitbashes
 function mod.KITBASH_ITEM()
     local table_to_return = init_table_to_return("KITBASH_ITEM")
 

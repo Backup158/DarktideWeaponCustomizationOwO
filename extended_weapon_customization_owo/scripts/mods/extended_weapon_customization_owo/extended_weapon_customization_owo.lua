@@ -51,6 +51,7 @@ local attachments_table_for_ewc = {
 -- ################################
 -- ######
 -- String is key in table?
+-- RETURN: boolean; was the key found?
 -- ######
 local function string_is_key_in_table(string_to_find, table_to_search)
     for key, _ in pairs(table_to_search) do
@@ -63,8 +64,10 @@ end
 
 -- ######
 -- Load Mod File
--- PARAM:
---  relative_path: string
+-- DESCRIPTION: Runs a file in the mod's folder
+-- PARAMETERS:
+--  relative_path: string; path to the file without the extension; e.g. "melee/autogun_gooning"
+-- RETURN: N/A
 -- ######
 local function load_mod_file(relative_path)
 	mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
@@ -75,6 +78,9 @@ end
 -- ################################
 -- ######
 -- Add Attachment to Weapon
+-- DESCRIPTION:
+-- PARAMETERS: 
+-- RETURN: N/A
 -- ######
 local function add_attachment_to_weapon(attachment_tables, weapon_id, slot) 
 	for attachment_id, attachment_models in pairs(attachment_tables) do
