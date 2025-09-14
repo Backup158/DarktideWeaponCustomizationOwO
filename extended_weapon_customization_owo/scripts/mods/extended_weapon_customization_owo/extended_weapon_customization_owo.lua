@@ -214,7 +214,6 @@ local function copy_attachments_to_siblings(first_mark_id)
             copy_attachments_from_A_to_B(first_mark_id, weapon_id)
         else
             if debug_mode then mod:info("This is not a real weapon: "..weapon_id) end
-            return
         end
     end
 end
