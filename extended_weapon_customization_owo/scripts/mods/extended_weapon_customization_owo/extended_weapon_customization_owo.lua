@@ -11,7 +11,7 @@ mod:info('v' .. mod.version .. ' loaded uwu nya :3')
 -- Only needs to be checked at launch because the stuff it affects only runs at startup
 mod.discord_mode = mod:get("discord_mode")
 local debug_mode = mod:get("debug_mode")
-if debug_mode then mod:info('Debug mode active. Verbose logging in effect.') end
+if debug_mode then mod:info('UwU Debug mowode a-active :3. Vewbose w-w-wogging in effect.') end
 
 -- ################################
 -- Local References for Performance
@@ -212,14 +212,17 @@ end
 -- RETURN: N/A
 -- ######
 local function copy_attachments_to_siblings(first_mark_id)
+    if not type(first_mark_id) == "string" then
+        mod:error("uwu first_mark_id is not a string")
+    end
     -- from 2 to 3
     for i = 2, 3 do
         local weapon_id = string.gsub(first_mark_id, "1$", tostring(i))
         if string_is_key_in_table(weapon_id, WeaponTemplates) then
-            if debug_mode then mod:info("Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
+            if debug_mode then mod:info("uwu Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
             copy_attachments_from_A_to_B(first_mark_id, weapon_id)
         else
-            if debug_mode then mod:info("This is not a real weapon: "..weapon_id) end
+            if debug_mode then mod:info("uwu This is not a real weapon: "..weapon_id) end
         end
     end
 end
