@@ -54,17 +54,15 @@ local attachments_table_for_ewc = {
 -- RETURN: boolean; was the key found?
 -- ######
 local function string_is_key_in_table(string_to_find, table_to_search)
-    --[[
-    for key, _ in pairs(table_to_search) do
-        if string_to_find == key then
-            return true
-        end
-    end
-    return false
-    ]]
     if table_to_search[string_to_find] then
         return true
     else
+        -- Checks if key is in table but is just has nil value
+        for key, _ in pairs(table_to_search) do
+            if string_to_find == key then
+                return true
+            end
+        end
         return false
     end
 end
