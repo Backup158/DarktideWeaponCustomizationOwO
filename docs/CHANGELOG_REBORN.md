@@ -18,3 +18,4 @@ Laying the framework for me to readd parts
 Added
 - Suppressors
     - Infantry/Braced/Vigilant Autoguns, Infantry Lasguns
+    - Changed the tip of suppressor 5 to not be a colored tip
