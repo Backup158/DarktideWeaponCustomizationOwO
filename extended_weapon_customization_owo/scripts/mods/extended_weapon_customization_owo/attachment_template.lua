@@ -12,11 +12,13 @@
 -- ##############################
 -- For kitbashes
 function mod.KITBASH_ITEM()
-    local table_to_return = init_table_to_return("KITBASH_ITEM")
+    local attachment_group_name = "KITBASH_ITEM"
+    local attachment_group_prefix = attachment_group_name.."_-_"
+    local table_to_return = init_table_to_return(attachment_group_name)
 
-    create_an_attachment(table_to_return, "LALALALALA_NAME",
+    create_an_attachment(table_to_return, attachment_group_prefix.."NAME",
         -- Attachment
-        {   replacement_path = _item_ranged.."/muzzles/LALALALALA_NAME",
+        {   replacement_path = _item_ranged.."/muzzles/"..attachment_group_prefix.."NAME",
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
