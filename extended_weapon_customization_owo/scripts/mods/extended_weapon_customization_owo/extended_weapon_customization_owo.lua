@@ -18,6 +18,7 @@ if debug_mode then mod:info('Debug mode active. Verbose logging in effect.') end
 -- ################################
 local pairs = pairs
 local string = string
+local string_sub = string.sub
 local table = table
 local table_append = table.append
 local table_clone = table.clone
@@ -193,7 +194,7 @@ end
 -- RETURN: N/A
 -- ######
 local function copy_attachments_from_first_mark(weapon_id)
-    -- if (string.sub(weapon_id, -2) == "m1") then return end
+    -- if (string_sub(weapon_id, -2) == "m1") then return end
 
     -- Replaces the final character (if it's a digit) with 1
     --  autogun_p1_m2 --> autogun_p1_m1
@@ -245,6 +246,7 @@ add_attachments_to_list_of_weapons(mod.owo_suppressor(), {"autogun_p1_m1", "lasg
 -- ################################
 -- Copying to Different Marks
 -- ################################
+-- Autoguns: Propagate Infantry autogun attachments to Braced and Vigilant
 copy_attachments_from_A_to_B("autogun_p1_m1", "autogun_p2_m1")
 copy_attachments_from_A_to_B("autogun_p1_m1", "autogun_p3_m1")
 
@@ -252,8 +254,8 @@ for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
     -- If first mark of pattern, copy to the siblings
     --  Check last two characters of the name
     --  if mark 1, copy to mk 2 and 3 if they exist (handled in that function)
-    -- Since we're adding the siblings to the 
-    if (string.sub(weapon_id, -2) == "m1") then
+    -- Since we're adding the siblings to the table, need this check so 
+    if (string_sub(weapon_id, -2) == "m1") then
         copy_attachments_to_siblings(weapon_id)
     end
 end
