@@ -90,10 +90,6 @@ function mod.owo_suppressor()
     local suppressor_generic_scale_small = vector3_box(0.85, 1.8, 0.85)
     local suppressor_generic_helper1_rotation = vector3_box(0, 22, 0)
     local suppressor_generic_helper2_rotation = vector3_box(0, 17, 0)
-    local suppressor_pbs1_helper1_pos = vector3_box(0, 0.055, 0)
-    local suppressor_pbs1_helper1_rot = vector3_box(-90, 0, 0)
-    local suppressor_pbs1_helper1_scale = vector3_box(1.3, 1.3, 1.11)
-    local suppressor_pbs1_helper1_scale_small = vector3_box(0.95, 0.95, 1.11)
     create_an_attachment(table_to_return, "owo_suppressor_01",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
             --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
@@ -181,7 +177,98 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
+    create_an_attachment(table_to_return, "owo_suppressor_01_small",
+        {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01_small",
+            --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
+            icon_render_unit_rotation_offset = {90, 0, 30},
+            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+        },
+        nil,
+        {   item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0, 0, 0.0),
+                    rotation = vector3_box(0, 0, 0),
+                    scale = vector3_box(1, 1, 1),
+                },
+            },
+            children = {
+                muzzle_ac1 = {
+                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = vector3_box(0.0, 0.0, 0.0),
+                            scale = suppressor_generic_scale_small,
+                        },
+                    },
+                },
+                muzzle_ac2 = {
+                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = suppressor_generic_helper1_rotation,
+                            scale = suppressor_generic_scale_small,
+                        },
+                    },
+                },
+            },
+        },
+        "ap_muzzle_01"
+    )
+    create_an_attachment(table_to_return, "owo_suppressor_02_small",
+        {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_02_small",
+            icon_render_unit_rotation_offset = {90, 0, 30},
+            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+        },
+        nil,
+        {   item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0, 0, 0.0),
+                    rotation = vector3_box(0, 0, 0),
+                    scale = vector3_box(1, 1, 1),
+                },
+            },
+            children = {
+                muzzle_ac1 = {
+                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = vector3_box(0.0, 0.0, 0.0),
+                            scale = suppressor_generic_scale_small,
+                        },
+                    },
+                },
+                muzzle_ac2 = {
+                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0, 0.0, 0.0),
+                            rotation = suppressor_generic_helper2_rotation,
+                            scale = suppressor_generic_scale_small,
+                        },
+                    },
+                },
+            },
+        },
+        "ap_muzzle_01"
+    )
     -- PBS-1
+    local suppressor_pbs1_helper1_pos = vector3_box(0, 0.055, 0)
+    local suppressor_pbs1_helper1_rot = vector3_box(-90, 0, 0)
+    local suppressor_pbs1_helper1_scale = vector3_box(1.3, 1.3, 1.11)
+    local suppressor_pbs1_helper1_scale_small = vector3_box(0.95, 0.95, 1.11)
     local suppressor_pbs1_helper2_pos = vector3_box(0, 0.265, 0)
     local suppressor_pbs1_helper2_rot = vector3_box(0, 0, 180)
     local suppressor_pbs1_helper2_scale = vector3_box(0.36, 0.4, 0.36)
