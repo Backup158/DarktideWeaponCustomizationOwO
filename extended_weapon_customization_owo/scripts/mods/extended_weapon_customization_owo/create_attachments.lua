@@ -28,8 +28,10 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- ######
 -- Initialize Table to Return
--- PARAM:
+-- DESCRIPTION: Use in a function for defining a group of attachments. This is to create the table that will have attachments added to it, before it finally sends back a table of attachments, which will finally be put into the table that gets copied back into the base mod
+-- PARAMETERS:
 --  internal_name: string; name for what attachments these are; "owo_suppressor"
+-- RETURN: N/A
 -- ######
 local function init_table_to_return(internal_name)
     return {
@@ -48,13 +50,14 @@ end
 
 -- ######
 -- Create an Attachment
--- PARAM:
+-- DESCRIPTION: Use in a function for defining a group of attachments. The attachment definition function initializes a table, then this function adds an attachment (and optionally fixes and/or a kitbash) to it. The main thing is to avoid having to copypaste the name so many times, even though this is less performant
+-- PARAMETERS:
 --  table_to_add_to: table; the one to add to the attachments table in the base mod
 --  internal_name: string; attachment name used internally
 --  attachment_data: table; contains data for an attachment
 --  fixes_data: table; contains data for any fixes
 --  kitbash_data: table; contains data for a kitbash
---  attachment_point: string; attachment point for previous kitbhas
+--  attachment_point: string; attachment point for the given kitbash
 -- ######
 local function create_an_attachment(table_to_add_to, internal_name, attachment_data, fixes_data, kitbash_data, attachment_point)
     table_to_add_to.attachments[internal_name] = table_clone(attachment_data)
@@ -76,7 +79,6 @@ end
 
 -- ################################
 -- Defining Attachment Functions
--- also has a NAME key that gets used for debugging
 -- ################################
 function mod.owo_suppressor()    
     local table_to_return = init_table_to_return("owo_suppressor")
