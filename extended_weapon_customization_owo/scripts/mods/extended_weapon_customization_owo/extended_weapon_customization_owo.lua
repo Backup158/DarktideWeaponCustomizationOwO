@@ -78,8 +78,11 @@ end
 -- ################################
 -- ######
 -- Add Attachment to Weapon
--- DESCRIPTION:
+-- DESCRIPTION: Given a table of attachments, insert them into the table to send back to the base mod later
 -- PARAMETERS: 
+--  attachment_tables: table of (string, table) pairs
+--  weapon_id: string
+--  slot: string
 -- RETURN: N/A
 -- ######
 local function add_attachment_to_weapon(attachment_tables, weapon_id, slot) 
@@ -101,6 +104,11 @@ end
 
 -- ######
 -- Add Fixes to Weapon
+-- DESCRIPTION: Given a table of fixes, insert them into the table to send back to the base mod later
+-- PARAMETERS: 
+--  fixes_table: table of tables
+--  weapon_id: string
+-- RETURN: N/A
 -- ######
 local function add_fixes_to_weapon(fixes_tables, weapon_id) 
 	for _, fix_table in pairs(fixes_tables) do
@@ -110,6 +118,11 @@ end
 
 -- ######
 -- Add Kitbashes to Weapon
+-- DESCRIPTION: Given a table of kitbashes, insert them into the table to send back to the base mod later
+-- PARAMETERS: 
+--  kitbash_tables: table of (string, table) pairs
+--  weapon_id: string
+-- RETURN: N/A
 -- ######
 local function add_kitbashes_to_weapon(kitbash_tables, weapon_id) 
 	for kitbash_key, kitbash_table in pairs(kitbash_tables) do
@@ -121,7 +134,12 @@ end
 
 -- ######
 -- Add an Attachment with Fixes to Weapon
--- Calls the previous three functions
+-- DESCRIPTION: Calls the previous three functions. See them for details
+-- PARAMETERS: 
+--  attachment_blob: table of tables
+--      attachments = { tables }
+--      fixes = { tables }
+--      kitbashes = { tables }
 -- ######
 local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     if not slot then
@@ -135,7 +153,9 @@ end
 
 -- ######
 -- Add an Attachment with Fixes to Multiple Weapons
--- Calls the previous function for all given weapons
+-- DESCRIPTION: Calls the previous function for all given weapons
+-- PARAMETERS:
+--  weapons_list: table of strings
 -- ######
 local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
     for _, weapon_id in ipairs(weapons_list) do
@@ -145,6 +165,11 @@ end
 
 -- ######
 -- Copy Attachments from A to B
+-- DESCRIPTION: Copies table of attachments from one weapon to another
+-- PARAMETERS: 
+--  weapon_id_A: string; the source
+--  weapon_id_B: string; the destination
+-- RETURN: N/A
 -- ######
 local function copy_attachments_from_A_to_B(weapon_id_A, weapon_id_B)
     -- If source does not exist
@@ -157,18 +182,28 @@ end
 
 -- ######
 -- Copy Attachments from First Mark
+-- DESCRIPTION: Given a weapon that isn't the first mark, copy attachments from the first one
+-- PARAMETERS: 
+--  weapon_id: string
+-- RETURN: N/A
 -- ######
 local function copy_attachments_from_first_mark(weapon_id)
+    -- if (string.sub(weapon_id, -2) == "m1") then return end
+
     -- Replaces the final character (if it's a digit) with 1
     --  autogun_p1_m2 --> autogun_p1_m1
     local first_mark_id = string.gsub(weapon_id, "%d$", "1")
 
-    -- error checkign done in copy attachment
+    -- error checking is handled there 
     copy_attachments_from_A_to_B(first_mark_id, weapon_id)
 end
 
 -- ######
 -- Copy Attachments to Siblings
+-- DESCRIPTION: Given the first mark of a weapon, copy attachments to marks 2 and 3, if they exist
+-- PARAMETERS: 
+--  first_mark_id: string
+-- RETURN: N/A
 -- ######
 local function copy_attachments_to_siblings(first_mark_id)
     -- from 2 to 3
