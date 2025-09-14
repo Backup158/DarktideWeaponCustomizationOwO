@@ -80,6 +80,16 @@ local function create_an_attachment(table_to_add_to, internal_name, attachment_d
 end
 
 -- ################################
+-- Some Variables for Common Attachments
+-- ################################
+local infantry_autogun_receivers = "autogun_rifle_receiver_01|autogun_rifle_receiver_ml01"
+local braced_autogun_receivers = "autogun_rifle_ak_receiver_01|autogun_rifle_ak_receiver_02|autogun_rifle_ak_receiver_03|autogun_rifle_ak_receiver_ml01"
+local vigilant_autogun_receivers = "autogun_rifle_killshot_receiver_01|autogun_rifle_killshot_receiver_02|autogun_rifle_killshot_receiver_03|autogun_rifle_killshot_receiver_04|autogun_rifle_killshot_receiver_ml01"
+local infantry_lasgun_receivers = "lasgun_rifle_receiver_01|lasgun_rifle_receiver_02|lasgun_rifle_receiver_03|lasgun_rifle_receiver_ml01"
+local helbore_lasgun_receivers = "lasgun_rifle_krieg_receiver_01|lasgun_rifle_krieg_receiver_02|lasgun_krieg_rifle_receiver_03|lasgun_rifle_krieg_receiver_04|lasgun_rifle_krieg_receiver_05|lasgun_krieg_rifle_receiver_06|lasgun_rifle_krieg_receiver_ml01"
+local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_elysian_rifle_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_elysian_rifle_receiver_06|lasgun_elysian_rifle_receiver_07|lasgun_rifle_elysian_receiver_ml01"
+
+-- ################################
 -- Defining Attachment Functions
 -- ################################
 function mod.owo_suppressor()
@@ -562,14 +572,46 @@ function mod.owo_tactical_stock()
     local table_to_return = init_table_to_return(attachment_group_name)
 
     -- Skeletal Stock
-    create_an_attachment(table_to_return, attachment_group_prefix.."skeletal",
+    local skeletal_stock = attachment_group_prefix.."skeletal"
+    create_an_attachment(table_to_return, skeletal_stock,
         -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."skeletal",
+        {   replacement_path = _item_ranged.."/stocks/"..skeletal_stock,
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         -- Fixes
-        nil,
+        {
+            {   attachment_slot = "stock",
+                requirements = {
+                    stock = {
+                        has = skeletal_stock,
+                    },
+                    receiver = {
+                        has = infantry_autogun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.2, 0.024),
+                    },
+                },
+            },
+            {   attachment_slot = "stock",
+                requirements = {
+                    stock = {
+                        has = skeletal_stock,
+                    },
+                    receiver = {
+                        has = helbore_lasgun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.1, 0.02),
+                    },
+                },
+            },
+        },
         -- Kitbash
         {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_02",
             -- item = _item_empty_trinket, -- invisible base
@@ -577,7 +619,7 @@ function mod.owo_tactical_stock()
                 disable_in_ui = true,
                 offset = {
                     node = 1,
-                    position = vector3_box(0.0, 0.2, 0.024),
+                    position = vector3_box(0.0, 0.2, 0.01),
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1.95, 1),
                 },
@@ -588,9 +630,10 @@ function mod.owo_tactical_stock()
         "ap_stock_01"
     )
     -- Telescoping Stock
-    create_an_attachment(table_to_return, attachment_group_prefix.."telescoping_(Pushed-in)",
+    local telescoping_stock = attachment_group_prefix.."telescoping_(Pushed-in)"
+    create_an_attachment(table_to_return, telescoping_stock,
         -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."telescoping_(Pushed-in)",
+        {   replacement_path = _item_ranged.."/stocks/"..telescoping_stock,
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
@@ -614,9 +657,10 @@ function mod.owo_tactical_stock()
         "ap_stock_01"
     )
     -- Folded (Natural)
-    create_an_attachment(table_to_return, attachment_group_prefix.."folded_01_(Natural_-_Left)",
+    local folded_stock_n_1 = attachment_group_prefix.."folded_01_(Natural_-_Left)
+    create_an_attachment(table_to_return, folded_stock_n_1,
         -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."folded_01_(Natural_-_Left)",
+        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_1,
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
@@ -639,9 +683,10 @@ function mod.owo_tactical_stock()
         -- DON'T FORGET THIS
         "ap_stock_01"
     )
-    create_an_attachment(table_to_return, attachment_group_prefix.."folded_M_(Natural_-_Left)",
+    local folded_stock_n_m = attachment_group_prefix.."folded_M_(Natural_-_Left)
+    create_an_attachment(table_to_return, attachment_group_prefix..folded_stock_n_m,
         -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."folded_M_(Natural_-_Left)",
+        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix..folded_stock_n_m,
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
@@ -664,9 +709,10 @@ function mod.owo_tactical_stock()
         -- DON'T FORGET THIS
         "ap_stock_01"
     )
-    create_an_attachment(table_to_return, attachment_group_prefix.."folded_03_(Natural_-_Under)",
+    local folded_stock_n_u = attachment_group_prefix.."folded_03_(Natural_-_Under)"
+    create_an_attachment(table_to_return, folded_stock_n_u,
         -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix.."folded_03_(Natural_-_Under)",
+        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_u,
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
