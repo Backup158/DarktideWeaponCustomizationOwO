@@ -371,6 +371,7 @@ function mod.owo_suppressor()
     local suppressor_metal_ac1_sca = vector3_box(1.80, 1.80, 1.5)
     local suppressor_metal_ac1_sca_slim = vector3_box(1.1, 1.1, 1.5)
     local suppressor_metal_ac2_pos = vector3_box(0, 0.086, 0)
+    local suppressor_metal_ac2_pos2 = vector3_box(0, 0.080, 0)
     local suppressor_metal_ac2_rot = vector3_box(0, 0, 0)
     local suppressor_metal_ac2_sca = vector3_box(1.2, 1.8, 1.2)
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
@@ -496,7 +497,7 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position =  suppressor_metal_ac2_pos,
+                            position =  suppressor_metal_ac2_pos2,
                             rotation =  suppressor_metal_ac2_rot,
                             scale =     suppressor_metal_ac2_sca,
                         },
@@ -540,7 +541,7 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position =  suppressor_metal_ac2_pos,
+                            position =  suppressor_metal_ac2_pos2,
                             rotation =  suppressor_metal_ac2_rot,
                             scale =     suppressor_metal_ac2_sca_slim,
                         },
