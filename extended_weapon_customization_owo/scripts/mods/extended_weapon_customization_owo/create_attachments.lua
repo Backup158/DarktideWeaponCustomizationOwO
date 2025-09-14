@@ -97,7 +97,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -140,7 +141,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -184,7 +186,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -227,7 +230,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -279,7 +283,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -322,7 +327,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -365,7 +371,6 @@ function mod.owo_suppressor()
     local suppressor_metal_ac1_sca = vector3_box(1.80, 1.80, 1.5)
     local suppressor_metal_ac1_sca_slim = vector3_box(1.1, 1.1, 1.5)
     local suppressor_metal_ac2_pos = vector3_box(0, 0.086, 0)
-    local suppressor_metal_ac2_pos2 = vector3_box(0, 0.095, 0.0)
     local suppressor_metal_ac2_rot = vector3_box(0, 0, 0)
     local suppressor_metal_ac2_sca = vector3_box(1.2, 1.8, 1.2)
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
@@ -375,7 +380,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -418,7 +424,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -461,7 +468,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -488,7 +496,7 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position =  suppressor_metal_ac2_pos2,
+                            position =  suppressor_metal_ac2_pos,
                             rotation =  suppressor_metal_ac2_rot,
                             scale =     suppressor_metal_ac2_sca,
                         },
@@ -504,7 +512,8 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
+            -- item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -531,7 +540,7 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position =  suppressor_metal_ac2_pos2,
+                            position =  suppressor_metal_ac2_pos,
                             rotation =  suppressor_metal_ac2_rot,
                             scale =     suppressor_metal_ac2_sca_slim,
                         },
