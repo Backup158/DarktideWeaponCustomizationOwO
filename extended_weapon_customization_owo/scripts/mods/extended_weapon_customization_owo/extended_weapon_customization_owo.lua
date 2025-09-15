@@ -289,12 +289,14 @@ local siblings_to_add = {}
 for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
     -- If first mark of pattern, copy to the siblings
     --  Check last two characters of the name
-    --  if mark 1, copy to mk 2 and 3 if they exist (handled in that function)
-    -- Since we're adding the siblings to the table, need this check so 
+    --  if mark 1, copy to mk 2 and 3
+    --      if they exist (checks for this are handled in that function)
     info_if_debug("\tChecking "..weapon_id)
-    --if (string_sub(weapon_id, -2) == "m1") then
+    if (string_sub(weapon_id, -2) == "m1") then
         table_insert(siblings_to_add, weapon_id)
-    --end
+    else
+        mod:error("uwu [REPORT TO MOD AUTHOR] not the first mark: "..weapon_id)
+    end
 end
 for _, weapon_id in ipairs(siblings_to_add) do
     info_if_debug("\tSibligngs for "..weapon_id)
