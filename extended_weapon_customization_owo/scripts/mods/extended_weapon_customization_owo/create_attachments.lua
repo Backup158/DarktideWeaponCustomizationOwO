@@ -581,6 +581,7 @@ function mod.owo_tactical_stock()
         },
         -- Fixes
         {
+            -- Infantry Autogun
             {   attachment_slot = "stock",
                 requirements = {
                     stock = {
@@ -624,6 +625,20 @@ function mod.owo_tactical_stock()
                     scale = vector3_box(1, 1.95, 1),
                 },
             },
+            children = {
+                -- Fills in the Helbore
+                stock_ac1 = {
+                    item = _item_melee.."/heads/thunder_hammer_head_01",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, -0.01),
+                            rotation = vector3_box(0, 0, 0),
+                            scale = vector3_box(0.33, 0.5, 0.9),
+                        },
+                    },
+                },
+            },
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
@@ -638,7 +653,56 @@ function mod.owo_tactical_stock()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         -- Fixes
-        nil,
+        {
+            -- Infantry Autogun
+            
+            --{   attachment_slot = "stock",
+            --    requirements = {
+            --        stock = {
+            --            has = telescoping_stock,
+            --        },
+            --        receiver = {
+            --            has = infantry_autogun_receivers,
+            --        },
+            --    },
+            --    fix = {
+            --        offset = {
+            --            position = vector3_box(0.0, 0.2, 0.024),
+            --        },
+            --    },
+            --},
+            -- Infantry Lasgun
+            {   attachment_slot = "stock",
+                requirements = {
+                    stock = {
+                        has = telescoping_stock,
+                    },
+                    receiver = {
+                        has = infantry_lasgun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.12, 0.012),
+                    },
+                },
+            },
+            --{   attachment_slot = "stock",
+            --    requirements = {
+            --        stock = {
+            --            has = telescoping_stock,
+            --        },
+            --        receiver = {
+            --            has = helbore_lasgun_receivers,
+            --        },
+            --    },
+            --    fix = {
+            --        offset = {
+            --            position = vector3_box(0.0, 0.1, 0.02),
+            --        },
+            --    },
+            --},
+        },
         -- Kitbash
         {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_05",
             -- item = _item_empty_trinket, -- invisible base
@@ -657,7 +721,7 @@ function mod.owo_tactical_stock()
         "ap_stock_01"
     )
     -- Folded (Natural)
-    local folded_stock_n_1 = attachment_group_prefix.."folded_01_(Natural_-_Left)
+    local folded_stock_n_1 = attachment_group_prefix.."folded_01_(Natural_-_Left)"
     create_an_attachment(table_to_return, folded_stock_n_1,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_1,
@@ -683,10 +747,10 @@ function mod.owo_tactical_stock()
         -- DON'T FORGET THIS
         "ap_stock_01"
     )
-    local folded_stock_n_m = attachment_group_prefix.."folded_M_(Natural_-_Left)
-    create_an_attachment(table_to_return, attachment_group_prefix..folded_stock_n_m,
+    local folded_stock_n_m = attachment_group_prefix.."folded_M_(Natural_-_Left)"
+    create_an_attachment(table_to_return, folded_stock_n_m,
         -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..attachment_group_prefix..folded_stock_n_m,
+        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_m,
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
