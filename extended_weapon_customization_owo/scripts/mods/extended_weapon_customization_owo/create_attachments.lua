@@ -628,13 +628,13 @@ function mod.owo_tactical_stock()
             children = {
                 -- Fills in the Helbore
                 stock_ac1 = {
-                    item = _item_melee.."/heads/thunder_hammer_head_01",
+                    item = _item_melee.."/heads/thunder_hammer_head_03",
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.0, 0.0, -0.01),
+                            position = vector3_box(0.0, 0.05, -0.03),
                             rotation = vector3_box(0, 0, 0),
-                            scale = vector3_box(0.33, 0.5, 0.9),
+                            scale = vector3_box(0.35, 0.5, 0.75),
                         },
                     },
                 },
@@ -684,6 +684,7 @@ function mod.owo_tactical_stock()
                 fix = {
                     offset = {
                         position = vector3_box(0.0, 0.12, 0.012),
+                       --position = vector3_box(0.0, 0.0, -0.005),
                     },
                 },
             },
