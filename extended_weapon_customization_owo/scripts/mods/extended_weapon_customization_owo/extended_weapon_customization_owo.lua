@@ -22,7 +22,7 @@ local string_sub = string.sub
 local string_gsub = string.gsub
 local tostring = tostring
 local table = table
-local table_append = table.append
+local table_insert = table.insert
 local table_clone = table.clone
 
 -- ################################
@@ -92,6 +92,19 @@ local function load_mod_file(relative_path)
 	mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
 end
 
+-- ######
+-- Print if Debug
+-- DESCRIPTION: Logs text in console if debug is on
+-- PARAMETERS:
+--  message: string
+-- RETURN: N/A
+-- ######
+local function info_if_debug(message)
+    if debug_mode then
+        mod:info(tostring(message))
+    end
+end
+
 -- ################################
 -- Adding Directly to the Attachments Table
 -- ################################
@@ -108,15 +121,19 @@ local function add_attachment_to_weapon(attachment_tables, weapon_id, slot)
 	for attachment_id, attachment_models in pairs(attachment_tables) do
         -- Creates table keys if they don't exist
         if not attachments_table_for_ewc.attachments[weapon_id] then
+            info_if_debug("Initializing table entry for "..weapon_id..": "..slot)
 		    attachments_table_for_ewc.attachments[weapon_id] = {}
             attachments_table_for_ewc.attachments[weapon_id][slot] = {}
         elseif not attachments_table_for_ewc.attachments[weapon_id][slot] then
+            info_if_debug("Initializing only slot for "..weapon_id..": "..slot)
 		    attachments_table_for_ewc.attachments[weapon_id][slot] = {}
         end
         -- Adds attachments
         --  Check to prevent overwriting
         if not attachments_table_for_ewc.attachments[weapon_id][slot][attachment_id] then
 		    attachments_table_for_ewc.attachments[weapon_id][slot][attachment_id] = attachment_models
+        else
+            info_if_debug("Duplicate attachment found: "..weapon_id.."; "..slot.."; "..attachment_id)
         end
     end
 end
@@ -131,7 +148,7 @@ end
 -- ######
 local function add_fixes_to_weapon(fixes_tables, weapon_id) 
 	for _, fix_table in pairs(fixes_tables) do
-		table_append(attachments_table_for_ewc.fixes[weapon_id], fix_table)
+		table_insert(attachments_table_for_ewc.fixes[weapon_id], fix_table)
     end
 end
 
@@ -178,6 +195,7 @@ end
 -- ######
 local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
     for _, weapon_id in ipairs(weapons_list) do
+        -- info_if_debug("Adding attachments to "..weapon_id)
         add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     end
 end
@@ -229,14 +247,15 @@ local function copy_attachments_to_siblings(first_mark_id)
         mod:error("uwu first_mark_id is not a string")
         return
     end
+    info_if_debug("\tCopying attachments to siblings of "..first_mark_id)
     -- from 2 to 3
     for i = 2, 3 do
         local weapon_id = string_gsub(first_mark_id, "1$", tostring(i))
         if string_is_key_in_table(weapon_id, WeaponTemplates) then
-            if debug_mode then mod:info("uwu Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
+            if debug_mode then mod:info("\t\tuwu Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
             copy_attachments_from_A_to_B(first_mark_id, weapon_id)
         else
-            if debug_mode then mod:info("uwu This is not a real weapon: "..weapon_id) end
+            if debug_mode then mod:info("\t\tuwu This is not a real weapon: "..weapon_id) end
         end
     end
 end
@@ -265,14 +284,21 @@ add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "
 copy_attachments_from_A_to_B("autogun_p1_m1", "autogun_p2_m1")
 copy_attachments_from_A_to_B("autogun_p1_m1", "autogun_p3_m1")
 
+info_if_debug("Going through table to return...")
+local siblings_to_add = {}
 for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
     -- If first mark of pattern, copy to the siblings
     --  Check last two characters of the name
     --  if mark 1, copy to mk 2 and 3 if they exist (handled in that function)
     -- Since we're adding the siblings to the table, need this check so 
-    if (string_sub(weapon_id, -2) == "m1") then
-        copy_attachments_to_siblings(weapon_id)
-    end
+    info_if_debug("\tChecking "..weapon_id)
+    --if (string_sub(weapon_id, -2) == "m1") then
+        table_insert(siblings_to_add, weapon_id)
+    --end
+end
+for _, weapon_id in ipairs(siblings_to_add) do
+    info_if_debug("\tSibligngs for "..weapon_id)
+    copy_attachments_to_siblings(weapon_id)
 end
 
 -- ################################
