@@ -284,8 +284,9 @@ add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "
 copy_attachments_from_A_to_B("autogun_p1_m1", "autogun_p2_m1")
 copy_attachments_from_A_to_B("autogun_p1_m1", "autogun_p3_m1")
 
-info_if_debug("Going through table to return...")
+info_if_debug("Going through attachments_table_for_ewc...")
 local siblings_to_add = {}
+-- See which weapons may need to copy over to siblings
 for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
     -- If first mark of pattern, copy to the siblings
     --  Check last two characters of the name
@@ -298,8 +299,11 @@ for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
         mod:error("uwu [REPORT TO MOD AUTHOR] not the first mark: "..weapon_id)
     end
 end
+-- copies to siblings
+--  Done this way because pairs() does NOT guarantee order
+--  and since I'm adding to the table i'm reading, it can lead to duplicates and shuffling order
+--  so somehow things can get skipped? this happened to ilas for some reason
 for _, weapon_id in ipairs(siblings_to_add) do
-    info_if_debug("\tSibligngs for "..weapon_id)
     copy_attachments_to_siblings(weapon_id)
 end
 
