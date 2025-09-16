@@ -16,6 +16,11 @@ if debug_mode then mod:info('UwU Debug mowode a-active :3. Vewbose w-w-wogging i
 -- ################################
 -- Local References for Performance
 -- ################################
+--[[
+local vector3 = Vector3
+local vector3_box = Vector3Box
+]]
+
 local pairs = pairs
 local string = string
 local string_sub = string.sub
@@ -24,6 +29,16 @@ local tostring = tostring
 local table = table
 local table_insert = table.insert
 local table_clone = table.clone
+-- ################################
+-- Game Content Addresses
+-- ################################
+--[[
+local _item = "content/items/weapons/player"
+local _item_ranged = _item.."/ranged"
+local _item_melee = _item.."/melee"
+local _item_empty_trinket = _item.."/trinkets/unused_trinket"
+local _item_minion = "content/items/weapons/minions"
+]]
 
 -- ################################
 -- Requires
