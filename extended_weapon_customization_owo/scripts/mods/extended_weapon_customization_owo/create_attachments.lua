@@ -69,12 +69,21 @@ local function create_an_attachment(table_to_add_to, internal_name, attachment_d
         end
     end
     if kitbash_data then
+        -- Allows VFX to play, if it's a muzzle
+        --  disable_vfx_spawner_exclusion
+        if attachment_point == "ap_muzzle_01" then
+            have_vfx = true
+        else
+            have_vfx = false
+        end
+        -- create kitbash table to send back
         table_to_add_to.kitbashs[attachment_data.replacement_path] = {
             attachments = { [internal_name] = table_clone(kitbash_data) },
             display_name = "loc_"..internal_name,
             description = "loc_description_"..internal_name,
             attach_node = attachment_point,
             dev_name = internal_name,
+            disable_vfx_spawner_exclusion = have_vfx
         }
     end
 end
