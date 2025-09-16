@@ -5,13 +5,11 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- ################################
 local vector3 = Vector3
 local vector3_box = Vector3Box
-local vector3_one = vector3.one
-local vector3_zero = vector3.zero
 
 local pairs = pairs
 --local string = string
 local table = table
-local table_append = table.append
+local table_insert = table.insert
 local table_clone = table.clone
 
 -- ################################
@@ -65,7 +63,7 @@ local function create_an_attachment(table_to_add_to, internal_name, attachment_d
     table_to_add_to.attachments[internal_name] = table_clone(attachment_data)
     if fixes_data then
         for _, fix in pairs(fixes_data) do
-            table_append(table_to_add_to.fixes, fix)
+            table_insert(table_to_add_to.fixes, fix)
         end
     end
     if kitbash_data then
