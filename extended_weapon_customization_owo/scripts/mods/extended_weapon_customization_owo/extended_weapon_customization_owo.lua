@@ -158,12 +158,11 @@ end
 -- DESCRIPTION: Given a table of fixes, insert them into the table to send back to the base mod later
 -- PARAMETERS: 
 --  fixes_table: table of tables
---  weapon_id: string
 -- RETURN: N/A
 -- ######
-local function add_fixes_to_weapon(fixes_tables, weapon_id) 
+local function add_fixes_to_weapon(fixes_tables) 
 	for _, fix_table in pairs(fixes_tables) do
-		table_insert(attachments_table_for_ewc.fixes[weapon_id], fix_table)
+		table_insert(attachments_table_for_ewc.fixes, fix_table)
     end
 end
 
@@ -172,10 +171,9 @@ end
 -- DESCRIPTION: Given a table of kitbashes, insert them into the table to send back to the base mod later
 -- PARAMETERS: 
 --  kitbash_tables: table of (string, table) pairs
---  weapon_id: string
 -- RETURN: N/A
 -- ######
-local function add_kitbashes_to_weapon(kitbash_tables, weapon_id) 
+local function add_kitbashes_to_weapon(kitbash_tables) 
 	for kitbash_key, kitbash_table in pairs(kitbash_tables) do
         if not attachments_table_for_ewc.kitbashs[kitbash_key] then
 		    attachments_table_for_ewc.kitbashs[kitbash_key] = kitbash_table
@@ -198,8 +196,8 @@ local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
         return
     end
     add_attachment_to_weapon(attachment_blob.attachments, weapon_id, slot)
-    add_fixes_to_weapon(attachment_blob.fixes, weapon_id)
-    add_kitbashes_to_weapon(attachment_blob.kitbashs, weapon_id)
+    add_fixes_to_weapon(attachment_blob.fixes)
+    add_kitbashes_to_weapon(attachment_blob.kitbashs)
 end
 
 -- ######
