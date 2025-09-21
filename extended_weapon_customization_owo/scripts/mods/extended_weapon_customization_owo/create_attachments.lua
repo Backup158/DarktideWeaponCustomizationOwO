@@ -567,7 +567,8 @@ function mod.owo_suppressor()
 
 end
 
-function mod.owo_tactical_stock()
+function mod.owo_tactical_stock(given_attachment_node)
+    local attachment_node = given_attachment_node or "ap_stock_01"
     local attachment_group_name = "owo_tactical_stock"
     local attachment_group_prefix = attachment_group_name.."_-_"
     local table_to_return = init_table_to_return(attachment_group_name)
@@ -598,7 +599,7 @@ function mod.owo_tactical_stock()
                         scale = vector3_box(1, 1.95, 1),
                     },
                 },
-            },
+            },--[[
             {   attachment_slot = "stock",
                 requirements = {
                     stock = {
@@ -610,11 +611,12 @@ function mod.owo_tactical_stock()
                 },
                 fix = {
                     offset = {
-                        position = vector3_box(0.0, 0.02, 0.1),
+                        position = vector3_box(0.0, -0.02, 0.3),
                         scale = vector3_box(1, 1.95, 1),
                     },
                 },
-            },
+            },]]
+            -- Filling in for Helbore
             {   attachment_slot = "stock_ac1",
                 requirements = {
                     stock = {
@@ -627,8 +629,8 @@ function mod.owo_tactical_stock()
                 fix = {
                     offset = {
                         position = vector3_box(0.0, 0.0, -0.02),
-                            rotation = vector3_box(0, 0, 0),
-                            scale = vector3_box(0.35, 0.5, 0.65),
+                        rotation = vector3_box(0, 0, 0),
+                        scale = vector3_box(0.35, 0.5, 0.65),
                     },
                 },
             },
@@ -662,7 +664,7 @@ function mod.owo_tactical_stock()
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
-        "ap_stock_01"
+        attachment_node
     )
     -- Telescoping Stock
     local telescoping_stock = attachment_group_prefix.."telescoping_(Pushed-in)"
@@ -705,6 +707,24 @@ function mod.owo_tactical_stock()
             --        },
             --    },
             --},
+            -- Filling in for Helbore
+            {   attachment_slot = "stock_ac1",
+                requirements = {
+                    stock = {
+                        has = telescoping_stock,
+                    },
+                    receiver = {
+                        has = helbore_lasgun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.0, -0.02),
+                        rotation = vector3_box(0, 0, 0),
+                        scale = vector3_box(0.35, 0.5, 0.65),
+                    },
+                },
+            },
         },
         -- Kitbash
         {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_05",
@@ -718,10 +738,24 @@ function mod.owo_tactical_stock()
                     scale = vector3_box(1, 1.0, 1),
                 },
             },
+            children = {
+                -- Fills in the Helbore. disable otherwise
+                stock_ac1 = {
+                    item = _item_melee.."/heads/thunder_hammer_head_04",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = vector3_box(0, 0, 0),
+                            scale = vector3_box(0.0, 0.0, 0.0),
+                        },
+                    },
+                },
+            },
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
-        "ap_stock_01"
+        attachment_node
     )
     -- Folded (Natural)
     local folded_stock_n_l_pos = vector3_box(0.0, -0.05, 0.0)
@@ -750,7 +784,7 @@ function mod.owo_tactical_stock()
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
-        "ap_stock_01"
+        attachment_node
     )
     local folded_stock_n_m = attachment_group_prefix.."folded_M_(Natural_-_Left)"
     create_an_attachment(table_to_return, folded_stock_n_m,
@@ -776,7 +810,7 @@ function mod.owo_tactical_stock()
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
-        "ap_stock_01"
+        attachment_node
     )
     local folded_stock_n_u = attachment_group_prefix.."folded_03_(Natural_-_Under)"
     create_an_attachment(table_to_return, folded_stock_n_u,
@@ -802,7 +836,7 @@ function mod.owo_tactical_stock()
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
-        "ap_stock_01"
+        attachment_node
     )
 
     return table_to_return
