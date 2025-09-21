@@ -114,8 +114,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -158,8 +157,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -203,8 +201,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -247,8 +244,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -300,8 +296,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -344,8 +339,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -398,8 +392,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -442,8 +435,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -486,8 +478,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -530,8 +521,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
         nil,
-        {   item = _item_ranged.."/muzzles/autogun_rifle_muzzle_01",
-            -- item = _item_empty_trinket, -- invisible base
+        {   item = _item_empty_trinket, -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
