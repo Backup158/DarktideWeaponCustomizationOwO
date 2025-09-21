@@ -601,6 +601,7 @@ function mod.owo_tactical_stock()
                 fix = {
                     offset = {
                         position = vector3_box(0.0, 0.2, 0.024),
+                        scale = vector3_box(1, 1.95, 1),
                     },
                 },
             },
@@ -615,7 +616,25 @@ function mod.owo_tactical_stock()
                 },
                 fix = {
                     offset = {
-                        position = vector3_box(0.0, 0.1, 0.02),
+                        position = vector3_box(0.0, 0.02, 0.1),
+                        scale = vector3_box(1, 1.95, 1),
+                    },
+                },
+            },
+            {   attachment_slot = "stock_ac1",
+                requirements = {
+                    stock = {
+                        has = skeletal_stock,
+                    },
+                    receiver = {
+                        has = helbore_lasgun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.0, -0.02),
+                            rotation = vector3_box(0, 0, 0),
+                            scale = vector3_box(0.35, 0.5, 0.65),
                     },
                 },
             },
@@ -624,7 +643,7 @@ function mod.owo_tactical_stock()
         {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_02",
             -- item = _item_empty_trinket, -- invisible base
             fix = {
-                disable_in_ui = true,
+                disable_in_ui = false,
                 offset = {
                     node = 1,
                     position = vector3_box(0.0, 0.2, 0.01),
@@ -633,15 +652,15 @@ function mod.owo_tactical_stock()
                 },
             },
             children = {
-                -- Fills in the Helbore
+                -- Fills in the Helbore. disable otherwise
                 stock_ac1 = {
-                    item = _item_melee.."/heads/thunder_hammer_head_03",
+                    item = _item_melee.."/heads/thunder_hammer_head_04",
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.0, 0.05, -0.03),
+                            position = vector3_box(0.0, 0.0, 0.0),
                             rotation = vector3_box(0, 0, 0),
-                            scale = vector3_box(0.35, 0.5, 0.75),
+                            scale = vector3_box(0.0, 0.0, 0.0),
                         },
                     },
                 },
