@@ -96,6 +96,10 @@ local infantry_lasgun_receivers = "lasgun_rifle_receiver_01|lasgun_rifle_receive
 local helbore_lasgun_receivers = "lasgun_rifle_krieg_receiver_01|lasgun_rifle_krieg_receiver_02|lasgun_krieg_rifle_receiver_03|lasgun_rifle_krieg_receiver_04|lasgun_rifle_krieg_receiver_05|lasgun_krieg_rifle_receiver_06|lasgun_rifle_krieg_receiver_ml01"
 local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_elysian_rifle_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_elysian_rifle_receiver_06|lasgun_elysian_rifle_receiver_07|lasgun_rifle_elysian_receiver_ml01"
 
+-- Camera Angles for Preview
+local render_unit_rot_profile_left = {90, 0, 30}
+local render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
+
 -- ################################
 -- Defining Attachment Functions
 -- ################################
@@ -110,8 +114,8 @@ function mod.owo_suppressor()
     create_an_attachment(table_to_return, "owo_suppressor_01",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
             --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -153,8 +157,8 @@ function mod.owo_suppressor()
     )
     create_an_attachment(table_to_return, "owo_suppressor_02",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_02",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -197,8 +201,8 @@ function mod.owo_suppressor()
     create_an_attachment(table_to_return, "owo_suppressor_01_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01_slim",
             --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -240,8 +244,8 @@ function mod.owo_suppressor()
     )
     create_an_attachment(table_to_return, "owo_suppressor_02_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_02_slim",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -292,8 +296,8 @@ function mod.owo_suppressor()
     local suppressor_pbs1_ac2_sca_slim = vector3_box(0.255, 0.4, 0.24)
     create_an_attachment(table_to_return, "owo_suppressor_03",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_03",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -335,8 +339,8 @@ function mod.owo_suppressor()
     )
     create_an_attachment(table_to_return, "owo_suppressor_03_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_03_slim",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -388,8 +392,8 @@ function mod.owo_suppressor()
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
     create_an_attachment(table_to_return, "owo_suppressor_04",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_04",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -431,8 +435,8 @@ function mod.owo_suppressor()
     )
     create_an_attachment(table_to_return, "owo_suppressor_04_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_04_slim",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -474,8 +478,8 @@ function mod.owo_suppressor()
     )
     create_an_attachment(table_to_return, "owo_suppressor_05",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_05",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -517,8 +521,8 @@ function mod.owo_suppressor()
     )
     create_an_attachment(table_to_return, "owo_suppressor_05_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_05_slim",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
         {   item = _item_empty_trinket, -- invisible base
@@ -573,8 +577,8 @@ function mod.owo_tactical_stock()
     create_an_attachment(table_to_return, skeletal_stock,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..skeletal_stock,
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
         {
@@ -665,8 +669,8 @@ function mod.owo_tactical_stock()
     create_an_attachment(table_to_return, telescoping_stock,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..telescoping_stock,
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
         {
@@ -744,8 +748,8 @@ function mod.owo_tactical_stock()
     create_an_attachment(table_to_return, folded_stock_n_1,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_1,
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
         nil,
@@ -770,8 +774,8 @@ function mod.owo_tactical_stock()
     create_an_attachment(table_to_return, folded_stock_n_m,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_m,
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
         nil,
@@ -796,8 +800,8 @@ function mod.owo_tactical_stock()
     create_an_attachment(table_to_return, folded_stock_n_u,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_u,
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
         nil,
