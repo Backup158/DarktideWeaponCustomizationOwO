@@ -738,6 +738,8 @@ function mod.owo_tactical_stock()
         "ap_stock_01"
     )
     -- Folded (Natural)
+    local folded_stock_n_l_pos = vector3_box(0.0, -0.05, 0.0)
+    local folded_stock_n_l_rot = vector3_box(0, 0, -176)
     local folded_stock_n_1 = attachment_group_prefix.."folded_01_(Natural_-_Left)"
     create_an_attachment(table_to_return, folded_stock_n_1,
         -- Attachment
@@ -754,8 +756,8 @@ function mod.owo_tactical_stock()
                 disable_in_ui = false,
                 offset = {
                     node = 1,
-                    position = vector3_box(-0.012, -0.108, 0.064),
-                    rotation = vector3_box(0, 0, -176),
+                    position = folded_stock_n_l_pos,
+                    rotation = folded_stock_n_l_rot,
                     scale = vector3_box(1, 1.0, 1),
                 },
             },
@@ -780,8 +782,8 @@ function mod.owo_tactical_stock()
                 disable_in_ui = false,
                 offset = {
                     node = 1,
-                    position = vector3_box(0.0, -0.108, 0.012),
-                    rotation = vector3_box(0, 0, -176),
+                    position = folded_stock_n_l_pos,
+                    rotation = folded_stock_n_l_rot,
                     scale = vector3_box(1, 1.0, 1),
                 },
             },
