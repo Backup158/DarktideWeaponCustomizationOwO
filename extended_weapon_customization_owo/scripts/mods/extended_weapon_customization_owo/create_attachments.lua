@@ -734,7 +734,7 @@ function mod.owo_tactical_stock()
         {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_05",
             -- item = _item_empty_trinket, -- invisible base
             fix = {
-                disable_in_ui = true,
+                disable_in_ui = false,
                 offset = {
                     node = 1,
                     position = vector3_box(0.0, 0.12, 0.015),
@@ -761,7 +761,7 @@ function mod.owo_tactical_stock()
         {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01",
             -- item = _item_empty_trinket, -- invisible base
             fix = {
-                disable_in_ui = true,
+                disable_in_ui = false,
                 offset = {
                     node = 1,
                     position = vector3_box(-0.012, -0.108, 0.064),
@@ -787,7 +787,7 @@ function mod.owo_tactical_stock()
         {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01",
             -- item = _item_empty_trinket, -- invisible base
             fix = {
-                disable_in_ui = true,
+                disable_in_ui = false,
                 offset = {
                     node = 1,
                     position = vector3_box(0.0, -0.108, 0.012),
@@ -813,7 +813,7 @@ function mod.owo_tactical_stock()
         {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02",
             -- item = _item_empty_trinket, -- invisible base
             fix = {
-                disable_in_ui = true,
+                disable_in_ui = false,
                 offset = {
                     node = 1,
                     position = vector3_box(0.0, -0.112, 0.0625),
