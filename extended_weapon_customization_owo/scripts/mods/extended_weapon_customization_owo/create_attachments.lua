@@ -67,9 +67,9 @@ local function create_an_attachment(table_to_add_to, internal_name, attachment_d
         end
     end
     if kitbash_data then
-        -- Allows VFX to play, if it's a muzzle
+        -- Allows VFX to play, if it's a muzzle/barrel
         --  disable_vfx_spawner_exclusion
-        if attachment_point == "ap_muzzle_01" then
+        if (attachment_point == "ap_muzzle_01") or (attachment_point == "ap_barrel_01") then
             have_vfx = true
         else
             have_vfx = false
