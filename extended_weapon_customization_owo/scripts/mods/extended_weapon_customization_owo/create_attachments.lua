@@ -675,36 +675,18 @@ function mod.owo_tactical_stock()
         -- Fixes
         {
             -- Infantry Autogun
-            
-            --{   attachment_slot = "stock",
-            --    requirements = {
-            --        stock = {
-            --            has = telescoping_stock,
-            --        },
-            --        receiver = {
-            --            has = infantry_autogun_receivers,
-            --        },
-            --    },
-            --    fix = {
-            --        offset = {
-            --            position = vector3_box(0.0, 0.2, 0.024),
-            --        },
-            --    },
-            --},
-            -- Infantry Lasgun
             {   attachment_slot = "stock",
                 requirements = {
                     stock = {
                         has = telescoping_stock,
                     },
                     receiver = {
-                        has = infantry_lasgun_receivers,
+                        has = infantry_autogun_receivers,
                     },
                 },
                 fix = {
                     offset = {
-                        position = vector3_box(0.0, 0.12, 0.012),
-                       --position = vector3_box(0.0, 0.0, -0.005),
+                        position = vector3_box(0.0, 0.12, 0.015),
                     },
                 },
             },
@@ -731,7 +713,7 @@ function mod.owo_tactical_stock()
                 disable_in_ui = false,
                 offset = {
                     node = 1,
-                    position = vector3_box(0.0, 0.12, 0.015),
+                    position = vector3_box(0.0, 0.12, 0.0),
                     rotation = vector3_box(0, 0.035, 0),
                     scale = vector3_box(1, 1.0, 1),
                 },
@@ -812,7 +794,7 @@ function mod.owo_tactical_stock()
                 disable_in_ui = false,
                 offset = {
                     node = 1,
-                    position = vector3_box(0.0, -0.112, 0.0625),
+                    position = vector3_box(0.0, -0.03, 0.0),
                     rotation = vector3_box(174, 0, 0),
                     scale = vector3_box(2.52, 1.3, 1),
                 },
