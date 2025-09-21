@@ -103,6 +103,43 @@ local render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
 -- ################################
 -- Defining Attachment Functions
 -- ################################
+function mod.probe_for_node(given_attachment_node)
+    local attachment_node = given_attachment_node or "ap_stock_01"
+    local attachment_group_name = "owo_TEST_ITEM"
+    local attachment_group_prefix = attachment_group_name.."_-_"
+    local table_to_return = init_table_to_return(attachment_group_name)
+
+    for i = 1, 15 do
+        local test_weapon_id = attachment_group_prefix..tostring(i)
+        create_an_attachment(table_to_return, test_weapon_id,
+            -- Attachment
+            {   replacement_path = _item_ranged.."/stocks/"..test_weapon_id,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+            },
+            nil,
+            -- Kitbash
+            {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_02",
+                -- item = _item_empty_trinket, -- invisible base
+                fix = {
+                    disable_in_ui = false,
+                    offset = {
+                        node = i,
+                        position = vector3_box(0.0, 0.2, 0.8),
+                        rotation = vector3_box(0, 0, 0),
+                        scale = vector3_box(1, 1.95, 1),
+                    },
+                },
+            },
+            -- ATTACHMENT NODE 
+            -- DON'T FORGET THIS
+            attachment_node
+        )
+    end
+
+    return table_to_return
+end
+
 function mod.owo_suppressor()
     local table_to_return = init_table_to_return("owo_suppressor")
 
