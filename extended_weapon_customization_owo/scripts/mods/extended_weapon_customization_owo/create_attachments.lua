@@ -599,7 +599,7 @@ function mod.owo_tactical_stock(given_attachment_node)
                         scale = vector3_box(1, 1.95, 1),
                     },
                 },
-            },--[[
+            },
             {   attachment_slot = "stock",
                 requirements = {
                     stock = {
@@ -610,12 +610,14 @@ function mod.owo_tactical_stock(given_attachment_node)
                     },
                 },
                 fix = {
+                    node = 3,
                     offset = {
-                        position = vector3_box(0.0, -0.02, 0.3),
+                        position = vector3_box(0.0, -0.02, 1.3),
+                        rotation = vector3_box(0, 0, 0),
                         scale = vector3_box(1, 1.95, 1),
                     },
                 },
-            },]]
+            },
             -- Filling in for Helbore
             {   attachment_slot = "stock_ac1",
                 requirements = {
