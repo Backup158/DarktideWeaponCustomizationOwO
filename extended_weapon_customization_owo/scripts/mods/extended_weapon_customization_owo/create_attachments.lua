@@ -144,10 +144,12 @@ function mod.owo_suppressor()
     local table_to_return = init_table_to_return("owo_suppressor")
 
     -- Double Cans
-    local suppressor_generic_sca = vector3_box(1.2, 1.8, 1.2)
-    local suppressor_generic_sca_slim = vector3_box(0.85, 1.8, 0.85)
-    local suppressor_generic_ac1_rot1 = vector3_box(0, 22, 0)
-    local suppressor_generic_ac1_rot2 = vector3_box(0, 17, 0)
+    local suppressor_double_pos_base = vector3_box(0, 0.45, 0.0)
+    local suppressor_double_pos_ac = vector3_box(0, -0.42, 0.0)
+    local suppressor_double_sca = vector3_box(1.2, 1.8, 1.2)
+    local suppressor_double_sca_slim = vector3_box(0.85, 1.8, 0.85)
+    local suppressor_double_ac1_rot1 = vector3_box(0, 22, 0)
+    local suppressor_double_ac1_rot2 = vector3_box(0, 17, 0)
     create_an_attachment(table_to_return, "owo_suppressor_01",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
             --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
@@ -160,7 +162,7 @@ function mod.owo_suppressor()
                 disable_in_ui = true,
                 offset = {
                     node = 1,
-                    position = vector3_box(0, 0, 0.0),
+                    position = suppressor_double_pos_base,
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1, 1),
                 },
@@ -171,9 +173,9 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0, 0.0, 0.0),
+                            position = suppressor_double_pos_ac,
                             rotation = vector3_box(0, 0, 0),
-                            scale = suppressor_generic_sca,
+                            scale = suppressor_double_sca,
                         },
                     },
                 },
@@ -182,9 +184,9 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0, 0.0, 0.0),
-                            rotation = suppressor_generic_ac1_rot1,
-                            scale = suppressor_generic_sca,
+                            position = suppressor_double_pos_ac,
+                            rotation = suppressor_double_ac1_rot1,
+                            scale = suppressor_double_sca,
                         },
                     },
                 },
@@ -203,7 +205,7 @@ function mod.owo_suppressor()
                 disable_in_ui = true,
                 offset = {
                     node = 1,
-                    position = vector3_box(0, 0, 0.0),
+                    position = suppressor_double_pos_base,
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1, 1),
                 },
@@ -214,9 +216,9 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0, 0.0, 0.0),
+                            position = suppressor_double_pos_ac,
                             rotation = vector3_box(0, 0, 0),
-                            scale = suppressor_generic_sca,
+                            scale = suppressor_double_sca,
                         },
                     },
                 },
@@ -225,9 +227,9 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0, 0.0, 0.0),
-                            rotation = suppressor_generic_ac1_rot2,
-                            scale = suppressor_generic_sca,
+                            position = suppressor_double_pos_ac,
+                            rotation = suppressor_double_ac1_rot2,
+                            scale = suppressor_double_sca,
                         },
                     },
                 },
@@ -247,7 +249,7 @@ function mod.owo_suppressor()
                 disable_in_ui = true,
                 offset = {
                     node = 1,
-                    position = vector3_box(0, 0, 0.0),
+                    position = suppressor_double_pos_base,
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1, 1),
                 },
@@ -258,9 +260,9 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.0, 0.0, 0.0),
+                            position = suppressor_double_pos_ac,
                             rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = suppressor_generic_sca_slim,
+                            scale = suppressor_double_sca_slim,
                         },
                     },
                 },
@@ -269,9 +271,9 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.0, 0.0, 0.0),
-                            rotation = suppressor_generic_ac1_rot1,
-                            scale = suppressor_generic_sca_slim,
+                            position = suppressor_double_pos_ac,
+                            rotation = suppressor_double_ac1_rot1,
+                            scale = suppressor_double_sca_slim,
                         },
                     },
                 },
@@ -290,7 +292,7 @@ function mod.owo_suppressor()
                 disable_in_ui = true,
                 offset = {
                     node = 1,
-                    position = vector3_box(0, 0, 0.0),
+                    position = suppressor_double_pos_base,
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1, 1),
                 },
@@ -301,9 +303,9 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.0, 0.0, 0.0),
+                            position = suppressor_double_pos_ac,
                             rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = suppressor_generic_sca_slim,
+                            scale = suppressor_double_sca_slim,
                         },
                     },
                 },
@@ -312,9 +314,9 @@ function mod.owo_suppressor()
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0, 0.0, 0.0),
-                            rotation = suppressor_generic_ac1_rot2,
-                            scale = suppressor_generic_sca_slim,
+                            position = suppressor_double_pos_ac,
+                            rotation = suppressor_double_ac1_rot2,
+                            scale = suppressor_double_sca_slim,
                         },
                     },
                 },
