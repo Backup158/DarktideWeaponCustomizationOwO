@@ -2,7 +2,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 
 mod:add_global_localize_strings({
     loc_extended_weapon_customization_owo = {
-        en = "EWC - Ostracized without Objection (OwO)",
+        en = "Ostracized without Objection (OwO)",
     },
 })
 
