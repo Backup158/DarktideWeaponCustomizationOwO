@@ -10,6 +10,9 @@ mod:add_global_localize_strings({
 	loc_owo_tactical_stock_telescoping_in = {
 		en = "Tactical Stock - Telescoping (Pushed in)",
 	},
+	loc_description_owo_tactical_stock_telescoping_in = {
+		en = "Tactical Stock - Telescoping (Pushed in)",
+	},
 	loc_owo_tactical_stock_folded_n_1 = {
 		en = "Tactical Stock - Folded (Natural, Left)",
 	},
