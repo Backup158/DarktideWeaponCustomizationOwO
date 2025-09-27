@@ -144,8 +144,8 @@ function mod.owo_suppressor()
     local table_to_return = init_table_to_return("owo_suppressor")
 
     -- Double Cans
-    local suppressor_double_pos_base = vector3_box(0, 0.45, 0.0)
-    local suppressor_double_pos_ac = vector3_box(0, -0.42, 0.0)
+    local suppressor_double_pos_base = vector3_box(0, 0.0, 0.0)
+    local suppressor_double_pos_ac = vector3_box(0, 0.0, 0.0)
     local suppressor_double_sca = vector3_box(1.2, 1.8, 1.2)
     local suppressor_double_sca_slim = vector3_box(0.85, 1.8, 0.85)
     local suppressor_double_ac1_rot1 = vector3_box(0, 22, 0)
