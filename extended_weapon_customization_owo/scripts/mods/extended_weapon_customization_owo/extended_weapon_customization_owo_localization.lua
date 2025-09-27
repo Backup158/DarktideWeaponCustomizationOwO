@@ -16,7 +16,7 @@ mod:add_global_localize_strings({
 	loc_owo_tactical_stock_folded_n_m = {
 		en = "Tactical Stock - Folded M (Natural, Left)",
 	},
-	loc_owo_tactical_stock_folded_n_m = {
+	loc_owo_tactical_stock_folded_n_u = {
 		en = "Tactical Stock - Folded (Natural, Under)",
 	},
 })
