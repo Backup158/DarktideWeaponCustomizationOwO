@@ -11,6 +11,7 @@ local pairs = pairs
 local table = table
 local table_insert = table.insert
 local table_clone = table.clone
+local table_merge_recursive = table.merge_recursive
 
 -- ################################
 -- Game Content Addresses
@@ -84,6 +85,13 @@ local function create_an_attachment(table_to_add_to, internal_name, attachment_d
             disable_vfx_spawner_exclusion = have_vfx
         }
     end
+end
+
+-- ######
+-- for use with hide { mesh = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }
+-- ######
+local function return_all_numbers_for_hide()
+    return {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 end
 
 -- ################################
