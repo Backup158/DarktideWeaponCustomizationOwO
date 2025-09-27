@@ -106,7 +106,7 @@ local render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
 function mod.probe_for_node(given_attachment_node)
     local attachment_node = given_attachment_node or "ap_stock_01"
     local attachment_group_name = "owo_TEST_ITEM"
-    local attachment_group_prefix = attachment_group_name.."_-_"
+    local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = init_table_to_return(attachment_group_name)
 
     for i = 1, 15 do
@@ -609,7 +609,7 @@ end
 function mod.owo_tactical_stock(given_attachment_node)
     local attachment_node = given_attachment_node or "ap_stock_01"
     local attachment_group_name = "owo_tactical_stock"
-    local attachment_group_prefix = attachment_group_name.."_-_"
+    local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = init_table_to_return(attachment_group_name)
 
     -- Skeletal Stock
@@ -708,7 +708,7 @@ function mod.owo_tactical_stock(given_attachment_node)
         attachment_node
     )
     -- Telescoping Stock
-    local telescoping_stock = attachment_group_prefix.."telescoping_(Pushed-in)"
+    local telescoping_stock = attachment_group_prefix.."telescoping_in"
     create_an_attachment(table_to_return, telescoping_stock,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..telescoping_stock,
@@ -801,7 +801,7 @@ function mod.owo_tactical_stock(given_attachment_node)
     -- Folded (Natural)
     local folded_stock_n_l_pos = vector3_box(0.0, -0.05, 0.0)
     local folded_stock_n_l_rot = vector3_box(0, 0, -176)
-    local folded_stock_n_1 = attachment_group_prefix.."folded_01_(Natural_-_Left)"
+    local folded_stock_n_1 = attachment_group_prefix.."folded_n_1"
     create_an_attachment(table_to_return, folded_stock_n_1,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_1,
@@ -827,7 +827,7 @@ function mod.owo_tactical_stock(given_attachment_node)
         -- DON'T FORGET THIS
         attachment_node
     )
-    local folded_stock_n_m = attachment_group_prefix.."folded_M_(Natural_-_Left)"
+    local folded_stock_n_m = attachment_group_prefix.."folded_n_m"
     create_an_attachment(table_to_return, folded_stock_n_m,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_m,
@@ -853,7 +853,7 @@ function mod.owo_tactical_stock(given_attachment_node)
         -- DON'T FORGET THIS
         attachment_node
     )
-    local folded_stock_n_u = attachment_group_prefix.."folded_03_(Natural_-_Under)"
+    local folded_stock_n_u = attachment_group_prefix.."folded_n_u"
     create_an_attachment(table_to_return, folded_stock_n_u,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_u,
