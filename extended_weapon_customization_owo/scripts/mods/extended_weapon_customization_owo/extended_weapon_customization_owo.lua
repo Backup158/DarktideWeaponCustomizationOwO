@@ -106,9 +106,10 @@ end
 --  relative_path: string; path to the file without the extension; e.g. "melee/autogun_gooning"
 -- RETURN: N/A
 -- ######
-local function load_mod_file(relative_path)
+function mod.load_mod_file(relative_path)
 	return mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
 end
+local load_mod_file = mod.load_mod_file
 
 -- ######
 -- Print if Debug
