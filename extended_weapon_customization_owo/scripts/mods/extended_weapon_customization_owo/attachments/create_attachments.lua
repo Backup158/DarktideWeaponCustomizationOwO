@@ -97,10 +97,11 @@ end
 function mod.for_all_weapon_models(range_end_inclusive, table_of_values_to_exclude, function_to_run)
     for i = 1, range_end_inclusive do
         -- if nothing needed to be excluded, or it's not one of the things to exclude
-        if not table_of_values_to_exclude or not table_contains(table_of_values_to_exclude, i) then
-            i = "0"..tostring(i)
-            function_to_run(i)
+        if table_of_values_to_exclude and table_contains(table_of_values_to_exclude, i) then
+            break
         end
+        i = "0"..tostring(i)
+        function_to_run(i)
     end
     -- Now for mastery item
     if not table_of_values_to_exclude or not table_contains(table_of_values_to_exclude, "ml01") then
