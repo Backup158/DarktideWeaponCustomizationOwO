@@ -231,7 +231,12 @@ local function copy_attachments_from_A_to_B(weapon_id_A, weapon_id_B)
         mod:error("No attachments found for "..weapon_id_A)
         return
     end
-    attachments_table_for_ewc.attachments[weapon_id_B] = table_clone(attachments_table_for_ewc.attachments[weapon_id_A])
+    -- If destination doesn't exist
+    if not attachments_table_for_ewc.attachments[weapon_id_B] then
+        attachments_table_for_ewc.attachments[weapon_id_B] = {}
+    end
+    table_merge_recursive(attachments_table_for_ewc.attachments[weapon_id_A], attachments_table_for_ewc.attachments[weapon_id_B])
+
 end
 
 -- ######
