@@ -62,6 +62,9 @@ end
 -- RETURN: N/A
 -- ######
 function mod.create_an_attachment(table_to_add_to, internal_name, attachment_data, fixes_data, kitbash_data, attachment_point)
+    if table_to_add_to.attachments[internal_name] then
+        mod:error(table_to_add_to.name.."; duplicate attachment: "..internal_name)
+    end
     table_to_add_to.attachments[internal_name] = table_clone(attachment_data)
     if fixes_data then
         table_merge_recursive(table_to_add_to.fixes, fixes_data)
