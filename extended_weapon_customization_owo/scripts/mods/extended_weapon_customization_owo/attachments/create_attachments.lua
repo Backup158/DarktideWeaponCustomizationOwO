@@ -889,3 +889,42 @@ function mod.owo_tactical_stock(given_attachment_node)
     return table_to_return
 
 end
+
+function mod.owo_flashlight()
+    local attachment_group_name = "owo_flashlight"
+    local attachment_group_prefix = attachment_group_name.."_"
+    local table_to_return = init_table_to_return(attachment_group_name)
+
+    local owo_green_flashlight = attachment_group_prefix.."owo_green_flashlight"
+    create_an_attachment(table_to_return, owo_green_flashlight,
+        -- Attachment
+        {   replacement_path = _item_ranged.."/flashlights/"..owo_green_flashlight,
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+            flashlight_template = "owo_green_flashlight",
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/flashlights/flashlight_05", 
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, 0.0, 0.0),
+                    rotation = vector3_box(0.0, 0.0, 0.0),
+                    scale = vector3_box(1.0, 1.0, 1.0)
+                },
+            },
+            children = {
+
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        "ap_flashlight_01"
+    )
+
+    return table_to_return
+
+end
