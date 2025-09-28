@@ -37,7 +37,7 @@ local create_an_attachment = mod.create_an_attachment
 function mod.KITBASH_ITEM()
     local attachment_group_name = "KITBASH_ITEM"
     local attachment_group_prefix = attachment_group_name.."_"
-    local table_to_return = init_table_to_return(attachment_group_name)
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
 
     create_an_attachment(table_to_return, attachment_group_prefix.."NAME",
         -- Attachment
