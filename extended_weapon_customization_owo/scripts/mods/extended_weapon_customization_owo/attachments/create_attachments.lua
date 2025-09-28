@@ -111,7 +111,12 @@ mod.render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
 -- ################################
 local load_mod_file = mod.load_mod_file
 
-load_mod_file("attachments/probe_for_node")
-load_mod_file("attachments/owo_suppressor")
-load_mod_file("attachments/owo_tactical_stock")
-load_mod_file("attachments/owo_flashlight")
+local attachment_names = {
+    "probe_for_node", 
+    "owo_suppressor", 
+    "owo_tactical_stock", 
+    "owo_flashlight",
+}
+for _, name in ipairs(attachment_names) do
+    load_mod_file("attachments/"..name)
+end
