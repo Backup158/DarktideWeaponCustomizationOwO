@@ -39,9 +39,10 @@ function mod.KITBASH_ITEM()
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
-    create_an_attachment(table_to_return, attachment_group_prefix.."NAME",
+    local shortname = attachment_group_prefix.."NAME"
+    create_an_attachment(table_to_return, shortname,
         -- Attachment
-        {   replacement_path = _item_ranged.."/muzzles/"..attachment_group_prefix.."NAME",
+        {   replacement_path = _item_ranged.."/muzzles/"..shortname,
             icon_render_unit_rotation_offset = {90, 0, 30},
             icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
         },
