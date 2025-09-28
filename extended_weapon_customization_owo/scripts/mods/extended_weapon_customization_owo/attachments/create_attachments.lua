@@ -104,7 +104,7 @@ function mod.for_all_weapon_models(range_end_inclusive, table_of_values_to_exclu
         if table_of_values_to_exclude and table_contains(table_of_values_to_exclude, i) then
             break
         end
-        i = "0"..tostring(i)
+        i = tostring(i)
         function_to_run(i)
     end
     -- Now for mastery item
