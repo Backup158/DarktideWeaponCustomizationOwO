@@ -1,7 +1,8 @@
+local vector3 = Vector3
 local vector3_box = Vector3Box
 
 return {
-    owo_green_flashlight = {
+    green_flashlight_01 = {
         light = {
             first_person = {
                 cast_shadows = true,
