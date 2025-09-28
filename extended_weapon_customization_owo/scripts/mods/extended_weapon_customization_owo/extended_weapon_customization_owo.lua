@@ -237,7 +237,7 @@ local function copy_attachments_from_A_to_B(weapon_id_A, weapon_id_B)
     if not attachments_table_for_ewc.attachments[weapon_id_B] then
         attachments_table_for_ewc.attachments[weapon_id_B] = {}
     end
-    table_merge_recursive(attachments_table_for_ewc.attachments[weapon_id_A], attachments_table_for_ewc.attachments[weapon_id_B])
+    table_merge_recursive(attachments_table_for_ewc.attachments[weapon_id_B], attachments_table_for_ewc.attachments[weapon_id_A])
 
 end
 
@@ -276,10 +276,10 @@ local function copy_attachments_to_siblings(first_mark_id)
     for i = 2, 3 do
         local weapon_id = string_gsub(first_mark_id, "1$", tostring(i))
         if string_is_key_in_table(weapon_id, WeaponTemplates) then
-            if debug_mode then mod:info("\t\tuwu Copying to sibling: "..first_mark_id.." --> "..weapon_id) end
+            info_if_debug("\t\tuwu Copying to sibling: "..first_mark_id.." --> "..weapon_id)
             copy_attachments_from_A_to_B(first_mark_id, weapon_id)
         else
-            if debug_mode then mod:info("\t\tuwu This is not a real weapon: "..weapon_id) end
+            info_if_debug("\t\tuwu This is not a real weapon: "..weapon_id)
         end
     end
 end
