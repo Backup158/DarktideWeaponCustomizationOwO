@@ -110,11 +110,12 @@ mod.render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
 -- Defining Attachment Functions
 -- ################################
 local load_mod_file = mod.load_mod_file
+local create_an_attachment = mod.create_an_attachment
 function mod.probe_for_node(given_attachment_node)
     local attachment_node = given_attachment_node or "ap_stock_01"
     local attachment_group_name = "owo_TEST_ITEM"
     local attachment_group_prefix = attachment_group_name.."_"
-    local table_to_return = init_table_to_return(attachment_group_name)
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
 
     for i = 1, 15 do
         local test_weapon_id = attachment_group_prefix..tostring(i)
@@ -153,7 +154,7 @@ function mod.owo_tactical_stock(given_attachment_node)
     local attachment_node = given_attachment_node or "ap_stock_01"
     local attachment_group_name = "owo_tactical_stock"
     local attachment_group_prefix = attachment_group_name.."_"
-    local table_to_return = init_table_to_return(attachment_group_name)
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
 
     -- Skeletal Stock
     local skeletal_stock = attachment_group_prefix.."skeletal"
@@ -430,7 +431,7 @@ end
 function mod.owo_flashlight()
     local attachment_group_name = "owo_flashlight"
     local attachment_group_prefix = attachment_group_name.."_"
-    local table_to_return = init_table_to_return(attachment_group_name)
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
 
     local owo_green_flashlight = attachment_group_prefix.."green_01"
     create_an_attachment(table_to_return, owo_green_flashlight,

@@ -29,6 +29,8 @@ local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_el
 local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
 local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 
+local create_an_attachment = mod.create_an_attachment
+
 -- ################################
 -- Attachment
 -- ################################
@@ -42,7 +44,7 @@ function mod.owo_suppressor()
     local suppressor_double_sca_slim = vector3_box(0.85, 1.8, 0.85)
     local suppressor_double_ac1_rot1 = vector3_box(0, 22, 0)
     local suppressor_double_ac1_rot2 = vector3_box(0, 17, 0)
-    mod.create_an_attachment(table_to_return, "owo_suppressor_01",
+    create_an_attachment(table_to_return, "owo_suppressor_01",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
             --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
@@ -86,7 +88,7 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-    mod.create_an_attachment(table_to_return, "owo_suppressor_02",
+    create_an_attachment(table_to_return, "owo_suppressor_02",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_02",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
@@ -129,7 +131,7 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-    mod.create_an_attachment(table_to_return, "owo_suppressor_01_slim",
+    create_an_attachment(table_to_return, "owo_suppressor_01_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01_slim",
             --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
@@ -173,7 +175,7 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-    mod.create_an_attachment(table_to_return, "owo_suppressor_02_slim",
+    create_an_attachment(table_to_return, "owo_suppressor_02_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_02_slim",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
@@ -225,7 +227,7 @@ function mod.owo_suppressor()
     local suppressor_pbs1_ac2_rot = vector3_box(0, 0, 180)
     local suppressor_pbs1_ac2_sca = vector3_box(0.36, 0.4, 0.36)
     local suppressor_pbs1_ac2_sca_slim = vector3_box(0.255, 0.4, 0.24)
-    mod.create_an_attachment(table_to_return, "owo_suppressor_03",
+    create_an_attachment(table_to_return, "owo_suppressor_03",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_03",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
@@ -268,7 +270,7 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-    mod.create_an_attachment(table_to_return, "owo_suppressor_03_slim",
+    create_an_attachment(table_to_return, "owo_suppressor_03_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_03_slim",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
@@ -321,7 +323,7 @@ function mod.owo_suppressor()
     local suppressor_metal_ac2_rot = vector3_box(0, 0, 0)
     local suppressor_metal_ac2_sca = vector3_box(1.2, 1.8, 1.2)
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
-    mod.create_an_attachment(table_to_return, "owo_suppressor_04",
+    create_an_attachment(table_to_return, "owo_suppressor_04",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_04",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
@@ -364,7 +366,7 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-    mod.create_an_attachment(table_to_return, "owo_suppressor_04_slim",
+    create_an_attachment(table_to_return, "owo_suppressor_04_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_04_slim",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
@@ -407,7 +409,7 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-    mod.create_an_attachment(table_to_return, "owo_suppressor_05",
+    create_an_attachment(table_to_return, "owo_suppressor_05",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_05",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
@@ -450,7 +452,7 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-    mod.create_an_attachment(table_to_return, "owo_suppressor_05_slim",
+    create_an_attachment(table_to_return, "owo_suppressor_05_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_05_slim",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
