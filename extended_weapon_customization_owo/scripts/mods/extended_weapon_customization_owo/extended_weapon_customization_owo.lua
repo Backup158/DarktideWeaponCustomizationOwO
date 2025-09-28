@@ -283,7 +283,7 @@ end
 load_mod_file("attachments/create_attachments")
 
 -- Creating Flashlights
-attachments_table_for_ewc.flashlight_templates = load_mod_file("attachments/owo_flashlights")
+attachments_table_for_ewc.flashlight_templates = load_mod_file("attachments/owo_flashlight_templates")
 
 -- ################################
 -- Adding Attachments
