@@ -37,10 +37,14 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
-    local flat_psword_scl = vector3_box(0.5, 1.0, 1.0)
-    local flat_psword_g_scl = vector3_box(0.6, 1.0, 1.0)
-    local slim_psword_scl = vector3_box(0.5, 0.65, 1.0)
-    local slim_psword_g_scl = vector3_box(0.6, 0.65, 1.0)
+    local flat_psword_scl = vector3_box(0.35, 1.0, 1.0)
+    local flat_psword_g_scl = vector3_box(0.5, 1.0, 1.0)
+    local slim_psword_scl = vector3_box(0.35, 0.65, 1.0)
+    local slim_psword_g_scl = vector3_box(0.5, 0.65, 1.0)
+    local flat_dclaw_scl = vector3_box(0.5, 1.0, 1.0)
+    local flat_dclaw_g_scl = vector3_box(0.6, 1.0, 1.0)
+    local slim_dclaw_scl = vector3_box(0.5, 0.65, 1.0)
+    local slim_dclaw_g_scl = vector3_box(0.6, 0.65, 1.0)
     local grip_scale = vector3_box(0.5, 1.0, 1.0)
     -- ------------------
     -- Power Sword Blades
