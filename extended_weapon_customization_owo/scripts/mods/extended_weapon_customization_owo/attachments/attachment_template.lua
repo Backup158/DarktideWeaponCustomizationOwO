@@ -43,8 +43,8 @@ function mod.KITBASH_ITEM()
     create_an_attachment(table_to_return, shortname,
         -- Attachment
         {   replacement_path = _item_ranged.."/muzzles/"..shortname,
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
         nil,
