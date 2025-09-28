@@ -64,6 +64,9 @@ local attachments_table_for_ewc = {
         }
         ]]
 	}, 
+    attachment_slots = {
+
+    },
 	fixes = {
 
 	},
@@ -277,7 +280,10 @@ end
 -- ATTACHMENT CREATION
 -- This needs to happen BEFORE all mods load, since that's when the base mod gets the tables from the plugins
 -- ###################################################################
-load_mod_file("create_attachments")
+load_mod_file("attachments/create_attachments")
+
+-- Creating Flashlights
+attachments_table_for_ewc.flashlight_templates = load_mod_file("attachments/owo_flashlights")
 
 -- ################################
 -- Adding Attachments
