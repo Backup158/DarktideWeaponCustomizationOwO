@@ -20,8 +20,8 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 
 -- Camera Angles for Preview
-local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
-local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
+local render_unit_rot_profile_left = mod.render_unit_rot_sword_blade
+local render_cam_pos_profile_left = mod.render_cam_pos_sword_blade
 
 local create_an_attachment = mod.create_an_attachment
 local for_all_weapon_models = mod.for_all_weapon_models
@@ -54,7 +54,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Kitbash
             {   item = _item_melee.."/blades/power_sword_blade_"..number_string,
                 fix = {
-                    disable_in_ui = true,
+                    disable_in_ui = false,
                     offset = {
                         node = 1,
                         position = vector3_box(0.0, 0.0, 0.0),
@@ -84,7 +84,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Kitbash
             {   item = _item_melee.."/blades/power_sword_blade_"..number_string,
                 fix = {
-                    disable_in_ui = true,
+                    disable_in_ui = false,
                     offset = {
                         node = 1,
                         position = vector3_box(0.0, 0.0, 0.0),
@@ -133,7 +133,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Kitbash
             {   item = _item_melee.."/blades/power_sword_blade_"..number_string,
                 fix = {
-                    disable_in_ui = true,
+                    disable_in_ui = false,
                     offset = {
                         node = 1,
                         position = vector3_box(0.0, 0.0, 0.0),
@@ -164,7 +164,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Kitbash
             {   item = _item_melee.."/blades/power_sword_blade_"..number_string,
                 fix = {
-                    disable_in_ui = true,
+                    disable_in_ui = false,
                     offset = {
                         node = 1,
                         position = vector3_box(0.0, 0.0, 0.0),
@@ -213,7 +213,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Kitbash
             {   item = _item_melee.."/blades/power_sword_blade_"..number_string,
                 fix = {
-                    disable_in_ui = true,
+                    disable_in_ui = false,
                     offset = {
                         node = 1,
                         position = vector3_box(0.0, 0.0, 0.0),
@@ -231,7 +231,6 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         )
     end)
     
-
     return table_to_return
 
 end
