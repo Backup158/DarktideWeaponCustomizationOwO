@@ -895,7 +895,7 @@ function mod.owo_flashlight()
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = init_table_to_return(attachment_group_name)
 
-    local owo_green_flashlight = attachment_group_prefix.."owo_green_flashlight"
+    local owo_green_flashlight = attachment_group_prefix.."green"
     create_an_attachment(table_to_return, owo_green_flashlight,
         -- Attachment
         {   replacement_path = _item_ranged.."/flashlights/"..owo_green_flashlight,
