@@ -129,6 +129,8 @@ local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_el
 -- Camera Angles for Preview
 mod.render_unit_rot_profile_left = {90, 0, 30}
 mod.render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
+mod.render_unit_rot_sword_blade = {90, 30, 0}
+mod.render_cam_pos_sword_blade = {-.025, -2.5, .7}
 
 -- ################################
 -- Defining Attachment Functions
