@@ -65,13 +65,26 @@ function mod.NORMAL_ITEM()
     create_an_attachment(table_to_return, "LALALALALA_NAME",
         -- Attachment
         {   replacement_path = _item_ranged.."/muzzles/LALALALALA_NAME",
-            icon_render_unit_rotation_offset = {90, 0, 30},
-            icon_render_camera_position_offset = {-0.2, -1.75, 0.15},
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
         nil,
         -- Kitbash
-        nil,
+        {   item = ITEM_TO_USE_ALALALLALA,
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, 0.0, 0.0),
+                    rotation = vector3_box(0.0, 0.0, 0.0),
+                    scale = vector3_box(1.0, 1.0, 1.0)
+                },
+            },
+            children = {
+
+            },
+        },,
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
         nil
