@@ -1,0 +1,313 @@
+local mod = get_mod("extended_weapon_customization_owo")
+
+-- ################################
+-- Local References for Performance
+-- ################################
+local vector3 = Vector3
+local vector3_box = Vector3Box
+
+-- ################################
+-- Game Content Addresses
+-- ################################
+local _item = "content/items/weapons/player"
+local _item_ranged = _item.."/ranged"
+local _item_melee = _item.."/melee"
+local _item_empty_trinket = _item.."/trinkets/unused_trinket"
+local _item_minion = "content/items/weapons/minions"
+
+-- ################################
+-- Some Variables for Common Attachments
+-- ################################
+local infantry_autogun_receivers = "autogun_rifle_receiver_01|autogun_rifle_receiver_ml01"
+local braced_autogun_receivers = "autogun_rifle_ak_receiver_01|autogun_rifle_ak_receiver_02|autogun_rifle_ak_receiver_03|autogun_rifle_ak_receiver_ml01"
+local vigilant_autogun_receivers = "autogun_rifle_killshot_receiver_01|autogun_rifle_killshot_receiver_02|autogun_rifle_killshot_receiver_03|autogun_rifle_killshot_receiver_04|autogun_rifle_killshot_receiver_ml01"
+local infantry_lasgun_receivers = "lasgun_rifle_receiver_01|lasgun_rifle_receiver_02|lasgun_rifle_receiver_03|lasgun_rifle_receiver_ml01"
+local helbore_lasgun_receivers = "lasgun_rifle_krieg_receiver_01|lasgun_rifle_krieg_receiver_02|lasgun_krieg_rifle_receiver_03|lasgun_rifle_krieg_receiver_04|lasgun_rifle_krieg_receiver_05|lasgun_krieg_rifle_receiver_06|lasgun_rifle_krieg_receiver_ml01"
+local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_elysian_rifle_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_elysian_rifle_receiver_06|lasgun_elysian_rifle_receiver_07|lasgun_rifle_elysian_receiver_ml01"
+
+-- Camera Angles for Preview
+local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
+local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
+
+local create_an_attachment = mod.create_an_attachment
+
+-- ################################
+-- Attachment
+-- ################################
+function mod.owo_tactical_stock(given_attachment_node)
+    local attachment_node = given_attachment_node or "ap_stock_01"
+    local attachment_group_name = "owo_tactical_stock"
+    local attachment_group_prefix = attachment_group_name.."_"
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
+
+    -- Skeletal Stock
+    local skeletal_stock = attachment_group_prefix.."skeletal"
+    create_an_attachment(table_to_return, skeletal_stock,
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..skeletal_stock,
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+        },
+        -- Fixes
+        {
+            -- Infantry Autogun
+            {   attachment_slot = "stock",
+                requirements = {
+                    stock = {
+                        has = skeletal_stock,
+                    },
+                    receiver = {
+                        has = infantry_autogun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.2, 0.024),
+                        scale = vector3_box(1, 1.95, 1),
+                    },
+                },
+            },
+            {   attachment_slot = "stock",
+                requirements = {
+                    stock = {
+                        has = skeletal_stock,
+                    },
+                    receiver = {
+                        has = helbore_lasgun_receivers,
+                    },
+                },
+                fix = {
+                    node = 3,
+                    offset = {
+                        position = vector3_box(0.0, -0.02, 1.3),
+                        rotation = vector3_box(0, 0, 0),
+                        scale = vector3_box(1, 1.95, 1),
+                    },
+                },
+            },
+            -- Filling in for Helbore
+            {   attachment_slot = "stock_ac1",
+                requirements = {
+                    stock = {
+                        has = skeletal_stock,
+                    },
+                    receiver = {
+                        has = helbore_lasgun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.0, -0.02),
+                        rotation = vector3_box(0, 0, 0),
+                        scale = vector3_box(0.35, 0.5, 0.65),
+                    },
+                },
+            },
+        },
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_02",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = false,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, 0.2, 0.01),
+                    rotation = vector3_box(0, 0, 0),
+                    scale = vector3_box(1, 1.95, 1),
+                },
+            },
+            children = {
+                -- Fills in the Helbore. disable otherwise
+                stock_ac1 = {
+                    item = _item_melee.."/heads/thunder_hammer_head_04",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = vector3_box(0, 0, 0),
+                            scale = vector3_box(0.0, 0.0, 0.0),
+                        },
+                    },
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        attachment_node
+    )
+    -- Telescoping Stock
+    local telescoping_stock = attachment_group_prefix.."telescoping_in"
+    create_an_attachment(table_to_return, telescoping_stock,
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..telescoping_stock,
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+        },
+        -- Fixes
+        {
+            -- Infantry Autogun
+            {   attachment_slot = "stock",
+                requirements = {
+                    stock = {
+                        has = telescoping_stock,
+                    },
+                    receiver = {
+                        has = infantry_autogun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.12, 0.015),
+                    },
+                },
+            },
+            --{   attachment_slot = "stock",
+            --    requirements = {
+            --        stock = {
+            --            has = telescoping_stock,
+            --        },
+            --        receiver = {
+            --            has = helbore_lasgun_receivers,
+            --        },
+            --    },
+            --    fix = {
+            --        offset = {
+            --            position = vector3_box(0.0, 0.1, 0.02),
+            --        },
+            --    },
+            --},
+            -- Filling in for Helbore
+            {   attachment_slot = "stock_ac1",
+                requirements = {
+                    stock = {
+                        has = telescoping_stock,
+                    },
+                    receiver = {
+                        has = helbore_lasgun_receivers,
+                    },
+                },
+                fix = {
+                    offset = {
+                        position = vector3_box(0.0, 0.0, -0.02),
+                        rotation = vector3_box(0, 0, 0),
+                        scale = vector3_box(0.35, 0.5, 0.65),
+                    },
+                },
+            },
+        },
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_05",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = false,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, 0.12, 0.0),
+                    rotation = vector3_box(0, 0.035, 0),
+                    scale = vector3_box(1, 1.0, 1),
+                },
+            },
+            children = {
+                -- Fills in the Helbore. disable otherwise
+                stock_ac1 = {
+                    item = _item_melee.."/heads/thunder_hammer_head_04",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = vector3_box(0, 0, 0),
+                            scale = vector3_box(0.0, 0.0, 0.0),
+                        },
+                    },
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        attachment_node
+    )
+    -- Folded (Natural)
+    local folded_stock_n_l_pos = vector3_box(0.0, -0.05, 0.0)
+    local folded_stock_n_l_rot = vector3_box(0, 0, -176)
+    local folded_stock_n_1 = attachment_group_prefix.."folded_n_1"
+    create_an_attachment(table_to_return, folded_stock_n_1,
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_1,
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = false,
+                offset = {
+                    node = 1,
+                    position = folded_stock_n_l_pos,
+                    rotation = folded_stock_n_l_rot,
+                    scale = vector3_box(1, 1.0, 1),
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        attachment_node
+    )
+    local folded_stock_n_m = attachment_group_prefix.."folded_n_m"
+    create_an_attachment(table_to_return, folded_stock_n_m,
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_m,
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = false,
+                offset = {
+                    node = 1,
+                    position = folded_stock_n_l_pos,
+                    rotation = folded_stock_n_l_rot,
+                    scale = vector3_box(1, 1.0, 1),
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        attachment_node
+    )
+    local folded_stock_n_u = attachment_group_prefix.."folded_n_u"
+    create_an_attachment(table_to_return, folded_stock_n_u,
+        -- Attachment
+        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_u,
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02",
+            -- item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = false,
+                offset = {
+                    node = 1,
+                    position = vector3_box(0.0, -0.03, 0.0),
+                    rotation = vector3_box(174, 0, 0),
+                    scale = vector3_box(2.52, 1.3, 1),
+                },
+            },
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        attachment_node
+    )
+
+    return table_to_return
+
+end
