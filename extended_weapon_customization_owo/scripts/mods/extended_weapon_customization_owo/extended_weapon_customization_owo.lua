@@ -107,7 +107,7 @@ end
 -- RETURN: N/A
 -- ######
 local function load_mod_file(relative_path)
-	mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
+	return mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
 end
 
 -- ######
@@ -280,10 +280,10 @@ end
 -- ATTACHMENT CREATION
 -- This needs to happen BEFORE all mods load, since that's when the base mod gets the tables from the plugins
 -- ###################################################################
-load_mod_file("attachments/create_attachments")
+created_attachments = load_mod_file("attachments/create_attachments")
 
--- Creating Flashlights
-attachments_table_for_ewc.flashlight_templates = load_mod_file("attachments/owo_flashlight_templates")
+-- Creating flashlight templates
+attachments_table_for_ewc["flashlight_templates"] = load_mod_file("attachments/owo_flashlight_templates")
 
 -- ################################
 -- Adding Attachments
