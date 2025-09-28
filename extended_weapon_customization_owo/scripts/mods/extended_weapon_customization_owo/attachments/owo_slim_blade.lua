@@ -96,11 +96,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                     requirements = {
                         current_slot_name = {
                             has = flat_psword,
-                        },
-                        grip = {
-                            -- not empty
-                            missing = "empty",
-                        },
+                        }, 
                     },
                     fix = {
                         offset = {
@@ -164,7 +160,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     end)
     -- Slim PSword (Grip)
     for_all_weapon_models(7, {4}, function(number_string)
-        local flat_psword = attachment_group_prefix.."flat_psword_g_"..number_string
+        local flat_psword = attachment_group_prefix.."slim_psword_g_"..number_string
         create_an_attachment(table_to_return, flat_psword,
             -- Attachment
             {   replacement_path = _item_melee.."/blades/"..flat_psword,
@@ -178,11 +174,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                     requirements = {
                         current_slot_name = {
                             has = flat_psword,
-                        },
-                        grip = {
-                            -- not empty
-                            missing = "empty",
-                        },
+                        }, 
                     },
                     fix = {
                         offset = {
@@ -263,11 +255,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                     requirements = {
                         current_slot_name = {
                             has = flat_dclaw,
-                        },
-                        grip = {
-                            -- not empty
-                            missing = "empty",
-                        },
+                        }, 
                     },
                     fix = {
                         offset = {
@@ -331,7 +319,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     end)
     -- Slim dclaw (Grip)
     for_all_weapon_models(8, nil, function(number_string)
-        local flat_dclaw = attachment_group_prefix.."flat_dclaw_g_"..number_string
+        local flat_dclaw = attachment_group_prefix.."slim_dclaw_g_"..number_string
         create_an_attachment(table_to_return, flat_dclaw,
             -- Attachment
             {   replacement_path = _item_melee.."/blades/"..flat_dclaw,
@@ -343,13 +331,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 -- Making grip smaller
                 {   attachment_slot = "grip",
                     requirements = {
-                        current_slot_name = {
+                        [current_slot_name] = {
                             has = flat_dclaw,
-                        },
-                        grip = {
-                            -- not empty
-                            missing = "empty",
-                        },
+                        }, 
                     },
                     fix = {
                         offset = {
