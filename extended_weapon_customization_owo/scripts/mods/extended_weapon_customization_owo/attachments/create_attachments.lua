@@ -10,6 +10,7 @@ local pairs = pairs
 --local string = string
 local table = table
 local table_insert = table.insert
+local table_contains = table.contains
 local table_clone = table.clone
 local table_merge_recursive = table.merge_recursive
 
