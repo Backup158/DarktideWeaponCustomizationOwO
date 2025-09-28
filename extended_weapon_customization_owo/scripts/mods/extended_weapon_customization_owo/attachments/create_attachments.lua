@@ -86,6 +86,29 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
 end
 
 -- ######
+-- For All Weapon Models
+-- DESCRIPTION: Use in a function for defining a group of attachments. The attachment definition function initializes a table, then this function adds an attachment (and optionally fixes and/or a kitbash) to it. The main thing is to avoid having to copypaste the name so many times, even though this is less performant
+--  kitbash key name is your item's name (in the replacement_path). using an existing one crashes, and if it just doesn't match the masteritems goes nuts in the console log
+-- PARAMETERS:
+--  table_to_add_to: table; the one to add to the attachments table in the base mod
+--  internal_name: string; attachment name used internally
+-- RETURN: N/A
+-- ######
+function mod.for_all_weapon_models(range_end_inclusive, table_of_values_to_exclude, function_to_run)
+    for i = 1, range_end_inclusive do
+        -- if nothing needed to be excluded, or it's not one of the things to exclude
+        if not table_of_values_to_exclude or not table_contains(table_of_values_to_exclude, i) then
+            i = "0"..tostring(i)
+            function_to_run(i)
+        end
+    end
+    -- Now for mastery item
+    if not table_of_values_to_exclude or not table_contains(table_of_values_to_exclude, "ml01") then
+        function_to_run("ml01")
+    end
+end
+
+-- ######
 -- for use with hide { mesh = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15} }
 -- ######
 function mod.return_all_numbers_for_hide()
