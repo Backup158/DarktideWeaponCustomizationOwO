@@ -1,4 +1,4 @@
-# 2025-09-UNRELEASED
+# 2025-09-29
 v4.0.0
 
 Initial release for the rebuilt version in Discord. Continuing the version count from the old plugin to keep git in order.
@@ -10,11 +10,14 @@ for the nerds
 - functions to copy over attachments to another weapon
     - used to propagate changes from mark to mark
     - and from family to family (ex ilas --> recon)
-- defining the attachment functions globally in another file
-    - worse performance but cleaner code
+- defining the attachment functions globally in separate files
+    - slightly worse performance but much cleaner code
     - at startup and it's only a few function calls
     - i'm sure the auto mark propagation is worse than this
     - esp the table search lol
+- function to execute a function for a range
+    - used to iterate through each mesh
+    - ex 8 power sword blades, so script runs it for 7 then the mastery one
 
 ## Added
 - Suppressors
