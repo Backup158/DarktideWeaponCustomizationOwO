@@ -48,10 +48,11 @@ if mod:get("owo_mode") then
 	localizations["mod_description"]["ru"] = "У меня в арсенале всего одна маленькая анальная пробка, так что мне явно нужно еще много времени, чтобы научиться комфортно принимать член"
 	localizations["debug_mode"]["en"] = "Debug M-m-mode *walks away*"
 	localizations["debug_mode_description"]["en"] = "V-Vewbose pwinting"
-	localizations["owo_mode"]["en"] = "OwO Mode"
+	localizations["owo_mode"]["en"] = "I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK I NEED COCK"
 	localizations["owo_mode_description"]["en"] = "UwUified ;;w;; descwiptions on the x3 mod options *whispers to self* page *twerks* >:3 Wequiwes a game westawt/wewoad (・`ω´・) to *looks at you* apply."
 	localizations["discord_mode_description"]["ru"] = "Меня заставили стать котом. Помогите Как выйти из этого порочного круга."
-	localizations["discord_mode_message"]["en"] = "Y-y-you *cries* have enyabwed Discord compatibiwity mode. Make suwe you have the x3 watest beta >w< weweases *huggles tightly* fow the xd base EWC mod (and Syn's Edits if you use it)?!?! These awe found in the x3 Darktide Modders Discord [https://discord.gg/rKYWtaDx4D], ;;w;; in the x3 pinnyed messages of the x3 #weapon-customization-mod channyew and the x3 Syndonyai's Edits thwead ÚwÚ in #cweation-showcase, wespectivewy. remembew *whispers to self* to *looks at you* westawt/wewoad (・`ω´・) the x3 game."
+	--localizations["discord_mode_message"]["en"] = "Y-y-you *cries* have enyabwed Discord compatibiwity mode. Make suwe you have the x3 watest beta >w< weweases *huggles tightly* fow the xd base EWC mod (and Syn's Edits if you use it)?!?! These awe found in the x3 Darktide Modders Discord [https://discord.gg/rKYWtaDx4D], ;;w;; in the x3 pinnyed messages of the x3 #weapon-customization-mod channyew and the x3 Syndonyai's Edits thwead ÚwÚ in #cweation-showcase, wespectivewy. remembew *whispers to self* to *looks at you* westawt/wewoad (・`ω´・) the x3 game."
+	localizations["discord_mode_message"]["en"] = "imaginye expecting *walks away* usefuw infowmation UwU f-f-fwom the x3 uwu bwothew fuckew wmao ^-^"
 end
 
 return localizations
