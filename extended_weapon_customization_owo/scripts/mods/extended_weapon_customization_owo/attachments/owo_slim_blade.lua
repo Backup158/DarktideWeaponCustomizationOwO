@@ -130,19 +130,19 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     -- "Devil's Claw" Blades
     -- ------------------
     -- Flat dclaw
-    for_all_weapon_models(8, nil, function(number_string)
+    for_all_weapon_models(7, nil, function(number_string)
         slim_blade_attach_helper(number_string, "flat_dclaw_", _item_melee.."/blades/combat_sword_blade_", flat_dclaw_scl)
     end)
     -- Flat dclaw (Grip)
-    for_all_weapon_models(8, nil, function(number_string)
+    for_all_weapon_models(7, nil, function(number_string)
         slim_blade_attach_helper(number_string, "flat_dclaw_g_", _item_melee.."/blades/combat_sword_blade_", {flat_dclaw_g_scl, grip_scale})
     end)
     -- Slim dclaw
-    for_all_weapon_models(8, nil, function(number_string)
+    for_all_weapon_models(7, nil, function(number_string)
         slim_blade_attach_helper(number_string, "slim_dclaw_", _item_melee.."/blades/combat_sword_blade_", slim_dclaw_scl)
     end)
     -- Slim dclaw (Grip)
-    for_all_weapon_models(8, nil, function(number_string)
+    for_all_weapon_models(7, nil, function(number_string)
         slim_blade_attach_helper(number_string, "slim_dclaw_g_", _item_melee.."/blades/combat_sword_blade_", {slim_dclaw_g_scl, grip_scale})
     end)
     
