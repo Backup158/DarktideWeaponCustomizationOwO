@@ -43,8 +43,8 @@ local localizations = {
 }
 
 if mod:get("owo_mode") then
-	localizations["mod_name"]["en"] = "Weapon Customization - OwO (O-ostwacized *runs away* without Objection >w<)"
-	localizations["mod_description"]["en"] = "Weapon Customization plugin adding vawious pawts, typicawwy inspiwed >w< by *whispers to self* histowicaw and tacticoow weapons."
+	localizations["mod_name"]["en"] = "EWC - OwO (O-ostwacized *runs away* without Objection >w<)"
+	localizations["mod_description"]["en"] = "E-extended Weapon >.> Customization plugin adding vawious pawts, typicawwy inspiwed >w< by *whispers to self* histowicaw and tacticoow weapons."
 	localizations["mod_description"]["ru"] = "У меня в арсенале всего одна маленькая анальная пробка, так что мне явно нужно еще много времени, чтобы научиться комфортно принимать член"
 	localizations["debug_mode"]["en"] = "Debug M-m-mode *walks away*"
 	localizations["debug_mode_description"]["en"] = "V-Vewbose pwinting"
