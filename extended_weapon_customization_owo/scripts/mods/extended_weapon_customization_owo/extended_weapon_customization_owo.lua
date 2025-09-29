@@ -167,7 +167,7 @@ end
 -- RETURN: N/A
 -- ######
 local function add_fixes_to_weapon(fixes_tables) 
-	if fixes_table then
+	if fixes_tables then
         for _, fix in ipairs(fixes_data) do
             table_insert(attachments_table_for_ewc.fixes, fix)
         end
