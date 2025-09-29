@@ -231,7 +231,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -274,7 +274,7 @@ function mod.owo_suppressor()
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         nil,
-        {   item = _item_empty_trinket, -- invisible base
+        {   item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", -- invisible base
             fix = {
                 disable_in_ui = true,
                 offset = {
