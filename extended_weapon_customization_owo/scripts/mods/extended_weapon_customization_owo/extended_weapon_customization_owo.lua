@@ -294,10 +294,11 @@ end
 -- ATTACHMENT CREATION
 -- This needs to happen BEFORE all mods load, since that's when the base mod gets the tables from the plugins
 -- ###################################################################
-load_mod_file("attachments/create_attachments")
-
 -- Creating flashlight templates
+--  Needs to happen first so the attachments can reference them
 attachments_table_for_ewc.flashlight_templates = table_clone(load_mod_file("attachments/owo_flashlight_templates"))
+
+load_mod_file("attachments/create_attachments")
 
 -- ################################
 -- Adding Attachments
