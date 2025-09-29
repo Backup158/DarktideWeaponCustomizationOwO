@@ -310,6 +310,7 @@ add_attachments_to_list_of_weapons(mod.owo_flashlight(), {"autogun_p1_m1", "auto
 add_attachments_to_list_of_weapons(mod.owo_slim_blade(), {"powersword_p1_m1", "powersword_p2_m1", }, "blade")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
 --table.dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
+
 -- ################################
 -- Manual Overrides for Attachments
 -- ################################
@@ -343,8 +344,10 @@ end
 for _, weapon_id in ipairs(siblings_to_add) do
     copy_attachments_to_siblings(weapon_id)
 end
-mod:info("uwu fuck you bitch")
+
+--mod:info("uwu fuck you bitch")
 --table.dump(attachments_table_for_ewc, "ALL THE FUCKING TABLE RAAAGH", 10)
+
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
 -- ################################
