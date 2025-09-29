@@ -300,8 +300,8 @@ add_attachments_to_list_of_weapons(mod.owo_suppressor(), {"autogun_p1_m1", "auto
 add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", }, "stock")
 add_attachments_to_list_of_weapons(mod.probe_for_node(), {"lasgun_p2_m1", }, "stock")
 add_attachments_to_list_of_weapons(mod.owo_flashlight(), {"lasgun_p3_m1", }, "flashlight")
-add_attachments_to_list_of_weapons(mod.owo_slim_blade(), {"powersword_p1_m1", "powersword_p2_m1", "combatsword_p1_m1", }, "blade")
-add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"combatsword_p2_m1", "combatsword_p3_m1", }, "body")
+add_attachments_to_list_of_weapons(mod.owo_slim_blade(), {"powersword_p1_m1", "powersword_p2_m1", }, "blade")
+add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
 
 -- ################################
 -- Manual Overrides for Attachments
