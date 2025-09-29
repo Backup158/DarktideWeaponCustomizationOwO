@@ -167,12 +167,14 @@ end
 -- RETURN: N/A
 -- ######
 local function add_fixes_to_weapon(fixes_tables) 
-	if fixes_tables then
-        for _, fix in ipairs(fixes_data) do
-            table_insert(attachments_table_for_ewc.fixes, fix)
-        end
-		--table_merge_recursive(attachments_table_for_ewc.fixes, fixes_tables)
+	if not fixes_tables then
+        info_if_debug("no fixes given")
+        return
     end
+    --[[for _, fix in ipairs(fixes_data) do
+        table_insert(attachments_table_for_ewc.fixes, fix)
+    end]]
+    table_merge_recursive(attachments_table_for_ewc.fixes, fixes_tables)
 end
 
 -- ######
