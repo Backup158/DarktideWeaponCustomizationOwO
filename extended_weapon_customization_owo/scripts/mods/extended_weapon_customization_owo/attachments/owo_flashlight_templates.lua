@@ -6,7 +6,7 @@ return {
         light = {
             first_person = {
                 cast_shadows = true,
-                color_temperature = 5000,
+                color_temperature = 7300,
                 ies_profile = "content/environment/ies_profiles/narrow/flashlight_custom_01",
                 intensity = 6,
                 spot_reflector = false,
@@ -23,7 +23,7 @@ return {
             },
             third_person = {
                 cast_shadows = true,
-                color_temperature = 5000,
+                color_temperature = 7300,
                 ies_profile = "content/environment/ies_profiles/narrow/flashlight_custom_01",
                 intensity = 6,
                 spot_reflector = false,
