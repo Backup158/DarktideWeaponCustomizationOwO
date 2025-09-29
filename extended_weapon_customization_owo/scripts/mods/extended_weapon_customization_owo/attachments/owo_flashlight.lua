@@ -50,20 +50,7 @@ function mod.owo_flashlight()
         -- Fixes
         nil,
         -- Kitbash
-        {   item = _item_ranged.."/flashlights/flashlight_05", 
-            fix = {
-                disable_in_ui = true,
-                offset = {
-                    node = 1,
-                    position = vector3_box(0.0, 0.0, 0.0),
-                    rotation = vector3_box(0.0, 0.0, 0.0),
-                    scale = vector3_box(1.0, 1.0, 1.0)
-                },
-            },
-            children = {
-
-            },
-        },
+        nil,
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
         "ap_flashlight_01"

@@ -73,7 +73,33 @@ local attachments_table_for_ewc = {
 
 	},
 	kitbashs = {
-		
+		["owo_flashlight_green_01"] = {   is_fallback_item = false,
+            show_in_1p = true,
+            base_unit = "content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02",
+            item_list_faction = "Player",
+            tags = {
+            },
+            only_show_in_1p = false,
+            feature_flags = {
+                "FEATURE_item_retained",
+            },
+            attach_node = "ap_flashlight_01",
+            resource_dependencies = {
+                ["content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02"] = true,
+            },
+            attachments = {
+                zzz_shared_material_overrides = {
+                    item = "",
+                    children = {},
+                },
+            },
+            workflow_checklist = {
+            },
+            display_name = "n/a",
+            name = "content/items/weapons/player/ranged/flashlights/owo_flashlight_green_01",
+            workflow_state = "RELEASABLE",
+            is_full_item = true
+        }
 	}
 }
 
@@ -305,7 +331,7 @@ load_mod_file("attachments/create_attachments")
 -- ################################
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), {"autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", }, "muzzle")
 add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", }, "stock")
-add_attachments_to_list_of_weapons(mod.probe_for_node(), {"lasgun_p2_m1", }, "stock")
+--add_attachments_to_list_of_weapons(mod.probe_for_node(), {"lasgun_p2_m1", }, "stock")
 add_attachments_to_list_of_weapons(mod.owo_flashlight(), {"autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", }, "flashlight")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade(), {"powersword_p1_m1", "powersword_p2_m1", }, "blade")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
