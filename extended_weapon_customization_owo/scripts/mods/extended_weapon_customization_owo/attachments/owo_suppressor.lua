@@ -46,7 +46,6 @@ function mod.owo_suppressor()
     local suppressor_double_ac1_rot2 = vector3_box(0, 17, 0)
     create_an_attachment(table_to_return, "owo_suppressor_01",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01",
-            --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
@@ -133,7 +132,6 @@ function mod.owo_suppressor()
     )
     create_an_attachment(table_to_return, "owo_suppressor_01_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01_slim",
-            --replacement_path = _item_ranged.."/muzzles/lasgun_rifle_krieg_muzzle_02",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
