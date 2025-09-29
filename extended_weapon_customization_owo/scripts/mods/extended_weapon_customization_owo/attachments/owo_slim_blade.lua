@@ -48,7 +48,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local slim_dclaw_g_scl = vector3_box(0.6, 0.65, 1.0)
     local grip_scale = vector3_box(0.5, 1.0, 1.0)
 
-    local function psword_attach_helper(number_string, name_to_use, base_item_address, scales_table)
+    local function slim_blade_attach_helper(number_string, name_to_use, base_item_address, scales_table)
         local flat_psword = attachment_group_prefix..name_to_use..number_string
         local fixes_to_add = nil
         if type(scales_table) == "table" and scales_table[2] then
@@ -112,178 +112,38 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     -- ------------------
     -- Flat PSword
     for_all_weapon_models(7, {4}, function(number_string)
-        psword_attach_helper(number_string, "flat_psword_", _item_melee.."/blades/power_sword_blade_", flat_psword_scl)
+        slim_blade_attach_helper(number_string, "flat_psword_", _item_melee.."/blades/power_sword_blade_", flat_psword_scl)
     end)
     -- Flat PSword (Grip)
     for_all_weapon_models(7, {4}, function(number_string)
-        psword_attach_helper(number_string, "flat_psword_g_", _item_melee.."/blades/power_sword_blade_", {flat_psword_g_scl, grip_scale})
+        slim_blade_attach_helper(number_string, "flat_psword_g_", _item_melee.."/blades/power_sword_blade_", {flat_psword_g_scl, grip_scale})
     end)
     -- Slim PSword
     for_all_weapon_models(7, {4}, function(number_string)
-        psword_attach_helper(number_string, "slim_psword_", _item_melee.."/blades/power_sword_blade_", slim_psword_scl)
+        slim_blade_attach_helper(number_string, "slim_psword_", _item_melee.."/blades/power_sword_blade_", slim_psword_scl)
     end)
     -- Slim PSword (Grip)
     for_all_weapon_models(7, {4}, function(number_string)
-        psword_attach_helper(number_string, "slim_psword_g_", _item_melee.."/blades/power_sword_blade_", {slim_psword_g_scl, grip_scale})
+        slim_blade_attach_helper(number_string, "slim_psword_g_", _item_melee.."/blades/power_sword_blade_", {slim_psword_g_scl, grip_scale})
     end)
     -- ------------------
     -- "Devil's Claw" Blades
     -- ------------------
     -- Flat dclaw
     for_all_weapon_models(8, nil, function(number_string)
-        local flat_dclaw = attachment_group_prefix.."flat_dclaw_"..number_string
-        create_an_attachment(table_to_return, flat_dclaw,
-            -- Attachment
-            {   replacement_path = _item_melee.."/blades/"..flat_dclaw,
-                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-                icon_render_camera_position_offset = render_cam_pos_profile_left,
-            },
-            -- Fixes
-            nil,
-            -- Kitbash
-            {   item = _item_melee.."/blades/combat_sword_blade_"..number_string,
-                fix = {
-                    disable_in_ui = false,
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.0, 0.0, 0.0),
-                        rotation = vector3_box(0.0, 0.0, 0.0),
-                        scale = flat_dclaw_scl
-                    },
-                },
-                children = {
-                    
-                },
-            },
-            -- ATTACHMENT NODE 
-            -- DON'T FORGET THIS
-            current_attachment_node
-        )
+        slim_blade_attach_helper(number_string, "flat_dclaw_", _item_melee.."/blades/combat_sword_blade_", flat_dclaw_scl)
     end)
     -- Flat dclaw (Grip)
     for_all_weapon_models(8, nil, function(number_string)
-        local flat_dclaw = attachment_group_prefix.."flat_dclaw_g_"..number_string
-        create_an_attachment(table_to_return, flat_dclaw,
-            -- Attachment
-            {   replacement_path = _item_melee.."/blades/"..flat_dclaw,
-                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-                icon_render_camera_position_offset = render_cam_pos_profile_left,
-            },
-            -- Fixes
-            {
-                -- Making grip smaller
-                {   attachment_slot = "grip",
-                    requirements = {
-                        current_slot_name = {
-                            has = flat_dclaw,
-                        }, 
-                    },
-                    fix = {
-                        offset = {
-                            position = vector3_box(0.0, 0.0, 0.0),
-                            rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = grip_scale
-                        },
-                    },
-                },
-            },
-            -- Kitbash
-            {   item = _item_melee.."/blades/combat_sword_blade_"..number_string,
-                fix = {
-                    disable_in_ui = false,
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.0, 0.0, 0.0),
-                        rotation = vector3_box(0.0, 0.0, 0.0),
-                        scale = flat_dclaw_g_scl
-                    },
-                },
-                children = {
-                    
-                },
-            },
-            -- ATTACHMENT NODE 
-            -- DON'T FORGET THIS
-            current_attachment_node
-        )
+        slim_blade_attach_helper(number_string, "flat_dclaw_g_", _item_melee.."/blades/combat_sword_blade_", {flat_dclaw_g_scl, grip_scale})
     end)
     -- Slim dclaw
     for_all_weapon_models(8, nil, function(number_string)
-        local slim_dclaw = attachment_group_prefix.."slim_dclaw_"..number_string
-        create_an_attachment(table_to_return, slim_dclaw,
-            -- Attachment
-            {   replacement_path = _item_melee.."/blades/"..slim_dclaw,
-                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-                icon_render_camera_position_offset = render_cam_pos_profile_left,
-            },
-            -- Fixes
-            nil,
-            -- Kitbash
-            {   item = _item_melee.."/blades/combat_sword_blade_"..number_string,
-                fix = {
-                    disable_in_ui = false,
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.0, 0.0, 0.0),
-                        rotation = vector3_box(0.0, 0.0, 0.0),
-                        scale = slim_dclaw_scl
-                    },
-                },
-                children = {
-                    
-                },
-            },
-            -- ATTACHMENT NODE 
-            -- DON'T FORGET THIS
-            current_attachment_node
-        )
+        slim_blade_attach_helper(number_string, "slim_dclaw_", _item_melee.."/blades/combat_sword_blade_", slim_dclaw_scl)
     end)
     -- Slim dclaw (Grip)
     for_all_weapon_models(8, nil, function(number_string)
-        local flat_dclaw = attachment_group_prefix.."slim_dclaw_g_"..number_string
-        create_an_attachment(table_to_return, flat_dclaw,
-            -- Attachment
-            {   replacement_path = _item_melee.."/blades/"..flat_dclaw,
-                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-                icon_render_camera_position_offset = render_cam_pos_profile_left,
-            },
-            -- Fixes
-            {
-                -- Making grip smaller
-                {   attachment_slot = "grip",
-                    requirements = {
-                        blade = {
-                            has = flat_dclaw,
-                        }, 
-                    },
-                    fix = {
-                        offset = {
-                            position = vector3_box(0.0, 0.0, 0.0),
-                            rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = grip_scale
-                        },
-                    },
-                },
-            },
-            -- Kitbash
-            {   item = _item_melee.."/blades/combat_sword_blade_"..number_string,
-                fix = {
-                    disable_in_ui = false,
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.0, 0.0, 0.0),
-                        rotation = vector3_box(0.0, 0.0, 0.0),
-                        scale = slim_dclaw_g_scl
-                    },
-                },
-                children = {
-                    
-                },
-            },
-            -- ATTACHMENT NODE 
-            -- DON'T FORGET THIS
-            current_attachment_node
-        )
+        slim_blade_attach_helper(number_string, "slim_dclaw_g_", _item_melee.."/blades/combat_sword_blade_", {slim_dclaw_g_scl, grip_scale})
     end)
     
     return table_to_return
