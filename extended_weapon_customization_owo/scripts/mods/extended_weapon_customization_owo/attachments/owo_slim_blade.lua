@@ -49,18 +49,23 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local grip_scale = vector3_box(0.5, 1.0, 1.0)
 
     local function slim_blade_attach_helper(number_string, name_to_use, base_item_address, scales_table)
-        local flat_psword = attachment_group_prefix..name_to_use..number_string
+        local slim_blade_name = attachment_group_prefix..name_to_use..number_string
         local fixes_to_add = nil
         if type(scales_table) == "table" and scales_table[2] then
             fixes_to_add = {
                 -- Making grip smaller
                 {   attachment_slot = "grip",
                     requirements = {
-                        current_slot_name = {
-                            has = flat_psword,
-                        }, 
+                        [current_slot_name] = {
+                            has = slim_blade_name,
+                        },
+                        grip = {
+                            has = "power_sword_grip_01|power_sword_grip_02|power_sword_grip_03|power_sword_grip_04|power_sword_grip_05|power_sword_grip_06|power_sword_grip_ml01"
+                            --missing = "empty",
+                        },
                     },
                     fix = {
+                        disable_in_ui = false,
                         offset = {
                             position = vector3_box(0.0, 0.0, 0.0),
                             rotation = vector3_box(0.0, 0.0, 0.0),
@@ -79,9 +84,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 blade_scale = scales_table -- in case i get lazy and don tmake it a table
             end
         end
-        create_an_attachment(table_to_return, flat_psword,
+        create_an_attachment(table_to_return, slim_blade_name,
             -- Attachment
-            {   replacement_path = _item_melee.."/blades/"..flat_psword,
+            {   replacement_path = _item_melee.."/blades/"..slim_blade_name,
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
             },
