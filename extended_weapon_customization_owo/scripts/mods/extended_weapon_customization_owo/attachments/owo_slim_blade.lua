@@ -150,7 +150,8 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     for_all_weapon_models(7, nil, function(number_string)
         slim_blade_attach_helper(number_string, "slim_dclaw_g_", _item_melee.."/blades/combat_sword_blade_", {slim_dclaw_g_scl, grip_scale})
     end)
-    
+    mod:info("uwu fuck you bitch")
+    --table.dump(table_to_return.fixes, "slim fixes", 6)
     return table_to_return
 
 end

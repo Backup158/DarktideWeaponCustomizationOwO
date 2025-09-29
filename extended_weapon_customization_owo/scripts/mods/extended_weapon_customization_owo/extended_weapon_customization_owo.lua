@@ -168,7 +168,10 @@ end
 -- ######
 local function add_fixes_to_weapon(fixes_tables) 
 	if fixes_table then
-		table_merge_recursive(attachments_table_for_ewc.fixes, fixes_tables)
+        for _, fix in ipairs(fixes_data) do
+            table_insert(attachments_table_for_ewc.fixes, fix)
+        end
+		--table_merge_recursive(attachments_table_for_ewc.fixes, fixes_tables)
     end
 end
 
@@ -215,6 +218,7 @@ end
 local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
     for _, weapon_id in ipairs(weapons_list) do
         -- info_if_debug("Adding attachments to "..weapon_id)
+        --table.dump(attachment_blob, "THE BLOB", 9)
         add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     end
 end
@@ -302,7 +306,7 @@ add_attachments_to_list_of_weapons(mod.probe_for_node(), {"lasgun_p2_m1", }, "st
 add_attachments_to_list_of_weapons(mod.owo_flashlight(), {"lasgun_p3_m1", }, "flashlight")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade(), {"powersword_p1_m1", "powersword_p2_m1", }, "blade")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
-
+--table.dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
 -- ################################
 -- Manual Overrides for Attachments
 -- ################################
@@ -336,7 +340,8 @@ end
 for _, weapon_id in ipairs(siblings_to_add) do
     copy_attachments_to_siblings(weapon_id)
 end
-
+mod:info("uwu fuck you bitch")
+--table.dump(attachments_table_for_ewc, "ALL THE FUCKING TABLE RAAAGH", 10)
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
 -- ################################

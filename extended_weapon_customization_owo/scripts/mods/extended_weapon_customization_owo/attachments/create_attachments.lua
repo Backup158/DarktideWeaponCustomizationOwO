@@ -67,7 +67,10 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
     end
     table_to_add_to.attachments[internal_name] = table_clone(attachment_data)
     if fixes_data then
-        table_merge_recursive(table_to_add_to.fixes, fixes_data)
+        for _, fix in ipairs(fixes_data) do
+            table_insert(table_to_add_to.fixes, fix)
+        end
+        --table_merge_recursive(table_to_add_to.fixes, fixes_data)
     end
     if kitbash_data then
         -- Allows VFX to play, if it's a muzzle/barrel
