@@ -49,7 +49,7 @@ function mod.owo_flashlight()
             -- 1 for each physical model
             for_all_weapon_models(5, {"ml01"}, function(i)
                 -- ex owo_flashlight_blue_narrow_01
-                local owo_colored_flashlight = attachment_group_prefix..color.."_"..template_suffix.."_0"..i
+                local owo_colored_flashlight = attachment_group_prefix..color.."_"..template_suffix.."_"..i
                 create_an_attachment(table_to_return, owo_colored_flashlight,
                     -- Attachment
                     {   replacement_path = _item_ranged.."/flashlights/"..owo_colored_flashlight,
