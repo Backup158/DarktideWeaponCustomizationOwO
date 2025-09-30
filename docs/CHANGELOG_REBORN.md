@@ -4,6 +4,15 @@ v4.1.0
 ## Added
 - Flashlight
     - Variants for each flashlight model per color
+    - Added a bunch of colors: green, red, blue, cyan, magenta, yellow, pink
+    - Added 4 variants for size and stuff
+        - narrow: what I used last time for `owo_flashlight_green_01`
+        - narrow cool: same but lower color temperature
+        - weak: wider and shorter beam, with cooler temperature
+        - default: copying the default flashlight template, so just color is different
+    - this makes 180 flashlights :3
+    - good luck babe
+
 
 ## Developer talk
 - Merged redundent functions into more generic functions
