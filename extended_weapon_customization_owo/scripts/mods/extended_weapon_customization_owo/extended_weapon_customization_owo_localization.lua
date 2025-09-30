@@ -32,7 +32,7 @@ local localizations = {
 		-- ru = "Настройка оружия - пизда",
 	},
 	mod_description = {
-		en = "Weapon Customization plugin adding various parts, typically inspired by historical and tacticool weapons.",
+		en = "Extended Weapon Customization plugin adding various parts, typically inspired by historical and tacticool weapons.",
 		["zh-cn"] = "为武器自定义扩展插件添加各种附件,这些附件受史实武器及tacticool启发",
 		ru = "Если кто-то присылает вам «UwU», не ломайте себе голову в поиске ответа, пытаясь понять, что вообще это означает. Это слово нельзя расшифровать по буквам. Вместо этого термин используется, как эмодзи для обозначения реакции на что-то милое или радующее вас. Представьте картину милого котёнка, который залез с лапками в блюдце с молоком. Это так мило, что почти отвратительно, и ваша первая реакция, скорее всего, «Ой! Как восхитительно» или «UwU», что произносится как «ooh woo».",
 	},
@@ -78,8 +78,10 @@ if mod:get("owo_mode") then
 	localizations["debug_mode_description"]["en"] = "V-Vewbose pwinting"
 	localizations["owo_mode"]["en"] = "Notices Buldge OWO what's this?"
 	localizations["owo_mode_description"]["en"] = "UwUified ;;w;; descwiptions on the x3 mod options *whispers to self* page *twerks* >:3 Wequiwes a game westawt/wewoad (・`ω´・) to *looks at you* apply."
+	localizations["discord_mode"]["en"] = "discord kitten mode uwu"
+	localizations["discord_mode_description"]["en"] = ":3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 "
 	localizations["discord_mode_description"]["ru"] = "Меня заставили стать котом. Помогите Как выйти из этого порочного круга."
-	localizations["discord_mode_message"]["en"] = "Y-y-you *cries* have enyabwed Discord compatibiwity mode. Make suwe you have the x3 watest beta >w< weweases *huggles tightly* fow the xd base EWC mod (and Syn's Edits if you use it)?!?! These awe found in the x3 Darktide Modders Discord [https://discord.gg/rKYWtaDx4D], ;;w;; in the x3 pinnyed messages of the x3 #weapon-customization-mod channyew and the x3 Syndonyai's Edits thwead ÚwÚ in #cweation-showcase, wespectivewy. remembew *whispers to self* to *looks at you* westawt/wewoad (・`ω´・) the x3 game."
+	localizations["discord_mode_message"]["en"] = "imaginye expecting *walks away* usefuw infowmation UwU f-f-fwom the x3 uwu bwothew fuckew wmao ^-^"
 end
 
 return localizations
