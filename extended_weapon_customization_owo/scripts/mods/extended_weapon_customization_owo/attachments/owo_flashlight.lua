@@ -45,7 +45,7 @@ function mod.owo_flashlight()
     local flashlight_colors = mod.flashlight_colors
     
     for color, _ in pairs(flashlight_colors) do
-        for template_suffix, _ in ipairs(table_of_template_endings) do
+        for _, template_suffix in ipairs(table_of_template_endings) do
             -- 1 for each physical model
             for_all_weapon_models(5, {"ml01"}, function(i)
                 -- ex owo_flashlight_blue_narrow_01
