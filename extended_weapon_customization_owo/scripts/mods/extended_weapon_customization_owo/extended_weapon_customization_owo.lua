@@ -157,7 +157,8 @@ end
 -- Merge Recursive (Safe)
 -- DESCRIPTION: Checks for source and destination at first
 -- PARAMETERS: 
---  fixes_table: table of tables
+--  destination_table: table
+--  source_table: table
 -- RETURN: N/A
 -- ######
 function mod.merge_recursive_safe(destination_table, source_table) 
@@ -180,9 +181,10 @@ local merge_recursive_safe = mod.merge_recursive_safe
 
 -- ######
 -- Table Insert All from Table
--- DESCRIPTION: Checks for source and destination at first
+-- DESCRIPTION: Checks for source and destination at first, then inserts each value w/ unspecified key
 -- PARAMETERS: 
---  fixes_table: table of tables
+--  destination_table: table
+--  source_table: table
 -- RETURN: N/A
 -- ######
 function mod.table_insert_all_from_table(destination_table, source_table)
