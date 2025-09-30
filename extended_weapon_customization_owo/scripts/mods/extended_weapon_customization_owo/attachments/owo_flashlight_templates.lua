@@ -13,12 +13,13 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
         mod:info(template_name.." exists in flashlight templates. overwriting >:3")
     end
 
+    -- fallback to default template in `scripts/settings/equipment/flashlight_templates.lua`
     flashlight_templates_to_return[template_name] = {
         light = {
             first_person = {
                 cast_shadows = true,
                 color_temperature = table_of_values_to_use.color_temperature or 8000,
-                ies_profile = "content/environment/ies_profiles/narrow/flashlight_custom_01",
+                ies_profile = table_of_values_to_use.ies_profile or "content/environment/ies_profiles/narrow/flashlight_custom_01",
                 intensity = table_of_values_to_use.intensity or 12,
                 spot_reflector = false,
                 volumetric_intensity = 0.1,
@@ -35,7 +36,7 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
             third_person = {
                 cast_shadows = true,
                 color_temperature = table_of_values_to_use.color_temperature or 8000,
-                ies_profile = "content/environment/ies_profiles/narrow/flashlight_custom_01",
+                ies_profile = table_of_values_to_use.ies_profile or "content/environment/ies_profiles/narrow/flashlight_custom_01",
                 intensity = table_of_values_to_use.intensity or 12,
                 spot_reflector = false,
                 volumetric_intensity = 0.6,
