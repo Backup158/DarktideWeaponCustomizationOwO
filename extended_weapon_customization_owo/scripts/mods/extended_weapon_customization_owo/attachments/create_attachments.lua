@@ -14,6 +14,9 @@ local table_contains = table.contains
 local table_clone = table.clone
 local table_merge_recursive = table.merge_recursive
 
+local merge_recursive_safe = mod.merge_recursive_safe
+local table_insert_all_in_table = mod.table_insert_all_in_table
+
 -- ################################
 -- Game Content Addresses
 -- ################################
@@ -68,13 +71,9 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
         table_to_add_to.attachments[internal_name] = attachment_data
     end
 
-    if fixes_data then
-        for _, fix in ipairs(fixes_data) do
-            table_insert(table_to_add_to.fixes, fix)
-        end
-        --table_merge_recursive(table_to_add_to.fixes, fixes_data)
-    end
-    
+    -- merge recursive fine because this table is empty
+    merge_recursive_safe(table_to_add_to.fixes, fixes_data)
+
     if kitbash_data then
         --if kitbash_data.base_unit then
         --    mod:echo(attachment_data.replacement_path)

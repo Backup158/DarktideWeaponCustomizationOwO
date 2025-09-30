@@ -4,7 +4,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- DATA
 -- ###################################################################
 -- Prints a message to the console log containing the current version number
-mod.version = "4.0.0"
+mod.version = "4.1.0"
 mod:info('v' .. mod.version .. ' loaded uwu nya :3')
 
 -- Discord mode
@@ -22,6 +22,7 @@ local vector3_box = Vector3Box
 ]]
 
 local pairs = pairs
+local type = type
 local string = string
 local string_sub = string.sub
 local string_gsub = string.gsub
@@ -164,7 +165,7 @@ end
 --  slot: string
 -- RETURN: N/A
 -- ######
-local function add_attachment_to_weapon(attachment_tables, weapon_id, slot) 
+local function add_attachment_to_weapon_in_final_table(attachment_tables, weapon_id, slot) 
 	for attachment_id, attachment_models in pairs(attachment_tables) do
         -- Creates table keys if they don't exist
         if not attachments_table_for_ewc.attachments[weapon_id] then
@@ -186,37 +187,50 @@ local function add_attachment_to_weapon(attachment_tables, weapon_id, slot)
 end
 
 -- ######
--- Add Fixes to Weapon
--- DESCRIPTION: Given a table of fixes, insert them into the table to send back to the base mod later
+-- Merge Recursive (Safe)
+-- DESCRIPTION: Checks for source and destination at first
 -- PARAMETERS: 
 --  fixes_table: table of tables
 -- RETURN: N/A
 -- ######
-local function add_fixes_to_weapon(fixes_tables) 
-	if not fixes_tables then
-        info_if_debug("no fixes given")
+function mod.merge_recursive_safe(destination_table, source_table) 
+	if not source_table then
+        info_if_debug("no source given")
+        return
+    elseif not type(source_table) == "table" then
+        info_if_debug("source is not table")
         return
     end
-    --[[for _, fix in ipairs(fixes_data) do
-        table_insert(attachments_table_for_ewc.fixes, fix)
-    end]]
-    table_merge_recursive(attachments_table_for_ewc.fixes, fixes_tables)
-end
 
--- ######
--- Add Kitbashes to Weapon
--- DESCRIPTION: Given a table of kitbashes, insert them into the table to send back to the base mod later
--- PARAMETERS: 
---  kitbash_tables: table of (string, table) pairs
--- RETURN: N/A
--- ######
-local function add_kitbashes_to_weapon(kitbash_tables) 
-	for kitbash_key, kitbash_table in pairs(kitbash_tables) do
-        if not attachments_table_for_ewc.kitbashs[kitbash_key] then
-		    attachments_table_for_ewc.kitbashs[kitbash_key] = kitbash_table
-        end
+    if not destination_table then 
+        mod:error("no destination give")
+        return
+    end
+
+    table_merge_recursive(destination_table, source_table)
+end
+local merge_recursive_safe = mod.merge_recursive_safe
+
+function mod.table_insert_all_in_table(destination_table, source_table)
+    if not source_table then
+        -- not printing because of all the times i just dont give a fix
+        --info_if_debug("no source given")
+        return
+    elseif not type(source_table) == "table" then
+        info_if_debug("source is not table")
+        return
+    end
+
+    if not destination_table then 
+        mod:error("no destination give")
+        return
+    end
+
+    for _, value in pairs(source_table) do
+        table_insert(destination_table, value)
     end
 end
+local table_insert_all_in_table = mod.table_insert_all_in_table
 
 -- ######
 -- Add an Attachment with Fixes to Weapon
@@ -232,9 +246,10 @@ local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
         mod:error("Weapon slot missing! "..weapon_id..": "..attachment_blob[name])
         return
     end
-    add_attachment_to_weapon(attachment_blob.attachments, weapon_id, slot)
-    add_fixes_to_weapon(attachment_blob.fixes)
-    add_kitbashes_to_weapon(attachment_blob.kitbashs)
+    add_attachment_to_weapon_in_final_table(attachment_blob.attachments, weapon_id, slot)
+    -- fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
+    table_insert_all_in_table(attachments_table_for_ewc.fixes, attachment_blob.fixes)
+    merge_recursive_safe(attachments_table_for_ewc.kitbashs, attachment_blob.kitbashs)
 end
 
 -- ######
@@ -372,7 +387,7 @@ for _, weapon_id in ipairs(siblings_to_add) do
 end
 
 --mod:info("uwu fuck you bitch")
---table.dump(attachments_table_for_ewc, "ALL THE FUCKING TABLE RAAAGH", 10)
+table.dump(attachments_table_for_ewc, "ALL THE FUCKING TABLE RAAAGH", 10)
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
