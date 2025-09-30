@@ -1,3 +1,17 @@
+# 2025-10-nyaaa
+v4.1.0
+
+## Added
+
+## Refactors on the developer side
+- Merged redundent functions into more generic functions
+    - in the main file, adding fixes and kitbashes can be done by inserting each table and merge recursive, respectively
+    - made them global to use in `create_attachments.lua`
+- Made kitbash creation cleaner
+    - split into functions for merge table and full item
+    - then call the appropriate one within the `create_an_attachment` function
+    - now it's not directly in the main file :)
+
 # 2025-09-29
 v4.0.0
 
