@@ -20,8 +20,8 @@ mod.flashlight_colors = {
     cyan = vector3_box(0, 1, 1),
     yellow = vector3_box(1, 1, 0),
     pink = vector3_box(1, 0.5, 1),
-    andy = vector3_box(convert_255_rgb_to_percent_decimal(137, 235, 136))
-    leyley = vector3_box(convert_255_rgb_to_percent_decimal(223, 127, 190))
+    andy = vector3_box(convert_255_rgb_to_percent_decimal(137, 235, 136)),
+    leyley = vector3_box(convert_255_rgb_to_percent_decimal(223, 127, 190)),
     -- black = vector3_box(1, 1, 1), -- just becomes white
 }
 local flashlight_colors = mod.flashlight_colors
