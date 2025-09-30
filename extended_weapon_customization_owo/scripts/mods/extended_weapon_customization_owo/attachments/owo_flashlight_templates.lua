@@ -5,15 +5,21 @@ local vector3_box = Vector3Box
 local tostring = tostring
 
 local flashlight_templates_to_return = {}
+
+local function convert_255_rgb_to_percent_decimal(r, g, b)
+    return r/255, g/255, b/255
+end
+
 mod.flashlight_colors = {
     green = vector3_box(0, 1, 0),
     red = vector3_box(1, 0, 0),
     blue = vector3_box(0, 0, 1),
-    purple = vector3_box(1, 0, 1),
-    pink = vector3_box(1, 0.5, 1),
+    magenta = vector3_box(1, 0, 1),
     cyan = vector3_box(0, 1, 1),
     yellow = vector3_box(1, 1, 0),
-    black = vector3_box(1, 1, 1),
+    pink = vector3_box(1, 0.5, 1),
+    andy = vector3_box(convert_255_rgb_to_percent_decimal(137, 235, 136))
+    -- black = vector3_box(1, 1, 1), -- just becomes white
 }
 local flashlight_colors = mod.flashlight_colors
 
