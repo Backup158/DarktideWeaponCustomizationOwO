@@ -55,7 +55,7 @@ function mod.owo_flashlight()
                     {   replacement_path = _item_ranged.."/flashlights/"..owo_colored_flashlight,
                         icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                         icon_render_camera_position_offset = render_cam_pos_profile_left,
-                        flashlight_template = color.."_flashlight_"..template_suffix,
+                        flashlight_template = "owo_"..color.."_flashlight_"..template_suffix,
                     },
                     -- Fixes
                     nil,

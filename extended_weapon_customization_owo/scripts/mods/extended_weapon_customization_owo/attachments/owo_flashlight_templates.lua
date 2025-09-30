@@ -6,6 +6,7 @@ local tostring = tostring
 
 local flashlight_templates_to_return = {}
 
+-- Helper to convert rgb from 255 scale to 1 scale
 local function convert_255_rgb_to_percent_decimal(r, g, b)
     return r/255, g/255, b/255
 end
@@ -77,10 +78,11 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
 end
 
 local function generate_different_beams_for_color(color_to_use, given_color_vector)
+    -- allows a custom given color, but it'd prob be better to just insert that into the table on top, since that'd get automated in owo_flashlight.lua
     local color_filter_from_table = given_color_vector or flashlight_colors[color_to_use]
 
     -- Narrow high beam, fits around a reflex sight at ~20m
-    generate_flashlight_template(color_to_use.."_flashlight_narrow", {
+    generate_flashlight_template("owo_"..color_to_use.."_flashlight_narrow", {
         color_temperature = 7300,
         intensity = 6,
         color_filter = color_filter_from_table,
@@ -90,7 +92,7 @@ local function generate_different_beams_for_color(color_to_use, given_color_vect
         falloff_3p = 60,
     })
     -- Narrow high beam, but cooler temperature
-    generate_flashlight_template(color_to_use.."_flashlight_narrow_cool", {
+    generate_flashlight_template("owo_"..color_to_use.."_flashlight_narrow_cool", {
         color_temperature = 4000,
         intensity = 6,
         color_filter = color_filter_from_table,
@@ -100,7 +102,7 @@ local function generate_different_beams_for_color(color_to_use, given_color_vect
         falloff_3p = 60,
     })
     -- Weaker flashlight
-    generate_flashlight_template(color_to_use.."_flashlight_weak", {
+    generate_flashlight_template("owo_"..color_to_use.."_flashlight_weak", {
         color_temperature = 5500,
         intensity = 2,
         color_filter = color_filter_from_table,
@@ -110,7 +112,7 @@ local function generate_different_beams_for_color(color_to_use, given_color_vect
         falloff_3p = 45,
     })
     -- default
-    generate_flashlight_template(color_to_use.."_flashlight_default", {
+    generate_flashlight_template("owo_"..color_to_use.."_flashlight_default", {
         color_filter = color_filter_from_table,
     })
 end
