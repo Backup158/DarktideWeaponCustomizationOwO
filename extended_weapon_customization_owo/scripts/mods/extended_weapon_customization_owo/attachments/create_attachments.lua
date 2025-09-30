@@ -151,8 +151,6 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
         local replacement_name = attachment_data.replacement_path
         -- this only is a thing if it's a full item on its own
         if kitbash_data.base_unit then
-        --    mod:echo(attachment_data.replacement_path)
-        --    table_to_add_to.kitbashs[attachment_data.replacement_path] = table_clone(kitbash_data)
             create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data.base_unit, attachment_point)
         else
             create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
