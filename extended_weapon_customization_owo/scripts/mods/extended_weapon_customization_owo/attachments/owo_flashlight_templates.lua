@@ -5,7 +5,7 @@ local flashlight_templates_to_return = {}
 
 local function generate_flashlight_template(template_name, table_of_values_to_use)
     if not table_of_values_to_use then
-        mod:echo("no table of values for flashlight templates in "..template_name)
+        mod:error("no table of values for flashlight templates in "..template_name)
         return
     end
 
