@@ -50,7 +50,9 @@ function mod.owo_flashlight()
         -- Fixes
         nil,
         -- Kitbash
-        nil,
+        {
+            base_unit = "content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02"
+        },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
         "ap_flashlight_01"

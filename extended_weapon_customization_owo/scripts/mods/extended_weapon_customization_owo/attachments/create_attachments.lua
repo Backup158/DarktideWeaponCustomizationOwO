@@ -99,36 +99,6 @@ local function create_kitbash_complete_item(table_to_add_to, replacement_name, i
         workflow_state = "RELEASABLE",
         is_full_item = true
     }
-    --[[
-    ["owo_flashlight_green_01"] = {   is_fallback_item = false,
-        show_in_1p = true,
-        base_unit = "content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02",
-        item_list_faction = "Player",
-        tags = {
-        },
-        only_show_in_1p = false,
-        feature_flags = {
-            "FEATURE_item_retained",
-        },
-        attach_node = "ap_flashlight_01",
-        resource_dependencies = {
-            ["content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02"] = true,
-        },
-        attachments = {
-            zzz_shared_material_overrides = {
-                item = "",
-                children = {},
-            },
-        },
-        workflow_checklist = {
-        },
-        display_name = "n/a",
-        name = "content/items/weapons/player/ranged/flashlights/owo_flashlight_green_01",
-        workflow_state = "RELEASABLE",
-        is_full_item = true
-    }
-    ]]
-
 end
 
 -- ######
@@ -155,12 +125,15 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
     merge_recursive_safe(table_to_add_to.fixes, fixes_data)
 
     if kitbash_data then
-        --if kitbash_data.base_unit then
+        local replacement_name = attachment_data.replacement_path
+        -- this only is a thing if it's a full item on its own
+        if kitbash_data.base_unit then
         --    mod:echo(attachment_data.replacement_path)
         --    table_to_add_to.kitbashs[attachment_data.replacement_path] = table_clone(kitbash_data)
-        --else
-            create_kitbash_merge_table(table_to_add_to, attachment_data.replacement_path, internal_name, kitbash_data, attachment_point, use_vfx_here)
-        --end
+            create_kitbash_complete_item(table_to_add_to, replacement_name, internal_name, kitbash_data.base_unit, attachment_point)
+        else
+            create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
+        end
     end
 end
 

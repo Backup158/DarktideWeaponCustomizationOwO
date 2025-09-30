@@ -74,33 +74,7 @@ local attachments_table_for_ewc = {
 
 	},
 	kitbashs = {
-		["owo_flashlight_green_01"] = {   is_fallback_item = false,
-            show_in_1p = true,
-            base_unit = "content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02",
-            item_list_faction = "Player",
-            tags = {
-            },
-            only_show_in_1p = false,
-            feature_flags = {
-                "FEATURE_item_retained",
-            },
-            attach_node = "ap_flashlight_01",
-            resource_dependencies = {
-                ["content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02"] = true,
-            },
-            attachments = {
-                zzz_shared_material_overrides = {
-                    item = "",
-                    children = {},
-                },
-            },
-            workflow_checklist = {
-            },
-            display_name = "n/a",
-            name = "content/items/weapons/player/ranged/flashlights/owo_flashlight_green_01",
-            workflow_state = "RELEASABLE",
-            is_full_item = true
-        }
+        
 	}
 }
 
