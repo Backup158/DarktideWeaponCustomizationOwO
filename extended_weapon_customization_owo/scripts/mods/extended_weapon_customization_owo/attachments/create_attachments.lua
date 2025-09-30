@@ -15,7 +15,7 @@ local table_clone = table.clone
 local table_merge_recursive = table.merge_recursive
 
 local merge_recursive_safe = mod.merge_recursive_safe
-local table_insert_all_in_table = mod.table_insert_all_in_table
+local table_insert_all_from_table = mod.table_insert_all_from_table
 
 -- ################################
 -- Game Content Addresses

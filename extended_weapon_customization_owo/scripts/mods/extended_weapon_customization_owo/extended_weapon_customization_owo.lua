@@ -153,6 +153,59 @@ local function info_if_debug(message)
     end
 end
 
+-- ######
+-- Merge Recursive (Safe)
+-- DESCRIPTION: Checks for source and destination at first
+-- PARAMETERS: 
+--  fixes_table: table of tables
+-- RETURN: N/A
+-- ######
+function mod.merge_recursive_safe(destination_table, source_table) 
+	if not source_table then
+        info_if_debug("no source given")
+        return
+    elseif not type(source_table) == "table" then
+        info_if_debug("source is not table")
+        return
+    end
+
+    if not destination_table then 
+        mod:error("no destination give")
+        return
+    end
+
+    table_merge_recursive(destination_table, source_table)
+end
+local merge_recursive_safe = mod.merge_recursive_safe
+
+-- ######
+-- Table Insert All from Table
+-- DESCRIPTION: Checks for source and destination at first
+-- PARAMETERS: 
+--  fixes_table: table of tables
+-- RETURN: N/A
+-- ######
+function mod.table_insert_all_from_table(destination_table, source_table)
+    if not source_table then
+        -- not printing because of all the times i just dont give a fix
+        --info_if_debug("no source given")
+        return
+    elseif not type(source_table) == "table" then
+        info_if_debug("source is not table")
+        return
+    end
+
+    if not destination_table then 
+        mod:error("no destination give")
+        return
+    end
+
+    for _, value in pairs(source_table) do
+        table_insert(destination_table, value)
+    end
+end
+local table_insert_all_from_table = mod.table_insert_all_from_table
+
 -- ################################
 -- Adding Directly to the Attachments Table
 -- ################################
@@ -187,52 +240,6 @@ local function add_attachment_to_weapon_in_final_table(attachment_tables, weapon
 end
 
 -- ######
--- Merge Recursive (Safe)
--- DESCRIPTION: Checks for source and destination at first
--- PARAMETERS: 
---  fixes_table: table of tables
--- RETURN: N/A
--- ######
-function mod.merge_recursive_safe(destination_table, source_table) 
-	if not source_table then
-        info_if_debug("no source given")
-        return
-    elseif not type(source_table) == "table" then
-        info_if_debug("source is not table")
-        return
-    end
-
-    if not destination_table then 
-        mod:error("no destination give")
-        return
-    end
-
-    table_merge_recursive(destination_table, source_table)
-end
-local merge_recursive_safe = mod.merge_recursive_safe
-
-function mod.table_insert_all_in_table(destination_table, source_table)
-    if not source_table then
-        -- not printing because of all the times i just dont give a fix
-        --info_if_debug("no source given")
-        return
-    elseif not type(source_table) == "table" then
-        info_if_debug("source is not table")
-        return
-    end
-
-    if not destination_table then 
-        mod:error("no destination give")
-        return
-    end
-
-    for _, value in pairs(source_table) do
-        table_insert(destination_table, value)
-    end
-end
-local table_insert_all_in_table = mod.table_insert_all_in_table
-
--- ######
 -- Add an Attachment with Fixes to Weapon
 -- DESCRIPTION: Calls the previous three functions. See them for details
 -- PARAMETERS: 
@@ -248,7 +255,7 @@ local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     end
     add_attachment_to_weapon_in_final_table(attachment_blob.attachments, weapon_id, slot)
     -- fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
-    table_insert_all_in_table(attachments_table_for_ewc.fixes, attachment_blob.fixes)
+    table_insert_all_from_table(attachments_table_for_ewc.fixes, attachment_blob.fixes)
     merge_recursive_safe(attachments_table_for_ewc.kitbashs, attachment_blob.kitbashs)
 end
 
