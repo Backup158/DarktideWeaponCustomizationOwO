@@ -1,3 +1,5 @@
+local mod = get_mod("extended_weapon_customization_owo")
+
 local vector3 = Vector3
 local vector3_box = Vector3Box
 local tostring = tostring
