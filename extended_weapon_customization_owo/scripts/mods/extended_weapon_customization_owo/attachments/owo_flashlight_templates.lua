@@ -70,11 +70,13 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
 end
 
 local function generate_different_beams_for_color(color_to_use)
+    local color_filter_from_table = flashlight_colors[color_to_use]
+    
     -- Narrow high beam, fits around a reflex sight at ~20m
     generate_flashlight_template(color_to_use.."_flashlight_narrow", {
         color_temperature = 7300,
         intensity = 6,
-        color_filter = flashlight_colors.color_to_use,
+        color_filter = color_filter_from_table,
         spot_angle_max_1p = 0.4,
         spot_angle_max_3p = 0.2,
         falloff_1p = 140,
@@ -84,7 +86,7 @@ local function generate_different_beams_for_color(color_to_use)
     generate_flashlight_template(color_to_use.."_flashlight_narrow_cool", {
         color_temperature = 4000,
         intensity = 6,
-        color_filter = flashlight_colors.color_to_use,
+        color_filter = color_filter_from_table,
         spot_angle_max_1p = 0.4,
         spot_angle_max_3p = 0.2,
         falloff_1p = 140,
@@ -94,7 +96,7 @@ local function generate_different_beams_for_color(color_to_use)
     generate_flashlight_template(color_to_use.."_flashlight_weak", {
         color_temperature = 5500,
         intensity = 2,
-        color_filter = flashlight_colors.color_to_use,
+        color_filter = color_filter_from_table,
         spot_angle_max_1p = 0.6,
         spot_angle_max_3p = 0.3,
         falloff_1p = 100,
@@ -102,7 +104,7 @@ local function generate_different_beams_for_color(color_to_use)
     })
     -- default
     generate_flashlight_template(color_to_use.."_flashlight_default", {
-        color_filter = flashlight_colors.color_to_use,
+        color_filter = color_filter_from_table,
     })
 end
 
