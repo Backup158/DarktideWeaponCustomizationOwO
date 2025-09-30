@@ -163,8 +163,9 @@ end
 -- DESCRIPTION: Executes a given function for a range, which should cover all models for a certain weapon slot, such as psword blades
 -- PARAMETERS:
 --  range_end_inclusive: int; the last number for all the non-mastery meshes there are, eg 7 for power_sword_blade_07 being the last
---  table_of_values_to_exclude: table of int; meshes to skip, if those don't exist (dont think it can be checked automatically)
+--  table_of_values_to_exclude: table of int or string; meshes to skip, if those don't exist (dont think it can be checked automatically)
 --  function_to_run: function; whatever gets run using the number for each model (so the function to create an attachment)
+--      note that i gets passed as a string!
 -- RETURN: N/A
 -- ######
 function mod.for_all_weapon_models(range_end_inclusive, table_of_values_to_exclude, function_to_run)
