@@ -9,6 +9,10 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
         return
     end
 
+    if flashlight_templates_to_return[template_name] then
+        mod:info(template_name.." exists in flashlight templates. overwriting >:3")
+    end
+
     flashlight_templates_to_return[template_name] = {
         light = {
             first_person = {
