@@ -51,6 +51,86 @@ function mod.init_table_to_return(internal_name)
     }
 end
 
+local function create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
+    -- Allows VFX to play, if it's a muzzle/barrel
+    --  disable_vfx_spawner_exclusion
+    if use_vfx_here or (attachment_point == "ap_muzzle_01") or (attachment_point == "ap_barrel_01") then
+        have_vfx = true
+    else
+        have_vfx = false
+    end
+    -- create kitbash table to send back for merging
+    table_to_add_to.kitbashs[replacement_name] = {
+        attachments = { [internal_name] = kitbash_data },
+        display_name = "loc_"..internal_name,
+        description = "loc_description_"..internal_name,
+        attach_node = attachment_point,
+        dev_name = internal_name,
+        disable_vfx_spawner_exclusion = have_vfx
+    }
+end
+
+local function create_kitbash_complete_item(table_to_add_to, replacement_name, internal_name, given_base_unit, attachment_point)
+    table_to_add_to.kitbashs[internal_name] = {
+        is_fallback_item = false,
+        show_in_1p = true,
+        base_unit = given_base_unit,
+        item_list_faction = "Player",
+        tags = {
+        },
+        only_show_in_1p = false,
+        feature_flags = {
+            "FEATURE_item_retained",
+        },
+        attach_node = attachment_point,
+        resource_dependencies = {
+            [given_base_unit] = true,
+        },
+        attachments = {
+            zzz_shared_material_overrides = {
+                item = "",
+                children = {},
+            },
+        },
+        workflow_checklist = {
+        },
+        display_name = internal_name,
+        name = replacement_name,
+        workflow_state = "RELEASABLE",
+        is_full_item = true
+    }
+    --[[
+    ["owo_flashlight_green_01"] = {   is_fallback_item = false,
+        show_in_1p = true,
+        base_unit = "content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02",
+        item_list_faction = "Player",
+        tags = {
+        },
+        only_show_in_1p = false,
+        feature_flags = {
+            "FEATURE_item_retained",
+        },
+        attach_node = "ap_flashlight_01",
+        resource_dependencies = {
+            ["content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02"] = true,
+        },
+        attachments = {
+            zzz_shared_material_overrides = {
+                item = "",
+                children = {},
+            },
+        },
+        workflow_checklist = {
+        },
+        display_name = "n/a",
+        name = "content/items/weapons/player/ranged/flashlights/owo_flashlight_green_01",
+        workflow_state = "RELEASABLE",
+        is_full_item = true
+    }
+    ]]
+
+end
+
 -- ######
 -- Create an Attachment
 -- DESCRIPTION: Use in a function for defining a group of attachments. The attachment definition function initializes a table, then this function adds an attachment (and optionally fixes and/or a kitbash) to it. The main thing is to avoid having to copypaste the name so many times, even though this is less performant
@@ -64,7 +144,7 @@ end
 --  attachment_point: string; attachment point for the given kitbash
 -- RETURN: N/A
 -- ######
-function mod.create_an_attachment(table_to_add_to, internal_name, attachment_data, fixes_data, kitbash_data, attachment_point)
+function mod.create_an_attachment(table_to_add_to, internal_name, attachment_data, fixes_data, kitbash_data, attachment_point, use_vfx_here)
     if table_to_add_to.attachments[internal_name] then
         mod:error(table_to_add_to.name.."; duplicate attachment: "..internal_name)
     else
@@ -79,22 +159,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
         --    mod:echo(attachment_data.replacement_path)
         --    table_to_add_to.kitbashs[attachment_data.replacement_path] = table_clone(kitbash_data)
         --else
-            -- Allows VFX to play, if it's a muzzle/barrel
-            --  disable_vfx_spawner_exclusion
-            if (attachment_point == "ap_muzzle_01") or (attachment_point == "ap_barrel_01") then
-                have_vfx = true
-            else
-                have_vfx = false
-            end
-            -- create kitbash table to send back
-            table_to_add_to.kitbashs[attachment_data.replacement_path] = {
-                attachments = { [internal_name] = kitbash_data },
-                display_name = "loc_"..internal_name,
-                description = "loc_description_"..internal_name,
-                attach_node = attachment_point,
-                dev_name = internal_name,
-                disable_vfx_spawner_exclusion = have_vfx
-            }
+            create_kitbash_merge_table(table_to_add_to, attachment_data.replacement_path, internal_name, kitbash_data, attachment_point, use_vfx_here)
         --end
     end
 end
