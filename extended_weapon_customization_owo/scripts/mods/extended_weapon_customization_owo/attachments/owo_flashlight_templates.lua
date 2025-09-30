@@ -69,9 +69,9 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
     }
 end
 
-local function generate_different_beams_for_color(color_to_use)
-    local color_filter_from_table = flashlight_colors[color_to_use]
-    
+local function generate_different_beams_for_color(color_to_use, given_color_vector)
+    local color_filter_from_table = given_color_vector or flashlight_colors[color_to_use]
+
     -- Narrow high beam, fits around a reflex sight at ~20m
     generate_flashlight_template(color_to_use.."_flashlight_narrow", {
         color_temperature = 7300,
