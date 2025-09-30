@@ -3,7 +3,7 @@ local vector3_box = Vector3Box
 local tostring = tostring
 
 local flashlight_templates_to_return = {}
-local flashlight_colors = {
+mod.flashlight_colors = {
     green = vector3_box(0, 1, 0),
     red = vector3_box(1, 0, 0),
     blue = vector3_box(0, 0, 1),
@@ -13,6 +13,7 @@ local flashlight_colors = {
     yellow = vector3_box(1, 1, 0),
     black = vector3_box(1, 1, 1),
 }
+local flashlight_colors = mod.flashlight_colors
 
 local function generate_flashlight_template(template_name, table_of_values_to_use)
     if not table_of_values_to_use then
