@@ -2,6 +2,8 @@
 v4.1.0
 
 ## Added
+- Flashlight
+    - Variants for each flashlight model per color
 
 ## Developer talk
 - Merged redundent functions into more generic functions
