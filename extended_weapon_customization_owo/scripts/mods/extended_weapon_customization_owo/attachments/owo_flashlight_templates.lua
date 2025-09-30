@@ -1,7 +1,18 @@
 local vector3 = Vector3
 local vector3_box = Vector3Box
+local tostring = tostring
 
 local flashlight_templates_to_return = {}
+local flashlight_colors = {
+    green = vector3_box(0, 1, 0),
+    red = vector3_box(1, 0, 0),
+    blue = vector3_box(0, 0, 1),
+    purple = vector3_box(1, 0, 1),
+    pink = vector3_box(1, 0.5, 1),
+    cyan = vector3_box(0, 1, 1),
+    yellow = vector3_box(1, 1, 0),
+    black = vector3_box(1, 1, 1),
+}
 
 local function generate_flashlight_template(template_name, table_of_values_to_use)
     if not table_of_values_to_use then
@@ -53,6 +64,10 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
         },
         flicker = table_of_values_to_use.flicker or "default_flicker"
     }
+end
+
+local function generate_different_beams_for_color(color_to_use)
+
 end
 
 generate_flashlight_template("green_flashlight_01", {
