@@ -5,6 +5,9 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- ################################
 local vector3 = Vector3
 local vector3_box = Vector3Box
+local pairs = pairs
+local table = table
+local table_insert = table.insert
 
 -- ################################
 -- Game Content Addresses
@@ -40,12 +43,11 @@ function mod.owo_flashlight()
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
-    -- needs to be manually uploaded because FUCK YOU
-    local table_of_template_endings = {"narrow", "narrow_cool", "weak", "default"}
     local flashlight_colors = mod.flashlight_colors
+    local flashlight_intensities = mod.flashlight_intensities
     
     for color, _ in pairs(flashlight_colors) do
-        for _, template_suffix in ipairs(table_of_template_endings) do
+        for template_suffix, _ in pairs(flashlight_intensities) do
             -- 1 for each physical model
             for_all_weapon_models(5, {"ml01"}, function(i)
                 -- ex owo_flashlight_blue_narrow_01

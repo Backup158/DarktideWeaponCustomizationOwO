@@ -122,8 +122,8 @@ local function generate_different_beams_for_color(color_to_use, given_color_vect
     end
 end
 
-for key, _ in pairs(flashlight_colors) do
-    generate_different_beams_for_color(key)
+for color_name, _ in pairs(flashlight_colors) do
+    generate_different_beams_for_color(color_name)
 end
 
 return flashlight_templates_to_return
