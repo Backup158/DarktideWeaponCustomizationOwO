@@ -65,7 +65,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
     if table_to_add_to.attachments[internal_name] then
         mod:error(table_to_add_to.name.."; duplicate attachment: "..internal_name)
     end
-    table_to_add_to.attachments[internal_name] = table_clone(attachment_data)
+    table_to_add_to.attachments[internal_name] = attachment_data
     if fixes_data then
         for _, fix in ipairs(fixes_data) do
             table_insert(table_to_add_to.fixes, fix)
@@ -86,7 +86,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
             end
             -- create kitbash table to send back
             table_to_add_to.kitbashs[attachment_data.replacement_path] = {
-                attachments = { [internal_name] = table_clone(kitbash_data) },
+                attachments = { [internal_name] = kitbash_data },
                 display_name = "loc_"..internal_name,
                 description = "loc_description_"..internal_name,
                 attach_node = attachment_point,
