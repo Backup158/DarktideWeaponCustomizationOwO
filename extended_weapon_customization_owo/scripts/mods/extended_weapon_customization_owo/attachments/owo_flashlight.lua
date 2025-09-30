@@ -30,6 +30,7 @@ local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
 local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 
 local create_an_attachment = mod.create_an_attachment
+local for_all_weapon_models = mod.for_all_weapon_models
 
 -- ################################
 -- Attachment
@@ -39,24 +40,27 @@ function mod.owo_flashlight()
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
-    local owo_green_flashlight = attachment_group_prefix.."green_01"
-    create_an_attachment(table_to_return, owo_green_flashlight,
-        -- Attachment
-        {   replacement_path = _item_ranged.."/flashlights/"..owo_green_flashlight,
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-            flashlight_template = "green_flashlight_01",
-        },
-        -- Fixes
-        nil,
-        -- Kitbash
-        {
-            base_unit = "content/weapons/player/attachments/flashlights/flashlight_02/flashlight_02"
-        },
-        -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
-        "ap_flashlight_01"
-    )
+    for_all_weapon_models(5, {"ml01"}, function(i)
+        local owo_colored_flashlight = attachment_group_prefix.."green_"..i
+        create_an_attachment(table_to_return, owo_colored_flashlight,
+            -- Attachment
+            {   replacement_path = _item_ranged.."/flashlights/"..owo_colored_flashlight,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+                flashlight_template = "green_flashlight_01",
+            },
+            -- Fixes
+            nil,
+            -- Kitbash
+            {
+                base_unit = "content/weapons/player/attachments/flashlights/flashlight_"..i.."/flashlight_"..i
+            },
+            -- ATTACHMENT NODE 
+            -- DON'T FORGET THIS
+            "ap_flashlight_01"
+        )
+    end)
+    
 
     return table_to_return
 
