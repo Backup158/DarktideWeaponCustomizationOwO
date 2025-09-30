@@ -51,6 +51,18 @@ function mod.init_table_to_return(internal_name)
     }
 end
 
+-- ######
+-- Create Kitbash - Merge Table
+-- DESCRIPTION: creates a kitbash that's the normal type
+-- PARAMETERS:
+--  table_to_add_to: table; the one to add to the attachments table in the base mod
+--  replacement_name: string; the replacement_path in the attachments
+--  internal_name: string; attachment name used internally
+--  kitbash_data: table; contains data to copy over for the kitbash
+--  attachment_point: string; attachment point for the given kitbash
+--  use_vfx_here: boolean; if muzzle flash should spawn
+-- RETURN: N/A
+-- ######
 local function create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
     -- Allows VFX to play, if it's a muzzle/barrel
     --  disable_vfx_spawner_exclusion
@@ -70,7 +82,18 @@ local function create_kitbash_merge_table(table_to_add_to, replacement_name, int
     }
 end
 
-local function create_kitbash_complete_item(table_to_add_to, replacement_name, internal_name, given_base_unit, attachment_point)
+-- ######
+-- Create Kitbash - Full Item
+-- DESCRIPTION: creates a kitbash that's a full item
+-- PARAMETERS:
+--  table_to_add_to: table; the one to add to the attachments table in the base mod
+--  replacement_name: string; the replacement_path in the attachments
+--  internal_name: string; attachment name used internally
+--  kitbash_data: table; contains the base_unit address and that's it
+--  attachment_point: string; attachment point for the given kitbash
+-- RETURN: N/A
+-- ######
+local function create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, given_base_unit, attachment_point)
     table_to_add_to.kitbashs[internal_name] = {
         is_fallback_item = false,
         show_in_1p = true,
@@ -130,7 +153,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
         if kitbash_data.base_unit then
         --    mod:echo(attachment_data.replacement_path)
         --    table_to_add_to.kitbashs[attachment_data.replacement_path] = table_clone(kitbash_data)
-            create_kitbash_complete_item(table_to_add_to, replacement_name, internal_name, kitbash_data.base_unit, attachment_point)
+            create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data.base_unit, attachment_point)
         else
             create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
         end
