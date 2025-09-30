@@ -3,6 +3,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 local vector3 = Vector3
 local vector3_box = Vector3Box
 local tostring = tostring
+local pairs = pairs
 
 local flashlight_templates_to_return = {}
 
@@ -25,7 +26,42 @@ mod.flashlight_colors = {
 }
 local flashlight_colors = mod.flashlight_colors
 
-local function generate_flashlight_template(template_name, table_of_values_to_use)
+mod.flashlight_intensities = {
+    -- Narrow high beam, fits around a reflex sight at ~20m
+    narrow = {
+        color_temperature = 7300,
+        intensity = 6,
+        spot_angle_max_1p = 0.4,
+        spot_angle_max_3p = 0.2,
+        falloff_1p = 140,
+        falloff_3p = 60,
+    },
+    -- Narrow high beam, but cooler temperature
+    narrow_cool = {
+        color_temperature = 4000,
+        intensity = 6,
+        spot_angle_max_1p = 0.4,
+        spot_angle_max_3p = 0.2,
+        falloff_1p = 140,
+        falloff_3p = 60,
+    },
+    -- Weaker flashlight
+    weak = {
+        color_temperature = 5500,
+        intensity = 2,
+        spot_angle_max_1p = 0.6,
+        spot_angle_max_3p = 0.3,
+        falloff_1p = 100,
+        falloff_3p = 45,
+    },
+    default = {
+
+    },
+}
+local flashlight_intensities = mod.flashlight_intensities
+
+-- optional color override so i dont have to keep cloning tables to insert into
+local function generate_flashlight_template(template_name, table_of_values_to_use, optional_color_override)
     if not table_of_values_to_use then
         mod:error("no table of values for flashlight templates in "..template_name)
         return
@@ -45,7 +81,7 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
                 intensity = table_of_values_to_use.intensity or 12,
                 spot_reflector = false,
                 volumetric_intensity = 0.1,
-                color_filter = table_of_values_to_use.color_filter or vector3_box(0, 0, 0),
+                color_filter = optional_color_override or table_of_values_to_use.color_filter or vector3_box(0, 0, 0),
                 spot_angle = {
                     max = table_of_values_to_use.spot_angle_max_1p or 1.1,
                     min = 0,
@@ -62,7 +98,7 @@ local function generate_flashlight_template(template_name, table_of_values_to_us
                 intensity = table_of_values_to_use.intensity or 12,
                 spot_reflector = false,
                 volumetric_intensity = 0.6,
-                color_filter = table_of_values_to_use.color_filter or vector3_box(0, 0, 0),
+                color_filter = optional_color_override or table_of_values_to_use.color_filter or vector3_box(0, 0, 0),
                 spot_angle = {
                     max = table_of_values_to_use.spot_angle_max_3p or 0.8,
                     min = 0,
@@ -81,40 +117,9 @@ local function generate_different_beams_for_color(color_to_use, given_color_vect
     -- allows a custom given color, but it'd prob be better to just insert that into the table on top, since that'd get automated in owo_flashlight.lua
     local color_filter_from_table = given_color_vector or flashlight_colors[color_to_use]
 
-    -- Narrow high beam, fits around a reflex sight at ~20m
-    generate_flashlight_template("owo_"..color_to_use.."_flashlight_narrow", {
-        color_temperature = 7300,
-        intensity = 6,
-        color_filter = color_filter_from_table,
-        spot_angle_max_1p = 0.4,
-        spot_angle_max_3p = 0.2,
-        falloff_1p = 140,
-        falloff_3p = 60,
-    })
-    -- Narrow high beam, but cooler temperature
-    generate_flashlight_template("owo_"..color_to_use.."_flashlight_narrow_cool", {
-        color_temperature = 4000,
-        intensity = 6,
-        color_filter = color_filter_from_table,
-        spot_angle_max_1p = 0.4,
-        spot_angle_max_3p = 0.2,
-        falloff_1p = 140,
-        falloff_3p = 60,
-    })
-    -- Weaker flashlight
-    generate_flashlight_template("owo_"..color_to_use.."_flashlight_weak", {
-        color_temperature = 5500,
-        intensity = 2,
-        color_filter = color_filter_from_table,
-        spot_angle_max_1p = 0.6,
-        spot_angle_max_3p = 0.3,
-        falloff_1p = 100,
-        falloff_3p = 45,
-    })
-    -- default
-    generate_flashlight_template("owo_"..color_to_use.."_flashlight_default", {
-        color_filter = color_filter_from_table,
-    })
+    for name, values_table in pairs(flashlight_intensities) do
+        generate_flashlight_template("owo_"..color_to_use.."_flashlight_"..name, values_table, color_filter_from_table)
+    end
 end
 
 for key, _ in pairs(flashlight_colors) do
