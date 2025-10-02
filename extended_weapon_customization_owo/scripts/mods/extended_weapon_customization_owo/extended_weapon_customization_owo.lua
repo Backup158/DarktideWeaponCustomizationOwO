@@ -272,21 +272,27 @@ local function copy_attachments_from_A_to_B(weapon_id_A, weapon_id_B)
 end
 
 -- ######
--- Copy Attachments from First Mark
--- DESCRIPTION: Given a weapon that isn't the first mark, copy attachments from the first one
+-- Copy Fixes from A to B
+-- DESCRIPTION: Copies table of attachments from one weapon to another
 -- PARAMETERS: 
---  weapon_id: string
+--  weapon_id_A: string; the source
+--  weapon_id_B: string; the destination
 -- RETURN: N/A
 -- ######
-local function copy_attachments_from_first_mark(weapon_id)
-    -- if (string_sub(weapon_id, -2) == "m1") then return end
-
-    -- Replaces the final character (if it's a digit) with 1
-    --  autogun_p1_m2 --> autogun_p1_m1
-    local first_mark_id = string.gsub(weapon_id, "%d$", "1")
-
-    -- error checking is handled there 
-    copy_attachments_from_A_to_B(first_mark_id, weapon_id)
+local function copy_fixes_from_A_to_B(weapon_id_A, weapon_id_B)
+    -- If source does not exist
+    if not attachments_table_for_ewc.fixes[weapon_id_A] then
+        mod:info("No fixes in source: "..weapon_id_A)
+        return
+    end
+    -- If destination doesn't exist
+    if not attachments_table_for_ewc.fixes[weapon_id_B] then
+        attachments_table_for_ewc.fixes[weapon_id_B] = {}
+    end
+    
+    for _, fix in pairs(attachments_table_for_ewc.fixes[weapon_id_A]) do
+        table_insert(attachments_table_for_ewc.fixes[weapon_id_B], fix)
+    end
 end
 
 -- ######
@@ -296,7 +302,7 @@ end
 --  first_mark_id: string
 -- RETURN: N/A
 -- ######
-local function copy_attachments_to_siblings(first_mark_id)
+local function copy_attachments_and_fixes_to_siblings(first_mark_id)
     if not type(first_mark_id) == "string" then
         mod:error("uwu first_mark_id is not a string")
         return
@@ -308,6 +314,7 @@ local function copy_attachments_to_siblings(first_mark_id)
         if string_is_key_in_table(weapon_id, WeaponTemplates) then
             info_if_debug("\t\tuwu Copying to sibling: "..first_mark_id.." --> "..weapon_id)
             copy_attachments_from_A_to_B(first_mark_id, weapon_id)
+            copy_fixes_from_A_to_B(first_mark_id, weapon_id)
         else
             info_if_debug("\t\tuwu This is not a real weapon: "..weapon_id)
         end
@@ -366,7 +373,7 @@ end
 --  and since I'm adding to the table i'm reading, it can lead to duplicates and shuffling order
 --  so somehow things can get skipped? this happened to ilas for some reason
 for _, weapon_id in ipairs(siblings_to_add) do
-    copy_attachments_to_siblings(weapon_id)
+    copy_attachments_and_fixes_to_siblings(weapon_id)
 end
 
 --mod:info("uwu fuck you bitch")
