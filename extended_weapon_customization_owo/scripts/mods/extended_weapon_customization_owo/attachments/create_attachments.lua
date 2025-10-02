@@ -73,7 +73,8 @@ local function create_kitbash_merge_table(table_to_add_to, replacement_name, int
     end
     -- create kitbash table to send back for merging
     table_to_add_to.kitbashs[replacement_name] = {
-        attachments = { [internal_name] = kitbash_data },
+        -- attachments = { [internal_name] = kitbash_data },
+        attachments = { base = kitbash_data }, -- had issues with hide mesh when done the other way
         display_name = "loc_"..internal_name,
         description = "loc_description_"..internal_name,
         attach_node = attachment_point,
