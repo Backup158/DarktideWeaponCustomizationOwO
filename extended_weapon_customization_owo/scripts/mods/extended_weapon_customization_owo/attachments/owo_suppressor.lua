@@ -87,49 +87,6 @@ function mod.owo_suppressor()
         },
         "ap_muzzle_01"
     )
-    create_an_attachment(table_to_return, "owo_suppressor_02",
-        {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_02",
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-        },
-        nil,
-        {   item = _item_empty_trinket, -- invisible base
-            fix = {
-                disable_in_ui = true,
-                offset = {
-                    node = 1,
-                    position = suppressor_double_pos_base,
-                    rotation = vector3_box(0, 0, 0),
-                    scale = vector3_box(1, 1, 1),
-                },
-            },
-            children = {
-                muzzle_ac1 = {
-                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
-                    fix = {
-                        offset = {
-                            node = 1,
-                            position = suppressor_double_pos_ac,
-                            rotation = vector3_box(0, 0, 0),
-                            scale = suppressor_double_sca,
-                        },
-                    },
-                },
-                muzzle_ac2 = {
-                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
-                    fix = {
-                        offset = {
-                            node = 1,
-                            position = suppressor_double_pos_ac,
-                            rotation = suppressor_double_ac1_rot2,
-                            scale = suppressor_double_sca,
-                        },
-                    },
-                },
-            },
-        },
-        "ap_muzzle_01"
-    )
     create_an_attachment(table_to_return, "owo_suppressor_01_slim",
         {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_01_slim",
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
@@ -166,6 +123,49 @@ function mod.owo_suppressor()
                             position = suppressor_double_pos_ac,
                             rotation = suppressor_double_ac1_rot1,
                             scale = suppressor_double_sca_slim,
+                        },
+                    },
+                },
+            },
+        },
+        "ap_muzzle_01"
+    )
+    create_an_attachment(table_to_return, "owo_suppressor_02",
+        {   replacement_path = _item_ranged.."/muzzles/owo_suppressor_02",
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+        },
+        nil,
+        {   item = _item_empty_trinket, -- invisible base
+            fix = {
+                disable_in_ui = true,
+                offset = {
+                    node = 1,
+                    position = suppressor_double_pos_base,
+                    rotation = vector3_box(0, 0, 0),
+                    scale = vector3_box(1, 1, 1),
+                },
+            },
+            children = {
+                muzzle_ac1 = {
+                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = suppressor_double_pos_ac,
+                            rotation = vector3_box(0, 0, 0),
+                            scale = suppressor_double_sca,
+                        },
+                    },
+                },
+                muzzle_ac2 = {
+                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = suppressor_double_pos_ac,
+                            rotation = suppressor_double_ac1_rot2,
+                            scale = suppressor_double_sca,
                         },
                     },
                 },
