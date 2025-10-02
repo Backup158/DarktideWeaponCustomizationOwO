@@ -273,7 +273,7 @@ end
 
 -- ######
 -- Copy Fixes from A to B
--- DESCRIPTION: Copies table of attachments from one weapon to another
+-- DESCRIPTION: Copies table of fixes from one weapon to another
 -- PARAMETERS: 
 --  weapon_id_A: string; the source
 --  weapon_id_B: string; the destination
