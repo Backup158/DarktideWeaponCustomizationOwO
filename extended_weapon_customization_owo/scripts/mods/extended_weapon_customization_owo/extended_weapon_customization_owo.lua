@@ -404,26 +404,21 @@ end
 function mod.on_all_mods_loaded()
 	-- Checks for installed mods. Kept here so it works after reload.
 	--	Base Mod
-	ewc = get_mod("extended_weapon_customization")
-	if not ewc then
+	if not get_mod("extended_weapon_customization") then
 		mod:error("Extended Weapon Customization mod (the rebuild) required")
 		return
 	end
     --  Outdated base mod
-    wc = get_mod("weapon_customization")
-	if wc then
+	if get_mod("weapon_customization") then
 		mod:error("You are using the OLD version of Weapon Customization! This plugin is for the new, rebuilt version.")
 		return
 	end
 	--	Plugins
 	--		Just so I know. Compatibility is only an issue of name collisions
-	mt = get_mod("weapon_customization_mt_stuff")
-    if mt then
-    	mod:info("Uwusa haz MT stuffs :3")
-    	return 
-    end
-	syn = get_mod("weapon_customization_syn_edits")
-    if syn then
-		mod:info("Uwusa haz Syn's Edits :3")
+    local other_plugins = { "visible_equipment", "extended_weapon_customization_base_additions", "extended_weapon_customization_empty_scopes", }
+    for _, plugin_name in ipairs(other_plugins) do
+        if get_mod(plugin_name) then
+            mod:info("Uwusa haz "..plugin_name.." :3")
+        end
     end
 end
