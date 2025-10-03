@@ -23,6 +23,7 @@ v4.1.0
     - then call the appropriate one within the `create_an_attachment` function
     - now it's not directly in the main file :)
 - Added comments for more functions
+- refactored suppressor creation to copypaste less code
 
 # 2025-09-29
 v4.0.0
