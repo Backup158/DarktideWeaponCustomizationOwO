@@ -58,7 +58,7 @@ function mod.owo_suppressor()
                 icon_render_camera_position_offset = transformations_table.icon_pos,
             },
             nil,
-            {   item = _model_table.base or item_empty_trinket, -- invisible base
+            {   item = model_table.base or _item_empty_trinket, -- invisible base
                 fix = {
                     disable_in_ui = false,
                     offset = {
@@ -104,7 +104,7 @@ function mod.owo_suppressor()
     local suppressor_double_sca_slim = vector3_box(0.85, 1.8, 0.85)
     local suppressor_double_ac2_rot1 = vector3_box(0, 22, 0)
     local suppressor_double_ac2_rot2 = vector3_box(0, 17, 0)
-    create_suppressor("owo_suppressor_01", {_item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03"}, {
+    create_suppressor("owo_suppressor_01", _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
@@ -112,7 +112,7 @@ function mod.owo_suppressor()
         ac2_rot = suppressor_double_ac2_rot1,
         ac_sca = suppressor_double_sca,
     })
-    create_suppressor("owo_suppressor_01_slim", {_item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03"}, {
+    create_suppressor("owo_suppressor_01_slim", _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
@@ -120,7 +120,7 @@ function mod.owo_suppressor()
         ac2_rot = suppressor_double_ac2_rot1,
         ac_sca = suppressor_double_sca_slim,
     })
-    create_suppressor("owo_suppressor_02", {_item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05"}, {
+    create_suppressor("owo_suppressor_02", _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
@@ -128,7 +128,7 @@ function mod.owo_suppressor()
         ac2_rot = suppressor_double_ac2_rot2,
         ac_sca = suppressor_double_sca,
     })
-    create_suppressor("owo_suppressor_02_slim", {_item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05"}, {
+    create_suppressor("owo_suppressor_02_slim", _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
