@@ -118,7 +118,7 @@ local function create_kitbash_full_item(table_to_add_to, replacement_name, inter
         },
         workflow_checklist = {
         },
-        display_name = internal_name,
+        display_name = "loc_"..internal_name,
         name = replacement_name,
         workflow_state = "RELEASABLE",
         is_full_item = true
