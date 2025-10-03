@@ -3,10 +3,10 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- Localizations for the base mod to use
 mod:add_global_localize_strings({
 	-- Mod Name for the separators
-    loc_extended_weapon_customization_owo = {
+    loc_ewc_extended_weapon_customization_owo = {
         en = "Ostracized without Objection (OwO)",
     },
-	-- Weapon Names
+	-- Attachment Display Names
 	loc_owo_tactical_stock_telescoping_in = {
 		en = "Tactical Stock - Telescoping (Pushed in)",
 	},
