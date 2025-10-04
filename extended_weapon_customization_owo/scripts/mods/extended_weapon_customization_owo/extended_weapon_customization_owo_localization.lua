@@ -28,16 +28,16 @@ mod:add_global_localize_strings({
 local slim_blade_names = {"psword", "pfalchion", "dclaw", "hsword", }
 for _, name in ipairs(slim_blade_names) do
 	mod:add_global_localize_strings({
-		["loc_ewc_owo_slim_blade_flat_"..name.."_"] = {
+		["loc_ewc_owo_slim_blade_flat_"..name] = {
 			en = "OwO Slim Blades - Flat "..name
 		},
-		["loc_ewc_owo_slim_blade_flat_"..name.."_g_"] = {
+		["loc_ewc_owo_slim_blade_flat_"..name.."_g"] = {
 			en = "OwO Slim Blades - Flat "..name.." (Grip)"
 		},
-		["loc_ewc_owo_slim_blade_slim_"..name.."_"] = {
+		["loc_ewc_owo_slim_blade_slim_"..name] = {
 			en = "OwO Slim Blades - Slim "..name
 		},
-		["loc_ewc_owo_slim_blade_slim_"..name.."_g_"] = {
+		["loc_ewc_owo_slim_blade_slim_"..name.."_g"] = {
 			en = "OwO Slim Blades - Slim "..name.." (Grip)"
 		},
 	})
