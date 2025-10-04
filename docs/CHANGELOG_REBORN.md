@@ -1,6 +1,14 @@
 # 2025-10-nyaaa
 v4.1.0
 
+- Fixed logic error when looping over all models
+    - Used break instead of continue (and lua doesn't have continue)
+    - So i'd lose all the models after the first one i wanted to skip
+    - fixing this restored from 3 psword blades to 6 psword blades (index 7), not counting mastery
+        - 7 models to use, skip #4
+        - break meant only 1-3 were added
+        - now it's 1-3, 5-7
+
 ## Added
 - Flashlight
     - Variants for each flashlight model per color
