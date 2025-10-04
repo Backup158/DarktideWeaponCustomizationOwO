@@ -7,9 +7,7 @@ mod:add_global_localize_strings({
         en = "Ostracized without Objection (OwO)",
     },
 	-- Custom separator names
-	loc_ewc_flat_psword_ = {
-        en = "Slim Blades - Flat PSword",
-    },
+	
 	-- Attachment Display Names
 	loc_owo_tactical_stock_telescoping_in = {
 		en = "Tactical Stock - Telescoping (Pushed in)",
@@ -30,17 +28,17 @@ mod:add_global_localize_strings({
 local slim_blade_names = {"psword", "pfalchion", "dclaw", "hsword", }
 for _, name in ipairs(slim_blade_names) do
 	mod:add_global_localize_strings({
-		["loc_ewc_flat_"..name.."_"] = {
-			en = "Slim Blades - Flat "..name
+		["loc_ewc_owo_slim_blade_flat_"..name.."_"] = {
+			en = "OwO Slim Blades - Flat "..name
 		},
-		["loc_ewc_flat_"..name.."g_"] = {
-			en = "Slim Blades - Flat "..name.." (Grip)"
+		["loc_ewc_owo_slim_blade_flat_"..name.."_g_"] = {
+			en = "OwO Slim Blades - Flat "..name.." (Grip)"
 		},
-		["loc_ewc_slim_"..name] = {
-			en = "Slim Blades - Slim "..name
+		["loc_ewc_owo_slim_blade_slim_"..name.."_"] = {
+			en = "OwO Slim Blades - Slim "..name
 		},
-		["loc_ewc_slim_"..name.."g_"] = {
-			en = "Slim Blades - Slim "..name.." (Grip)"
+		["loc_ewc_owo_slim_blade_slim_"..name.."_g_"] = {
+			en = "OwO Slim Blades - Slim "..name.." (Grip)"
 		},
 	})
 end
