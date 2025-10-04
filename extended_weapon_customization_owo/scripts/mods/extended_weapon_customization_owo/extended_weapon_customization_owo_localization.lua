@@ -25,20 +25,25 @@ mod:add_global_localize_strings({
 		en = "Tactical Stock - Folded (Natural, Under)",
 	},
 })
-local slim_blade_names = {"psword", "pfalchion", "dclaw", "hsword", }
-for _, name in ipairs(slim_blade_names) do
+local slim_blade_names = {
+	psword = "Power Sword", 
+	pfalchion = "Power Falchion", 
+	dclaw = "\"Devil's Claw\" Sword", 
+	hsword = "Heavy Sword/Falchion", 
+}
+for attachment_name_code, human_name in ipairs(slim_blade_names) do
 	mod:add_global_localize_strings({
-		["loc_ewc_owo_slim_blade_flat_"..name] = {
-			en = "OwO Slim Blades - Flat "..name
+		["loc_ewc_owo_slim_blade_flat_"..attachment_name_code] = {
+			en = "OwO Slim Blades - Flat "..human_name
 		},
-		["loc_ewc_owo_slim_blade_flat_"..name.."_g"] = {
-			en = "OwO Slim Blades - Flat "..name.." (Grip)"
+		["loc_ewc_owo_slim_blade_flat_"..attachment_name_code.."_g"] = {
+			en = "OwO Slim Blades - Flat "..human_name.." (Grip)"
 		},
-		["loc_ewc_owo_slim_blade_slim_"..name] = {
-			en = "OwO Slim Blades - Slim "..name
+		["loc_ewc_owo_slim_blade_slim_"..attachment_name_code] = {
+			en = "OwO Slim Blades - Slim "..human_name
 		},
-		["loc_ewc_owo_slim_blade_slim_"..name.."_g"] = {
-			en = "OwO Slim Blades - Slim "..name.." (Grip)"
+		["loc_ewc_owo_slim_blade_slim_"..attachment_name_code.."_g"] = {
+			en = "OwO Slim Blades - Slim "..human_name.." (Grip)"
 		},
 	})
 end
