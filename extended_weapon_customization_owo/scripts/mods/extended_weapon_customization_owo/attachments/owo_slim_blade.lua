@@ -145,22 +145,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_pfalchion_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_pfalchion_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_pfalchion_g_scl = vector3_box(0.5, 0.65, 1.0)
-    -- Flat pfalchion
-    for_all_weapon_models(2, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "flat_pfalchion", _item_melee.."/blades/power_falchion_blade_", flat_pfalchion_scl)
-    end)
-    -- Flat pfalchion (Grip)
-    for_all_weapon_models(2, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "flat_pfalchion_g", _item_melee.."/blades/power_falchion_blade_", {flat_pfalchion_g_scl, grip_scale})
-    end)
-    -- Slim pfalchion
-    for_all_weapon_models(2, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "slim_pfalchion", _item_melee.."/blades/power_falchion_blade_", slim_pfalchion_scl)
-    end)
-    -- Slim pfalchion (Grip)
-    for_all_weapon_models(2, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "slim_pfalchion_g", _item_melee.."/blades/power_falchion_blade_", {slim_pfalchion_g_scl, grip_scale})
-    end)
+    slim_blade_variant_helper(2, nil, "pfalchion", _item_melee.."/blades/power_falchion_blade_", {
+        flat_scale = flat_pfalchion_scl,
+        flat_g_scale = flat_pfalchion_g_scl,
+        slim_scale = slim_pfalchion_scl,
+        slim_g_scale = slim_pfalchion_g_scl,
+    })
     -- ------------------
     -- "Devil's Claw" Blades
     -- ------------------
@@ -168,22 +158,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_dclaw_g_scl = vector3_box(0.6, 1.0, 1.0)
     local slim_dclaw_scl = vector3_box(0.5, 0.65, 1.0)
     local slim_dclaw_g_scl = vector3_box(0.6, 0.65, 1.0)
-    -- Flat dclaw
-    for_all_weapon_models(7, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "flat_dclaw", _item_melee.."/blades/combat_sword_blade_", flat_dclaw_scl)
-    end)
-    -- Flat dclaw (Grip)
-    for_all_weapon_models(7, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "flat_dclaw_g", _item_melee.."/blades/combat_sword_blade_", {flat_dclaw_g_scl, grip_scale})
-    end)
-    -- Slim dclaw
-    for_all_weapon_models(7, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "slim_dclaw", _item_melee.."/blades/combat_sword_blade_", slim_dclaw_scl)
-    end)
-    -- Slim dclaw (Grip)
-    for_all_weapon_models(7, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "slim_dclaw_g", _item_melee.."/blades/combat_sword_blade_", {slim_dclaw_g_scl, grip_scale})
-    end)
+    slim_blade_variant_helper(7, nil, "dclaw", _item_melee.."/blades/combat_sword_blade_", {
+        flat_scale = flat_dclaw_scl,
+        flat_g_scale = flat_dclaw_g_scl,
+        slim_scale = slim_dclaw_scl,
+        slim_g_scale = slim_dclaw_g_scl,
+    })
     -- ------------------
     -- Heavy Sword
     -- ------------------
@@ -191,22 +171,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_hsword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_hsword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_hsword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    -- Flat hsword
-    for_all_weapon_models(6, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "flat_hsword", _item_melee.."/blades/falchion_blade_", flat_hsword_scl)
-    end)
-    -- Flat hsword (Grip)
-    for_all_weapon_models(6, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "flat_hsword_g", _item_melee.."/blades/falchion_blade_", {flat_hsword_g_scl, grip_scale})
-    end)
-    -- Slim hsword
-    for_all_weapon_models(6, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "slim_hsword", _item_melee.."/blades/falchion_blade_", slim_hsword_scl)
-    end)
-    -- Slim hsword (Grip)
-    for_all_weapon_models(6, nil, function(number_string)
-        slim_blade_attach_helper(number_string, "slim_hsword_g", _item_melee.."/blades/falchion_blade_", {slim_hsword_g_scl, grip_scale})
-    end)
+    slim_blade_variant_helper(6, nil, "hsword", _item_melee.."/blades/falchion_blade_", {
+        flat_scale = flat_hsword_scl,
+        flat_g_scale = flat_hsword_g_scl,
+        slim_scale = slim_hsword_scl,
+        slim_g_scale = slim_hsword_g_scl,
+    })
     
     --table.dump(table_to_return.fixes, "slim fixes", 6)
     return table_to_return
