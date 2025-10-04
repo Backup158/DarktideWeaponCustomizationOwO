@@ -28,6 +28,7 @@ mod:add_global_localize_strings({
 local slim_blade_names = {
 	psword = "Power Sword", 
 	pfalchion = "Power Falchion", 
+	["2h_psword"] = "Relic Blade",
 	dclaw = "\"Devil's Claw\" Sword", 
 	hsword = "Heavy Sword/Falchion", 
 }

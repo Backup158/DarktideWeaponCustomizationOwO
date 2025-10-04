@@ -152,6 +152,19 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_g_scale = slim_pfalchion_g_scl,
     })
     -- ------------------
+    -- Relic Blade Blades
+    -- ------------------
+    local flat_2h_psword_scl = vector3_box(0.35, 1.0, 1.0)
+    local flat_2h_psword_g_scl = vector3_box(0.5, 1.0, 1.0)
+    local slim_2h_psword_scl = vector3_box(0.35, 0.65, 1.0)
+    local slim_2h_psword_g_scl = vector3_box(0.5, 0.65, 1.0)
+    slim_blade_variant_helper(3, nil, "2h_psword", _item_melee.."/blades/2h_power_sword_blade_", {
+        flat_scale = flat_2h_psword_scl,
+        flat_g_scale = flat_2h_psword_g_scl,
+        slim_scale = slim_2h_psword_scl,
+        slim_g_scale = slim_2h_psword_g_scl,
+    })
+    -- ------------------
     -- "Devil's Claw" Blades
     -- ------------------
     local flat_dclaw_scl = vector3_box(0.5, 1.0, 1.0)
