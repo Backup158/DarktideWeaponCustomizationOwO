@@ -82,6 +82,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             {   replacement_path = _item_melee.."/blades/"..slim_blade_name,
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
+                custom_selection_group = name_to_use,
             },
             -- Fixes
             fixes_to_add,

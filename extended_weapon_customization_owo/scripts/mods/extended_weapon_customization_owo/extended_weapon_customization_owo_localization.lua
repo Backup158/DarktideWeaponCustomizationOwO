@@ -6,6 +6,10 @@ mod:add_global_localize_strings({
     loc_ewc_extended_weapon_customization_owo = {
         en = "Ostracized without Objection (OwO)",
     },
+	-- Custom separator names
+	loc_ewc_flat_psword_ = {
+        en = "Slim Blades - Flat PSword",
+    },
 	-- Attachment Display Names
 	loc_owo_tactical_stock_telescoping_in = {
 		en = "Tactical Stock - Telescoping (Pushed in)",
@@ -23,6 +27,23 @@ mod:add_global_localize_strings({
 		en = "Tactical Stock - Folded (Natural, Under)",
 	},
 })
+local slim_blade_names = {"psword", "pfalchion", "dclaw", "hsword", }
+for _, name in ipairs(slim_blade_names) do
+	mod:add_global_localize_strings({
+		["loc_ewc_flat_"..name.."_"] = {
+			en = "Slim Blades - Flat "..name
+		},
+		["loc_ewc_flat_"..name.."g_"] = {
+			en = "Slim Blades - Flat "..name.." (Grip)"
+		},
+		["loc_ewc_slim_"..name] = {
+			en = "Slim Blades - Slim "..name
+		},
+		["loc_ewc_slim_"..name.."g_"] = {
+			en = "Slim Blades - Slim "..name.." (Grip)"
+		},
+	})
+end
 
 local localizations = {
 	mod_name = {
