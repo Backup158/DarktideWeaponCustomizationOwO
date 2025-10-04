@@ -106,20 +106,21 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             current_attachment_node
         )
     end
+    -- Calls the above for all the variants
     local function slim_blade_variant_helper(amount_of_models, table_of_models_to_skip, base_name, model_base_path, table_of_all_transformations)
-        -- Flat PSword
+        -- Flat
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper(number_string, "flat_"..base_name, model_base_path, table_of_all_transformations.flat_scale)
         end)
-        -- Flat PSword (Grip)
+        -- Flat (Grip)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper(number_string, "flat_"..base_name.."_g", model_base_path, {table_of_all_transformations.flat_g_scale, grip_scale})
         end)
-        -- Slim PSword
+        -- Slim
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper(number_string, "slim_"..base_name, model_base_path, table_of_all_transformations.slim_scale)
         end)
-        -- Slim PSword (Grip)
+        -- Slim (Grip)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper(number_string, "slim_"..base_name.."_g", model_base_path, {table_of_all_transformations.slim_g_scale, grip_scale})
         end)
