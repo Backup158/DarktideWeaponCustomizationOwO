@@ -37,6 +37,21 @@ return {
         attachment_slot = "stock",
         requirements = {
             stock = {
+                has = "owo_tactical_stock_telescoping_in",
+            },
+        },
+        fix = {
+            offset = {
+                node = 1,
+                position = vector3_box(0, -0.075, 0.065),
+                scale = vector3_box(1.25, 1.25, 1.25),
+            },
+        },
+    },
+    {
+        attachment_slot = "stock",
+        requirements = {
+            stock = {
                 has = "owo_tactical_stock_folded_n_1|owo_tactical_stock_folded_n_m",
             },
         },
