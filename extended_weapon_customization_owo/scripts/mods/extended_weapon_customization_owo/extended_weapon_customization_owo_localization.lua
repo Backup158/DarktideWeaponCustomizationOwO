@@ -36,7 +36,7 @@ local slim_blade_names = {
 	dclaw = "\"Devil's Claw\" Sword", 
 	hsword = "Heavy Sword/Falchion", 
 }
-for attachment_name_code, human_name in ipairs(slim_blade_names) do
+for attachment_name_code, human_name in pairs(slim_blade_names) do
 	mod:add_global_localize_strings({
 		["loc_ewc_owo_slim_blade_flat_"..attachment_name_code] = {
 			en = "OwO Slim Blades - Flat "..human_name
