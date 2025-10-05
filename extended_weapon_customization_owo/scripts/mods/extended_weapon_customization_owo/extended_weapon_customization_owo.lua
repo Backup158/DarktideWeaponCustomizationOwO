@@ -260,6 +260,11 @@ add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"c
 -- ################################
 -- Manual Overrides for Attachments
 -- ################################
+local special_needs_fixes = { "bolter_p1_m1", }
+for _, weapon_id in ipairs(special_needs_fixes) do
+    local fixes_table_to_add = load_mod_file("fixes/"..weapon_id)
+    table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
+end
 
 -- ################################
 -- Copying to Different Marks

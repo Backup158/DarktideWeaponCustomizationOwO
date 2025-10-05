@@ -1,0 +1,36 @@
+-- ################################
+-- Local References for Performance
+-- ################################
+local vector3 = Vector3
+local vector3_box = Vector3Box
+
+-- ################################
+-- Game Content Addresses
+-- ################################
+local _item = "content/items/weapons/player"
+local _item_ranged = _item.."/ranged"
+local _item_melee = _item.."/melee"
+local _item_empty_trinket = _item.."/trinkets/unused_trinket"
+local _item_minion = "content/items/weapons/minions"
+
+-- ###################################################################
+-- FIXES TO RETURN
+-- ###################################################################
+return {
+    {
+        attachment_slot = "stock",
+        requirements = {
+            stock = {
+                has = "owo_tactical_stock_folded_n_1|owo_tactical_stock_folded_n_m",
+            },
+        },
+        fix = {
+            offset = {
+                node = 1,
+                position = vector3_box(0.0, -0.2, 0.05),
+                rotation = vector3_box(0, 0, -176),
+                scale = vector3_box(1, 1.0, 1),
+            },
+        },
+    },
+}
