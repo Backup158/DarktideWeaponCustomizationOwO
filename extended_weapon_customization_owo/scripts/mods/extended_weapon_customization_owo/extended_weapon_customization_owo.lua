@@ -299,7 +299,7 @@ for _, weapon_id in ipairs(siblings_to_add) do
 end
 
 --mod:info("uwu fuck you bitch")
-table.dump(attachments_table_for_ewc, "ALL THE FUCKING TABLE RAAAGH", 10)
+--table.dump(attachments_table_for_ewc, "ALL THE FUCKING TABLE RAAAGH", 10)
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
