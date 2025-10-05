@@ -30,6 +30,9 @@ local slim_blade_names = {
 	pfalchion = "Power Falchion", 
 	["2h_psword"] = "Relic Blade",
 	["2h_psword_short"] = "Relic Blade (Short)",
+	fsword = "Force Sword",
+	["2h_fsword"] = "Force Greatsword",
+	["2h_fsword_short"] = "Force Greatsword (Short)",
 	dclaw = "\"Devil's Claw\" Sword", 
 	hsword = "Heavy Sword/Falchion", 
 }

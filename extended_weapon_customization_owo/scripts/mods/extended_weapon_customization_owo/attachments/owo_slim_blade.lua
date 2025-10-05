@@ -174,6 +174,41 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_g_scale = slim_2h_psword_short_scl,
     })
     -- ------------------
+    -- Force Sword Blades
+    -- ------------------
+    local flat_fsword_scl = vector3_box(0.35, 1.0, 1.0)
+    local flat_fsword_g_scl = vector3_box(0.5, 1.0, 1.0)
+    local slim_fsword_scl = vector3_box(0.35, 0.65, 1.0)
+    local slim_fsword_g_scl = vector3_box(0.5, 0.65, 1.0)
+    slim_blade_variant_helper(5, nil, "fsword", _item_melee.."/blades/force_sword_blade_", {
+        flat_scale = flat_fsword_scl,
+        flat_g_scale = flat_fsword_g_scl,
+        slim_scale = slim_fsword_scl,
+        slim_g_scale = slim_fsword_g_scl,
+    })
+    -- ------------------
+    -- Force Greatsword Blades
+    -- ------------------
+    local flat_2h_fsword_scl = vector3_box(0.35, 1.0, 1.0)
+    local flat_2h_fsword_g_scl = vector3_box(0.5, 1.0, 1.0)
+    local slim_2h_fsword_scl = vector3_box(0.35, 0.65, 1.0)
+    local slim_2h_fsword_g_scl = vector3_box(0.5, 0.65, 1.0)
+    slim_blade_variant_helper(5, nil, "2h_fsword", _item_melee.."/blades/2h_force_sword_blade_", {
+        flat_scale = flat_2h_fsword_scl,
+        flat_g_scale = flat_2h_fsword_g_scl,
+        slim_scale = slim_2h_fsword_scl,
+        slim_g_scale = slim_2h_fsword_g_scl,
+    })
+    -- Short variants
+    local flat_2h_fsword_short_scl = vector3_box(0.35, 1.0, 0.6)
+    local slim_2h_fsword_short_scl = vector3_box(0.35, 0.65, 0.6)
+    slim_blade_variant_helper(5, nil, "2h_fsword_short", _item_melee.."/blades/2h_force_sword_blade_", {
+        flat_scale = flat_2h_fsword_short_scl,
+        flat_g_scale = flat_2h_fsword_g_scl,
+        slim_scale = slim_2h_fsword_scl,
+        slim_g_scale = slim_2h_fsword_short_scl,
+    })
+    -- ------------------
     -- "Devil's Claw" Blades
     -- ------------------
     local flat_dclaw_scl = vector3_box(0.5, 1.0, 1.0)
