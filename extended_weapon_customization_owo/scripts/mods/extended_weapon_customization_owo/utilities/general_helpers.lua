@@ -45,6 +45,7 @@ function mod.info_if_debug(message)
         mod:info(tostring(message))
     end
 end
+local info_if_debug = mod.info_if_debug
 
 -- ######
 -- Merge Recursive (Safe)
