@@ -17,6 +17,22 @@ local _item_minion = "content/items/weapons/minions"
 -- FIXES TO RETURN
 -- ###################################################################
 return {
+    -- Tactical Stocks
+    {
+        attachment_slot = "stock",
+        requirements = {
+            stock = {
+                has = "owo_tactical_stock_skeletal",
+            },
+        },
+        fix = {
+            offset = {
+                node = 1,
+                position = vector3_box(0, -0.071, 0.065),
+                --scale = vector3_box(1.25, 1.25, 1.25),
+            },
+        },
+    },
     {
         attachment_slot = "stock",
         requirements = {
