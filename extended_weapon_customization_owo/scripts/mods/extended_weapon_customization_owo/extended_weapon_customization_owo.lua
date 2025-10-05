@@ -263,6 +263,11 @@ add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"c
 local special_needs_fixes = { "bolter_p1_m1", }
 for _, weapon_id in ipairs(special_needs_fixes) do
     local fixes_table_to_add = load_mod_file("fixes/"..weapon_id)
+    if not attachments_table_for_ewc.fixes[weapon_id] then
+        attachments_table_for_ewc.fixes[weapon_id] = {}
+    end
+    --table.dump(fixes_table_to_add, "SPECIAL NEEDS", 10)
+
     table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
 end
 
@@ -294,7 +299,7 @@ for _, weapon_id in ipairs(siblings_to_add) do
 end
 
 --mod:info("uwu fuck you bitch")
---table.dump(attachments_table_for_ewc, "ALL THE FUCKING TABLE RAAAGH", 10)
+table.dump(attachments_table_for_ewc, "ALL THE FUCKING TABLE RAAAGH", 10)
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
