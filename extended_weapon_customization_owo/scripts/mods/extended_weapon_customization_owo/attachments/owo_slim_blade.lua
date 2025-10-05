@@ -165,8 +165,8 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_g_scale = slim_2h_psword_g_scl,
     })
     -- Short variants
-    local flat_2h_psword_short_scl = vector3_box(0.35, 1.0, 0.6)
-    local slim_2h_psword_short_scl = vector3_box(0.35, 0.65, 0.6)
+    local flat_2h_psword_short_scl = vector3_box(0.35, 1.0, 0.75)
+    local slim_2h_psword_short_scl = vector3_box(0.35, 0.65, 0.75)
     slim_blade_variant_helper(3, nil, "2h_psword_short", _item_melee.."/blades/2h_power_sword_blade_", {
         flat_scale = flat_2h_psword_short_scl,
         flat_g_scale = flat_2h_psword_g_scl,
@@ -200,8 +200,8 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_g_scale = slim_2h_fsword_g_scl,
     })
     -- Short variants
-    local flat_2h_fsword_short_scl = vector3_box(0.35, 1.0, 0.6)
-    local slim_2h_fsword_short_scl = vector3_box(0.35, 0.65, 0.6)
+    local flat_2h_fsword_short_scl = vector3_box(0.35, 1.0, 0.8)
+    local slim_2h_fsword_short_scl = vector3_box(0.35, 0.65, 0.8)
     slim_blade_variant_helper(5, nil, "2h_fsword_short", _item_melee.."/blades/2h_force_sword_blade_", {
         flat_scale = flat_2h_fsword_short_scl,
         flat_g_scale = flat_2h_fsword_g_scl,
