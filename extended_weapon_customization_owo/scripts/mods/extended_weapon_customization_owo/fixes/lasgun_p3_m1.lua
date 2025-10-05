@@ -18,7 +18,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ###################################################################
 return {
     -- Tactical Stocks
-    {
+    {   
         attachment_slot = "stock",
         requirements = {
             stock = {
@@ -26,10 +26,26 @@ return {
             },
         },
         fix = {
+            node = 3,
             offset = {
-                position = vector3_box(0, -0.071, 0.065),
-                --rotation = vector3_box(0, 0, 0),
-                --scale = vector3_box(1.25, 1.25, 1.25),
+                position = vector3_box(0.0, -0.02, 2.3),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1.95, 1),
+            },
+        },
+    },
+    -- Filling in for Helbore
+    {   attachment_slot = "stock_ac1",
+        requirements = {
+            stock = {
+                has = "owo_tactical_stock_skeletal",
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.0, -0.02),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(0.35, 0.5, 0.65),
             },
         },
     },

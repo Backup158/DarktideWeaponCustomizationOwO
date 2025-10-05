@@ -49,44 +49,7 @@ function mod.owo_tactical_stock(given_attachment_node)
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
-        {
-            {   attachment_slot = "stock",
-                requirements = {
-                    stock = {
-                        has = skeletal_stock,
-                    },
-                    receiver = {
-                        has = helbore_lasgun_receivers,
-                    },
-                },
-                fix = {
-                    node = 3,
-                    offset = {
-                        position = vector3_box(0.0, -0.02, 1.3),
-                        rotation = vector3_box(0, 0, 0),
-                        scale = vector3_box(1, 1.95, 1),
-                    },
-                },
-            },
-            -- Filling in for Helbore
-            {   attachment_slot = "stock_ac1",
-                requirements = {
-                    stock = {
-                        has = skeletal_stock,
-                    },
-                    receiver = {
-                        has = helbore_lasgun_receivers,
-                    },
-                },
-                fix = {
-                    offset = {
-                        position = vector3_box(0.0, 0.0, -0.02),
-                        rotation = vector3_box(0, 0, 0),
-                        scale = vector3_box(0.35, 0.5, 0.65),
-                    },
-                },
-            },
-        },
+        nil,
         -- Kitbash
         {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_02",
             -- item = _item_empty_trinket, -- invisible base
