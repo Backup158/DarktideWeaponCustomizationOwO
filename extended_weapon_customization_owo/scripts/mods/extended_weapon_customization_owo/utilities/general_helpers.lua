@@ -90,8 +90,7 @@ function mod.table_insert_all_from_table(destination_table, source_table)
     end
 
     if not destination_table then 
-        mod:error("no destination give")
-        return
+        destination_table = {}
     end
 
     for _, value in pairs(source_table) do

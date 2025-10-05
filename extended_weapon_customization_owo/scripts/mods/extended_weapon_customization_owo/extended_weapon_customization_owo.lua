@@ -157,12 +157,7 @@ local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
     end
     add_attachment_to_weapon_in_final_table(attachment_blob.attachments, weapon_id, slot)
     -- fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
-    if attachment_blob.fixes then
-        if not attachments_table_for_ewc.fixes[weapon_id] then
-            attachments_table_for_ewc.fixes[weapon_id] = {}
-        end
-        table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], attachment_blob.fixes)
-    end
+    table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], attachment_blob.fixes)
     merge_recursive_safe(attachments_table_for_ewc.kitbashs, attachment_blob.kitbashs)
 end
 
