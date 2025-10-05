@@ -27,7 +27,7 @@ return {
         },
         fix = {
             offset = {
-                node = 1,
+                1,
                 position = vector3_box(0, -0.071, 0.065),
                 --scale = vector3_box(1.25, 1.25, 1.25),
             },
@@ -42,7 +42,7 @@ return {
         },
         fix = {
             offset = {
-                node = 1,
+                1,
                 position = vector3_box(0, -0.075, 0.065),
                 scale = vector3_box(1.25, 1.25, 1.25),
             },
@@ -57,7 +57,7 @@ return {
         },
         fix = {
             offset = {
-                node = 1,
+                1,
                 position = vector3_box(-0.015, -0.05, 0.055),
                 --rotation = vector3_box(0, 0, -176),
                 scale = vector3_box(1.25, 1.25, 1.25),
@@ -73,7 +73,7 @@ return {
         },
         fix = {
             offset = {
-                node = 1,
+                1,
                 position = vector3_box(0, -0.08, 0.065),
                 scale = vector3_box(1.3, 1.22, 1.25),
             },

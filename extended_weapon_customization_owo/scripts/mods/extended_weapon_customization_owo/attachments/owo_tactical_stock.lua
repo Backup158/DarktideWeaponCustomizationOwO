@@ -50,23 +50,6 @@ function mod.owo_tactical_stock(given_attachment_node)
         },
         -- Fixes
         {
-            -- Infantry Autogun
-            {   attachment_slot = "stock",
-                requirements = {
-                    stock = {
-                        has = skeletal_stock,
-                    },
-                    receiver = {
-                        has = infantry_autogun_receivers,
-                    },
-                },
-                fix = {
-                    offset = {
-                        position = vector3_box(0.0, 0.2, 0.024),
-                        scale = vector3_box(1, 1.95, 1),
-                    },
-                },
-            },
             {   attachment_slot = "stock",
                 requirements = {
                     stock = {
@@ -121,8 +104,8 @@ function mod.owo_tactical_stock(given_attachment_node)
                 stock_ac1 = {
                     item = _item_melee.."/heads/thunder_hammer_head_04",
                     fix = {
+                        node = 1,
                         offset = {
-                            node = 1,
                             position = vector3_box(0.0, 0.0, 0.0),
                             rotation = vector3_box(0, 0, 0),
                             scale = vector3_box(0.0, 0.0, 0.0),
