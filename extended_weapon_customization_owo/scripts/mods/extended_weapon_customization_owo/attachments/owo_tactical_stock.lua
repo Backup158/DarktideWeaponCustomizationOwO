@@ -237,7 +237,24 @@ function mod.owo_tactical_stock(given_attachment_node)
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
-        nil,
+        {
+            bolter_p1_m1 = {
+                attachment_slot = "stock",
+                requirements = {
+                    stock = {
+                        has = folded_stock_n_1,
+                    },
+                },
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, -0.2, 0.05),
+                        rotation = vector3_box(0, 0, -176),
+                        scale = vector3_box(1, 1.0, 1),
+                    },
+                },
+            },
+        },
         -- Kitbash
         {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01",
             -- item = _item_empty_trinket, -- invisible base

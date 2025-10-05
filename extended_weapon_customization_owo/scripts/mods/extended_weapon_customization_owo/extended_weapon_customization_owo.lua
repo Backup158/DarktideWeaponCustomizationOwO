@@ -84,6 +84,12 @@ local attachments_table_for_ewc = {
 -- ################################
 -- Other Helpers
 -- ################################
+mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/utilities/general_helpers")
+local load_mod_file = mod.load_mod_file
+local info_if_debug = mod.info_if_debug
+local merge_recursive_safe = mod.merge_recursive_safe
+local table_insert_all_from_table = mod.table_insert_all_from_table
+
 -- ######
 -- String is key in table?
 -- RETURN: boolean; was the key found?
@@ -101,86 +107,6 @@ local function string_is_key_in_table(string_to_find, table_to_search)
         return false
     end
 end
-
--- ######
--- Load Mod File
--- DESCRIPTION: Runs a file in the mod's folder
--- PARAMETERS:
---  relative_path: string; path to the file without the extension; e.g. "melee/autogun_gooning"
--- RETURN: N/A
--- ######
-function mod.load_mod_file(relative_path)
-	return mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
-end
-local load_mod_file = mod.load_mod_file
-
--- ######
--- Print if Debug
--- DESCRIPTION: Logs text in console if debug is on
--- PARAMETERS:
---  message: string
--- RETURN: N/A
--- ######
-local function info_if_debug(message)
-    if debug_mode then
-        mod:info(tostring(message))
-    end
-end
-
--- ######
--- Merge Recursive (Safe)
--- DESCRIPTION: Checks for source and destination at first
--- PARAMETERS: 
---  destination_table: table
---  source_table: table
--- RETURN: N/A
--- ######
-function mod.merge_recursive_safe(destination_table, source_table) 
-	if not source_table then
-        info_if_debug("no source given")
-        return
-    elseif not type(source_table) == "table" then
-        info_if_debug("source is not table")
-        return
-    end
-
-    if not destination_table then 
-        mod:error("no destination give")
-        return
-    end
-
-    table_merge_recursive(destination_table, source_table)
-end
-local merge_recursive_safe = mod.merge_recursive_safe
-
--- ######
--- Table Insert All from Table
--- DESCRIPTION: Checks for source and destination at first, then inserts each value w/ unspecified key
--- PARAMETERS: 
---  destination_table: table
---  source_table: table
--- RETURN: N/A
--- ######
-function mod.table_insert_all_from_table(destination_table, source_table)
-    if not source_table then
-        -- not printing because of all the times i just dont give a fix
-        --info_if_debug("no source given")
-        return
-    elseif not type(source_table) == "table" then
-        info_if_debug("source is not table")
-        return
-    end
-
-    if not destination_table then 
-        mod:error("no destination give")
-        return
-    end
-
-    for _, value in pairs(source_table) do
-        table_insert(destination_table, value)
-    end
-end
-local table_insert_all_from_table = mod.table_insert_all_from_table
 
 -- ################################
 -- Adding Directly to the Attachments Table
