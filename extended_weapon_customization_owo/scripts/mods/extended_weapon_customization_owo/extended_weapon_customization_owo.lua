@@ -295,6 +295,7 @@ local function copy_fixes_from_A_to_B(weapon_id_A, weapon_id_B)
         attachments_table_for_ewc.fixes[weapon_id_B] = {}
     end
     
+    -- needs to be insert because numerical index, so merge recursive would smash fixes together
     for _, fix in pairs(attachments_table_for_ewc.fixes[weapon_id_A]) do
         table_insert(attachments_table_for_ewc.fixes[weapon_id_B], fix)
     end
