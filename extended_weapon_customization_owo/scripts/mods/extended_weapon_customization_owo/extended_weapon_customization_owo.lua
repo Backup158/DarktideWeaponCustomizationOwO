@@ -142,26 +142,6 @@ local function add_attachment_to_weapon_in_final_table(attachment_tables, weapon
 end
 
 -- ######
--- Add an Attachment with Fixes to Weapon
--- DESCRIPTION: Calls the previous three functions. See them for details
--- PARAMETERS: 
---  attachment_blob: table of tables
---      attachments = { tables }
---      fixes = { tables }
---      kitbashes = { tables }
--- ######
-local function add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
-    if not slot then
-        mod:error("Weapon slot missing! "..weapon_id..": "..attachment_blob[name])
-        return
-    end
-    add_attachment_to_weapon_in_final_table(attachment_blob.attachments, weapon_id, slot)
-    -- fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
-    table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], attachment_blob.fixes)
-    merge_recursive_safe(attachments_table_for_ewc.kitbashs, attachment_blob.kitbashs)
-end
-
--- ######
 -- Add an Attachment with Fixes to Multiple Weapons
 -- DESCRIPTION: Calls the previous function for all given weapons
 -- PARAMETERS:
@@ -171,8 +151,16 @@ local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list,
     for _, weapon_id in ipairs(weapons_list) do
         -- info_if_debug("Adding attachments to "..weapon_id)
         --table.dump(attachment_blob, "THE BLOB", 9)
-        add_all_tables_to_weapon(attachment_blob, weapon_id, slot)
+        if not slot then
+            mod:error("Weapon slot missing! "..weapon_id..": "..attachment_blob[name])
+            return
+        end
+        add_attachment_to_weapon_in_final_table(attachment_blob.attachments, weapon_id, slot)
     end
+    -- Fixes (from these files) and kitbashs only need to be defined once
+    -- Fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
+    table_insert_all_from_table(attachments_table_for_ewc.fixes, attachment_blob.fixes)
+    merge_recursive_safe(attachments_table_for_ewc.kitbashs, attachment_blob.kitbashs)
 end
 
 -- ######
