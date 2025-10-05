@@ -64,4 +64,19 @@ return {
             },
         },
     },
+    {
+        attachment_slot = "stock",
+        requirements = {
+            stock = {
+                has = "owo_tactical_stock_folded_n_u",
+            },
+        },
+        fix = {
+            offset = {
+                node = 1,
+                position = vector3_box(0, -0.08, 0.065),
+                scale = vector3_box(1.3, 1.22, 1.25),
+            },
+        },
+    },
 }
