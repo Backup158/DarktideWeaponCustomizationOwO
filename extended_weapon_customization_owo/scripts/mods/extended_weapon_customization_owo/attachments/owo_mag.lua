@@ -27,12 +27,12 @@ local create_an_attachment = mod.create_an_attachment
 -- ################################
 -- Attachment
 -- ################################
-function mod.owo_ak_mag()
-    local attachment_group_name = "owo_ak_mag"
+function mod.owo_mag()
+    local attachment_group_name = "owo_mag"
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
-    local shortname = attachment_group_prefix.."banana"
+    local shortname = attachment_group_prefix.."ak_extended"
     create_an_attachment(table_to_return, shortname,
         -- Attachment
         {   replacement_path = _item_ranged.."/magazines/"..shortname,
@@ -47,9 +47,9 @@ function mod.owo_ak_mag()
                 disable_in_ui = false,
                 offset = {
                     node = 1,
-                    position = vector3_box(0.0, -0.05, -0.02),
+                    position = vector3_box(0.0, -0.015, -0.03),
                     rotation = vector3_box(15, 0, 0.0),
-                    scale = vector3_box(1.0, 1.0, 1.2)
+                    scale = vector3_box(1.0, 0.9, 1.1)
                 },
             },
             children = {

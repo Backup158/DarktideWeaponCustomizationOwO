@@ -263,7 +263,7 @@ add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "
 --add_attachments_to_list_of_weapons(mod.probe_for_node(), {"lasgun_p2_m1", }, "stock")
 
 -- Magazine
-add_attachments_to_list_of_weapons(mod.owo_ak_mag(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "magazine")
+add_attachments_to_list_of_weapons(mod.owo_mag(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "magazine")
 
 -- ################
 -- Melee
