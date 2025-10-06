@@ -38,7 +38,7 @@ return {
     {   attachment_slot = "stock_ac1",
         requirements = {
             stock = {
-                has = "owo_tactical_stock_skeletal",
+                missing = "lasgun_rifle_krieg_stock_01|lasgun_rifle_krieg_stock_02|lasgun_rifle_krieg_stock_03|lasgun_rifle_krieg_stock_04|lasgun_rifle_krieg_stock_05|lasgun_rifle_krieg_stock_ml01",
             },
         },
         fix = {

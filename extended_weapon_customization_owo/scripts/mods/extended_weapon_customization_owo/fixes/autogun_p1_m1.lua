@@ -27,9 +27,26 @@ return {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, 0.0, 0.01),
-                --rotation = vector3_box(0, 0, 0),
-                --scale = vector3_box(1.25, 1.25, 1.25),
+                -- position = vector3_box(0.0, 0.0, 0.01),
+                position = vector3_box(0.0, 0.2, 0.02),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1.95, 1),
+            },
+        },
+    },
+    {
+        attachment_slot = "stock",
+        requirements = {
+            stock = {
+                has = "owo_tactical_stock_telescoping_in",
+            },
+        },
+        fix = {
+            offset = {
+                -- position = vector3_box(0.0, 0.12, 0.015),
+                position = vector3_box(0.0, 0.12, 0.015),
+                rotation = vector3_box(0, 0.035, 0),
+                scale = vector3_box(1, 1.0, 1),
             },
         },
     },
