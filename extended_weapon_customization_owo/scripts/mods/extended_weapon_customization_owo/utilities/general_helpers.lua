@@ -10,13 +10,13 @@ local vector3_box = Vector3Box
 
 local pairs = pairs
 local type = type
-local string = string
-local string_sub = string.sub
-local string_gsub = string.gsub
+--local string = string
+--local string_sub = string.sub
+--local string_gsub = string.gsub
 local tostring = tostring
 local table = table
 local table_insert = table.insert
-local table_clone = table.clone
+--local table_clone = table.clone
 local table_merge_recursive = table.merge_recursive
 
 -- ###################################################################
