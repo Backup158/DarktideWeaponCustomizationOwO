@@ -84,7 +84,7 @@ function mod.NORMAL_ITEM()
             children = {
 
             },
-        },,
+        },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
         nil
