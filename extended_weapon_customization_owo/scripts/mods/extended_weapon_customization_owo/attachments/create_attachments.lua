@@ -173,8 +173,7 @@ function mod.for_all_weapon_models(range_end_inclusive, table_of_values_to_exclu
     for i = 1, range_end_inclusive do
         -- if nothing needed to be excluded, or it's not one of the things to exclude
         if not (table_of_values_to_exclude and table_contains(table_of_values_to_exclude, i)) then
-            i = "0"..tostring(i)
-            function_to_run(i)
+            function_to_run("0"..tostring(i))
         end
     end
     -- Now for mastery item
