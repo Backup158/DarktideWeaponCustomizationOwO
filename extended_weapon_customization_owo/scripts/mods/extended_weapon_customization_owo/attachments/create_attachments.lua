@@ -204,6 +204,7 @@ local attachment_names = {
     "owo_flashlight",
     "owo_slim_blade",
     "owo_mag",
+    "owo_iron_sight",
 }
 for _, name in ipairs(attachment_names) do
     load_mod_file("attachments/"..name)

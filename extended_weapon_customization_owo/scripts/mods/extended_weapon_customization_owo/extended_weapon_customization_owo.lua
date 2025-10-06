@@ -265,6 +265,9 @@ add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "
 -- Magazine
 add_attachments_to_list_of_weapons(mod.owo_mag(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "magazine")
 
+-- Sight
+add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "sight")
+
 -- ################
 -- Melee
 -- ################
