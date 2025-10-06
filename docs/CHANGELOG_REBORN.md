@@ -23,6 +23,15 @@ v4.1.0
 
 
 ## Developer talk
+- Decided how to add fixes
+    - each weapon has its own file in the `fixes` folder
+        - all it does is return the fixes
+        - then the main file reads all those (right before copying to sibling marks) and adds them in
+        - requires me to maintin the list of the weapons in the fixes folder, but idc
+        - automatically detecting files int he folder is very resource intensive, and this only risks me forgetting to add something during testing
+    - this means the fixes given per attachment are the universal fixes
+    - I prefer it this way because i like having the kitbash and attachments defined in the same file
+        - overhead from having to process and skip values, but i find the headache annoying enough when swapping between two files
 - Merged redundent functions into more generic functions
     - in the main file, adding fixes and kitbashes can be done by inserting each table and merge recursive, respectively
     - made them global to use in `create_attachments.lua`
