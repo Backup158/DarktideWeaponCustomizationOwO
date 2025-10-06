@@ -66,6 +66,7 @@ end
 local function create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
     -- Allows VFX to play, if it's a muzzle/barrel
     --  disable_vfx_spawner_exclusion
+    local have_vfx
     if use_vfx_here or (attachment_point == "ap_muzzle_01") or (attachment_point == "ap_barrel_01") then
         have_vfx = true
     else
@@ -192,13 +193,6 @@ end
 -- ################################
 -- Some Variables for Common Attachments
 -- ################################
-local infantry_autogun_receivers = "autogun_rifle_receiver_01|autogun_rifle_receiver_ml01"
-local braced_autogun_receivers = "autogun_rifle_ak_receiver_01|autogun_rifle_ak_receiver_02|autogun_rifle_ak_receiver_03|autogun_rifle_ak_receiver_ml01"
-local vigilant_autogun_receivers = "autogun_rifle_killshot_receiver_01|autogun_rifle_killshot_receiver_02|autogun_rifle_killshot_receiver_03|autogun_rifle_killshot_receiver_04|autogun_rifle_killshot_receiver_ml01"
-local infantry_lasgun_receivers = "lasgun_rifle_receiver_01|lasgun_rifle_receiver_02|lasgun_rifle_receiver_03|lasgun_rifle_receiver_ml01"
-local helbore_lasgun_receivers = "lasgun_rifle_krieg_receiver_01|lasgun_rifle_krieg_receiver_02|lasgun_krieg_rifle_receiver_03|lasgun_rifle_krieg_receiver_04|lasgun_rifle_krieg_receiver_05|lasgun_krieg_rifle_receiver_06|lasgun_rifle_krieg_receiver_ml01"
-local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_elysian_rifle_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_elysian_rifle_receiver_06|lasgun_elysian_rifle_receiver_07|lasgun_rifle_elysian_receiver_ml01"
-
 -- Camera Angles for Preview
 mod.render_unit_rot_profile_left = {90, 0, 30}
 mod.render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
