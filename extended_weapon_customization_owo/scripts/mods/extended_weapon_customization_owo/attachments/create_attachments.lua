@@ -3,28 +3,21 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- ################################
 -- Local References for Performance
 -- ################################
-local vector3 = Vector3
-local vector3_box = Vector3Box
+--local vector3 = Vector3
+--local vector3_box = Vector3Box
 
-local pairs = pairs
+--local pairs = pairs
+local ipairs = ipairs
 --local string = string
 local table = table
-local table_insert = table.insert
+--local table_insert = table.insert
 local table_contains = table.contains
-local table_clone = table.clone
-local table_merge_recursive = table.merge_recursive
+--local table_clone = table.clone
+--local table_merge_recursive = table.merge_recursive
 
 local merge_recursive_safe = mod.merge_recursive_safe
-local table_insert_all_from_table = mod.table_insert_all_from_table
+--local table_insert_all_from_table = mod.table_insert_all_from_table
 
--- ################################
--- Game Content Addresses
--- ################################
-local _item = "content/items/weapons/player"
-local _item_ranged = _item.."/ranged"
-local _item_melee = _item.."/melee"
-local _item_empty_trinket = _item.."/trinkets/unused_trinket"
-local _item_minion = "content/items/weapons/minions"
 
 -- ################################
 -- Helper Functions
