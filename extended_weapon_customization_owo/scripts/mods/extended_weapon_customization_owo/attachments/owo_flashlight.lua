@@ -3,30 +3,27 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- ################################
 -- Local References for Performance
 -- ################################
-local vector3 = Vector3
-local vector3_box = Vector3Box
+--local vector3 = Vector3
+--local vector3_box = Vector3Box
 local pairs = pairs
-local table = table
-local table_insert = table.insert
+--local table = table
+--local table_insert = table.insert
+--local string = string
+--local string_regex_sub = string.gsub
+--local string_upper = string.upper
 
 -- ################################
 -- Game Content Addresses
 -- ################################
 local _item = "content/items/weapons/player"
 local _item_ranged = _item.."/ranged"
-local _item_melee = _item.."/melee"
-local _item_empty_trinket = _item.."/trinkets/unused_trinket"
-local _item_minion = "content/items/weapons/minions"
+--local _item_melee = _item.."/melee"
+--local _item_empty_trinket = _item.."/trinkets/unused_trinket"
+--local _item_minion = "content/items/weapons/minions"
 
 -- ################################
 -- Some Variables for Common Attachments
 -- ################################
-local infantry_autogun_receivers = "autogun_rifle_receiver_01|autogun_rifle_receiver_ml01"
-local braced_autogun_receivers = "autogun_rifle_ak_receiver_01|autogun_rifle_ak_receiver_02|autogun_rifle_ak_receiver_03|autogun_rifle_ak_receiver_ml01"
-local vigilant_autogun_receivers = "autogun_rifle_killshot_receiver_01|autogun_rifle_killshot_receiver_02|autogun_rifle_killshot_receiver_03|autogun_rifle_killshot_receiver_04|autogun_rifle_killshot_receiver_ml01"
-local infantry_lasgun_receivers = "lasgun_rifle_receiver_01|lasgun_rifle_receiver_02|lasgun_rifle_receiver_03|lasgun_rifle_receiver_ml01"
-local helbore_lasgun_receivers = "lasgun_rifle_krieg_receiver_01|lasgun_rifle_krieg_receiver_02|lasgun_krieg_rifle_receiver_03|lasgun_rifle_krieg_receiver_04|lasgun_rifle_krieg_receiver_05|lasgun_krieg_rifle_receiver_06|lasgun_rifle_krieg_receiver_ml01"
-local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_elysian_rifle_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_elysian_rifle_receiver_06|lasgun_elysian_rifle_receiver_07|lasgun_rifle_elysian_receiver_ml01"
 
 -- Camera Angles for Preview
 local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
@@ -42,10 +39,10 @@ function mod.owo_flashlight()
     local attachment_group_name = "owo_flashlight"
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
-
+    
     local flashlight_colors = mod.flashlight_colors
     local flashlight_intensities = mod.flashlight_intensities
-    
+
     for color, _ in pairs(flashlight_colors) do
         for template_suffix, _ in pairs(flashlight_intensities) do
             -- 1 for each physical model
@@ -58,6 +55,7 @@ function mod.owo_flashlight()
                         icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                         icon_render_camera_position_offset = render_cam_pos_profile_left,
                         flashlight_template = "owo_"..color.."_flashlight_"..template_suffix,
+                        custom_selection_group = attachment_group_prefix..color.."_"..template_suffix,
                     },
                     -- Fixes
                     nil,
@@ -70,6 +68,13 @@ function mod.owo_flashlight()
                     "ap_flashlight_01"
                 )
             end)
+
+            -- Create localization
+            mod:add_global_localize_strings({
+                ["loc_ewc_"..attachment_group_prefix..color.."_"..template_suffix] = {
+                    en = "OwO Flashlight "..color.." "..template_suffix,
+                },
+            })
         end
     end
     

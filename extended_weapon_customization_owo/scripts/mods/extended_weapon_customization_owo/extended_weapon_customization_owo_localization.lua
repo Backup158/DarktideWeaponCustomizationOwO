@@ -8,6 +8,8 @@ mod:add_global_localize_strings({
     },
 	-- Custom separator names
 	
+	-- 	Flashlights
+	--		DONE IN ./attachments/owo_flashlight.lua
 	-- Attachment Display Names
 	loc_owo_tactical_stock_telescoping_in = {
 		en = "Tactical Stock - Telescoping (Pushed in)",
