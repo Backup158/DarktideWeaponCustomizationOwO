@@ -40,22 +40,32 @@ function mod.owo_iron_sight(given_attachment_node)
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
-    local shortname = attachment_group_prefix.."kalashnikov"
-    create_an_attachment(table_to_return, shortname,
+    local ak_irons = attachment_group_prefix.."kalashnikov"
+    create_an_attachment(table_to_return, ak_irons,
         -- Attachment
-        {   replacement_path = _item_ranged.."/sights/"..shortname,
+        {   replacement_path = _item_ranged.."/sights/"..ak_irons,
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
-        nil,
+        {
+            {
+                attachment_slot = "sight_offset",
+                requirements = {
+                    sight = { has = ak_irons },
+                },
+                fix = {
+                    offset = { position = vector3_box(0.0, 0, 0.0105) },
+                },
+            }
+        },
         -- Kitbash
         {   item = _item_ranged.."/sights/autogun_rifle_sight_01",
             fix = {
                 disable_in_ui = false,
                 offset = {
                     node = 1,
-                    position = vector3_box(0.0, 0.24, 0.0),
+                    position = vector3_box(0.0, 0.245, 0.0),
                     rotation = vector3_box(0.0, 0.0, 0.0),
                     scale = vector3_box(1.0, 1.0, 1.0)
                 },
@@ -93,7 +103,7 @@ function mod.owo_iron_sight(given_attachment_node)
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.009, -0.07, 0.0224),
+                            position = vector3_box(0.009, -0.07, 0.021),
                             rotation = vector3_box(90.0, 90.0, 0.0),
                             scale = vector3_box(0.23, 0.047, 0.22),
                         },
@@ -104,7 +114,7 @@ function mod.owo_iron_sight(given_attachment_node)
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(-0.009, -0.07, 0.0224),
+                            position = vector3_box(-0.009, -0.07, 0.021),
                             rotation = vector3_box(90.0, -90.0, 0.0),
                             scale = vector3_box(0.23, 0.047, 0.22),
                         },
@@ -128,9 +138,9 @@ function mod.owo_iron_sight(given_attachment_node)
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.0, 0.0, -0.022),
+                            position = vector3_box(0.0, 0.0, -0.02),
                             rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = vector3_box(0.75, 0.5, 1.0),
+                            scale = vector3_box(0.75, 0.65, 1.2),
                         },
                     },
                 },
