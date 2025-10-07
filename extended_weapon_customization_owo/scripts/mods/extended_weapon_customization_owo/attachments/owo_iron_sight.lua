@@ -59,6 +59,9 @@ function mod.owo_iron_sight(given_attachment_node)
                     rotation = vector3_box(0.0, 0.0, 0.0),
                     scale = vector3_box(1.0, 1.0, 1.0)
                 },
+                hide = {
+                    mesh = {2,3,4,5,6} -- one of these is the front rail lol
+                },
             },
             children = {
                 -- Range select
@@ -90,7 +93,7 @@ function mod.owo_iron_sight(given_attachment_node)
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.009, -0.07, 0.0226),
+                            position = vector3_box(0.009, -0.07, 0.0224),
                             rotation = vector3_box(90.0, 90.0, 0.0),
                             scale = vector3_box(0.23, 0.047, 0.22),
                         },
@@ -101,7 +104,7 @@ function mod.owo_iron_sight(given_attachment_node)
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(-0.009, -0.07, 0.0226),
+                            position = vector3_box(-0.009, -0.07, 0.0224),
                             rotation = vector3_box(90.0, -90.0, 0.0),
                             scale = vector3_box(0.23, 0.047, 0.22),
                         },
@@ -127,7 +130,7 @@ function mod.owo_iron_sight(given_attachment_node)
                             node = 1,
                             position = vector3_box(0.0, 0.0, -0.022),
                             rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = vector3_box(0.75, 1.4, 1.0),
+                            scale = vector3_box(0.75, 0.5, 1.0),
                         },
                     },
                 },
