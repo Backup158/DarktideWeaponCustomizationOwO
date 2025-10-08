@@ -40,20 +40,26 @@ function mod.owo_mag()
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
-        nil,
-        -- Kitbash
-        {   item = _item_ranged.."/magazines/autogun_rifle_ak_magazine_01",
-            fix = {
-                disable_in_ui = false,
-                offset = {
+        {
+            {   
+                attachment_slot = "magazine",
+                requirements = {
+                    stock = {
+                        has = shortname,
+                    },
+                },
+                fix = {
                     node = 1,
-                    position = vector3_box(0.0, -0.015, -0.03),
-                    rotation = vector3_box(15, 0, 0.0),
-                    scale = vector3_box(1.0, 0.9, 1.1)
+                    offset = {
+                        position = vector3_box(0.0, -0.015, -0.03),
+                        rotation = vector3_box(15, 0, 0.0),
+                        scale = vector3_box(1.0, 0.9, 1.1)
+                    },
                 },
             },
-            children = {
-            },
+        },
+        -- Kitbash
+        {   base_unit = _item_ranged.."/autogun_rifle_ak/attachments/magazine_01/magazine_01",
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
