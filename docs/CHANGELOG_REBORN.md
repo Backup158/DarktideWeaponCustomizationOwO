@@ -1,14 +1,6 @@
 # 2025-10-nyaaa
 v4.1.0
 
-- Fixed logic error when looping over all models
-    - Used break instead of continue (and lua doesn't have continue)
-    - So i'd lose all the models after the first one i wanted to skip
-    - fixing this restored from 3 psword blades to 6 psword blades (index 7), not counting mastery
-        - 7 models to use, skip #4
-        - break meant only 1-3 were added
-        - now it's 1-3, 5-7
-
 ## Added
 - Flashlight
     - Variants for each flashlight model per color
@@ -21,20 +13,40 @@ v4.1.0
     - this makes 180 flashlights :3
     - good luck babe
 
+## Fixed
+- Logic error when looping over all models
+    - Used break instead of continue (and lua doesn't have continue)
+    - So i'd lose all the models after the first one i wanted to skip
+    - fixing this restored from 3 psword blades to 6 psword blades (index 7), not counting mastery
+        - 7 models to use, skip #4
+        - break meant only 1-3 were added
+        - now it's 1-3, 5-7
+- wonky fix interaction between merge tables and suppressors
+    - suppressors would get the fixes meant for merge tables???
+    - eg suppressor (empty base) with folded under stock
+        - stock would be in default position, as if i didnt do anything to it
+        - suppressor would get the rotation/scaling from it
+    - fixed by using the base unit version
 
 ## Developer talk
 - Decided how to add fixes
     - each weapon has its own file in the `fixes` folder
         - all it does is return the fixes
         - then the main file reads all those (right before copying to sibling marks) and adds them in
-        - requires me to maintin the list of the weapons in the fixes folder, but idc
-        - automatically detecting files int he folder is very resource intensive, and this only risks me forgetting to add something during testing
+            - requires me to maintain the list of the weapons in the fixes folder, but idc
+            - automatically detecting files int he folder is very resource intensive, and this only risks me forgetting to add something during testing
     - this means the fixes given per attachment are the universal fixes
+        - technically we cant do universal fixes like that
+        - it has to be put under each weapon
+        - but that means i'd need more effort when it comes to making custom fixes
+            - cant just insert because the order they get applied in may not be consistent
+            - i have the custom fixes overwrite them if the requirements match exactly
     - I prefer it this way because i like having the kitbash and attachments defined in the same file
-        - overhead from having to process and skip values, but i find the headache annoying enough when swapping between two files
+        - there's overhead from having to process and skip values, but i find the headache annoying enough when swapping between two files
+        - also it's not like this is noticeable
 - Merged redundent functions into more generic functions
     - in the main file, adding fixes and kitbashes can be done by inserting each table and merge recursive, respectively
-    - made them global to use in `create_attachments.lua`
+    - made them global into `generic_helpers.lua` to be used in `create_attachments.lua`
 - Made kitbash creation cleaner
     - split into functions for merge table and full item
     - then call the appropriate one within the `create_an_attachment` function
