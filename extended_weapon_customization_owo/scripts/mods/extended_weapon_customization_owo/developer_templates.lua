@@ -59,7 +59,9 @@ function mod.KITBASH_ITEM()
 end
 
 -- For normal
-function mod.NORMAL_ITEM()
+function mod.NORMAL_ITEM(given_attachment_node)
+    local current_attachment_node = given_attachment_node or "ap_muzzle_01"
+
     local table_to_return = init_table_to_return("NORMAL_ITEM")
 
     create_an_attachment(table_to_return, "LALALALALA_NAME",
@@ -69,25 +71,28 @@ function mod.NORMAL_ITEM()
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
-        nil,
-        -- Kitbash
-        {   item = ITEM_TO_USE_ALALALLALA,
-            fix = {
-                disable_in_ui = true,
-                offset = {
-                    node = 1,
-                    position = vector3_box(0.0, 0.0, 0.0),
-                    rotation = vector3_box(0.0, 0.0, 0.0),
-                    scale = vector3_box(1.0, 1.0, 1.0)
+        {   
+            attachment_slot = "muzzles",
+            requirements = {
+                stock = {
+                    has = folded_stock_n_1,
                 },
             },
-            children = {
-
+            fix = {
+                node = 1,
+                offset = {
+                    position = vector3_box(0.0, 0.0, 0.0),
+                    rotation =  vector3_box(0, 0, 0),
+                    scale = vector3_box(1.0, 1.0, 1.0),
+                },
             },
         },
+        -- Kitbash
+        {   base_unit = FROM_MASTER_ITEMS_EXTRACTION
+        },
         -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
-        nil
+        -- DON'T FORGET THIS (nil for completely new item)
+        current_attachment_node
     )
 
     return table_to_return
