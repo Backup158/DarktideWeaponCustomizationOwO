@@ -126,83 +126,48 @@ function mod.owo_tactical_stock(given_attachment_node)
     local folded_stock_n_l_pos = vector3_box(0.0, -0.05, 0.0)
     local folded_stock_n_l_rot = vector3_box(0, 0, -176)
     local folded_stock_n_1 = attachment_group_prefix.."folded_n_1"
-    create_an_attachment(table_to_return, folded_stock_n_1,
-        -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_1,
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-        },
-        -- Fixes
-        nil,
-        -- Kitbash
-        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_01",
-            -- item = _item_empty_trinket, -- invisible base
-            fix = {
-                disable_in_ui = false,
-                offset = {
-                    node = 1,
-                    position = folded_stock_n_l_pos,
-                    rotation = folded_stock_n_l_rot,
-                    scale = vector3_box(1, 1.0, 1),
-                },
-            },
-        },
-        -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
-        attachment_node
-    )
     local folded_stock_n_m = attachment_group_prefix.."folded_n_m"
-    create_an_attachment(table_to_return, folded_stock_n_m,
+
+    local function folded_stock_helper(name, model_unit_thing, fix_pos, fix_rot, fix_scl)
+        create_an_attachment(table_to_return, name,
         -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_m,
+        {   replacement_path = _item_ranged.."/stocks/"..name,
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
-        nil,
-        -- Kitbash
-        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01",
-            -- item = _item_empty_trinket, -- invisible base
-            fix = {
-                disable_in_ui = false,
-                offset = {
+        {
+            {   
+                attachment_slot = "stock",
+                requirements = {
+                    stock = {
+                        has = name,
+                    },
+                },
+                fix = {
                     node = 1,
-                    position = folded_stock_n_l_pos,
-                    rotation = folded_stock_n_l_rot,
-                    scale = vector3_box(1, 1.0, 1),
+                    offset = {
+                        position = fix_pos,
+                        rotation = fix_rot,
+                        scale = fix_scl,
+                    },
                 },
             },
+        },
+        -- Kitbash
+        {   base_unit = model_unit_thing,
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
         attachment_node
     )
+    end
+
+    folded_stock_helper(folded_stock_n_1, _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
+    folded_stock_helper(folded_stock_n_m, _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
+
     local folded_stock_n_u = attachment_group_prefix.."folded_n_u"
-    create_an_attachment(table_to_return, folded_stock_n_u,
-        -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..folded_stock_n_u,
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-        },
-        -- Fixes
-        nil,
-        -- Kitbash
-        {   item = _item_ranged.."/stocks/autogun_rifle_killshot_stock_02",
-            -- item = _item_empty_trinket, -- invisible base
-            fix = {
-                disable_in_ui = false,
-                offset = {
-                    node = 1,
-                    position = vector3_box(0.0, -0.03, 0.0),
-                    rotation = vector3_box(174, 0, 0),
-                    scale = vector3_box(2.52, 1.3, 1),
-                },
-            },
-        },
-        -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
-        attachment_node
-    )
+    folded_stock_helper(folded_stock_n_u, _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", vector3_box(0.0, -0.03, 0.0), vector3_box(174, 0, 0), vector3_box(2.52, 1.3, 1))
 
     return table_to_return
 
