@@ -163,11 +163,11 @@ function mod.owo_tactical_stock(given_attachment_node)
     )
     end
 
-    folded_stock_helper(folded_stock_n_1, _item_ranged.."/stocks/autogun_rifle_killshot_stock_01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
-    folded_stock_helper(folded_stock_n_m, _item_ranged.."/stocks/autogun_rifle_killshot_stock_ml01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
+    folded_stock_helper(folded_stock_n_1, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_01/stock_01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
+    folded_stock_helper(folded_stock_n_m, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_ml01/stock_ml01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
 
     local folded_stock_n_u = attachment_group_prefix.."folded_n_u"
-    folded_stock_helper(folded_stock_n_u, _item_ranged.."/stocks/autogun_rifle_killshot_stock_02", vector3_box(0.0, -0.03, 0.0), vector3_box(174, 0, 0), vector3_box(2.52, 1.3, 1))
+    folded_stock_helper(folded_stock_n_u, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_02/stock_02", vector3_box(0.0, -0.03, 0.0), vector3_box(174, 0, 0), vector3_box(2.52, 1.3, 1))
 
     return table_to_return
 
