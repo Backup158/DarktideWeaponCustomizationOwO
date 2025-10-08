@@ -31,6 +31,7 @@ local table = table
 local table_insert = table.insert
 local table_clone = table.clone
 local table_equals = table.equals
+local table_dump = table.dump
 local table_merge_recursive = table.merge_recursive
 
 -- ################################
@@ -151,7 +152,7 @@ end
 local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
     for _, weapon_id in ipairs(weapons_list) do
         -- info_if_debug("Adding attachments to "..weapon_id)
-        --table.dump(attachment_blob, "THE BLOB", 9)
+        --table_dump(attachment_blob, "THE BLOB", 9)
         if not slot then
             mod:error("Weapon slot missing! "..weapon_id..": "..attachment_blob[name])
             return
@@ -160,7 +161,9 @@ local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list,
 
         -- Fixes (from these files) and kitbashs only need to be defined once
         -- Fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
-        if not attachments_table_for_ewc.fixes[weapon_id] then attachments_table_for_ewc.fixes[weapon_id] = {} end
+        if not attachments_table_for_ewc.fixes[weapon_id] then 
+            attachments_table_for_ewc.fixes[weapon_id] = {} 
+        end
         table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], attachment_blob.fixes)
     end
     
@@ -277,7 +280,7 @@ add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "aut
 -- ################
 add_attachments_to_list_of_weapons(mod.owo_slim_blade(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
---table.dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
+--table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
 
 -- ################################
 -- Manual Overrides for Attachments
@@ -288,7 +291,7 @@ for _, weapon_id in ipairs(special_needs_fixes) do
     if not attachments_table_for_ewc.fixes[weapon_id] then
         attachments_table_for_ewc.fixes[weapon_id] = {}
     end
-    --table.dump(fixes_table_to_add, "SPECIAL NEEDS", 10)
+    --table_dump(fixes_table_to_add, "SPECIAL NEEDS", 10)
 
     --table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
     for _, custom_fix in pairs(fixes_table_to_add) do
@@ -297,6 +300,13 @@ for _, weapon_id in ipairs(special_needs_fixes) do
         for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
             -- if requirements are identical, replace that fix
             if table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
+                --[[
+                if debug_mode then
+                    mod:info("Replacing fix for "..weapon_id)
+                    table_dump(attachments_table_for_ewc.fixes[weapon_id][i], "\tREPLACING", 10)
+                    table_dump(custom_fix, "\tWITH", 10)
+                end
+                ]]
                 attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
                 inserted = true
             end
@@ -336,7 +346,7 @@ for _, weapon_id in ipairs(siblings_to_add) do
 end
 
 if debug_mode then
-    table.dump(attachments_table_for_ewc, "uwu fuck you bitch\nALL THE FUCKING TABLE RAAAGH", 10)
+    table_dump(attachments_table_for_ewc, "uwu fuck you bitch\nALL THE FUCKING TABLE RAAAGH", 10)
 end
 
 -- ################################
