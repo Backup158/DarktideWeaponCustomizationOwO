@@ -145,8 +145,8 @@ function mod.owo_tactical_stock(given_attachment_node)
                     },
                 },
                 fix = {
-                    node = 1,
                     offset = {
+                        node = 1,
                         position = fix_pos or vector3_box(0,0,0),
                         rotation = fix_rot or vector3_box(0,0,0),
                         scale = fix_scl or vector3_box(1,1,1),

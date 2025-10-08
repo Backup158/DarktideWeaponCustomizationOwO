@@ -16,6 +16,9 @@ local _item_minion = "content/items/weapons/minions"
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
+local folded_stock_n_l_pos = vector3_box(-0.015, -0.12, 0.075)
+local folded_stock_n_l_rot = vector3_box(0, 0, -174)
+
 return {
     -- Tactical Stocks
     {
@@ -27,9 +30,9 @@ return {
         },
         fix = {
             offset = {
-                1,
-                position = vector3_box(0, -0.071, 0.065),
-                --scale = vector3_box(1.25, 1.25, 1.25),
+                node = 1,
+                position = vector3_box(0, -0.071, 0.075),
+                scale = vector3_box(1.25, 1.1, 1.25),
             },
         },
     },
@@ -42,7 +45,7 @@ return {
         },
         fix = {
             offset = {
-                1,
+                node = 1,
                 position = vector3_box(0, -0.075, 0.065),
                 scale = vector3_box(1.25, 1.25, 1.25),
             },
@@ -57,9 +60,9 @@ return {
         },
         fix = {
             offset = {
-                1,
-                position = vector3_box(-0.015, -0.05, 0.055),
-                --rotation = vector3_box(0, 0, -176),
+                node = 1,
+                position = folded_stock_n_l_pos,
+                rotation = folded_stock_n_l_rot,
                 scale = vector3_box(1.25, 1.25, 1.25),
             },
         },
@@ -73,9 +76,9 @@ return {
         },
         fix = {
             offset = {
-                1,
-                position = vector3_box(-0.015, -0.05, 0.055),
-                --rotation = vector3_box(0, 0, -176),
+                node = 1,
+                position = folded_stock_n_l_pos,
+                rotation = folded_stock_n_l_rot,
                 scale = vector3_box(1.25, 1.25, 1.25),
             },
         },
@@ -89,9 +92,10 @@ return {
         },
         fix = {
             offset = {
-                1,
-                position = vector3_box(0, -0.08, 0.065),
-                scale = vector3_box(1.3, 1.22, 1.25),
+                node = 1,
+                position = vector3_box(0, -0.13, 0.065),
+                rotation = vector3_box(174, 0, 0),
+                scale = vector3_box(3.3, 1.7, 1.25),
             },
         },
     },
