@@ -42,6 +42,9 @@ return {
             },
         },
         fix = {
+            --attach = {
+            --    stock_ac1 = _item_melee.."/heads/thunder_hammer_head_04",
+            --},
             offset = {
                 position = vector3_box(0.0, 0.0, -0.02),
                 rotation = vector3_box(0, 0, 0),
