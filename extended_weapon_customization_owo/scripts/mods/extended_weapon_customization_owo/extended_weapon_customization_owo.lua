@@ -30,6 +30,7 @@ local tostring = tostring
 local table = table
 local table_insert = table.insert
 local table_clone = table.clone
+local table_equals = table.equals
 local table_merge_recursive = table.merge_recursive
 
 -- ################################
@@ -289,7 +290,22 @@ for _, weapon_id in ipairs(special_needs_fixes) do
     end
     --table.dump(fixes_table_to_add, "SPECIAL NEEDS", 10)
 
-    table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
+    --table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
+    for _, custom_fix in pairs(fixes_table_to_add) do
+        local inserted = false
+
+        for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
+            -- if requirements are identical, replace that fix
+            if table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
+                attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
+                inserted = true
+            end
+        end
+        
+        if not inserted then
+            table_insert(destination_table, custom_fix)
+        end
+    end
 end
 
 -- ################################
