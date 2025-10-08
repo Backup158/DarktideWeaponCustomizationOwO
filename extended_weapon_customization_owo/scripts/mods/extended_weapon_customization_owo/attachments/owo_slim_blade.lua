@@ -234,7 +234,25 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_scale = slim_hsword_scl,
         slim_g_scale = slim_hsword_g_scl,
     })
-    
+    --[[
+    table.insert(table_to_return.fixes, {
+        {
+            attachment_slot = current_slot_name,
+            requirements = {
+                [current_slot_name] = {
+                    has = attachment_group_prefix..,
+                },
+            },
+            fix = {
+                offset = {
+                    -- position = vector3_box(0.0, 0.12, 0.015),
+                    position = vector3_box(0.0, 0.12, 0.015),
+                    rotation = vector3_box(0, 0.035, 0),
+                    scale = vector3_box(1, 1.0, 1),
+                },
+            },
+        }
+    })]]
     --table.dump(table_to_return.fixes, "slim fixes", 6)
     return table_to_return
 

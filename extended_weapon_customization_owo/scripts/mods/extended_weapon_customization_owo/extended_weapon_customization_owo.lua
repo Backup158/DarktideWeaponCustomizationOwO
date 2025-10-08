@@ -285,7 +285,10 @@ add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"c
 -- ################################
 -- Manual Overrides for Attachments
 -- ################################
-local special_needs_fixes = { "autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p3_m1", }
+local special_needs_fixes = { 
+    "autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p3_m1", 
+    "powersword_2h_p1_m1", 
+}
 for _, weapon_id in ipairs(special_needs_fixes) do
     local fixes_table_to_add = load_mod_file("fixes/"..weapon_id)
     if not attachments_table_for_ewc.fixes[weapon_id] then
