@@ -126,7 +126,7 @@ function mod.owo_iron_sight(given_attachment_node)
                     fix = {
                         offset = {
                             node = 1,
-                            position = vector3_box(0.008, -0.01, 0.003),
+                            position = vector3_box(0.008, -0.015, 0.003),
                             rotation = vector3_box(-145, 90, 145),
                             scale = vector3_box(0.23, 0.24, 0.25),
                         },
@@ -140,7 +140,7 @@ function mod.owo_iron_sight(given_attachment_node)
                             node = 1,
                             position = vector3_box(0.0, 0.0, -0.02),
                             rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = vector3_box(0.75, 0.65, 1.2),
+                            scale = vector3_box(0.75, 0.85, 1.2),
                         },
                     },
                 },
