@@ -1,4 +1,4 @@
-# 2025-10-nyaaa
+# 2025-10-07
 v4.1.0
 
 ## Added
@@ -12,8 +12,24 @@ v4.1.0
         - default: copying the default flashlight template, so just color is different
     - this makes 180 flashlights :3
     - good luck babe
+- Slim Blades
+    - made available on relic blade, force sword, and force greatsword
+    - blades from relic blade, force sword, and force greatsword
+    - short variants for relic/fgs
+    - they sit too low. fix comes later
+- [WIP] Iron sights
+    - on: autoguns
+    - ak irons
+    - shape is alright, but the sights dont work lol
+- [WIP] Magazines
+    - on: autoguns
+    - ak extended mag
+    - it just doesn't fucking work lmao
 
 ## Fixed
+- Aligned tactical stocks for bolter
+    - sizd up and moved to back
+    - still dont try on helbores
 - Logic error when looping over all models
     - Used break instead of continue (and lua doesn't have continue)
     - So i'd lose all the models after the first one i wanted to skip
