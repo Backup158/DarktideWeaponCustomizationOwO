@@ -303,7 +303,7 @@ for _, weapon_id in ipairs(special_needs_fixes) do
         end
         
         if not inserted then
-            table_insert(destination_table, custom_fix)
+            table_insert(attachments_table_for_ewc.fixes[weapon_id], custom_fix)
         end
     end
 end
