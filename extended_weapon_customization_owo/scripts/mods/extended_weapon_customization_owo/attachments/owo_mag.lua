@@ -59,7 +59,7 @@ function mod.owo_mag()
             },
         },
         -- Kitbash
-        {   base_unit = _item_ranged.."/autogun_rifle_ak/attachments/magazine_01/magazine_01",
+        {   base_unit = "content/weapons/player/ranged/autogun_rifle_ak/attachments/magazine_01/magazine_01",
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
