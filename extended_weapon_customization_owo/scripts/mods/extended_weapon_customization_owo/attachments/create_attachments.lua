@@ -15,8 +15,8 @@ local table_contains = table.contains
 --local table_clone = table.clone
 --local table_merge_recursive = table.merge_recursive
 
-local merge_recursive_safe = mod.merge_recursive_safe
---local table_insert_all_from_table = mod.table_insert_all_from_table
+--local merge_recursive_safe = mod.merge_recursive_safe
+local table_insert_all_from_table = mod.table_insert_all_from_table
 
 
 -- ################################
