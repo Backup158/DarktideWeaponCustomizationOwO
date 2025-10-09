@@ -1,3 +1,16 @@
+# 2025-10-nyaaa
+v4.2.0
+
+# Added
+
+# Fixed
+
+# Refactors/Developer Talk
+- Reworked helpers to be full items
+    - for suppressors
+    - because when they aren't, there may be weirdness with the game trying to use them as something they're not (ex bullets getting hidden)
+    - also meant fixes might apply to them when they weren't supposed to
+
 # 2025-10-07
 v4.1.0
 
