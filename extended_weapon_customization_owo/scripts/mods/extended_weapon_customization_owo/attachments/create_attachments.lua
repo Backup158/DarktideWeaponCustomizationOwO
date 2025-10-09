@@ -89,6 +89,13 @@ end
 -- RETURN: N/A
 -- ######
 function mod.create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, given_base_unit, attachment_point)
+    local display_name_to_use = nil
+    if not internal_name then
+        display_name_to_use = "n/a"
+    else
+        display_name_to_use = "loc_"..internal_name
+    end
+
     table_to_add_to.kitbashs[replacement_name] = {
         is_fallback_item = false,
         show_in_1p = true,
@@ -112,7 +119,7 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
         },
         workflow_checklist = {
         },
-        display_name = "loc_"..internal_name,
+        display_name = display_name_to_use,
         name = replacement_name,
         workflow_state = "RELEASABLE",
         is_full_item = true
