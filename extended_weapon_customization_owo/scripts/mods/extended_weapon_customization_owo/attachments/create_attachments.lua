@@ -147,8 +147,8 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
         table_to_add_to.attachments[internal_name] = attachment_data
     end
 
-    -- merge recursive fine because this table is empty
-    merge_recursive_safe(table_to_add_to.fixes, fixes_data)
+    -- table may not always be empty, so insert
+    table_insert_all_from_table(table_to_add_to.fixes, fixes_data)
 
     if kitbash_data then
         local replacement_name = attachment_data.replacement_path

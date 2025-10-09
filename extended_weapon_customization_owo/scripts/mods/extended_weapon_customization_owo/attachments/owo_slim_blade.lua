@@ -50,8 +50,41 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         local slim_blade_name = attachment_group_prefix..name_to_use.."_"..number_string
         local fixes_to_add = {}
 
-        -- Adding grip scale fix
-        if type(scales_table) == "table" and scales_table.grip_scl then
+        -- Adding Fixes     
+        --      Blade sizes
+        local blade_pos
+        local blade_rot
+        local blade_scl
+        -- safety for if i fuck up calling it
+        if scales_table then
+            if (type(scales_table) == "table") then
+                blade_pos = scales_table.pos
+                blade_rot = scales_table.rot
+                blade_scl = scales_table.scl
+            else
+                blade_scl = scales_table -- in case i get lazy and don tmake it a table
+            end
+        end
+        table_insert(fixes_to_add, {   
+            attachment_slot = current_slot_name,
+            requirements = {
+                [current_slot_name] = {
+                    has = slim_blade_name,
+                },
+            },
+            fix = {
+                disable_in_ui = false,
+                offset = {
+                    node = 1,
+                    position = blade_pos or vector3_box(0.0, 0.0, 0.0),
+                    rotation = blade_rot or vector3_box(0.0, 0.0, 0.0),
+                    scale = blade_scl or vector3_box(0.5,1,1),
+                },
+            },
+        })
+
+        --      Grip resizing
+        if scales_table and type(scales_table) == "table" and scales_table.grip_scl then
             -- this is going to be so ass to look at :wilted_rose:
             table_insert(fixes_to_add, 
                 -- Making grip smaller
@@ -76,38 +109,6 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 }
             )
         end
-        
-        local blade_pos
-        local blade_rot
-        local blade_scale
-        -- safety for if i fuck up calling it
-        if scales_table then
-            if (type(scales_table) == "table") then
-                blade_pos = scales_table.pos
-                blade_rot = scales_table.rot
-                blade_scale = scales_table.scl
-            else
-                blade_scale = scales_table -- in case i get lazy and don tmake it a table
-            end
-        end
-
-        table_insert(fixes_to_add, {   
-            attachment_slot = current_slot_name,
-            requirements = {
-                [current_slot_name] = {
-                    has = slim_blade_name,
-                },
-            },
-            fix = {
-                disable_in_ui = false,
-                offset = {
-                    node = 1,
-                    position = blade_pos or vector3_box(0.0, 0.0, 0.0),
-                    rotation = blade_rot or vector3_box(0.0, 0.0, 0.0),
-                    scale = blade_scale or vector3_box(0.5,1,1),
-                },
-            },
-        })
 
         create_an_attachment(table_to_return, slim_blade_name,
             -- Attachment

@@ -17,7 +17,8 @@ local _item_minion = "content/items/weapons/minions"
 -- FIXES TO RETURN
 -- ###################################################################
 return {
-    -- Tactical Stocks
+    --[[
+    -- Slim Blades
     {
         attachment_slot = "blade",
         requirements = {
@@ -33,4 +34,5 @@ return {
             },
         },
     },
+    ]]
 }
