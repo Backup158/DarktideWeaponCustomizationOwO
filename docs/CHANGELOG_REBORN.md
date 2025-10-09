@@ -12,6 +12,7 @@ v4.2.0
 - Reworked helpers to be full items
     - for:
         - Suppressors
+        - Tactical Stocks
     - because when they aren't, there may be weirdness with the game trying to use them as something they're not (ex bullets getting hidden)
     - also meant fixes might apply to them when they weren't supposed to
 - Reworked single kitbashes (no children) to full items
