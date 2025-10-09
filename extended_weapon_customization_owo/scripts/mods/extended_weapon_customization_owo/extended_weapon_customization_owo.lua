@@ -279,7 +279,7 @@ add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "aut
 -- Melee
 -- ################
 add_attachments_to_list_of_weapons(mod.owo_slim_blade(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade")
-add_attachments_to_list_of_weapons(mod.owo_slim_blade("body", "ap_body_01"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
+add_attachments_to_list_of_weapons(mod.owo_slim_blade("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
 --table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
 
 -- ################################
