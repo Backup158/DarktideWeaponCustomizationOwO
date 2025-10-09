@@ -4,12 +4,20 @@ v4.2.0
 # Added
 
 # Fixed
+- Alignments for Slim Blades
+    - attachment points did not use `ap_body_01`. it's all blade, regardless of slot name
+    - this still means the blades with builtin hilts (such as psword) will be too high. am working on that
 
 # Refactors/Developer Talk
 - Reworked helpers to be full items
-    - for suppressors
+    - for:
+        - Suppressors
     - because when they aren't, there may be weirdness with the game trying to use them as something they're not (ex bullets getting hidden)
     - also meant fixes might apply to them when they weren't supposed to
+- Reworked single kitbashes (no children) to full items
+    - for:
+        - Slim Blades
+    - also helps prevent wonkiness with fixes, since it overwrites
 
 # 2025-10-07
 v4.1.0
