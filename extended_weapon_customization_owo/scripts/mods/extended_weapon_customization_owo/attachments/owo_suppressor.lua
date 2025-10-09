@@ -31,6 +31,7 @@ local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_el
 local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
 local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 
+local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 
 -- ################################
@@ -97,6 +98,23 @@ function mod.owo_suppressor()
         )
     end
 
+    -- --------------------------------
+    -- Creating helpers as full items
+    -- --------------------------------
+    -- double cans
+    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/supp_ac_ak_muzzle_03", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_03/muzzle_03", "ap_muzzle_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/supp_ac_ak_muzzle_05", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_05/muzzle_05", "ap_muzzle_01")
+    -- pbs
+    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/pbs_ac1", nil, "content/weapons/player/melee/axe/attachments/pommel_03/pommel_03", "ap_muzzle_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/pbs_ac2", nil, "content/weapons/player/ranged/rippergun_rifle/attachments/barrel_03/barrel_03", "ap_muzzle_01")
+    -- metal
+    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/supp_ac_hatchet_grip_03", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", "ap_muzzle_01")
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/pbs_ac2", nil, "content/weapons/player/ranged/rippergun_rifle/attachments/barrel_03/barrel_03", "ap_muzzle_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/supp_ac_ak_muzzle_02", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_02/muzzle_02", "ap_muzzle_01")
+
+    -- --------------------------------
+    -- Full attachment
+    -- --------------------------------
     -- Double Cans
     local suppressor_double_pos_base = vector3_box(0, 0.0, 0.0)
     local suppressor_double_pos_ac = vector3_box(0, 0.0, 0.0)
@@ -104,7 +122,7 @@ function mod.owo_suppressor()
     local suppressor_double_sca_slim = vector3_box(0.85, 1.8, 0.85)
     local suppressor_double_ac2_rot1 = vector3_box(0, 22, 0)
     local suppressor_double_ac2_rot2 = vector3_box(0, 17, 0)
-    create_suppressor("owo_suppressor_01", _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", {
+    create_suppressor("owo_suppressor_01", _item_ranged.."/muzzles/supp_ac_ak_muzzle_03", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
@@ -112,7 +130,7 @@ function mod.owo_suppressor()
         ac2_rot = suppressor_double_ac2_rot1,
         ac_sca = suppressor_double_sca,
     })
-    create_suppressor("owo_suppressor_01_slim", _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03", {
+    create_suppressor("owo_suppressor_01_slim", _item_ranged.."/muzzles/supp_ac_ak_muzzle_03", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
@@ -120,7 +138,7 @@ function mod.owo_suppressor()
         ac2_rot = suppressor_double_ac2_rot1,
         ac_sca = suppressor_double_sca_slim,
     })
-    create_suppressor("owo_suppressor_02", _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", {
+    create_suppressor("owo_suppressor_02", _item_ranged.."/muzzles/supp_ac_ak_muzzle_05", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
@@ -128,7 +146,7 @@ function mod.owo_suppressor()
         ac2_rot = suppressor_double_ac2_rot2,
         ac_sca = suppressor_double_sca,
     })
-    create_suppressor("owo_suppressor_02_slim", _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05", {
+    create_suppressor("owo_suppressor_02_slim", _item_ranged.."/muzzles/supp_ac_ak_muzzle_05", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
@@ -149,8 +167,8 @@ function mod.owo_suppressor()
     create_suppressor("owo_suppressor_03", 
         {
             base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
-            ac1 = _item_melee.."/pommels/axe_pommel_03",
-            ac2 = _item_ranged.."/barrels/rippergun_rifle_barrel_03",
+            ac1 = _item_ranged.."/muzzles/pbs_ac1",
+            ac2 = _item_ranged.."/muzzles/pbs_ac2",
         }, 
         {
             icon_rot = render_unit_rot_profile_left,
@@ -166,8 +184,8 @@ function mod.owo_suppressor()
     create_suppressor("owo_suppressor_03_slim", 
         {
             base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
-            ac1 = _item_melee.."/pommels/axe_pommel_03",
-            ac2 = _item_ranged.."/barrels/rippergun_rifle_barrel_03",
+            ac1 = _item_ranged.."/muzzles/pbs_ac1",
+            ac2 = _item_ranged.."/muzzles/pbs_ac2",
         }, 
         {
             icon_rot = render_unit_rot_profile_left,
@@ -192,8 +210,8 @@ function mod.owo_suppressor()
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
     create_suppressor("owo_suppressor_04", 
         {
-            ac1 = _item_melee.."/grips/hatchet_grip_03",
-            ac2 = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+            ac1 = _item_ranged.."/muzzles/supp_ac_hatchet_grip_03",
+            ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_03",
         }, 
         {
             icon_rot = render_unit_rot_profile_left,
@@ -208,8 +226,8 @@ function mod.owo_suppressor()
     )
     create_suppressor("owo_suppressor_04_slim", 
         {
-            ac1 = _item_melee.."/grips/hatchet_grip_03",
-            ac2 = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+            ac1 = _item_ranged.."/muzzles/supp_ac_hatchet_grip_03",
+            ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_03",
         }, 
         {
             icon_rot = render_unit_rot_profile_left,
@@ -224,8 +242,8 @@ function mod.owo_suppressor()
     )
     create_suppressor("owo_suppressor_05", 
         {
-            ac1 = _item_melee.."/grips/hatchet_grip_03",
-            ac2 = _item_ranged.."/muzzles/autogun_rifle_muzzle_02",
+            ac1 = _item_ranged.."/muzzles/supp_ac_hatchet_grip_03",
+            ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_02",
         }, 
         {
             icon_rot = render_unit_rot_profile_left,
@@ -240,8 +258,8 @@ function mod.owo_suppressor()
     )
     create_suppressor("owo_suppressor_05_slim", 
         {
-            ac1 = _item_melee.."/grips/hatchet_grip_03",
-            ac2 = _item_ranged.."/muzzles/autogun_rifle_muzzle_02",
+            ac1 = _item_ranged.."/muzzles/supp_ac_hatchet_grip_03",
+            ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_02",
         }, 
         {
             icon_rot = render_unit_rot_profile_left,
