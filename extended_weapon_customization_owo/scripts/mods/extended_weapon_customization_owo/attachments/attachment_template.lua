@@ -29,12 +29,16 @@ local _item_minion = "content/items/weapons/minions"
 local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
 local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 
+-- local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 
 -- ################################
 -- Attachment
 -- ################################
-function mod.KITBASH_ITEM()
+function mod.KITBASH_ITEM(given_slot, given_attachment_node)
+    local current_slot = given_slot or "muzzle"
+    local current_attachment_node = given_attachment_node or "ap_muzzle_01"
+
     local attachment_group_name = "KITBASH_ITEM"
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
@@ -75,8 +79,11 @@ function mod.KITBASH_ITEM()
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
-        "ap_muzzle_01"
+        current_attachment_node
     )
+
+    -- adding helpers
+    create_kitbash_full_item(table_to_return, REPLACEMENT_PATH, nil, MASTER_ITEMS_BASE_UNIT, current_attachment_node)
 
     return table_to_return
 
