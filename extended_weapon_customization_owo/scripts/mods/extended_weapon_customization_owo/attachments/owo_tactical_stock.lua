@@ -29,6 +29,7 @@ local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_el
 local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
 local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 
+local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 
 -- ################################
@@ -95,35 +96,9 @@ function mod.owo_tactical_stock(given_attachment_node)
     tactical_stock_helper(folded_stock_n_u, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_02/stock_02", vector3_box(0.0, -0.03, 0.0), vector3_box(174, 0, 0), vector3_box(2.52, 1.3, 1))
 
     local given_base_unit = "content/weapons/player/melee/thunder_hammer/attachments/head_04/head_04"
-    local helper_name = _item_melee.."/heads/owo_stock_fill_hammer_head_04"
-    table_to_return.kitbashs[helper_name] = {
-        is_fallback_item = false,
-        show_in_1p = true,
-        base_unit = given_base_unit,
-        item_list_faction = "Player",
-        tags = {
-        },
-        only_show_in_1p = false,
-        feature_flags = {
-            "FEATURE_item_retained",
-        },
-        attach_node = attachment_node,
-        resource_dependencies = {
-            [given_base_unit] = true,
-        },
-        attachments = {
-            zzz_shared_material_overrides = {
-                item = "",
-                children = {},
-            },
-        },
-        workflow_checklist = {
-        },
-        display_name = "n/a",
-        name = helper_name,
-        workflow_state = "RELEASABLE",
-        is_full_item = true
-    }
+    local replacement_name = _item_melee.."/heads/owo_stock_fill_hammer_head_04"
+    create_kitbash_full_item(table_to_return, replacement_name, nil, given_base_unit, attachment_node)
+
     return table_to_return
 
 end
