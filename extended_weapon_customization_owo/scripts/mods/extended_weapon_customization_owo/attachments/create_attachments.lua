@@ -88,7 +88,7 @@ end
 --  attachment_point: string; attachment point for the given kitbash
 -- RETURN: N/A
 -- ######
-local function create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, given_base_unit, attachment_point)
+function mod.create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, given_base_unit, attachment_point)
     table_to_add_to.kitbashs[replacement_name] = {
         is_fallback_item = false,
         show_in_1p = true,
@@ -118,6 +118,7 @@ local function create_kitbash_full_item(table_to_add_to, replacement_name, inter
         is_full_item = true
     }
 end
+local create_kitbash_full_item = mod.create_kitbash_full_item
 
 -- ######
 -- Create an Attachment
