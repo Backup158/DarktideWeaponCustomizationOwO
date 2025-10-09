@@ -6,6 +6,10 @@ local mod = get_mod("extended_weapon_customization_owo")
 local vector3 = Vector3
 local vector3_box = Vector3Box
 local type = type
+local table = table
+local table_insert = table.insert
+local string = string
+local string_regex_sub = string.gsub
 
 -- ################################
 -- Game Content Addresses
@@ -42,10 +46,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
 
     local function slim_blade_attach_helper(number_string, name_to_use, base_item_address, scales_table)
         local slim_blade_name = attachment_group_prefix..name_to_use.."_"..number_string
-        local fixes_to_add = nil
-        if type(scales_table) == "table" and scales_table[2] then
+        local fixes_to_add = {}
+
+        -- Adding grip scale fix
+        if type(scales_table) == "table" and scales_table.grip_scl then
             -- this is going to be so ass to look at :wilted_rose:
-            fixes_to_add = {
+            table_insert(fixes_to_add, 
                 -- Making grip smaller
                 {   attachment_slot = "grip",
                     requirements = {
@@ -62,21 +68,45 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                         offset = {
                             position = vector3_box(0.0, 0.0, 0.0),
                             rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = scales_table[2]
+                            scale = scales_table.grip_scl
                         },
                     },
-                },
-            }
+                }
+            )
         end
-        local blade_scale = vector3_box(0.5, 1.0, 1.0)
+        
+        local blade_pos
+        local blade_rot
+        local blade_scale
         -- safety for if i fuck up calling it
         if scales_table then
-            if (type(scales_table) == "table" and scales_table[1]) then
-                blade_scale = scales_table[1]
+            if (type(scales_table) == "table") then
+                blade_pos = scales_table.pos
+                blade_rot = scales_table.rot
+                blade_scale = scales_table.scl
             else
                 blade_scale = scales_table -- in case i get lazy and don tmake it a table
             end
         end
+
+        table_insert(fixes_to_add, {   
+            attachment_slot = current_slot_name,
+            requirements = {
+                [current_slot_name] = {
+                    has = slim_blade_name,
+                },
+            },
+            fix = {
+                disable_in_ui = false,
+                offset = {
+                    node = 1,
+                    position = blade_pos or vector3_box(0.0, 0.0, 0.0),
+                    rotation = blade_rot or vector3_box(0.0, 0.0, 0.0),
+                    scale = blade_scale or vector3_box(0.5,1,1),
+                },
+            },
+        })
+
         create_an_attachment(table_to_return, slim_blade_name,
             -- Attachment
             {   replacement_path = _item_melee.."/blades/"..slim_blade_name,
@@ -87,19 +117,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Fixes
             fixes_to_add,
             -- Kitbash
-            {   item = base_item_address..number_string,
-                fix = {
-                    disable_in_ui = false,
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.0, 0.0, 0.0),
-                        rotation = vector3_box(0.0, 0.0, 0.0),
-                        scale = blade_scale
-                    },
-                },
-                children = {
-                    
-                },
+            {   base_unit = string_regex_sub(base_item_address, "01", number_string),
             },
             -- ATTACHMENT NODE 
             -- DON'T FORGET THIS
@@ -110,19 +128,33 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local function slim_blade_variant_helper(amount_of_models, table_of_models_to_skip, base_name, model_base_path, table_of_all_transformations)
         -- Flat
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
-            slim_blade_attach_helper(number_string, "flat_"..base_name, model_base_path, table_of_all_transformations.flat_scale)
+            slim_blade_attach_helper(number_string, "flat_"..base_name, model_base_path, {
+                pos = table_of_all_transformations.pos,
+                scl = table_of_all_transformations.flat_scale,
+            })
         end)
         -- Flat (Grip)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
-            slim_blade_attach_helper(number_string, "flat_"..base_name.."_g", model_base_path, {table_of_all_transformations.flat_g_scale, grip_scale})
+            slim_blade_attach_helper(number_string, "flat_"..base_name.."_g", model_base_path, {
+                pos = table_of_all_transformations.pos,
+                scl = table_of_all_transformations.flat_g_scale, 
+                grip_scl = grip_scale
+            })
         end)
         -- Slim
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
-            slim_blade_attach_helper(number_string, "slim_"..base_name, model_base_path, table_of_all_transformations.slim_scale)
+            slim_blade_attach_helper(number_string, "slim_"..base_name, model_base_path, {
+                pos = table_of_all_transformations.pos,
+                scl = table_of_all_transformations.slim_scale,
+            })
         end)
         -- Slim (Grip)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
-            slim_blade_attach_helper(number_string, "slim_"..base_name.."_g", model_base_path, {table_of_all_transformations.slim_g_scale, grip_scale})
+            slim_blade_attach_helper(number_string, "slim_"..base_name.."_g", model_base_path, {
+                pos = table_of_all_transformations.pos,
+                scl = table_of_all_transformations.slim_g_scale, 
+                grip_scl = grip_scale,
+            })
         end)
     end
     -- ------------------
@@ -132,7 +164,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_psword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_psword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_psword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(7, {4}, "psword", _item_melee.."/blades/power_sword_blade_", {
+    slim_blade_variant_helper(7, {4}, "psword", "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01", {
         flat_scale = flat_psword_scl,
         flat_g_scale = flat_psword_g_scl,
         slim_scale = slim_psword_scl,
@@ -145,7 +177,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_pfalchion_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_pfalchion_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_pfalchion_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(2, nil, "pfalchion", _item_melee.."/blades/power_falchion_blade_", {
+    slim_blade_variant_helper(2, nil, "pfalchion", "content/weapons/player/melee/power_falchion/attachments/blade_01/blade_01", {
         flat_scale = flat_pfalchion_scl,
         flat_g_scale = flat_pfalchion_g_scl,
         slim_scale = slim_pfalchion_scl,
@@ -158,7 +190,8 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_2h_psword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_2h_psword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_2h_psword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(3, nil, "2h_psword", _item_melee.."/blades/2h_power_sword_blade_", {
+    slim_blade_variant_helper(3, nil, "2h_psword", "content/weapons/player/melee/2h_power_sword/attachments/blade_01/blade_01", {
+        pos = vector3_box(0, 0.0, 0.065),
         flat_scale = flat_2h_psword_scl,
         flat_g_scale = flat_2h_psword_g_scl,
         slim_scale = slim_2h_psword_scl,
@@ -167,7 +200,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     -- Short variants
     local flat_2h_psword_short_scl = vector3_box(0.35, 1.0, 0.75)
     local slim_2h_psword_short_scl = vector3_box(0.35, 0.65, 0.75)
-    slim_blade_variant_helper(3, nil, "2h_psword_short", _item_melee.."/blades/2h_power_sword_blade_", {
+    slim_blade_variant_helper(3, nil, "2h_psword_short", "content/weapons/player/melee/2h_power_sword/attachments/blade_01/blade_01", {
         flat_scale = flat_2h_psword_short_scl,
         flat_g_scale = flat_2h_psword_g_scl,
         slim_scale = slim_2h_psword_scl,
@@ -180,7 +213,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_fsword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_fsword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_fsword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(5, nil, "fsword", _item_melee.."/blades/force_sword_blade_", {
+    slim_blade_variant_helper(5, nil, "fsword", "content/weapons/player/melee/force_sword/attachments/blade_01/blade_01", {
         flat_scale = flat_fsword_scl,
         flat_g_scale = flat_fsword_g_scl,
         slim_scale = slim_fsword_scl,
@@ -193,7 +226,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_2h_fsword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_2h_fsword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_2h_fsword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(5, nil, "2h_fsword", _item_melee.."/blades/2h_force_sword_blade_", {
+    slim_blade_variant_helper(5, nil, "2h_fsword", "content/weapons/player/melee/2h_force_sword/attachments/blade_01/blade_01", {
         flat_scale = flat_2h_fsword_scl,
         flat_g_scale = flat_2h_fsword_g_scl,
         slim_scale = slim_2h_fsword_scl,
@@ -202,7 +235,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     -- Short variants
     local flat_2h_fsword_short_scl = vector3_box(0.35, 1.0, 0.8)
     local slim_2h_fsword_short_scl = vector3_box(0.35, 0.65, 0.8)
-    slim_blade_variant_helper(5, nil, "2h_fsword_short", _item_melee.."/blades/2h_force_sword_blade_", {
+    slim_blade_variant_helper(5, nil, "2h_fsword_short", "content/weapons/player/melee/2h_force_sword/attachments/blade_01/blade_01", {
         flat_scale = flat_2h_fsword_short_scl,
         flat_g_scale = flat_2h_fsword_g_scl,
         slim_scale = slim_2h_fsword_scl,
@@ -215,7 +248,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_dclaw_g_scl = vector3_box(0.6, 1.0, 1.0)
     local slim_dclaw_scl = vector3_box(0.5, 0.65, 1.0)
     local slim_dclaw_g_scl = vector3_box(0.6, 0.65, 1.0)
-    slim_blade_variant_helper(7, nil, "dclaw", _item_melee.."/blades/combat_sword_blade_", {
+    slim_blade_variant_helper(7, nil, "dclaw", "content/weapons/player/melee/combat_sword/attachments/blade_01/blade_01", {
         flat_scale = flat_dclaw_scl,
         flat_g_scale = flat_dclaw_g_scl,
         slim_scale = slim_dclaw_scl,
@@ -228,7 +261,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_hsword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_hsword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_hsword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(6, nil, "hsword", _item_melee.."/blades/falchion_blade_", {
+    slim_blade_variant_helper(6, nil, "hsword", "content/weapons/player/melee/falchion/attachments/blade_01/blade_01", {
         flat_scale = flat_hsword_scl,
         flat_g_scale = flat_hsword_g_scl,
         slim_scale = slim_hsword_scl,
