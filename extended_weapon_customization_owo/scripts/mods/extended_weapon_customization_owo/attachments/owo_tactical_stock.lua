@@ -40,95 +40,7 @@ function mod.owo_tactical_stock(given_attachment_node)
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
-    -- Skeletal Stock
-    local skeletal_stock = attachment_group_prefix.."skeletal"
-    create_an_attachment(table_to_return, skeletal_stock,
-        -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..skeletal_stock,
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-        },
-        -- Fixes
-        nil,
-        -- Kitbash
-        {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_02",
-            -- item = _item_empty_trinket, -- invisible base
-            fix = {
-                disable_in_ui = false,
-                offset = {
-                    node = 1,
-                    position = vector3_box(0.0, 0.2, 0.01),
-                    rotation = vector3_box(0, 0, 0),
-                    scale = vector3_box(1, 1.95, 1),
-                },
-            },
-            children = {
-                -- Fills in the Helbore. disable otherwise
-                stock_ac1 = {
-                    item = _item_melee.."/heads/thunder_hammer_head_04",
-                    fix = {
-                        node = 1,
-                        offset = {
-                            position = vector3_box(0.0, 0.0, 0.0),
-                            rotation = vector3_box(0, 0, 0),
-                            scale = vector3_box(0.0, 0.0, 0.0),
-                        },
-                    },
-                },
-            },
-        },
-        -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
-        attachment_node
-    )
-    -- Telescoping Stock
-    local telescoping_stock = attachment_group_prefix.."telescoping_in"
-    create_an_attachment(table_to_return, telescoping_stock,
-        -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..telescoping_stock,
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-        },
-        -- Fixes
-        nil,
-        -- Kitbash
-        {   item = _item_ranged.."/stocks/autogun_rifle_ak_stock_05",
-            -- item = _item_empty_trinket, -- invisible base
-            fix = {
-                disable_in_ui = false,
-                offset = {
-                    node = 1,
-                    position = vector3_box(0.0, 0.12, 0.0),
-                    rotation = vector3_box(0, 0.035, 0),
-                    scale = vector3_box(1, 1.0, 1),
-                },
-            },
-            children = {
-                -- Fills in the Helbore. disable otherwise
-                stock_ac1 = {
-                    item = _item_melee.."/heads/thunder_hammer_head_04",
-                    fix = {
-                        offset = {
-                            node = 1,
-                            position = vector3_box(0.0, 0.0, 0.0),
-                            rotation = vector3_box(0, 0, 0),
-                            scale = vector3_box(0.0, 0.0, 0.0),
-                        },
-                    },
-                },
-            },
-        },
-        -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
-        attachment_node
-    )
-    -- Folded (Natural)
-    local folded_stock_n_l_pos = vector3_box(0.0, -0.05, 0.0)
-    local folded_stock_n_l_rot = vector3_box(0, 0, -176)
-    local folded_stock_n_1 = attachment_group_prefix.."folded_n_1"
-    local folded_stock_n_m = attachment_group_prefix.."folded_n_m"
-
-    local function folded_stock_helper(name, model_unit_thing, fix_pos, fix_rot, fix_scl)
+    local function tactical_stock_helper(name, model_unit_thing, fix_pos, fix_rot, fix_scl)
         create_an_attachment(table_to_return, name,
         -- Attachment
         {   replacement_path = _item_ranged.."/stocks/"..name,
@@ -163,12 +75,55 @@ function mod.owo_tactical_stock(given_attachment_node)
     )
     end
 
-    folded_stock_helper(folded_stock_n_1, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_01/stock_01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
-    folded_stock_helper(folded_stock_n_m, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_ml01/stock_ml01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
+    -- Skeletal Stock
+    local skeletal_stock = attachment_group_prefix.."skeletal"
+    tactical_stock_helper(skeletal_stock, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_02/stock_02", vector3_box(0.0, 0.2, 0.01), vector3_box(0, 0, 0), vector3_box(1, 1.95, 1))
+
+    -- Telescoping Stock
+    local telescoping_stock = attachment_group_prefix.."telescoping_in"
+    tactical_stock_helper(telescoping_stock, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_05/stock_05", vector3_box(0.0, 0.12, 0.0), vector3_box(0, 0, 0), vector3_box(1, 1.0, 1))
+
+    -- Folded (Natural)
+    local folded_stock_n_l_pos = vector3_box(0.0, -0.05, 0.0)
+    local folded_stock_n_l_rot = vector3_box(0, 0, -176)
+    local folded_stock_n_1 = attachment_group_prefix.."folded_n_1"
+    local folded_stock_n_m = attachment_group_prefix.."folded_n_m"
+    tactical_stock_helper(folded_stock_n_1, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_01/stock_01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
+    tactical_stock_helper(folded_stock_n_m, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_ml01/stock_ml01", folded_stock_n_l_pos, folded_stock_n_l_rot, nil)
 
     local folded_stock_n_u = attachment_group_prefix.."folded_n_u"
-    folded_stock_helper(folded_stock_n_u, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_02/stock_02", vector3_box(0.0, -0.03, 0.0), vector3_box(174, 0, 0), vector3_box(2.52, 1.3, 1))
+    tactical_stock_helper(folded_stock_n_u, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_02/stock_02", vector3_box(0.0, -0.03, 0.0), vector3_box(174, 0, 0), vector3_box(2.52, 1.3, 1))
 
+    local given_base_unit = "content/weapons/player/melee/thunder_hammer/attachments/head_04/head_04"
+    local helper_name = _item_melee.."/heads/owo_stock_fill_hammer_head_04"
+    table_to_return.kitbashs[helper_name] = {
+        is_fallback_item = false,
+        show_in_1p = true,
+        base_unit = given_base_unit,
+        item_list_faction = "Player",
+        tags = {
+        },
+        only_show_in_1p = false,
+        feature_flags = {
+            "FEATURE_item_retained",
+        },
+        attach_node = attachment_node,
+        resource_dependencies = {
+            [given_base_unit] = true,
+        },
+        attachments = {
+            zzz_shared_material_overrides = {
+                item = "",
+                children = {},
+            },
+        },
+        workflow_checklist = {
+        },
+        display_name = "n/a",
+        name = helper_name,
+        workflow_state = "RELEASABLE",
+        is_full_item = true
+    }
     return table_to_return
 
 end
