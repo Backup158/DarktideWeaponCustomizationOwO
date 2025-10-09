@@ -36,7 +36,9 @@ local for_all_weapon_models = mod.for_all_weapon_models
 -- ################################
 function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local current_slot_name = given_slot_name or "blade"
-    local current_attachment_node = given_attachment_node or "ap_blade_01"
+    -- local current_attachment_node = given_attachment_node or "ap_blade_01"
+    -- everything uses blade, even when the slot is body
+    local current_attachment_node = "ap_blade_01"
 
     local attachment_group_name = "owo_slim_blade"
     local attachment_group_prefix = attachment_group_name.."_"
@@ -191,7 +193,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local slim_2h_psword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_2h_psword_g_scl = vector3_box(0.5, 0.65, 1.0)
     slim_blade_variant_helper(3, nil, "2h_psword", "content/weapons/player/melee/2h_power_sword/attachments/blade_01/blade_01", {
-        pos = vector3_box(0, 0.0, 0.065),
+        --pos = vector3_box(0, 0.0, 0.065),
         flat_scale = flat_2h_psword_scl,
         flat_g_scale = flat_2h_psword_g_scl,
         slim_scale = slim_2h_psword_scl,
