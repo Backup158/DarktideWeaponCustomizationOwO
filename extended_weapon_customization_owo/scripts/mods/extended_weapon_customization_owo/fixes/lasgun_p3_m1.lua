@@ -44,6 +44,7 @@ return {
         fix = {
             --attach = {
             --    stock_ac1 = _item_melee.."/heads/thunder_hammer_head_04",
+            --    stock_ac1 = _item_melee.."/heads/owo_stock_fill_hammer_head_04",
             --},
             offset = {
                 position = vector3_box(0.0, 0.0, -0.02),
