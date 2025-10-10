@@ -16,6 +16,9 @@ local _item_minion = "content/items/weapons/minions"
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
+local folded_stock_n_l_pos = vector3_box(-0.015, -0.09, 0.045)
+local folded_stock_n_l_rot = vector3_box(0, 0, -176)
+
 return {
     -- Tactical Stocks
     {
@@ -56,8 +59,8 @@ return {
         },
         fix = {
             offset = {
-                position = vector3_box(-0.015, -0.09, 0.045),
-                --rotation = vector3_box(0, 0, -176),
+                position = folded_stock_n_l_pos,
+                rotation = folded_stock_n_l_rot,
                 scale = vector3_box(1, 1, 0.9),
             },
         },
@@ -71,8 +74,8 @@ return {
         },
         fix = {
             offset = {
-                position = vector3_box(-0.015, -0.09, 0.045),
-                --rotation = vector3_box(0, 0, -176),
+                position = folded_stock_n_l_pos,
+                rotation = folded_stock_n_l_rot,
                 scale = vector3_box(1, 1, 0.9),
             },
         },
@@ -87,7 +90,8 @@ return {
         fix = {
             offset = {
                 position = vector3_box(0, -0.11, 0.05),
-                scale = vector3_box(1.0, 1.05, 1.0),
+                rotation = vector3_box(174, 0, 0),
+                scale = vector3_box(2.52, 1.3, 1),
             },
         },
     },
