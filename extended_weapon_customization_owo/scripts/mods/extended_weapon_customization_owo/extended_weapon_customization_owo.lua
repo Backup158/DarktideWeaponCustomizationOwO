@@ -168,7 +168,6 @@ local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list,
             merge_recursive_safe(attachments_table_for_ewc.attachment_slots[weapon_id], attachment_blob.attachment_slots)
         end
 
-
         -- Fixes (from these files) and kitbashs only need to be defined once
         -- Fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
         if not attachments_table_for_ewc.fixes[weapon_id] then 
@@ -301,7 +300,7 @@ add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "aut
 add_attachments_to_list_of_weapons(mod.owo_slim_blade(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
 
-add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear"), {"combataxe_p1_m1", "combataxe_p2_m1", }, "head_rear")
+add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01"), {"combataxe_p1_m1", "combataxe_p2_m1", }, "head_rear")
 --table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
 
 -- ################################

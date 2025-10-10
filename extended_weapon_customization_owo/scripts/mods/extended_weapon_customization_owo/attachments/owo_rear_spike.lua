@@ -50,6 +50,9 @@ function mod.owo_rear_spike(given_slot, given_attachment_node)
             icon_render_camera_position_offset = render_cam_pos_profile_left,
         },
         -- Fixes
+        nil,
+        --[[
+        -- Causes backend error????
         {   
             attachment_slot = current_slot,
             requirements = {
@@ -65,13 +68,47 @@ function mod.owo_rear_spike(given_slot, given_attachment_node)
                     scale = vector3_box(1.0, 1.0, 1.0),
                 },
             },
-        },
+        },]]
         -- Kitbash
         {   base_unit = "content/weapons/player/melee/axe/attachments/head_03/head_03"
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
-        "ap_head_01"
+        current_attachment_node
+    )
+    local spike_02 = attachment_group_prefix.."02"
+    create_an_attachment(table_to_return, spike_02,
+        -- Attachment
+        {   replacement_path = _item_melee.."/head_rears/"..spike_02,
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+        },
+        -- Fixes
+        nil,
+        --[[
+        -- Causes backend error????
+        {   
+            attachment_slot = current_slot,
+            requirements = {
+                stock = {
+                    has = spike_01,
+                },
+            },
+            fix = {
+                node = 1,
+                offset = {
+                    position = vector3_box(0.0, 0.0, 0.0),
+                    rotation =  vector3_box(0, 0, 0),
+                    scale = vector3_box(1.0, 1.0, 1.0),
+                },
+            },
+        },]]
+        -- Kitbash
+        {   base_unit = "content/weapons/player/melee/axe/attachments/head_04/head_04"
+        },
+        -- ATTACHMENT NODE 
+        -- DON'T FORGET THIS
+        current_attachment_node
     )
 
     table_to_return.attachment_slots["head_rear"] = {
