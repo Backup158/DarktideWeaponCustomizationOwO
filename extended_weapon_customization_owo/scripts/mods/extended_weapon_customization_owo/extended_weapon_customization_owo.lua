@@ -159,6 +159,16 @@ local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list,
         end
         add_attachment_to_weapon_in_final_table(attachment_blob.attachments, weapon_id, slot)
 
+        -- Only add slots if they exist
+        if attachment_blob.attachment_slots then
+            -- If destination doesn't exist
+            if not attachments_table_for_ewc.attachment_slots[weapon_id] then
+                attachments_table_for_ewc.attachment_slots[weapon_id] = {}
+            end
+            merge_recursive_safe(attachments_table_for_ewc.attachment_slots[weapon_id], attachment_blob.attachment_slots)
+        end
+
+
         -- Fixes (from these files) and kitbashs only need to be defined once
         -- Fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
         if not attachments_table_for_ewc.fixes[weapon_id] then 
@@ -190,6 +200,16 @@ local function copy_attachments_from_A_to_B(weapon_id_A, weapon_id_B)
     end
     table_merge_recursive(attachments_table_for_ewc.attachments[weapon_id_B], attachments_table_for_ewc.attachments[weapon_id_A])
 
+    -- If source does not exist
+    if not attachments_table_for_ewc.attachment_slots[weapon_id_A] then
+        info_if_debug("No attachment slots found for "..weapon_id_A)
+        return
+    end
+    -- If destination doesn't exist
+    if not attachments_table_for_ewc.attachment_slots[weapon_id_B] then
+        attachments_table_for_ewc.attachment_slots[weapon_id_B] = {}
+    end
+    merge_recursive_safe(attachments_table_for_ewc.attachment_slots[weapon_id_B], attachments_table_for_ewc.attachment_slots[weapon_id_A])
 end
 
 -- ######
@@ -280,6 +300,8 @@ add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "aut
 -- ################
 add_attachments_to_list_of_weapons(mod.owo_slim_blade(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
+
+add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear"), {"combataxe_p1_m1", "combataxe_p2_m1", }, "head_rear")
 --table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
 
 -- ################################

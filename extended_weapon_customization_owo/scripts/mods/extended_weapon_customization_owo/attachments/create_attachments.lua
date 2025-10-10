@@ -32,15 +32,10 @@ local table_insert_all_from_table = mod.table_insert_all_from_table
 function mod.init_table_to_return(internal_name)
     return {
         name = internal_name or "owo_UNKNOWN",
-        attachments = {
-
-        },
-        fixes = {
-
-        },
-        kitbashs = {
-
-        },
+        attachments = { },
+        attachment_slots = { },
+        fixes = { },
+        kitbashs = { },
     }
 end
 
@@ -213,6 +208,7 @@ local attachment_names = {
     "owo_slim_blade",
     "owo_mag",
     "owo_iron_sight",
+    "owo_rear_spike",
 }
 for _, name in ipairs(attachment_names) do
     load_mod_file("attachments/"..name)
