@@ -29,6 +29,7 @@ local _item_minion = "content/items/weapons/minions"
 local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
 local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 
+local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 
 -- ################################
@@ -76,7 +77,7 @@ function mod.owo_iron_sight(given_attachment_node)
             children = {
                 -- Range select
                 sight_ac1 = {
-                    item = _item_melee.."/grips/hatchet_grip_03",
+                    item = _item_ranged.."/sights/owo_iron_sight_ak_ac1",
                     fix = {
                         offset = {
                             node = 1,
@@ -87,7 +88,7 @@ function mod.owo_iron_sight(given_attachment_node)
                     },
                 },
                 sight_ac2 = {
-                    item = _item_melee.."/grips/hatchet_grip_03",
+                    item = _item_ranged.."/sights/owo_iron_sight_ak_ac1",
                     fix = {
                         offset = {
                             node = 1,
@@ -99,7 +100,7 @@ function mod.owo_iron_sight(given_attachment_node)
                 },
                 -- Rear sight (making that v notch)
                 sight_ac3 = {
-                    item = _item_ranged.."/stocks/autogun_rifle_ak_stock_01",
+                    item = _item_ranged.."/sights/owo_iron_sight_ak_ac5",
                     fix = {
                         offset = {
                             node = 1,
@@ -110,7 +111,7 @@ function mod.owo_iron_sight(given_attachment_node)
                     },
                 },
                 sight_ac4 = {
-                    item = _item_ranged.."/stocks/autogun_rifle_ak_stock_01",
+                    item = _item_ranged.."/sights/owo_iron_sight_ak_ac5",
                     fix = {
                         offset = {
                             node = 1,
@@ -122,7 +123,7 @@ function mod.owo_iron_sight(given_attachment_node)
                 },
                 -- rear butt
                 sight_ac5 = {
-                    item = _item_ranged.."/stocks/autogun_rifle_ak_stock_01",
+                    item = _item_ranged.."/sights/owo_iron_sight_ak_ac5",
                     fix = {
                         offset = {
                             node = 1,
@@ -134,7 +135,7 @@ function mod.owo_iron_sight(given_attachment_node)
                 },
                 -- Dust cover
                 sight_ac6 = {
-                    item = _item_ranged.."/stocks/autogun_rifle_ak_stock_02",
+                    item = _item_ranged.."/sights/owo_iron_sight_ak_ac6",
                     fix = {
                         offset = {
                             node = 1,
@@ -150,6 +151,15 @@ function mod.owo_iron_sight(given_attachment_node)
         -- DON'T FORGET THIS
         current_attachment_node
     )
+
+    -- Kitbash helper items
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac1", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", "ap_sight_01")
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac2", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", "ap_sight_01")
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac3", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac4", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac5", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac6", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_02/stock_02", "ap_sight_01")
+    
 
     return table_to_return
 
