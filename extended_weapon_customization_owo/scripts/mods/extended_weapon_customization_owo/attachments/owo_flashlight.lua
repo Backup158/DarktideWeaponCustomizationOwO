@@ -66,7 +66,8 @@ function mod.owo_flashlight()
             nil,
             -- Kitbash
             {
-                item = "content/weapons/player/attachments/flashlights/flashlight_1/flashlight_1",
+                --item = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
+                item = _item_ranged.."/flashlights/flashlight_01",
                 fix = {
                     disable_in_ui = true,
                     offset = {
