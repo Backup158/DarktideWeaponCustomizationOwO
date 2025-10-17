@@ -3,8 +3,8 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- ################################
 -- Local References for Performance
 -- ################################
---local vector3 = Vector3
---local vector3_box = Vector3Box
+local vector3 = Vector3
+local vector3_box = Vector3Box
 local pairs = pairs
 local table = table
 local table_insert = table.insert
@@ -52,7 +52,7 @@ function mod.owo_flashlight()
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_1", nil, "content/weapons/player/ranged/autogun_rifle/attachments/stock_03/stock_03", "ap_flashlight_01")
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_2", nil, "content/weapons/player/ranged/autogun_pistol/attachments/muzzle_01/muzzle_01", "ap_flashlight_01")
 
-    local function kitbash_flashlight_help(table_to_return, attachment_name, table_of_children_and_fixes)
+    local function kitbash_flashlight_help(table_to_return, attachment_name, color, template_suffix, table_of_children_and_fixes)
 
         create_an_attachment(table_to_return, attachment_name,
             -- Attachment
@@ -84,95 +84,93 @@ function mod.owo_flashlight()
         )
     end
 
-    local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
-    kitbash_flashlight_help(table_to_return, owo_tactical_light_01, {
-        base_position = vector3_box(0.016, 0.202, 0.05),
-        children = {
-            flashlight_ac1 = {
-                item = _item_ranged.."/flashlights/owo_flashlight_ac1_3",
-                fix = {
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.058, -0.128, -0.014),
-                        rotation = vector3_box(-90.0, 0.0, 0.0),
-                        scale = vector3_box(1.75, 1.6, 1.75),
-                    },
-                },
-            },
-            flashlight_ac2 = {
-                item = _item_ranged.."/flashlights/owo_flashlight_ac2_2",
-                fix = {
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.058, -0.18, -0.014),
-                        rotation = vector3_box(0.0, -70, 0.0),
-                        scale = vector3_box(1.15, 0.5, 1.15),
-                    },
-                },
-            },
-        },
-    })
-    local owo_mp5_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_01"
-    kitbash_flashlight_help(table_to_return, owo_mp5_light_01, {
-        base_position = vector3_box(-0.054, 0.244, 0.19),
-        children = {
-            flashlight_ac1 = {
-                item = _item_ranged.."/flashlights/owo_flashlight_ac1_1",
-                fix = {
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.058, -0.128, -0.014),
-                        rotation = vector3_box(-90.0, 0.0, 0.0),
-                        scale = vector3_box(1.95, 1.6, 1.75),
-                    },
-                },
-            },
-            flashlight_ac2 = {
-                item = _item_ranged.."/flashlights/owo_flashlight_ac2_1",
-                fix = {
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.058, -0.13, -0.014),
-                        rotation = vector3_box(-90, 0, -180),
-                        scale = vector3_box(1.0, 0.45, 1.0),
-                    },
-                },
-            },
-        }
-    })
-    local owo_mp5_light_02 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_02"
-    kitbash_flashlight_help(table_to_return, owo_mp5_light_02, {
-        base_position = vector3_box(-0.054, 0.244, 0.19),
-        children = {
-            flashlight_ac1 = {
-                item = _item_ranged.."/flashlights/owo_flashlight_ac1_2",
-                fix = {
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.058, -0.108, -0.012),
-                        rotation = vector3_box(-90, 0, 180),
-                        scale = vector3_box(0.80, 0.80, 1.0),
-                    },
-                },
-            },
-            flashlight_ac2 = {
-                item = _item_ranged.."/flashlights/owo_flashlight_ac2_1",
-                fix = {
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.058, -0.13, -0.014),
-                        rotation = vector3_box(-90, 0, -180),
-                        scale = vector3_box(1.0, 0.45, 1.0),
-                    },
-                },
-            },
-        }
-    })
-
     for color, _ in pairs(flashlight_colors) do
         for template_suffix, _ in pairs(flashlight_intensities) do
 
-
+            local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
+            kitbash_flashlight_help(table_to_return, owo_tactical_light_01, color, template_suffix, {
+                base_position = vector3_box(0.016, 0.202, 0.05),
+                children = {
+                    flashlight_ac1 = {
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_3",
+                        fix = {
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0.058, -0.128, -0.014),
+                                rotation = vector3_box(-90.0, 0.0, 0.0),
+                                scale = vector3_box(1.75, 1.6, 1.75),
+                            },
+                        },
+                    },
+                    flashlight_ac2 = {
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_2",
+                        fix = {
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0.058, -0.18, -0.014),
+                                rotation = vector3_box(0.0, -70, 0.0),
+                                scale = vector3_box(1.15, 0.5, 1.15),
+                            },
+                        },
+                    },
+                },
+            })
+            local owo_mp5_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_01"
+            kitbash_flashlight_help(table_to_return, owo_mp5_light_01, color, template_suffix, {
+                base_position = vector3_box(-0.054, 0.244, 0.19),
+                children = {
+                    flashlight_ac1 = {
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_1",
+                        fix = {
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0.058, -0.128, -0.014),
+                                rotation = vector3_box(-90.0, 0.0, 0.0),
+                                scale = vector3_box(1.95, 1.6, 1.75),
+                            },
+                        },
+                    },
+                    flashlight_ac2 = {
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_1",
+                        fix = {
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0.058, -0.13, -0.014),
+                                rotation = vector3_box(-90, 0, -180),
+                                scale = vector3_box(1.0, 0.45, 1.0),
+                            },
+                        },
+                    },
+                }
+            })
+            local owo_mp5_light_02 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_02"
+            kitbash_flashlight_help(table_to_return, owo_mp5_light_02, color, template_suffix, {
+                base_position = vector3_box(-0.054, 0.244, 0.19),
+                children = {
+                    flashlight_ac1 = {
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_2",
+                        fix = {
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0.058, -0.108, -0.012),
+                                rotation = vector3_box(-90, 0, 180),
+                                scale = vector3_box(0.80, 0.80, 1.0),
+                            },
+                        },
+                    },
+                    flashlight_ac2 = {
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_1",
+                        fix = {
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0.058, -0.13, -0.014),
+                                rotation = vector3_box(-90, 0, -180),
+                                scale = vector3_box(1.0, 0.45, 1.0),
+                            },
+                        },
+                    },
+                }
+            })
 
             -- 1 for each physical model
             for_all_weapon_models(5, {"ml01"}, function(i)
