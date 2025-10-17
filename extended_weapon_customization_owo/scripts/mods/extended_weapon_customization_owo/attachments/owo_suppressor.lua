@@ -68,6 +68,12 @@ function mod.owo_suppressor()
                         rotation = vector3_box(0, 0, 0),
                         scale = vector3_box(1, 1, 1),
                     },
+                    --[[
+                    hide = {
+                        -- NOT: 1 (crash)
+                        -- NOT: 2 (doesn't change anything)
+                        mesh = {2},
+                    },]]
                 },
                 children = {
                     muzzle_ac1 = {
