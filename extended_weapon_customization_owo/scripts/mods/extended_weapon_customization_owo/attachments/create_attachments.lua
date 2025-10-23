@@ -6,13 +6,14 @@ local mod = get_mod("extended_weapon_customization_owo")
 --local vector3 = Vector3
 --local vector3_box = Vector3Box
 
+local type = type
 --local pairs = pairs
 local ipairs = ipairs
 --local string = string
 local table = table
 --local table_insert = table.insert
 local table_contains = table.contains
---local table_clone = table.clone
+local table_clone = table.clone
 --local table_merge_recursive = table.merge_recursive
 
 --local merge_recursive_safe = mod.merge_recursive_safe
@@ -83,8 +84,32 @@ end
 --  attachment_point: string; attachment point for the given kitbash
 -- RETURN: N/A
 -- ######
-function mod.create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, given_base_unit, attachment_point)
+function mod.create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point)
     local display_name_to_use = nil
+    local given_base_unit = nil
+    local given_resource_dependencies = nil
+    local given_attachments = {
+        zzz_shared_material_overrides = {
+            item = "",
+            children = {},
+        },
+    }
+    if type(kitbash_data) == "table" then
+        given_base_unit = kitbash_data.base_unit
+        if kitbash_data.attachments and (type(kitbash_data.attachments) == "table") then
+            given_attachments = table_clone(kitbash_data.attachments)
+        end
+        if kitbash_data.resource_dependencies and (type(kitbash_data.resource_dependencies) == "table") then
+            given_resource_dependencies = table_clone(kitbash_data.resource_dependencies)
+        end
+    -- backwards compatibility for passing only base unit (string)
+    else
+        given_base_unit = kitbash_data
+        given_resource_dependencies = {
+            [given_base_unit] = true,
+        }
+    end
+
     if not internal_name then
         display_name_to_use = "n/a"
     else
@@ -103,15 +128,8 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
             "FEATURE_item_retained",
         },
         attach_node = attachment_point,
-        resource_dependencies = {
-            [given_base_unit] = true,
-        },
-        attachments = {
-            zzz_shared_material_overrides = {
-                item = "",
-                children = {},
-            },
-        },
+        resource_dependencies = given_resource_dependencies,
+        attachments = given_attachments,
         workflow_checklist = {
         },
         display_name = display_name_to_use,
@@ -149,7 +167,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
         local replacement_name = attachment_data.replacement_path
         -- this only is a thing if it's a full item on its own
         if kitbash_data.base_unit then
-            create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data.base_unit, attachment_point)
+            create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point)
         else
             create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
         end

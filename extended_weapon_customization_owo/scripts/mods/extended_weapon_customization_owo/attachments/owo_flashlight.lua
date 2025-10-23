@@ -52,7 +52,7 @@ function mod.owo_flashlight()
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_1", nil, "content/weapons/player/ranged/autogun_rifle/attachments/stock_03/stock_03", "ap_flashlight_01")
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_2", nil, "content/weapons/player/ranged/autogun_pistol/attachments/muzzle_01/muzzle_01", "ap_flashlight_01")
 
-    local function kitbash_flashlight_help(table_to_return, attachment_name, color, template_suffix, table_of_children_and_fixes)
+    local function kitbash_flashlight_help(table_to_return, attachment_name, color, template_suffix, table_of_children_and_fixes, custom_attachment_node)
 
         create_an_attachment(table_to_return, attachment_name,
             -- Attachment
@@ -63,11 +63,30 @@ function mod.owo_flashlight()
                 custom_selection_group = attachment_group_prefix..color.."_"..template_suffix,
             },
             -- Fixes
-            nil,
+            --nil,
+            {
+                {
+                    attachment_slot = "flashlight",
+                    requirements = {
+                        flashlight = {
+                            has = attachment_name,
+                        },
+                    },
+                    fix = {
+                        node = 1,
+                        offset = {
+                            position = table_of_children_and_fixes.base_position or vector3_box(0.0, 0.0, 0.0),
+                            rotation =  vector3_box(0, 0, 0),
+                            scale = vector3_box(1.0, 1.0, 1.0),
+                        },
+                    },
+                }
+            },
             -- Kitbash
             {
-                --item = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
-                item = _item_ranged.."/flashlights/flashlight_01",
+                base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
+                --item = _item_ranged.."/flashlights/flashlight_01",
+                --[[
                 fix = {
                     disable_in_ui = true,
                     offset = {
@@ -78,16 +97,24 @@ function mod.owo_flashlight()
                     },
                 },
                 children = table_clone(table_of_children_and_fixes.children),
+                ]]
+                attachments = {
+                    zzz_shared_material_overrides = {
+                        item = "",
+                        children = table_of_children_and_fixes.children,
+                    },
+                }
             },
             -- ATTACHMENT NODE 
             -- DON'T FORGET THIS
-            "ap_flashlight_01"
+            custom_attachment_node or "ap_flashlight_01"
         )
     end
 
+    local mp5_light_base_pos = vector3_box(0.0, 0.244, 0.33)
+
     for color, _ in pairs(flashlight_colors) do
         for template_suffix, _ in pairs(flashlight_intensities) do
-
             local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
             kitbash_flashlight_help(table_to_return, owo_tactical_light_01, color, template_suffix, {
                 base_position = vector3_box(0.016, 0.202, 0.05),
@@ -116,9 +143,10 @@ function mod.owo_flashlight()
                     },
                 },
             })
+
             local owo_mp5_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_01"
             kitbash_flashlight_help(table_to_return, owo_mp5_light_01, color, template_suffix, {
-                base_position = vector3_box(-0.054, 0.244, 0.19),
+                base_position = mp5_light_base_pos,
                 children = {
                     flashlight_ac1 = {
                         item = _item_ranged.."/flashlights/owo_flashlight_ac1_1",
@@ -143,10 +171,10 @@ function mod.owo_flashlight()
                         },
                     },
                 }
-            })
+            }, "ap_receiver_01")
             local owo_mp5_light_02 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_02"
             kitbash_flashlight_help(table_to_return, owo_mp5_light_02, color, template_suffix, {
-                base_position = vector3_box(-0.054, 0.244, 0.19),
+                base_position = mp5_light_base_pos,
                 children = {
                     flashlight_ac1 = {
                         item = _item_ranged.."/flashlights/owo_flashlight_ac1_2",
@@ -171,7 +199,7 @@ function mod.owo_flashlight()
                         },
                     },
                 }
-            })
+            }, "ap_receiver_01")
 
             -- 1 for each physical model
             for_all_weapon_models(5, {"ml01"}, function(i)
