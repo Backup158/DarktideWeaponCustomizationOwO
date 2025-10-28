@@ -3,78 +3,61 @@
 [![DiscordThread](https://img.shields.io/badge/Discord_Thread-7289da?logo=discord)](https://discord.com/channels/1048312349867646996/1356536292891951105 "Thread in the Darktide Modders Discord")
 [![ThisPageDirect](https://img.shields.io/badge/This_Page_(Direct)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/README.md "README when displayed directly on the repository.")
 [![ThisPagePages](https://img.shields.io/badge/This_Page_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/ "README when displayed on GitHub Pages")
-[![PartsAddedDirect](https://custom-icon-badges.demolab.com/badge/Parts_Added_(Direct)-e8d4b6?logo=list&logoSource=feather&logoColor=86d37a&labelColor=gray)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/parts_added.md "Parts Added List when displayed directly on the repository.")
-[![PartsAddedPages](https://custom-icon-badges.demolab.com/badge/Parts_Added_(Pages)-e8d4b6?logo=list&logoSource=feather&logoColor=e18bbc&labelColor=gray)](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added "Parts Added List when displayed on GitHub Pages.")
-[![ChangelogDirect](https://img.shields.io/badge/Changelog_(Direct)-e8d4b6?logo=readdotcv&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/CHANGELOG.md "Changelog when displayed directly on the repository.")
-[![ChangelogPages](https://img.shields.io/badge/Changelog_(Pages)-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG "Changelog when displayed on GitHub Pages.")
+[![PartsAddedDirect](https://custom-icon-badges.demolab.com/badge/Parts_Added_(Direct)-e8d4b6?logo=list&logoSource=feather&logoColor=86d37a&labelColor=gray)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/parts_added_reborn.md "Parts Added List when displayed directly on the repository.")
+[![PartsAddedPages](https://custom-icon-badges.demolab.com/badge/Parts_Added_(Pages)-e8d4b6?logo=list&logoSource=feather&logoColor=e18bbc&labelColor=gray)](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added_reborn "Parts Added List when displayed on GitHub Pages.")
+[![ChangelogDirect](https://img.shields.io/badge/Changelog_(Direct)-e8d4b6?logo=readdotcv&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/CHANGELOG_REBORN.md "Changelog when displayed directly on the repository.")
+[![ChangelogPages](https://img.shields.io/badge/Changelog_(Pages)-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG_REBORN "Changelog when displayed on GitHub Pages.")
+[![OldReadme](https://img.shields.io/badge/Old_README_(Pages)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/ "Old README when displayed on GitHub Pages, for archive purposes")
 
 > [!WARNING]
 >
-> CURRENT RELEASES ARE NOT COMPATIBLE WITH THE REWORKED BASE MOD (`extended_weapon_customization`), WHICH IS CURRENTLY DISCORD EXCLUSIVE AND *VERY* WIP
+> THIS IS FOR THE REWORKED BASE MOD (`extended_weapon_customization`), WHICH IS CURRENTLY DISCORD EXCLUSIVE AND WIP
 >
-> USE WITH THE STABLE VERSION ON NEXUS
+> IN FACT, THE REBUILD FOR THIS IS VERY WIP AS WELL
+>
+> FOR INFO ON THE OLD VERSION OF THIS PLUGIN, SEE [THE OLD README ON PAGES](https://backup158.github.io/DarktideWeaponCustomizationOwO/)
 
 # OwO? What is this?
-Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots, but works fine in gameplay (see [FAQ #7](#faq-7)). 
+Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. 
 
-> [!WARNING] 
-> 
-> Expect performance drops, especially when piled onto a heavy load order (see [FAQ #9-10](#faq-performance)). Some attachments are made of a lot of parts, which takes more resources to process.
-> \
-> Notably, I've had hitches when opening the inventory/weapon customization menu and on startup. The stutter when players spawn in (caused by the base mod) gets worse.
-> \
-> Attachments may not be aligned with parts from other plugins.
-> \
-> You have been warned!
-
-In case of misaligned sights, I recommend using [Crosshair Remap (Continued)](https://www.nexusmods.com/warhammer40kdarktide/mods/253) as a workaround. Error 2001/2014s when entering the Mourningstar can be kinda avoided by directly accessing the mission board through [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) or some other equivalent, but it won't save you from getting disconnected at the start of a mission. I've only had trouble connecting at the start; once you're in, you're probably in until the end.
+In case of misaligned sights, I recommend using [Crosshair Remap (Continued)](https://www.nexusmods.com/warhammer40kdarktide/mods/253) as a workaround.  \
+With the rebuild, Error 2001/2014s when entering the Mourningstar are much rarer. In case they do happen, it can be kinda avoided by directly accessing the mission board through [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) or some other equivalent, but it won't save you from getting disconnected at the start of a mission. I've only had trouble connecting at the start; once you're in, you're probably in until the end.
 
 Report alignment issues and I might fix it if I'm not busy (lying umder blamket ^u^). 
 
 # Installation
 ## Requirements
-[MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) by Grasmann
-
-[Extended Weapon Customization](https://www.nexusmods.com/warhammer40kdarktide/mods/277) by Grasmann
-
-[MT Weapon Customization Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/276) by Random Account/MT607
+1. [MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) by Grasmann
+2. ~~[Extended Weapon Customization Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277)~~ [Extended Weapon Customization channel (download in pins) in the Darktide Modders Discord](https://discord.com/channels/1048312349867646996/1168063453416669284) by Grasmann
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
 ## Load Order
-Place this BELOW the base Weapon Customization mod and ABOVE the MT plugin and the Syn's edits plugin. Only the **bolded** files are necessary.
 
-> **weapon_customization**
-> 
-> for_the_drip
-> 
-> weapon_customization_no_gun
-> 
-> **weapon_customization_owo**
-> 
-> weapon_customization_syn_edits
-> 
-> **weapon_customization_mt_stuff**
+Load order doesn't matter with rebuilt EWC plugins.
 
-If you don't follow this, ~~I'll tear out your liver~~ the mod will throw a bunch of errors and I will laugh at you for not reading the description. You'll also miss out on the 2 times I aligned something involving the other plugins' parts.
-> [!NOTE]
-> To AML users: Versions prior to `aml-25.05.04` have issues with following these load order rules. Make sure you have updated AML!
+Just make sure you don't use it with the deprecated `weapon_customization`
 
 # ***Notices youw pawts*** (Parts I added)
 
 The list is hosted externally.  \
-&emsp; To see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html)  \
-&emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added.md)
+&emsp; To see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added_reborn.html)  \
+&emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added_reborn.md)
 
 # Acknowledgements
 Not comprehensive
 - grasmann: For the original EWC mod and including a plugin template
-- MT607, Random Account: For making the first major plugin, which I used as a base
+- MT607 (Random Account): For making the first major plugin, which I used as a base
 - Syndonai: For sharing knowledge and techniques for kitbashing and quirks of EWC
 - RinAnarchy: For Chinese (Simplified) localization ["zh-cn"]
 - The gun store next to one of my favorite ice cream shops: For letting me see some of these parts in person without going broke
-- random autistic people arguing on forums: For posting pictures of their guns
+- Random autistic people arguing on forums: For posting pictures of their guns
 
 # FAQ
+
+> [!WARNING]
+>
+> Anything below is not updated for the rebuild. I'll do that once I'm done
+
 <a id="faq-1"></a>
 
 1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
