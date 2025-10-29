@@ -105,11 +105,11 @@ function mod.owo_flashlight()
     local table_to_return = mod.init_table_to_return(attachment_group_name)
     
     -- Kitbash helper items
-    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_1", nil, "content/weapons/player/melee/combat_knife/attachments/grip_01/grip_01", "ap_flashlight_01")
-    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_2", nil, "content/weapons/player/melee/combat_sword/attachments/grip_05/grip_05", "ap_flashlight_01")
-    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_3", nil, "content/weapons/player/melee/combat_knife/attachments/grip_04/grip_04", "ap_flashlight_01")
-    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_1", nil, "content/weapons/player/ranged/autogun_rifle/attachments/stock_03/stock_03", "ap_flashlight_01")
-    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_2", nil, "content/weapons/player/ranged/autogun_pistol/attachments/muzzle_01/muzzle_01", "ap_flashlight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_grip1", nil, "content/weapons/player/melee/combat_knife/attachments/grip_01/grip_01", "ap_flashlight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_dclaw_grip5", nil, "content/weapons/player/melee/combat_sword/attachments/grip_05/grip_05", "ap_flashlight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_grip4", nil, "content/weapons/player/melee/combat_knife/attachments/grip_04/grip_04", "ap_flashlight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_attacher_stock3", nil, "content/weapons/player/ranged/autogun_rifle/attachments/stock_03/stock_03", "ap_flashlight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_attacher_ap_muzzle1", nil, "content/weapons/player/ranged/autogun_pistol/attachments/muzzle_01/muzzle_01", "ap_flashlight_01")
 
     local mp5_light_base_pos = vector3_box(0.0, 0.244, 0.33)
 
@@ -123,7 +123,7 @@ function mod.owo_flashlight()
                 base_position = vector3_box(0.016, 0.202, 0.05),
                 children = {
                     flashlight_ac1 = {
-                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_3",
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_grip4",
                         fix = {
                             offset = {
                                 node = 1,
@@ -134,7 +134,7 @@ function mod.owo_flashlight()
                         },
                     },
                     flashlight_ac2 = {
-                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_2",
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_attacher_ap_muzzle1",
                         fix = {
                             offset = {
                                 node = 1,
@@ -154,7 +154,7 @@ function mod.owo_flashlight()
                 base_position = mp5_light_base_pos,
                 children = {
                     flashlight_ac1 = {
-                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_1",
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_grip1",
                         fix = {
                             offset = {
                                 node = 1,
@@ -182,7 +182,7 @@ function mod.owo_flashlight()
                 base_position = mp5_light_base_pos,
                 children = {
                     flashlight_ac1 = {
-                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_2",
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac1_dclaw_grip5",
                         fix = {
                             offset = {
                                 node = 1,
