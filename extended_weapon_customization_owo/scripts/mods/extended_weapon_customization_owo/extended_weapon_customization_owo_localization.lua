@@ -96,19 +96,19 @@ end
 -- ---------------
 local suppressor_localizations = {
 	owo_suppressor_01 = {
-		en = "OwO Suppressor: Double 01"
+		en = "Double Suppressor 01"
 	},
 	owo_suppressor_02 = {
-		en = "OwO Suppressor: Double 02"
+		en = "Double Suppressor 02"
 	},
 	owo_suppressor_03 = {
-		en = "OwO Suppressor: PBS-1"
+		en = "PBS-1 Suppressor"
 	},
 	owo_suppressor_04 = {
-		en = "OwO Suppressor: Heavy Metal 01"
+		en = "Heavy Metal Suppressor 01"
 	},
 	owo_suppressor_05 = {
-		en = "OwO Suppressor: Heavy Metal 02"
+		en = "Heavy Metal Suppressor 02"
 	},
 } 
 for attachment_name, localizations in pairs(suppressor_localizations) do
