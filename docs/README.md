@@ -32,14 +32,12 @@ Report alignment issues and I might fix it if I'm not busy (lying umder blamket 
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
 ## Load Order
-
 Load order doesn't matter with rebuilt EWC plugins.
 
 Just make sure you don't use it with the deprecated `weapon_customization`
 
-# ***Notices youw pawts*** (Parts I added)
-
-The list is hosted externally.  \
+# Parts Added
+This list is hosted externally.  \
 &emsp; To see it on GitHub Pages, go [directly to the GitHub Pages list](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added_reborn.html)  \
 &emsp; To see the regular GitHub Markdown version, go [directly to the repository](parts_added_reborn.md)
 
@@ -56,7 +54,7 @@ Not comprehensive
 
 > [!WARNING]
 >
-> Anything below is not updated for the rebuild. I'll do that once I'm done
+> Anything below is not updated for the rebuild. I'll do that once I'm ready to release on Nexus
 
 <a id="faq-1"></a>
 
