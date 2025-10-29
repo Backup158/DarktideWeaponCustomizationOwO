@@ -8,7 +8,7 @@
 [![ChangelogDirect](https://img.shields.io/badge/Changelog_(Direct)-e8d4b6?logo=readdotcv&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/CHANGELOG.md "Changelog when displayed directly on the repository.")
 [![ChangelogPages](https://img.shields.io/badge/Changelog_(Pages)-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG "Changelog when displayed on GitHub Pages.")
 
-> [!WARNING]
+> [!CAUTION]
 > 
 > THIS IS THE PAGE FOR THE DEPRECATED WEAPON CUSTOMIZATION
 > \

@@ -4,7 +4,7 @@
 [![ThisPageDirect](https://img.shields.io/badge/This_Page_(Direct)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/parts_added.md "Parts added page when displayed directly on the repository.")
 [![ThisPagePages](https://img.shields.io/badge/This_Page_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added.html "Parts added page when displayed on GitHub Pages")
 
-> [!WARNING]
+> [!CAUTION]
 > 
 > THIS IS THE PAGE FOR THE DEPRECATED WEAPON CUSTOMIZATION
 > \
