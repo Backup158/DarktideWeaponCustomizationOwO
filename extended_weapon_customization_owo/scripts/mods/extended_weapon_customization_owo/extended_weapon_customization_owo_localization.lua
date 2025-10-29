@@ -1,6 +1,25 @@
 local mod = get_mod("extended_weapon_customization_owo")
 
+local pairs = pairs
+local table = table
+local table_clone = table.clone
+
+-- ################################
+-- Helper functions for localization
+-- ################################
+local function append_to_localization(localizations_table, string_to_append)
+	
+	local new_local = table_clone(localizations_table)
+	new_local.en = new_local.en.." "..string_to_append
+	return new_local
+end
+
+-- ################################
 -- Localizations for the base mod to use
+-- ################################
+-- ###############
+-- Custom Slots
+-- ###############
 mod:add_global_localize_strings({
 	-- Mod Name for the separators
     loc_ewc_extended_weapon_customization_owo = {
@@ -27,6 +46,13 @@ mod:add_global_localize_strings({
 		en = "Tactical Stock - Folded (Natural, Under)",
 	},
 })
+
+-- ###############
+-- Attachments
+-- ###############
+-- ---------------
+-- Slim Blades
+-- ---------------
 local slim_blade_names = {
 	psword = Localize("loc_weapon_family_powersword_p1_m1"), 
 	pfalchion = Localize("loc_weapon_family_powersword_p2_m1"), 
@@ -54,7 +80,38 @@ for attachment_name_code, human_name in pairs(slim_blade_names) do
 		},
 	})
 end
+-- ---------------
+-- Suppressors
+-- ---------------
+local suppressor_localizations = {
+	owo_suppressor_01 = {
+		en = "OwO Suppressor: Double 01"
+	},
+	owo_suppressor_02 = {
+		en = "OwO Suppressor: Double 02"
+	},
+	owo_suppressor_03 = {
+		en = "OwO Suppressor: PBS-1"
+	},
+	owo_suppressor_04 = {
+		en = "OwO Suppressor: Heavy Metal 01"
+	},
+	owo_suppressor_05 = {
+		en = "OwO Suppressor: Heavy Metal 02"
+	},
+} 
+for attachment_name, localizations in pairs(suppressor_localizations) do
+	mod:add_global_localize_strings({
+		["loc_"..attachment_name] = localizations,
+	})
+	mod:add_global_localize_strings({
+		["loc_"..attachment_name.."_slim"] = append_to_localization(localizations),
+	})
+end
 
+-- ################################
+-- Mod Options and Data
+-- ################################
 local localizations = {
 	mod_name = {
 		en = "EWC - OwO (Ostracized without Objection)",
