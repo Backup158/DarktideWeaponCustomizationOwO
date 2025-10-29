@@ -9,10 +9,10 @@
 [![ChangelogPages](https://img.shields.io/badge/Changelog_(Pages)-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG "Changelog when displayed on GitHub Pages.")
 
 > [!WARNING]
->
-> CURRENT RELEASES ARE NOT COMPATIBLE WITH THE REWORKED BASE MOD (`extended_weapon_customization`), WHICH IS CURRENTLY DISCORD EXCLUSIVE AND *VERY* WIP
->
-> USE WITH THE STABLE VERSION ON NEXUS
+> 
+> THIS IS THE PAGE FOR THE DEPRECATED WEAPON CUSTOMIZATION
+> 
+> THIS PAGE IS *ONLY* UP FOR ARCHIVE PURPOSES
 
 # OwO? What is this?
 Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. Intended mainly for use in screenshots, but works fine in gameplay (see [FAQ #7](#faq-7)). 
