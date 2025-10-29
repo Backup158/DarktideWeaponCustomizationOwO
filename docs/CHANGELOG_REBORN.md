@@ -8,6 +8,10 @@ v4.2.0
 - Localizations and groups for Suppressors
     - in the months that i had the suppressors, i never really settled on a name for them
     - i still havent settled :D
+    - but at least they're not just 1-5 now
+        - double cans
+        - PBS-1
+        - heavy metal
 - Flashlights [WIP]
     - None of these work LMAO
     - MP5 flashlights (2)
