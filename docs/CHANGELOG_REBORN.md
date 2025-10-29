@@ -4,6 +4,14 @@ v4.2.0
 # Added
 - Suppressors and Flashlights to Revolvers
     - I forgor
+    - Note: PBS-1 stil has the stupid clipping
+- Localizations and groups for Suppressors
+    - in the months that i had the suppressors, i never really settled on a name for them
+    - i still havent settled :D
+- Flashlights
+    - MP5 flashlights (2)
+        - goes on the sight rail
+    - Big Tactical Light
 
 # Fixed
 - Alignments for Slim Blades
