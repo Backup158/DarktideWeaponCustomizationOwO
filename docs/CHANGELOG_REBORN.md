@@ -2,7 +2,7 @@
 v4.2.0
 
 # Added
-- Suppressors to Revolvers
+- Suppressors and Flashlights to Revolvers
     - I forgor
 
 # Fixed
