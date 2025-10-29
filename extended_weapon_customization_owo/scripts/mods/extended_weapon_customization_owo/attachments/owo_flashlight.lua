@@ -115,6 +115,9 @@ function mod.owo_flashlight()
 
     for color, _ in pairs(flashlight_colors) do
         for template_suffix, _ in pairs(flashlight_intensities) do
+            -- ---------------
+            -- Tactical Light
+            -- ---------------
             local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
             kitbash_flashlight_help(table_to_return, owo_tactical_light_01, attachment_group_prefix, color, template_suffix, {
                 base_position = vector3_box(0.016, 0.202, 0.05),
@@ -143,7 +146,9 @@ function mod.owo_flashlight()
                     },
                 },
             })
-
+            -- ---------------
+            -- MP5 Light
+            -- ---------------
             local owo_mp5_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_01"
             kitbash_flashlight_help(table_to_return, owo_mp5_light_01, attachment_group_prefix, color, template_suffix, {
                 base_position = mp5_light_base_pos,
@@ -200,8 +205,10 @@ function mod.owo_flashlight()
                     },
                 }
             }, "ap_receiver_01")
-
+            -- ---------------
+            -- Normal Colored Lights
             -- 1 for each physical model
+            -- ---------------
             local colored_flashlight_group_name = attachment_group_prefix..color.."_"..template_suffix
             for_all_weapon_models(5, {"ml01"}, function(i)
                 -- ex owo_flashlight_blue_narrow_01
