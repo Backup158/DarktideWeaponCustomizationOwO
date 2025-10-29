@@ -2,6 +2,8 @@
 v4.2.0
 
 # Added
+- Suppressors to Revolvers
+    - I forgor
 
 # Fixed
 - Alignments for Slim Blades
