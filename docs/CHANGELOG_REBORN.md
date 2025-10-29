@@ -1,7 +1,7 @@
 # 2025-10-29
 v4.2.0
 
-# Added
+## Added
 - Suppressors and Flashlights to Revolvers
     - I forgor
     - Note: PBS-1 still has the stupid clipping
@@ -15,12 +15,12 @@ v4.2.0
     - Big Tactical Light
         - like a regular flashlight you hold in your hand, but on the gun (oooo)
 
-# Fixed
+## Fixed
 - Alignments for Slim Blades
     - attachment points did not use `ap_body_01`. it's all blade, regardless of slot name
     - this still means the blades with builtin hilts (such as psword) will be too high. am working on that
 
-# Refactors/Developer Talk
+## Refactors/Developer Talk
 - Reworked helpers to be full items
     - for:
         - Suppressors
@@ -34,6 +34,7 @@ v4.2.0
         - Slim Blades
     - also helps prevent wonkiness with fixes, since it overwrites
 
+---
 # 2025-10-07
 v4.1.0
 
@@ -106,6 +107,7 @@ v4.1.0
 - Added comments for more functions
 - refactored suppressor creation to copypaste less code
 
+---
 # 2025-09-29
 v4.0.0
 
