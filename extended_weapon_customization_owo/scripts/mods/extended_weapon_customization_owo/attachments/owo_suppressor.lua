@@ -105,7 +105,7 @@ function mod.owo_suppressor()
         )
     end
     local function create_suppressor_and_slim(name, model_table, transformations_table)
-        create_suppressor(name, model_table, {
+        local table_to_send = {
             icon_rot = render_unit_rot_profile_left,
             icon_pos = render_cam_pos_profile_left,
             pos = transformations_table.pos,
@@ -118,22 +118,14 @@ function mod.owo_suppressor()
             ac_sca = transformations_table.ac_sca,
             ac1_sca = transformations_table.ac1_sca,
             ac2_sca = transformations_table.ac2_sca,
-        })
-        create_suppressor(name.."_slim", model_table, {
-            icon_rot = render_unit_rot_profile_left,
-            icon_pos = render_cam_pos_profile_left,
-            pos = transformations_table.pos,
-            ac_pos = transformations_table.ac_pos,
-            ac1_pos = transformations_table.ac1_pos,
-            ac2_pos = transformations_table.ac2_pos,
-            ac_rot = transformations_table.ac_rot,
-            ac1_rot = transformations_table.ac1_rot,
-            ac2_rot = transformations_table.ac2_rot,
-            ac_sca = transformations_table.ac_sca_slim,
-            ac1_sca = transformations_table.ac1_sca_slim,
-            ac2_sca = transformations_table.ac2_sca_slim,
-        }, 
-        "owo_suppressor_slim")
+        }
+        create_suppressor(name, model_table, table_to_send)
+
+        -- destructively changes table, since we won't be needing it again
+        table_to_send.ac_sca = transformations_table.ac_sca_slim
+        table_to_send.ac1_sca = transformations_table.ac1_sca_slim
+        table_to_send.ac2_sca = transformations_table.ac2_sca_slim
+        create_suppressor(name.."_slim", model_table, table_to_send, "owo_suppressor_slim")
     end
 
     -- --------------------------------
