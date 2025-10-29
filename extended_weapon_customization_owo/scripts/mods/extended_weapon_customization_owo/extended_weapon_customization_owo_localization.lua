@@ -1,5 +1,8 @@
 local mod = get_mod("extended_weapon_customization_owo")
 
+-- ################################
+-- Locals for Optimization
+-- ################################
 local pairs = pairs
 local table = table
 local table_clone = table.clone
