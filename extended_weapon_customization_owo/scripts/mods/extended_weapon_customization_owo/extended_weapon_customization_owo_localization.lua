@@ -12,7 +12,10 @@ local table_clone = table.clone
 -- Helper functions for localization
 -- ################################
 local function append_to_localization(localizations_table, string_to_append)
-	local string_to_append = string_to_append or "DUMBASS FORGOT"
+	if not type(string_to_append) == "string" then
+		mod:error("Trying to append nonstring! I can't tell you where though hehe")
+		return
+	end
 	if not type(localizations_table) == "table" then
 		mod:error("Localization table is not a table! When appending: "..string_to_append)
 		return
