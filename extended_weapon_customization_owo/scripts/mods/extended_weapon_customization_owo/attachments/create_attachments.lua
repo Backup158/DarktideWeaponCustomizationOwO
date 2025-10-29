@@ -101,6 +101,10 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
         end
         if kitbash_data.resource_dependencies and (type(kitbash_data.resource_dependencies) == "table") then
             given_resource_dependencies = table_clone(kitbash_data.resource_dependencies)
+        else
+            given_resource_dependencies = {
+                [given_base_unit] = true,
+            }
         end
     -- backwards compatibility for passing only base unit (string)
     else
