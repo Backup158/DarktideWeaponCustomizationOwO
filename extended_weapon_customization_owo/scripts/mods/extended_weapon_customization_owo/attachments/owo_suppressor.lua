@@ -120,6 +120,8 @@ function mod.owo_suppressor()
             ac_pos = transformations_table.ac_pos,
             ac2_rot = transformations_table.ac2_rot,
             ac_sca = transformations_table.ac_sca_slim,
+            ac1_sca = transformations_table.ac1_sca_slim,
+            ac2_sca = transformations_table.ac2_sca_slim,
         }, 
         "owo_suppressor_slim")
     end
@@ -176,7 +178,7 @@ function mod.owo_suppressor()
     local suppressor_pbs1_ac2_rot = vector3_box(0, 0, 180)
     local suppressor_pbs1_ac2_sca = vector3_box(0.36, 0.4, 0.36)
     local suppressor_pbs1_ac2_sca_slim = vector3_box(0.255, 0.4, 0.24)
-    create_suppressor("owo_suppressor_03", 
+    create_suppressor_and_slim("owo_suppressor_03", 
         {
             base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
             ac1 = _item_ranged.."/muzzles/pbs_ac1",
@@ -188,26 +190,11 @@ function mod.owo_suppressor()
             ac1_pos = suppressor_pbs1_ac1_pos,
             ac1_rot = suppressor_pbs1_ac1_rot,
             ac1_sca = suppressor_pbs1_ac1_sca,
+            ac1_sca_slim = suppressor_pbs1_ac1_sca_slim,
             ac2_pos = suppressor_pbs1_ac2_pos,
             ac2_rot = suppressor_pbs1_ac2_rot,
             ac2_sca = suppressor_pbs1_ac2_sca,
-        }
-    )
-    create_suppressor("owo_suppressor_03_slim", 
-        {
-            base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
-            ac1 = _item_ranged.."/muzzles/pbs_ac1",
-            ac2 = _item_ranged.."/muzzles/pbs_ac2",
-        }, 
-        {
-            icon_rot = render_unit_rot_profile_left,
-            icon_pos = render_cam_pos_profile_left,
-            ac1_pos = suppressor_pbs1_ac1_pos,
-            ac1_rot = suppressor_pbs1_ac1_rot,
-            ac1_sca = suppressor_pbs1_ac1_sca_slim,
-            ac2_pos = suppressor_pbs1_ac2_pos,
-            ac2_rot = suppressor_pbs1_ac2_rot,
-            ac2_sca = suppressor_pbs1_ac2_sca_slim,
+            ac2_sca_slim = suppressor_pbs1_ac2_sca_slim,
         }
     )
     -- Big Metal Suppressor
@@ -220,7 +207,7 @@ function mod.owo_suppressor()
     local suppressor_metal_ac2_rot = vector3_box(0, 0, 0)
     local suppressor_metal_ac2_sca = vector3_box(1.2, 1.8, 1.2)
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
-    create_suppressor("owo_suppressor_04", 
+    create_suppressor_and_slim("owo_suppressor_04", 
         {
             ac1 = _item_ranged.."/muzzles/supp_ac_hatchet_grip_03",
             ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_03",
@@ -231,28 +218,14 @@ function mod.owo_suppressor()
             ac1_pos = suppressor_metal_ac1_pos,
             ac1_rot = suppressor_metal_ac1_rot,
             ac1_sca = suppressor_metal_ac1_sca,
+            ac1_sca_slim = suppressor_metal_ac1_sca_slim,
             ac2_pos = suppressor_metal_ac2_pos,
             ac2_rot = suppressor_metal_ac2_rot,
             ac2_sca = suppressor_metal_ac2_sca,
+            ac2_sca_slim = suppressor_metal_ac2_sca_slim,
         }
     )
-    create_suppressor("owo_suppressor_04_slim", 
-        {
-            ac1 = _item_ranged.."/muzzles/supp_ac_hatchet_grip_03",
-            ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_03",
-        }, 
-        {
-            icon_rot = render_unit_rot_profile_left,
-            icon_pos = render_cam_pos_profile_left,
-            ac1_pos = suppressor_metal_ac1_pos,
-            ac1_rot = suppressor_metal_ac1_rot,
-            ac1_sca = suppressor_metal_ac1_sca_slim,
-            ac2_pos = suppressor_metal_ac2_pos,
-            ac2_rot = suppressor_metal_ac2_rot,
-            ac2_sca = suppressor_metal_ac2_sca_slim,
-        }
-    )
-    create_suppressor("owo_suppressor_05", 
+    create_suppressor_and_slim("owo_suppressor_05", 
         {
             ac1 = _item_ranged.."/muzzles/supp_ac_hatchet_grip_03",
             ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_02",
@@ -263,25 +236,11 @@ function mod.owo_suppressor()
             ac1_pos = suppressor_metal_ac1_pos,
             ac1_rot = suppressor_metal_ac1_rot,
             ac1_sca = suppressor_metal_ac1_sca,
+            ac1_sca_slim = suppressor_metal_ac1_sca_slim,
             ac2_pos = suppressor_metal_ac2_pos2,
             ac2_rot = suppressor_metal_ac2_rot,
             ac2_sca = suppressor_metal_ac2_sca,
-        }
-    )
-    create_suppressor("owo_suppressor_05_slim", 
-        {
-            ac1 = _item_ranged.."/muzzles/supp_ac_hatchet_grip_03",
-            ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_02",
-        }, 
-        {
-            icon_rot = render_unit_rot_profile_left,
-            icon_pos = render_cam_pos_profile_left,
-            ac1_pos = suppressor_metal_ac1_pos,
-            ac1_rot = suppressor_metal_ac1_rot,
-            ac1_sca = suppressor_metal_ac1_sca_slim,
-            ac2_pos = suppressor_metal_ac2_pos2,
-            ac2_rot = suppressor_metal_ac2_rot,
-            ac2_sca = suppressor_metal_ac2_sca_slim,
+            ac2_sca_slim = suppressor_metal_ac2_sca_slim,
         }
     )
    
