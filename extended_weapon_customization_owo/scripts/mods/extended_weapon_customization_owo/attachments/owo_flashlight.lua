@@ -229,7 +229,7 @@ function mod.owo_flashlight()
             -- Create localization
             mod:add_global_localize_strings({
                 ["loc_ewc_"..colored_flashlight_group_name] = {
-                    en = "OwO Flashlight "..color.." "..template_suffix,
+                    en = "OwO - Flashlight: "..color..", "..template_suffix,
                 },
             })
         end
