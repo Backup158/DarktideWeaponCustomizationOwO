@@ -4,6 +4,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- Locals for Optimization
 -- ################################
 local pairs = pairs
+local type = type
 local table = table
 local table_clone = table.clone
 
@@ -11,7 +12,11 @@ local table_clone = table.clone
 -- Helper functions for localization
 -- ################################
 local function append_to_localization(localizations_table, string_to_append)
-	
+	local string_to_append = string_to_append or "DUMBASS FORGOT"
+	if not type(localizations_table) == "table" then
+		mod:error("Localization table is not a table! When appending: "..string_to_append)
+		return
+	end
 	local new_local = table_clone(localizations_table)
 	new_local.en = new_local.en.." "..string_to_append
 	return new_local
