@@ -101,7 +101,7 @@ end
 -- ---------------
 local suppressor_localizations = {
 	ewc_owo_suppressor = {
-		en = "OwO: Suppressors"
+		en = "OwO - Suppressors"
 	},
 	owo_suppressor_01 = {
 		en = "Double Suppressor 01"
