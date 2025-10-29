@@ -116,7 +116,7 @@ for attachment_name, localizations in pairs(suppressor_localizations) do
 		["loc_"..attachment_name] = localizations,
 	})
 	mod:add_global_localize_strings({
-		["loc_"..attachment_name.."_slim"] = append_to_localization(localizations),
+		["loc_"..attachment_name.."_slim"] = append_to_localization(localizations, "(Slim)"),
 	})
 end
 
