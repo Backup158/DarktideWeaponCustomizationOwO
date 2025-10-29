@@ -7,7 +7,7 @@
 [![PartsAddedPages](https://custom-icon-badges.demolab.com/badge/Parts_Added_(Pages)-e8d4b6?logo=list&logoSource=feather&logoColor=e18bbc&labelColor=gray)](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added_reborn "Parts Added List when displayed on GitHub Pages.")
 [![ChangelogDirect](https://img.shields.io/badge/Changelog_(Direct)-e8d4b6?logo=readdotcv&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/CHANGELOG_REBORN.md "Changelog when displayed directly on the repository.")
 [![ChangelogPages](https://img.shields.io/badge/Changelog_(Pages)-e8d4b6?logo=readdotcv&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG_REBORN "Changelog when displayed on GitHub Pages.")
-[![OldReadme](https://img.shields.io/badge/Old_README_(Pages)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/README_OLD "Old README when displayed on GitHub Pages, for archive purposes")
+[![OldReadme](https://img.shields.io/badge/Old_README_(Pages)-e8d4b6?logo=github&logoColor=000000&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/README_OLD "Old README when displayed on GitHub Pages, for archive purposes")
 
 > [!IMPORTANT]
 >
