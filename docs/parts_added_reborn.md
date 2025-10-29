@@ -21,7 +21,7 @@ Parts are prefixed with `OwO` in the customization menu.
 > 
 > Nonfunctional
 
-> [!Tip]
+> [!TIP]
 > 
 > Don't use with sights lol
 - **Tactical Flashlights**: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers  \
