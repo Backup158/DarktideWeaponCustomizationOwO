@@ -40,7 +40,7 @@ local create_an_attachment = mod.create_an_attachment
 function mod.owo_suppressor()
     local table_to_return = mod.init_table_to_return("owo_suppressor")
 
-    local function create_suppressor(name, model_table, transformations_table)
+    local function create_suppressor(name, model_table, transformations_table, custom_selection)
         local model_to_use = nil
         if type(model_table) == "table" then
             if not model_table.ac1 then
@@ -57,6 +57,7 @@ function mod.owo_suppressor()
             {   replacement_path = _item_ranged.."/muzzles/"..name,
                 icon_render_unit_rotation_offset = transformations_table.icon_rot,
                 icon_render_camera_position_offset = transformations_table.icon_pos,
+                custom_selection_group = custom_selection or "owo_suppressor",
             },
             nil,
             {   item = model_table.base or _item_empty_trinket, -- invisible base
@@ -103,6 +104,25 @@ function mod.owo_suppressor()
             "ap_muzzle_01"
         )
     end
+    local function create_suppressor_and_slim(name, model_table, transformations_table)
+        create_suppressor(name, model_table, {
+            icon_rot = render_unit_rot_profile_left,
+            icon_pos = render_cam_pos_profile_left,
+            pos = transformations_table.pos,
+            ac_pos = transformations_table.ac_pos,
+            ac2_rot = transformations_table.ac2_rot,
+            ac_sca = transformations_table.ac_sca,
+        })
+        create_suppressor(name.."_slim", model_table, {
+            icon_rot = render_unit_rot_profile_left,
+            icon_pos = render_cam_pos_profile_left,
+            pos = transformations_table.pos,
+            ac_pos = transformations_table.ac_pos,
+            ac2_rot = transformations_table.ac2_rot,
+            ac_sca = transformations_table.ac_sca_slim,
+        }, 
+        "owo_suppressor_slim")
+    end
 
     -- --------------------------------
     -- Creating helpers as full items
@@ -128,37 +148,23 @@ function mod.owo_suppressor()
     local suppressor_double_sca_slim = vector3_box(0.85, 1.8, 0.85)
     local suppressor_double_ac2_rot1 = vector3_box(0, 22, 0)
     local suppressor_double_ac2_rot2 = vector3_box(0, 17, 0)
-    create_suppressor("owo_suppressor_01", _item_ranged.."/muzzles/supp_ac_ak_muzzle_03", {
+    create_suppressor_and_slim("owo_suppressor_01", _item_ranged.."/muzzles/supp_ac_ak_muzzle_03", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
         ac_pos = suppressor_double_pos_ac,
         ac2_rot = suppressor_double_ac2_rot1,
         ac_sca = suppressor_double_sca,
+        ac_sca_slim = suppressor_double_sca_slim,
     })
-    create_suppressor("owo_suppressor_01_slim", _item_ranged.."/muzzles/supp_ac_ak_muzzle_03", {
-        icon_rot = render_unit_rot_profile_left,
-        icon_pos = render_cam_pos_profile_left,
-        pos = suppressor_double_pos_base,
-        ac_pos = suppressor_double_pos_ac,
-        ac2_rot = suppressor_double_ac2_rot1,
-        ac_sca = suppressor_double_sca_slim,
-    })
-    create_suppressor("owo_suppressor_02", _item_ranged.."/muzzles/supp_ac_ak_muzzle_05", {
+    create_suppressor_and_slim("owo_suppressor_02", _item_ranged.."/muzzles/supp_ac_ak_muzzle_05", {
         icon_rot = render_unit_rot_profile_left,
         icon_pos = render_cam_pos_profile_left,
         pos = suppressor_double_pos_base,
         ac_pos = suppressor_double_pos_ac,
         ac2_rot = suppressor_double_ac2_rot2,
         ac_sca = suppressor_double_sca,
-    })
-    create_suppressor("owo_suppressor_02_slim", _item_ranged.."/muzzles/supp_ac_ak_muzzle_05", {
-        icon_rot = render_unit_rot_profile_left,
-        icon_pos = render_cam_pos_profile_left,
-        pos = suppressor_double_pos_base,
-        ac_pos = suppressor_double_pos_ac,
-        ac2_rot = suppressor_double_ac2_rot2,
-        ac_sca = suppressor_double_sca_slim,
+        ac_sca_slim = suppressor_double_sca_slim,
     })
 
     -- PBS-1

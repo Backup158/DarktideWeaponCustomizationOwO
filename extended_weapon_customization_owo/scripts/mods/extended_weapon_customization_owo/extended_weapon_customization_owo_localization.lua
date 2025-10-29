@@ -62,6 +62,11 @@ mod:add_global_localize_strings({
 -- Attachments
 -- ###############
 -- ---------------
+-- Flashlights
+-- ---------------
+-- Flashlight Groups are handled in owo_flashlight.lua
+-- too many variables to carry over here
+-- ---------------
 -- Slim Blades
 -- ---------------
 local slim_blade_names = {
@@ -95,6 +100,9 @@ end
 -- Suppressors
 -- ---------------
 local suppressor_localizations = {
+	ewc_owo_suppressor = {
+		en = "OwO: Suppressors"
+	},
 	owo_suppressor_01 = {
 		en = "Double Suppressor 01"
 	},
