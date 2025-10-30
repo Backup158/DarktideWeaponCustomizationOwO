@@ -4,7 +4,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- DATA
 -- ###################################################################
 -- Prints a message to the console log containing the current version number
-mod.version = "4.2.0"
+mod.version = "4.3.0"
 mod:info('v' .. mod.version .. ' loaded uwu nya :3')
 
 -- Discord mode
@@ -279,10 +279,32 @@ load_mod_file("attachments/create_attachments")
 -- Ranged
 -- ################
 -- Special/Flashlight
-add_attachments_to_list_of_weapons(mod.owo_flashlight(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", "stubrevolver_p1_m1", }, "flashlight")
+local all_ranged_weapons = {
+    "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
+    "bolter_p1_m1", "boltpistol_p1_m1", 
+    "flamer_p1_m1", "plasmagun_p1_m1", 
+    "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
+    "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
+    "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
+}
+add_attachments_to_list_of_weapons(mod.owo_flashlight(), all_ranged_weapons, "flashlight")
 
 -- Muzzle
-add_attachments_to_list_of_weapons(mod.owo_suppressor(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", "stubrevolver_p1_m1", }, "muzzle")
+local ranged_no_double = {
+    "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
+    "bolter_p1_m1", "boltpistol_p1_m1", 
+    --"flamer_p1_m1", "plasmagun_p1_m1", 
+    "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
+    "shotgun_p1_m1", 
+    --"shotgun_p2_m1", 
+    "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
+    --"ogryn_gauntlet_p1_m1", 
+    "ogryn_rippergun_p1_m1", 
+    --"ogryn_heavystubber_p1_m1", 
+    "ogryn_heavystubber_p2_m1", 
+    --"ogryn_thumper_p1_m1", 
+}
+add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_no_double, "muzzle")
 
 -- Stock
 add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", }, "stock")
