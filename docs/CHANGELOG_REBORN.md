@@ -9,7 +9,7 @@ v4.3.0
     - Double-Barreled Shotgun
     - Exterminator Shotgun
     - Shotpistol and Shield
-    - Grenade Gauntlet
+    - Grenadier Gauntlet
     - Ripper Guns
     - Twin-Linked Heavy Stubbers
     - Heavy Stubbers
@@ -17,7 +17,7 @@ v4.3.0
 - Suppressors to:
     - Combat Shotgun
     - Exterminator Shotgun
-    - Shotpistol and Shield
+    - Subductor Shotpistol and Riot Shield
     - Ripper Guns
     - Heavy Stubbers
 
