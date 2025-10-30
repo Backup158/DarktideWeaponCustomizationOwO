@@ -1,3 +1,27 @@
+# 2025-11-nyaa
+v4.3.0
+
+## Added
+- Flashlights to:
+    - Flamer
+    - Plasma Gun
+    - Combat Shotgun
+    - Double-Barreled Shotgun
+    - Exterminator Shotgun
+    - Shotpistol and Shield
+    - Grenade Gauntlet
+    - Ripper Guns
+    - Twin-Linked Heavy Stubbers
+    - Heavy Stubbers
+    - Rumbler/Kickback
+- Suppressors to:
+    - Combat Shotgun
+    - Exterminator Shotgun
+    - Shotpistol and Shield
+    - Ripper Guns
+    - Heavy Stubbers
+
+---
 # 2025-10-29
 v4.2.0
 
