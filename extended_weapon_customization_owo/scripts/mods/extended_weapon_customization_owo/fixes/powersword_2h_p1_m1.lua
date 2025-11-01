@@ -16,7 +16,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
-return {
+local these_fixes = {
     --[[
     -- Slim Blades
     {
@@ -35,4 +35,8 @@ return {
         },
     },
     ]]
+}
+
+return {
+    fixes = these_fixes,
 }

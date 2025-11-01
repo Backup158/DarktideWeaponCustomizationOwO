@@ -16,7 +16,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
-return {
+local these_fixes = {
     -- Tactical Stocks
     {   
         attachment_slot = "stock",
@@ -53,4 +53,8 @@ return {
             },
         },
     },
+}
+
+return {
+    fixes = these_fixes,
 }

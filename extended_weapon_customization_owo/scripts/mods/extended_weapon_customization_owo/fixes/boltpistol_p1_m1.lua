@@ -19,7 +19,7 @@ local _item_minion = "content/items/weapons/minions"
 local folded_stock_n_l_pos = vector3_box(-0.015, -0.09, 0.045)
 local folded_stock_n_l_rot = vector3_box(0, 0, -176)
 
-return {
+local these_fixes = {
     -- Tactical Stocks
     {
         attachment_slot = "stock",
@@ -95,4 +95,8 @@ return {
             },
         },
     },
+}
+
+return {
+    fixes = these_fixes,
 }
