@@ -131,13 +131,7 @@ local custom_attachments = {
         },
     },
     ]]
-    -- Barrel parent has a weird issue with one barrel in particular (idk the name. the one with the grippy part in the front)
-    -- somehow rail parent just works
-    -- copied for ewc_base_additions
-    muzzle = {
-        parent_slot = "rail",
-        default_path = _item_empty_trinket,
-    },
+    
 }
 -- define if not already using base additions
 --  not just copying those values because i dont like them :3
@@ -154,6 +148,13 @@ if not ewc_ba then
                 node = 1,
             },
         },
+    }
+    -- Barrel parent has a weird issue with one barrel in particular (idk the name. the one with the grippy part in the front)
+    --  somehow rail parent just works
+    --  copied for ewc_base_additions
+    custom_attachments.muzzle = {
+        parent_slot = "rail",
+        default_path = _item_empty_trinket,
     }
 end
 
