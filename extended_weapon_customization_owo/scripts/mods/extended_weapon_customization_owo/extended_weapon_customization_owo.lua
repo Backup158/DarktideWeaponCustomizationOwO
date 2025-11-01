@@ -33,7 +33,7 @@ local table_clone = table.clone
 local table_equals = table.equals
 local table_dump = table.dump
 local table_merge_recursive = table.merge_recursive
-
+local vector3_box = Vector3Box
 -- ################################
 -- Game Content Addresses
 -- ################################
@@ -333,7 +333,12 @@ local special_needs_fixes = {
     "powersword_2h_p1_m1", 
 }
 for _, weapon_id in ipairs(special_needs_fixes) do
-    local fixes_table_to_add = load_mod_file("fixes/"..weapon_id)
+    local loaded_table = load_mod_file("fixes/"..weapon_id)
+    -- backwards compatibility for not having fixes in its own section
+    local fixes_table_to_add = loaded_table.fixes or loaded_table
+    local slots_to_add = loaded_table.attachment_slots
+
+    -- Defining Fixes
     if not attachments_table_for_ewc.fixes[weapon_id] then
         attachments_table_for_ewc.fixes[weapon_id] = {}
     end
@@ -361,6 +366,15 @@ for _, weapon_id in ipairs(special_needs_fixes) do
         if not inserted then
             table_insert(attachments_table_for_ewc.fixes[weapon_id], custom_fix)
         end
+    end
+
+    -- Defining Attachment slots
+    if slots_to_add then
+        if not attachments_table_for_ewc.attachment_slots[weapon_id] then
+            attachments_table_for_ewc.attachment_slots[weapon_id] = {}
+        end
+
+        table_merge_recursive(attachments_table_for_ewc.attachment_slots[weapon_id], slots_to_add)
     end
 end
 

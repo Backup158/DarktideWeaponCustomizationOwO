@@ -19,7 +19,7 @@ local _item_minion = "content/items/weapons/minions"
 local folded_stock_n_l_pos = vector3_box(-0.015, -0.12, 0.075)
 local folded_stock_n_l_rot = vector3_box(0, 0, -174)
 
-return {
+local custom_fixes = {
     -- Tactical Stocks
     {
         attachment_slot = "stock",
@@ -99,4 +99,24 @@ return {
             },
         },
     },
+}
+
+local custom_attachments = {
+    muzzle = {
+        parent_slot = "barrel",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.165, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1.75, 1.75, 1.75),
+                node = 1,
+            },
+        },
+    },
+}
+
+return {
+    fixes = custom_fixes,
+    attachment_slot = custom_attachments,
 }
