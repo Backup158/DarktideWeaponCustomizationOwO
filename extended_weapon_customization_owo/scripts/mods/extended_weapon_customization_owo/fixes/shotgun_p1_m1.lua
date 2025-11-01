@@ -102,6 +102,18 @@ local custom_fixes = {
 }
 
 local custom_attachments = {
+    flashlight = {
+        parent_slot = "barrel",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0.2, 0.4, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
     muzzle = {
         parent_slot = "barrel",
         default_path = _item_empty_trinket,
@@ -111,11 +123,12 @@ local custom_attachments = {
                 --position = vector3_box(0, 0, 0),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
-                --node = 1,
+                node = 1,
                 -- 1: middle of barrel
                 -- 4, 6: middle of barrel and ctd
-                -- 2, 3, 5: ctd
-                node = 1,
+                -- 7: midle of barrel with no position (then crash lol)
+                -- 2, 3, 5, 8, 9, 10: ctd
+                --node = 11,
             },
         },
     },
