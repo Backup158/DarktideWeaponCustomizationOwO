@@ -329,14 +329,17 @@ add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01")
 -- Manual Overrides for Attachments
 -- ################################
 local special_needs_fixes = { 
-    "autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p3_m1", 
+    "autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p3_m1", "shotgun_p1_m1",
     "powersword_2h_p1_m1", 
 }
 for _, weapon_id in ipairs(special_needs_fixes) do
     local loaded_table = load_mod_file("fixes/"..weapon_id)
-    -- backwards compatibility for not having fixes in its own section
-    local fixes_table_to_add = loaded_table.fixes or loaded_table
+    local fixes_table_to_add = loaded_table.fixes
     local slots_to_add = loaded_table.attachment_slots
+    -- backwards compatibility for not having fixes in its own section
+    if not fixes_table_to_add and not slots_to_add then
+        fixes_table_to_add = loaded_table
+    end
 
     -- Defining Fixes
     if not attachments_table_for_ewc.fixes[weapon_id] then
@@ -345,26 +348,28 @@ for _, weapon_id in ipairs(special_needs_fixes) do
     --table_dump(fixes_table_to_add, "SPECIAL NEEDS", 10)
 
     --table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
-    for _, custom_fix in pairs(fixes_table_to_add) do
-        local inserted = false
+    if fixes_table_to_add then
+        for _, custom_fix in pairs(fixes_table_to_add) do
+            local inserted = false
 
-        for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
-            -- if requirements are identical, replace that fix
-            if table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
-                --[[
-                if debug_mode then
-                    mod:info("Replacing fix for "..weapon_id)
-                    table_dump(attachments_table_for_ewc.fixes[weapon_id][i], "\tREPLACING", 10)
-                    table_dump(custom_fix, "\tWITH", 10)
+            for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
+                -- if requirements are identical, replace that fix
+                if table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
+                    --[[
+                    if debug_mode then
+                        mod:info("Replacing fix for "..weapon_id)
+                        table_dump(attachments_table_for_ewc.fixes[weapon_id][i], "\tREPLACING", 10)
+                        table_dump(custom_fix, "\tWITH", 10)
+                    end
+                    ]]
+                    attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
+                    inserted = true
                 end
-                ]]
-                attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
-                inserted = true
             end
-        end
-        
-        if not inserted then
-            table_insert(attachments_table_for_ewc.fixes[weapon_id], custom_fix)
+            
+            if not inserted then
+                table_insert(attachments_table_for_ewc.fixes[weapon_id], custom_fix)
+            end
         end
     end
 
