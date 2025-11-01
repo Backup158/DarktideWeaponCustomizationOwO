@@ -118,5 +118,5 @@ local custom_attachments = {
 
 return {
     fixes = custom_fixes,
-    attachment_slot = custom_attachments,
+    attachment_slots = custom_attachments,
 }
