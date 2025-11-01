@@ -37,9 +37,19 @@ local for_all_weapon_models = mod.for_all_weapon_models
 local flashlight_colors = mod.flashlight_colors
 local flashlight_intensities = mod.flashlight_intensities
 
+local first_time_setup = false
+if not mod.all_flashlights_for_fixes then
+    first_time_setup = true
+    mod.all_flashlights_for_fixes = {}
+end
+
 -- ################################
 -- Attachment
 -- ################################
+local function add_name_to_big_list(name)
+
+end
+
 local function kitbash_flashlight_help(table_to_return, attachment_name, attachment_group_prefix, color, template_suffix, table_of_children_and_fixes, custom_attachment_node)
 
     create_an_attachment(table_to_return, attachment_name,
