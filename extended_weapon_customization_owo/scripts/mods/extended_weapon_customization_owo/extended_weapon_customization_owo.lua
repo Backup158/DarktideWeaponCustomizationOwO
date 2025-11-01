@@ -329,7 +329,7 @@ add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01")
 -- Manual Overrides for Attachments
 -- ################################
 local special_needs_fixes = { 
-    "autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p3_m1", "shotgun_p1_m1",
+    "autogun_p1_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p3_m1", "shotgun_p1_m1", "stubrevolver_p1_m1", 
     "powersword_2h_p1_m1", 
 }
 for _, weapon_id in ipairs(special_needs_fixes) do
