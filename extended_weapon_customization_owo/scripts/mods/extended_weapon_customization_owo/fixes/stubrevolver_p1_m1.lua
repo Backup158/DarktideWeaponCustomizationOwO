@@ -1,3 +1,6 @@
+local mod = get_mod("extended_weapon_customization_owo")
+local ewc_ba = get_mod("extended_weapon_customization_base_additions")
+
 -- ################################
 -- Local References for Performance
 -- ################################
@@ -101,8 +104,27 @@ local custom_fixes = {
     },
 }
 
+local default_light_fixes = nil
+-- define if not already using base additions
+--  not just copying those values because i dont like them :3
+--  but i'm also not going to overwrite another plugin
+if not ewc_ba then
+    default_light_fixes = {
+        parent_slot = "barrel",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0.015, 0.17, 0.005),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(0.75, 0.75, 0.75),
+                node = 1,
+            },
+        },
+    }
+end
+
 local custom_attachments = {
-    flashlight = {
+    flashlight_under_small = {
         parent_slot = "barrel",
         default_path = _item_empty_trinket,
         fix = {
@@ -136,6 +158,9 @@ local custom_attachments = {
         default_path = _item_empty_trinket,
     },
 }
+if default_light_fixes then
+    custom_attachments.flashlight = default_light_fixes
+end
 
 return {
     --fixes = custom_fixes,
