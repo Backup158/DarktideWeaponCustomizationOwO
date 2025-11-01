@@ -128,6 +128,13 @@ local custom_attachments = {
         },
     },
     ]]
+    -- Barrel parent has a weird issue with one barrel in particular (idk the name. the one with the grippy part in the front)
+    -- somehow rail parent just works
+    -- copied for ewc_base_additions
+    muzzle = {
+        parent_slot = "rail",
+        default_path = _item_empty_trinket,
+    },
 }
 
 return {
