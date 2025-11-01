@@ -109,11 +109,60 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
     )
 end
 
-function mod.owo_flashlight()
+function mod.owo_color_flashlight()
     local attachment_group_name = "owo_flashlight"
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
+
+    for color, _ in pairs(flashlight_colors) do
+        for template_suffix, _ in pairs(flashlight_intensities) do
+            -- ---------------
+            -- Normal Colored Lights
+            -- 1 for each physical model
+            -- ---------------
+            local colored_flashlight_group_name = attachment_group_prefix..color.."_"..template_suffix
+            for_all_weapon_models(5, {"ml01"}, function(i)
+                -- ex owo_flashlight_blue_narrow_01
+                local owo_colored_flashlight = colored_flashlight_group_name.."_"..i
+                create_an_attachment(table_to_return, owo_colored_flashlight,
+                    -- Attachment
+                    {   replacement_path = _item_ranged.."/flashlights/"..owo_colored_flashlight,
+                        icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                        icon_render_camera_position_offset = render_cam_pos_profile_left,
+                        flashlight_template = "owo_"..color.."_flashlight_"..template_suffix,
+                        custom_selection_group = colored_flashlight_group_name,
+                    },
+                    -- Fixes
+                    nil,
+                    -- Kitbash
+                    {
+                        base_unit = "content/weapons/player/attachments/flashlights/flashlight_"..i.."/flashlight_"..i
+                    },
+                    -- ATTACHMENT NODE 
+                    -- DON'T FORGET THIS
+                    "ap_flashlight_01"
+                )
+            end)
+
+            -- Create localization
+            mod:add_global_localize_strings({
+                ["loc_ewc_"..colored_flashlight_group_name] = {
+                    en = "OwO - Flashlight: "..color..", "..template_suffix,
+                },
+            })
+        end
+    end
     
+
+    return table_to_return
+
+end
+
+function mod.owo_tactical_flashlight()
+    local attachment_group_name = "owo_flashlight"
+    local attachment_group_prefix = attachment_group_name.."_"
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
+
     -- Kitbash helper items
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_grip1", nil, "content/weapons/player/melee/combat_knife/attachments/grip_01/grip_01", "ap_flashlight_01")
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_dclaw_grip5", nil, "content/weapons/player/melee/combat_sword/attachments/grip_05/grip_05", "ap_flashlight_01")
@@ -125,7 +174,7 @@ function mod.owo_flashlight()
 
     for color, _ in pairs(flashlight_colors) do
         for template_suffix, _ in pairs(flashlight_intensities) do
-            -- ---------------
+                        -- ---------------
             -- Tactical Light
             -- ---------------
             local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
@@ -215,44 +264,6 @@ function mod.owo_flashlight()
                     },
                 }
             }, "ap_receiver_01")
-            -- ---------------
-            -- Normal Colored Lights
-            -- 1 for each physical model
-            -- ---------------
-            local colored_flashlight_group_name = attachment_group_prefix..color.."_"..template_suffix
-            for_all_weapon_models(5, {"ml01"}, function(i)
-                -- ex owo_flashlight_blue_narrow_01
-                local owo_colored_flashlight = colored_flashlight_group_name.."_"..i
-                create_an_attachment(table_to_return, owo_colored_flashlight,
-                    -- Attachment
-                    {   replacement_path = _item_ranged.."/flashlights/"..owo_colored_flashlight,
-                        icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-                        icon_render_camera_position_offset = render_cam_pos_profile_left,
-                        flashlight_template = "owo_"..color.."_flashlight_"..template_suffix,
-                        custom_selection_group = colored_flashlight_group_name,
-                    },
-                    -- Fixes
-                    nil,
-                    -- Kitbash
-                    {
-                        base_unit = "content/weapons/player/attachments/flashlights/flashlight_"..i.."/flashlight_"..i
-                    },
-                    -- ATTACHMENT NODE 
-                    -- DON'T FORGET THIS
-                    "ap_flashlight_01"
-                )
-            end)
-
-            -- Create localization
-            mod:add_global_localize_strings({
-                ["loc_ewc_"..colored_flashlight_group_name] = {
-                    en = "OwO - Flashlight: "..color..", "..template_suffix,
-                },
-            })
         end
     end
-    
-
-    return table_to_return
-
 end

@@ -287,7 +287,9 @@ local all_ranged_weapons = {
     "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
 }
-add_attachments_to_list_of_weapons(mod.owo_flashlight(), all_ranged_weapons, "flashlight")
+add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), all_ranged_weapons, "flashlight")
+add_attachments_to_list_of_weapons(mod.owo_tactical_flashlight(), all_ranged_weapons, "flashlight")
+add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), { "stubrevolver_p1_m1" }, "flashlight_under_small")
 
 -- Muzzle
 local ranged_no_double = {
