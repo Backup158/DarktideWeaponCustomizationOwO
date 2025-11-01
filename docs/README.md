@@ -28,7 +28,10 @@ Report alignment issues and I might fix it if I'm not busy (lying umder blamket 
 # Installation
 ## Requirements
 1. [MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) by Grasmann
-2. ~~[Extended Weapon Customization Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277)~~ [Extended Weapon Customization channel (download in pins) in the Darktide Modders Discord](https://discord.com/channels/1048312349867646996/1168063453416669284) by Grasmann
+2. Extended Weapon Customization channel by Grasmann
+  - [Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277) (currently for the deprecated version)
+  - [#weapon-customization-mod in the Darktide Modders Discord](https://discord.com/channels/1048312349867646996/1168063453416669284) (download files in pins and see the FAQ)
+  - [`extended_weapon_customization` file on Grasmann's GitHub](https://github.com/grasmann/darktide-mods/blob/main/extended_weapon_customization.zip)
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
 ## Load Order
