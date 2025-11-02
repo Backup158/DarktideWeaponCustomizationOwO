@@ -27,6 +27,10 @@ v4.3.0
         - Quickdraw Stubrevolvers
     - Half sized and sits under barrel
     - doesn't actually turn on bc that's just how the original mod works
+- Suppressor Variants
+    - Jungle Suppressor
+        - Really it's just a metal suppressor wrapped in a bandage
+        - But Jungle sounds cooler
 
 ---
 # 2025-10-29
