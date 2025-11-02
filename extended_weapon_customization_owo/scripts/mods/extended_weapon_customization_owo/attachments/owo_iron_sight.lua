@@ -56,7 +56,7 @@ function mod.owo_iron_sight(given_attachment_node)
                     sight = { has = ak_irons },
                 },
                 fix = {
-                    offset = { position = vector3_box(0.0, 0, 0.0105) },
+                    offset = { position = vector3_box(0.0, -0.01, 0.0105) },
                 },
             }
         },
