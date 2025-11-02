@@ -121,6 +121,7 @@ function mod.owo_color_flashlight()
             -- 1 for each physical model
             -- ---------------
             local colored_flashlight_group_name = attachment_group_prefix..color.."_"..template_suffix
+            -- 1 per model
             for_all_weapon_models(5, {"ml01"}, function(i)
                 -- ex owo_flashlight_blue_narrow_01
                 local owo_colored_flashlight = colored_flashlight_group_name.."_"..i
@@ -143,6 +144,40 @@ function mod.owo_color_flashlight()
                     "ap_flashlight_01"
                 )
             end)
+            -- 1 invisible
+            local owo_invis_color_flashlight = colored_flashlight_group_name.."_invisible"
+            create_an_attachment(table_to_return, owo_invis_color_flashlight,
+                -- Attachment
+                {   replacement_path = _item_ranged.."/flashlights/"..owo_invis_color_flashlight,
+                    icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                    icon_render_camera_position_offset = render_cam_pos_profile_left,
+                    flashlight_template = "owo_"..color.."_flashlight_"..template_suffix,
+                    custom_selection_group = colored_flashlight_group_name,
+                },
+                -- Fixes
+                {
+                    {
+                        attachment_slot = "flashlight",
+                        requirements = {
+                            stock = {
+                                has = owo_invis_color_flashlight,
+                            },
+                        },
+                        fix = {
+                            offset = {
+                                scale = vector3_box(0.0001, 0.0001, 0.0001),
+                            },
+                        },
+                    }
+                },
+                -- Kitbash
+                {
+                    base_unit = "content/weapons/player/attachments/flashlights/flashlight_1/flashlight_1"
+                },
+                -- ATTACHMENT NODE 
+                -- DON'T FORGET THIS
+                "ap_flashlight_01"
+            )
 
             -- Create localization
             mod:add_global_localize_strings({
