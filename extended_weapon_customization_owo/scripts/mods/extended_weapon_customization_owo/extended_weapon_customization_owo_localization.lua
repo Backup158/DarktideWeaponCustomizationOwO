@@ -32,8 +32,11 @@ end
 -- Custom Slots
 -- ###############
 mod:add_global_localize_strings({
+	-- ------------------------------
+	-- Separators
+	-- ------------------------------
 	-- ---------------
-	-- Mod Name for the separators
+	-- Mod Name
 	-- ---------------
     loc_ewc_extended_weapon_customization_owo = {
         en = "Ostracized without Objection (OwO)",
@@ -45,11 +48,13 @@ mod:add_global_localize_strings({
         en = "Flashlight (Underbarrel, Small)",
     },
 	-- ---------------
-	-- Custom separator groups
+	-- Separator groups
 	-- ---------------
 	-- 	Flashlights
 	--		DONE IN ./attachments/owo_flashlight.lua
+	-- ------------------------------
 	-- Attachment Display Names
+	-- ------------------------------
 	loc_owo_tactical_stock_telescoping_in = {
 		en = "Tactical Stock - Telescoping (Pushed in)",
 	},
