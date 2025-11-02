@@ -304,7 +304,7 @@ local ranged_no_double = {
     "ogryn_rippergun_p1_m1", 
     --"ogryn_heavystubber_p1_m1", 
     "ogryn_heavystubber_p2_m1", 
-    --"ogryn_thumper_p1_m1", 
+    "ogryn_thumper_p1_m1", 
 }
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_no_double, "muzzle")
 
@@ -335,8 +335,7 @@ local special_needs_fixes = {
     "bolter_p1_m1", "boltpistol_p1_m1", 
     "lasgun_p3_m1", 
     "shotgun_p1_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
-    "ogryn_rippergun_p1_m1", 
-    "ogryn_heavystubber_p2_m1", 
+    "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
     "powersword_2h_p1_m1", 
 }
 for _, weapon_id in ipairs(special_needs_fixes) do
