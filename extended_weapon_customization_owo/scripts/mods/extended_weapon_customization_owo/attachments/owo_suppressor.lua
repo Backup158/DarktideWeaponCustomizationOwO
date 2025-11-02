@@ -251,6 +251,7 @@ function mod.owo_suppressor()
     )
     -- Chrome
     --  reusing some pbs 1 parts
+    --[[
     local chrome_ac1_sca = vector3_box(0.35, 0.4, 0.35)
     local chrome_ac2_sca = vector3_box(0.26, 0.4, 0.26)
     create_suppressor_and_slim("owo_suppressor_chrome_01", {
@@ -269,11 +270,29 @@ function mod.owo_suppressor()
             ac2_sca_slim = chrome_ac2_sca_slim,
         }
     )
+    create_suppressor("owo_suppressor_chrome_chigurh", {
+            base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+            ac1 = _item_ranged.."/muzzles/chigurh_ac1",
+            ac2 = _item_ranged.."/muzzles/pbs_ac2",
+        }, 
+        {
+            icon_rot = render_unit_rot_profile_left,
+            icon_pos = render_cam_pos_profile_left,
+            ac_pos = vector3_box(0, 0.1, 0),
+            ac_rot = vector3_box(0, 0, 0),
+            ac1_sca = chrome_ac1_sca,
+            ac2_sca = chrome_ac2_sca,
+            ac1_sca_slim = chrome_ac1_sca_slim,
+            ac2_sca_slim = chrome_ac2_sca_slim,
+        }
+    )
+    ]]
     -- Jungle
     -- Reusing Heavy metal
-    local suppressor_jungle_ac1_pos = vector3_box(0, 0.13, 0)
+    local suppressor_jungle_ac1_pos = vector3_box(0, 0.144, 0.002)
     local suppressor_jungle_ac1_rot = vector3_box(-90, 0, 0)
-    local suppressor_jungle_ac1_sca = vector3_box(0.77, 0.67, 1.1)
+    local suppressor_jungle_ac1_sca = vector3_box(0.77, 0.6, 1.1)
+    local suppressor_jungle_ac2_pos = vector3_box(0, 0.144, 0)
     --local suppressor_jungle_ac1_sca_slim = vector3_box(1.1, 1.1, 1.1)
     create_suppressor("owo_suppressor_jungle", 
         {
@@ -287,7 +306,7 @@ function mod.owo_suppressor()
             ac1_rot = suppressor_jungle_ac1_rot,
             ac1_sca = suppressor_jungle_ac1_sca,
             --ac1_sca_slim = suppressor_jungle_ac1_sca_slim,
-            ac2_pos = suppressor_metal_ac2_pos2,
+            ac2_pos = suppressor_jungle_ac2_pos,
             ac2_rot = suppressor_metal_ac2_rot,
             ac2_sca = suppressor_metal_ac2_sca,
             --ac2_sca_slim = suppressor_metal_ac2_sca_slim,
