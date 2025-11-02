@@ -44,8 +44,8 @@ mod:add_global_localize_strings({
 	-- ---------------
 	-- Attachment Slots
 	-- ---------------
-	loc_ewc_flashlight_under_small = {
-        en = "Flashlight (Underbarrel, Small)",
+	attachment_slot_flashlight_under_small = {
+        en = "Flashlight (Under)",
     },
 	-- ---------------
 	-- Separator groups
