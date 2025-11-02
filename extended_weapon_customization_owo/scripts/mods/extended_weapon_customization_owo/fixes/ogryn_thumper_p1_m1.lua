@@ -24,7 +24,7 @@ local custom_fixes = {
 
 local custom_attachments = {
     muzzle = {
-        parent_slot = "barrel",
+        parent_slot = "body",
         default_path = _item_empty_trinket,
         fix = {
             offset = {
@@ -34,13 +34,9 @@ local custom_attachments = {
                 node = 1,
             },
         },
-    }
-}
--- Patches for if other plugins already defined
-local ewc_ba = get_mod("extended_weapon_customization_base_additions")
-if not ewc_ba then
-    custom_attachments.flashlight = {
-        parent_slot = "receiver",
+    },
+    flashlight = {
+        parent_slot = "body",
         default_path = _item_empty_trinket,
         fix = {
             offset = {
@@ -50,7 +46,12 @@ if not ewc_ba then
                 node = 1,
             },
         },
-    }
+    },
+}
+-- Patches for if other plugins already defined
+local ewc_ba = get_mod("extended_weapon_customization_base_additions")
+if not ewc_ba then
+    
 end
 
 return {
