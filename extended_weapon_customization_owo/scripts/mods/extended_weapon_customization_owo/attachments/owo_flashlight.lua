@@ -152,7 +152,6 @@ function mod.owo_color_flashlight()
             })
         end
     end
-    
 
     return table_to_return
 
@@ -174,7 +173,7 @@ function mod.owo_tactical_flashlight()
 
     for color, _ in pairs(flashlight_colors) do
         for template_suffix, _ in pairs(flashlight_intensities) do
-                        -- ---------------
+            -- ---------------
             -- Tactical Light
             -- ---------------
             local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
@@ -266,4 +265,6 @@ function mod.owo_tactical_flashlight()
             }, "ap_receiver_01")
         end
     end
+
+    return table_to_return
 end
