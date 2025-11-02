@@ -35,11 +35,7 @@ local custom_attachments = {
             },
         },
     },
-}
--- Patches for if other plugins already defined
-local ewc_ba = get_mod("extended_weapon_customization_base_additions")
-if not ewc_ba then
-    custom_attachments.flashlight = {
+    flashlight = {
         parent_slot = "barrel",
         default_path = _item_empty_trinket,
         fix = {
@@ -50,11 +46,24 @@ if not ewc_ba then
                 node = 1,
             },
         },
-    }
-    custom_attachments.muzzle = {
-        parent_slot = "rail",
+    },
+    muzzle = {
+        parent_slot = "barrel",
         default_path = _item_empty_trinket,
-    }
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.215, 0.025),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+}
+-- Patches for if other plugins already defined
+local ewc_ba = get_mod("extended_weapon_customization_base_additions")
+if not ewc_ba then
+    
 end
 
 return {
