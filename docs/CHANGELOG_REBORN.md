@@ -8,7 +8,7 @@ v4.3.0
     - Combat Shotgun
     - Double-Barreled Shotgun
     - Exterminator Shotgun
-    - Shotpistol and Shield
+    - Subductor Shotpistol and Riot Shield
     - Grenadier Gauntlet
     - Ripper Guns
     - Twin-Linked Heavy Stubbers
@@ -20,6 +20,13 @@ v4.3.0
     - Subductor Shotpistol and Riot Shield
     - Ripper Guns
     - Heavy Stubbers
+    - Rumbler/Kickback
+- Small underbarrel flashlights ("Flashlight (Under)")
+    - Added to:
+        - Subductor Shotpistol and Riot Shield
+        - Quickdraw Stubrevolvers
+    - Half sized and sits under barrel
+    - doesn't actually turn on bc that's just how the original mod works
 
 ---
 # 2025-10-29
