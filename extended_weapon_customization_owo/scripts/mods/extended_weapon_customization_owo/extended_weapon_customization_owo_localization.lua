@@ -32,12 +32,21 @@ end
 -- Custom Slots
 -- ###############
 mod:add_global_localize_strings({
+	-- ---------------
 	-- Mod Name for the separators
+	-- ---------------
     loc_ewc_extended_weapon_customization_owo = {
         en = "Ostracized without Objection (OwO)",
     },
-	-- Custom separator names
-	
+	-- ---------------
+	-- Attachment Slots
+	-- ---------------
+	loc_ewc_flashlight_under_small = {
+        en = "Flashlight (Underbarrel, Small)",
+    },
+	-- ---------------
+	-- Custom separator groups
+	-- ---------------
 	-- 	Flashlights
 	--		DONE IN ./attachments/owo_flashlight.lua
 	-- Attachment Display Names
