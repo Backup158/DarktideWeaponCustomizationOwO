@@ -28,21 +28,9 @@ local custom_attachments = {
         default_path = _item_empty_trinket,
         fix = {
             offset = {
-                position = vector3_box(0.0, 0.545, 0.0),
+                position = vector3_box(0.0, 1.08, 0.25),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(2.8, 2.8, 2.8),
-                node = 1,
-            },
-        },
-    },
-    flashlight = {
-        parent_slot = "body",
-        default_path = _item_empty_trinket,
-        fix = {
-            offset = {
-                position = vector3_box(0.0, 0.0, 0.0),
-                rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1.0, 1.0, 1.0),
                 node = 1,
             },
         },
@@ -51,7 +39,18 @@ local custom_attachments = {
 -- Patches for if other plugins already defined
 local ewc_ba = get_mod("extended_weapon_customization_base_additions")
 if not ewc_ba then
-    
+    custom_attachments.flashlight = {
+        parent_slot = "body",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0.12, 0.15, 0.13),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1.5, 1.5, 1.5),
+                node = 1,
+            },
+        },
+    }
 end
 
 return {
