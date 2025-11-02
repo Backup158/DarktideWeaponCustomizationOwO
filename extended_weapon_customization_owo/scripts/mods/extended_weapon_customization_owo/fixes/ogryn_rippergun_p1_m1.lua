@@ -26,6 +26,14 @@ local custom_attachments = {
     muzzle = {
         parent_slot = "barrel",
         default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.545, 0.0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(2.8, 2.8, 2.8),
+                node = 1,
+            },
+        },
     }
 }
 -- Patches for if other plugins already defined

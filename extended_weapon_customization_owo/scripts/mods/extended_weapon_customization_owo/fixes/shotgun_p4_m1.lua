@@ -33,7 +33,7 @@ if not ewc_ba then
         default_path = _item_empty_trinket,
         fix = {
             offset = {
-                position = vector3_box(0.015, 0.158, 0.025),
+                position = vector3_box(0.025, 0.555, 0.095),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
                 node = 1,
@@ -43,6 +43,14 @@ if not ewc_ba then
     custom_attachments.muzzle = {
         parent_slot = "receiver",
         default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.63, 0.1),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
     }
 end
 
