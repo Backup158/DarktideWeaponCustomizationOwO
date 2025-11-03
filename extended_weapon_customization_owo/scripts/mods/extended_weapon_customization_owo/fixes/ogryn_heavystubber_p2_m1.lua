@@ -46,7 +46,7 @@ local custom_attachments = {
                 position = vector3_box(0.0, 1.35, 0.0),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(2.5, 2.5, 2.5),
-                -- 1,2,3: doesnt change fixes; no ctd
+                -- 1,2,3,4,5,6, 13,14,15: doesnt change fixes; no ctd
                 node = 1,
             },
         },
