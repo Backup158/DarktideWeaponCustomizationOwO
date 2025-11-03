@@ -7,6 +7,8 @@ local vector3 = Vector3
 local vector3_box = Vector3Box
 
 local type = type
+local table = table
+local table_insert = table.insert
 
 -- ################################
 -- Game Content Addresses
@@ -39,6 +41,14 @@ local create_an_attachment = mod.create_an_attachment
 -- ################################
 function mod.owo_suppressor()
     local table_to_return = mod.init_table_to_return("owo_suppressor")
+
+    -- Logging all names
+    local first_time_setup = false
+    local all_suppressor_names = nil
+    if not mod.all_suppressor_names then
+        first_time_setup = true
+        all_suppressor_names = {}
+    end
 
     local function create_suppressor(name, model_table, transformations_table, custom_selection)
         local model_to_use = nil
@@ -103,6 +113,11 @@ function mod.owo_suppressor()
             },
             "ap_muzzle_01"
         )
+
+        -- Adding name to list of suppressors
+        if first_time_setup then
+            table_insert(all_suppressor_names, name)
+        end
     end
     local function create_suppressor_and_slim(name, model_table, transformations_table)
         local table_to_send = {
@@ -312,6 +327,11 @@ function mod.owo_suppressor()
             --ac2_sca_slim = suppressor_metal_ac2_sca_slim,
         }
     )
+
+    -- sending to global table
+    if all_suppressor_names then
+        mod.all_suppressor_names = all_suppressor_names
+    end
    
     return table_to_return
 

@@ -1,3 +1,5 @@
+local mod = get_mod("extended_weapon_customization_owo")
+
 -- ################################
 -- Local References for Performance
 -- ################################
@@ -16,7 +18,9 @@ local _item_minion = "content/items/weapons/minions"
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
-
+--table.dump(mod.all_suppressor_names, "SUPPRESSOR NAMES CALLED FROM THUMPER", 10)
+local all_suppressor_names = mod.all_suppressor_names
+local all_suppressors = mod.create_requirements_string_from_names_table(all_suppressor_names)
 
 local custom_fixes = {
 
@@ -29,9 +33,13 @@ local custom_attachments = {
         fix = {
             offset = {
                 position = vector3_box(0.0, 1.08, 0.25),
+                --position = vector3_box(0.0, 0.0, 0.0),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(2.8, 2.8, 2.8),
-                node = 1,
+                -- 1 doesn't attach when animating
+                -- 12, 13: ctd
+                 node = 1,
+                --node = 13,
             },
         },
     },

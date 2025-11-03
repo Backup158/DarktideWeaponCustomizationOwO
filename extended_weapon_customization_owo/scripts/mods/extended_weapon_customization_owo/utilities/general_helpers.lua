@@ -10,8 +10,8 @@ local vector3_box = Vector3Box
 
 local pairs = pairs
 local type = type
---local string = string
---local string_sub = string.sub
+local string = string
+local string_sub = string.sub
 --local string_gsub = string.gsub
 local tostring = tostring
 local table = table
@@ -97,4 +97,26 @@ function mod.table_insert_all_from_table(destination_table, source_table)
     for _, value in pairs(source_table) do
         table_insert(destination_table, value)
     end
+end
+
+-- ######
+-- Create Requirements String from Table of Names\
+-- DESC: concatenates all strings from a table into one X|Y|...|Z
+-- PARAM:
+--  table_of_attachment_names: table of strings; attachment names, such as "owo_suppressor_01"
+-- RETURN: string
+-- ######
+function mod.create_requirements_string_from_names_table(table_of_attachment_names)
+    local final_string = ""
+    if not type(table_of_attachment_names) == "table" then
+        mod:error("Not given table! create_requirements_string_from_names_table for "..tostring(table_of_attachment_names))
+        return
+    end
+    for _, attachment in pairs(table_of_attachment_names) do
+        final_string = final_string..attachment.."|"
+    end
+    -- Remove final character (the unnecessary |)
+    final_string = string_sub(final_string, 1, -2)
+
+    return final_string
 end
