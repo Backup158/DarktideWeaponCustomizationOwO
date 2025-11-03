@@ -20,10 +20,25 @@ local _item_minion = "content/items/weapons/minions"
 -- ###################################################################
 --table.dump(mod.all_suppressor_names, "SUPPRESSOR NAMES CALLED FROM THUMPER", 10)
 local all_suppressor_names = mod.all_suppressor_names
-local all_suppressors = mod.create_requirements_string_from_names_table(all_suppressor_names)
+local any_suppressor = mod.create_requirements_string_from_names_table(all_suppressor_names)
 
 local custom_fixes = {
-
+    {
+        attachment_slot = "muzzle",
+        requirements = {
+            muzzle = {
+                has = any_suppressor,
+            },
+        },
+        fix = {
+            offset = {
+                node = 12,
+                --position = vector3_box(0.0, -0.07, 0.065),
+                --rotation = vector3_box(0, 0, 0),
+                --scale = vector3_box(1.25, 1.25, 1.25),
+            },
+        },
+    },
 }
 
 local custom_attachments = {
