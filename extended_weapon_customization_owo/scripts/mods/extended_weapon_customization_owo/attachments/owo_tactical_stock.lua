@@ -41,39 +41,49 @@ function mod.owo_tactical_stock(given_attachment_node)
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
+    -- Logging all names if this is the first time
+    local all_these_attachments = nil
+    if not mod.all_tactical_stock_names then
+        all_these_attachments = {}
+    end
+
     local function tactical_stock_helper(name, model_unit_thing, fix_pos, fix_rot, fix_scl)
         create_an_attachment(table_to_return, name,
-        -- Attachment
-        {   replacement_path = _item_ranged.."/stocks/"..name,
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-        },
-        -- Fixes
-        {
-            {   
-                attachment_slot = "stock",
-                requirements = {
-                    stock = {
-                        has = name,
+            -- Attachment
+            {   replacement_path = _item_ranged.."/stocks/"..name,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+            },
+            -- Fixes
+            {
+                {   
+                    attachment_slot = "stock",
+                    requirements = {
+                        stock = {
+                            has = name,
+                        },
                     },
-                },
-                fix = {
-                    offset = {
-                        node = 1,
-                        position = fix_pos or vector3_box(0,0,0),
-                        rotation = fix_rot or vector3_box(0,0,0),
-                        scale = fix_scl or vector3_box(1,1,1),
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = fix_pos or vector3_box(0,0,0),
+                            rotation = fix_rot or vector3_box(0,0,0),
+                            scale = fix_scl or vector3_box(1,1,1),
+                        },
                     },
                 },
             },
-        },
-        -- Kitbash
-        {   base_unit = model_unit_thing,
-        },
-        -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
-        attachment_node
-    )
+            -- Kitbash
+            {   base_unit = model_unit_thing,
+            },
+            -- ATTACHMENT NODE 
+            -- DON'T FORGET THIS
+            attachment_node
+        )
+        -- Adding name to list of suppressors
+        if all_these_attachments then
+            table_insert(all_these_attachments, name)
+        end
     end
 
     -- Skeletal Stock
@@ -95,9 +105,13 @@ function mod.owo_tactical_stock(given_attachment_node)
     local folded_stock_n_u = attachment_group_prefix.."folded_n_u"
     tactical_stock_helper(folded_stock_n_u, "content/weapons/player/ranged/autogun_rifle_killshot/attachments/stock_02/stock_02", vector3_box(0.0, -0.03, 0.0), vector3_box(174, 0, 0), vector3_box(2.52, 1.3, 1))
 
-    local given_base_unit = "content/weapons/player/melee/thunder_hammer/attachments/head_04/head_04"
-    local replacement_name = _item_melee.."/heads/owo_stock_fill_hammer_head_04"
-    create_kitbash_full_item(table_to_return, replacement_name, nil, given_base_unit, attachment_node)
+    -- Full Item
+    create_kitbash_full_item(table_to_return, _item_melee.."/heads/owo_stock_fill_hammer_head_04", nil, "content/weapons/player/melee/thunder_hammer/attachments/head_04/head_04", attachment_node)
+
+    -- Making list of all attachments global
+    if all_these_attachments then
+        mod.all_tactical_stock_names = all_these_attachments
+    end
 
     return table_to_return
 
