@@ -132,6 +132,9 @@ local suppressor_localizations = {
 	owo_suppressor_05 = {
 		en = "Heavy Metal Suppressor 02"
 	},
+	owo_suppressor_wrapped_01 = {
+		en = "Wrapped Suppressor 01"
+	},
 } 
 for attachment_name, localizations in pairs(suppressor_localizations) do
 	mod:add_global_localize_strings({
