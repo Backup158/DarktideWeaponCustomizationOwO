@@ -23,6 +23,8 @@ local all_suppressor_names = mod.all_suppressor_names
 local any_suppressor = mod.create_requirements_string_from_names_table(all_suppressor_names)
 
 local custom_fixes = {
+    --[[
+    -- Attempting to attach to muzzle when parented to body
     {
         attachment_slot = "muzzle",
         requirements = {
@@ -39,22 +41,22 @@ local custom_fixes = {
             },
         },
     },
+    ]]
 }
 
 local custom_attachments = {
     muzzle = {
-        parent_slot = "body",
+        parent_slot = "sight",
         default_path = _item_empty_trinket,
         fix = {
             offset = {
-                position = vector3_box(0.0, 1.08, 0.25),
-                --position = vector3_box(0.0, 0.0, 0.0),
+                position = vector3_box(0.0, 0.32, -0.146),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(2.8, 2.8, 2.8),
-                -- 1 doesn't attach when animating
-                -- 12, 13: ctd
+                -- nodes if parented to body
+                --  1 doesn't attach when animating
+                --  12, 13: ctd
                  node = 1,
-                --node = 13,
             },
         },
     },
@@ -63,11 +65,11 @@ local custom_attachments = {
 local ewc_ba = get_mod("extended_weapon_customization_base_additions")
 if not ewc_ba then
     custom_attachments.flashlight = {
-        parent_slot = "body",
+        parent_slot = "sight",
         default_path = _item_empty_trinket,
         fix = {
             offset = {
-                position = vector3_box(0.12, 0.15, 0.13),
+                position = vector3_box(0.12, -0.15, -0.13),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1.5, 1.5, 1.5),
                 node = 1,
@@ -77,6 +79,6 @@ if not ewc_ba then
 end
 
 return {
-    --fixes = custom_fixes,
+    fixes = custom_fixes,
     attachment_slots = custom_attachments,
 }
