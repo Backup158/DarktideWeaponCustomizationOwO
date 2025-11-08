@@ -39,7 +39,9 @@ local create_an_attachment = mod.create_an_attachment
 -- ################################
 -- Attachment
 -- ################################
-function mod.owo_suppressor()
+function mod.owo_suppressor(given_slot_name, given_attachment_node)
+    local current_slot_name = given_slot_name or "muzzle"
+    local current_attachment_node = given_attachment_node or "ap_muzzle_01"
     local table_to_return = mod.init_table_to_return("owo_suppressor")
 
     -- Logging all names
@@ -111,7 +113,7 @@ function mod.owo_suppressor()
                     },
                 },
             },
-            "ap_muzzle_01"
+            current_slot_name
         )
 
         -- Adding name to list of suppressors
