@@ -160,8 +160,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/supp_ac_ak_muzzle_02", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_02/muzzle_02", "ap_muzzle_01")
     -- chrome
     create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/chigurh_ac1", nil, "content/weapons/player/ranged/rippergun_rifle/attachments/barrel_01/barrel_01", "ap_muzzle_01")
-    -- jungle
-    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/jungle_ac1", nil, "content/weapons/player/melee/combat_blade/attachments/handle_08/handle_08", "ap_muzzle_01")
+    -- wrapped
+    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/wrapped_ac1", nil, "content/weapons/player/melee/combat_blade/attachments/handle_08/handle_08", "ap_muzzle_01")
 
     -- --------------------------------
     -- Full attachment
@@ -304,26 +304,26 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         }
     )
     ]]
-    -- Jungle
+    -- Wrapped
     -- Reusing Heavy metal
-    local suppressor_jungle_ac1_pos = vector3_box(0, 0.144, 0.002)
-    local suppressor_jungle_ac1_rot = vector3_box(-90, 0, 0)
-    local suppressor_jungle_ac1_sca = vector3_box(0.77, 0.6, 1.1)
-    local suppressor_jungle_ac2_pos = vector3_box(0, 0.144, 0)
-    --local suppressor_jungle_ac1_sca_slim = vector3_box(1.1, 1.1, 1.1)
-    create_suppressor("owo_suppressor_jungle", 
+    local suppressor_wrapped_ac1_pos = vector3_box(0, 0.144, 0.002)
+    local suppressor_wrapped_ac1_rot = vector3_box(-90, 0, 0)
+    local suppressor_wrapped_ac1_sca = vector3_box(0.77, 0.6, 1.1)
+    local suppressor_wrapped_ac2_pos = vector3_box(0, 0.144, 0)
+    --local suppressor_wrapped_ac1_sca_slim = vector3_box(1.1, 1.1, 1.1)
+    create_suppressor("owo_suppressor_wrapped_01", 
         {
-            ac1 = _item_ranged.."/muzzles/jungle_ac1",
+            ac1 = _item_ranged.."/muzzles/wrapped_ac1",
             ac2 = _item_ranged.."/muzzles/supp_ac_ak_muzzle_02",
         }, 
         {
             icon_rot = render_unit_rot_profile_left,
             icon_pos = render_cam_pos_profile_left,
-            ac1_pos = suppressor_jungle_ac1_pos,
-            ac1_rot = suppressor_jungle_ac1_rot,
-            ac1_sca = suppressor_jungle_ac1_sca,
-            --ac1_sca_slim = suppressor_jungle_ac1_sca_slim,
-            ac2_pos = suppressor_jungle_ac2_pos,
+            ac1_pos = suppressor_wrapped_ac1_pos,
+            ac1_rot = suppressor_wrapped_ac1_rot,
+            ac1_sca = suppressor_wrapped_ac1_sca,
+            --ac1_sca_slim = suppressor_wrapped_ac1_sca_slim,
+            ac2_pos = suppressor_wrapped_ac2_pos,
             ac2_rot = suppressor_metal_ac2_rot,
             ac2_sca = suppressor_metal_ac2_sca,
             --ac2_sca_slim = suppressor_metal_ac2_sca_slim,
