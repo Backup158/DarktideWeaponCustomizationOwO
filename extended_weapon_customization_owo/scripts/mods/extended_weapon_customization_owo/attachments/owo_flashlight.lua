@@ -46,10 +46,6 @@ end
 -- ################################
 -- Attachment
 -- ################################
-local function add_name_to_big_list(name)
-
-end
-
 local function kitbash_flashlight_help(table_to_return, attachment_name, attachment_group_prefix, color, template_suffix, table_of_children_and_fixes, custom_attachment_node)
 
     create_an_attachment(table_to_return, attachment_name,
@@ -258,7 +254,7 @@ function mod.owo_tactical_flashlight()
                         },
                     },
                     flashlight_ac2 = {
-                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_1",
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_attacher_stock3",
                         fix = {
                             offset = {
                                 node = 1,
@@ -286,7 +282,7 @@ function mod.owo_tactical_flashlight()
                         },
                     },
                     flashlight_ac2 = {
-                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_1",
+                        item = _item_ranged.."/flashlights/owo_flashlight_ac2_attacher_stock3",
                         fix = {
                             offset = {
                                 node = 1,
