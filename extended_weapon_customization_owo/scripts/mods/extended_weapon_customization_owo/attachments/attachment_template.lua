@@ -32,6 +32,8 @@ local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 -- local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 
+
+
 -- ################################
 -- Attachment
 -- ################################
@@ -42,6 +44,12 @@ function mod.KITBASH_ITEM(given_slot, given_attachment_node)
     local attachment_group_name = "KITBASH_ITEM"
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
+
+    -- Logging all names if this is the first time
+    local all_these_attachments = nil
+    if not mod.all_KITBASH_ITEM_names then
+        all_these_attachments = {}
+    end
 
     local shortname = attachment_group_prefix.."NAME"
     create_an_attachment(table_to_return, shortname,
@@ -77,13 +85,21 @@ function mod.KITBASH_ITEM(given_slot, given_attachment_node)
                 },
             },
         },
-        -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
+        -- Attachment Node
         current_attachment_node
     )
+    -- Adding name to this group's list
+    if all_these_attachments then
+        table_insert(all_these_attachments, name)
+    end
 
     -- adding helpers
     create_kitbash_full_item(table_to_return, REPLACEMENT_PATH, nil, MASTER_ITEMS_BASE_UNIT, current_attachment_node)
+
+    -- Making list of all attachments global
+    if all_these_attachments then
+        mod.all_KITBASH_ITEM_names = all_these_attachments
+    end
 
     return table_to_return
 
