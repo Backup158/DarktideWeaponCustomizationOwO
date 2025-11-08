@@ -172,7 +172,7 @@ function mod.owo_color_flashlight()
                 },
                 -- Kitbash
                 {
-                    base_unit = "content/weapons/player/attachments/flashlights/flashlight_1/flashlight_1"
+                    base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01"
                 },
                 -- ATTACHMENT NODE 
                 -- DON'T FORGET THIS
