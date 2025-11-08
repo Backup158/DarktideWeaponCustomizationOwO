@@ -49,7 +49,7 @@ end
 -- For all names, use specific localization or generic
 -- ---------------
 local function localize_all_from_group(attachment_names, localizations_to_use)
-	for attachment_name, localization_table in pairs(attachment_names) do
+	for _, attachment_name in pairs(attachment_names) do
 		local final_localization
 		if localizations_to_use and localizations_to_use[attachment_name] then
 			final_localization = localizations_to_use[attachment_name]
