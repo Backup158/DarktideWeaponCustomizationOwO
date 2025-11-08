@@ -8,6 +8,11 @@ local type = type
 local table = table
 local table_clone = table.clone
 
+local string = string
+local string_upper = string.upper
+local string_sub = string.sub
+local string_regex_sub = string.gsub
+
 -- ################################
 -- Helper functions for localization
 -- ################################
@@ -23,6 +28,39 @@ local function append_to_localization(localizations_table, string_to_append)
 	local new_local = table_clone(localizations_table)
 	new_local.en = new_local.en.." "..string_to_append
 	return new_local
+end
+
+-- ---------------
+-- Generic Localization
+-- ---------------
+local function generic_localization(attachment_name_string) 
+	local final_string
+	-- Removing my prefix because the section implies it
+	final_string, _ = string_regex_sub(attachment_name_string, "owo_", "")
+	-- Capitalize every word
+	final_string, _ = string_regex_sub(attachment_name_string, "_%a", string_upper)
+	-- Convert underscore to space
+	final_string, _ = string_regex_sub(attachment_name_string, "_", " ")
+	return final_string
+end
+
+-- ---------------
+-- Localizing a group of attachments
+-- For all names, use specific localization or generic
+-- ---------------
+local function localize_all_from_group(attachment_names, localizations_to_use)
+	for attachment_name, localization_table in pairs(attachment_names) do
+		local final_localization
+		if localizations_to_use and localizations_to_use[attachment_name] then
+			final_localization = localizations_to_use[attachment_name]
+		else
+			final_localization = generic_localization(attachment_name)
+		end
+
+		mod:add_global_localize_strings({
+			["loc_"..attachment_name] = final_localization,
+		})
+	end
 end
 
 -- ################################
@@ -144,6 +182,12 @@ for attachment_name, localizations in pairs(suppressor_localizations) do
 		["loc_"..attachment_name.."_slim"] = append_to_localization(localizations, "(Slim)"),
 	})
 end
+-- ---------------
+-- Tactical Stocks
+-- ---------------
+local tactical_stock_localizations = {
+
+}
 
 -- ################################
 -- Mod Options and Data
