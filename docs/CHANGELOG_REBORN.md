@@ -21,6 +21,7 @@ v4.3.0
     - Ripper Guns
     - Heavy Stubbers
     - Rumbler/Kickback
+        - works when reloading :D
 - Small underbarrel flashlights ("Flashlight (Under)")
     - Added to:
         - Subductor Shotpistol and Riot Shield
@@ -28,9 +29,8 @@ v4.3.0
     - Half sized and sits under barrel
     - doesn't actually turn on bc that's just how the original mod works
 - Suppressor Variants
-    - Jungle Suppressor
-        - Really it's just a metal suppressor wrapped in a bandage
-        - But Jungle sounds cooler
+    - Wrapped Suppressor
+        - a metal suppressor wrapped in a bandage
 
 ---
 # 2025-10-29
