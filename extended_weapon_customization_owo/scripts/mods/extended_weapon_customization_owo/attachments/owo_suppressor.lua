@@ -45,10 +45,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local table_to_return = mod.init_table_to_return("owo_suppressor")
 
     -- Logging all names
-    local first_time_setup = false
     local all_suppressor_names = nil
     if not mod.all_suppressor_names then
-        first_time_setup = true
         all_suppressor_names = {}
     end
 
@@ -117,7 +115,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         )
 
         -- Adding name to list of suppressors
-        if first_time_setup then
+        if all_suppressor_names then
             table_insert(all_suppressor_names, name)
         end
     end
