@@ -304,10 +304,10 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     ]]
     -- Wrapped
     -- Reusing Heavy metal
-    local suppressor_wrapped_ac1_pos = vector3_box(0, 0.144, 0.002)
+    local suppressor_wrapped_ac1_pos = vector3_box(0, 0.164, 0.002)
     local suppressor_wrapped_ac1_rot = vector3_box(-90, 0, 0)
     local suppressor_wrapped_ac1_sca = vector3_box(0.77, 0.6, 1.1)
-    local suppressor_wrapped_ac2_pos = vector3_box(0, 0.144, 0)
+    local suppressor_wrapped_ac2_pos = vector3_box(0, 0.164, 0)
     --local suppressor_wrapped_ac1_sca_slim = vector3_box(1.1, 1.1, 1.1)
     create_suppressor("owo_suppressor_wrapped_01", 
         {
