@@ -96,6 +96,12 @@ mod:add_global_localize_strings({
 	-- ---------------
 	-- 	Flashlights
 	--		DONE IN ./attachments/owo_flashlight.lua
+	--  Tactical Stocks
+	loc_ewc_owo_tactical_stock = {
+		en = "OwO - Tactical Stocks",
+	},
+	-- Suppressors
+	--		DONE BELOW TO ACCOUNT FOR VARIANTS
 })
 
 -- ###############
@@ -140,6 +146,7 @@ end
 -- Suppressors
 -- ---------------
 local suppressor_localizations = {
+	-- So i can cover the variants
 	ewc_owo_suppressor = {
 		en = "OwO - Suppressors"
 	},
