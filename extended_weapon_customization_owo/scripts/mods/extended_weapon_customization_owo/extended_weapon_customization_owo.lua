@@ -303,11 +303,12 @@ local ranged_muzzle_no_double = {
     --"ogryn_gauntlet_p1_m1", 
     "ogryn_rippergun_p1_m1", 
     --"ogryn_heavystubber_p1_m1", 
-    "ogryn_heavystubber_p2_m1", 
+    --"ogryn_heavystubber_p2_m1", 
     "ogryn_thumper_p1_m1", 
 }
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_muzzle_no_double, "muzzle")
 --add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_sight_01"), {"ogryn_thumper_p1_m1"}, "muzzle")
+add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_barrel_01"), {"ogryn_heavystubber_p2_m1"}, "muzzle")
 
 -- Stock
 add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", }, "stock")
