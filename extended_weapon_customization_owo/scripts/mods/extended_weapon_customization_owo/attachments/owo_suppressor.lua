@@ -111,7 +111,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                     },
                 },
             },
-            current_slot_name
+            current_attachment_node
         )
 
         -- Adding name to list of suppressors
