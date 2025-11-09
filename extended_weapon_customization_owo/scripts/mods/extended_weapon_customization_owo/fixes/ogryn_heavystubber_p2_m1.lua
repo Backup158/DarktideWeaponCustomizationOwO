@@ -39,14 +39,20 @@ local custom_fixes = {
 
 local custom_attachments = {
     muzzle = {
-        parent_slot = "barrel",
+        --parent_slot = "barrel",
+        parent_slot = "receiver",
         default_path = _item_empty_trinket,
         fix = {
             offset = {
                 position = vector3_box(0.0, 1.35, 0.0),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(2.5, 2.5, 2.5),
-                -- 1,2,3,4,5,6, 13,14,15: doesnt change fixes; no ctd
+                -- for barrel parent
+                -- 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15: doesnt change fixes; no ctd
+                --  absolutely none of the offsets will respond
+                --  what
+                --  the
+                --  FUCK
                 node = 1,
             },
         },
@@ -56,13 +62,13 @@ local custom_attachments = {
 local ewc_ba = get_mod("extended_weapon_customization_base_additions")
 if not ewc_ba then
     custom_attachments.flashlight = {
-        parent_slot = "barrel",
+        parent_slot = "receiver",
         default_path = _item_empty_trinket,
         fix = {
             offset = {
                 position = vector3_box(0.0, 0.0, 0.0),
                 rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1.0, 1.0, 1.0),
+                scale = vector3_box(2.5, 2.5, 2.5),
                 node = 1,
             },
         },
