@@ -96,24 +96,6 @@ mod:add_global_localize_strings({
 	-- ---------------
 	-- 	Flashlights
 	--		DONE IN ./attachments/owo_flashlight.lua
-	-- ------------------------------
-	-- Attachment Display Names
-	-- ------------------------------
-	loc_owo_tactical_stock_telescoping_in = {
-		en = "Tactical Stock - Telescoping (Pushed in)",
-	},
-	loc_description_owo_tactical_stock_telescoping_in = {
-		en = "Tactical Stock - Telescoping (Pushed in)",
-	},
-	loc_owo_tactical_stock_folded_n_1 = {
-		en = "Tactical Stock - Folded (Natural, Left)",
-	},
-	loc_owo_tactical_stock_folded_n_m = {
-		en = "Tactical Stock - Folded M (Natural, Left)",
-	},
-	loc_owo_tactical_stock_folded_n_u = {
-		en = "Tactical Stock - Folded (Natural, Under)",
-	},
 })
 
 -- ###############
@@ -192,8 +174,20 @@ end
 -- Tactical Stocks
 -- ---------------
 local tactical_stock_localizations = {
-
+	owo_tactical_stock_telescoping_in = {
+		en = "Telescoping Stock (Pushed in)",
+	},
+	_owo_tactical_stock_folded_n_1 = {
+		en = "Folded Stock (Natural, Left)",
+	},
+	owo_tactical_stock_folded_n_m = {
+		en = "Folded Stock M (Natural, Left)",
+	},
+	owo_tactical_stock_folded_n_u = {
+		en = "Folded Stock (Natural, Under)",
+	},
 }
+localize_all_from_group(mod.all_tactical_stock_names, tactical_stock_localizations)
 
 -- ################################
 -- Mod Options and Data
