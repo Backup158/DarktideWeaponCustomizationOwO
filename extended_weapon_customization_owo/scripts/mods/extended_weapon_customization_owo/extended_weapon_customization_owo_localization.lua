@@ -33,15 +33,21 @@ end
 -- ---------------
 -- Generic Localization
 -- ---------------
-local function generic_localization(attachment_name_string) 
+-- -------
+local function internal_name_to_english(attachment_name_string)
 	local final_string
-	-- Removing my prefix because the section implies it
+	-- Removing my prefix because the group label in the menu implies it
 	final_string, _ = string_regex_sub(attachment_name_string, "owo_", "")
 	-- Capitalize every word
 	final_string, _ = string_regex_sub(attachment_name_string, "_%a", string_upper)
 	-- Convert underscore to space
 	final_string, _ = string_regex_sub(attachment_name_string, "_", " ")
 	return final_string
+end
+local function generic_localization(attachment_name_string) 
+	return {
+		en = internal_name_to_english(attachment_name_string),
+	}
 end
 
 -- ---------------
