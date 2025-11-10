@@ -318,7 +318,16 @@ add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "
 add_attachments_to_list_of_weapons(mod.owo_mag(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "magazine")
 
 -- Sight
+local sighted_weapons = {
+    "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
+    "bolter_p1_m1", "boltpistol_p1_m1", 
+    --"flamer_p1_m1", "plasmagun_p1_m1", 
+    "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
+    "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
+    "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
+}
 add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "sight")
+add_attachments_to_list_of_weapons(mod.owo_holographic_sight(), sighted_weapons, "sight")
 
 -- ################
 -- Melee
