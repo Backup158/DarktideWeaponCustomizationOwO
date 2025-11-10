@@ -12,7 +12,8 @@ local pairs = pairs
 local type = type
 local string = string
 local string_sub = string.sub
---local string_gsub = string.gsub
+local string_regex_sub = string.gsub
+local string_upper = string.upper
 local tostring = tostring
 local table = table
 local table_insert = table.insert
@@ -119,4 +120,52 @@ function mod.create_requirements_string_from_names_table(table_of_attachment_nam
     final_string = string_sub(final_string, 1, -2)
 
     return final_string
+end
+
+-- ---------------
+-- Generic Localization
+-- ---------------
+-- -------
+function mod.internal_name_to_english(attachment_name_string)
+	local final_string
+	-- Removing my prefix because the group label in the menu implies it
+	final_string, _ = string_regex_sub(attachment_name_string, "owo_", "")
+	-- Capitalize every word
+	final_string, _ = string_regex_sub(attachment_name_string, "_%a", string_upper)
+	-- Convert underscore to space
+	final_string, _ = string_regex_sub(attachment_name_string, "_", " ")
+	return final_string
+end
+function mod.generic_localization(attachment_name_string) 
+	return {
+		en = mod.internal_name_to_english(attachment_name_string),
+	}
+end
+
+-- ---------------
+-- Localizing a group of attachments
+-- For all names, use specific localization or generic
+-- ---------------
+function mod.localize_single_attachment_with_table(attachment_name, localizations_to_use)
+    local final_localization
+    if localizations_to_use and localizations_to_use[attachment_name] then
+        final_localization = localizations_to_use[attachment_name]
+    else
+        final_localization = mod.generic_localization(attachment_name)
+    end
+
+    mod:add_global_localize_strings({
+        ["loc_"..attachment_name] = final_localization,
+    })
+end
+
+function mod.localize_all_from_group(attachment_names, localizations_to_use)
+	if not (type(attachment_names) == "table") then
+		mod:error("Cannot localize all from group. Not given table.\n"..tostring(attachment_names))
+		return
+	end
+
+	for _, attachment_name in pairs(attachment_names) do
+		mod.localize_single_attachment_with_table(attachment_name, localizations_to_use)
+	end
 end

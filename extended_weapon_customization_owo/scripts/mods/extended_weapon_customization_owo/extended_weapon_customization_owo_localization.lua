@@ -30,45 +30,6 @@ local function append_to_localization(localizations_table, string_to_append)
 	return new_local
 end
 
--- ---------------
--- Generic Localization
--- ---------------
--- -------
-local function internal_name_to_english(attachment_name_string)
-	local final_string
-	-- Removing my prefix because the group label in the menu implies it
-	final_string, _ = string_regex_sub(attachment_name_string, "owo_", "")
-	-- Capitalize every word
-	final_string, _ = string_regex_sub(attachment_name_string, "_%a", string_upper)
-	-- Convert underscore to space
-	final_string, _ = string_regex_sub(attachment_name_string, "_", " ")
-	return final_string
-end
-local function generic_localization(attachment_name_string) 
-	return {
-		en = internal_name_to_english(attachment_name_string),
-	}
-end
-
--- ---------------
--- Localizing a group of attachments
--- For all names, use specific localization or generic
--- ---------------
-local function localize_all_from_group(attachment_names, localizations_to_use)
-	for _, attachment_name in pairs(attachment_names) do
-		local final_localization
-		if localizations_to_use and localizations_to_use[attachment_name] then
-			final_localization = localizations_to_use[attachment_name]
-		else
-			final_localization = generic_localization(attachment_name)
-		end
-
-		mod:add_global_localize_strings({
-			["loc_"..attachment_name] = final_localization,
-		})
-	end
-end
-
 -- ################################
 -- Localizations for the base mod to use
 -- ################################
@@ -180,21 +141,7 @@ end
 -- ---------------
 -- Tactical Stocks
 -- ---------------
-local tactical_stock_localizations = {
-	owo_tactical_stock_telescoping_in = {
-		en = "Telescoping Stock (Pushed in)",
-	},
-	_owo_tactical_stock_folded_n_1 = {
-		en = "Folded Stock (Natural, Left)",
-	},
-	owo_tactical_stock_folded_n_m = {
-		en = "Folded Stock M (Natural, Left)",
-	},
-	owo_tactical_stock_folded_n_u = {
-		en = "Folded Stock (Natural, Under)",
-	},
-}
-localize_all_from_group(mod.all_tactical_stock_names, tactical_stock_localizations)
+-- Done in attachments file because global list would not be initialized in time
 
 -- ################################
 -- Mod Options and Data
