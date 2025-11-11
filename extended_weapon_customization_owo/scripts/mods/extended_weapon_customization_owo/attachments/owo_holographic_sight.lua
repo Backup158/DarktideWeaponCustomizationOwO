@@ -73,8 +73,10 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
     )
     if type(child_fix_multiplier) == "table" then
         for slot, offset_table in pairs(child_fix_multiplier) do
-            for offset_slot, offset_array in pairs(offset_table) do
-                children_table[slot].fix.offset[offset_slot] = apply_two_dimensional_transformation_to_vector(children_table[slot].fix.offset[offset_slot], offset_array)
+            if children_table[slot] then
+                for offset_slot, offset_array in pairs(offset_table) do
+                    children_table[slot].fix.offset[offset_slot] = apply_two_dimensional_transformation_to_vector(children_table[slot].fix.offset[offset_slot], offset_array)
+                end
             end
         end
     end
@@ -120,6 +122,9 @@ local function create_all_holographic_variants(table_to_return, attachment_group
     generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "", current_attachment_node, table_of_children_with_fixes)
     local short_scale = {x = 1, y = 0.85, z = 1}
     generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "_short", current_attachment_node, table_of_children_with_fixes, {
+        sight_base = {
+            scale = {x = 1, y = 1, z = 0.85},
+        },
         sight_ac1 = {
             scale = short_scale,
         },
@@ -135,13 +140,13 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
 
     local attachment_group_name = "owo_holographic_sight"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
---[[
+
     -- Logging all names
     local all_attachment_names = nil
     if not mod.all_holographic_sights_names then
         all_attachment_names = {}
     end
-]]
+
     -- adding helpers
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_holosight_base", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_holosight_base2", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
