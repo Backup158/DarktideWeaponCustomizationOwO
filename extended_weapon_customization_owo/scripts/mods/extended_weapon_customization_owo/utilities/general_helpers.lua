@@ -129,11 +129,12 @@ function mod.internal_name_to_english(attachment_name_string)
 	-- Removing my prefix because the group label in the menu implies it
 	final_string, _ = string_regex_sub(attachment_name_string, "owo_", "")
 	-- Capitalize every word
-	final_string, _ = string_regex_sub(attachment_name_string, "_%a", string_upper)
+	final_string, _ = string_regex_sub(final_string, "_%a", string_upper)
 	-- Convert underscore to space
-	final_string, _ = string_regex_sub(attachment_name_string, "_", " ")
+	final_string, _ = string_regex_sub(final_string, "_", " ")
 	return final_string
 end
+
 function mod.generic_localization(attachment_name_string) 
 	return {
 		en = mod.internal_name_to_english(attachment_name_string),
