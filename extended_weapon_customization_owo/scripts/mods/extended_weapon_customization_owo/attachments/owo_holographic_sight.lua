@@ -34,7 +34,7 @@ local create_an_attachment = mod.create_an_attachment
 -- ################################
 -- Attachment
 -- ################################
-local function generate_holographic_variant(table_to_return, attachment_group_name, broad_name, suffix_name, table_of_children_with_fixes, child_fix_multiplier)
+local function generate_holographic_variant(table_to_return, attachment_group_name, broad_name, suffix_name, current_attachment_node, table_of_children_with_fixes, child_fix_multiplier)
     local shortname = attachment_group_name.."_"..broad_name..suffix_name
     local children_table = table_merge_recursive(
         {
@@ -109,10 +109,10 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
     end
 end
 
-local function create_all_holographic_variants(table_to_return, attachment_group_name, unique_name, table_of_children_with_fixes)
-    generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "", table_of_children_with_fixes)
+local function create_all_holographic_variants(table_to_return, attachment_group_name, unique_name, current_attachment_node, table_of_children_with_fixes)
+    generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "", current_attachment_node, table_of_children_with_fixes)
     local short_scale = {x = 1, y = 0.85, z = 1}
-    generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "_short", table_of_children_with_fixes, {
+    generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "_short", current_attachment_node, table_of_children_with_fixes, {
         sight_ac1 = {
             scale = short_scale,
         },
@@ -152,7 +152,7 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     local eotech_housing_pos = vector3_box(0.00, 0.018, 0.018)
     local eotech_housing_rot = vector3_box(180, 90, -90)
     local eotech_housing_scl = vector3_box(1.25, 0.366 * 1.3, 0.256)
-    create_all_holographic_variants(table_to_return, attachment_group_name, "eotech", {
+    create_all_holographic_variants(table_to_return, attachment_group_name, "eotech", current_attachment_node, {
         sight_ac1 = {
             item = _item_ranged.."/sights/owo_eotech_housing_chainsword",
             fix = {
