@@ -10,8 +10,6 @@ local table = table
 local table_insert = table.insert
 local table_merge_recursive = table.merge_recursive
 
-local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
-
 -- ################################
 -- Game Content Addresses
 -- ################################
@@ -30,6 +28,13 @@ local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 
 local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
+
+local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
+local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
+
+local attachment_localizations = {
+
+}
 
 -- ################################
 -- Attachment
@@ -103,10 +108,12 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
         -- DON'T FORGET THIS
         current_attachment_node
     )
-    -- Adding name to list of suppressors
+    -- Adding name to list of attachments
     if all_attachment_names then
         table_insert(all_attachment_names, shortname)
     end
+    -- Localizing name
+    localize_single_attachment_with_table(shortname, attachment_localizations)
 end
 
 local function create_all_holographic_variants(table_to_return, attachment_group_name, unique_name, current_attachment_node, table_of_children_with_fixes)
