@@ -32,7 +32,12 @@ local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 -- local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 
+local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
+local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
 
+local attachment_localizations = {
+
+}
 
 -- ################################
 -- Attachment
@@ -90,8 +95,9 @@ function mod.KITBASH_ITEM(given_slot, given_attachment_node)
     )
     -- Adding name to this group's list
     if all_these_attachments then
-        table_insert(all_these_attachments, name)
+        table_insert(all_these_attachments, shortname)
     end
+    localize_single_attachment_with_table(shortname, attachment_localizations)
 
     -- adding helpers
     create_kitbash_full_item(table_to_return, REPLACEMENT_PATH, nil, MASTER_ITEMS_BASE_UNIT, current_attachment_node)
