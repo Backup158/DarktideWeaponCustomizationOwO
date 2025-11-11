@@ -101,7 +101,7 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
                     scale = vector3_box(1.0, 1.0, 1.0)
                 },
                 hide = {
-                    mesh = {1,5}, -- Hide reticle
+                    mesh = {1,5}, -- Hide reticle and sight body, without hiding children (as would happen with hiding node)
                 }
             },
             children = children_table,
