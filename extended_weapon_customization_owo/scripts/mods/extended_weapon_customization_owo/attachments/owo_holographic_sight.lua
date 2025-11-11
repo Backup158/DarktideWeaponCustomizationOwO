@@ -46,8 +46,10 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     end
 ]]
     -- adding helpers
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_base", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_base2", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_housing_chainsword", nil, "content/weapons/player/melee/chain_sword/attachments/grip_06/grip_06", current_attachment_node)
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_holographic_sight_scope_mount", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", current_attachment_node)
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_front_seat_tip", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_vortex_housing_foreskin", nil, "content/weapons/player/ranged/lasgun_pistol/attachments/muzzle_03/muzzle_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_front_seat", nil, "content/weapons/player/melee/combat_blade/attachments/handle_04/handle_04", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_indicator_sight_eotech", nil, "content/characters/empty_item/empty_item", current_attachment_node)
@@ -59,18 +61,20 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
 
     local eotech_housing_pos = vector3_box(0.00, 0.018, 0.018)
     local eotech_housing_rot = vector3_box(180, 90, -90)
-    local eotech_housing_scl = vector3_box(1.25, 0.366, 0.256)
+    --local eotech_housing_scl = vector3_box(1.25, 0.366, 0.256)
+    local eotech_housing_scl = vector3_box(1.25, 0.366 * 1.3, 0.256)
 
     create_an_attachment(table_to_return, shortname,
         -- Attachment
         {   replacement_path = _item_ranged.."/sights/"..shortname,
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
+            custom_selection_group = "owo_holographic_sight_eotech",
         },
         -- Fixes
         nil,
         -- Kitbash
-        {   item = _item_ranged.."/sights/reflex_sight_03",
+        {   item = _item_ranged.."/sights/owo_eotech_base",
             fix = {
                 disable_in_ui = false,
                 offset = {
@@ -80,10 +84,24 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
                     scale = vector3_box(1.0, 1.0, 1.0)
                 },
                 hide = {
-                    mesh = {1}, -- Hide reticle
+                    mesh = {1,5}, -- Hide reticle
                 }
             },
             children = {
+                sight_base = {
+                    item = _item_ranged.."/sights/owo_eotech_base2",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = vector3_box(0.0, 0.0, 0.0),
+                            scale = vector3_box(1.0, 1.0, 1.3)
+                        },
+                        hide = {
+                            mesh = {1}, -- Hide reticle
+                        }
+                    },
+                },
                 sight_ac1 = {
                     item = _item_ranged.."/sights/owo_eotech_housing_chainsword",
                     fix = {
@@ -107,13 +125,14 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
                     },
                 },
                 sight_ac3 = {
-                    item = _item_ranged.."/sights/owo_holographic_sight_scope_mount",
+                    item = _item_ranged.."/sights/owo_eotech_front_seat_tip",
                     fix = {
                         offset = {
                             node = 1,
                             position = vector3_box(0, 0.088, 0.01),
                             rotation = eotech_housing_rot,
-                            scale = vector3_box(1.1, 0.57, 0.154),
+                            --scale = vector3_box(1.1, 0.57, 0.154),
+                            scale = vector3_box(1.1, 0.57 * 1.3, 0.154),
                         },
                     },
                 },
@@ -124,7 +143,8 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
                             node = 1,
                             position = vector3_box(0, 0.034, 0.008),
                             rotation = vector3_box(90, 0, -180),
-                            scale = vector3_box(0.42, 0.24, 0.314),
+                            --scale = vector3_box(0.42, 0.24, 0.314),
+                            scale = vector3_box(0.42, 0.24 * 1.3, 0.314),
                         },
                     },
                 },
