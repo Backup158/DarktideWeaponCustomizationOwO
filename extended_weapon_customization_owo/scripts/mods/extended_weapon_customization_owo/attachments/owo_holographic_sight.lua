@@ -217,6 +217,10 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     -- Vortex Razor AMG UH-1
     -- ---------------
 
+    -- ---------------
+    -- DOT EHS-1
+    -- ---------------
+
     if all_attachment_names then
         mod.all_holographic_sights_names = all_attachment_names
     end
