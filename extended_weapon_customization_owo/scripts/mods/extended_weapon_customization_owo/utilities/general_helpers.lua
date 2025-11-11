@@ -3,10 +3,8 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- ################################
 -- Local References for Performance
 -- ################################
---[[
 local vector3 = Vector3
 local vector3_box = Vector3Box
-]]
 
 local pairs = pairs
 local type = type
@@ -168,4 +166,27 @@ function mod.localize_all_from_group(attachment_names, localizations_to_use)
 	for _, attachment_name in pairs(attachment_names) do
 		mod.localize_single_attachment_with_table(attachment_name, localizations_to_use)
 	end
+end
+
+-- ----------
+-- Apply 2D Transformation to Vector3Box
+-- DESC: given a vector3box, multiply it with the transformation given
+--  not just modifying the vector without returning because that affects the one it was cloned from
+--  maybe vectors are pointers being passed around?
+--  not using the vector3 functions becaus returning a vector3 doesn't work (just defaults to 0)
+-- PARAM:
+--      vector_userdata; Vector3Box; the position/rotation
+--      two_dimensional_array; table of numbers; like {x = 1, y = 2, z = 1}
+-- RETURN: Vector3Box
+-- ----------
+function mod.apply_two_dimensional_transformation_to_vector(vector_userdata, two_dimensional_array)
+    -- if different lengths, error
+    if not 3 == #two_dimensional_array then
+        mod:error("Scalar array is not sized 3")
+        return
+    end
+
+    return vector3_box( vector_userdata[1] * (two_dimensional_array.x or 1), 
+                        vector_userdata[2] * (two_dimensional_array.y or 1), 
+                        vector_userdata[3] * (two_dimensional_array.z or 1))
 end

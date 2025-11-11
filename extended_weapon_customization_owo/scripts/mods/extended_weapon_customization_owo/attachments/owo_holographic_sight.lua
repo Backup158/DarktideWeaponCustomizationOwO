@@ -10,6 +10,8 @@ local table = table
 local table_insert = table.insert
 local table_merge_recursive = table.merge_recursive
 
+local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
+
 -- ################################
 -- Game Content Addresses
 -- ################################
@@ -65,7 +67,11 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
         table_of_children_with_fixes
     )
     if type(child_fix_multiplier) == "table" then
-        mod:echo("pound sand")
+        for slot, offset_table in pairs(child_fix_multiplier) do
+            for offset_slot, offset_array in pairs(offset_table) do
+                children_table[slot].fix.offset[offset_slot] = apply_two_dimensional_transformation_to_vector(children_table[slot].fix.offset[offset_slot], offset_array)
+            end
+        end
     end
 
     create_an_attachment(table_to_return, shortname,
@@ -105,22 +111,14 @@ end
 
 local function create_all_holographic_variants(table_to_return, attachment_group_name, unique_name, table_of_children_with_fixes)
     generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "", table_of_children_with_fixes)
-    local short_scale = vector3_box(1, 0.85, 1)
+    local short_scale = {x = 1, y = 0.85, z = 1}
     generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "_short", table_of_children_with_fixes, {
         sight_ac1 = {
-            fix = {
-                offset = {
-                    scale = short_scale
-                }
-            }
+            scale = short_scale,
         },
         sight_ac2 = {
-            fix = {
-                offset = {
-                    scale = short_scale
-                }
-            }
-        }
+            scale = short_scale,
+        },
     })
 end
 
