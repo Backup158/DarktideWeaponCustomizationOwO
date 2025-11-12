@@ -328,6 +328,7 @@ local sighted_weapons = {
 }
 add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "sight")
 add_attachments_to_list_of_weapons(mod.owo_holographic_sight(), sighted_weapons, "sight")
+add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), sighted_weapons, "sight")
 
 -- ################
 -- Melee
