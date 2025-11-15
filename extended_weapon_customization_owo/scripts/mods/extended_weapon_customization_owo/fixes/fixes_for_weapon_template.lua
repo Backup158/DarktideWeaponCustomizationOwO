@@ -1,8 +1,12 @@
+local mod = get_mod("extended_weapon_customization_owo")
+
 -- ################################
 -- Local References for Performance
 -- ################################
 local vector3 = Vector3
 local vector3_box = Vector3Box
+
+local create_requirements_string_from_names_table = mod.create_requirements_string_from_names_table
 
 -- ################################
 -- Game Content Addresses
@@ -12,6 +16,11 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
+
+-- ################################
+-- Attachment Names for Fixes
+-- ################################
+local all_owo_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
 
 -- ###################################################################
 -- FIXES TO RETURN
