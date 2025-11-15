@@ -178,6 +178,10 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
     end
 end
 
+function mod.create_group_indicator(table_to_return, indicator_name, current_attachment_node)
+    create_kitbash_full_item(table_to_return, indicator_name, nil, "content/characters/empty_item/empty_item", current_attachment_node)
+end
+
 -- ######
 -- For All Weapon Models
 -- DESCRIPTION: Executes a given function for a range, which should cover all models for a certain weapon slot, such as psword blades
