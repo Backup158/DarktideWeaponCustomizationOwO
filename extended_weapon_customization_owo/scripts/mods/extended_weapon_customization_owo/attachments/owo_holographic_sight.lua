@@ -31,6 +31,7 @@ local create_an_attachment = mod.create_an_attachment
 
 local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
 local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
+local create_group_indicator = mod.create_group_indicator
 
 local attachment_localizations = {
 
@@ -154,8 +155,8 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_front_seat_tip", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_vortex_housing_foreskin", nil, "content/weapons/player/ranged/lasgun_pistol/attachments/muzzle_03/muzzle_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_front_seat", nil, "content/weapons/player/melee/combat_blade/attachments/handle_04/handle_04", current_attachment_node)
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_indicator_sight_eotech", nil, "content/characters/empty_item/empty_item", current_attachment_node)
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_indicator_sight_vortex", nil, "content/characters/empty_item/empty_item", current_attachment_node)
+    create_group_indicator(table_to_return, _item_ranged.."/sights/owo_indicator_sight_eotech", current_attachment_node)
+    create_group_indicator(table_to_return, _item_ranged.."/sights/owo_indicator_sight_vortex", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_indicator_sight_dot", nil, "content/characters/empty_item/empty_item", current_attachment_node)
 
     -- ---------------
