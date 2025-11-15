@@ -68,22 +68,24 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
             },
             -- Fixes
-            nil,
-            -- Kitbash
-            {   item =  _item_ranged.."/sights/owo_sight_reticle_0"..i,
-                fix = {
-                    disable_in_ui = false,
-                    --[[
-                    offset = {
-                        node = 1,
-                        position = vector3_box(0.0, 0.0, 0.0),
-                        rotation = vector3_box(0.0, 0.0, 0.0),
-                        scale = vector3_box(1.0, 1.0, 1.0)
-                    },]]
-                    hide = {
-                        mesh = {5,6},
+            {
+                {
+                    attachment_slot = "sight_reticle",
+                    requirements = {
+                        sight_reticle = {
+                            has = shortname,
+                        },
+                    },
+                    fix = {
+                        hide = {
+                            mesh = {5,6},
+                        },
                     },
                 },
+            },
+            -- Kitbash
+            {   -- item =  _item_ranged.."/sights/owo_sight_reticle_0"..i,
+                base_item = "content/weapons/player/attachments/sights/sight_reflex_0"..i.."/sight_reflex_0"..i,
             },
             -- Attachment Node
             current_attachment_node
@@ -95,9 +97,9 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
         localize_single_attachment_with_table(shortname, attachment_localizations)
     end
     -- adding helpers
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_01", nil, "content/weapons/player/attachments/sights/sight_reflex_01/sight_reflex_01", current_attachment_node)
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_02", nil, "content/weapons/player/attachments/sights/sight_reflex_02/sight_reflex_02", current_attachment_node)
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_03", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_01", nil, "content/weapons/player/attachments/sights/sight_reflex_01/sight_reflex_01", current_attachment_node)
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_02", nil, "content/weapons/player/attachments/sights/sight_reflex_02/sight_reflex_02", current_attachment_node)
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_03", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
 
     -- Making list of all attachments global
     if all_these_attachments then
