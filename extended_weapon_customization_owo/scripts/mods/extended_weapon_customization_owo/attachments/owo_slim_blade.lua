@@ -62,7 +62,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 blade_rot = scales_table.rot
                 blade_scl = scales_table.scl
             else
-                blade_scl = scales_table -- in case i get lazy and don tmake it a table
+                blade_scl = scales_table -- in case i get lazy and don't make it a table
             end
         end
         table_insert(fixes_to_add, {   
