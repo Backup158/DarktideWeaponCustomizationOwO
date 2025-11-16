@@ -46,6 +46,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
 
     local grip_scale = vector3_box(0.5, 1.0, 1.0)
 
+    -- Logging all names
+    local all_attachment_names = nil
+    if not mod.all_slim_blade_names then
+        all_attachment_names = {}
+    end
+
     local function slim_blade_attach_helper(number_string, name_to_use, base_item_address, scales_table)
         local slim_blade_name = attachment_group_prefix..name_to_use.."_"..number_string
         local fixes_to_add = {}
@@ -110,12 +116,13 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             )
         end
 
+        local selection_group = attachment_group_name.."_"..name_to_use
         create_an_attachment(table_to_return, slim_blade_name,
             -- Attachment
             {   replacement_path = _item_melee.."/blades/"..slim_blade_name,
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
-                custom_selection_group = attachment_group_name.."_"..name_to_use,
+                custom_selection_group = selection_group,
             },
             -- Fixes
             fixes_to_add,
@@ -126,6 +133,13 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- DON'T FORGET THIS
             current_attachment_node
         )
+
+        if all_attachment_names then
+            if not all_attachment_names[selection_group] then
+                all_attachment_names[selection_group] = {}
+            end
+            table_insert(all_attachment_names[selection_group], name_to_use)
+        end
     end
     -- Calls the above for all the variants
     local function slim_blade_variant_helper(amount_of_models, table_of_models_to_skip, base_name, model_base_path, table_of_all_transformations)
