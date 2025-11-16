@@ -54,10 +54,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     end
 
     -- Creating indicators
+    --[
     local families = { "psword", "pfalchion", "2h_psword", "2h_psword_short", "fsword", "2h_fsword", "2h_fsword_short", "dclaw", "hsword",  }
     for i in ipairs(families) do
         create_group_indicator(table_to_return, _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i, current_attachment_node)
     end
+    --]]
 
     local function slim_blade_attach_helper(number_string, name_to_use, base_item_address, scales_table)
         local slim_blade_name = attachment_group_prefix..name_to_use.."_"..number_string
@@ -134,14 +136,17 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Fixes
             fixes_to_add,
             -- Kitbash
-            {   base_unit = "content/characters/empty_item/empty_item",
+            {   base_unit = string_regex_sub(base_item_address, "01", number_string),
+                --[
+                --base_unit = "content/characters/empty_item/empty_item",
                 attachments = {
                     zzz_shared_material_overrides = {
                         item = "",
                         children = {},
                     },
                     base = {
-                        item = string_regex_sub(base_item_address, "01", number_string),
+                        --item = string_regex_sub(base_item_address, "01", number_string),
+                        item = "content/characters/empty_item/empty_item",
                         children = {
                             blade_indicator = {
                                 item = _item_melee.."/blades/owo_indicator_blade_slim_blade_"..name_to_use,
@@ -149,6 +154,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                         }
                     }
                 }
+                --]]
             },
             -- ATTACHMENT NODE 
             -- DON'T FORGET THIS
