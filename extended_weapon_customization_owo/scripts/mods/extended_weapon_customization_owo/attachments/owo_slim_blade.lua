@@ -30,6 +30,7 @@ local render_cam_pos_profile_left = mod.render_cam_pos_sword_blade
 
 local create_an_attachment = mod.create_an_attachment
 local for_all_weapon_models = mod.for_all_weapon_models
+local create_group_indicator = mod.create_group_indicator
 
 -- ################################
 -- Attachment
@@ -50,6 +51,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local all_attachment_names = nil
     if not mod.all_slim_blade_names then
         all_attachment_names = {}
+    end
+
+    -- Creating indicators
+    local families = { "psword", "pfalchion", "2h_psword", "2h_psword_short", "fsword", "2h_fsword", "2h_fsword_short", "dclaw", "hsword",  }
+    for i in ipairs(families) do
+        create_group_indicator(table_to_return, _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i, current_attachment_node)
     end
 
     local function slim_blade_attach_helper(number_string, name_to_use, base_item_address, scales_table)
@@ -127,7 +134,21 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Fixes
             fixes_to_add,
             -- Kitbash
-            {   base_unit = string_regex_sub(base_item_address, "01", number_string),
+            {   base_unit = "content/characters/empty_item/empty_item",
+                attachments = {
+                    zzz_shared_material_overrides = {
+                        item = "",
+                        children = {},
+                    },
+                    base = {
+                        item = string_regex_sub(base_item_address, "01", number_string),
+                        children = {
+                            blade_indicator = {
+                                item = _item_melee.."/blades/owo_indicator_blade_slim_blade_"..name_to_use,
+                            }
+                        }
+                    }
+                }
             },
             -- ATTACHMENT NODE 
             -- DON'T FORGET THIS
