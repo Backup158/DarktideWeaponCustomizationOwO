@@ -271,6 +271,7 @@ end
 attachments_table_for_ewc.flashlight_templates = table_clone(load_mod_file("attachments/owo_flashlight_templates"))
 
 load_mod_file("attachments/create_attachments")
+load_mod_file("utilities/owo_damage_types")
 
 -- ################################
 -- Adding Attachments

@@ -68,6 +68,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                 icon_render_unit_rotation_offset = transformations_table.icon_rot,
                 icon_render_camera_position_offset = transformations_table.icon_pos,
                 custom_selection_group = custom_selection or "owo_suppressor",
+                damage_type = "owo_suppressed",
             },
             nil,
             {   item = model_table.base or _item_empty_trinket, -- invisible base
