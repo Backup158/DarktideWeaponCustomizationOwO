@@ -55,13 +55,28 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
 
     -- Creating indicators
     --[
-    local families = { "psword", "pfalchion", "2h_psword", "2h_psword_short", "fsword", "2h_fsword", "2h_fsword_short", "dclaw", "hsword",  }
-    for i in ipairs(families) do
+    local families_and_damage_types = { 
+        ["psword"] = "metal_slashing_medium", 
+        ["pfalchion"] = "metal_slashing_medium", 
+        ["2h_psword"] = "metal_slashing_heavy", 
+        ["2h_psword_short"] = "metal_slashing_heavy", 
+        ["fsword"] = "metal_slashing_light", 
+        ["2h_fsword"] = "metal_slashing_light", 
+        ["2h_fsword_short"] = "metal_slashing_light", 
+        ["dclaw"] = "metal_slashing_light", 
+        ["hsword"] = "metal_slashing_light",  
+    }
+    for i, _ in ipairs(families_and_damage_types) do
         create_group_indicator(table_to_return, _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i, current_attachment_node)
     end
     --]]
 
-    local function slim_blade_attach_helper(number_string, name_to_use, base_item_address, scales_table)
+    local function slim_blade_attach_helper(attachment_data, scales_table)
+        local number_string = attachment_data.number_string
+        local name_to_use = attachment_data.name_to_use
+        local base_item_address = attachment_data.base_item_address
+        local damage_type = attachment_data.damage_type
+
         local slim_blade_name = attachment_group_prefix..name_to_use.."_"..number_string
         local fixes_to_add = {}
 
@@ -131,6 +146,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             {   replacement_path = _item_melee.."/blades/"..slim_blade_name,
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
+                damage_type = damage_type,
                 custom_selection_group = selection_group,
             },
             -- Fixes
@@ -172,14 +188,24 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local function slim_blade_variant_helper(amount_of_models, table_of_models_to_skip, base_name, model_base_path, table_of_all_transformations)
         -- Flat
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
-            slim_blade_attach_helper(number_string, "flat_"..base_name, model_base_path, {
+            slim_blade_attach_helper({
+                number_string = number_string, 
+                name_to_use = "flat_"..base_name, 
+                base_item_address = model_base_path,
+                damage_type = families_and_damage_types[base_name] or "metal_slashing_medium",
+            }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.flat_scale,
             })
         end)
         -- Flat (Grip)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
-            slim_blade_attach_helper(number_string, "flat_"..base_name.."_g", model_base_path, {
+            slim_blade_attach_helper({
+                number_string = number_string, 
+                name_to_use = "flat_"..base_name.."_g", 
+                base_item_address = model_base_path,
+                damage_type = families_and_damage_types[base_name] or "metal_slashing_medium",
+            }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.flat_g_scale, 
                 grip_scl = grip_scale
@@ -187,14 +213,24 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         end)
         -- Slim
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
-            slim_blade_attach_helper(number_string, "slim_"..base_name, model_base_path, {
+            slim_blade_attach_helper({
+                number_string = number_string, 
+                name_to_use = "slim_"..base_name, 
+                base_item_address = model_base_path,
+                damage_type = families_and_damage_types[base_name] or "metal_slashing_medium",
+            }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.slim_scale,
             })
         end)
         -- Slim (Grip)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
-            slim_blade_attach_helper(number_string, "slim_"..base_name.."_g", model_base_path, {
+            slim_blade_attach_helper({
+                number_string = number_string, 
+                name_to_use = "slim_"..base_name.."_g", 
+                base_item_address = model_base_path,
+                damage_type = families_and_damage_types[base_name] or "metal_slashing_medium",
+            }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.slim_g_scale, 
                 grip_scl = grip_scale,
