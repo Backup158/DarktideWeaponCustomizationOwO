@@ -17,6 +17,7 @@ local _item = "content/items/weapons/player"
 local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
+local _item_empty_master_table = "content/characters/empty_item/empty_item"
 local _item_minion = "content/items/weapons/minions"
 
 -- ################################
@@ -71,7 +72,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                 damage_type = "owo_suppressed",
             },
             nil,
-            {   item = model_table.base or _item_empty_trinket, -- invisible base
+            {   base_unit = model_table.base or _item_empty_master_table, --_item_empty_trinket, -- invisible base
                 fix = {
                     disable_in_ui = false,
                     offset = {
@@ -202,7 +203,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local suppressor_pbs1_ac2_sca_slim = vector3_box(0.255, 0.4, 0.24)
     create_suppressor_and_slim("owo_suppressor_03", 
         {
-            base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+            --base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+            base = "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_05/muzzle_05",
             ac1 = _item_ranged.."/muzzles/pbs_ac1",
             ac2 = _item_ranged.."/muzzles/pbs_ac2",
         }, 
