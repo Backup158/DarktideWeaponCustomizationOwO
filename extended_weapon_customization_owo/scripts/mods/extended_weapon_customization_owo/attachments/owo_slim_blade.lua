@@ -66,7 +66,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         ["dclaw"] = "metal_slashing_light", 
         ["hsword"] = "metal_slashing_light",  
     }
-    for i, _ in ipairs(families_and_damage_types) do
+    for i, _ in pairs(families_and_damage_types) do
         create_group_indicator(table_to_return, _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i, current_attachment_node)
     end
     --]]
