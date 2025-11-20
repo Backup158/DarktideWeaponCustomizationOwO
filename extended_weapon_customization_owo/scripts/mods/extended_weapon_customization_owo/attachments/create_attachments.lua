@@ -58,7 +58,7 @@ local function create_kitbash_merge_table(table_to_add_to, replacement_name, int
     -- Allows VFX to play, if it's a muzzle/barrel
     --  disable_vfx_spawner_exclusion
     local have_vfx
-    if use_vfx_here or (attachment_point == "ap_muzzle_01") or (attachment_point == "ap_barrel_01") then
+    if use_vfx_here then
         have_vfx = true
     else
         have_vfx = false
@@ -115,14 +115,19 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
             [given_base_unit] = true,
         }
     end
+    local have_vfx
+    if use_vfx_here then
+        have_vfx = true
+    else
+        have_vfx = false
+    end
 
     if kitbash_data.additional_asset_requirements then
-        table.dump(kitbash_data, "Kitbash DAT FULL", 20)
+        --table.dump(kitbash_data, "Kitbash DAT FULL", 20)
         for _, sound_str in ipairs(kitbash_data.additional_asset_requirements) do
             given_resource_dependencies[sound_str] = true
         end
-
-        table.dump(given_resource_dependencies, "GIVEN resource_dependencies WITH CUSTOM DMG FROM ADDITIONAL ASSETS", 20)
+        --table.dump(given_resource_dependencies, "GIVEN resource_dependencies WITH CUSTOM DMG FROM ADDITIONAL ASSETS", 20)
     end
 
     if not internal_name then
@@ -150,7 +155,8 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
         display_name = display_name_to_use,
         name = replacement_name,
         workflow_state = "RELEASABLE",
-        is_full_item = true
+        is_full_item = true,
+        disable_vfx_spawner_exclusion = have_vfx,
     }
 end
 local create_kitbash_full_item = mod.create_kitbash_full_item
@@ -187,14 +193,14 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
             local custom_damage_from_main_mod = ewc.damage_types[damage_type]
             local custom_damage = custom_damage_defined_here or custom_damage_from_main_mod
             if custom_damage then
-                --table.dump(custom_damage, "CUSTOM DAMAGE", 20)
+                table.dump(custom_damage, "CUSTOM DAMAGE", 20)
                 for _, sound_event in pairs(custom_damage) do
                     -- Need to check if it's actually a sound, vs like "sawing" or something from gib data
                     if string_find(sound_event, "wwise") then
                         table_insert(kitbash_data.additional_asset_requirements, sound_event)
                     end
                 end
-                --table.dump(custom_damage, "additional_asset_requirements AFTER CUSTOM DAMAGE", 20)
+                table.dump(kitbash_data.additional_asset_requirements, "additional_asset_requirements AFTER CUSTOM DAMAGE", 20)
             end
         end
 
