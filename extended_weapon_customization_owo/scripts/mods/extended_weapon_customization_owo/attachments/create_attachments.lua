@@ -195,8 +195,9 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
             if custom_damage then
                 table.dump(custom_damage, "CUSTOM DAMAGE", 20)
                 for _, sound_event in pairs(custom_damage) do
-                    -- Need to check if it's actually a sound, vs like "sawing" or something from gib data
-                    if string_find(sound_event, "wwise") then
+                    -- Need to check if it's actually a resource
+                    --  sound has wwise, vs like "sawing" or something from gib data
+                    if string_find(sound_event, "wwise") or string_find(sound_event, "particles") then
                         table_insert(kitbash_data.additional_asset_requirements, sound_event)
                     end
                 end
