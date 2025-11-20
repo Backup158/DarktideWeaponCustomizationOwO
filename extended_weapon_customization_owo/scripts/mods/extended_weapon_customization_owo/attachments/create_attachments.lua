@@ -86,7 +86,7 @@ end
 --  attachment_point: string; attachment point for the given kitbash
 -- RETURN: N/A
 -- ######
-function mod.create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point)
+function mod.create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
     local display_name_to_use = nil
     local given_base_unit = nil
     local given_resource_dependencies = nil
@@ -197,7 +197,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
                 for _, sound_event in pairs(custom_damage) do
                     -- Need to check if it's actually a resource
                     --  sound has wwise, vs like "sawing" or something from gib data
-                    if string_find(sound_event, "wwise") or string_find(sound_event, "particles") then
+                    if string_find(sound_event, "wwise") or string_find(sound_event, "content/fx/particles") then
                         table_insert(kitbash_data.additional_asset_requirements, sound_event)
                     end
                 end
@@ -207,7 +207,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
 
         -- this only is a thing if it's a full item on its own
         if kitbash_data.base_unit then
-            create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point)
+            create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
         else
             create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
         end
