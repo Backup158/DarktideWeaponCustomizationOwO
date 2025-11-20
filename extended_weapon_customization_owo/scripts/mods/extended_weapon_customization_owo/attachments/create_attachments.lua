@@ -1,4 +1,5 @@
 local mod = get_mod("extended_weapon_customization_owo")
+local ewc = get_mod("extended_weapon_customization")
 
 -- ################################
 -- Local References for Performance
@@ -11,7 +12,7 @@ local type = type
 local ipairs = ipairs
 --local string = string
 local table = table
---local table_insert = table.insert
+local table_insert = table.insert
 local table_contains = table.contains
 local table_clone = table.clone
 --local table_merge_recursive = table.merge_recursive
@@ -114,6 +115,12 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
         }
     end
 
+    if kitbash_data.additional_asset_requirements then
+        for i in pairs(kitbash_data.additional_asset_requirements) do
+            given_resource_dependencies[i] = true
+        end
+    end
+
     if not internal_name then
         display_name_to_use = "n/a"
     else
@@ -169,6 +176,19 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
 
     if kitbash_data then
         local replacement_name = attachment_data.replacement_path
+        local damage_type = attachment_data.damage_type
+        if damage_type then
+            kitbash_data.additional_asset_requirements = {}
+            local custom_damage_defined_here = mod.custom_damage_types[damage_type]
+            local custom_damage_from_main_mod = ewc.damage_types[damage_type]
+            local custom_damage = custom_damage_defined_here or custom_damage_from_main_mod
+            if custom_damage then
+                for _, sound_event in pairs(custom_damage) do
+                    table_insert(kitbash_data.additional_asset_requirements, sound_event)
+                end
+            end
+        end
+
         -- this only is a thing if it's a full item on its own
         if kitbash_data.base_unit then
             create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point)
