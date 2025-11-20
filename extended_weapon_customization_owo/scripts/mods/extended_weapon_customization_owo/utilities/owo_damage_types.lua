@@ -25,9 +25,13 @@ local gibbing_power = GibbingSettings.gibbing_power
 mod.custom_damage_types = {
     ["owo_suppressed"] = {
         -- Sounds
-        play_ranged_shooting = "wwise/events/weapon/play_autogun_p2_m3_auto",
-        stop_ranged_shooting = "wwise/events/weapon/stop_autogun_p2_m3_auto",
+        --  semiautomatic
         ranged_single_shot = "wwise/events/weapon/play_autogun_p3_m3_single",
+        --  automatic
+        --play_ranged_shooting = "wwise/events/weapon/play_autogun_p2_m3_auto",
+        --stop_ranged_shooting = "wwise/events/weapon/stop_autogun_p2_m3_auto",
+        stop_ranged_shooting = "wwise/events/weapon/play_autogun_p3_m3_single",
+        play_ranged_shooting = "wwise/events/weapon/play_weapon_silence",
         ranged_pre_loop_shot = "wwise/events/weapon/play_autogun_p3_m3_single",
         -- Muzzle flash
         --muzzle_flash = "content/fx/particles/weapons/rifles/bolter/bolter_muzzle_secondary",
