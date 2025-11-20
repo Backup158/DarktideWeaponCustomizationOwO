@@ -10,7 +10,8 @@ local ewc = get_mod("extended_weapon_customization")
 local type = type
 --local pairs = pairs
 local ipairs = ipairs
---local string = string
+local string = string
+local string_find = string.find
 local table = table
 local table_insert = table.insert
 local table_contains = table.contains
@@ -116,9 +117,12 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
     end
 
     if kitbash_data.additional_asset_requirements then
-        for i in pairs(kitbash_data.additional_asset_requirements) do
-            given_resource_dependencies[i] = true
+        table.dump(kitbash_data, "Kitbash DAT FULL", 20)
+        for _, sound_str in ipairs(kitbash_data.additional_asset_requirements) do
+            given_resource_dependencies[sound_str] = true
         end
+
+        table.dump(given_resource_dependencies, "GIVEN resource_dependencies WITH CUSTOM DMG FROM ADDITIONAL ASSETS", 20)
     end
 
     if not internal_name then
@@ -183,9 +187,14 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
             local custom_damage_from_main_mod = ewc.damage_types[damage_type]
             local custom_damage = custom_damage_defined_here or custom_damage_from_main_mod
             if custom_damage then
+                --table.dump(custom_damage, "CUSTOM DAMAGE", 20)
                 for _, sound_event in pairs(custom_damage) do
-                    table_insert(kitbash_data.additional_asset_requirements, sound_event)
+                    -- Need to check if it's actually a sound, vs like "sawing" or something from gib data
+                    if string_find(sound_event, "wwise") then
+                        table_insert(kitbash_data.additional_asset_requirements, sound_event)
+                    end
                 end
+                --table.dump(custom_damage, "additional_asset_requirements AFTER CUSTOM DAMAGE", 20)
             end
         end
 
