@@ -73,41 +73,50 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             },
             nil,
             {   base_unit = model_table.base or _item_empty_master_table, --_item_empty_trinket, -- invisible base
-                fix = {
-                    disable_in_ui = false,
-                    offset = {
-                        node = 1,
-                        position = transformations_table.pos or vector3_box(0, 0, 0),
-                        rotation = vector3_box(0, 0, 0),
-                        scale = vector3_box(1, 1, 1),
+                attachments = {
+                    zzz_shared_material_overrides = {
+                        item = "",
+                        children = {},
                     },
-                    --[[
-                    hide = {
-                        -- NOT: 1 (crash)
-                        -- NOT: 2 (doesn't change anything)
-                        mesh = {2},
-                    },]]
-                },
-                children = {
-                    muzzle_ac1 = {
-                        item = model_to_use or model_table.ac1,
+                    base = {
+                        item = _item_empty_trinket,
                         fix = {
+                            disable_in_ui = false,
                             offset = {
                                 node = 1,
-                                position = transformations_table.ac_pos or transformations_table.ac1_pos or vector3_box(0, 0, 0),
-                                rotation = transformations_table.ac_rot or transformations_table.ac1_rot or vector3_box(0, 0, 0),
-                                scale = transformations_table.ac_sca or transformations_table.ac1_sca or vector3_box(1, 1, 1),
+                                position = transformations_table.pos or vector3_box(0, 0, 0),
+                                rotation = vector3_box(0, 0, 0),
+                                scale = vector3_box(1, 1, 1),
                             },
+                            --[[
+                            hide = {
+                                -- NOT: 1 (crash)
+                                -- NOT: 2 (doesn't change anything)
+                                mesh = {2},
+                            },]]
                         },
-                    },
-                    muzzle_ac2 = {
-                        item = model_to_use or model_table.ac2,
-                        fix = {
-                            offset = {
-                                node = 1,
-                                position = transformations_table.ac_pos or transformations_table.ac2_pos or vector3_box(0, 0, 0),
-                                rotation = transformations_table.ac_rot or transformations_table.ac2_rot or vector3_box(0, 0, 0),
-                                scale = transformations_table.ac_sca or transformations_table.ac2_sca or vector3_box(1, 1, 1),
+                        children = {
+                            muzzle_ac1 = {
+                                item = model_to_use or model_table.ac1,
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = transformations_table.ac_pos or transformations_table.ac1_pos or vector3_box(0, 0, 0),
+                                        rotation = transformations_table.ac_rot or transformations_table.ac1_rot or vector3_box(0, 0, 0),
+                                        scale = transformations_table.ac_sca or transformations_table.ac1_sca or vector3_box(1, 1, 1),
+                                    },
+                                },
+                            },
+                            muzzle_ac2 = {
+                                item = model_to_use or model_table.ac2,
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = transformations_table.ac_pos or transformations_table.ac2_pos or vector3_box(0, 0, 0),
+                                        rotation = transformations_table.ac_rot or transformations_table.ac2_rot or vector3_box(0, 0, 0),
+                                        scale = transformations_table.ac_sca or transformations_table.ac2_sca or vector3_box(1, 1, 1),
+                                    },
+                                },
                             },
                         },
                     },
