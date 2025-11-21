@@ -69,17 +69,17 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                 icon_render_unit_rotation_offset = transformations_table.icon_rot,
                 icon_render_camera_position_offset = transformations_table.icon_pos,
                 custom_selection_group = custom_selection or "owo_suppressor",
-                damage_type = "owo_suppressed",
+                damage_type = "owo_suppressed_autogun_bullet",
             },
             nil,
-            {   base_unit = model_table.base or _item_empty_master_table, --_item_empty_trinket, -- invisible base
+            {   base_unit = _item_empty_master_table, --_item_empty_trinket, -- invisible base
                 attachments = {
                     zzz_shared_material_overrides = {
                         item = "",
                         children = {},
                     },
                     base = {
-                        item = _item_empty_trinket,
+                        item = model_table.base or _item_empty_trinket,
                         fix = {
                             disable_in_ui = false,
                             offset = {
@@ -212,8 +212,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local suppressor_pbs1_ac2_sca_slim = vector3_box(0.255, 0.4, 0.24)
     create_suppressor_and_slim("owo_suppressor_03", 
         {
-            --base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
-            base = "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_05/muzzle_05",
+            base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
+            --base = "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_05/muzzle_05",
             ac1 = _item_ranged.."/muzzles/pbs_ac1",
             ac2 = _item_ranged.."/muzzles/pbs_ac2",
         }, 

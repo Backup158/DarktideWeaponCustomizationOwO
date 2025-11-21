@@ -35,7 +35,8 @@ mod.custom_damage_types = {
         ranged_pre_loop_shot = "wwise/events/weapon/play_autogun_p3_m3_single",
         -- Muzzle flash
         muzzle_flash = "content/fx/particles/weapons/rifles/shotgun/shotgun_trail_smoke",
-        muzzle_flash_crit = "content/fx/particles/weapons/rifles/shotgun/shotgun_incendiary_trail_smoke",
+        muzzle_flash_crit = "content/fx/particles/weapons/rifles/shotgun/shotgun_trail_smoke",
+        --muzzle_flash_crit = "content/fx/particles/weapons/rifles/shotgun/shotgun_incendiary_trail_smoke", -- YOU SEE THE FIRE LOL
         --muzzle_flash = "content/fx/particles/weapons/rifles/bolter/bolter_muzzle_secondary",
         --muzzle_flash_crit = "content/fx/particles/weapons/rifles/bolter/bolter_muzzle_secondary",
     },
