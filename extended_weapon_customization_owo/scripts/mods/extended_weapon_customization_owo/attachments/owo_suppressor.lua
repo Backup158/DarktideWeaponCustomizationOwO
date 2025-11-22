@@ -51,7 +51,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         all_suppressor_names = {}
     end
 
-    local function create_suppressor(name, model_table, transformations_table, custom_selection)
+    local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwites)
         local model_to_use = nil
         if type(model_table) == "table" then
             if not model_table.ac1 then
@@ -63,13 +63,19 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         else
             model_to_use = model_table
         end
+        local given_selection_group 
+        local given_damage_type 
+        if type(custom_attachment_overwites) == "table" then
+            given_selection_group = custom_attachment_overwites.custom_selection
+            given_damage_type = custom_attachment_overwites.damage_type
+        end
 
         create_an_attachment(table_to_return, name,
             {   replacement_path = _item_ranged.."/muzzles/"..name,
                 icon_render_unit_rotation_offset = transformations_table.icon_rot,
                 icon_render_camera_position_offset = transformations_table.icon_pos,
-                custom_selection_group = custom_selection or "owo_suppressor",
-                damage_type = "owo_suppressed_autogun_bullet",
+                custom_selection_group = given_selection_group or "owo_suppressor",
+                damage_type = custom_attachment_overwites.damage_type or "owo_suppressed_autogun_bullet",
             },
             nil,
             {   base_unit = _item_empty_master_table, --_item_empty_trinket, -- invisible base
