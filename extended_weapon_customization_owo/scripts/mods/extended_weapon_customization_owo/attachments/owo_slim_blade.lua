@@ -395,7 +395,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             },
         }
     })]]
-    --table.dump(table_to_return.fixes, "slim fixes", 6)
+    table.dump(table_to_return, "slim blades ALLLL", 6)
     return table_to_return
 
 end

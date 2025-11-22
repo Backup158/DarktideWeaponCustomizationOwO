@@ -23,6 +23,7 @@ local gibbing_types = GibbingSettings.gibbing_types
 local gibbing_power = GibbingSettings.gibbing_power
 
 local default_templates = {
+    -- Sawing is what the cutting weapons use
     metal_slashing_light = {
         game_damage_type = "metal_slashing_light",
         gibbing_type = gibbing_types.sawing,
@@ -102,11 +103,12 @@ mod.custom_damage_types = {
     },
 }
 for _, data in pairs(families_and_damage_types) do
-    mod.custom_damage_types["owo_"..data.damage_type.."_"..data.real_name] = table_clone(default_templates[data.damage_type])
-    mod.custom_damage_types["owo_"..data.damage_type.."_"..data.real_name].sfx_swing = PlayerCharacterSoundEventAliases.sfx_swing.events[data.real_name]
-    mod.custom_damage_types["owo_"..data.damage_type.."_"..data.real_name].sfx_swing_heavy = PlayerCharacterSoundEventAliases.sfx_swing_heavy.events[data.real_name]
-    mod.custom_damage_types["owo_"..data.damage_type.."_"..data.real_name].sfx_weapon_foley_01_right_hand = "wwise/events/weapon/play_weapon_silence" -- special swing
-    mod.custom_damage_types["owo_"..data.damage_type.."_"..data.real_name].sfx_weapon_foley_02_right_hand = "wwise/events/weapon/play_weapon_silence"
+    local damage_type_weapon_key = "owo_"..data.damage_type.."_"..data.real_name
+    mod.custom_damage_types[damage_type_weapon_key] = table_clone(default_templates[data.damage_type])
+    mod.custom_damage_types[damage_type_weapon_key].sfx_swing = PlayerCharacterSoundEventAliases.sfx_swing.events[data.real_name]
+    mod.custom_damage_types[damage_type_weapon_key].sfx_swing_heavy = PlayerCharacterSoundEventAliases.sfx_swing_heavy.events[data.real_name]
+    mod.custom_damage_types[damage_type_weapon_key].sfx_weapon_foley_01_right_hand = "wwise/events/weapon/play_weapon_silence" -- special swing
+    mod.custom_damage_types[damage_type_weapon_key].sfx_weapon_foley_02_right_hand = "wwise/events/weapon/play_weapon_silence"
 end
 
 --[[
