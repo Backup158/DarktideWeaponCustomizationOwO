@@ -32,6 +32,45 @@ local create_an_attachment = mod.create_an_attachment
 local for_all_weapon_models = mod.for_all_weapon_models
 local create_group_indicator = mod.create_group_indicator
 
+local families_and_damage_types = { 
+    ["psword"] = {
+        damage_type = "metal_slashing_medium",
+        real_name = "powersword_p1_m1",
+    }, 
+    ["pfalchion"] = {
+        damage_type = "metal_slashing_medium",
+        real_name = "powersword_p2_m1",
+    }, 
+    ["2h_psword"] = {
+        damage_type = "metal_slashing_heavy",
+        real_name = "powersword_2h_p1_m1",
+    }, 
+    ["2h_psword_short"] = {
+        damage_type = "metal_slashing_heavy",
+        real_name = "powersword_2h_p1_m1",
+    }, 
+    ["fsword"] = {
+        damage_type = "metal_slashing_light",
+        real_name = "forcesword_p1_m1",
+    }, 
+    ["2h_fsword"] = {
+        damage_type = "metal_slashing_light",
+        real_name = "forcesword_2h_p1_m1",
+    }, 
+    ["2h_fsword_short"] = {
+        damage_type = "metal_slashing_light",
+        real_name = "forcesword_2h_p1_m1",
+    }, 
+    ["dclaw"] = {
+        damage_type = "metal_slashing_light",
+        real_name = "combatsword_p1_m1",
+    }, 
+    ["hsword"] = {
+        damage_type = "metal_slashing_light",
+        real_name = "combatsword_p2_m1",
+    },  
+}
+
 -- ################################
 -- Attachment
 -- ################################
@@ -55,17 +94,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
 
     -- Creating indicators
     --[
-    local families_and_damage_types = { 
-        ["psword"] = "metal_slashing_medium", 
-        ["pfalchion"] = "metal_slashing_medium", 
-        ["2h_psword"] = "metal_slashing_heavy", 
-        ["2h_psword_short"] = "metal_slashing_heavy", 
-        ["fsword"] = "metal_slashing_light", 
-        ["2h_fsword"] = "metal_slashing_light", 
-        ["2h_fsword_short"] = "metal_slashing_light", 
-        ["dclaw"] = "metal_slashing_light", 
-        ["hsword"] = "metal_slashing_light",  
-    }
+    
     for i, _ in pairs(families_and_damage_types) do
         create_group_indicator(table_to_return, _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i, current_attachment_node)
     end
@@ -192,7 +221,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 number_string = number_string, 
                 name_to_use = "flat_"..base_name, 
                 base_item_address = model_base_path,
-                damage_type = families_and_damage_types[base_name] or "metal_slashing_medium",
+                damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium",
             }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.flat_scale,
@@ -204,7 +233,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 number_string = number_string, 
                 name_to_use = "flat_"..base_name.."_g", 
                 base_item_address = model_base_path,
-                damage_type = families_and_damage_types[base_name] or "metal_slashing_medium",
+                damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium",
             }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.flat_g_scale, 
@@ -217,7 +246,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 number_string = number_string, 
                 name_to_use = "slim_"..base_name, 
                 base_item_address = model_base_path,
-                damage_type = families_and_damage_types[base_name] or "metal_slashing_medium",
+                damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium",
             }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.slim_scale,
@@ -229,7 +258,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 number_string = number_string, 
                 name_to_use = "slim_"..base_name.."_g", 
                 base_item_address = model_base_path,
-                damage_type = families_and_damage_types[base_name] or "metal_slashing_medium",
+                damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium",
             }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.slim_g_scale, 
