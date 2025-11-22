@@ -215,13 +215,15 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     end
     -- Calls the above for all the variants
     local function slim_blade_variant_helper(amount_of_models, table_of_models_to_skip, base_name, model_base_path, table_of_all_transformations)
+        local calculated_damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
+        
         -- Flat
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper({
                 number_string = number_string, 
                 name_to_use = "flat_"..base_name, 
                 base_item_address = model_base_path,
-                damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium",
+                damage_type = calculated_damage_type,
             }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.flat_scale,
@@ -233,7 +235,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 number_string = number_string, 
                 name_to_use = "flat_"..base_name.."_g", 
                 base_item_address = model_base_path,
-                damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium",
+                damage_type = calculated_damage_type,
             }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.flat_g_scale, 
@@ -246,7 +248,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 number_string = number_string, 
                 name_to_use = "slim_"..base_name, 
                 base_item_address = model_base_path,
-                damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium",
+                damage_type = calculated_damage_type,
             }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.slim_scale,
@@ -258,7 +260,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 number_string = number_string, 
                 name_to_use = "slim_"..base_name.."_g", 
                 base_item_address = model_base_path,
-                damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium",
+                damage_type = calculated_damage_type,
             }, {
                 pos = table_of_all_transformations.pos,
                 scl = table_of_all_transformations.slim_g_scale, 
