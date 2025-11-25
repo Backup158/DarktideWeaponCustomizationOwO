@@ -21,6 +21,14 @@ local table_clone = table.clone
 --local merge_recursive_safe = mod.merge_recursive_safe
 local table_insert_all_from_table = mod.table_insert_all_from_table
 
+-- ################################
+-- Game Content Addresses
+-- ################################
+local _item = "content/items/weapons/player"
+local _item_ranged = _item.."/ranged"
+local _item_melee = _item.."/melee"
+local _item_empty_trinket = _item.."/trinkets/unused_trinket"
+local _item_minion = "content/items/weapons/minions"
 
 -- ################################
 -- Helper Functions
@@ -213,6 +221,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
         end
     end
 end
+local create_an_attachment = mod.create_an_attachment
 
 function mod.create_group_indicator(table_to_return, indicator_name, current_attachment_node, parent_slot_name)
     create_kitbash_full_item(table_to_return, indicator_name, nil, "content/characters/empty_item/empty_item", current_attachment_node)

@@ -84,7 +84,8 @@ function mod.owo_slim_blade_indicator(given_slot_name)
 
     for i, _ in pairs(families_and_damage_types) do
         local indicator_address = _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i
-        --create_group_indicator(table_to_return, indicator_address, current_attachment_node, current_slot_name)
+        create_group_indicator(table_to_return, indicator_address, current_attachment_node, current_slot_name)
+        --[[
         create_an_attachment(table_to_return, indicator_address,
             -- Attachment
             {   replacement_path = _item_melee.."/blades/"..indicator_address,
@@ -102,7 +103,7 @@ function mod.owo_slim_blade_indicator(given_slot_name)
             -- ATTACHMENT NODE 
             -- DON'T FORGET THIS
             current_attachment_node
-        )
+        )]]
     end
 
     return table_to_return
