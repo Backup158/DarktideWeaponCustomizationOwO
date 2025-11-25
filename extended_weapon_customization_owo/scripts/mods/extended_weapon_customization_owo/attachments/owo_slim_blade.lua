@@ -74,6 +74,40 @@ local families_and_damage_types = {
 -- ################################
 -- Attachment
 -- ################################
+function mod.owo_slim_blade_indicator(given_slot_name)
+    local current_slot_name = given_slot_name or "blade"
+    local current_attachment_node = "ap_blade_01"
+
+    local attachment_group_name = "owo_slim_blade"
+    local attachment_indicator_name = attachment_group_name.."_indicator"
+    local table_to_return = mod.init_table_to_return(attachment_indicator_name)
+
+    for i, _ in pairs(families_and_damage_types) do
+        local indicator_address = _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i
+        --create_group_indicator(table_to_return, indicator_address, current_attachment_node, current_slot_name)
+        create_an_attachment(table_to_return, indicator_address,
+            -- Attachment
+            {   replacement_path = _item_melee.."/blades/"..indicator_address,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+                damage_type = damage_type,
+                custom_selection_group = selection_group,
+            },
+            -- Fixes
+            nil,
+            -- Kitbash
+            {   --base_unit = indicator_address,
+                base_unit = "content/characters/empty_item/empty_item",
+            },
+            -- ATTACHMENT NODE 
+            -- DON'T FORGET THIS
+            current_attachment_node
+        )
+    end
+
+    return table_to_return
+end
+
 function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local current_slot_name = given_slot_name or "blade"
     -- local current_attachment_node = given_attachment_node or "ap_blade_01"
@@ -91,14 +125,6 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     if not mod.all_slim_blade_names then
         all_attachment_names = {}
     end
-
-    -- Creating indicators
-    --[
-    
-    for i, _ in pairs(families_and_damage_types) do
-        create_group_indicator(table_to_return, _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i, current_attachment_node)
-    end
-    --]]
 
     local function slim_blade_attach_helper(attachment_data, scales_table)
         local number_string = attachment_data.number_string
