@@ -33,7 +33,7 @@ local custom_fixes = {
         attachment_slot = "head",
         requirements = {
             blade_indicator = {
-                has = "owo_indicator_blade_slim_blade_flat_pfalchion",
+                has = "owo_slim_blade_indicator_flat_pfalchion",
             },
         },
         fix = {

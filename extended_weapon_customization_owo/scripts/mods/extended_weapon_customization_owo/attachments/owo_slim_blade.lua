@@ -83,7 +83,7 @@ function mod.owo_slim_blade_indicator(given_slot_name)
     local table_to_return = mod.init_table_to_return(attachment_indicator_name)
 
     for i, _ in pairs(families_and_damage_types) do
-        local indicator_address = _item_melee.."/blades/owo_indicator_blade_slim_blade_"..i
+        local indicator_address = _item_melee.."/blades/"..attachment_indicator_name.."_"..i
         create_group_indicator(table_to_return, indicator_address, current_attachment_node, current_slot_name)
         --[[
         create_an_attachment(table_to_return, indicator_address,
@@ -129,6 +129,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
 
     local function slim_blade_attach_helper(attachment_data, scales_table)
         local number_string = attachment_data.number_string
+        local base_name = attachment_data.base_name
         local name_to_use = attachment_data.name_to_use
         local base_item_address = attachment_data.base_item_address
         local damage_type = attachment_data.damage_type
@@ -221,7 +222,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                         item = "content/characters/empty_item/empty_item",
                         children = {
                             blade_indicator = {
-                                item = _item_melee.."/blades/owo_indicator_blade_slim_blade_"..name_to_use,
+                                item = _item_melee.."/blades/owo_slim_blade_indicator_"..base_name,
                             }
                         }
                     }
@@ -248,6 +249,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper({
                 number_string = number_string, 
+                base_name = base_name, 
                 name_to_use = "flat_"..base_name, 
                 base_item_address = model_base_path,
                 damage_type = calculated_damage_type,
@@ -260,6 +262,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper({
                 number_string = number_string, 
+                base_name = base_name, 
                 name_to_use = "flat_"..base_name.."_g", 
                 base_item_address = model_base_path,
                 damage_type = calculated_damage_type,
@@ -273,6 +276,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper({
                 number_string = number_string, 
+                base_name = base_name, 
                 name_to_use = "slim_"..base_name, 
                 base_item_address = model_base_path,
                 damage_type = calculated_damage_type,
@@ -285,6 +289,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
             slim_blade_attach_helper({
                 number_string = number_string, 
+                base_name = base_name, 
                 name_to_use = "slim_"..base_name.."_g", 
                 base_item_address = model_base_path,
                 damage_type = calculated_damage_type,

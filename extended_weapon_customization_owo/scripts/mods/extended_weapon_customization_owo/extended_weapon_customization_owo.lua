@@ -338,8 +338,8 @@ add_attachments_to_list_of_weapons(mod.owo_slim_blade(), { "powersword_p1_m1", "
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("head"), {"powermaul_p1_m1", "powermaul_p2_m1", "powermaul_shield_p1_m1", }, "head")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade_indicator")
-add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body_indicator")
-add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("head"), {"powermaul_p1_m1", "powermaul_p2_m1", "powermaul_shield_p1_m1", }, "head_indicator")
+add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "blade_indicator")
+add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("head"), {"powermaul_p1_m1", "powermaul_p2_m1", "powermaul_shield_p1_m1", }, "blade_indicator")
 
 add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01"), {"combataxe_p1_m1", "combataxe_p2_m1", }, "head_rear")
 --table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
