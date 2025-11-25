@@ -224,7 +224,7 @@ end
 local create_an_attachment = mod.create_an_attachment
 
 function mod.create_group_indicator(table_to_return, indicator_name, current_attachment_node, parent_slot_name)
-    create_kitbash_full_item(table_to_return, indicator_name, nil, "content/characters/empty_item/empty_item", current_attachment_node)
+    --create_kitbash_full_item(table_to_return, indicator_name, nil, "content/characters/empty_item/empty_item", current_attachment_node)
     create_an_attachment(table_to_return, indicator_name,
         -- Attachment
         {   replacement_path = _item_melee.."/blades/"..indicator_name,
@@ -234,7 +234,10 @@ function mod.create_group_indicator(table_to_return, indicator_name, current_att
             custom_selection_group = selection_group,
         },
         nil,
-        nil,
+        --nil,
+        {
+            base_unit = "content/characters/empty_item/empty_item",
+        },
         current_attachment_node
     )
             
