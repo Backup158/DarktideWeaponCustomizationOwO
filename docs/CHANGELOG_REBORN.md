@@ -36,10 +36,21 @@ v4.3.0
     - Variants
         - Wrapped Suppressor
             - a metal suppressor wrapped in a bandage
-- Slim Blades to:
-    - Arbites Shock Maul
-    - Shock Maul and Supression Shield
-    - Shock Maul
+- Slim Blades:
+    - Added to:
+        - Arbites Shock Maul
+        - Shock Maul and Supression Shield
+        - Shock Maul
+    - Note: Blades are reversed on these new weapons
+        - I'm working on the fixes for these. It'd be simple enough to brute force it, but I'm working on a more robust solution
+    - Using with invisible connectors may lead to weirdness at the base
+        - These blades were not all designed to be used as standalones
+        - This is the same as when used on the non-maul weapons. just that the connector usually covers it up (at the cost of clipping)
+- Invisible Connectors:
+    - Added to:
+        - Arbites Shock Maul
+        - Shock Maul and Supression Shield
+        - Shock Maul
 - **Damage Types**: Slashing
     - Used in slim blades
     - Matches what the source weapon uses (e.g. Slim Power Sword blades use the damage type from Power Swords)
