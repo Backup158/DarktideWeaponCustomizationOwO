@@ -36,6 +36,9 @@ v4.3.0
 - Suppressor Variants
     - Wrapped Suppressor
         - a metal suppressor wrapped in a bandage
+- Added slashing damage types
+    - Used in slim blades
+    - Matches what the source weapon uses (e.g. Slim Power Sword blades use the damage type from Power Swords)
 
 ---
 # 2025-10-29
