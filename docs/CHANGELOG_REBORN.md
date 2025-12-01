@@ -2,43 +2,48 @@
 v4.3.0
 
 ## Added
-- Flashlights to:
-    - Flamer
-    - Plasma Gun
-    - Combat Shotgun
-    - Double-Barreled Shotgun
-    - Exterminator Shotgun
-    - Subductor Shotpistol and Riot Shield
-    - Grenadier Gauntlet
-    - Ripper Guns
-    - Twin-Linked Heavy Stubbers
-    - Heavy Stubbers
-    - Rumbler/Kickback
-- Suppressors to:
-    - Combat Shotgun
-    - Exterminator Shotgun
-    - Subductor Shotpistol and Riot Shield
-    - Ripper Guns
-    - ~~Heavy Stubbers~~
-        - nvm this drove me insane
-    - Rumbler/Kickback
-        - works when reloading :D
-- Slim Blades to:
-    - Arbites Shock Maul
-    - Shock Maul and Supression Shield
-    - Shock Maul
+- Flashlights 
+    - Added to:
+        - Flamer
+        - Plasma Gun
+        - Combat Shotgun
+        - Double-Barreled Shotgun
+        - Exterminator Shotgun
+        - Subductor Shotpistol and Riot Shield
+        - Grenadier Gauntlet
+        - Ripper Guns
+        - Twin-Linked Heavy Stubbers
+        - Heavy Stubbers
+        - Rumbler/Kickback
+    - also with the changes to how slots work, they fuckin FLOAT
 - Small underbarrel flashlights ("Flashlight (Under)")
     - Added to:
         - Subductor Shotpistol and Riot Shield
         - Quickdraw Stubrevolvers
     - Half sized and sits under barrel
     - doesn't actually turn on bc that's just how the original mod works
-- Suppressor Variants
-    - Wrapped Suppressor
-        - a metal suppressor wrapped in a bandage
-- Added slashing damage types
+    - also with the changes to how slots work, they fuckin FLOAT
+- Suppressors
+    - Added to:
+        - Combat Shotgun
+        - Exterminator Shotgun
+        - Subductor Shotpistol and Riot Shield
+        - Ripper Guns
+        - ~~Heavy Stubbers~~
+            - nvm this drove me insane
+        - Rumbler/Kickback
+            - works when reloading :D
+    - Variants
+        - Wrapped Suppressor
+            - a metal suppressor wrapped in a bandage
+- Slim Blades to:
+    - Arbites Shock Maul
+    - Shock Maul and Supression Shield
+    - Shock Maul
+- **Damage Types**: Slashing
     - Used in slim blades
     - Matches what the source weapon uses (e.g. Slim Power Sword blades use the damage type from Power Swords)
+    - Does not change sounds atm
 
 ---
 # 2025-10-29
