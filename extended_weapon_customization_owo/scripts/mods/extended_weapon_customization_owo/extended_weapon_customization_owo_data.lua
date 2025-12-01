@@ -10,7 +10,7 @@ local widgets_toggleable_to_add = {
     off = {"debug_mode", "owo_mode", "discord_mode"},
     groups = {
         on = {
-            randomization_options = {
+            group_randomization_options = {
                 "mod_option_flashlight_randomization", 
             }
         },
