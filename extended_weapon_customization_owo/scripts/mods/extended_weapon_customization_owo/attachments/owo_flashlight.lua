@@ -55,6 +55,7 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
             icon_render_camera_position_offset = render_cam_pos_profile_left,
             flashlight_template = "owo_"..color.."_flashlight_"..template_suffix,
             custom_selection_group = attachment_group_prefix..color.."_"..template_suffix,
+            randomization_requirement = "mod_option_flashlight_randomization",
         },
         -- Fixes
         --nil,
