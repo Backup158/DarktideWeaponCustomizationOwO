@@ -1,4 +1,4 @@
-# 2025-11-nyaa
+# 2025-11-30
 v4.3.0
 
 ## Added
@@ -55,6 +55,8 @@ v4.3.0
     - Used in slim blades
     - Matches what the source weapon uses (e.g. Slim Power Sword blades use the damage type from Power Swords)
     - Does not change sounds atm
+- Mod options to toggle randomization
+    - Toggling flashlights
 
 ---
 # 2025-10-29
