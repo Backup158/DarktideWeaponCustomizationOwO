@@ -19,9 +19,14 @@ v4.3.0
     - Exterminator Shotgun
     - Subductor Shotpistol and Riot Shield
     - Ripper Guns
-    - Heavy Stubbers
+    - ~~Heavy Stubbers~~
+        - nvm this drove me insane
     - Rumbler/Kickback
         - works when reloading :D
+- Slim Blades to:
+    - Arbites Shock Maul
+    - Shock Maul and Supression Shield
+    - Shock Maul
 - Small underbarrel flashlights ("Flashlight (Under)")
     - Added to:
         - Subductor Shotpistol and Riot Shield
