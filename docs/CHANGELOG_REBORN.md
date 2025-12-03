@@ -1,36 +1,62 @@
-# 2025-11-nyaa
+# 2025-11-30
 v4.3.0
 
 ## Added
-- Flashlights to:
-    - Flamer
-    - Plasma Gun
-    - Combat Shotgun
-    - Double-Barreled Shotgun
-    - Exterminator Shotgun
-    - Subductor Shotpistol and Riot Shield
-    - Grenadier Gauntlet
-    - Ripper Guns
-    - Twin-Linked Heavy Stubbers
-    - Heavy Stubbers
-    - Rumbler/Kickback
-- Suppressors to:
-    - Combat Shotgun
-    - Exterminator Shotgun
-    - Subductor Shotpistol and Riot Shield
-    - Ripper Guns
-    - Heavy Stubbers
-    - Rumbler/Kickback
-        - works when reloading :D
+- Flashlights 
+    - Added to:
+        - Flamer
+        - Plasma Gun
+        - Combat Shotgun
+        - Double-Barreled Shotgun
+        - Exterminator Shotgun
+        - Subductor Shotpistol and Riot Shield
+        - Grenadier Gauntlet
+        - Ripper Guns
+        - Twin-Linked Heavy Stubbers
+        - Heavy Stubbers
+        - Rumbler/Kickback
+    - also with the changes to how slots work, they fuckin FLOAT
 - Small underbarrel flashlights ("Flashlight (Under)")
     - Added to:
         - Subductor Shotpistol and Riot Shield
         - Quickdraw Stubrevolvers
     - Half sized and sits under barrel
     - doesn't actually turn on bc that's just how the original mod works
-- Suppressor Variants
-    - Wrapped Suppressor
-        - a metal suppressor wrapped in a bandage
+    - also with the changes to how slots work, they fuckin FLOAT
+- Suppressors
+    - Added to:
+        - Combat Shotgun
+        - Exterminator Shotgun
+        - Subductor Shotpistol and Riot Shield
+        - Ripper Guns
+        - ~~Heavy Stubbers~~
+            - nvm this drove me insane
+        - Rumbler/Kickback
+            - works when reloading :D
+    - Variants
+        - Wrapped Suppressor
+            - a metal suppressor wrapped in a bandage
+- Slim Blades:
+    - Added to:
+        - Arbites Shock Maul
+        - Shock Maul and Supression Shield
+        - Shock Maul
+    - Note: Blades are reversed on these new weapons
+        - I'm working on the fixes for these. It'd be simple enough to brute force it, but I'm working on a more robust solution
+    - Using with invisible connectors may lead to weirdness at the base
+        - These blades were not all designed to be used as standalones
+        - This is the same as when used on the non-maul weapons. just that the connector usually covers it up (at the cost of clipping)
+- Invisible Connectors:
+    - Added to:
+        - Arbites Shock Maul
+        - Shock Maul and Supression Shield
+        - Shock Maul
+- **Damage Types**: Slashing
+    - Used in slim blades
+    - Matches what the source weapon uses (e.g. Slim Power Sword blades use the damage type from Power Swords)
+    - Does not change sounds atm
+- Mod options to toggle randomization
+    - Toggling flashlights
 
 ---
 # 2025-10-29

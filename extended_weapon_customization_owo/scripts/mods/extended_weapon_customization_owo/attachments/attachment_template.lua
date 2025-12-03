@@ -62,6 +62,7 @@ function mod.KITBASH_ITEM(given_slot, given_attachment_node)
         {   replacement_path = _item_ranged.."/muzzles/"..shortname,
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
+            custom_selection_group = "extended_weapon_customization_owo",
         },
         -- Fixes
         nil,
