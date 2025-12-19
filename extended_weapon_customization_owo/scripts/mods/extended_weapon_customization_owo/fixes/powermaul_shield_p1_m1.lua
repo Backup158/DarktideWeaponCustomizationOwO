@@ -29,6 +29,7 @@ local all_owo_sight_reticle_names = create_requirements_string_from_names_table(
 
 local custom_fixes = {
     -- Slim Blades
+    --[[
     {
         attachment_slot = "head",
         requirements = {
@@ -40,6 +41,22 @@ local custom_fixes = {
             offset = {
                 --position = vector3_box(0, -0.071, 0.065),
                 rotation = vector3_box(0, 0, 180),
+                --scale = vector3_box(1.25, 1.25, 1.25),
+            },
+        },
+    },
+    ]]
+    {
+        attachment_slot = "head",
+        requirements = {
+            head = {
+                has = "owo_slim_blade_slim_pfalchion_01|owo_slim_blade_slim_pfalchion_02|owo_slim_blade_slim_pfalchion_ml01|owo_slim_blade_flat_pfalchion_01|owo_slim_blade_flat_pfalchion_02|owo_slim_blade_flat_pfalchion_ml01",
+            },
+        },
+        fix = {
+            offset = {
+                --position = vector3_box(0, -0.071, 0.065),
+                rotation = vector3_box(0, 90, 180),
                 --scale = vector3_box(1.25, 1.25, 1.25),
             },
         },

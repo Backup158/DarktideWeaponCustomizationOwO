@@ -29,6 +29,7 @@ local all_owo_sight_reticle_names = create_requirements_string_from_names_table(
 
 local custom_fixes = {
     -- Slim Blades
+    --[[
     {
         attachment_slot = "head",
         requirements = {
@@ -43,7 +44,8 @@ local custom_fixes = {
                 --scale = vector3_box(1.25, 1.25, 1.25),
             },
         },
-    },
+    },]]
+    
 }
 
 local custom_attachments = {
