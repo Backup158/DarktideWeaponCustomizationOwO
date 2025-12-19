@@ -29,9 +29,15 @@ Report alignment issues and I might fix it if I'm not busy (lying umder blamket 
 ## Requirements
 1. [MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) by Grasmann
 2. Extended Weapon Customization channel by Grasmann
-  - [Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277) (currently for the deprecated version)
-  - [#weapon-customization-mod in the Darktide Modders Discord](https://discord.com/channels/1048312349867646996/1168063453416669284) (download files in pins and see the FAQ)
-  - [`extended_weapon_customization` file on Grasmann's GitHub](https://github.com/grasmann/darktide-mods/blob/main/extended_weapon_customization.zip)
+  - ~~[Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277)~~
+    - Currently for the deprecated version
+    - Page is hidden by Nexus Moderators
+  - [The #weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284) in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8) 
+    - Download files are in the pins. Search for the latest message from Grasmann.
+    - Also be sure to check out the FAQ below in the pins
+  - [`extended_weapon_customization.zip` file on Grasmann's GitHub](https://github.com/grasmann/darktide-mods/blob/main/extended_weapon_customization.zip)
+    - Click the Download button next to "Raw" and "Copy"
+    - This is below the "History" section
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
 ## Load Order
