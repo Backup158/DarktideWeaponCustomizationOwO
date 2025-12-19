@@ -33,7 +33,7 @@ Report alignment issues, and I might fix it if I'm not busy (lying umder blamket
   - [`extended_weapon_customization.zip` file on Grasmann's GitHub](https://github.com/grasmann/darktide-mods/blob/main/extended_weapon_customization.zip)
     - Click the Download button next to "Raw" and "Copy"
     - This is below the "History" section
-    - ![Pointing to the download button](./assets/ewc_dl_gh.png)
+    - ![Pointing to the download button](./assets/images/ewc_dl_gh.png)
 3. This mod
   - ~~[Nexus link](https://www.nexusmods.com/warhammer40kdarktide/mods/429?tab=files)~~ for the old version
   - [GitHub releases](https://github.com/Backup158/DarktideWeaponCustomizationOwO/releases/latest) for the rebuild
