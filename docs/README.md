@@ -14,16 +14,11 @@
 > THIS IS FOR THE REWORKED BASE MOD (`extended_weapon_customization`), WHICH IS CURRENTLY DISCORD EXCLUSIVE AND WIP
 > \
 > IN FACT, THE REBUILD FOR THIS IS VERY WIP AS WELL
-> \
-> FOR INFO ON THE OLD VERSION OF THIS PLUGIN, SEE [THE OLD README ON PAGES](https://backup158.github.io/DarktideWeaponCustomizationOwO/README_OLD)
 
 # OwO? What is this?
-Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, mostly inspired by history (more like history-inspired films and games) and tacticool airsoft guns. 
+Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, typically inspired by historical weapons and tacticool airsoft LARP sessions. 
 
-In case of misaligned sights, I recommend using [Crosshair Remap (Continued)](https://www.nexusmods.com/warhammer40kdarktide/mods/253) as a workaround (not like I added any yet lol).  \
-With the rebuild, Error 2001/2014s when entering the Mourningstar are much rarer. In case they do happen, it can be kinda avoided by directly accessing the mission board through [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) or some other equivalent, but it won't save you from getting disconnected at the start of a mission. I've only had trouble connecting at the start; once you're in, you're probably in until the end.
-
-Report alignment issues and I might fix it if I'm not busy (lying umder blamket ^u^). 
+Report alignment issues, and I might fix it if I'm not busy (lying umder blamket ^u^). 
 
 # Installation
 ## Requirements
