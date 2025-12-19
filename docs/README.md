@@ -53,7 +53,7 @@ This list is hosted externally.  \
 # Acknowledgements
 Not comprehensive
 - grasmann: For the original EWC mod and including a plugin template
-- MT607 (Random Account): For making the first major plugin, which I used as a base
+- MT607 (Random Account): For making the first major plugin, which I used as a base for the old version of this plugin
 - Syndonai: For sharing knowledge and techniques for kitbashing and quirks of EWC
 - RinAnarchy: For Chinese (Simplified) localization ["zh-cn"]
 - The gun store next to one of my favorite ice cream shops: For letting me see some of these parts in person without going broke
