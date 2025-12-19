@@ -33,6 +33,7 @@ Report alignment issues, and I might fix it if I'm not busy (lying umder blamket
   - [`extended_weapon_customization.zip` file on Grasmann's GitHub](https://github.com/grasmann/darktide-mods/blob/main/extended_weapon_customization.zip)
     - Click the Download button next to "Raw" and "Copy"
     - This is below the "History" section
+    - ![Pointing to the download button](./assets/ewc_dl_gh.png)
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
 ## Load Order
