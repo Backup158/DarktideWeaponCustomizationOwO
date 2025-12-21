@@ -355,6 +355,7 @@ local special_needs_fixes = {
     "shotgun_p1_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
     "powersword_2h_p1_m1", 
+    "powermaul_p2_m1", "powermaul_shield_p1_m1", 
 }
 for _, weapon_id in ipairs(special_needs_fixes) do
     local loaded_table = load_mod_file("fixes/"..weapon_id)
