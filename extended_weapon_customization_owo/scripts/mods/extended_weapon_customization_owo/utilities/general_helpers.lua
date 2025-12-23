@@ -15,6 +15,7 @@ local string_upper = string.upper
 local tostring = tostring
 local table = table
 local table_insert = table.insert
+local table_dump = table.dump
 --local table_clone = table.clone
 local table_merge_recursive = table.merge_recursive
 
@@ -40,11 +41,18 @@ end
 -- RETURN: N/A
 -- ######
 function mod.info_if_debug(message)
-    if debug_mode then
+    if mod:get("debug_mode") then
         mod:info(tostring(message))
     end
 end
 local info_if_debug = mod.info_if_debug
+
+function mod.dump_if_debug(table_to_dump, message)
+    if mod:get("debug_mode") then
+        table_dump(table_to_dump, message, 15)
+    end
+end
+local dump_if_debug = mod.dump_if_debug
 
 -- ######
 -- Merge Recursive (Safe)
