@@ -31,6 +31,9 @@ local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
 
+local render_unit_rot_profile_left = mod.render_unit_rot_sword_blade
+local render_cam_pos_profile_left = mod.render_cam_pos_sword_blade
+
 -- ################################
 -- Helper Functions
 -- ################################
@@ -228,11 +231,9 @@ function mod.create_group_indicator(table_to_return, indicator_name, current_att
     --create_kitbash_full_item(table_to_return, indicator_name, nil, "content/characters/empty_item/empty_item", current_attachment_node)
     create_an_attachment(table_to_return, indicator_name,
         -- Attachment
-        {   replacement_path = _item_melee.."/blades/"..indicator_name,
+        {   replacement_path = _item.."/indicators/"..indicator_name,
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
-            damage_type = damage_type,
-            custom_selection_group = selection_group,
         },
         nil,
         --nil,
