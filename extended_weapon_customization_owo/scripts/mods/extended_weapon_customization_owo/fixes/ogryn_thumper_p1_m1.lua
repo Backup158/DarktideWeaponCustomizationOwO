@@ -15,12 +15,16 @@ local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
 
+local dump_if_debug = mod.dump_if_debug
+local info_if_debug = mod.info_if_debug
+
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
---table.dump(mod.all_suppressor_names, "SUPPRESSOR NAMES CALLED FROM THUMPER", 10)
+--dump_if_debug(mod.all_suppressor_names, "SUPPRESSOR NAMES CALLED FROM THUMPER", 10)
 local all_suppressor_names = mod.all_suppressor_names
 local any_suppressor = mod.create_requirements_string_from_names_table(all_suppressor_names)
+--info_if_debug(any_suppressor)
 
 local custom_fixes = {
     --[[
