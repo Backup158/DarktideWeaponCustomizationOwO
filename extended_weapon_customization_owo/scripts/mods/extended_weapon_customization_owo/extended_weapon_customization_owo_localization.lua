@@ -187,13 +187,13 @@ local localizations = {
 	-- ---------------
 	-- Randomization
 	-- ---------------
-	loc_group_randomization_options = {
+	group_randomization_options = {
 		en = "Randomization Options",
 	},
-	loc_group_randomization_options_description = {
+	group_randomization_options_description = {
 		en = "Allows randomized weapons to use these attachment options",
 	},
-	loc_mod_option_flashlight_randomization = {
+	mod_option_flashlight_randomization = {
 		en = "Flashlights",
 	},
 }
