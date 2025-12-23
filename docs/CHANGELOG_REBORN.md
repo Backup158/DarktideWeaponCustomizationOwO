@@ -1,3 +1,8 @@
+# 2025-12-UNRELEASED
+v4.3.1
+
+- Fixed logging to happen only with debug mod, so I don't keep polluting people's logs
+
 # 2025-11-30
 v4.3.0
 

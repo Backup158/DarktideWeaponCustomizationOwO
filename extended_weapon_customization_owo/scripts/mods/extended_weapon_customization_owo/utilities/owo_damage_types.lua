@@ -19,6 +19,7 @@ local script_unit_extension = script_unit.extension
 local damage_type_setting = "damage_type"
 local damage_type_active_setting = "damage_type_active"
 ]]
+local dump_if_debug = mod.dump_if_debug
 local gibbing_types = GibbingSettings.gibbing_types
 local gibbing_power = GibbingSettings.gibbing_power
 
@@ -123,4 +124,4 @@ for damage_type_name, type_data in pairs(mod.custom_damage_types) do
     ewc.damage_types[damage_type_name] = type_data
 end
 
-table.dump(ewc.damage_types, "ALL DAMAGE TYPES FROM MAIN MOD TABLE AFTER INSERTING", 20)
+dump_if_debug(ewc.damage_types, "ALL DAMAGE TYPES FROM MAIN MOD TABLE AFTER INSERTING")

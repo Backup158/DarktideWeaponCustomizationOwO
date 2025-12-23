@@ -31,6 +31,7 @@ local render_cam_pos_profile_left = mod.render_cam_pos_sword_blade
 local create_an_attachment = mod.create_an_attachment
 local for_all_weapon_models = mod.for_all_weapon_models
 local create_group_indicator = mod.create_group_indicator
+local dump_if_debug = mod.dump_if_debug
 
 local families_and_damage_types = { 
     ["psword"] = {
@@ -429,7 +430,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             },
         }
     })]]
-    table.dump(table_to_return, "slim blades ALLLL", 6)
+    dump_if_debug(table_to_return, "slim blades ALLLL")
     return table_to_return
 
 end
