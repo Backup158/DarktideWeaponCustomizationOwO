@@ -34,12 +34,13 @@ local custom_fixes = {
         requirements = {
             blade_indicator = {
                 has = "owo_slim_blade_indicator_pfalchion",
+                -- has = "query:powermaul_p2_m1,blade_indicator,extended_weapon_customization_owo"
             },
         },
         fix = {
             offset = {
                 --position = vector3_box(0, -0.071, 0.065),
-                rotation = vector3_box(0, 0, 180),
+                rotation = vector3_box(0, 90, 180),
                 --scale = vector3_box(1.25, 1.25, 1.25),
             },
         },
