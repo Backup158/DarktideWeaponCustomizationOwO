@@ -240,7 +240,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             if not all_attachment_names[selection_group] then
                 all_attachment_names[selection_group] = {}
             end
-            table_insert(all_attachment_names[selection_group], name_to_use)
+            table_insert(all_attachment_names[selection_group], slim_blade_name)
         end
     end
     -- Calls the above for all the variants
@@ -432,6 +432,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         }
     })]]
     dump_if_debug(table_to_return, "slim blades ALLLL")
+
+    if not mod.all_slim_blade_names then
+        dump_if_debug(all_attachment_names, "ALL SLIM BLADE NAMES uwu")
+        mod.all_slim_blade_names = all_attachment_names
+    end
+
     return table_to_return
 
 end
