@@ -52,6 +52,12 @@ mod:add_global_localize_strings({
 	attachment_slot_flashlight_under_small = {
         en = "Flashlight (Under)",
     },
+	attachment_slot_sight_reticle = {
+		en = "Sight Reticle",
+	},
+	attachment_slot_head_rear = {
+		en = "Rear Head",
+	},
 	-- ---------------
 	-- Separator groups
 	-- ---------------
