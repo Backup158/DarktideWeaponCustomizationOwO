@@ -276,10 +276,6 @@ load_mod_file("attachments/create_attachments")
 -- ################################
 -- Adding Attachments
 -- ################################
--- ################
--- Ranged
--- ################
--- Special/Flashlight
 local all_ranged_weapons = {
     "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
     "bolter_p1_m1", "boltpistol_p1_m1", 
@@ -288,11 +284,6 @@ local all_ranged_weapons = {
     "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
 }
-add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), all_ranged_weapons, "flashlight")
-add_attachments_to_list_of_weapons(mod.owo_tactical_flashlight(), all_ranged_weapons, "flashlight")
-add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), { "shotpistol_shield_p1_m1", "stubrevolver_p1_m1" }, "flashlight_under_small")
-
--- Muzzle
 local ranged_muzzle_no_double = {
     "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
     "bolter_p1_m1", "boltpistol_p1_m1", 
@@ -307,6 +298,27 @@ local ranged_muzzle_no_double = {
     --"ogryn_heavystubber_p2_m1", 
     "ogryn_thumper_p1_m1", 
 }
+local sighted_weapons = {
+    "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
+    "bolter_p1_m1", "boltpistol_p1_m1", 
+    --"flamer_p1_m1", "plasmagun_p1_m1", 
+    "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
+    "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
+    "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
+}
+local one_handed_mauls =  {
+    "powermaul_p1_m1", 
+    "powermaul_p2_m1", "powermaul_shield_p1_m1", 
+}
+-- ################
+-- Ranged
+-- ################
+-- Special/Flashlight
+add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), all_ranged_weapons, "flashlight")
+add_attachments_to_list_of_weapons(mod.owo_tactical_flashlight(), all_ranged_weapons, "flashlight")
+add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), { "shotpistol_shield_p1_m1", "stubrevolver_p1_m1" }, "flashlight_under_small")
+
+-- Muzzle
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_muzzle_no_double, "muzzle")
 --add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_sight_01"), {"ogryn_thumper_p1_m1"}, "muzzle")
 add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_barrel_01"), {"ogryn_heavystubber_p2_m1"}, "muzzle")
@@ -319,14 +331,6 @@ add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "
 add_attachments_to_list_of_weapons(mod.owo_mag(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "magazine")
 
 -- Sight
-local sighted_weapons = {
-    "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
-    "bolter_p1_m1", "boltpistol_p1_m1", 
-    --"flamer_p1_m1", "plasmagun_p1_m1", 
-    "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
-    "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
-    "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
-}
 add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "sight")
 add_attachments_to_list_of_weapons(mod.owo_holographic_sight(), sighted_weapons, "sight")
 add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), sighted_weapons, "sight_reticle")
@@ -336,11 +340,13 @@ add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), sighted_weapons, "si
 -- ################
 add_attachments_to_list_of_weapons(mod.owo_slim_blade(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
-add_attachments_to_list_of_weapons(mod.owo_slim_blade("head"), {"powermaul_p1_m1", "powermaul_p2_m1", "powermaul_shield_p1_m1", }, "head")
+add_attachments_to_list_of_weapons(mod.owo_slim_blade("head"), one_handed_mauls, "head")
+--[[
 add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade_indicator")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "blade_indicator")
-add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("head"), {"powermaul_p1_m1", "powermaul_p2_m1", "powermaul_shield_p1_m1", }, "blade_indicator")
-add_attachments_to_list_of_weapons(mod.owo_invisible_shock_maul_connector(), {"powermaul_p1_m1", "powermaul_p2_m1", "powermaul_shield_p1_m1", }, "connector")
+add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("head"), one_handed_mauls, "blade_indicator")
+]]
+add_attachments_to_list_of_weapons(mod.owo_invisible_shock_maul_connector(), one_handed_mauls, "connector")
 
 add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01"), {"combataxe_p1_m1", "combataxe_p2_m1", }, "head_rear")
 --table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
