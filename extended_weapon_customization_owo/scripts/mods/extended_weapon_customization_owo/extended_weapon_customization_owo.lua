@@ -348,6 +348,10 @@ add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01")
 -- ################################
 -- Manual Overrides for Attachments
 -- ################################
+-- Generates certain requirement strings automatically, for use among multiple files
+load_mod_file("fixes/shared_fix_requirements")
+
+-- Adding the specific fixes
 local special_needs_fixes = { 
     "autogun_p1_m1", "autopistol_p1_m1", 
     "bolter_p1_m1", "boltpistol_p1_m1", 

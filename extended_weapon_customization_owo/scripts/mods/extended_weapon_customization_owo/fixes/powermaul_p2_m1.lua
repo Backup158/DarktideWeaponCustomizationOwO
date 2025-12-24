@@ -6,8 +6,6 @@ local mod = get_mod("extended_weapon_customization_owo")
 local vector3 = Vector3
 local vector3_box = Vector3Box
 
-local create_requirements_string_from_names_table = mod.create_requirements_string_from_names_table
-
 -- ################################
 -- Game Content Addresses
 -- ################################
@@ -22,25 +20,32 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 --local all_owo_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
 
+local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
+
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
-
 
 local custom_fixes = {
     -- Slim Blades
     {
         attachment_slot = "head",
         requirements = {
+            --[[
             blade_indicator = {
                 has = "owo_slim_blade_indicator_pfalchion",
                 -- has = "query:powermaul_p2_m1,blade_indicator,extended_weapon_customization_owo"
+            },
+            ]]
+            head = {
+                --has = "query:powermaul_p2_m1,head,extended_weapon_customization_owo"
+                has = combined_slim_blades_to_flip,
             },
         },
         fix = {
             offset = {
                 --position = vector3_box(0, -0.071, 0.065),
-                rotation = vector3_box(0, 90, 180),
+                rotation = vector3_box(0, 0, 180),
                 --scale = vector3_box(1.25, 1.25, 1.25),
             },
         },
