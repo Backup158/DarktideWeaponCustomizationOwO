@@ -59,18 +59,13 @@ function mod.owo_invisible_shock_maul_connector()
         {   base_unit = "content/weapons/player/melee/human_power_maul/attachments/connector_01/connector_01",
             fix = {
                 disable_in_ui = false,
-                --[[
                 offset = {
                     node = 1,
                     position = vector3_box(0.0, 0.0, 0.0),
                     rotation = vector3_box(0.0, 0.0, 0.0),
                     scale = vector3_box(1.0, 1.0, 1.0)
-                },]]
-                hide = {
-                    mesh = {
-                        1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,
-                    },
                 },
+                alpha = 1,
             },
         },
         -- Attachment Node
