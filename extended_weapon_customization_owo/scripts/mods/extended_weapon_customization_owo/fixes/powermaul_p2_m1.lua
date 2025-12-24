@@ -18,8 +18,6 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- Attachment Names for Fixes
 -- ################################
---local all_owo_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
-
 local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
 
 -- ###################################################################
