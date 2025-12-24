@@ -56,16 +56,26 @@ function mod.owo_invisible_shock_maul_connector()
         -- Fixes
         nil,
         -- Kitbash
-        {   base_unit = "content/weapons/player/melee/human_power_maul/attachments/connector_01/connector_01",
-            fix = {
-                disable_in_ui = false,
-                offset = {
-                    node = 1,
-                    position = vector3_box(0.0, 0.0, 0.0),
-                    rotation = vector3_box(0.0, 0.0, 0.0),
-                    scale = vector3_box(1.0, 1.0, 1.0)
+        {   base_unit = "content/characters/empty_item/empty_item",
+            attachments = {
+                zzz_shared_material_overrides = {
+                    item = "",
+                    children = {},
                 },
-                alpha = 1,
+                connector = {
+                    item = "content/weapons/player/melee/human_power_maul/attachments/connector_01/connector_01",
+                    fix = {
+                        disable_in_ui = false,
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = vector3_box(0.0, 0.0, 0.0),
+                            scale = vector3_box(1.0, 1.0, 1.0)
+                        },
+                        alpha = 1,
+                    },
+                    children = {},
+                },
             },
         },
         -- Attachment Node
