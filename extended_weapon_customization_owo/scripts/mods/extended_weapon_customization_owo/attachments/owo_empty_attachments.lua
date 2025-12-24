@@ -72,7 +72,12 @@ function mod.owo_invisible_shock_maul_connector()
                             rotation = vector3_box(0.0, 0.0, 0.0),
                             scale = vector3_box(1.0, 1.0, 1.0)
                         },
-                        alpha = 1,
+                        --[[
+                        hide = {
+                            mesh = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
+                        },
+                        ]]
+                        alpha = 1, -- also makes children invis
                     },
                     children = {},
                 },
