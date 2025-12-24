@@ -1,4 +1,7 @@
 # 2025-12-UNRELEASED
+v4.3.2
+
+# 2025-12-23
 v4.3.1
 
 - Fixed logging to happen only with debug mod, so I don't keep polluting people's logs
@@ -6,7 +9,11 @@ v4.3.1
     - Slim blades being flipped for:
         - Arbites Shock Maul
         - Shock Maul and Suppression Shield
-        
+- Refactored requirements to be in its own file
+    - So I don't have a untalge the mess of "ok who already edited the global"
+    - And I don't have to copy the functions multiple times
+        - especially the slim blade ones
+        - just in case one comes first
 
 # 2025-11-30
 v4.3.0
