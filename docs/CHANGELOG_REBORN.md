@@ -2,6 +2,11 @@
 v4.3.1
 
 - Fixed logging to happen only with debug mod, so I don't keep polluting people's logs
+- Fixed attachments:
+    - Slim blades being flipped for:
+        - Arbites Shock Maul
+        - Shock Maul and Suppression Shield
+        
 
 # 2025-11-30
 v4.3.0
