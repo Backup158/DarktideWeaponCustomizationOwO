@@ -490,6 +490,11 @@ function mod.on_all_mods_loaded()
 		mod:error("You are using the OLD version of Weapon Customization! This plugin is for the new, rebuilt version.")
 		return
 	end
+    --  Outdated MT Plugin
+	if get_mod("weapon_customization_mt_stuff") then
+		mod:error("You are using the MT Plugin, which is made for the OLD version of Weapon Customization! It no longer works, and is no longer required for OwO.")
+		return
+	end
 	--	Plugins
 	--		Just so I know. Compatibility is only an issue of name collisions
     local other_plugins = { "visible_equipment", "extended_weapon_customization_base_additions", "extended_weapon_customization_empty_scopes", }
