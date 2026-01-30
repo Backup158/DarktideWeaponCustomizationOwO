@@ -27,7 +27,8 @@ mod.combined_sight_reticle_names = create_requirements_string_from_names_table(m
 -- slim and flat (with grip included)
 local slim_blades_to_flip = {}
 dump_if_debug(mod.all_slim_blade_names, "UWU SHOCK MAUL TABLES NYA")
-for _, blade in ipairs({"psword", "pfalchion", "dclaw", "hsword", "2h_psword", "2h_psword_short"}) do
+-- psword not necessary
+for _, blade in ipairs({"pfalchion", "dclaw", "hsword", "2h_psword", "2h_psword_short"}) do
     for _, width in ipairs({"flat_", "slim_"}) do
         for _, suffix in ipairs({"", "_g"}) do
             local blade = "owo_slim_blade_"..width..blade..suffix
