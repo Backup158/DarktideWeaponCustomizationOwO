@@ -6,6 +6,8 @@ local mod = get_mod("extended_weapon_customization_owo")
 local vector3 = Vector3
 local vector3_box = Vector3Box
 
+local info_if_debug = mod.info_if_debug
+
 -- ################################
 -- Game Content Addresses
 -- ################################
@@ -23,7 +25,7 @@ local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
-
+info_if_debug("FLIPPING BLADES FOR "..Localize("loc_powermaul_p2_m1")..": "..combined_slim_blades_to_flip)
 local custom_fixes = {
     -- Slim Blades
     {
