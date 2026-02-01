@@ -28,6 +28,7 @@ local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
 
 local custom_fixes = {
     -- Slim Blades
+    --[[
     {
         attachment_slot = "head",
         requirements = {
@@ -40,6 +41,21 @@ local custom_fixes = {
                 --position = vector3_box(0, -0.071, 0.065),
                 rotation = vector3_box(0, 0, 180),
                 --scale = vector3_box(1.25, 1.25, 1.25),
+            },
+        },
+    },
+    ]]
+    {
+        attachment_slot = "head",
+        requirements = {
+            head = {
+                -- has = all_hsword,
+                has = "owo_slim_blade_flat_hsword_01|owo_slim_blade_flat_hsword_02|owo_slim_blade_flat_hsword_03|owo_slim_blade_flat_hsword_04|owo_slim_blade_flat_hsword_05|owo_slim_blade_flat_hsword_06|owo_slim_blade_flat_hsword_ml01|owo_slim_blade_flat_2h_psword_short_01|owo_slim_blade_flat_2h_psword_short_02|owo_slim_blade_flat_2h_psword_short_03|owo_slim_blade_flat_2h_psword_short_ml01|owo_slim_blade_slim_dclaw_g_01|owo_slim_blade_slim_dclaw_g_02|owo_slim_blade_slim_dclaw_g_03|owo_slim_blade_slim_dclaw_g_04|owo_slim_blade_slim_dclaw_g_05|owo_slim_blade_slim_dclaw_g_06|owo_slim_blade_slim_dclaw_g_07|owo_slim_blade_slim_dclaw_g_ml01|owo_slim_blade_slim_2h_psword_01|owo_slim_blade_slim_2h_psword_02|owo_slim_blade_slim_2h_psword_03|owo_slim_blade_slim_2h_psword_ml01|owo_slim_blade_slim_hsword_g_01|owo_slim_blade_slim_hsword_g_02|owo_slim_blade_slim_hsword_g_03|owo_slim_blade_slim_hsword_g_04|owo_slim_blade_slim_hsword_g_05|owo_slim_blade_slim_hsword_g_06|owo_slim_blade_slim_hsword_g_ml01|owo_slim_blade_slim_dclaw_01|owo_slim_blade_slim_dclaw_02|owo_slim_blade_slim_dclaw_03|owo_slim_blade_slim_dclaw_04|owo_slim_blade_slim_dclaw_05|owo_slim_blade_slim_dclaw_06|owo_slim_blade_slim_dclaw_07|owo_slim_blade_slim_dclaw_ml01|owo_slim_blade_slim_2h_psword_short_g_01|owo_slim_blade_slim_2h_psword_short_g_02|owo_slim_blade_slim_2h_psword_short_g_03|owo_slim_blade_slim_2h_psword_short_g_ml01|owo_slim_blade_flat_pfalchion_01|owo_slim_blade_flat_pfalchion_02|owo_slim_blade_flat_pfalchion_ml01|owo_slim_blade_slim_pfalchion_g_01|owo_slim_blade_slim_pfalchion_g_02|owo_slim_blade_slim_pfalchion_g_ml01|owo_slim_blade_slim_hsword_01|owo_slim_blade_slim_hsword_02|owo_slim_blade_slim_hsword_03|owo_slim_blade_slim_hsword_04|owo_slim_blade_slim_hsword_05|owo_slim_blade_slim_hsword_06|owo_slim_blade_slim_hsword_ml01|owo_slim_blade_slim_2h_psword_g_01|owo_slim_blade_slim_2h_psword_g_02|owo_slim_blade_slim_2h_psword_g_03|owo_slim_blade_slim_2h_psword_g_ml01|owo_slim_blade_slim_2h_psword_short_01|owo_slim_blade_slim_2h_psword_short_02|owo_slim_blade_slim_2h_psword_short_03|owo_slim_blade_slim_2h_psword_short_ml01|owo_slim_blade_flat_2h_psword_short_g_01|owo_slim_blade_flat_2h_psword_short_g_02|owo_slim_blade_flat_2h_psword_short_g_03|owo_slim_blade_flat_2h_psword_short_g_ml01|owo_slim_blade_flat_2h_psword_g_01|owo_slim_blade_flat_2h_psword_g_02|owo_slim_blade_flat_2h_psword_g_03|owo_slim_blade_flat_2h_psword_g_ml01|owo_slim_blade_flat_dclaw_g_01|owo_slim_blade_flat_dclaw_g_02|owo_slim_blade_flat_dclaw_g_03|owo_slim_blade_flat_dclaw_g_04|owo_slim_blade_flat_dclaw_g_05|owo_slim_blade_flat_dclaw_g_06|owo_slim_blade_flat_dclaw_g_07|owo_slim_blade_flat_dclaw_g_ml01|owo_slim_blade_flat_hsword_g_01|owo_slim_blade_flat_hsword_g_02|owo_slim_blade_flat_hsword_g_03|owo_slim_blade_flat_hsword_g_04|owo_slim_blade_flat_hsword_g_05|owo_slim_blade_flat_hsword_g_06|owo_slim_blade_flat_hsword_g_ml01|owo_slim_blade_flat_pfalchion_g_01|owo_slim_blade_flat_pfalchion_g_02|owo_slim_blade_flat_pfalchion_g_ml01|owo_slim_blade_flat_2h_psword_01|owo_slim_blade_flat_2h_psword_02|owo_slim_blade_flat_2h_psword_03|owo_slim_blade_flat_2h_psword_ml01|owo_slim_blade_flat_dclaw_01|owo_slim_blade_flat_dclaw_02|owo_slim_blade_flat_dclaw_03|owo_slim_blade_flat_dclaw_04|owo_slim_blade_flat_dclaw_05|owo_slim_blade_flat_dclaw_06|owo_slim_blade_flat_dclaw_07|owo_slim_blade_flat_dclaw_ml01|owo_slim_blade_slim_pfalchion_01|owo_slim_blade_slim_pfalchion_02|owo_slim_blade_slim_pfalchion_ml01",
+            },
+        },
+        fix = {
+            offset = {
+                rotation = vector3_box(0, 0, 180),
             },
         },
     },
