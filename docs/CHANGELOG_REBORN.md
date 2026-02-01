@@ -5,7 +5,7 @@ v4.3.2
     - Fixes are written manually instead of dynamically
     - I believe there was so issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files
     - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
-    - never fUCING MIND AAAAAAAAA
+    - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Added error message about using the MT Plugin
 
 # 2025-12-23
