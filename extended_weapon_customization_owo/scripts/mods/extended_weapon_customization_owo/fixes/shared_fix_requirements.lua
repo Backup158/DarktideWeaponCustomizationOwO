@@ -25,6 +25,7 @@ local _item_minion = "content/items/weapons/minions"
 if mod.shared_fix_requirements_file_has_run then
     return
 end
+mod.shared_fix_requirements_file_has_run = true
 
 -- Sight Reticles
 mod.combined_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
@@ -46,4 +47,3 @@ end
 mod.combined_slim_blades_to_flip = create_requirements_string_from_names_table(slim_blades_to_flip)
 --dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE AFTER FLIPPING NYA AAAAAA")
 info_if_debug("uwu all combined blades: "..mod.combined_slim_blades_to_flip)
-mod.shared_fix_requirements_file_has_run = true
