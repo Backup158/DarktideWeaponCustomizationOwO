@@ -22,9 +22,14 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- Attachment Names for Fixes
 -- ################################
+if mod.shared_fix_requirements_file_has_run then
+    return
+end
+
+-- Sight Reticles
 mod.combined_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
 
--- slim and flat (with grip included)
+-- Slim and Flat Blades (with grip included)
 local slim_blades_to_flip = {}
 dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE BEFORE FLIPPING NYA")
 -- psword not necessary
@@ -33,8 +38,11 @@ for _, blade in ipairs({"pfalchion", "dclaw", "hsword", "2h_psword", "2h_psword_
         for _, suffix in ipairs({"", "_g"}) do
             local blade = "owo_slim_blade_"..width..blade..suffix
             slim_blades_to_flip[blade] = create_requirements_string_from_names_table(mod.all_slim_blade_names[blade])
+            info_if_debug("results of flipping nyaaaa: "..blade.."\n"..slim_blades_to_flip[blade])
             mod.all_slim_blade_names[blade] = slim_blades_to_flip[blade]
         end
     end
 end
 mod.combined_slim_blades_to_flip = create_requirements_string_from_names_table(slim_blades_to_flip)
+dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE AFTER FLIPPING NYA AAAAAA")
+mod.shared_fix_requirements_file_has_run = true
