@@ -1,5 +1,11 @@
-# 2025-12-UNRELEASED
+# 2026-02-01
 v4.3.2
+
+- Decided FUCK IT for the flipped blades issue
+    - Fixes are written manually instead of dynamically
+    - I believe there was so issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files
+    - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
+- Added error message about using the MT Plugin
 
 # 2025-12-23
 v4.3.1
