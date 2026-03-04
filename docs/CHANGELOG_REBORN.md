@@ -2,11 +2,20 @@
 v4.3.2
 
 - Decided FUCK IT for the flipped blades issue
+    - I gave up
+    - But before I did, I tried another method
     - Fixes are written manually instead of dynamically
     - I believe there was so issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files
     - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
     - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Added error message about using the MT Plugin
+
+## Added
+- Barrel shrouds (`barrel_condom`) slot
+    - Reusing suppressors to keep the old bug
+
+## Fixes
+- Realigned suppressors for combat shotguns, including support for syn's barrels
 
 # 2025-12-23
 v4.3.1
