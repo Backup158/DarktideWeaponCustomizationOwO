@@ -106,7 +106,6 @@ local custom_fixes = {
                 muzzle = {
                     -- has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
                     has = all_owo_suppressors,
-                    has = all_owo_suppressors,
                 },
                 barrel = {
                     has = short_arbites_barrels,
