@@ -205,7 +205,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
             local custom_damage_from_main_mod = ewc.damage_types[damage_type]
             local custom_damage = custom_damage_defined_here or custom_damage_from_main_mod
             if custom_damage then
-                dump_if_debug(custom_damage, "CUSTOM DAMAGE")
+                -- dump_if_debug(custom_damage, "CUSTOM DAMAGE")
                 for _, sound_event in pairs(custom_damage) do
                     -- Need to check if it's actually a resource
                     --  sound has wwise, vs like "sawing" or something from gib data
@@ -213,7 +213,7 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
                         table_insert(kitbash_data.additional_asset_requirements, sound_event)
                     end
                 end
-                dump_if_debug(kitbash_data.additional_asset_requirements, "additional_asset_requirements AFTER CUSTOM DAMAGE")
+                -- dump_if_debug(kitbash_data.additional_asset_requirements, "additional_asset_requirements AFTER CUSTOM DAMAGE")
             end
         end
 

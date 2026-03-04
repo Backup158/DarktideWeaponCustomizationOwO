@@ -107,7 +107,7 @@ function mod.owo_slim_blade_indicator(given_slot_name)
             current_attachment_node
         )]]
     end
-    dump_if_debug(table_to_return, "Indicators table to return uwu")
+    -- dump_if_debug(table_to_return, "Indicators table to return uwu")
     return table_to_return
 end
 
@@ -431,10 +431,10 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             },
         }
     })]]
-    dump_if_debug(table_to_return, "slim blades ALLLL")
+    -- dump_if_debug(table_to_return, "slim blades ALLLL")
 
     if not mod.all_slim_blade_names then
-        dump_if_debug(all_attachment_names, "ALL SLIM BLADE NAMES uwu")
+        -- dump_if_debug(all_attachment_names, "ALL SLIM BLADE NAMES uwu")
         mod.all_slim_blade_names = all_attachment_names
     end
 

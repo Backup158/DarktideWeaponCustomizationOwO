@@ -124,4 +124,4 @@ for damage_type_name, type_data in pairs(mod.custom_damage_types) do
     ewc.damage_types[damage_type_name] = type_data
 end
 
-dump_if_debug(ewc.damage_types, "ALL DAMAGE TYPES FROM MAIN MOD TABLE AFTER INSERTING")
+-- dump_if_debug(ewc.damage_types, "ALL DAMAGE TYPES FROM MAIN MOD TABLE AFTER INSERTING")
