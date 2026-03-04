@@ -1,3 +1,5 @@
+local mod = get_mod("extended_weapon_customization_owo")
+
 -- ################################
 -- Local References for Performance
 -- ################################
