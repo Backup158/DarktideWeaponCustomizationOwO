@@ -115,7 +115,7 @@ local custom_fixes = {
             },
             fix = {
                 offset = {
-                    position = vector3_box(0, -0.084, 0),
+                    position = vector3_box(0, 0.41, 0.01),
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1, 1),
                     node = 1,
@@ -134,7 +134,7 @@ local custom_fixes = {
             },
             fix = {
                 offset = {
-                    position = vector3_box(0, -0.02, 0),
+                    position = vector3_box(0, -0.48, 0),
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1, 1),
                     node = 1,
@@ -153,7 +153,7 @@ local custom_fixes = {
             },
             fix = {
                 offset = {
-                    position = vector3_box(0, 0.158, 0.0),
+                    position = vector3_box(0, 0.69, 0.0),
                     rotation = vector3_box(0, 0, 0),
                     scale = vector3_box(1, 1, 1),
                     node = 1,
