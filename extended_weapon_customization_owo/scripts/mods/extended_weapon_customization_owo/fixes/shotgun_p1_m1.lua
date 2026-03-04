@@ -19,86 +19,142 @@ local _item_minion = "content/items/weapons/minions"
 local folded_stock_n_l_pos = vector3_box(-0.015, -0.12, 0.075)
 local folded_stock_n_l_rot = vector3_box(0, 0, -174)
 
+local short_arbites_barrels = "syn_assaultshotgun_barrel_01|syn_assaultshotgun_barrel_03|syn_assaultshotgun_barrel_04|syn_assaultshotgun_barrel_05"
+local slightly_shorter_barrels = "shotgun_rifle_barrel_01|shotgun_rifle_barrel_07|shotgun_rifle_barrel_08|shotgun_rifle_barrel_09|shotgun_rifle_barrel_10"
+local long_barrels = "shotgun_rifle_barrel_04"
+
 local custom_fixes = {
     -- Tactical Stocks
-    {
-        attachment_slot = "stock",
-        requirements = {
-            stock = {
-                has = "owo_tactical_stock_skeletal",
+        {
+            attachment_slot = "stock",
+            requirements = {
+                stock = {
+                    has = "owo_tactical_stock_skeletal",
+                },
+            },
+            fix = {
+                offset = {
+                    node = 1,
+                    position = vector3_box(0, -0.071, 0.075),
+                    scale = vector3_box(1.25, 1.1, 1.25),
+                },
             },
         },
-        fix = {
-            offset = {
-                node = 1,
-                position = vector3_box(0, -0.071, 0.075),
-                scale = vector3_box(1.25, 1.1, 1.25),
+        {
+            attachment_slot = "stock",
+            requirements = {
+                stock = {
+                    has = "owo_tactical_stock_telescoping_in",
+                },
+            },
+            fix = {
+                offset = {
+                    node = 1,
+                    position = vector3_box(0, -0.075, 0.065),
+                    scale = vector3_box(1.25, 1.25, 1.25),
+                },
             },
         },
-    },
-    {
-        attachment_slot = "stock",
-        requirements = {
-            stock = {
-                has = "owo_tactical_stock_telescoping_in",
+        {
+            attachment_slot = "stock",
+            requirements = {
+                stock = {
+                    has = "owo_tactical_stock_folded_n_1",
+                },
+            },
+            fix = {
+                offset = {
+                    node = 1,
+                    position = folded_stock_n_l_pos,
+                    rotation = folded_stock_n_l_rot,
+                    scale = vector3_box(1.25, 1.25, 1.25),
+                },
             },
         },
-        fix = {
-            offset = {
-                node = 1,
-                position = vector3_box(0, -0.075, 0.065),
-                scale = vector3_box(1.25, 1.25, 1.25),
+        {
+            attachment_slot = "stock",
+            requirements = {
+                stock = {
+                    has = "owo_tactical_stock_folded_n_m",
+                },
+            },
+            fix = {
+                offset = {
+                    node = 1,
+                    position = folded_stock_n_l_pos,
+                    rotation = folded_stock_n_l_rot,
+                    scale = vector3_box(1.25, 1.25, 1.25),
+                },
             },
         },
-    },
-    {
-        attachment_slot = "stock",
-        requirements = {
-            stock = {
-                has = "owo_tactical_stock_folded_n_1",
+        {
+            attachment_slot = "stock",
+            requirements = {
+                stock = {
+                    has = "owo_tactical_stock_folded_n_u",
+                },
+            },
+            fix = {
+                offset = {
+                    node = 1,
+                    position = vector3_box(0, -0.13, 0.065),
+                    rotation = vector3_box(174, 0, 0),
+                    scale = vector3_box(3.3, 1.7, 1.25),
+                },
             },
         },
-        fix = {
-            offset = {
-                node = 1,
-                position = folded_stock_n_l_pos,
-                rotation = folded_stock_n_l_rot,
-                scale = vector3_box(1.25, 1.25, 1.25),
+    -- Suppressors
+        {
+            attachment_slot = "muzzle",
+            requirements = {
+                muzzle = {
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
+                },
+                barrel = {
+                    has = short_arbites_barrels
+                },
+            },
+            fix = {
+                offset = {
+                    node = 1,
+                    position = vector3_box(0, -0.084, 0),
+                },
             },
         },
-    },
-    {
-        attachment_slot = "stock",
-        requirements = {
-            stock = {
-                has = "owo_tactical_stock_folded_n_m",
+        {
+            attachment_slot = "muzzle",
+            requirements = {
+                muzzle = {
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
+                },
+                barrel = {
+                    has = slightly_shorter_barrels
+                },
+            },
+            fix = {
+                offset = {
+                    node = 1,
+                    position = vector3_box(0, -0.02, 0),
+                },
             },
         },
-        fix = {
-            offset = {
-                node = 1,
-                position = folded_stock_n_l_pos,
-                rotation = folded_stock_n_l_rot,
-                scale = vector3_box(1.25, 1.25, 1.25),
+        {
+            attachment_slot = "muzzle",
+            requirements = {
+                muzzle = {
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
+                },
+                barrel = {
+                    has = long_barrels
+                },
+            },
+            fix = {
+                offset = {
+                    node = 1,
+                    position = vector3_box(0, 0.158, 0.0),
+                },
             },
         },
-    },
-    {
-        attachment_slot = "stock",
-        requirements = {
-            stock = {
-                has = "owo_tactical_stock_folded_n_u",
-            },
-        },
-        fix = {
-            offset = {
-                node = 1,
-                position = vector3_box(0, -0.13, 0.065),
-                rotation = vector3_box(174, 0, 0),
-                scale = vector3_box(3.3, 1.7, 1.25),
-            },
-        },
-    },
 }
 
 local custom_attachments = {
