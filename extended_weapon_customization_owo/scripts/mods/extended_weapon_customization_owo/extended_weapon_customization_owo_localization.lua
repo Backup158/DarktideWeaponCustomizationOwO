@@ -58,6 +58,9 @@ mod:add_global_localize_strings({
 	attachment_slot_head_rear = {
 		en = "Rear Head",
 	},
+	attachment_slot_barrel_condom = {
+		en = "Barrel Shroud",
+	},
 	-- ---------------
 	-- Separator groups
 	-- ---------------
