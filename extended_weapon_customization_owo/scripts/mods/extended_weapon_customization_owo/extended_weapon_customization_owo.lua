@@ -404,8 +404,7 @@ end
 -- ################################
 -- Copying to Different Marks
 -- ################################
-
-info_if_debug("Going through attachments_table_for_ewc...")
+info_if_debug("Copying attachments to all marks. Going through attachments_table_for_ewc...")
 local siblings_to_add = {}
 -- See which weapons may need to copy over to siblings
 for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
