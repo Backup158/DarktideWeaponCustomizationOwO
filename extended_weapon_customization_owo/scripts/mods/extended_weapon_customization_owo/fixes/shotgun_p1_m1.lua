@@ -102,10 +102,10 @@ local custom_fixes = {
         {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
-                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
                 },
                 barrel = {
-                    has = short_arbites_barrels
+                    has = short_arbites_barrels,
                 },
             },
             fix = {
@@ -120,10 +120,10 @@ local custom_fixes = {
         {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
-                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
                 },
                 barrel = {
-                    has = slightly_shorter_barrels
+                    has = slightly_shorter_barrels,
                 },
             },
             fix = {
@@ -138,10 +138,10 @@ local custom_fixes = {
         {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
-                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
                 },
                 barrel = {
-                    has = long_barrels
+                    has = long_barrels,
                 },
             },
             fix = {
