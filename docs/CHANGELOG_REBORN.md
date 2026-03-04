@@ -11,7 +11,7 @@ v4.3.2
 - Added error message about using the MT Plugin
 
 ## Added
-- Barrel shrouds (`barrel_condom`) slot
+- Barrel shrouds (`barrel_foreskin`) slot
     - Reusing suppressors to keep the old bug
 
 ## Fixes
