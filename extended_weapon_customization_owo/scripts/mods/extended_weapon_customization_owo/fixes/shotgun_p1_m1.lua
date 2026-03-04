@@ -25,7 +25,7 @@ local short_arbites_barrels = "syn_assaultshotgun_barrel_01|syn_assaultshotgun_b
 local slightly_shorter_barrels = "shotgun_rifle_barrel_01|shotgun_rifle_barrel_07|shotgun_rifle_barrel_08|shotgun_rifle_barrel_09|shotgun_rifle_barrel_10"
 local long_barrels = "shotgun_rifle_barrel_04"
 
-local all_owo_suppressors = mod.any_suppressor
+--local any_owo_suppressors = mod.any_suppressor
 
 local custom_fixes = {
     -- Tactical Stocks
@@ -102,12 +102,12 @@ local custom_fixes = {
                 },
             },
         },
-    -- Suppressors
+    -- Muzzles (so suppressors)
         {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
-                    -- has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
-                    has = all_owo_suppressors,
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
+                    -- has = any_owo_suppressors,
                 },
                 barrel = {
                     has = short_arbites_barrels,
@@ -125,8 +125,8 @@ local custom_fixes = {
         {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
-                    -- has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
-                    has = all_owo_suppressors,
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
+                    -- has = any_owo_suppressors,
                 },
                 barrel = {
                     has = slightly_shorter_barrels,
@@ -144,8 +144,8 @@ local custom_fixes = {
         {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
-                    -- has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
-                    has = all_owo_suppressors,
+                    has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo",
+                    -- has = any_owo_suppressors,
                 },
                 barrel = {
                     has = long_barrels,
@@ -196,6 +196,6 @@ local custom_attachments = {
 }
 
 return {
-    --fixes = custom_fixes,
+    fixes = custom_fixes,
     attachment_slots = custom_attachments,
 }
