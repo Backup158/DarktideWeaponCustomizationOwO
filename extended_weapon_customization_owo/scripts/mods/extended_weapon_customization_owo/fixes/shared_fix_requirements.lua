@@ -47,3 +47,7 @@ end
 mod.combined_slim_blades_to_flip = create_requirements_string_from_names_table(slim_blades_to_flip)
 --dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE AFTER FLIPPING NYA AAAAAA")
 info_if_debug("uwu all combined blades: "..mod.combined_slim_blades_to_flip)
+
+-- Suppressors
+local all_suppressor_names = mod.all_suppressor_names
+mod.any_suppressor = create_requirements_string_from_names_table(all_suppressor_names)
