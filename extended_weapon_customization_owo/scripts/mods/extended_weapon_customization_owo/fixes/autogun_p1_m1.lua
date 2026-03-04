@@ -27,8 +27,7 @@ local all_owo_sight_reticle_names = create_requirements_string_from_names_table(
 -- ###################################################################
 local these_fixes = {
     -- Tactical Stocks
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_skeletal",
@@ -43,8 +42,7 @@ local these_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_telescoping_in",
@@ -60,8 +58,7 @@ local these_fixes = {
         },
     },
     -- Holographic Sights
-    {
-        attachment_slot = "sight_offset",
+    {   attachment_slot = "sight_offset",
         requirements = {
             sight_group_indicator = {
                 has = "owo_indicator_sight_eotech",
@@ -77,8 +74,7 @@ local these_fixes = {
         },
     },
     -- Sight Reticles
-    {
-        attachment_slot = "sight_reticle",
+    {   attachment_slot = "sight_reticle",
         requirements = {
             sight_group_indicator = {
                 has = "owo_indicator_sight_eotech",

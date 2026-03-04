@@ -29,8 +29,7 @@ local all_owo_sight_reticle_names = create_requirements_string_from_names_table(
 
 local custom_fixes = {
     -- Tactical Stocks
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_skeletal",

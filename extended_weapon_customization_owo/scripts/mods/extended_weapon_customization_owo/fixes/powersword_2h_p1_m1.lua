@@ -19,8 +19,7 @@ local _item_minion = "content/items/weapons/minions"
 local these_fixes = {
     --[[
     -- Slim Blades
-    {
-        attachment_slot = "blade",
+    {   attachment_slot = "blade",
         requirements = {
             blade = {
                 has = "owo_slim_blade_slim_2h_psword_01",

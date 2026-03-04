@@ -18,8 +18,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ###################################################################
 local these_fixes = {
     -- Tactical Stocks
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_skeletal",
@@ -33,8 +32,7 @@ local these_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_telescoping_in",
@@ -47,8 +45,7 @@ local these_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_folded_n_1",
@@ -62,8 +59,7 @@ local these_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_folded_n_m",
@@ -77,8 +73,7 @@ local these_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_folded_n_u",

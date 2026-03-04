@@ -21,8 +21,7 @@ local folded_stock_n_l_rot = vector3_box(0, 0, -174)
 
 local custom_fixes = {
     -- Tactical Stocks
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_skeletal",
@@ -36,8 +35,7 @@ local custom_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_telescoping_in",
@@ -51,8 +49,7 @@ local custom_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_folded_n_1",
@@ -67,8 +64,7 @@ local custom_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_folded_n_m",
@@ -83,8 +79,7 @@ local custom_fixes = {
             },
         },
     },
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_folded_n_u",

@@ -20,8 +20,7 @@ local _item_minion = "content/items/weapons/minions"
 
 local custom_fixes = {
     -- Tactical Stocks
-    {
-        attachment_slot = "stock",
+    {   attachment_slot = "stock",
         requirements = {
             stock = {
                 has = "owo_tactical_stock_skeletal",

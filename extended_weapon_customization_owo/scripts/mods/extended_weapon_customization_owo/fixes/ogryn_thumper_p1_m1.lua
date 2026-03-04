@@ -30,8 +30,7 @@ local create_requirements_string_from_names_table = mod.create_requirements_stri
 local custom_fixes = {
     --[[
     -- Attempting to attach to muzzle when parented to body
-    {
-        attachment_slot = "muzzle",
+    {   attachment_slot = "muzzle",
         requirements = {
             muzzle = {
                 has = any_suppressor,

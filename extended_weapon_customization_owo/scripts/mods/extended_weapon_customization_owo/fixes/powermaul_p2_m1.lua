@@ -31,8 +31,7 @@ local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
 local custom_fixes = {
     -- Slim Blades
     --[[
-    {
-        attachment_slot = "head",
+    {   attachment_slot = "head",
         requirements = {
             --blade_indicator = {
             --    has = "owo_slim_blade_indicator_pfalchion",
@@ -52,8 +51,7 @@ local custom_fixes = {
         },
     },]]
     --[
-    {
-        attachment_slot = "head",
+    {   attachment_slot = "head",
         requirements = {
             head = {
                 -- has = all_hsword,

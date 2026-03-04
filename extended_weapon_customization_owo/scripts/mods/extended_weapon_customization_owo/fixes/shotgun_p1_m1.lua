@@ -25,8 +25,7 @@ local long_barrels = "shotgun_rifle_barrel_04"
 
 local custom_fixes = {
     -- Tactical Stocks
-        {
-            attachment_slot = "stock",
+        {   attachment_slot = "stock",
             requirements = {
                 stock = {
                     has = "owo_tactical_stock_skeletal",
@@ -40,8 +39,7 @@ local custom_fixes = {
                 },
             },
         },
-        {
-            attachment_slot = "stock",
+        {   attachment_slot = "stock",
             requirements = {
                 stock = {
                     has = "owo_tactical_stock_telescoping_in",
@@ -55,8 +53,7 @@ local custom_fixes = {
                 },
             },
         },
-        {
-            attachment_slot = "stock",
+        {   attachment_slot = "stock",
             requirements = {
                 stock = {
                     has = "owo_tactical_stock_folded_n_1",
@@ -71,8 +68,7 @@ local custom_fixes = {
                 },
             },
         },
-        {
-            attachment_slot = "stock",
+        {   attachment_slot = "stock",
             requirements = {
                 stock = {
                     has = "owo_tactical_stock_folded_n_m",
@@ -87,8 +83,7 @@ local custom_fixes = {
                 },
             },
         },
-        {
-            attachment_slot = "stock",
+        {   attachment_slot = "stock",
             requirements = {
                 stock = {
                     has = "owo_tactical_stock_folded_n_u",
@@ -104,8 +99,7 @@ local custom_fixes = {
             },
         },
     -- Suppressors
-        {
-            attachment_slot = "muzzle",
+        {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
                     has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
@@ -123,8 +117,7 @@ local custom_fixes = {
                 },
             },
         },
-        {
-            attachment_slot = "muzzle",
+        {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
                     has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
@@ -142,8 +135,7 @@ local custom_fixes = {
                 },
             },
         },
-        {
-            attachment_slot = "muzzle",
+        {   attachment_slot = "muzzle",
             requirements = {
                 muzzle = {
                     has = "query:shotgun_p1_m1,muzzle,extended_weapon_customization_owo"
