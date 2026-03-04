@@ -133,6 +133,24 @@ function mod.create_requirements_string_from_names_table(table_of_attachment_nam
     return final_string
 end
 
+-- ######
+-- String is key in table?
+-- RETURN: boolean; was the key found?
+-- ######
+function mod.string_is_key_in_table(string_to_find, table_to_search)
+    if table_to_search[string_to_find] then
+        return true
+    else
+        -- Checks if key is in table but is just has nil value
+        for key, _ in pairs(table_to_search) do
+            if string_to_find == key then
+                return true
+            end
+        end
+        return false
+    end
+end
+
 -- ---------------
 -- Generic Localization
 -- ---------------

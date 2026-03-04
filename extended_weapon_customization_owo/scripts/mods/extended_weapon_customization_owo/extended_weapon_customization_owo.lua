@@ -91,24 +91,7 @@ local load_mod_file = mod.load_mod_file
 local info_if_debug = mod.info_if_debug
 local merge_recursive_safe = mod.merge_recursive_safe
 local table_insert_all_from_table = mod.table_insert_all_from_table
-
--- ######
--- String is key in table?
--- RETURN: boolean; was the key found?
--- ######
-local function string_is_key_in_table(string_to_find, table_to_search)
-    if table_to_search[string_to_find] then
-        return true
-    else
-        -- Checks if key is in table but is just has nil value
-        for key, _ in pairs(table_to_search) do
-            if string_to_find == key then
-                return true
-            end
-        end
-        return false
-    end
-end
+local string_is_key_in_table = mod.string_is_key_in_table
 
 -- ################################
 -- Adding Directly to the Attachments Table
