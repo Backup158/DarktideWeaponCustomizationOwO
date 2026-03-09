@@ -159,7 +159,7 @@ local localizations = {
 	mod_name = {
 		en = "EWC - OwO (Ostracized without Objection)",
 		["zh-cn"] = "武器自定义扩展 - OwO（Ostracized without Objection）",
-		ru = "Настройка оружия - OwO (Ой мне так нравится мм долбиться в задницу)",
+		ru = "Настройка оружия - OwO (Ой мне так нравится м долбиться в задницу)",
 		-- ru = "Настройка оружия - пизда",
 	},
 	mod_description = {
