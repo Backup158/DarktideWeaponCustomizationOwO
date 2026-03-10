@@ -207,6 +207,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
                 damage_type = damage_type,
                 custom_selection_group = selection_group,
+                randomization_requirement = "mod_option_slim_blade_randomization",
             },
             -- Fixes
             fixes_to_add,

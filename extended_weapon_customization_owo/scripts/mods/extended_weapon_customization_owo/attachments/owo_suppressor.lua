@@ -74,8 +74,9 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             {   replacement_path = _item_ranged.."/muzzles/"..name,
                 icon_render_unit_rotation_offset = transformations_table.icon_rot,
                 icon_render_camera_position_offset = transformations_table.icon_pos,
-                custom_selection_group = given_selection_group or "owo_suppressor",
                 damage_type = given_damage_type or "owo_suppressed_autogun_bullet",
+                custom_selection_group = given_selection_group or "owo_suppressor",
+                randomization_requirement = "mod_option_suppressor_randomization",
             },
             nil,
             {   base_unit = _item_empty_master_table, --_item_empty_trinket, -- invisible base

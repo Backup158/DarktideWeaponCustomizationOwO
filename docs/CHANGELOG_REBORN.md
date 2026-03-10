@@ -9,6 +9,8 @@ v4.3.2
     - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
     - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Added error message about using the MT Plugin
+- Aligned Suppressors for all Combat Shotgun barrels
+- Added options to disable randomization for all groups of parts
 
 ## Added
 - Barrel shrouds (`barrel_foreskin`) slot

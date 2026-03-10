@@ -202,8 +202,35 @@ local localizations = {
 	group_randomization_options_description = {
 		en = "Allows randomized weapons to use these attachment options",
 	},
+	mod_option_empty_randomization = {
+		en = "Empty Attachments",
+	},
 	mod_option_flashlight_randomization = {
 		en = "Flashlights",
+	},
+	mod_option_holographic_sight_randomization = {
+		en = "Holographic Sights",
+	},
+	mod_option_iron_sight_randomization = {
+		en = "Iron Sights",
+	},
+	mod_option_magazine_randomization = {
+		en = "Magazines",
+	},
+	mod_option_rear_spike_randomization = {
+		en = "Rear Spikes",
+	},
+	mod_option_sight_reticle_randomization = {
+		en = "Sight Reticles",
+	},
+	mod_option_slim_blade_randomization = {
+		en = "Slim Blades",
+	},
+	mod_option_suppressor_randomization = {
+		en = "Suppressors",
+	},
+	mod_option_tactical_stock_randomization = {
+		en = "Tactical Stocks",
 	},
 }
 

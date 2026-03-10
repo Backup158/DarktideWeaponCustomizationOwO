@@ -48,6 +48,8 @@ function mod.owo_rear_spike(given_slot, given_attachment_node)
         {   replacement_path = _item_melee.."/head_rears/"..spike_01,
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
+            custom_selection_group = "extended_weapon_customization_owo",
+            randomization_requirement = "mod_option_rear_spike_randomization",
         },
         -- Fixes
         nil,

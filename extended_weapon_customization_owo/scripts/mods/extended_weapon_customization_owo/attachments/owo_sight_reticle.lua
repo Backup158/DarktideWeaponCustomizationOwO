@@ -66,6 +66,8 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
             {   replacement_path = _item_ranged.."/sights/"..shortname,
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
+                custom_selection_group = "extended_weapon_customization_owo",
+                randomization_requirement = "mod_option_sight_reticle_randomization",
             },
             -- Fixes
             {

@@ -11,7 +11,16 @@ local widgets_toggleable_to_add = {
     groups = {
         on = {
             group_randomization_options = {
+                "mod_option_empty_randomization",
                 "mod_option_flashlight_randomization", 
+                "mod_option_holographic_sight_randomization",
+                "mod_option_iron_sight_randomization",
+                "mod_option_magazine_randomization",
+                "mod_option_rear_spike_randomization",
+                "mod_option_sight_reticle_randomization",
+                "mod_option_slim_blade_randomization",
+                "mod_option_suppressor_randomization",
+                "mod_option_tactical_stock_randomization",
             }
         },
     },

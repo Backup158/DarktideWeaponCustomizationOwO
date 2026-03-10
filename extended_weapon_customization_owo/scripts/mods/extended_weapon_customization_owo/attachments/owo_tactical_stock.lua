@@ -74,6 +74,7 @@ function mod.owo_tactical_stock(given_attachment_node)
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
                 custom_selection_group = "owo_tactical_stock",
+                randomization_requirement = "mod_option_tactical_stock_randomization",
             },
             -- Fixes
             {

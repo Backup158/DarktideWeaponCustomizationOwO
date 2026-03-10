@@ -88,6 +88,7 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
             custom_selection_group = "owo_holographic_sight_"..broad_name,
+            randomization_requirement = "mod_option_holographic_sight_randomization",
         },
         -- Fixes
         nil,

@@ -47,6 +47,8 @@ function mod.owo_iron_sight(given_attachment_node)
         {   replacement_path = _item_ranged.."/sights/"..ak_irons,
             icon_render_unit_rotation_offset = render_unit_rot_profile_left,
             icon_render_camera_position_offset = render_cam_pos_profile_left,
+            custom_selection_group = "extended_weapon_customization_owo",
+            randomization_requirement = "mod_option_iron_sight_randomization",
         },
         -- Fixes
         {
