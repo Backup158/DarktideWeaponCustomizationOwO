@@ -58,6 +58,38 @@ local these_fixes = {
         },
     },
     -- Holographic Sights
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.0, -0.02),
+                rotation = vector3_box(0, 0.0, 0),
+                scale = vector3_box(1, 1.0, 1),
+            },
+        },
+    },
+    {   attachment_slot = "rail",
+        requirements = {
+            sight = {
+                has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+            },
+        },
+        fix = {
+            attach = {
+                rail = "lasgun_rifle_rail_01",
+            },
+            offset = {
+                position = vector3_box(0, -.05, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
     --[[
     {   attachment_slot = "sight_offset",
         requirements = {
