@@ -42,6 +42,20 @@ local attachment_localizations = {
 -- ################################
 local function generate_holographic_variant(table_to_return, attachment_group_name, broad_name, suffix_name, current_attachment_node, table_of_children_with_fixes, child_fix_multiplier)
     local shortname = attachment_group_name.."_"..broad_name..suffix_name
+    
+    -- Stores attachment name into big list
+    --   ex
+    --      eotech
+    --          eotech
+    --          eotech_short
+    --      vortex
+    --          vortex
+    --          vortex_short
+    if not all_attachment_names[broad_name] then
+        all_attachment_names[broad_name] = {}
+    end
+    table_insert(all_attachment_names[broad_name], shortname)
+
     local children_table = table_merge_recursive(
         {
             sight_base = {
