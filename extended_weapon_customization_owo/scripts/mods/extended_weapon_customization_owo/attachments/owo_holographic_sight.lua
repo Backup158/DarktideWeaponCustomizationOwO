@@ -58,6 +58,7 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
                     }
                 },
             },
+            --[[
             sight_group_indicator = {
                 item = _item_ranged.."/sights/owo_indicator_sight_"..broad_name,
                 fix = {
@@ -69,6 +70,7 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
                     },
                 },
             },
+            ]]
         },
         table_of_children_with_fixes
     )
@@ -156,9 +158,9 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_front_seat_tip", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_vortex_housing_foreskin", nil, "content/weapons/player/ranged/lasgun_pistol/attachments/muzzle_03/muzzle_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_front_seat", nil, "content/weapons/player/melee/combat_blade/attachments/handle_04/handle_04", current_attachment_node)
-    create_group_indicator(table_to_return, _item_ranged.."/sights/owo_indicator_sight_eotech", current_attachment_node)
-    create_group_indicator(table_to_return, _item_ranged.."/sights/owo_indicator_sight_vortex", current_attachment_node)
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_indicator_sight_dot", nil, "content/characters/empty_item/empty_item", current_attachment_node)
+    --create_group_indicator(table_to_return, _item_ranged.."/sights/owo_indicator_sight_eotech", current_attachment_node)
+    --create_group_indicator(table_to_return, _item_ranged.."/sights/owo_indicator_sight_vortex", current_attachment_node)
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_indicator_sight_dot", nil, "content/characters/empty_item/empty_item", current_attachment_node)
 
     -- ---------------
     -- EOTech HWS (Holographic Weapon Sight)

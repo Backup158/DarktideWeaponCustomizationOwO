@@ -58,6 +58,7 @@ local these_fixes = {
         },
     },
     -- Holographic Sights
+    --[[
     {   attachment_slot = "sight_offset",
         requirements = {
             sight_group_indicator = {
@@ -89,13 +90,12 @@ local these_fixes = {
                 rotation = vector3_box(0, 0.0, 0),
                 scale = vector3_box(1, 1.0, 1),
             },
-            --[[
-            hide = {
-                mesh = {5,6},
-            },
-            --]]
+            -- hide = {
+            --     mesh = {5,6},
+            -- },
         },
     },
+    ]]
 }
 
 local custom_attachments = {
