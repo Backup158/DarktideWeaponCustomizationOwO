@@ -72,6 +72,16 @@ mod:add_global_localize_strings({
 	},
 	-- Suppressors
 	--		DONE BELOW TO ACCOUNT FOR VARIANTS
+	-- Holographic Sights
+	loc_ewc_owo_holographic_sight_eotech = {
+		en = "OwO - Holographic Sights - EOTech",
+	},
+	loc_ewc_owo_holographic_sight_razor = {
+		en = "OwO - Holographic Sights - Vortex Razor",
+	},
+	loc_ewc_owo_holographic_sight_dot = {
+		en = "OwO - Holographic Sights - DOT",
+	},
 })
 
 -- ###############
