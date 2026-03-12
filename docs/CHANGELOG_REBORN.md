@@ -1,13 +1,6 @@
 # 2026-DATAEXPUNGED
 v4.3.2
 
-- Decided FUCK IT for the flipped blades issue
-    - I gave up
-    - But before I did, I tried another method
-    - Fixes are written manually instead of dynamically
-    - I believe there was so issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files
-    - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
-    - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Added error message about using the MT Plugin
 - Added options to disable randomization for all groups of parts
 ## Added Parts
@@ -16,7 +9,14 @@ v4.3.2
 ## Fixes
 - Realigned suppressors for combat shotguns, including support for syn's barrels
 - Robust handling for `mod.create_requirements_string_from_names_table` mainly around passing various types
-
+- Decided FUCK IT for the flipped blades issue
+    - I gave up
+    - But before I did, I tried another method
+    - Fixes are now written manually instead of dynamically
+    - I believe there was an issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files
+    - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
+    - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
+    
 # 2025-12-23
 v4.3.1
 
