@@ -118,6 +118,21 @@ local these_fixes = {
             },
         },
     },
+    {   attachment_slot = "sight_reticle",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.eotech,
+            },
+            sight_reticle = {
+                has = combined_sight_reticle_names,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, -0.016, 0.01),
+            },
+        },
+    },
     --  Compatibility with Syn's Receiver Extensions
     {   attachment_slot = "sight_offset",
         requirements = {
