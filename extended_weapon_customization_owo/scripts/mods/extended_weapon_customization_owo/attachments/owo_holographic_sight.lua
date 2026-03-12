@@ -50,7 +50,8 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
                 fix = {
                     offset = {
                         node = 1,
-                        position = vector3_box(0.0, 0.0, 0.0),
+                        disable_in_ui = false,
+                        position = vector3_box(0.0, 0.0, -0.004),
                         rotation = vector3_box(0.0, 0.0, 0.0),
                         scale = vector3_box(1.0, 1.0, 1.3)
                     },
