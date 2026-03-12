@@ -21,6 +21,7 @@ v4.3.2
     - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
     - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Localized groups for holographic sights
+- Realigned EOTech HWS's to hide the chainsword triggers more
 
 # 2025-12-23
 v4.3.1
