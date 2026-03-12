@@ -115,6 +115,8 @@ local these_fixes = {
         fix = {
             offset = {
                 position = vector3_box(0.0, 0.0, -0.02),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
             },
         },
     },
@@ -130,7 +132,9 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, -0.016, 0.02),
+                position = vector3_box(0.0, -0.016, 0.01),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
             },
         },
     },
@@ -147,6 +151,8 @@ local these_fixes = {
         fix = {
             offset = {
                 position = vector3_box(0.0, 0.0, -0.05),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
             },
         },
     },
@@ -163,6 +169,8 @@ local these_fixes = {
         fix = {
             offset = {
                 position = vector3_box(0.0, 0.158, 0.05),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
             },
         },
     },
@@ -179,6 +187,8 @@ local these_fixes = {
         fix = {
             offset = {
                 position = vector3_box(0.0, 0.0, 0.05),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
             },
         },
     },
