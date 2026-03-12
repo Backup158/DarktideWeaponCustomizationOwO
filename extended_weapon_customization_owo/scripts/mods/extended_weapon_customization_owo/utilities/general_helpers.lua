@@ -118,14 +118,16 @@ function mod.create_requirements_string_from_names_table(table_of_attachment_nam
     if not type(table_of_attachment_names) == "table" then
         if type(table_of_attachment_names) == "string" then
             info_if_debug("table of attachments is already string: "..table_of_attachment_names)
-            return table_of_attachment_names
         else
-            mod:error("Not given table! create_requirements_string_from_names_table for "..tostring(table_of_attachment_names))
-            return
+            info_if_debug("Not given table! create_requirements_string_from_names_table for "..tostring(table_of_attachment_names))
         end
+        return table_of_attachment_names
     end
+    -- Adds each string to large line
     for _, attachment in pairs(table_of_attachment_names) do
-        final_string = final_string..attachment.."|"
+        if type(attachment) == "string" do
+            final_string = final_string..attachment.."|"
+        end
     end
     -- Remove final character (the unnecessary |)
     final_string = string_sub(final_string, 1, -2)
