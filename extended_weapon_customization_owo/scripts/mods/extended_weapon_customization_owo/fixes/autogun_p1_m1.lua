@@ -219,6 +219,18 @@ local custom_attachments = {
             },
         },
     },
+    barrel_foreskin = {
+        parent_slot = "barrel",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, -0.3, 0), -- what a shitty way of doing this. but i'm NOT crawling through all the viable nodes
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
 }
 
 return {
