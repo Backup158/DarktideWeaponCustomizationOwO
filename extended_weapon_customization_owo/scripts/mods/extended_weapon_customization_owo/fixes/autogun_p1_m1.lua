@@ -63,6 +63,7 @@ local these_fixes = {
         requirements = {
             sight = {
                 -- has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                -- has = "owo_holographic_sight_eotech",
                 has = all_holographic_sights_names.eotech,
             },
         },
