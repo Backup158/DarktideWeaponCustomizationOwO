@@ -59,6 +59,27 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
         all_these_attachments = {}
     end
 
+    -- Creating Empty
+    local shortname = attachment_group_prefix.."empty"
+    create_an_attachment(table_to_return, shortname,
+        -- Attachment
+        {   replacement_path = _item_ranged.."/sights/"..shortname,
+            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_profile_left,
+            custom_selection_group = "extended_weapon_customization_owo",
+            randomization_requirement = "mod_option_sight_reticle_randomization",
+        },
+        -- Fixes
+        nil,
+        -- Kitbash
+        {   item = _item_empty_trinket,
+            --base_item = "content/weapons/player/attachments/sights/"..sight_reflex_path,
+        },
+        -- Attachment Node
+        current_attachment_node
+    )
+    localize_single_attachment_with_table(shortname, attachment_localizations)
+    -- Creating actual reticles
     for i = 1, 3 do
         local shortname = attachment_group_prefix.."0"..i
         local sight_reflex_path = "sight_reflex_0"..i.."/sight_reflex_0"..i
