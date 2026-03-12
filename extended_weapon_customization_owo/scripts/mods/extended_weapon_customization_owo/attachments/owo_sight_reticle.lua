@@ -60,7 +60,7 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
     end
 
     for i = 1, 3 do
-        local shortname = attachment_group_prefix.."reticle_0"..i
+        local shortname = attachment_group_prefix.."0"..i
         local sight_reflex_path = "sight_reflex_0"..i.."/sight_reflex_0"..i
         local kitbash_helper_name = _item_ranged.."/sights/"..shortname.."helper"
         create_kitbash_full_item(table_to_return, kitbash_helper_name, nil, "content/weapons/player/attachments/sights/"..sight_reflex_path, current_attachment_node)
