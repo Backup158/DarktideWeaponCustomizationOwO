@@ -1,4 +1,4 @@
-# 2026-02-01
+# 2026-DATAEXPUNGED
 v4.3.2
 
 - Decided FUCK IT for the flipped blades issue
@@ -9,15 +9,13 @@ v4.3.2
     - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
     - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Added error message about using the MT Plugin
-- Aligned Suppressors for all Combat Shotgun barrels
 - Added options to disable randomization for all groups of parts
-
-## Added
+## Added Parts
 - Barrel shrouds (`barrel_foreskin`) slot
     - Reusing suppressors to keep the old bug
-
 ## Fixes
 - Realigned suppressors for combat shotguns, including support for syn's barrels
+- Robust handling for `mod.create_requirements_string_from_names_table` mainly around passing various types
 
 # 2025-12-23
 v4.3.1
