@@ -22,6 +22,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 local combined_sight_reticle_names = mod.combined_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
+local syn_ma5_extensions = mod.syn_ma5_extensions
 local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions
 local syn_ma5_classic_extensions = mod.syn_ma5_classic_extensions
 local syn_ma5_compact_classic = mod.syn_ma5_compact_classic
