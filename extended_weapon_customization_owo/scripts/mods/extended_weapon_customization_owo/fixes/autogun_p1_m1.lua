@@ -118,6 +118,21 @@ local these_fixes = {
         },
     },
     --  Compatibility with Syn's Receiver Extensions
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.eotech,
+            },
+            syn_receiver_extension = {
+                has = syn_all_ma5_extensions.."|"..syn_recon_extensions,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.0, -0.05),
+            },
+        },
+    },
     --      MA5
     {   attachment_slot = "sight",
         requirements = {
@@ -134,21 +149,6 @@ local these_fixes = {
             },
         },
     },
-    {   attachment_slot = "sight_offset",
-        requirements = {
-            sight = {
-                has = all_holographic_sights_names.eotech,
-            },
-            syn_receiver_extension = {
-                has = syn_all_ma5_extensions,
-            },
-        },
-        fix = {
-            offset = {
-                position = vector3_box(0.0, 0.0, -0.03),
-            },
-        },
-    },
     --      Recon
     {   attachment_slot = "sight",
         requirements = {
@@ -162,21 +162,6 @@ local these_fixes = {
         fix = {
             offset = {
                 position = vector3_box(0.0, 0.0, 0.05),
-            },
-        },
-    },
-    {   attachment_slot = "sight_offset",
-        requirements = {
-            sight = {
-                has = all_holographic_sights_names.eotech,
-            },
-            syn_receiver_extension = {
-                has = syn_recon_extensions,
-            },
-        },
-        fix = {
-            offset = {
-                position = vector3_box(0.0, 0.0, -0.03),
             },
         },
     },
