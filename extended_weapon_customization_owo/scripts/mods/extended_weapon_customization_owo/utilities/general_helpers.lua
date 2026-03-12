@@ -116,7 +116,7 @@ end
 function mod.create_requirements_string_from_names_table(table_of_attachment_names)
     local final_string = ""
     -- Exits if not given table
-    if not type(table_of_attachment_names) == "table" then
+    if not (type(table_of_attachment_names) == "table") then
         if type(table_of_attachment_names) == "string" then
             info_if_debug("table of attachments is already string: "..table_of_attachment_names)
         else
