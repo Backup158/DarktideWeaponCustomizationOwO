@@ -107,7 +107,7 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
                     scale = vector3_box(1.0, 1.0, 1.0)
                 },
                 hide = {
-                    mesh = {1,5}, -- Hide reticle and sight body, without hiding children (as would happen with hiding node)
+                    mesh = {2,3,4,7,8,9,10,11,12,13,14,15}, -- Hides everything except what would be inherited by the sight reticle
                 }
             },
             children = children_table,
@@ -165,7 +165,7 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     end
 
     -- adding helpers
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_holosight_base", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_holosight_base", nil, "content/weapons/player/ranged/autogun_rifle/attachments/sight_01/sight_01", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_holosight_base2", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_housing_chainsword", nil, "content/weapons/player/melee/chain_sword/attachments/grip_06/grip_06", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_eotech_front_seat_tip", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", current_attachment_node)
