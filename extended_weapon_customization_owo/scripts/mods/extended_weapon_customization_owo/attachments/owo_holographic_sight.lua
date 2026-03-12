@@ -216,7 +216,7 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
                     position = vector3_box(0, 0.088, 0.016), -- 0, 0.088, 0.01 for teeth sticking
                     rotation = eotech_housing_rot,
                     --scale = vector3_box(1.1, 0.57, 0.154),
-                    scale = vector3_box(1.1, 0.57 * 1.3, 0.154),
+                    scale = vector3_box(1.1, 0.741, 0.154), -- 0.57 * 1.3
                 },
             },
         },
@@ -228,7 +228,7 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
                     position = vector3_box(0, 0.034, 0.014), -- 0, 0.034, 0.008 to have the triggers still sticking out
                     rotation = vector3_box(90, 0, -180),
                     --scale = vector3_box(0.42, 0.24, 0.314),
-                    scale = vector3_box(0.42, 0.24 * 1.3, 0.314),
+                    scale = vector3_box(0.42, 0.312, 0.314), -- 0.24 * 1.3
                 },
             },
         },
