@@ -22,11 +22,19 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 local combined_sight_reticle_names = mod.combined_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
+local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions
+local syn_ma5_classic_extensions = mod.syn_ma5_classic_extensions
+local syn_ma5_compact_classic = mod.syn_ma5_compact_classic
+local syn_all_ma5_extensions = mod.syn_all_ma5_extensions
+local syn_recon_extensions = mod.syn_recon_extensions
 
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
 local these_fixes = {
+    -- ----------------------
+    -- Stocks
+    -- ----------------------
     -- Tactical Stocks
     {   attachment_slot = "stock",
         requirements = {
@@ -58,6 +66,42 @@ local these_fixes = {
             },
         },
     },
+    -- ----------------------
+    -- Sights
+    -- ----------------------
+    -- Rails
+    --  Removes rail for AK Irons
+    {   attachment_slot = "rail",
+        requirements = {
+            sight = {
+                has = "owo_iron_sight_kalashnikov",
+            },
+        },
+        fix = {
+            attach = {
+                rail = _item_empty_trinket,
+            },
+        },
+    },
+    --  Attaches rail for Holosight and telescopic
+    {   attachment_slot = "rail",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.all,
+            },
+        },
+        fix = {
+            attach = {
+                rail = "lasgun_rifle_rail_01",
+            },
+            offset = {
+                position = vector3_box(0, -.05, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
     -- Holographic Sights
     {   attachment_slot = "sight_offset",
         requirements = {
@@ -73,21 +117,34 @@ local these_fixes = {
             },
         },
     },
-    {   attachment_slot = "rail",
+    --  Compatibility with Syn's Receiver Extensions
+    {   attachment_slot = "sight",
         requirements = {
             sight = {
-                has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                has = all_holographic_sights_names.eotech,
+            },
+            receiver_extension = {
+                has = syn_recon_extensions,
             },
         },
         fix = {
-            attach = {
-                rail = "lasgun_rifle_rail_01",
-            },
             offset = {
-                position = vector3_box(0, -.05, 0),
-                rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1, 1, 1),
-                node = 1,
+                position = vector3_box(0.0, 0.0, 0.05),
+            },
+        },
+    },
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.eotech,
+            },
+            receiver_extension = {
+                has = syn_recon_extensions,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.0, -0.03),
             },
         },
     },
