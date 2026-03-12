@@ -114,7 +114,7 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, 0.0, -0.02),
+                position = vector3_box(0.0002, 0.0, -0.018),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
             },
