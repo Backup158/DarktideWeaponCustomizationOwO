@@ -20,7 +20,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- Attachment Names for Fixes
 -- ################################
-local combined_sight_reticle_names = mod.combined_sight_reticle_names
+local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
 local syn_ma5_extensions = mod.syn_ma5_extensions
 local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions
@@ -118,18 +118,19 @@ local these_fixes = {
             },
         },
     },
+    --  Reticle Alignment
     {   attachment_slot = "sight_reticle",
         requirements = {
             sight = {
                 has = all_holographic_sights_names.eotech,
             },
             sight_reticle = {
-                has = combined_sight_reticle_names,
+                has = all_owo_sight_reticle_names,
             },
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, -0.016, 0.01),
+                position = vector3_box(0.0, -0.016, 0.02),
             },
         },
     },
@@ -181,44 +182,6 @@ local these_fixes = {
             },
         },
     },
-    --[[
-    {   attachment_slot = "sight_offset",
-        requirements = {
-            sight_group_indicator = {
-                has = "owo_indicator_sight_eotech",
-            },
-        },
-        fix = {
-            offset = {
-                -- position = vector3_box(0.0, 0.12, 0.015),
-                position = vector3_box(0.0, 0.0, -0.02),
-                rotation = vector3_box(0, 0.0, 0),
-                scale = vector3_box(1, 1.0, 1),
-            },
-        },
-    },
-    -- Sight Reticles
-    {   attachment_slot = "sight_reticle",
-        requirements = {
-            sight_group_indicator = {
-                has = "owo_indicator_sight_eotech",
-            },
-            sight_reticle = {
-                has = combined_sight_reticle_names,
-            },
-        },
-        fix = {
-            offset = {
-                position = vector3_box(0.0, 0.0, 0.01),
-                rotation = vector3_box(0, 0.0, 0),
-                scale = vector3_box(1, 1.0, 1),
-            },
-            -- hide = {
-            --     mesh = {5,6},
-            -- },
-        },
-    },
-    ]]
 }
 
 local custom_attachments = {

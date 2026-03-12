@@ -30,7 +30,7 @@ mod.shared_fix_requirements_file_has_run = true
 -- --------------------------------
 -- Sight Reticles
 -- --------------------------------
-mod.combined_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
+mod.all_owo_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
 
 -- --------------------------------
 -- Slim and Flat Blades (with grip included)
