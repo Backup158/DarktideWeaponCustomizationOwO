@@ -238,6 +238,6 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     -- ---------------
 
     mod.all_holographic_sights_names.first_run = false
-    table.dump(mod.all_holographic_sights_names, "nya ALL HOLOSIGHT NAMES", 20)
+    --table.dump(mod.all_holographic_sights_names, "nya ALL HOLOSIGHT NAMES", 20)
     return table_to_return
 end
