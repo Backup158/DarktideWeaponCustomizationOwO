@@ -27,10 +27,14 @@ if mod.shared_fix_requirements_file_has_run then
 end
 mod.shared_fix_requirements_file_has_run = true
 
+-- --------------------------------
 -- Sight Reticles
+-- --------------------------------
 mod.combined_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
 
+-- --------------------------------
 -- Slim and Flat Blades (with grip included)
+-- --------------------------------
 local slim_blades_to_flip = {}
 --dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE BEFORE FLIPPING NYA")
 -- psword not necessary
@@ -48,6 +52,20 @@ mod.combined_slim_blades_to_flip = create_requirements_string_from_names_table(s
 --dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE AFTER FLIPPING NYA AAAAAA")
 info_if_debug("uwu all combined blades: "..mod.combined_slim_blades_to_flip)
 
+-- --------------------------------
 -- Suppressors
+-- --------------------------------
 local all_suppressor_names = mod.all_suppressor_names
 mod.any_suppressor = create_requirements_string_from_names_table(all_suppressor_names)
+
+-- --------------------------------
+-- Holographic Sights
+-- --------------------------------
+-- Turns each group into a long string
+for holosight_group, holosight_list in pairs(mod.all_holographic_sights_names) do
+    mod.all_holographic_sights_names[holosight_group] = create_requirements_string_from_names_table(holosight_list)
+end
+-- Creates a single string for all
+--  Not sure if this redundancy is required but it feels like otherwise i'd be creating a key before iterating through all keys
+local all_holo = create_requirements_string_from_names_table(mod.all_holographic_sights_names)
+mod.all_holographic_sights_names.all = all_holo
