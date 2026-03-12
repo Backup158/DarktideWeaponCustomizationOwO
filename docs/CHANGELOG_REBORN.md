@@ -3,12 +3,16 @@ v4.3.2
 
 - Added error message about using the MT Plugin
 - Added options to disable randomization for all groups of parts
-## Added Parts
-- Barrel shrouds (`barrel_foreskin`) slot
-    - Reusing suppressors to keep the old bug
+## Added Parts/Support
+- Barrel Shrouds (`barrel_foreskin`) slot
+    - Reusing Suppressors to keep the old bug
+    - It only works on Autoguns and "works" is being generous
+- Aligned Suppressors on Combat Shotguns for Syn's barrels
+- Aligned Holographic Sights for Syn's receiver extensions
+    - sight offset has similar issues with flipped blades, in that they're inconsistent and make me want to contribute to the statistic
 ## Fixes
-- Realigned suppressors for combat shotguns, including support for syn's barrels
 - Robust handling for `mod.create_requirements_string_from_names_table` mainly around passing various types
+- Realigned suppressors for Combat Shotguns
 - Decided FUCK IT for the flipped blades issue
     - I gave up
     - But before I did, I tried another method
@@ -16,7 +20,8 @@ v4.3.2
     - I believe there was an issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files
     - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
     - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
-    
+- Localized groups for holographic sights
+
 # 2025-12-23
 v4.3.1
 
