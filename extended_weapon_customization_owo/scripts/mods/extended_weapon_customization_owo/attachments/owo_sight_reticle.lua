@@ -92,10 +92,6 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
         end
         localize_single_attachment_with_table(shortname, attachment_localizations)
     end
-    -- adding helpers
-    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_01", nil, "content/weapons/player/attachments/sights/sight_reflex_01/sight_reflex_01", current_attachment_node)
-    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_02", nil, "content/weapons/player/attachments/sights/sight_reflex_02/sight_reflex_02", current_attachment_node)
-    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_sight_reticle_03", nil, "content/weapons/player/attachments/sights/sight_reflex_03/sight_reflex_03", current_attachment_node)
 
     -- Making list of all attachments global
     if all_these_attachments then
