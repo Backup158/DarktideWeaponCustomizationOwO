@@ -48,9 +48,9 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
             sight_base = {
                 item = _item_ranged.."/sights/owo_holosight_base2",
                 fix = {
+                    disable_in_ui = false,
                     offset = {
                         node = 1,
-                        disable_in_ui = false,
                         position = vector3_box(0.0, 0.0, -0.004),
                         rotation = vector3_box(0.0, 0.0, 0.0),
                         scale = vector3_box(1.0, 1.0, 1.3)
