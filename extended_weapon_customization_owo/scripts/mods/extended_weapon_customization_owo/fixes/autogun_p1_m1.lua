@@ -61,14 +61,13 @@ local these_fixes = {
     {   attachment_slot = "sight_offset",
         requirements = {
             sight = {
-                has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                -- has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                has = "owo_holographic_sight_eotech",
             },
         },
         fix = {
             offset = {
                 position = vector3_box(0.0, 0.0, -0.02),
-                rotation = vector3_box(0, 0.0, 0),
-                scale = vector3_box(1, 1.0, 1),
             },
         },
     },
