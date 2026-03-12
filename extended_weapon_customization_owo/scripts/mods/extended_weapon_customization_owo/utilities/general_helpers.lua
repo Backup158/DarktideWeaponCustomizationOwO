@@ -125,7 +125,7 @@ function mod.create_requirements_string_from_names_table(table_of_attachment_nam
     end
     -- Adds each string to large line
     for _, attachment in pairs(table_of_attachment_names) do
-        if type(attachment) == "string" do
+        if type(attachment) == "string" then
             final_string = final_string..attachment.."|"
         end
     end
