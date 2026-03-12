@@ -42,22 +42,6 @@ local attachment_localizations = {
 -- ################################
 local function generate_holographic_variant(table_to_return, attachment_group_name, broad_name, suffix_name, current_attachment_node, table_of_children_with_fixes, child_fix_multiplier)
     local shortname = attachment_group_name.."_"..broad_name..suffix_name
-    
-    -- Stores attachment name into big list
-    --   ex
-    --      eotech
-    --          eotech
-    --          eotech_short
-    --      vortex
-    --          vortex
-    --          vortex_short
-    --   i dont feel like passing the table through the chain. lazy global use, go
-    if not mod.all_holographic_sights_names[broad_name] then
-        mod.all_holographic_sights_names[broad_name] = {}
-    end
-    if mod.all_holographic_sights_names.first_run then
-        table_insert(mod.all_holographic_sights_names[broad_name], shortname)
-    end
 
     local children_table = table_merge_recursive(
         {
@@ -131,9 +115,20 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
         -- DON'T FORGET THIS
         current_attachment_node
     )
-    -- Adding name to list of attachments
-    if all_attachment_names then
-        table_insert(all_attachment_names, shortname)
+    -- Adding name to list of attachments 
+    --   ex
+    --      eotech
+    --          eotech
+    --          eotech_short
+    --      vortex
+    --          vortex
+    --          vortex_short
+    --   i dont feel like passing the table through the chain. lazy global use, go
+    if mod.all_holographic_sights_names.first_run then
+        if not mod.all_holographic_sights_names[broad_name] then
+            mod.all_holographic_sights_names[broad_name] = {}
+        end
+        table_insert(mod.all_holographic_sights_names[broad_name], shortname)
     end
     -- Localizing name
     localize_single_attachment_with_table(shortname, attachment_localizations)
@@ -243,6 +238,6 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     -- ---------------
 
     mod.all_holographic_sights_names.first_run = false
+    table.dump(mod.all_holographic_sights_names, "nya ALL HOLOSIGHT NAMES", 20)
     return table_to_return
-
 end
