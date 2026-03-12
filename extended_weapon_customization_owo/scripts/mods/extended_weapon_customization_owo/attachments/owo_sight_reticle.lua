@@ -61,6 +61,9 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
 
     for i = 1, 3 do
         local shortname = attachment_group_prefix.."reticle_0"..i
+        local sight_reflex_path = "sight_reflex_0"..i.."/sight_reflex_0"..i
+        local kitbash_helper_name = _item_ranged.."/sights/"..shortname.."helper"
+        create_kitbash_full_item(table_to_return, kitbash_helper_name, nil, "content/weapons/player/attachments/sights/"..sight_reflex_path, current_attachment_node)
         create_an_attachment(table_to_return, shortname,
             -- Attachment
             {   replacement_path = _item_ranged.."/sights/"..shortname,
@@ -70,24 +73,15 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
                 randomization_requirement = "mod_option_sight_reticle_randomization",
             },
             -- Fixes
-            {
-                {
-                    attachment_slot = "sight_reticle",
-                    requirements = {
-                        sight_reticle = {
-                            has = shortname,
-                        },
-                    },
-                    fix = {
-                        hide = {
-                            mesh = {5,6},
-                        },
+            nil,
+            -- Kitbash
+            {   item = kitbash_helper_name,
+                --base_item = "content/weapons/player/attachments/sights/"..sight_reflex_path,
+                fix = {
+                    hide = {
+                        mesh = {5,6},
                     },
                 },
-            },
-            -- Kitbash
-            {   -- item =  _item_ranged.."/sights/owo_sight_reticle_0"..i,
-                base_item = "content/weapons/player/attachments/sights/sight_reflex_0"..i.."/sight_reflex_0"..i,
             },
             -- Attachment Node
             current_attachment_node
