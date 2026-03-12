@@ -163,6 +163,9 @@ function mod.internal_name_to_english(attachment_name_string)
 	-- Removing my prefix because the group label in the menu implies it
 	final_string, _ = string_regex_sub(attachment_name_string, "owo_", "")
 	-- Capitalize every word
+    --  first letter
+    final_string, _ = string_regex_sub(final_string, "^%a", string_upper)
+    --  the rest
 	final_string, _ = string_regex_sub(final_string, "_%a", string_upper)
 	-- Convert underscore to space
 	final_string, _ = string_regex_sub(final_string, "_", " ")
