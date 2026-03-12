@@ -20,7 +20,8 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- Attachment Names for Fixes
 -- ################################
-local all_owo_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
+local combined_sight_reticle_names = mod.combined_sight_reticle_names
+local all_holographic_sights_names = mod.all_holographic_sights_names
 
 -- ###################################################################
 -- FIXES TO RETURN
@@ -62,7 +63,7 @@ local these_fixes = {
         requirements = {
             sight = {
                 -- has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
-                has = "owo_holographic_sight_eotech",
+                has = all_holographic_sights_names.eotech,
             },
         },
         fix = {
@@ -112,7 +113,7 @@ local these_fixes = {
                 has = "owo_indicator_sight_eotech",
             },
             sight_reticle = {
-                has = all_owo_sight_reticle_names,
+                has = combined_sight_reticle_names,
             },
         },
         fix = {
