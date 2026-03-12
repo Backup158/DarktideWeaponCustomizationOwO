@@ -51,10 +51,13 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
     --      vortex
     --          vortex
     --          vortex_short
-    if not all_attachment_names[broad_name] then
-        all_attachment_names[broad_name] = {}
+    --   i dont feel like passing the table through the chain. lazy global use, go
+    if not mod.all_holographic_sights_names[broad_name] then
+        mod.all_holographic_sights_names[broad_name] = {}
     end
-    table_insert(all_attachment_names[broad_name], shortname)
+    if mod.all_holographic_sights_names.first_run then
+        table_insert(mod.all_holographic_sights_names[broad_name], shortname)
+    end
 
     local children_table = table_merge_recursive(
         {
@@ -160,9 +163,9 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
     -- Logging all names
-    local all_attachment_names = nil
     if not mod.all_holographic_sights_names then
-        all_attachment_names = {}
+        mod.all_holographic_sights_names = {}
+        mod.all_holographic_sights_names.first_run = true
     end
 
     -- adding helpers
@@ -239,10 +242,7 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     -- DOT EHS-1
     -- ---------------
 
-    if all_attachment_names then
-        mod.all_holographic_sights_names = all_attachment_names
-    end
-
+    mod.all_holographic_sights_names.first_run = false
     return table_to_return
 
 end
