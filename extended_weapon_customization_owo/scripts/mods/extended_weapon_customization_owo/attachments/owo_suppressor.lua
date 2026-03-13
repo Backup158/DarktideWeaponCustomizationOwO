@@ -327,7 +327,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local suppressor_wrapped_ac1_rot = vector3_box(-90, 0, 0)
     local suppressor_wrapped_ac1_sca = vector3_box(0.77, 0.6, 1.1)
     local suppressor_wrapped_ac2_pos = vector3_box(0, 0.164, 0)
-    local suppressor_wrapped_ac1_sca_slim = vector3_box(0.6, 0.48, 1.1)
+    local suppressor_wrapped_ac1_sca_slim = vector3_box(0.45, 0.35, 1.1)
     create_suppressor_and_slim("owo_suppressor_wrapped_01", 
         {
             ac1 = _item_ranged.."/muzzles/wrapped_ac1",
