@@ -111,15 +111,10 @@ local these_fixes = {
                 -- has = "owo_holographic_sight_eotech",
                 has = all_holographic_sights_names.eotech,
             },
-            syn_receiver_extension = {
-                missing = syn_all_ma5_extensions.."|"..syn_recon_extensions,
-            },
         },
         fix = {
             offset = {
                 position = vector3_box(0.0002, 0.0, -0.018),
-                rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1, 1, 1),
             },
         },
     },
@@ -153,9 +148,7 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, 0.0, -0.07),
-                rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1, 1, 1),
+                position = vector3_box(0.0, 0.0, -0.05),
             },
         },
     },
