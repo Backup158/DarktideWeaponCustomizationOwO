@@ -7,6 +7,7 @@ v4.3.2
 - Barrel Shrouds (`barrel_foreskin`) slot
     - Reusing Suppressors to keep the old bug
     - It only works on Autoguns and "works" is being generous
+- Added slim variant of Wrapped Suppressor
 - Aligned Suppressors on Combat Shotguns for Syn's barrels
 - Aligned Holographic Sights for Syn's receiver extensions
     - sight offset has similar issues with flipped blades, in that they're inconsistent and make me want to contribute to the statistic
