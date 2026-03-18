@@ -258,5 +258,7 @@ if mod:get("owo_mode") then
 	localizations["discord_mode_message"]["en"] = "imaginye expecting *walks away* usefuw infowmation UwU f-f-fwom the x3 uwu bwothew fuckew wmao ^-^"
 end
 
+-- mod_title is what ewc uses to label this when debugging
+localizations.mod_title = mod_name
 return localizations
 
