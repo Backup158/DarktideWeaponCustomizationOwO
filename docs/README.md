@@ -23,19 +23,23 @@ Report alignment issues, and I might fix it if I'm not busy (lying umder blamket
 # Installation
 ## Requirements
 1. [MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) by Grasmann
-2. Extended Weapon Customization channel by Grasmann
+2. Extended Weapon Customization (EWC) by Grasmann. There are multiple ways of getting this file:
   - ~~[Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277)~~
     - Currently for the deprecated version
     - Page is hidden by Nexus Moderators
   - [The #weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284) in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8) 
     - Download files are in the pins. Search for the latest message from Grasmann.
     - Also be sure to check out the FAQ below in the pins
-  - [`extended_weapon_customization.zip` file on Grasmann's GitHub](https://github.com/grasmann/darktide-mods/blob/main/extended_weapon_customization.zip)
-    - Click the Download button next to "Raw" and "Copy"
-    - This is below the "History" section
-    - ![Pointing to the download button](./assets/images/ewc_dl_gh.png)
+  - Downloading it from [Grasmann's GitHub Repository](https://github.com/grasmann/darktide-mods)
+    1. Open the `extended_weapon_customization.zip` file
+      - ![Pointing out the zip file](./assets/images/ewc_dl_gh_0.png)
+      - [Direct link to it](https://github.com/grasmann/darktide-mods/blob/main/extended_weapon_customization.zip)
+    2. Download the file
+      - Click the Download button next to "Raw" and "Copy"
+      - This is below the "History" section
+      - ![Pointing to the download button](./assets/images/ewc_dl_gh.png)
 3. This mod
-  - ~~[Nexus link](https://www.nexusmods.com/warhammer40kdarktide/mods/429?tab=files)~~ for the old version
+  - ~~[Nexus link](https://www.nexusmods.com/warhammer40kdarktide/mods/429?tab=files)~~ currently for the old version. I will reupload there when EWC is considered Nexus-ready by Grasmann
   - [GitHub releases](https://github.com/Backup158/DarktideWeaponCustomizationOwO/releases/latest) for the rebuild
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
