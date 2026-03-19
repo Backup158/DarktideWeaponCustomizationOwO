@@ -43,6 +43,10 @@ Report alignment issues, and I might fix it if I'm not busy (lying umder blamket
   - [GitHub releases](https://github.com/Backup158/DarktideWeaponCustomizationOwO/releases/latest) for the rebuild
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
+
+> [!WARNING]
+>
+> Game updates may cause issues with EWC. They will be fixed whenever EWC is updated. There is no exactly timeline for when that happens, and all we can do is wait.
 ## Load Order
 Load order doesn't matter with rebuilt EWC plugins.
 
