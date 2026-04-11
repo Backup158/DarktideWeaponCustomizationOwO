@@ -86,7 +86,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                         children = {},
                     },
                     base = {
-                        item = model_table.base or _item_empty_trinket,
+                        item = model_table.base or _item_ranged.."/muzzles/owo_supp_base",
                         fix = {
                             disable_in_ui = false,
                             offset = {
@@ -154,7 +154,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         }
         create_suppressor(name, model_table, table_to_send)
 
-        -- destructively changes table, since we won't be needing it again
+        -- destructively changes table, which is ok since we won't be needing it again
         table_to_send.ac_sca = transformations_table.ac_sca_slim
         table_to_send.ac1_sca = transformations_table.ac1_sca_slim
         table_to_send.ac2_sca = transformations_table.ac2_sca_slim
@@ -164,6 +164,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     -- --------------------------------
     -- Creating helpers as full items
     -- --------------------------------
+    create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/owo_supp_base", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_05/muzzle_05", "ap_muzzle_01")
     -- double cans
     create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/supp_ac_ak_muzzle_03", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_03/muzzle_03", "ap_muzzle_01")
     create_kitbash_full_item(table_to_return, _item_ranged.."/muzzles/supp_ac_ak_muzzle_05", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_05/muzzle_05", "ap_muzzle_01")
@@ -209,19 +210,18 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     })
 
     -- PBS-1
+    --      The pommel thing
     local suppressor_pbs1_ac1_pos = vector3_box(0, 0.055, 0)
     local suppressor_pbs1_ac1_rot = vector3_box(-90, 0, 0)
     local suppressor_pbs1_ac1_sca = vector3_box(1.3, 1.3, 1.11)
     local suppressor_pbs1_ac1_sca_slim = vector3_box(0.95, 0.95, 1.11)
-    local suppressor_pbs1_ac2_pos = vector3_box(0, 0.265, 0)
-    local suppressor_pbs1_ac2_rot = vector3_box(0, 0, 180)
+    --      The Ripper
+    local suppressor_pbs1_ac2_pos = vector3_box(0, 0.1, 0.0)
+    local suppressor_pbs1_ac2_rot = vector3_box(90, 0, 180)
     local suppressor_pbs1_ac2_sca = vector3_box(0.36, 0.4, 0.36)
     local suppressor_pbs1_ac2_sca_slim = vector3_box(0.255, 0.4, 0.24)
     create_suppressor_and_slim("owo_suppressor_03", 
-        {
-            base = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_05",
-            --base = "content/weapons/player/ranged/autogun_rifle_ak/attachments/muzzle_05/muzzle_05",
-            ac1 = _item_ranged.."/muzzles/pbs_ac1",
+        {   ac1 = _item_ranged.."/muzzles/pbs_ac1",
             ac2 = _item_ranged.."/muzzles/pbs_ac2",
         }, 
         {
@@ -242,10 +242,10 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local suppressor_metal_ac1_rot = vector3_box(-90, 0, 0)
     local suppressor_metal_ac1_sca = vector3_box(1.80, 1.80, 1.5)
     local suppressor_metal_ac1_sca_slim = vector3_box(1.1, 1.1, 1.5)
-    local suppressor_metal_ac2_pos = vector3_box(0, 0.086, 0)
-    local suppressor_metal_ac2_pos2 = vector3_box(0, 0.13, 0)
-    local suppressor_metal_ac2_rot = vector3_box(0, 0, 0)
-    local suppressor_metal_ac2_sca = vector3_box(1.2, 1.8, 1.2)
+    local suppressor_metal_ac2_pos = vector3_box(0, 0.028, -0.1)
+    local suppressor_metal_ac2_pos2 = vector3_box(0, 0.028, -0.08)
+    local suppressor_metal_ac2_rot = vector3_box(90, 0, 0)
+    local suppressor_metal_ac2_sca = vector3_box(0.75, 0.8, 0.75)
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
     create_suppressor_and_slim("owo_suppressor_04", 
         {
