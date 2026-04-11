@@ -255,6 +255,7 @@ local localizations = {
 
 -- ################
 -- Shitposting
+-- You DO NOT need to translate these haha
 -- ################
 local owo_mode_shitposting = {
 	-- Mod Name and Desc
