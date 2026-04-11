@@ -485,6 +485,8 @@ function mod.on_all_mods_loaded()
 	end
 	--	Plugins
 	--		Just so I know. Compatibility is only an issue of name collisions
+    --      Actually this is already included in the base mod
+    --[[
     local other_plugins = { "visible_equipment", "extended_weapon_customization_base_additions", "extended_weapon_customization_empty_scopes", }
     for i = 1, #(other_plugins) do
         local plugin_name = other_plugins[i]
@@ -492,4 +494,5 @@ function mod.on_all_mods_loaded()
             mod:info("Uwusa haz "..plugin_name.." :3")
         end
     end
+    ]]
 end
