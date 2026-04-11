@@ -470,17 +470,17 @@ function mod.on_all_mods_loaded()
 	-- Checks for installed mods. Kept here so it works after reload.
 	--	Base Mod
 	if not get_mod("extended_weapon_customization") then
-		mod:error("Extended Weapon Customization mod (the rebuild) required")
+		mod:error(mod:localize("mod_error_missing_ewc"))
 		return
 	end
     --  Outdated base mod
 	if get_mod("weapon_customization") then
-		mod:error("You are using the OLD version of Weapon Customization! This plugin is for the new, rebuilt version.")
+		mod:error(mod:localize("mod_error_using_old_wcm"))
 		return
 	end
     --  Outdated MT Plugin
 	if get_mod("weapon_customization_mt_stuff") then
-		mod:error("You are using the MT Plugin, which is made for the OLD version of Weapon Customization! It no longer works, and is no longer required for OwO.")
+		mod:error(mod:localize("mod_error_using_old_mt"))
 		return
 	end
 	--	Plugins

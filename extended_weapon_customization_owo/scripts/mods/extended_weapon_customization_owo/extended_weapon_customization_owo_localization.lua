@@ -203,6 +203,15 @@ local localizations = {
 		--en = "You have enabled Discord compatibility mode. Make sure you have the latest beta releases for the base EWC mod (and Syn's Edits if you use it)! These are found in the Darktide Modders Discord [https://discord.gg/rKYWtaDx4D], in the pinned messages of the #weapon-customization-mod channel and the Syndonai's Edits thread in #creation-showcase, respectively. Remember to restart/reload the game.",
 		en = "You have enabled Discord compatibility mode, which currently does nothing."
 	},
+	mod_error_missing_ewc = {
+		en = "Extended Weapon Customization mod required",
+	},
+	mod_error_using_old_wcm = {
+		en = "You are using the OLD version of Weapon Customization! This plugin is for the new, rebuilt version. {#color(255, 35, 5)}Replace this with \"extended_weapon_customization\"{#reset()}",
+	},
+	mod_error_using_old_mt = {
+		en = "You are using the MT Plugin, which is made for the OLD version of Weapon Customization! {#color(255, 35, 5)}IT NO LONGER WORKS{#reset()}, and is no longer required for OwO.",
+	},
 	-- ---------------
 	-- Randomization
 	-- ---------------
