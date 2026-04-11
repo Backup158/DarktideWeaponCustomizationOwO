@@ -26,6 +26,7 @@ v4.3.2
 ## Refactor
 - Reorganized OwO mode shitposting to be more easily read
 - Replaced `ipairs` with index based array access, per Fatshark's Lua optimization guide
+- Set error messages to use localization strings, for easier translation
 
 # 2025-12-23
 v4.3.1
