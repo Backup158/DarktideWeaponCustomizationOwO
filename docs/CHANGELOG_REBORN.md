@@ -23,6 +23,9 @@ v4.3.2
     - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Localized groups for holographic sights
 - Realigned EOTech HWS's to hide the chainsword triggers more
+## Refactor
+- Reorganized OwO mode shitposting to be more easily read
+- Replaced `ipairs` with index based array access, per Fatshark's Lua optimization guide
 
 # 2025-12-23
 v4.3.1
