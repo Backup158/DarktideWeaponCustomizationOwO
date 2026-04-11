@@ -106,6 +106,7 @@ local slim_blade_names = {
 	dclaw = Localize("loc_weapon_family_combatsword_p1_m1"), 
 	hsword = Localize("loc_weapon_family_combatsword_p2_m1"), 
 }
+-- human_name uses the game's Localize function, so it should appear in whatever language the user set the game to
 for attachment_name_code, human_name in pairs(slim_blade_names) do
 	mod:add_global_localize_strings({
 		["loc_ewc_owo_slim_blade_flat_"..attachment_name_code] = {
