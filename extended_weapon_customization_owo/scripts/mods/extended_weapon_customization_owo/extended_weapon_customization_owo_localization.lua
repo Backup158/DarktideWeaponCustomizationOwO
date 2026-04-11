@@ -244,18 +244,63 @@ local localizations = {
 	},
 }
 
+-- ################
+-- Shitposting
+-- ################
+local owo_mode_shitposting = {
+	-- Mod Name and Desc
+	{	localization_id = "mod_name",
+		language_code = "en",
+		text = "EWC - OwO (O-ostwacized *runs away* without Objection >w<)",
+	},
+	{	localization_id = "mod_description",
+		language_code = "en",
+		text = "E-e-extended Weapon ^w^ Customization plugin ;;w;; adding vawious pawts, typicawwy inspiwed >w< by *whispers to self* histowicaw and tacticoow weapons.",
+	},
+	{	localization_id = "mod_description",
+		language_code = "ru",
+		text = "У меня в арсенале всего одна маленькая анальная пробка, так что мне явно нужно еще много времени, чтобы научиться комфортно принимать член",
+	},
+	-- Debug Mode
+	{	localization_id = "debug_mode",
+		language_code = "en",
+		text = "Debug M-m-mode *walks away*",
+	},
+	{	localization_id = "debug_mode_description",
+		language_code = "en",
+		text = "V-Vewbose pwinting",
+	},
+	-- OwO Mode
+	{	localization_id = "owo_mode",
+		language_code = "en",
+		text = "Notices Buldge OWO what's this?",
+	},
+	{	localization_id = "owo_mode_description",
+		language_code = "en",
+		text = "UwUified ;;w;; descwiptions on the x3 mod options *whispers to self* page *twerks* >:3 Wequiwes a game westawt/wewoad (・`ω´・) to *looks at you* apply.",
+	},
+	-- Discord Mode
+	{	localization_id = "discord_mode",
+		language_code = "en",
+		text = "discord kitten mode uwu",
+	},
+	{	localization_id = "discord_mode_description",
+		language_code = "en",
+		text = ":3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 ",
+	},
+	{	localization_id = "discord_mode_description",
+		language_code = "ru",
+		text = "Меня заставили стать котом. Помогите Как выйти из этого порочного круга.",
+	},
+	{	localization_id = "discord_mode_message",
+		language_code = "en",
+		text = "imaginye expecting *walks away* usefuw infowmation UwU f-f-fwom the x3 uwu bwothew fuckew wmao ^-^",
+	},
+}
 if mod:get("owo_mode") then
-	localizations["mod_name"]["en"] = "EWC - OwO (O-ostwacized *runs away* without Objection >w<)"
-	localizations["mod_description"]["en"] = "E-e-extended Weapon ^w^ Customization plugin ;;w;; adding vawious pawts, typicawwy inspiwed >w< by *whispers to self* histowicaw and tacticoow weapons."
-	localizations["mod_description"]["ru"] = "У меня в арсенале всего одна маленькая анальная пробка, так что мне явно нужно еще много времени, чтобы научиться комфортно принимать член"
-	localizations["debug_mode"]["en"] = "Debug M-m-mode *walks away*"
-	localizations["debug_mode_description"]["en"] = "V-Vewbose pwinting"
-	localizations["owo_mode"]["en"] = "Notices Buldge OWO what's this?"
-	localizations["owo_mode_description"]["en"] = "UwUified ;;w;; descwiptions on the x3 mod options *whispers to self* page *twerks* >:3 Wequiwes a game westawt/wewoad (・`ω´・) to *looks at you* apply."
-	localizations["discord_mode"]["en"] = "discord kitten mode uwu"
-	localizations["discord_mode_description"]["en"] = ":3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 "
-	localizations["discord_mode_description"]["ru"] = "Меня заставили стать котом. Помогите Как выйти из этого порочного круга."
-	localizations["discord_mode_message"]["en"] = "imaginye expecting *walks away* usefuw infowmation UwU f-f-fwom the x3 uwu bwothew fuckew wmao ^-^"
+	for i=1, #owo_mode_shitposting do
+		localizations[owo_mode_shitposting[i]["localization_id"]][owo_mode_shitposting[i]["language_code"]] = owo_mode_shitposting[i]["text"]
+	end
 end
 
 -- mod_title is what ewc uses to label this when debugging
