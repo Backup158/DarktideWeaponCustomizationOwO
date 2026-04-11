@@ -59,7 +59,7 @@ This list is hosted externally.  \
 
 # Acknowledgements
 Not comprehensive
-- grasmann: For the original EWC mod and including a plugin template
+- grasmann: For the original EWC mod, the Modding Tools utility, sharing a plugin template, and creating the EWC development wiki
 - MT607 (Random Account): For making the first major plugin, which I used as a base for the old version of this plugin
 - Syndonai: For sharing knowledge and techniques for kitbashing and quirks of EWC
 - RinAnarchy: For Chinese (Simplified) localization ["zh-cn"]
