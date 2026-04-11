@@ -133,7 +133,8 @@ end
 --  weapons_list: table of strings
 -- ######
 local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list, slot)
-    for _, weapon_id in ipairs(weapons_list) do
+    for i = 1, #(weapons_list) do
+        local weapon_id = weapons_list[i]
         -- info_if_debug("Adding attachments to "..weapon_id)
         --table_dump(attachment_blob, "THE BLOB", 9)
         if not slot then
@@ -354,7 +355,8 @@ local special_needs_fixes = {
     "powersword_2h_p1_m1", 
     "powermaul_p2_m1", "powermaul_shield_p1_m1", 
 }
-for _, weapon_id in ipairs(special_needs_fixes) do
+for i = 1, #(special_needs_fixes) do
+    local weapon_id = special_needs_fixes[i]
     local loaded_table = load_mod_file("fixes/"..weapon_id)
     local fixes_table_to_add = loaded_table.fixes
     local slots_to_add = loaded_table.attachment_slots
@@ -427,8 +429,8 @@ end
 --  Done this way because pairs() does NOT guarantee order
 --  and since I'm adding to the table i'm reading, it can lead to duplicates and shuffling order
 --  so somehow things can get skipped? this happened to ilas for some reason
-for _, weapon_id in ipairs(siblings_to_add) do
-    copy_attachments_and_fixes_to_siblings(weapon_id)
+for i = 1, #(siblings_to_add) do
+    copy_attachments_and_fixes_to_siblings(siblings_to_add[i])
 end
 
 if debug_mode then
@@ -484,7 +486,8 @@ function mod.on_all_mods_loaded()
 	--	Plugins
 	--		Just so I know. Compatibility is only an issue of name collisions
     local other_plugins = { "visible_equipment", "extended_weapon_customization_base_additions", "extended_weapon_customization_empty_scopes", }
-    for _, plugin_name in ipairs(other_plugins) do
+    for i = 1, #(other_plugins) do
+        local plugin_name = other_plugins[i]
         if get_mod(plugin_name) then
             mod:info("Uwusa haz "..plugin_name.." :3")
         end

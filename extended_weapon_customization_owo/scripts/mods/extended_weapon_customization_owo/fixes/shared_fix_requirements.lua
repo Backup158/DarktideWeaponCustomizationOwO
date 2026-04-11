@@ -38,10 +38,13 @@ mod.all_owo_sight_reticle_names = create_requirements_string_from_names_table(mo
 local slim_blades_to_flip = {}
 --dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE BEFORE FLIPPING NYA")
 -- psword not necessary
-for _, blade in ipairs({"pfalchion", "dclaw", "hsword", "2h_psword", "2h_psword_short"}) do
-    for _, width in ipairs({"flat_", "slim_"}) do
-        for _, suffix in ipairs({"", "_g"}) do
-            local blade = "owo_slim_blade_"..width..blade..suffix
+local slim_blades_flip_list_blade = {"pfalchion", "dclaw", "hsword", "2h_psword", "2h_psword_short"}
+local slim_blades_flip_list_prefix = {"flat_", "slim_"}
+local slim_blades_flip_list_suffix = {"", "_g"}
+for i = 1, #(slim_blades_flip_list_blade) do
+    for j = 1, #(slim_blades_flip_list_prefix) do
+        for k = 1, #(slim_blades_flip_list_suffix) do
+            local blade = "owo_slim_blade_"..slim_blades_flip_list_prefix[j]..slim_blades_flip_list_blade[i]..slim_blades_flip_list_suffix[k]
             slim_blades_to_flip[blade] = create_requirements_string_from_names_table(mod.all_slim_blade_names[blade])
             info_if_debug("results of flipping nyaaaa: "..blade.."\n"..slim_blades_to_flip[blade])
             mod.all_slim_blade_names[blade] = slim_blades_to_flip[blade]

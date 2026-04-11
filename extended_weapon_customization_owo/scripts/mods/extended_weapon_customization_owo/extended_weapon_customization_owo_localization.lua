@@ -298,7 +298,7 @@ local owo_mode_shitposting = {
 	},
 }
 if mod:get("owo_mode") then
-	for i=1, #owo_mode_shitposting do
+	for i = 1, #owo_mode_shitposting do
 		localizations[owo_mode_shitposting[i]["localization_id"]][owo_mode_shitposting[i]["language_code"]] = owo_mode_shitposting[i]["text"]
 	end
 end

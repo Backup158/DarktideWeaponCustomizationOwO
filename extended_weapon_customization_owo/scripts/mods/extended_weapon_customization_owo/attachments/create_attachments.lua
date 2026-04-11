@@ -9,7 +9,6 @@ local ewc = get_mod("extended_weapon_customization")
 
 local type = type
 --local pairs = pairs
-local ipairs = ipairs
 local string = string
 local string_find = string.find
 local table = table
@@ -137,8 +136,8 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
 
     if kitbash_data.additional_asset_requirements then
         --dump_if_debug(kitbash_data, "Kitbash DAT FULL")
-        for _, sound_str in ipairs(kitbash_data.additional_asset_requirements) do
-            given_resource_dependencies[sound_str] = true
+        for i = 1, #(kitbash_data.additional_asset_requirements) do
+            given_resource_dependencies[kitbash_data.additional_asset_requirements[i]] = true
         end
         --dump_if_debug(given_resource_dependencies, "GIVEN resource_dependencies WITH CUSTOM DMG FROM ADDITIONAL ASSETS")
     end
@@ -303,6 +302,6 @@ local attachment_names = {
     "owo_sight_reticle",
     "owo_empty_attachments",
 }
-for _, name in ipairs(attachment_names) do
-    load_mod_file("attachments/"..name)
+for i = 1, #(attachment_names) do
+    load_mod_file("attachments/"..attachment_names[i])
 end
