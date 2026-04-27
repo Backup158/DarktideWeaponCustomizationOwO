@@ -1,6 +1,5 @@
-# 2026-DATAEXPUNGED
+# 2026-04-27
 v4.3.2
-
 - Added error message about using the MT Plugin
 - Added options to disable randomization for all groups of parts
 ## Added Parts/Support
@@ -23,7 +22,9 @@ v4.3.2
     - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Localized groups for holographic sights
 - ~~Realigned EOTech HWS's to hide the chainsword triggers more~~
-- Removed unused slot indicators to avoid vfx `spawner` crashes
+- Slim Blade vfx `spawner` crashes
+    - Removed unused slot indicators
+    - Disabled all vfx spawner exclusions (`disable_vfx_spawner_exclusion` is now true when creating any blade)
 ## Refactor
 - Reorganized OwO mode shitposting to be more easily read
 - Replaced `ipairs` with index based array access, per Fatshark's Lua optimization guide
