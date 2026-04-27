@@ -33,7 +33,7 @@ local table_clone = table.clone
 local table_equals = table.equals
 local table_dump = table.dump
 local table_merge_recursive = table.merge_recursive
-local vector3_box = Vector3Box
+
 -- ################################
 -- Game Content Addresses
 -- ################################
