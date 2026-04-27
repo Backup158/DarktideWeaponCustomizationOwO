@@ -234,7 +234,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             },
             -- ATTACHMENT NODE 
             -- DON'T FORGET THIS
-            current_attachment_node
+            current_attachment_node,
+            -- Disable VFX spawner exclusion
+            true
         )
 
         if all_attachment_names then
