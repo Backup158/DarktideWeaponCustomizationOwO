@@ -62,17 +62,17 @@ end
 --  internal_name: string; attachment name used internally
 --  kitbash_data: table; contains data to copy over for the kitbash
 --  attachment_point: string; attachment point for the given kitbash
---  use_vfx_here: boolean; if muzzle flash should spawn
+--  force_vfx_usage: boolean; if muzzle flash should spawn
 -- RETURN: N/A
 -- ######
-local function create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
+local function create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, force_vfx_usage)
     -- Allows VFX to play, if it's a muzzle/barrel
     --  disable_vfx_spawner_exclusion
-    local have_vfx
-    if use_vfx_here then
-        have_vfx = true
+    local disable_vfx_exclusion
+    if force_vfx_usage then
+        disable_vfx_exclusion = true
     else
-        have_vfx = false
+        disable_vfx_exclusion = false
     end
     -- create kitbash table to send back for merging
     table_to_add_to.kitbashs[replacement_name] = {
@@ -83,7 +83,7 @@ local function create_kitbash_merge_table(table_to_add_to, replacement_name, int
         attach_node = attachment_point,
         dev_name = internal_name,
         name = replacement_name,
-        disable_vfx_spawner_exclusion = have_vfx
+        disable_vfx_spawner_exclusion = disable_vfx_exclusion
     }
 end
 
@@ -98,7 +98,7 @@ end
 --  attachment_point: string; attachment point for the given kitbash
 -- RETURN: N/A
 -- ######
-function mod.create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
+function mod.create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, force_vfx_usage)
     local display_name_to_use = nil
     local given_base_unit = nil
     local given_resource_dependencies = nil
@@ -127,11 +127,11 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
             [given_base_unit] = true,
         }
     end
-    local have_vfx
-    if use_vfx_here then
-        have_vfx = true
+    local disable_vfx_exclusion
+    if force_vfx_usage then
+        disable_vfx_exclusion = true
     else
-        have_vfx = false
+        disable_vfx_exclusion = false
     end
 
     if kitbash_data.additional_asset_requirements then
@@ -168,7 +168,7 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
         name = replacement_name,
         workflow_state = "RELEASABLE",
         is_full_item = true,
-        disable_vfx_spawner_exclusion = have_vfx,
+        disable_vfx_spawner_exclusion = disable_vfx_exclusion,
     }
 end
 local create_kitbash_full_item = mod.create_kitbash_full_item
@@ -186,7 +186,7 @@ local create_kitbash_full_item = mod.create_kitbash_full_item
 --  attachment_point: string; attachment point for the given kitbash
 -- RETURN: N/A
 -- ######
-function mod.create_an_attachment(table_to_add_to, internal_name, attachment_data, fixes_data, kitbash_data, attachment_point, use_vfx_here)
+function mod.create_an_attachment(table_to_add_to, internal_name, attachment_data, fixes_data, kitbash_data, attachment_point, force_vfx_usage)
     if table_to_add_to.attachments[internal_name] then
         mod:error(table_to_add_to.name.."; duplicate attachment: "..internal_name)
     else
@@ -219,9 +219,9 @@ function mod.create_an_attachment(table_to_add_to, internal_name, attachment_dat
 
         -- this only is a thing if it's a full item on its own
         if kitbash_data.base_unit then
-            create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
+            create_kitbash_full_item(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, force_vfx_usage)
         else
-            create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, use_vfx_here)
+            create_kitbash_merge_table(table_to_add_to, replacement_name, internal_name, kitbash_data, attachment_point, force_vfx_usage)
         end
     end
 end
