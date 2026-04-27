@@ -243,8 +243,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local suppressor_metal_ac1_sca = vector3_box(1.80, 1.80, 1.5)
     local suppressor_metal_ac1_sca_slim = vector3_box(1.1, 1.1, 1.5)
     --      the tip sticking out
-    local suppressor_metal_ac2_pos = vector3_box(0, 0.035, 0.025) -- side, updown, forwardsback
-    local suppressor_metal_ac2_pos2 = vector3_box(0, 0.036, 0.04)
+    local suppressor_metal_ac2_pos = vector3_box(0, 0.033, 0.025) -- side, updown, forwardsback
+    local suppressor_metal_ac2_pos2 = vector3_box(0, 0.033, 0.04)
     local suppressor_metal_ac2_rot = vector3_box(90, 0, 0)
     local suppressor_metal_ac2_sca = vector3_box(0.6, 0.8, 0.6)
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
@@ -323,12 +323,17 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     )
     ]]
     -- Wrapped
-    -- Reusing Heavy metal
+    -- The wrapped grip
     local suppressor_wrapped_ac1_pos = vector3_box(0, 0.164, 0.002)
     local suppressor_wrapped_ac1_rot = vector3_box(-90, 0, 0)
     local suppressor_wrapped_ac1_sca = vector3_box(0.77, 0.6, 1.1)
-    local suppressor_wrapped_ac2_pos = vector3_box(0, 0.164, 0)
     local suppressor_wrapped_ac1_sca_slim = vector3_box(0.45, 0.35, 1.1)
+    -- The metal tip
+    --  Reusing Heavy metal
+    local suppressor_wrapped_ac2_pos = vector3_box(0, 0.164, 0)
+    local suppressor_wrapped_ac2_rot = vector3_box(90, 0, 0)
+    local suppressor_wrapped_ac2_sca = vector3_box(1.2, 1.8, 1.2)
+    local suppressor_wrapped_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
     create_suppressor_and_slim("owo_suppressor_wrapped_01", 
         {
             ac1 = _item_ranged.."/muzzles/wrapped_ac1",
@@ -342,9 +347,9 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             ac1_sca = suppressor_wrapped_ac1_sca,
             ac1_sca_slim = suppressor_wrapped_ac1_sca_slim,
             ac2_pos = suppressor_wrapped_ac2_pos,
-            ac2_rot = suppressor_metal_ac2_rot,
-            ac2_sca = suppressor_metal_ac2_sca,
-            ac2_sca_slim = suppressor_metal_ac2_sca_slim,
+            ac2_rot = suppressor_wrapped_ac2_rot,
+            ac2_sca = suppressor_wrapped_ac2_sca,
+            ac2_sca_slim = suppressor_wrapped_ac2_sca_slim,
         }
     )
 
