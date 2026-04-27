@@ -204,6 +204,13 @@ local localizations = {
 		--en = "You have enabled Discord compatibility mode. Make sure you have the latest beta releases for the base EWC mod (and Syn's Edits if you use it)! These are found in the Darktide Modders Discord [https://discord.gg/rKYWtaDx4D], in the pinned messages of the #weapon-customization-mod channel and the Syndonai's Edits thread in #creation-showcase, respectively. Remember to restart/reload the game.",
 		en = "You have enabled Discord compatibility mode, which currently does nothing."
 	},
+	-- Version logging message appears after the version number, such as: v3.4.2 loaded uwu nya :3
+	mod_version_logging_message = {
+		en = " loaded uwu nya :3",
+	},
+	mod_debug_mode_active_message = {
+		en = "Debug mode active. Verbose logging in effect.",
+	},
 	mod_error_missing_ewc = {
 		en = "Extended Weapon Customization mod required",
 	},
@@ -280,6 +287,10 @@ local owo_mode_shitposting = {
 	{	localization_id = "debug_mode_description",
 		language_code = "en",
 		text = "V-Vewbose pwinting",
+	},
+	{	localization_id = "mod_debug_mode_active_message",
+		language_code = "en",
+		text = "UwU Debug mowode a-active :3. Vewbose w-w-wogging in effect.",
 	},
 	-- OwO Mode
 	{	localization_id = "owo_mode",

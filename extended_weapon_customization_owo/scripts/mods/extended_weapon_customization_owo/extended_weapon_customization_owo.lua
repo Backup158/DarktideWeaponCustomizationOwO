@@ -5,13 +5,13 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- ###################################################################
 -- Prints a message to the console log containing the current version number
 mod.version = "4.4.0-beta"
-mod:info('v' .. mod.version .. ' loaded uwu nya :3')
+mod:info('v' .. mod.version .. mod:localize("mod_version_logging_message"))
 
 -- Discord mode
 -- Only needs to be checked at launch because the stuff it affects only runs at startup
 mod.discord_mode = mod:get("discord_mode")
 local debug_mode = mod:get("debug_mode")
-if debug_mode then mod:info('UwU Debug mowode a-active :3. Vewbose w-w-wogging in effect.') end
+if debug_mode then mod:info(mod:localize("mod_debug_mode_active_message")) end
 
 -- ################################
 -- Local References for Performance
