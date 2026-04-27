@@ -4,7 +4,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- DATA
 -- ###################################################################
 -- Prints a message to the console log containing the current version number
-mod.version = "4.3.1"
+mod.version = "4.4.0-beta"
 mod:info('v' .. mod.version .. ' loaded uwu nya :3')
 
 -- Discord mode

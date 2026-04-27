@@ -1,5 +1,5 @@
 # 2026-04-27
-v4.3.2
+v4.4.0-beta
 - Added error message about using the MT Plugin
 - Added options to disable randomization for all groups of parts
 ## Added Parts/Support
