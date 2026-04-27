@@ -213,7 +213,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             fixes_to_add,
             -- Kitbash
             {   base_unit = string_regex_sub(base_item_address, "01", number_string),
-                --[
+                --[[
                 --base_unit = "content/characters/empty_item/empty_item",
                 attachments = {
                     zzz_shared_material_overrides = {
@@ -230,7 +230,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                         }
                     }
                 }
-                --]]
+                ]]
             },
             -- ATTACHMENT NODE 
             -- DON'T FORGET THIS

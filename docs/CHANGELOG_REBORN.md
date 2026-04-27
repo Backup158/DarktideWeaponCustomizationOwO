@@ -8,9 +8,9 @@ v4.3.2
     - Reusing Suppressors to keep the old bug
     - It only works on Autoguns and "works" is being generous
 - Added slim variant of Wrapped Suppressor
-- Aligned Suppressors on Combat Shotguns for Syn's barrels
-- Aligned Holographic Sights for Syn's receiver extensions
-    - sight offset has similar issues with flipped blades, in that they're inconsistent and make me want to contribute to the statistic
+- ~~Aligned Suppressors on Combat Shotguns for Syn's barrels~~
+- ~~Aligned Holographic Sights for Syn's receiver extensions~~
+    - ~~sight offset has similar issues with flipped blades, in that they're inconsistent and make me want to contribute to the statistic~~
 ## Fixes
 - Robust handling for `mod.create_requirements_string_from_names_table` mainly around passing various types
 - Realigned suppressors for Combat Shotguns
@@ -22,7 +22,8 @@ v4.3.2
     - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
     - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
 - Localized groups for holographic sights
-- Realigned EOTech HWS's to hide the chainsword triggers more
+- ~~Realigned EOTech HWS's to hide the chainsword triggers more~~
+- Removed unused slot indicators to avoid vfx `spawner` crashes
 ## Refactor
 - Reorganized OwO mode shitposting to be more easily read
 - Replaced `ipairs` with index based array access, per Fatshark's Lua optimization guide
