@@ -89,6 +89,7 @@ local attachments_table_for_ewc = {
 mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/utilities/general_helpers")
 local load_mod_file = mod.load_mod_file
 local info_if_debug = mod.info_if_debug
+local dump_if_debug = mod.dump_if_debug
 local merge_recursive_safe = mod.merge_recursive_safe
 local table_insert_all_from_table = mod.table_insert_all_from_table
 local string_is_key_in_table = mod.string_is_key_in_table
@@ -433,9 +434,7 @@ for i = 1, #(siblings_to_add) do
     copy_attachments_and_fixes_to_siblings(siblings_to_add[i])
 end
 
-if debug_mode then
-    table_dump(attachments_table_for_ewc, "uwu fuck you bitch\nALL THE FUCKING TABLE RAAAGH", 10)
-end
+dump_if_debug(attachments_table_for_ewc, "uwu fuck you bitch\nALL THE FUCKING TABLE RAAAGH")
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
