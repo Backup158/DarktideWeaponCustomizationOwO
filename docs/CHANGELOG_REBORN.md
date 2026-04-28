@@ -1,3 +1,9 @@
+# 2026-WIP
+v4.4.0
+
+### Refactor
+- Made more player-facing messages localization strings, so they can be easily translated if needed
+
 # 2026-04-27
 v4.4.0-beta
 - Added error message about using the MT Plugin

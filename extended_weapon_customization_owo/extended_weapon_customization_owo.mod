@@ -14,6 +14,6 @@ return {
 	load_after = {
 		"extended_weapon_customization",
 	},
-	version = "4.4.0-beta",
+	version = "4.4.0",
 	packages = {},
 }
