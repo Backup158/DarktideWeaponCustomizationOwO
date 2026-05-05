@@ -1,5 +1,6 @@
-# 2026-WIP
+# 2026-05-05
 v4.4.0
+- Reverted the suppressor changes, to support the new EWC version
 
 ### Refactor
 - Made more player-facing messages localization strings, so they can be easily translated if needed
