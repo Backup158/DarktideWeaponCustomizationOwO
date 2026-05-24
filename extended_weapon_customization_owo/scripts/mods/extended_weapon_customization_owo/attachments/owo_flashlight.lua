@@ -82,6 +82,14 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
             base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
             --item = _item_ranged.."/flashlights/flashlight_01",
             --[[
+            
+            attachments = {
+                zzz_shared_material_overrides = {
+                    item = "",
+                    children = table_of_children_and_fixes.children,
+                },
+            }
+            ]]
             fix = {
                 disable_in_ui = true,
                 offset = {
@@ -92,13 +100,7 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
                 },
             },
             children = table_clone(table_of_children_and_fixes.children),
-            ]]
-            attachments = {
-                zzz_shared_material_overrides = {
-                    item = "",
-                    children = table_of_children_and_fixes.children,
-                },
-            }
+            
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS

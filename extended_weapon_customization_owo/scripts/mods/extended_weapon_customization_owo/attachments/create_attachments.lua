@@ -102,12 +102,16 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
     local display_name_to_use = nil
     local given_base_unit = nil
     local given_resource_dependencies = nil
+    -- When children is left empty, the game will hang after closing since resources are not unloaded
+    local given_attachments = nil
+    --[[
     local given_attachments = {
         zzz_shared_material_overrides = {
             item = "",
             children = {},
         },
     }
+    ]]
     if type(kitbash_data) == "table" then
         given_base_unit = kitbash_data.base_unit
         if kitbash_data.attachments and (type(kitbash_data.attachments) == "table") then

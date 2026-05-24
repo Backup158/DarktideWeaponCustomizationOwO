@@ -81,10 +81,12 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             nil,
             {   base_unit = _item_empty_master_table, --_item_empty_trinket, -- invisible base
                 attachments = {
+                    --[[
                     zzz_shared_material_overrides = {
                         item = "",
                         children = {},
                     },
+                    ]]
                     base = {
                         item = model_table.base or _item_ranged.."/muzzles/owo_supp_base",
                         fix = {

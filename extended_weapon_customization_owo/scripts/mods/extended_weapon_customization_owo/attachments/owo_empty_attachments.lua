@@ -59,10 +59,12 @@ function mod.owo_invisible_shock_maul_connector()
         -- Kitbash
         {   base_unit = "content/characters/empty_item/empty_item",
             attachments = {
+                --[[
                 zzz_shared_material_overrides = {
                     item = "",
                     children = {},
                 },
+                ]]
                 connector = {
                     item = "content/weapons/player/melee/human_power_maul/attachments/connector_01/connector_01",
                     fix = {
