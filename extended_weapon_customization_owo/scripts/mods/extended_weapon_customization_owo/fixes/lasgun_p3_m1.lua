@@ -1,3 +1,5 @@
+local mod = get_mod("extended_weapon_customization_owo")
+
 -- ################################
 -- Local References for Performance
 -- ################################
@@ -12,6 +14,24 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
+
+-- ################################
+-- Attachment Names for Fixes
+-- ################################
+local all_infantry_autogun_receivers = mod.all_infantry_autogun_receivers
+local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
+local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
+
+local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
+local all_holographic_sights_names = mod.all_holographic_sights_names
+
+local syn_ma5_extensions = mod.syn_ma5_extensions
+local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions
+local syn_ma5_classic_extensions = mod.syn_ma5_classic_extensions
+local syn_ma5_compact_classic = mod.syn_ma5_compact_classic
+local syn_all_ma5_extensions = mod.syn_all_ma5_extensions
+local syn_recon_extensions = mod.syn_recon_extensions
+local syn_all_receiver_extensions = mod.syn_all_receiver_extensions
 
 -- ###################################################################
 -- FIXES TO RETURN
