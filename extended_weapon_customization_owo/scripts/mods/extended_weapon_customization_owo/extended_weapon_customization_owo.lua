@@ -268,6 +268,8 @@ local all_ranged_weapons = {
     "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
     "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
+    "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1",
+    "arc_rifle_p1_m1", "galvanic_rifle_p1_m1", "phosphor_pistol_p1_m1",
 }
 local ranged_muzzle_no_double = {
     "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
@@ -282,6 +284,9 @@ local ranged_muzzle_no_double = {
     --"ogryn_heavystubber_p1_m1", 
     --"ogryn_heavystubber_p2_m1", 
     "ogryn_thumper_p1_m1", 
+    "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1",
+    -- "galvanic_rifle_p1_m1", 
+    "arc_rifle_p1_m1", "phosphor_pistol_p1_m1",
 }
 local sighted_weapons = {
     "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
@@ -290,10 +295,13 @@ local sighted_weapons = {
     "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
     "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
+    "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1",
+    "arc_rifle_p1_m1", "galvanic_rifle_p1_m1", "phosphor_pistol_p1_m1",
 }
 local one_handed_mauls =  {
     "powermaul_p1_m1", 
     "powermaul_p2_m1", "powermaul_shield_p1_m1", 
+    "powermaul_p3_m1", 
 }
 -- ################
 -- Ranged
@@ -305,6 +313,7 @@ add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), { "shotpistol_shi
 
 -- Muzzle
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_muzzle_no_double, "muzzle")
+add_attachments_to_list_of_weapons(mod.owo_suppressor(), { "galvanic_rifle_p1_m1" }, "muzzle_2")
 --add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_sight_01"), {"ogryn_thumper_p1_m1"}, "muzzle")
 add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_barrel_01"), {"ogryn_heavystubber_p2_m1"}, "muzzle")
 
