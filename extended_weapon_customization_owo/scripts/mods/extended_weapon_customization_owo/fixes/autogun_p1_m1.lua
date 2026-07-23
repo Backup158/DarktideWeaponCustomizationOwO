@@ -28,6 +28,7 @@ local syn_ma5_classic_extensions = mod.syn_ma5_classic_extensions
 local syn_ma5_compact_classic = mod.syn_ma5_compact_classic
 local syn_all_ma5_extensions = mod.syn_all_ma5_extensions
 local syn_recon_extensions = mod.syn_recon_extensions
+local syn_all_receiver_extensions = mod.syn_all_receiver_extensions
 
 -- ###################################################################
 -- FIXES TO RETURN
@@ -111,6 +112,9 @@ local these_fixes = {
                 -- has = "owo_holographic_sight_eotech",
                 has = all_holographic_sights_names.eotech,
             },
+            syn_receiver_extension = {
+                missing = syn_all_receiver_extensions,
+            },
         },
         fix = {
             offset = {
@@ -143,7 +147,7 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             syn_receiver_extension = {
-                has = syn_all_ma5_extensions.."|"..syn_recon_extensions,
+                has = syn_all_receiver_extensions,
             },
         },
         fix = {

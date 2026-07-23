@@ -79,3 +79,5 @@ mod.syn_ma5_classic_extensions = "ma5_extension_20|ma5_extension_21|ma5_extensio
 mod.syn_ma5_compact_classic = "ma5_compact_extension_20|ma5_compact_extension_21"
 mod.syn_all_ma5_extensions = mod.syn_ma5_extensions.."|"..mod.syn_ma5_compact_extensions.."|"..mod.syn_ma5_classic_extensions.."|"..mod.syn_ma5_compact_classic
 mod.syn_recon_extensions = "recon_extension_01|recon_extension_02|recon_extension_03|recon_extension_04|recon_extension_05|recon_extension_06|recon_extension_07|recon_extension_08|recon_extension_09|recon_extension_01_reversed|recon_extension_02_reversed|recon_extension_03_reversed|recon_extension_04_reversed|recon_extension_05_reversed|recon_extension_06_reversed|recon_extension_07_reversed|recon_extension_08_reversed|recon_extension_09_reversed"
+mod.syn_g36_extensions = "g36_extension_01|g36_extension_02"
+mod.syn_all_receiver_extensions = mod.syn_all_ma5_extensions.."|"..mod.syn_recon_extensions.."|"..mod.syn_g36_extensions
