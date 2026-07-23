@@ -1,6 +1,11 @@
 # 4.5.0 - 2026-07-23
 ## Added
 - Vigilant Autogun and Braced alignments (copied values from Infantry Autogun)
+- Infantry Lasgun sight alignments
+    - the reticles themselves are jank and evil
+    - half the time they align
+    - all of the time, they don't hide the housing properly
+    - Use the empty sight reticle for now
 ## Changed
 
 ## Fixed
