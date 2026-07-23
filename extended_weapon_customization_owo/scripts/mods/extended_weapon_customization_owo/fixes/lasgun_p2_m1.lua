@@ -126,6 +126,9 @@ local these_fixes = {
             receiver = {
                 has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
             },
+            syn_receiver_extension = {
+                missing = "query:autogun_p1_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+            },
         },
         fix = {
             offset = {
