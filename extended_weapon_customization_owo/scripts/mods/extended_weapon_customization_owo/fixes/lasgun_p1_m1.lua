@@ -93,7 +93,7 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0002, 0.0, -0.013),
+                position = vector3_box(0.0002, 0.0, -0.012),
             },
         },
     },
@@ -112,6 +112,10 @@ local these_fixes = {
                 position = vector3_box(0.0, -0.016, 0.01),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
+            },
+            -- This is redundant logically but works like this because fuck you.
+            hide = {
+                mesh = {5,6},
             },
         },
     },
