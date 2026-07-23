@@ -70,6 +70,9 @@ local these_fixes = {
             sight = {
                 has = all_holographic_sights_names.all,
             },
+            receiver = {
+                missing = "query:lasgun_p3_m1,receiver,extended_weapon_customization_syn_edits",
+            },
         },
         fix = {
             attach = {
@@ -77,6 +80,31 @@ local these_fixes = {
             },
             offset = {
                 position = vector3_box(0, 0, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    --  Rail for low syn receivers
+    {   attachment_slot = "rail",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.all,
+            },
+            receiver = {
+                has = "query:lasgun_p3_m1,receiver,extended_weapon_customization_syn_edits",
+            },
+            syn_receiver_extension = {
+                missing = "query:lasgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+            },
+        },
+        fix = {
+            attach = {
+                rail = "lasgun_rifle_rail_01",
+            },
+            offset = {
+                position = vector3_box(0, -0.016, -0.052),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
                 node = 1,
@@ -92,7 +120,7 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             receiver = {
-                -- missing = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                -- missing = "query:lasgun_p3_m1,receiver,extended_weapon_customization_syn_edits",
                 has = all_recon_lasgun_receivers,
             },
         },
@@ -130,13 +158,13 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             receiver = {
-                -- missing = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                -- missing = "query:lasgun_p3_m1,receiver,extended_weapon_customization_syn_edits",
                 has = all_recon_lasgun_receivers,
             },
         },
         fix = {
             offset = {
-                position = vector3_box(0.0002, 0.0, -0.075),
+                position = vector3_box(0.0002, 0.0, -0.036),
             },
         },
     },
@@ -149,17 +177,17 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             receiver = {
-                -- has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                -- has = "query:lasgun_p3_m1,receiver,extended_weapon_customization_syn_edits",
                 has = syn_hellgun_receivers,
             },
             syn_receiver_extension = {
-                -- missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                -- missing = "query:lasgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
                 missing = syn_all_receiver_extensions,
             },
         },
         fix = {
             offset = {
-                position = vector3_box(0.0002, 0.0, 0.015),
+                position = vector3_box(0.0002, 0.0, 0.045),
             },
         },
     },
@@ -172,11 +200,11 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             receiver = {
-                --has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                --has = "query:lasgun_p3_m1,receiver,extended_weapon_customization_syn_edits",
                 has = syn_hellgun_receivers,
             },
             syn_receiver_extension = {
-                -- missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                -- missing = "query:lasgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
                 missing = syn_all_receiver_extensions,
             },
         },
