@@ -141,6 +141,7 @@ local these_fixes = {
         },
     },
     --  Compatibility with Syn's Receiver Extensions
+    --      wtf why do these only apply half the time?
     {   attachment_slot = "sight_offset",
         requirements = {
             sight = {
@@ -152,7 +153,7 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, 0.0, -0.05),
+                position = vector3_box(0.0, 0.0, -0.065),
             },
         },
     },
