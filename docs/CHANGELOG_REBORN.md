@@ -6,8 +6,17 @@
     - half the time they align
     - all of the time, they don't hide the housing properly
     - Use the empty sight reticle for now
+- Recon Lasgun holosight alignments
+    - With partial compatibility with Syn's receivers
+    - Sometimes the alignments don't register and it just stays floating
+    - I'm guessing this is the same cause as the slim blade flip issue. This issue will be investigated
+- Helbore Lasgun holosight alignments
+    - The sight itself works, but the reticles won't cooperate for me, for whatever reason
+    - Use the empty reticle
 ## Changed
-
+- Helbore Lasguns with suppressors have bayonets aligned now
+    - Before, they were clipping inside the muzzle
+    - Now, they should be closer to the bottom lug of the barrel
 ## Fixed
 
 # 2026-05-05
