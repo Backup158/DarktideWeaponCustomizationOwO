@@ -200,17 +200,17 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             receiver = {
-                --has = "query:lasgun_p3_m1,receiver,extended_weapon_customization_syn_edits",
-                has = syn_hellgun_receivers,
+                has = "query:lasgun_p3_m1,receiver,extended_weapon_customization_syn_edits",
+                -- has = syn_hellgun_receivers,
             },
             syn_receiver_extension = {
-                -- missing = "query:lasgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
-                missing = syn_all_receiver_extensions,
+                missing = "query:lasgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                -- missing = syn_all_receiver_extensions,
             },
         },
         fix = {
             offset = {
-                position = vector3_box(0, 0.0, -0.055),
+                position = vector3_box(0, 0.0, -0.052),
             },
         },
     },
