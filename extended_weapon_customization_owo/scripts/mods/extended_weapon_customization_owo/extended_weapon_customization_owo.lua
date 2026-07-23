@@ -389,6 +389,16 @@ add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01")
 load_mod_file("fixes/shared_fix_requirements")
 
 -- Adding the specific fixes
+local special_needs_fixes = { 
+    "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
+    "bolter_p1_m1", "boltpistol_p1_m1", 
+    "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", 
+    "shotgun_p1_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
+    "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
+    "powersword_2h_p1_m1", 
+    "powermaul_p2_m1", "powermaul_shield_p1_m1", 
+    "needlepistol_p1_m1", 
+}
 local function insert_custom_fixes_for_weapon(weapon_id)
     local loaded_table = load_mod_file("fixes/"..weapon_id)
     if not loaded_table then
@@ -443,13 +453,16 @@ local function insert_custom_fixes_for_weapon(weapon_id)
         table_merge_recursive(attachments_table_for_ewc.attachment_slots[weapon_id], slots_to_add)
     end
 end
+--[[
 for i = 1, #(all_ranged_weapons) do
-    local weapon_id = all_ranged_weapons[i]
-    insert_custom_fixes_for_weapon(weapon_id)
+    insert_custom_fixes_for_weapon(all_ranged_weapons[i])
 end
 for i = 1, #(all_melee_weapons) do
-    local weapon_id = all_melee_weapons[i]
-    insert_custom_fixes_for_weapon(weapon_id)
+    insert_custom_fixes_for_weapon(all_melee_weapons[i])
+end
+]]
+for i = 1, #(special_needs_fixes) do
+    insert_custom_fixes_for_weapon(special_needs_fixes[i])
 end
 
 -- ################################
