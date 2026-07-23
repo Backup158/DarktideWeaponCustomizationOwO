@@ -246,7 +246,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local suppressor_metal_ac1_sca_slim = vector3_box(1.1, 1.1, 1.5)
     --      the tip sticking out
     local suppressor_metal_ac2_pos = vector3_box(0, 0.086, 0.0) -- side, updown, forwardsback | this is what it is with the new system instead of using the revert (0, 0.033, 0.025)
-    local suppressor_metal_ac2_pos2 = vector3_box(0, 0.013, 0.0) -- (0, 0.033, 0.04)
+    local suppressor_metal_ac2_pos2 = vector3_box(0, 0.127, 0.0) -- (0, 0.033, 0.04)
     local suppressor_metal_ac2_rot = vector3_box(0, 0, 0) -- (90, 0, 0)
     local suppressor_metal_ac2_sca = vector3_box(1.2, 1.8, 1.2) -- (0.6, 0.8, 0.6)
     local suppressor_metal_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)
@@ -332,7 +332,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local suppressor_wrapped_ac1_sca_slim = vector3_box(0.45, 0.35, 1.1)
     -- The metal tip
     --  Reusing Heavy metal
-    local suppressor_wrapped_ac2_pos = vector3_box(0, 0.086, 0.0)
+    local suppressor_wrapped_ac2_pos = vector3_box(0, 0.162, 0.0)
     local suppressor_wrapped_ac2_rot = vector3_box(0, 0, 0)
     local suppressor_wrapped_ac2_sca = vector3_box(1.2, 1.8, 1.2)
     local suppressor_wrapped_ac2_sca_slim = vector3_box(0.655, 1.8, 0.655)

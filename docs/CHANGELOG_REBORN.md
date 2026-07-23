@@ -28,6 +28,9 @@
 - Helbore Lasgun holosight alignments
     - The sight itself works, but the reticles won't cooperate for me, for whatever reason
     - Use the empty reticle
+- Aligned suppressor tip
+    - Wrapped and Heavy Metal 2
+    - There's supposed to be a tip with a noticable barrel edge, but it was too deep inside so it was just a flat, closed barrel
 
 # 2026-05-05
 v4.4.0
