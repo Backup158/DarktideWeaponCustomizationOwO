@@ -4,7 +4,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- DATA
 -- ###################################################################
 -- Prints a message to the console log containing the current version number
-mod.version = "4.4.0"
+mod.version = "4.5.0"
 mod:info('v' .. mod.version .. mod:localize("mod_version_logging_message"))
 
 -- Discord mode
@@ -348,7 +348,7 @@ load_mod_file("fixes/shared_fix_requirements")
 -- Adding the specific fixes
 --  Lists all weapons with custom fixes here. Automatically finding these is nonviable due to (it probably not being possible and) the massive performance hit it'd be. This is simple enough to maintain
 local special_needs_fixes = { 
-    "autogun_p1_m1", "autopistol_p1_m1", 
+    "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
     "bolter_p1_m1", "boltpistol_p1_m1", 
     "lasgun_p3_m1", 
     "shotgun_p1_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 

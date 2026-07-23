@@ -1,3 +1,10 @@
+# 4.5.0 - 2026-07-23
+## Added
+- Vigilant Autogun and Braced alignments (copied values from Infantry Autogun)
+## Changed
+
+## Fixed
+
 # 2026-05-05
 v4.4.0
 - Reverted the suppressor changes, to support the new EWC version
