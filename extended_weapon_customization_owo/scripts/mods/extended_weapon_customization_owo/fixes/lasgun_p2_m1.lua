@@ -42,9 +42,12 @@ local syn_all_receiver_extensions = mod.syn_all_receiver_extensions
 -- FIXES TO RETURN
 -- ###################################################################
 local these_fixes = {
-    -- -----------------
+    -- ----------------------
+    -- Muzzles
+    -- ----------------------
+    -- -----------
     -- Suppressors
-    -- -----------------
+    -- -----------
     -- Bayonets are based on muzzle
     {   attachment_slot = "bayonet",
         requirements = {
@@ -61,9 +64,12 @@ local these_fixes = {
             },
         },
     },
-    -- -----------------
+    -- ----------------------
+    -- Stocks
+    -- ----------------------
+    -- -----------
     -- Tactical Stocks
-    -- -----------------
+    -- -----------
     {   attachment_slot = "stock",
         requirements = {
             stock = {
@@ -98,9 +104,12 @@ local these_fixes = {
             },
         },
     },
-    -- -----------------
+    -- ----------------------
+    -- Sights
+    -- ----------------------
+    -- -----------
     -- Holographic Sights
-    -- -----------------
+    -- -----------
     --  Sight Alignment
     {   attachment_slot = "sight_offset",
         requirements = {

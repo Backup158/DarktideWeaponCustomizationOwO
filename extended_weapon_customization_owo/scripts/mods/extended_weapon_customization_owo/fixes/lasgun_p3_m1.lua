@@ -111,7 +111,9 @@ local these_fixes = {
             },
         },
     },
+    -- -----------
     -- Holographic Sights
+    -- -----------
     --  Actual Position
     --[[
     {   attachment_slot = "sight",

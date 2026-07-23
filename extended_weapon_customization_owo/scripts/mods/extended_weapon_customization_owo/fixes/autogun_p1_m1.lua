@@ -42,7 +42,9 @@ local these_fixes = {
     -- ----------------------
     -- Stocks
     -- ----------------------
+    -- -----------
     -- Tactical Stocks
+    -- -----------
     {   attachment_slot = "stock",
         requirements = {
             stock = {
@@ -109,7 +111,9 @@ local these_fixes = {
             },
         },
     },
+    -- -----------
     -- Holographic Sights
+    -- -----------
     --  Sight Alignment
     {   attachment_slot = "sight_offset",
         requirements = {

@@ -40,7 +40,9 @@ local these_fixes = {
     -- ----------------------
     -- Stocks
     -- ----------------------
+    -- -----------
     -- Tactical Stocks
+    -- -----------
     --  Seems good with default
     -- ----------------------
     -- Sights
@@ -78,7 +80,9 @@ local these_fixes = {
             },
         },
     },
+    -- -----------
     -- Holographic Sights
+    -- -----------
     --  Sight Alignment
     {   attachment_slot = "sight_offset",
         requirements = {
