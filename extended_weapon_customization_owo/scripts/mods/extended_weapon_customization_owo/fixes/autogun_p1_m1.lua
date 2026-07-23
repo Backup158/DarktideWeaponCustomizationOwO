@@ -119,7 +119,8 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             syn_receiver_extension = {
-                missing = syn_all_receiver_extensions,
+                missing = "query:autogun_p1_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                -- missing = syn_all_receiver_extensions,
             },
         },
         fix = {
