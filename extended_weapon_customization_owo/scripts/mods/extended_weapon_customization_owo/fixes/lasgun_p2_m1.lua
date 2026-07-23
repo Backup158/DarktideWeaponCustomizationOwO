@@ -130,10 +130,6 @@ local these_fixes = {
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
             },
-            -- This is redundant logically but works like this because fuck you.
-            hide = {
-                mesh = {5,6},
-            },
         },
     },
 }
