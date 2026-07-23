@@ -406,7 +406,10 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_scale = slim_psword_scl,
         slim_g_scale = slim_psword_g_scl,
     })
-    slim_blade_variant_helper_single("deluxe_01", "mech_psword", "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01", {
+    -- what the actual shit?
+    -- i'm not rewriting the function so i'm just gonna do this cursed swap
+    -- this game was created by psychopaths
+    slim_blade_variant_helper_single("01", "mech_psword", "content/weapons/player/melee/power_sword/attachments/blade_deluxe01/blade_deluxe01", {
         flat_scale = flat_psword_scl,
         flat_g_scale = flat_psword_g_scl,
         slim_scale = slim_psword_scl,
