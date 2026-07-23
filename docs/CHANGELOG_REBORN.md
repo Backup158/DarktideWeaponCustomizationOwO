@@ -3,6 +3,12 @@
 - Slim Blades
     - Mechanicus Power Sword is added to list of available blades (and whoever named them is a psychopath)
     - Mechanicus Power Sword can use slim blades. They'll look weird due to the lack of guard on the grip
+- Added parts to the new weapons
+    - "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1",
+    "arc_rifle_p1_m1", "galvanic_rifle_p1_m1", "phosphor_pistol_p1_m1"
+    - All the flashlights (tactical ones are still broken)
+    - Holographic Sights
+    - Suppressors
 ## Changed
 - Refactored list of slim blade damage types so it's one table i need to edit
 ## Fixed
