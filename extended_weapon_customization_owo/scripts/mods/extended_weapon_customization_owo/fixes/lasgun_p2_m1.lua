@@ -28,6 +28,7 @@ local all_recon_lasgun_receivers = mod.all_recon_lasgun_receivers
 
 local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
+local all_owo_suppressors = mod.any_suppressor
 
 local syn_ma5_extensions = mod.syn_ma5_extensions
 local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions
@@ -41,7 +42,28 @@ local syn_all_receiver_extensions = mod.syn_all_receiver_extensions
 -- FIXES TO RETURN
 -- ###################################################################
 local these_fixes = {
+    -- -----------------
+    -- Suppressors
+    -- -----------------
+    -- Bayonets are based on muzzle
+    {   attachment_slot = "bayonet",
+        requirements = {
+            muzzle = {
+                has = all_owo_suppressors,
+            },
+        },
+        fix = {
+            -- node = 3,
+            offset = {
+                position = vector3_box(0.0, -0.02, -0.05),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+            },
+        },
+    },
+    -- -----------------
     -- Tactical Stocks
+    -- -----------------
     {   attachment_slot = "stock",
         requirements = {
             stock = {
@@ -76,8 +98,74 @@ local these_fixes = {
             },
         },
     },
+    -- -----------------
+    -- Holographic Sights
+    -- -----------------
+    --  Sight Alignment
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.eotech,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.0, -0.03),
+            },
+        },
+    },
+    --  Reticle Alignment
+    {   attachment_slot = "sight_reticle",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.eotech,
+            },
+            sight_reticle = {
+                has = all_owo_sight_reticle_names,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, -0.016, 0.013),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+            },
+            -- This is redundant logically but works like this because fuck you.
+            hide = {
+                mesh = {5,6},
+            },
+        },
+    },
+}
+
+local custom_attachments = {
+    sight_reticle = {
+        parent_slot = "sight",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.0, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    barrel_foreskin = {
+        parent_slot = "barrel",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, -0.3, 0), -- what a shitty way of doing this. but i'm NOT crawling through all the viable nodes
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
 }
 
 return {
     fixes = these_fixes,
+    attachment_slots = custom_attachments,
 }
