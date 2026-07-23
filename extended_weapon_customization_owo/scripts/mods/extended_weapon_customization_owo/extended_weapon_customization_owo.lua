@@ -364,6 +364,7 @@ local special_needs_fixes = {
     "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
     "powersword_2h_p1_m1", 
     "powermaul_p2_m1", "powermaul_shield_p1_m1", 
+    "needlepistol_p1_m1", 
 }
 for i = 1, #(special_needs_fixes) do
     local weapon_id = special_needs_fixes[i]
