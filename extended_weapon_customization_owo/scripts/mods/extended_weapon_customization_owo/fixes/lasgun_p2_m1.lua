@@ -32,6 +32,7 @@ local syn_ma5_compact_classic = mod.syn_ma5_compact_classic
 local syn_all_ma5_extensions = mod.syn_all_ma5_extensions
 local syn_recon_extensions = mod.syn_recon_extensions
 local syn_all_receiver_extensions = mod.syn_all_receiver_extensions
+local syn_hellgun_receivers = mod.syn_hellgun_receivers
 
 -- ###################################################################
 -- FIXES TO RETURN
@@ -127,7 +128,7 @@ local these_fixes = {
                 has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
             },
             syn_receiver_extension = {
-                missing = "query:autogun_p1_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
             },
         },
         fix = {
@@ -148,7 +149,7 @@ local these_fixes = {
                 has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
             },
             syn_receiver_extension = {
-                missing = "query:autogun_p1_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
             },
         },
         fix = {
