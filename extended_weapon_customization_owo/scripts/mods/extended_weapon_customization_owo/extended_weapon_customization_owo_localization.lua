@@ -98,6 +98,7 @@ mod:add_global_localize_strings({
 local slim_blade_names = {
 	psword = Localize("loc_weapon_family_powersword_p1_m1"), 
 	pfalchion = Localize("loc_weapon_family_powersword_p2_m1"), 
+	mech_psword = Localize("loc_weapon_family_powersword_p3_m1"), 
 	["2h_psword"] = Localize("loc_weapon_family_powersword_2h_p1_m1"),
 	["2h_psword_short"] = Localize("loc_weapon_family_powersword_2h_p1_m1").." (Short)",
 	fsword = Localize("loc_weapon_family_forcesword_p1_m1"),

@@ -42,7 +42,7 @@ local default_templates = {
     }
 } 
 
-local families_and_damage_types = { 
+mod.families_and_damage_types = { 
     ["psword"] = {
         damage_type = "metal_slashing_medium",
         real_name = "powersword_p1_m1",
@@ -50,6 +50,10 @@ local families_and_damage_types = {
     ["pfalchion"] = {
         damage_type = "metal_slashing_medium",
         real_name = "powersword_p2_m1",
+    }, 
+    ["mech_psword"] = {
+        damage_type = "metal_slashing_medium",
+        real_name = "powersword_p3_m1",
     }, 
     ["2h_psword"] = {
         damage_type = "metal_slashing_heavy",
@@ -80,6 +84,7 @@ local families_and_damage_types = {
         real_name = "combatsword_p2_m1",
     },  
 }
+local families_and_damage_types = mod.families_and_damage_types
 
 -- ################################
 -- Custom Damage Types

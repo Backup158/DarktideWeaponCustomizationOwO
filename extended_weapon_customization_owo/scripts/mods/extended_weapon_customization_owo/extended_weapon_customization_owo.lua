@@ -326,7 +326,7 @@ add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), sighted_weapons, "si
 -- ################
 -- Melee
 -- ################
-add_attachments_to_list_of_weapons(mod.owo_slim_blade(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade")
+add_attachments_to_list_of_weapons(mod.owo_slim_blade(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_p3_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "body")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade("head"), one_handed_mauls, "head")
 --[[

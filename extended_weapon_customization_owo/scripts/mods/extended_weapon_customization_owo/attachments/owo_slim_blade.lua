@@ -33,44 +33,7 @@ local for_all_weapon_models = mod.for_all_weapon_models
 local create_group_indicator = mod.create_group_indicator
 local dump_if_debug = mod.dump_if_debug
 
-local families_and_damage_types = { 
-    ["psword"] = {
-        damage_type = "metal_slashing_medium",
-        real_name = "powersword_p1_m1",
-    }, 
-    ["pfalchion"] = {
-        damage_type = "metal_slashing_medium",
-        real_name = "powersword_p2_m1",
-    }, 
-    ["2h_psword"] = {
-        damage_type = "metal_slashing_heavy",
-        real_name = "powersword_2h_p1_m1",
-    }, 
-    ["2h_psword_short"] = {
-        damage_type = "metal_slashing_heavy",
-        real_name = "powersword_2h_p1_m1",
-    }, 
-    ["fsword"] = {
-        damage_type = "metal_slashing_light",
-        real_name = "forcesword_p1_m1",
-    }, 
-    ["2h_fsword"] = {
-        damage_type = "metal_slashing_light",
-        real_name = "forcesword_2h_p1_m1",
-    }, 
-    ["2h_fsword_short"] = {
-        damage_type = "metal_slashing_light",
-        real_name = "forcesword_2h_p1_m1",
-    }, 
-    ["dclaw"] = {
-        damage_type = "metal_slashing_light",
-        real_name = "combatsword_p1_m1",
-    }, 
-    ["hsword"] = {
-        damage_type = "metal_slashing_light",
-        real_name = "combatsword_p2_m1",
-    },  
-}
+local families_and_damage_types = mod.families_and_damage_types
 
 -- ################################
 -- Attachment
@@ -247,6 +210,58 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         end
     end
     -- Calls the above for all the variants
+    local function slim_blade_variant_helper_single(number_string, base_name, model_base_path, table_of_all_transformations)
+        local calculated_damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
+        
+        -- Flat
+        slim_blade_attach_helper({
+            number_string = number_string, 
+            base_name = base_name, 
+            name_to_use = "flat_"..base_name, 
+            base_item_address = model_base_path,
+            damage_type = calculated_damage_type,
+        }, {
+            pos = table_of_all_transformations.pos,
+            scl = table_of_all_transformations.flat_scale,
+        })
+        
+        -- Flat (Grip)
+        slim_blade_attach_helper({
+            number_string = number_string, 
+            base_name = base_name, 
+            name_to_use = "flat_"..base_name.."_g", 
+            base_item_address = model_base_path,
+            damage_type = calculated_damage_type,
+        }, {
+            pos = table_of_all_transformations.pos,
+            scl = table_of_all_transformations.flat_g_scale, 
+            grip_scl = grip_scale
+        })
+      
+        -- Slim
+        slim_blade_attach_helper({
+            number_string = number_string, 
+            base_name = base_name, 
+            name_to_use = "slim_"..base_name, 
+            base_item_address = model_base_path,
+            damage_type = calculated_damage_type,
+        }, {
+            pos = table_of_all_transformations.pos,
+            scl = table_of_all_transformations.slim_scale,
+        })
+        -- Slim (Grip)
+        slim_blade_attach_helper({
+            number_string = number_string, 
+            base_name = base_name, 
+            name_to_use = "slim_"..base_name.."_g", 
+            base_item_address = model_base_path,
+            damage_type = calculated_damage_type,
+        }, {
+            pos = table_of_all_transformations.pos,
+            scl = table_of_all_transformations.slim_g_scale, 
+            grip_scl = grip_scale,
+        })
+    end
     local function slim_blade_variant_helper(amount_of_models, table_of_models_to_skip, base_name, model_base_path, table_of_all_transformations)
         local calculated_damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
         
@@ -318,6 +333,50 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_scale = slim_psword_scl,
         slim_g_scale = slim_psword_g_scl,
     })
+    -- Weird ass formatting makes me copy them manually
+    --      blade_08_ml01
+    --[[
+    slim_blade_attach_helper({
+        number_string = "08_ml01", 
+        base_name = "psword", 
+        name_to_use = "flat_psword", 
+        base_item_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01",
+        damage_type = "owo_metal_slashing_medium_powersword_p1_m1",
+    }, {
+        scl = flat_psword_scl, 
+        grip_scl = grip_scale
+    })
+    slim_blade_attach_helper({
+        number_string = "08_ml01", 
+        base_name = "psword", 
+        name_to_use = "flat_psword_g", 
+        base_item_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01",
+        damage_type = "owo_metal_slashing_medium_powersword_p1_m1",
+    }, {
+        scl = flat_psword_g_scl, 
+        grip_scl = grip_scale
+    })
+    slim_blade_attach_helper({
+        number_string = "08_ml01", 
+        base_name = "psword", 
+        name_to_use = "slim_psword", 
+        base_item_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01",
+        damage_type = "owo_metal_slashing_medium_powersword_p1_m1",
+    }, {
+        scl = slim_psword_scl, 
+        grip_scl = grip_scale
+    })
+    slim_blade_attach_helper({
+        number_string = "08_ml01", 
+        base_name = "psword", 
+        name_to_use = "slim_psword_g", 
+        base_item_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01",
+        damage_type = "owo_metal_slashing_medium_powersword_p1_m1",
+    }, {
+        scl = slim_psword_g_scl, 
+        grip_scl = grip_scale
+    })
+    ]]
     -- ------------------
     -- Power Falchion
     -- ------------------
@@ -331,6 +390,71 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_scale = slim_pfalchion_scl,
         slim_g_scale = slim_pfalchion_g_scl,
     })
+    -- ------------------
+    -- Mechanicus Power Sword
+    -- ------------------
+    -- Weird ass formatting makes me copy them manually
+    slim_blade_variant_helper_single("08", "mech_psword", "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01", {
+        flat_scale = flat_psword_scl,
+        flat_g_scale = flat_psword_g_scl,
+        slim_scale = slim_psword_scl,
+        slim_g_scale = slim_psword_g_scl,
+    })
+    slim_blade_variant_helper_single("08_ml01", "mech_psword", "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01", {
+        flat_scale = flat_psword_scl,
+        flat_g_scale = flat_psword_g_scl,
+        slim_scale = slim_psword_scl,
+        slim_g_scale = slim_psword_g_scl,
+    })
+    slim_blade_variant_helper_single("deluxe_01", "mech_psword", "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01", {
+        flat_scale = flat_psword_scl,
+        flat_g_scale = flat_psword_g_scl,
+        slim_scale = slim_psword_scl,
+        slim_g_scale = slim_psword_g_scl,
+    })
+    --      blade_08_ml01
+    --[[
+    slim_blade_attach_helper({
+        number_string = "08_ml01", 
+        base_name = "psword", 
+        name_to_use = "flat_psword", 
+        base_item_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01",
+        damage_type = "owo_metal_slashing_medium_powersword_p1_m1",
+    }, {
+        scl = flat_psword_scl, 
+        grip_scl = grip_scale
+    })
+    slim_blade_attach_helper({
+        number_string = "08_ml01", 
+        base_name = "psword", 
+        name_to_use = "flat_psword_g", 
+        base_item_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01",
+        damage_type = "owo_metal_slashing_medium_powersword_p1_m1",
+    }, {
+        scl = flat_psword_g_scl, 
+        grip_scl = grip_scale
+    })
+    slim_blade_attach_helper({
+        number_string = "08_ml01", 
+        base_name = "psword", 
+        name_to_use = "slim_psword", 
+        base_item_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01",
+        damage_type = "owo_metal_slashing_medium_powersword_p1_m1",
+    }, {
+        scl = slim_psword_scl, 
+        grip_scl = grip_scale
+    })
+    slim_blade_attach_helper({
+        number_string = "08_ml01", 
+        base_name = "psword", 
+        name_to_use = "slim_psword_g", 
+        base_item_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01",
+        damage_type = "owo_metal_slashing_medium_powersword_p1_m1",
+    }, {
+        scl = slim_psword_g_scl, 
+        grip_scl = grip_scale
+    })
+    ]]
     -- ------------------
     -- Relic Blade Blades
     -- ------------------
