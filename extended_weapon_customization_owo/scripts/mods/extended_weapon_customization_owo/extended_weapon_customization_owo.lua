@@ -350,7 +350,7 @@ load_mod_file("fixes/shared_fix_requirements")
 local special_needs_fixes = { 
     "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
     "bolter_p1_m1", "boltpistol_p1_m1", 
-    "lasgun_p3_m1", 
+    "lasgun_p1_m1", "lasgun_p3_m1", 
     "shotgun_p1_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
     "powersword_2h_p1_m1", 
