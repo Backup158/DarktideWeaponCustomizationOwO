@@ -107,7 +107,8 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             receiver = {
-                missing = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                -- missing = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                missing = syn_hellgun_receivers,
             },
         },
         fix = {
@@ -125,10 +126,12 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             receiver = {
-                has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                -- has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                has = syn_hellgun_receivers,
             },
             syn_receiver_extension = {
-                missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                -- missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                missing = syn_all_receiver_extensions,
             },
         },
         fix = {
@@ -146,10 +149,12 @@ local these_fixes = {
                 has = all_holographic_sights_names.eotech,
             },
             receiver = {
-                has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                --has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                has = syn_hellgun_receivers,
             },
             syn_receiver_extension = {
-                missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                -- missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                missing = syn_all_receiver_extensions,
             },
         },
         fix = {
@@ -161,12 +166,24 @@ local these_fixes = {
 }
 
 local custom_attachments = {
+    sight = {
+        parent_slot = "receiver",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.04, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
     sight_reticle = {
         parent_slot = "sight",
         default_path = _item_empty_trinket,
         fix = {
             offset = {
-                position = vector3_box(0, 0.04, 0),
+                position = vector3_box(0, 0.0, 0),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
                 node = 1,
