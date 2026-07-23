@@ -30,7 +30,7 @@ local table_merge_recursive = table.merge_recursive
 -- RETURN: N/A
 -- ######
 function mod.load_mod_file(relative_path)
-	return mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
+    return mod:io_dofile("extended_weapon_customization_owo/scripts/mods/extended_weapon_customization_owo/"..relative_path)
 end
 
 -- ######
