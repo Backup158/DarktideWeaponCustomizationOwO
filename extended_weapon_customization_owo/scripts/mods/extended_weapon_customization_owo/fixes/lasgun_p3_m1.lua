@@ -1,4 +1,7 @@
 local mod = get_mod("extended_weapon_customization_owo")
+-- ###################################################################
+-- RECON LASGUN
+-- ###################################################################
 
 -- ################################
 -- Local References for Performance
@@ -21,6 +24,7 @@ local _item_minion = "content/items/weapons/minions"
 local all_infantry_autogun_receivers = mod.all_infantry_autogun_receivers
 local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
 local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
+local all_recon_lasgun_receivers = mod.all_recon_lasgun_receivers
 
 local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
@@ -32,43 +36,192 @@ local syn_ma5_compact_classic = mod.syn_ma5_compact_classic
 local syn_all_ma5_extensions = mod.syn_all_ma5_extensions
 local syn_recon_extensions = mod.syn_recon_extensions
 local syn_all_receiver_extensions = mod.syn_all_receiver_extensions
+local syn_hellgun_receivers = mod.syn_hellgun_receivers
 
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
 local these_fixes = {
+    -- ----------------------
+    -- Stocks
+    -- ----------------------
     -- Tactical Stocks
-    {   attachment_slot = "stock",
+    --  Seems good with default
+    -- ----------------------
+    -- Sights
+    -- ----------------------
+    -- Rails
+    --  Removes rail for AK Irons
+    {   attachment_slot = "rail",
         requirements = {
-            stock = {
-                has = "owo_tactical_stock_skeletal",
+            sight = {
+                has = "owo_iron_sight_kalashnikov",
             },
         },
         fix = {
-            node = 3,
-            offset = {
-                position = vector3_box(0.0, -0.02, 2.3),
-                rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1, 1.95, 1),
+            attach = {
+                rail = _item_empty_trinket,
             },
         },
     },
-    -- Filling in for Helbore
-    {   attachment_slot = "stock_ac1",
+    --  Attaches rail for Holosight and telescopic
+    {   attachment_slot = "rail",
         requirements = {
-            stock = {
-                missing = "lasgun_rifle_krieg_stock_01|lasgun_rifle_krieg_stock_02|lasgun_rifle_krieg_stock_03|lasgun_rifle_krieg_stock_04|lasgun_rifle_krieg_stock_05|lasgun_rifle_krieg_stock_ml01",
+            sight = {
+                has = all_holographic_sights_names.all,
             },
         },
         fix = {
-            --attach = {
-            --    stock_ac1 = _item_melee.."/heads/thunder_hammer_head_04",
-            --    stock_ac1 = _item_melee.."/heads/owo_stock_fill_hammer_head_04",
-            --},
+            attach = {
+                rail = "lasgun_rifle_rail_01",
+            },
             offset = {
-                position = vector3_box(0.0, 0.0, -0.02),
+                position = vector3_box(0, 0, 0),
                 rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(0.35, 0.5, 0.65),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    -- Holographic Sights
+    --  Actual Position
+    --[[
+    {   attachment_slot = "sight",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.eotech,
+            },
+            receiver = {
+                -- missing = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                has = all_recon_lasgun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.04, 0),
+            },
+        },
+    },
+    ]]
+    --  Reticle Positioning
+    {   attachment_slot = "sight_reticle",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.eotech,
+            },
+            sight_reticle = {
+                has = all_owo_sight_reticle_names,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, -0.016, 0.01),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+            },
+        },
+    },
+    --  Sight Alignment
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                -- has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                -- has = "owo_holographic_sight_eotech",
+                has = all_holographic_sights_names.eotech,
+            },
+            receiver = {
+                -- missing = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                has = all_recon_lasgun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0002, 0.0, -0.075),
+            },
+        },
+    },
+    --  Compatibility with Syn's iLas Receivers
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                -- has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                -- has = "owo_holographic_sight_eotech",
+                has = all_holographic_sights_names.eotech,
+            },
+            receiver = {
+                -- has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                has = syn_hellgun_receivers,
+            },
+            syn_receiver_extension = {
+                -- missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                missing = syn_all_receiver_extensions,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0002, 0.0, 0.015),
+            },
+        },
+    },
+    --  Sight is only lower if it uses an iLas body WITHOUT an extension
+    {   attachment_slot = "sight",
+        requirements = {
+            sight = {
+                -- has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                -- has = "owo_holographic_sight_eotech",
+                has = all_holographic_sights_names.eotech,
+            },
+            receiver = {
+                --has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+                has = syn_hellgun_receivers,
+            },
+            syn_receiver_extension = {
+                -- missing = "query:lasgun_p2_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+                missing = syn_all_receiver_extensions,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.0, -0.055),
+            },
+        },
+    },
+}
+
+local custom_attachments = {
+    sight = {
+        parent_slot = "receiver",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.04, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    sight_reticle = {
+        parent_slot = "sight",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.0, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    barrel_foreskin = {
+        parent_slot = "barrel",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, -0.3, 0), -- what a shitty way of doing this. but i'm NOT crawling through all the viable nodes
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
             },
         },
     },
@@ -76,4 +229,5 @@ local these_fixes = {
 
 return {
     fixes = these_fixes,
+    attachment_slots = custom_attachments,
 }
