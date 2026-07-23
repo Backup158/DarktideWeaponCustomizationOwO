@@ -1,5 +1,14 @@
 # 4.5.0 - 2026-07-23
 ## Added
+- Slim Blades
+    - Mechanicus Power Sword is added to list of available blades (and whoever named them is a psychopath)
+    - Mechanicus Power Sword can use slim blades. They'll look weird due to the lack of guard on the grip
+## Changed
+- Refactored list of slim blade damage types so it's one table i need to edit
+## Fixed
+- Helbore Lasguns with suppressors have bayonets aligned now
+    - Before, they were clipping inside the muzzle
+    - Now, they should be closer to the bottom lug of the barrel
 - Vigilant Autogun and Braced alignments (copied values from Infantry Autogun)
 - Infantry Lasgun sight alignments
     - the reticles themselves are jank and evil
@@ -13,15 +22,6 @@
 - Helbore Lasgun holosight alignments
     - The sight itself works, but the reticles won't cooperate for me, for whatever reason
     - Use the empty reticle
-- Slim Blades
-    - Mechanicus Power Sword is added to list of available blades (and whoever named them is a psychopath)
-    - Mechanicus Power Sword can use slim blades. They'll look weird due to the lack of guard on the grip
-## Changed
-- Helbore Lasguns with suppressors have bayonets aligned now
-    - Before, they were clipping inside the muzzle
-    - Now, they should be closer to the bottom lug of the barrel
-- Refactored list of slim blade damage types so it's one table i need to edit
-## Fixed
 
 # 2026-05-05
 v4.4.0
