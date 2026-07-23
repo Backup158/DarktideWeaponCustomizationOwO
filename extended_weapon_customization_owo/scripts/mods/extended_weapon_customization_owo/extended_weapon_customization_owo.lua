@@ -397,7 +397,8 @@ local special_needs_fixes = {
     "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
     "powersword_2h_p1_m1", 
     "powermaul_p2_m1", "powermaul_shield_p1_m1", 
-    "needlepistol_p1_m1", 
+    "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1", 
+    "galvanic_rifle_p1_m1", 
 }
 local function insert_custom_fixes_for_weapon(weapon_id)
     local loaded_table = load_mod_file("fixes/"..weapon_id)
