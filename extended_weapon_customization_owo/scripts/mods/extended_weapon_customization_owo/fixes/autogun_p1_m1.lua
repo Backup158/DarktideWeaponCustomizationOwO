@@ -20,8 +20,13 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- Attachment Names for Fixes
 -- ################################
+local all_infantry_autogun_receivers = mod.all_infantry_autogun_receivers
+local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
+local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
+
 local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
+
 local syn_ma5_extensions = mod.syn_ma5_extensions
 local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions
 local syn_ma5_classic_extensions = mod.syn_ma5_classic_extensions
@@ -105,6 +110,7 @@ local these_fixes = {
         },
     },
     -- Holographic Sights
+    --  Sight Alignment
     {   attachment_slot = "sight_offset",
         requirements = {
             sight = {
