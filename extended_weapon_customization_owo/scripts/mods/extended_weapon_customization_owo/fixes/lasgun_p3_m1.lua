@@ -187,7 +187,7 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0002, 0.0, 0.045),
+                position = vector3_box(0.0002, 0.01, 0.015),
             },
         },
     },
