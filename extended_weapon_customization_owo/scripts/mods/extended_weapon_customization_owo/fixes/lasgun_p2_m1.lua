@@ -111,11 +111,49 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0002, 0.0, -0.012),
+                position = vector3_box(0.0002, 0.0, -0.075),
             },
         },
     },
     --  Compatibility with Syn's iLas Receivers
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                -- has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                -- has = "owo_holographic_sight_eotech",
+                has = all_holographic_sights_names.eotech,
+            },
+            receiver = {
+                has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0002, 0.0, 0.015),
+            },
+        },
+    },
+    --  Sight is only lower if it uses an iLas body WITHOUT an extension
+    {   attachment_slot = "sight",
+        requirements = {
+            sight = {
+                -- has = "query:autogun_p1_m1,sight,extended_weapon_customization_owo",
+                -- has = "owo_holographic_sight_eotech",
+                has = all_holographic_sights_names.eotech,
+            },
+            receiver = {
+                has = "query:lasgun_p2_m1,receiver,extended_weapon_customization_syn_edits",
+            },
+            syn_receiver_extension = {
+                missing = "query:autogun_p1_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.0, -0.055),
+            },
+        },
+    },
 }
 
 local custom_attachments = {
