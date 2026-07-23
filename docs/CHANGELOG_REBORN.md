@@ -13,10 +13,14 @@
 - Helbore Lasgun holosight alignments
     - The sight itself works, but the reticles won't cooperate for me, for whatever reason
     - Use the empty reticle
+- Slim Blades
+    - Mechanicus Power Sword is added to list of available blades (and whoever named them is a psychopath)
+    - Mechanicus Power Sword can use slim blades. They'll look weird due to the lack of guard on the grip
 ## Changed
 - Helbore Lasguns with suppressors have bayonets aligned now
     - Before, they were clipping inside the muzzle
     - Now, they should be closer to the bottom lug of the barrel
+- Refactored list of slim blade damage types so it's one table i need to edit
 ## Fixed
 
 # 2026-05-05
