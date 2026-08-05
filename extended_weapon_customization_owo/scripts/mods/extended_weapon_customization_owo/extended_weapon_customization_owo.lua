@@ -4,7 +4,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- DATA
 -- ###################################################################
 -- Prints a message to the console log containing the current version number
-mod.version = "4.5.0"
+mod.version = "4.6.0"
 mod:info('v' .. mod.version .. mod:localize("mod_version_logging_message"))
 
 -- Discord mode
@@ -12,6 +12,8 @@ mod:info('v' .. mod.version .. mod:localize("mod_version_logging_message"))
 mod.discord_mode = mod:get("discord_mode")
 local debug_mode = mod:get("debug_mode")
 if debug_mode then mod:info(mod:localize("mod_debug_mode_active_message")) end
+
+local ewc
 
 -- ################################
 -- Local References for Performance
@@ -525,8 +527,9 @@ end
 
 function mod.on_all_mods_loaded()
 	-- Checks for installed mods. Kept here so it works after reload.
+    ewc = get_mod("extended_weapon_customization")
 	--	Base Mod
-	if not get_mod("extended_weapon_customization") then
+	if not ewc then
 		mod:error(mod:localize("mod_error_missing_ewc"))
 		return
 	end
@@ -552,4 +555,7 @@ function mod.on_all_mods_loaded()
         end
     end
     ]]
+
+    -- Adding damage types
+    mod.add_damage_types_to_ewc(ewc)
 end

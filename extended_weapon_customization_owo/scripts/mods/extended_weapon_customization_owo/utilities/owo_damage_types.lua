@@ -1,5 +1,4 @@
 local mod = get_mod("extended_weapon_customization_owo")
-local ewc = get_mod("extended_weapon_customization")
 
 -- ################################
 -- Local References for Performance
@@ -117,16 +116,14 @@ for _, data in pairs(families_and_damage_types) do
     mod.custom_damage_types[damage_type_weapon_key].sfx_weapon_foley_02_right_hand = "wwise/events/weapon/play_weapon_silence"
 end
 
---[[
-ewc.damage_types["owo_pfalchion_metal_slash"] = {
-    game_damage_type = "metal_crushing_light",
-    gibbing_type = gibbing_types.crushing,
-    gibbing_power = gibbing_power.medium,
-    -- wait i dont think melee sounds are supported yet
-}
-]]
-for damage_type_name, type_data in pairs(mod.custom_damage_types) do
-    ewc.damage_types[damage_type_name] = type_data
+-- ################################
+-- Adding Damage Types to EWC
+-- To be called later, so load order doesn't matter
+-- ################################
+function mod.add_damage_types_to_ewc(ewc)
+    local custom_damage_types = mod.custom_damage_types
+    for damage_type_name, type_data in pairs(custom_damage_types) do
+        ewc.damage_types[damage_type_name] = type_data
+    end
+    -- dump_if_debug(ewc.damage_types, "ALL DAMAGE TYPES FROM MAIN MOD TABLE AFTER INSERTING")
 end
-
--- dump_if_debug(ewc.damage_types, "ALL DAMAGE TYPES FROM MAIN MOD TABLE AFTER INSERTING")

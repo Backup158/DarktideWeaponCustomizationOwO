@@ -13,7 +13,8 @@ return {
 	},
 	load_after = {
 		"extended_weapon_customization",
+		"extended_weapon_customization_base_additions",
 	},
-	version = "4.5.0",
+	version = "4.6.0",
 	packages = {},
 }
