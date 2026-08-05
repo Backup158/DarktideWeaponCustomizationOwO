@@ -11,9 +11,9 @@
 
 > [!IMPORTANT]
 >
-> THIS IS FOR THE REWORKED BASE MOD (`extended_weapon_customization`), WHICH IS CURRENTLY DISCORD EXCLUSIVE AND WIP
+> THIS IS FOR THE REWORKED BASE MOD (`extended_weapon_customization`)
 > \
-> IN FACT, THE REBUILD FOR THIS IS VERY WIP AS WELL
+> I had to redo everything from scratch, so there are much fewer parts than before.
 
 # OwO? What is this?
 Add-on plugin for the Extended Weapon Customization (EWC) mod. Adds various parts, typically inspired by historical weapons and tacticool airsoft LARP sessions. 
@@ -24,23 +24,13 @@ Report alignment issues, and I might fix it if I'm not busy (lying umder blamket
 ## Requirements
 1. [MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) by Grasmann
 2. Extended Weapon Customization (EWC) by Grasmann. There are multiple ways of getting this file:
-  - ~~[Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277)~~
-    - Currently for the deprecated version
-    - Page is hidden by Nexus Moderators
+  - [Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277)
   - [The #weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284) in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8) 
-    - Download files are in the pins. Search for the latest message from Grasmann.
+    - Download files are in the pins. Search for the latest message from Grasmann. Sometimes, this is a beta release with extra feature.
     - Also be sure to check out the FAQ below in the pins
-  - Downloading it from [Grasmann's GitHub Repository](https://github.com/grasmann/darktide-mods)
-    1. Open the `extended_weapon_customization.zip` file
-      - ![Pointing out the zip file](./assets/images/ewc_dl_gh_0.png)
-      - [Direct link to it](https://github.com/grasmann/darktide-mods/blob/main/extended_weapon_customization.zip)
-    2. Download the file
-      - Click the Download button next to "Raw" and "Copy"
-      - This is below the "History" section
-      - ![Pointing to the download button](./assets/images/ewc_dl_gh.png)
 3. This mod
-  - ~~[Nexus link](https://www.nexusmods.com/warhammer40kdarktide/mods/429?tab=files)~~ currently for the old version. I will reupload there when EWC is considered Nexus-ready by Grasmann
-  - [GitHub releases](https://github.com/Backup158/DarktideWeaponCustomizationOwO/releases/latest) for the rebuild
+  - [Nexus link](https://www.nexusmods.com/warhammer40kdarktide/mods/429?tab=files)
+  - [GitHub releases](https://github.com/Backup158/DarktideWeaponCustomizationOwO/releases/latest)
 
 Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
 
@@ -70,20 +60,7 @@ Not comprehensive
 
 > [!WARNING]
 >
-> Anything below is not updated for the rebuild. I'll do that once I'm ready to release on Nexus
-
-<a id="faq-1"></a>
-
-1) **THE GAME STARTED AND I GOT A BUNCH OF ERRORS!**
-&emsp; HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA
-
-&emsp; *ahem* Make sure you put this above the MT/Syn plugins. Also make sure you have their latest full releases (just the ones on Nexus). If that doesn't fix it, drop a [console log](https://dmf-docs.darkti.de/#/faqs?id=how-do-i-report-mod-errors) in the Nexus posts or the Discord thread. I probably messed up in that case so sorry for laughing at you.
-
-<a id="faq-2"></a>
-
-2) **This mod gave me a backend error!**
-
-&emsp; ~~Oh I'll give you a bac~~ You're missing a requirement for EWC
+> Anything below is not updated for the rebuild. I'll do that once I'm ready to release on Nexus (it's been 4 months but i'll do it eventually!)
 
 <a id="faq-3"></a>
 
@@ -91,33 +68,6 @@ Not comprehensive
    
 &emsp; Yeah that's what happens when I'm lazy. Send a screenshot of the customization menu so I know which combination is messed up, and I'll try and get that fixed. Delivery date depends on bedrotting status.
 
-<a id="faq-4"></a>
-
-4) **The sights don't line up with where I'm shooting!**
-
-&emsp; Send a screenshot of the customization menu and misalignment, and I'll see if it's the same on my end. If I can replicate it, I'll try to fix it. If not, it could be a settings mismatch (see spoiler).
-<details>
-  <summary>Settings mismatch</summary>
-  
-First of all, I aligned these sights under specific conditions:  \
-&emsp; I'm using the default FOV but have Weapon FOV set for arbitrary values per weapon >:3  \
-&emsp; I'm using the default reticle size in the EWC mod options  \
-&emsp; I'm using Constant FOV but allow changes from aiming  \
-If your settings differ, that's probably causing the issue. From then on, you have two options
-
-1) For non-physical reticles, remove the reticle and aim using the crosshair from Crosshair Remap. To remove the reticle, open the customization menu and equip one of the following:  \
-&emsp; &emsp; MT Helper scope (Clear)  \
-&emsp; &emsp; Invisible sight_2
-2) Align the scope for yourself. I made a [little guide](https://backup158.github.io/Darktide_EWC_Edits.html#AligningSights) for this.
-##
-</details>
-
-<a id="faq-5"></a>
-
-5) **My scope/bayonet is stealing the muzzle flash from my gun!**
-   
-&emsp; Yeah :( I'll fix that eventually  \
-&emsp; Oh, and also make sure you aren't using a "No muzzle" option for the muzzle. To have no muzzle but keep the shooting effects, you need to equip the "Invisible Muzzle" option.
 
 <a id="faq-6"></a>
 
@@ -163,63 +113,6 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 
 ##
 </details>
-
-<a id="faq-8"></a>
-
-8) **How am I supposed to aim with the Alternative Viewmodels if I'm not using the scope?**
-
-&emsp; You use the crosshair, laser, or simply feel it out. To enable crosshair/laser, be sure to turn off EWC's options that disable crosshairs and lasers while aiming. That takes care of the lasers, then you need to make sure you have Crosshair Remap for crosshairs to show up while aiming.
-
-<details> <summary>EWC Mod Options</summary>
-
-![ewc_disable_settings](https://imgur.com/lcmwq8t.png)
-</details>
-
-<a id="faq-performance"></a>
-
-## FAQ - Technical Details Involving Performance and Requirements
-  
-<a id="faq-9"></a>
-
-9) **Why can the performance get bad?**
-
-&emsp; EWC runs worse as weapons get more attachment slots. I added a lot of slots for all those accessories, which increases the background processing during matches and in the inventory.
-
-&emsp; Error 2014 comes from your game taking too long to respond to the server ('pong' timeout); with this plugin, EWC has to spend more time processing the extra slots while loading in, which may or may not be enough of a delay to boot you. Could just be a nocebo effect, but I figured it was worth mentioning anyways (and now I have cursed you >:3).
-
-&emsp; Performance hits can come from many sources (usually the base game lol). For mods, using a lot of mods which are known to use a lot of resources may not cause noticeable issues at first, but at some point you might get a straw that breaks the camel's back. See FAQ #10 for a few potential culprits.
-
-&emsp; It's not literally unplayable, but caveat emptor.
-
-<a id="faq-10"></a>
-
-10) **Ok but can I do anything about this?**
-
-&emsp; Aside from the workarounds I posted in the main description, there's some small things but no silver bullets.
-  - Game Settings
-    - Disable raytracing in your `user_settings.config file`. There's a bit more options there even when you turn it off through the in-game menu. Just don't touch `rtxgi_scale`.
-    - Disable 'Portrait Rendering' in the 'Video' section. These are the little character heads on the HUD. This is surprisingly heavy for some people.
-  - Mods and Mod Options
-    - EWC-related
-      - Disable 'Visible Equipment' and 'Randomization' in the EWC mod options.
-      - Using all of the EWC plugins. More plugins means more parts to process. This mainly means choosing between this mod and Syn's Edits, if performance is your primary goal. Personally, I'm addicted to customization so I use all of them and just live with the performance issues.
-      - Having a massive inventory. EWC goes through every single weapon in the inventory whenever you load a character, which can lead to disconnects when loading into the Mourningstar.
-      - If you crash at the end of missions, try setting locked packages to 'Always' in the EWC mod options (which will make performance worse but hopefully lessen crashes). Didn't help with disconnects but YMMV.
-    - Change 'Maximum Coroutine Cycles per Frame' in PowerDI from '1000' to '200' or something. PowerDI is constantly saving data in the background, and limiting how much it is allowed to work can improve performance (but maybe it'll be less accurate? I don't use it myself so I don't know)
-    - For the Drip in general. I also just live with this because it's drip or drown, bbq ;* (kill me)
-  - For out of memory crashes, apply the lua heap memory increase band-aid fix (`--lua-heap-mb-size 2048` in the Steam launch options)
-
-<a id="faq-11"></a>
-
-11) **Why does this require the MT plugin?**
-  
-&emsp; MT's plugin includes functions that make creating parts from multiple pieces much easier. I used them.
-
-<a id="faq-12"></a>
-
-12) **Why does this need to be above the other two plugins?**
-
-&emsp; I piggybacked off of some of the slots they already added to lessen the performance hit. The way parts get added to slots means that if the mod is lower in the load order than the mod that adds the slots, it either just won't work or will wipe out the parts added by the original slot creator. This also means that EWC will actually load any custom alignments I make involving attachments from the other plugins, because otherwise it'll see and use the generic alignments first.
 
 ## FAQ - New Parts
 
