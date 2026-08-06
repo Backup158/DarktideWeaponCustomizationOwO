@@ -496,6 +496,7 @@ dump_if_debug(attachments_table_for_ewc, "uwu fuck you bitch\nALL THE FUCKING TA
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
+-- This must happen BEFORE all mods are loaded, since that's when EWC looks for it.
 -- ################################
 mod.extended_weapon_customization_plugin = attachments_table_for_ewc
 
