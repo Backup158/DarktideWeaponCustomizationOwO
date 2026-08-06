@@ -2,6 +2,7 @@
 ## Added
 ## Changed
 - Refactored damage types so it's done only on all mods being loaded, so load order doesn't matter for EWC (still recommended to keep it after base additions)
+- Refactored file structure. Now whenever I add a new attachment/fix, all edits are done in one file instead of being spread out
 ## Fixed
 
 # 4.5.0 - 2026-07-23

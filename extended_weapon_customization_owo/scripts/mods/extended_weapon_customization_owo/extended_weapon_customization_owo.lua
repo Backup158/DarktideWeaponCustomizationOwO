@@ -94,6 +94,8 @@ local merge_recursive_safe = mod.merge_recursive_safe
 local table_insert_all_from_table = mod.table_insert_all_from_table
 local string_is_key_in_table = mod.string_is_key_in_table
 
+load_mod_file("utilities/files_to_load")
+
 -- ################################
 -- Adding Directly to the Attachments Table
 -- ################################
@@ -258,6 +260,11 @@ attachments_table_for_ewc.flashlight_templates = table_clone(load_mod_file("atta
 load_mod_file("utilities/owo_damage_types")
 load_mod_file("attachments/create_attachments")
 
+local attachment_names = mod.attachment_names
+for i = 1, #(attachment_names) do
+    load_mod_file("attachments/"..attachment_names[i])
+end
+
 -- ################################
 -- Adding Attachments
 -- ################################
@@ -389,17 +396,7 @@ add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01")
 load_mod_file("fixes/shared_fix_requirements")
 
 -- Adding the specific fixes
-local special_needs_fixes = { 
-    "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", 
-    "bolter_p1_m1", "boltpistol_p1_m1", 
-    "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", 
-    "shotgun_p1_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
-    "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
-    "powersword_2h_p1_m1", 
-    "powermaul_p2_m1", "powermaul_shield_p1_m1", 
-    "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1", 
-    "galvanic_rifle_p1_m1", 
-}
+local special_needs_fixes = mod.special_needs_fixes
 local function insert_custom_fixes_for_weapon(weapon_id)
     local loaded_table = load_mod_file("fixes/"..weapon_id)
     if not loaded_table then

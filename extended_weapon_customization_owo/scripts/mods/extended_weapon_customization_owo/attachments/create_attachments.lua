@@ -287,25 +287,3 @@ mod.render_unit_rot_profile_left = {90, 0, 30}
 mod.render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
 mod.render_unit_rot_sword_blade = {90, 30, 0}
 mod.render_cam_pos_sword_blade = {-.025, -2.5, .7}
-
--- ################################
--- Defining Attachment Functions
--- ################################
-local load_mod_file = mod.load_mod_file
-
-local attachment_names = {
-    "probe_for_node", 
-    "owo_suppressor", 
-    "owo_tactical_stock", 
-    "owo_flashlight",
-    "owo_slim_blade",
-    "owo_mag",
-    "owo_iron_sight",
-    "owo_rear_spike",
-    "owo_holographic_sight",
-    "owo_sight_reticle",
-    "owo_empty_attachments",
-}
-for i = 1, #(attachment_names) do
-    load_mod_file("attachments/"..attachment_names[i])
-end
