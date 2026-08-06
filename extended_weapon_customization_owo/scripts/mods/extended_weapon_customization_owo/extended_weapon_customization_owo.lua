@@ -249,6 +249,68 @@ local function copy_attachments_and_fixes_to_siblings(first_mark_id)
     end
 end
 
+-- ######
+-- Insert Custom Fixes for Weapons
+-- DESCRIPTION: If a weapon family needs specific fixes, I put them in its own file. This loads that weapon's fixes and adds it to the main table.
+-- PARAMETERS: 
+--  weapon_id: string
+-- RETURN: N/A
+-- ######
+local function insert_custom_fixes_for_weapon(weapon_id)
+    local loaded_table = load_mod_file("fixes/"..weapon_id)
+    if not loaded_table then
+        -- No custom fixes for this weapon
+        return
+    end
+    local fixes_table_to_add = loaded_table.fixes
+    local slots_to_add = loaded_table.attachment_slots
+    -- backwards compatibility for not having fixes in its own section
+    if not fixes_table_to_add and not slots_to_add then
+        fixes_table_to_add = loaded_table
+    end
+
+    -- Defining Fixes
+    if not attachments_table_for_ewc.fixes[weapon_id] then
+        attachments_table_for_ewc.fixes[weapon_id] = {}
+    end
+    --table_dump(fixes_table_to_add, "SPECIAL NEEDS", 10)
+
+    --table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
+    if fixes_table_to_add then
+        for _, custom_fix in pairs(fixes_table_to_add) do
+            local inserted = false
+
+            for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
+                -- if requirements are identical, replace that fix
+                if table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
+                    --[[
+                    if debug_mode then
+                        mod:info("Replacing fix for "..weapon_id)
+                        table_dump(attachments_table_for_ewc.fixes[weapon_id][i], "\tREPLACING", 10)
+                        table_dump(custom_fix, "\tWITH", 10)
+                    end
+                    ]]
+                    attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
+                    inserted = true
+                end
+            end
+            
+            if not inserted then
+                table_insert(attachments_table_for_ewc.fixes[weapon_id], custom_fix)
+            end
+        end
+    end
+
+    -- Defining Attachment slots
+    if slots_to_add then
+        if not attachments_table_for_ewc.attachment_slots[weapon_id] then
+            attachments_table_for_ewc.attachment_slots[weapon_id] = {}
+        end
+
+        table_merge_recursive(attachments_table_for_ewc.attachment_slots[weapon_id], slots_to_add)
+    end
+end
+
 -- ###################################################################
 -- ATTACHMENT CREATION
 -- This needs to happen BEFORE all mods load, since that's when the base mod gets the tables from the plugins
@@ -397,60 +459,6 @@ load_mod_file("fixes/shared_fix_requirements")
 
 -- Adding the specific fixes
 local special_needs_fixes = mod.special_needs_fixes
-local function insert_custom_fixes_for_weapon(weapon_id)
-    local loaded_table = load_mod_file("fixes/"..weapon_id)
-    if not loaded_table then
-        -- No custom fixes for this weapon
-        return
-    end
-    local fixes_table_to_add = loaded_table.fixes
-    local slots_to_add = loaded_table.attachment_slots
-    -- backwards compatibility for not having fixes in its own section
-    if not fixes_table_to_add and not slots_to_add then
-        fixes_table_to_add = loaded_table
-    end
-
-    -- Defining Fixes
-    if not attachments_table_for_ewc.fixes[weapon_id] then
-        attachments_table_for_ewc.fixes[weapon_id] = {}
-    end
-    --table_dump(fixes_table_to_add, "SPECIAL NEEDS", 10)
-
-    --table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
-    if fixes_table_to_add then
-        for _, custom_fix in pairs(fixes_table_to_add) do
-            local inserted = false
-
-            for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
-                -- if requirements are identical, replace that fix
-                if table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
-                    --[[
-                    if debug_mode then
-                        mod:info("Replacing fix for "..weapon_id)
-                        table_dump(attachments_table_for_ewc.fixes[weapon_id][i], "\tREPLACING", 10)
-                        table_dump(custom_fix, "\tWITH", 10)
-                    end
-                    ]]
-                    attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
-                    inserted = true
-                end
-            end
-            
-            if not inserted then
-                table_insert(attachments_table_for_ewc.fixes[weapon_id], custom_fix)
-            end
-        end
-    end
-
-    -- Defining Attachment slots
-    if slots_to_add then
-        if not attachments_table_for_ewc.attachment_slots[weapon_id] then
-            attachments_table_for_ewc.attachment_slots[weapon_id] = {}
-        end
-
-        table_merge_recursive(attachments_table_for_ewc.attachment_slots[weapon_id], slots_to_add)
-    end
-end
 --[[
 for i = 1, #(all_ranged_weapons) do
     insert_custom_fixes_for_weapon(all_ranged_weapons[i])
