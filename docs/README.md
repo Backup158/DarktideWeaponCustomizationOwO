@@ -36,7 +36,7 @@ Use whatever installation method you prefer. If you don't have one, check out th
 
 > [!WARNING]
 >
-> Game updates may cause issues with EWC. They will be fixed whenever EWC is updated. There is no exactly timeline for when that happens, and all we can do is wait.
+> Game updates may cause issues with EWC. They will be fixed whenever EWC is updated. There is no exact timeline for when that happens, and all we can do is wait.
 ## Load Order
 Load order doesn't matter with rebuilt EWC plugins.
 
