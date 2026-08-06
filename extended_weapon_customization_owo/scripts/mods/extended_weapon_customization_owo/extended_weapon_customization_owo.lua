@@ -472,11 +472,17 @@ for i = 1, #(special_needs_fixes) do
 end
 
 -- ################################
--- Copying to Different Marks
+-- Copying to Different Marks (Siblings)
+-- Finds how many siblings there are, then copies the eldest to the rest
+--  Done this way because pairs() does NOT guarantee order
+--  Since I'm adding to the table I'm reading, it can lead to duplicates and shuffling order
+--  Shuffling can mean things get missed, which happened to ilas once
 -- ################################
 info_if_debug("Copying attachments to all marks. Going through attachments_table_for_ewc...")
-local siblings_to_add = {}
--- See which weapons may need to copy over to siblings
+-- Preallocates table for all siblings. 150 weapons-ish
+local siblings_to_add = Script.new_array(128)
+local amount_of_siblings = 0
+-- See which weapons have siblings
 for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
     -- If first mark of pattern, copy to the siblings
     --  Check last two characters of the name
@@ -484,16 +490,14 @@ for weapon_id, _ in pairs(attachments_table_for_ewc.attachments) do
     --      if they exist (checks for this are handled in that function)
     info_if_debug("\tChecking "..weapon_id)
     if (string_sub(weapon_id, -2) == "m1") then
-        table_insert(siblings_to_add, weapon_id)
+        amount_of_siblings = amount_of_siblings + 1
+        siblings_to_add[amount_of_siblings] = weapon_id
     else
         mod:error("uwu [REPORT TO MOD AUTHOR] not the first mark: "..weapon_id)
     end
 end
--- copies to siblings
---  Done this way because pairs() does NOT guarantee order
---  and since I'm adding to the table i'm reading, it can lead to duplicates and shuffling order
---  so somehow things can get skipped? this happened to ilas for some reason
-for i = 1, #(siblings_to_add) do
+-- Copies values for each sibling
+for i = 1, amount_of_siblings do
     copy_attachments_and_fixes_to_siblings(siblings_to_add[i])
 end
 
