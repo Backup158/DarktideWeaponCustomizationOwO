@@ -13,8 +13,6 @@ mod.discord_mode = mod:get("discord_mode")
 local debug_mode = mod:get("debug_mode")
 if debug_mode then mod:info(mod:localize("mod_debug_mode_active_message")) end
 
-local ewc
-
 -- ################################
 -- Local References for Performance
 -- ################################
@@ -527,7 +525,7 @@ end
 
 function mod.on_all_mods_loaded()
 	-- Checks for installed mods. Kept here so it works after reload.
-    ewc = get_mod("extended_weapon_customization")
+    local ewc = get_mod("extended_weapon_customization")
 	--	Base Mod
 	if not ewc then
 		mod:error(mod:localize("mod_error_missing_ewc"))
