@@ -4,6 +4,9 @@
 - Refactored damage types so it's done only on all mods being loaded, so load order doesn't matter for EWC (still recommended to keep it after base additions)
 - Refactored file structure. Now whenever I add a new attachment/fix, all edits are done in one file instead of being spread out
 - Refactored copying to siblings for improved performance
+- Refactored common fixes and attachments
+    - Before I just copy pasted them among the weapon files
+    - Now there are tables in the shared fix requirements so it's easier to make sweeping changes
 ## Fixed
 
 # 4.5.0 - 2026-07-23
