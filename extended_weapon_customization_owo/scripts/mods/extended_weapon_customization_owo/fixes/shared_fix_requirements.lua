@@ -104,6 +104,8 @@ mod.all_recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_
 -- Shared Fixes
 -- ################################################################
 local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
+
+-- This table contains designations for fixes that are commonly copied WITHOUT changes
 mod.shared_fix_tables = {
     ["default_sight_reticle_position_holo"] = {   
         attachment_slot = "sight_reticle",
