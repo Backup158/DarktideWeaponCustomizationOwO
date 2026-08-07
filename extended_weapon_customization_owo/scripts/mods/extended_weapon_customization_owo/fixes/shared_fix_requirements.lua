@@ -1,5 +1,8 @@
 local mod = get_mod("extended_weapon_customization_owo")
 
+-- ################################################################
+-- Data
+-- ################################################################
 -- ################################
 -- Local References for Performance
 -- ################################
@@ -19,8 +22,11 @@ local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
 
--- ################################
+-- ################################################################
 -- Attachment Names for Fixes
+-- ################################################################
+-- ################################
+-- OwO Parts
 -- ################################
 if mod.shared_fix_requirements_file_has_run then
     return
@@ -70,9 +76,12 @@ for holosight_group, holosight_list in pairs(mod.all_holographic_sights_names) d
 end
 -- Creates a single string for all
 --  Not sure if this redundancy is required but it feels like otherwise i'd be creating a key before iterating through all keys
-local all_holo = create_requirements_string_from_names_table(mod.all_holographic_sights_names)
-mod.all_holographic_sights_names.all = all_holo
+local all_holographic_sights_names = create_requirements_string_from_names_table(mod.all_holographic_sights_names)
+mod.all_holographic_sights_names.all = all_holographic_sights_names
 
+-- ################################
+-- Syn's Parts
+-- ################################
 mod.syn_ma5_extensions = "ma5_extension_01|ma5_extension_02|ma5_extension_03|ma5_extension_04|ma5_extension_05|ma5_extension_06|ma5_extension_07|ma5_extension_08|ma5_extension_09|ma5_extension_10|ma5_extension_11|ma5_extension_12|ma5_extension_13|ma5_extension_14|ma5_extension_15|ma5_extension_16|ma5_extension_17|ma5_extension_18|ma5_extension_19"
 mod.syn_ma5_compact_extensions = "ma5_compact_extension_01|ma5_compact_extension_02|ma5_compact_extension_03|ma5_compact_extension_04|ma5_compact_extension_05|ma5_compact_extension_06|ma5_compact_extension_07|ma5_compact_extension_08|ma5_compact_extension_09|ma5_compact_extension_10|ma5_compact_extension_11|ma5_compact_extension_12|ma5_compact_extension_13|ma5_compact_extension_14|ma5_compact_extension_15|ma5_compact_extension_16|ma5_compact_extension_17|ma5_compact_extension_18|ma5_compact_extension_19"
 mod.syn_ma5_classic_extensions = "ma5_extension_20|ma5_extension_21|ma5_extension_20a|ma5_extension_21a"
@@ -83,7 +92,35 @@ mod.syn_g36_extensions = "g36_extension_01|g36_extension_02"
 mod.syn_all_receiver_extensions = mod.syn_all_ma5_extensions.."|"..mod.syn_recon_extensions.."|"..mod.syn_g36_extensions
 mod.syn_hellgun_receivers = "syn_hellgun_receiver_01|syn_hellgun_receiver_02|syn_hellgun_receiver_03|syn_hellgun_receiver_ml01|syn_hellgun_receiver_14|syn_hellgun_receiver_15"
 
+-- ################################
+-- Regular and Base Additions Parts
+-- ################################
 mod.all_infantry_autogun_receivers = "autogun_rifle_receiver_01|autogun_rifle_receiver_02|autogun_rifle_receiver_03|autogun_rifle_receiver_04|autogun_rifle_receiver_ml01"
 mod.all_braced_autogun_receivers = "autogun_rifle_ak_receiver_01|autogun_rifle_ak_receiver_02|autogun_rifle_ak_receiver_03|autogun_rifle_ak_receiver_04|autogun_rifle_ak_receiver_ml01"
 mod.all_headhunter_autogun_receivers = "autogun_rifle_killshot_receiver_01|autogun_rifle_killshot_receiver_02|autogun_rifle_killshot_receiver_03|autogun_rifle_killshot_receiver_04|autogun_rifle_killshot_receiver_ml01"
 mod.all_recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_rifle_elysian_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_rifle_elysian_receiver_06|lasgun_rifle_elysian_receiver_07|lasgun_rifle_elysian_receiver_08|lasgun_rifle_elysian_receiver_ml01"
+
+-- ################################################################
+-- Shared Fixes
+-- ################################################################
+local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
+mod.shared_fix_tables = {
+    ["default_sight_reticle_position_holo"] = {   
+        attachment_slot = "sight_reticle",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.eotech,
+            },
+            sight_reticle = {
+                has = all_owo_sight_reticle_names,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, -0.016, 0.01),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+            },
+        },
+    },
+}

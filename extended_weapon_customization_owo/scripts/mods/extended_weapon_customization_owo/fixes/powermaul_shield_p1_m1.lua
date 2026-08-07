@@ -20,6 +20,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- Attachment Names for Fixes
 -- ################################
+local shared_fix_tables = mod.shared_fix_tables
 local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
 -- ###################################################################
 -- FIXES TO RETURN

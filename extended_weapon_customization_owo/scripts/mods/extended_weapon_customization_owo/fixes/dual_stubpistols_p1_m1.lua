@@ -20,6 +20,7 @@ local _item_minion = "content/items/weapons/minions"
 -- ################################
 -- Attachment Names for Fixes
 -- ################################
+local shared_fix_tables = mod.shared_fix_tables
 local all_infantry_autogun_receivers = mod.all_infantry_autogun_receivers
 local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
 local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
@@ -134,23 +135,7 @@ local these_fixes = {
     },
     ]]
     --  Reticle Alignment
-    {   attachment_slot = "sight_reticle",
-        requirements = {
-            sight = {
-                has = all_holographic_sights_names.eotech,
-            },
-            sight_reticle = {
-                has = all_owo_sight_reticle_names,
-            },
-        },
-        fix = {
-            offset = {
-                position = vector3_box(0.0, -0.016, 0.01),
-                rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1, 1, 1),
-            },
-        },
-    },
+    mod.shared_fix_tables["default_sight_reticle_position_holo"],
 }
 
 local custom_attachments = {
