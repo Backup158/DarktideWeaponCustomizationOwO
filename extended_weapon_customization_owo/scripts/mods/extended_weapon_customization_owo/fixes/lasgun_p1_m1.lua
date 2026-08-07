@@ -19,6 +19,7 @@ local _item_minion = "content/items/weapons/minions"
 -- Attachment Names for Fixes
 -- ################################
 local shared_fix_tables = mod.shared_fix_tables
+
 local all_infantry_autogun_receivers = mod.all_infantry_autogun_receivers
 local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
 local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
