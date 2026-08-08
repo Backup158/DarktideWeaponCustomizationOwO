@@ -60,7 +60,8 @@ You don't have to use every add-on plugin. The list just includes most of the co
 
 Load EWC before `GoToMastery` and `enhanced_character_selection`. Do NOT use with `DumpStatFinder`.
 
-# EWC FAQ
+
+<a id="faq"># EWC FAQ</a>
 
 <a id="faq-1"></a>
 
@@ -122,9 +123,9 @@ On weapons without flashlights in the base game, flashlights use the Interact bu
 Otherwise, flashlights can be used as usual, with the Special Action button.
 
 
-<a id="faq-9"></a>
+<a id="faq-9">
 
-## 9. Why aren't colors saving when I paint weapons?
+## 9. Why aren't colors saving when I paint weapons?</a>
 It saves internally, but the changes may not show up right after painting.
 
 People have had luck with applying colors before loading into the Mourningstar, using a mod such as [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89). Otherwise, try swapping weapon loadouts while in the Psykhanium or playing a match.
@@ -132,16 +133,16 @@ People have had luck with applying colors before loading into the Mourningstar, 
 Also make sure that the slot you selected is the correct one, in case you're actually trying to paint a bayonet or whatever (FAQ 10).
 
 
-<a id="faq-10"></a>
+<a id="faq-10">
 
-## 10. I tried coloring a part, and other parts got the same color!
+## 10. I tried coloring a part, and other parts got the same color!</a>
 Whenever a part is colored, all parts attached to its slot as a child inherit that color. The child can then be colored separately without propagating to the parent.
 This color inheritance can go down the chain. Normally, the receiver is the root of all parts.
 
 
-<a id="faq-11"></a>
 
-## 11. Weapon damage is doubled in the Psykhanium.
+
+<a id="faq-11">## 11. Weapon damage is doubled in the Psykhanium.</a>
 It’s a side effect of the damage type feature. It only affects offline matches, not online matches, so you won’t be banned.
 There is no workaround, besides disabling the mod temporarily whenever you want to test breakpoints (Mod Options --> Toggle Mods --> Extended Weapon Customization).
 
@@ -152,21 +153,21 @@ There is no workaround, besides disabling the mod temporarily whenever you want 
 It's a bug with scopes added by plugins. The ones that zoom in make the crosshair disappear until you die. The plugins cannot fix this, and there is no ETA on it being fixed in the main mod.
 
 
-<a id="faq-13"></a>
-
+<a id="faq-13">
 ## 13. I can't upgrade weapons with Hadron: "Cannot complete operation"
+</a>
 Close the menu then open it again. Psych Ward helps, like in FAQ 9.
 
 
-<a id="faq-14"></a>
-
+<a id="faq-14">
 ## 14. The Hive Scum dual weapons are missing VFX for the left gun.
+</a>
 This is a known issue. it happens regardless if you have equipped any customized parts. There is no ETA on the fix.
 
 
-<a id="faq-15"></a>
-
+<a id="faq-15">
 ## 15. The game is crashing when I hover over some parts.
+</a>
 Go to Mod Options --> Extended Weapon Customization --> Disable the Randomization options
 
 Why does this help? Nobody knows but it usually works :D Praise the Omnissiah
