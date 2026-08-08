@@ -41,7 +41,7 @@ local default_templates = {
     }
 } 
 
-mod.families_and_damage_types = { 
+mod.slim_blade_families_and_damage_types = { 
     ["psword"] = {
         damage_type = "metal_slashing_medium",
         real_name = "powersword_p1_m1",
@@ -83,7 +83,7 @@ mod.families_and_damage_types = {
         real_name = "combatsword_p2_m1",
     },  
 }
-local families_and_damage_types = mod.families_and_damage_types
+local slim_blade_families_and_damage_types = mod.slim_blade_families_and_damage_types
 
 -- ################################
 -- Custom Damage Types
@@ -107,7 +107,7 @@ mod.custom_damage_types = {
         --muzzle_flash_crit = "content/fx/particles/weapons/rifles/bolter/bolter_muzzle_secondary",
     },
 }
-for _, data in pairs(families_and_damage_types) do
+for _, data in pairs(slim_blade_families_and_damage_types) do
     local damage_type_weapon_key = "owo_"..data.damage_type.."_"..data.real_name
     mod.custom_damage_types[damage_type_weapon_key] = table_clone(default_templates[data.damage_type])
     mod.custom_damage_types[damage_type_weapon_key].sfx_swing = PlayerCharacterSoundEventAliases.sfx_swing.events[data.real_name]

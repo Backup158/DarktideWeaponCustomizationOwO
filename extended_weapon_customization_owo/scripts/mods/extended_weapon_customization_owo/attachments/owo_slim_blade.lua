@@ -33,7 +33,7 @@ local for_all_weapon_models = mod.for_all_weapon_models
 local create_group_indicator = mod.create_group_indicator
 local dump_if_debug = mod.dump_if_debug
 
-local families_and_damage_types = mod.families_and_damage_types
+local slim_blade_families_and_damage_types = mod.slim_blade_families_and_damage_types
 
 -- ################################
 -- Attachment
@@ -46,7 +46,7 @@ function mod.owo_slim_blade_indicator(given_slot_name)
     local attachment_indicator_name = attachment_group_name.."_indicator"
     local table_to_return = mod.init_table_to_return(attachment_indicator_name)
 
-    for i, _ in pairs(families_and_damage_types) do
+    for i, _ in pairs(slim_blade_families_and_damage_types) do
         local indicator_address_internal_name = attachment_indicator_name.."_"..i
         local indicator_address = _item.."/indicators/"..indicator_address_internal_name
         create_group_indicator(table_to_return, indicator_address_internal_name, current_attachment_node, current_slot_name)
@@ -211,7 +211,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     end
     -- Calls the above for all the variants
     local function slim_blade_variant_helper_single(number_string, base_name, model_base_path, table_of_all_transformations)
-        local calculated_damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
+        local calculated_damage_type = ("owo_"..slim_blade_families_and_damage_types[base_name].damage_type.."_"..slim_blade_families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
         
         -- Flat
         slim_blade_attach_helper({
@@ -263,7 +263,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         })
     end
     local function slim_blade_variant_helper(amount_of_models, table_of_models_to_skip, base_name, model_base_path, table_of_all_transformations)
-        local calculated_damage_type = ("owo_"..families_and_damage_types[base_name].damage_type.."_"..families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
+        local calculated_damage_type = ("owo_"..slim_blade_families_and_damage_types[base_name].damage_type.."_"..slim_blade_families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
         
         -- Flat
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
