@@ -5,6 +5,11 @@ Most of the contents of this page are pinned in the Discord thread\*; this is a 
 
 \*Most discussion happens in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8). Check the [#weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284)
 
+# Table of Contents
+- [Installation](#installation)
+- [Links to Addon Plugins](#addon-plugins)
+- [FAQ](#faq)
+
 <a id="installation">
 
 # Installation</a>
