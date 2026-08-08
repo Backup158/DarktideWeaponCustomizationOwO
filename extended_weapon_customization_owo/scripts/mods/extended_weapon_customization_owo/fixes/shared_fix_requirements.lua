@@ -107,11 +107,14 @@ local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
 
 -- This table contains designations for fixes that are commonly copied WITHOUT changes
 mod.shared_fix_tables = {
+    -- --------------------------------------
+    -- Fixes
+    -- --------------------------------------
     ["default_sight_reticle_position_holo"] = {   
         attachment_slot = "sight_reticle",
         requirements = {
             sight = {
-                has = all_holographic_sights_names.eotech,
+                has = all_holographic_sights_names,
             },
             sight_reticle = {
                 has = all_owo_sight_reticle_names,
@@ -122,6 +125,22 @@ mod.shared_fix_tables = {
                 position = vector3_box(0.0, -0.016, 0.01),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
+            },
+        },
+    },
+
+    -- --------------------------------------
+    -- Attachment Slots
+    -- --------------------------------------
+    ["default_attachment_sight_reticle"] = {
+        parent_slot = "sight",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, 0, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
             },
         },
     },
