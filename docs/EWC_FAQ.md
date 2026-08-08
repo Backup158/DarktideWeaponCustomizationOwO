@@ -1,7 +1,9 @@
 # Extended Weapon Customization Informational Page
 Extended Weapon Customization (EWC) is a mod for *Warhammer 40,000: Darktide* that allows you swap parts on your weapons, with support for community-added kitbashed parts. It being such an ambitious project naturally leads to having a few confusing aspects and known issues/quirks. This page serves as an officially unofficial FAQ for common issues and solutions for this mod. 
 
-Most of the contents of this page are pinned in the Discord thread; this is a mirror link for easy sharing.
+Most of the contents of this page are pinned in the Discord thread\*; this is a mirror link for easy sharing.
+
+\*Most discussion happens in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8). Check the [#weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284)
 
 # Installation
 This mod is installed like any other mod. See the [Darktide Modding Community's Guide for Manual Mod Installation](https://dmf-docs.darkti.de/#/installing-mods) if you don't already know how to do so.
@@ -11,7 +13,7 @@ To use this mod specifically, there are three files you need to install.
 2. [Visual Loadout Customization Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/853)
 3. Extended Weapon Customization. The mod can be found on:
   - [NexusMods.com](https://www.nexusmods.com/warhammer40kdarktide/mods/277)
-  - Pinned in [the #weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284) in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8). The pinned version is sometimes a potentially-unstable release with beta features.
+  - Pinned in the [Discord channel](https://discord.com/channels/1048312349867646996/1168063453416669284) mentioned earlier. The pinned version is sometimes a potentially-unstable release with beta features.
 There are two important things to note for load order
 - The two patches need to load before EWC.
 - The two patches need to load early in the load order. Some mods, if loaded before the patches, will prevent them from working.
