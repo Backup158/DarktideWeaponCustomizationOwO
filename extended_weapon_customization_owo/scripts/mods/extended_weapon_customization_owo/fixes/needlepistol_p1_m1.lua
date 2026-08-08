@@ -162,18 +162,7 @@ local custom_attachments = {
             },
         },
     },
-    sight_reticle = {
-        parent_slot = "sight",
-        default_path = _item_empty_trinket,
-        fix = {
-            offset = {
-                position = vector3_box(0, 0, 0),
-                rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1, 1, 1),
-                node = 1,
-            },
-        },
-    },
+    sight_reticle = mod.shared_fix_tables["default_attachment_sight_reticle"],
     muzzle = {
         parent_slot = "barrel",
         default_path = _item_empty_trinket,
