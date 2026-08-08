@@ -37,7 +37,8 @@ General, place these *after* `extended_weapon_customization`. Defer to the plugi
 - [*xsScythes*](https://www.nexusmods.com/warhammer40kdarktide/mods/918) by xsSplater
   - Scythes for Psyker staves
 
-## Example Load Order
+## Load Order
+The recommended load order is as follows:
 ```
 master_item_community_patch
 visual_loadout_customization_community_patch
@@ -47,7 +48,10 @@ extended_weapon_customization_base_additions
 extended_weapon_customization_owo
 extended_weapon_customization_syn_edits
 extended_weapon_customization_more_dakka
+extended_weapon_customization_empty_scopes
 ```
+You don't have to use every add-on plugin. The list just includes most of the common ones.
+
 Load EWC before `GoToMastery` and `enhanced_character_selection`. Do NOT use with `DumpStatFinder`.
 
 # EWC FAQ
