@@ -1,5 +1,7 @@
 # Extended Weapon Customization Informational Page
-Extended Weapon Customization (EWC) is a mod for *Warhammer 40,000: Darktide* that allows you swap parts on your weapons, with support for community-added kitbashed parts. By being such an ambitious project, there are often a few confusing aspects and known issues. This page serves as an officially unofficial FAQ for common issues and solutions for this mod. Most of the contents of this page are pinned in the Discord thread; this is a mirror link for easy sharing.
+Extended Weapon Customization (EWC) is a mod for *Warhammer 40,000: Darktide* that allows you swap parts on your weapons, with support for community-added kitbashed parts. It being such an ambitious project naturally leads to having a few confusing aspects and known issues/quirks. This page serves as an officially unofficial FAQ for common issues and solutions for this mod. 
+
+Most of the contents of this page are pinned in the Discord thread; this is a mirror link for easy sharing.
 
 # Installation
 This mod is installed like any other mod. See the [Darktide Modding Community's Guide for Manual Mod Installation](https://dmf-docs.darkti.de/#/installing-mods) if you don't already know how to do so.
@@ -17,14 +19,23 @@ There are two important things to note for load order
 # Links to Addon Plugins
 General, place these *after* `extended_weapon_customization`. Defer to the plugins if they have more specific instructions.
 
-- [EWC Base Additions](https://www.nexusmods.com/warhammer40kdarktide/mods/277) by Grasmann: On the Nexus page of EWC, in the "Optional Files" section.
-Put this one before the other add-on plugins in the load order
-- *The Syndonai Edits* (Syn's Edits) by Syndonai: Discord only. See the pins in the Discord chat.
-- *MOAR DAKKA!* by MarcathRoosevelt: Discord only. See the pins in the Discord chat.
+- [EWC Base Additions](https://www.nexusmods.com/warhammer40kdarktide/mods/277) by Grasmann
+  - On the Nexus page of EWC, in the "Optional Files" section. Put this one before the other add-on plugins in the load order.
+  - Adds parts across different weapon types. Notably contains reflex sights, laser sights, and flaming sword blades.
+- *The Syndonai Edits* (Syn's Edits) by Syndonai: 
+  - Discord only. See the pins in the Discord chat.
+  - Contains many sci-fi and 40k parts. Generally just does everything.
+- *MOAR DAKKA!* by MarcathRoosevelt
+  - Discord only. See the pins in the Discord chat.
+  - Adds heretic weapon skins, machine gun parts to autoguns, and fisting. Most parts are for Ogryn.
 - [*Ostracized without Objection*](https://www.nexusmods.com/warhammer40kdarktide/mods/429) (OwO) by me
+  - Mainly real-world attachments
 - [*Empty Sights*](https://github.com/Backup158/DarktideWeaponCustomizationEmptySights/releases/latest) by me
+  - Reflex sights from base additions, but without the reticle.
 - [*Hidden Viewmodels While Aiming*](https://www.nexusmods.com/warhammer40kdarktide/mods/461) by me
+  - Moving the gun off the screen when you aim.
 - [*xsScythes*](https://www.nexusmods.com/warhammer40kdarktide/mods/918) by xsSplater
+  - Scythes for Psyker staves
 
 ## Example Load Order
 ```
