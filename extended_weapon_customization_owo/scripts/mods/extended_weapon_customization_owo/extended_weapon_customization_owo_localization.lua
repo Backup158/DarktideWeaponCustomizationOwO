@@ -125,6 +125,17 @@ for attachment_name_code, human_name in pairs(slim_blade_names) do
 	})
 end
 -- ---------------
+-- Chainsword Blades
+-- ---------------
+mod:add_global_localize_strings({
+	["loc_ewc_owo_chainsword_blade"] = {
+		en = "OwO Chainsword Blades - "..Localize("loc_weapon_family_chainsword_p1_m1")
+	},
+	["loc_ewc_owo_2h_chainsword_blade"] = {
+		en = "OwO Chainsword Blades - "..Localize("loc_weapon_family_2h_chainsword_p1_m1")
+	},
+})
+-- ---------------
 -- Suppressors
 -- ---------------
 local suppressor_localizations = {
