@@ -279,6 +279,10 @@ function mod.return_all_numbers_for_hide()
     return {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15}
 end
 
+function mod.calculate_damage_type_key_name(table_of_contents, base_name)
+    return ("owo_"..table_of_contents[base_name].damage_type.."_"..table_of_contents[base_name].real_name) or "metal_slashing_medium"
+end
+
 -- ################################
 -- Some Variables for Common Attachments
 -- ################################

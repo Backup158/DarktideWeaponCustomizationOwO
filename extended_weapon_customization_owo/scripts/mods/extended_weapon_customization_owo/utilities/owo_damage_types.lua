@@ -22,6 +22,12 @@ local dump_if_debug = mod.dump_if_debug
 local gibbing_types = GibbingSettings.gibbing_types
 local gibbing_power = GibbingSettings.gibbing_power
 
+-- ################################################################
+-- Helpers
+-- ################################################################
+-- ################################
+-- Damage Templates
+-- ################################
 local default_templates = {
     -- Sawing is what the cutting weapons use
     metal_slashing_light = {
@@ -38,7 +44,12 @@ local default_templates = {
         game_damage_type = "metal_slashing_heavy",
         gibbing_type = gibbing_types.sawing,
         gibbing_power = gibbing_power.infinite,
-    }
+    },
+    sawing = {
+        game_damage_type = "sawing",
+        gibbing_type = gibbing_types.sawing,
+        gibbing_power = gibbing_types.always,
+    },
 } 
 
 mod.slim_blade_families_and_damage_types = { 
@@ -85,9 +96,42 @@ mod.slim_blade_families_and_damage_types = {
 }
 local slim_blade_families_and_damage_types = mod.slim_blade_families_and_damage_types
 
+mod.chainsword_blade_families_and_damage_types = {
+    ["chainsword"] = {
+        damage_type = "sawing",
+        real_name = "chainsword_p1_m1",
+    },
+    ["chainsword_2h"] = {
+        damage_type = "sawing",
+        real_name = "chainsword_2h_p1_m1",
+    },
+    ["chainaxe"] = {
+        damage_type = "sawing",
+        real_name = "chainaxe_p1_m1",
+    },
+}
+local chainsword_blade_families_and_damage_types = mod.chainsword_blade_families_and_damage_types
+
 -- ################################
+-- Helper Functions
+-- ################################
+local function create_melee_damage_type_from_template_data(data)
+    local damage_type_weapon_key = "owo_"..data.damage_type.."_"..data.real_name
+    mod.custom_damage_types[damage_type_weapon_key] = table_clone(default_templates[data.damage_type])
+    mod.custom_damage_types[damage_type_weapon_key].sfx_swing = PlayerCharacterSoundEventAliases.sfx_swing.events[data.real_name]
+    mod.custom_damage_types[damage_type_weapon_key].sfx_swing_heavy = PlayerCharacterSoundEventAliases.sfx_swing_heavy.events[data.real_name]
+    mod.custom_damage_types[damage_type_weapon_key].sfx_weapon_foley_01_right_hand = "wwise/events/weapon/play_weapon_silence" -- special swing
+    mod.custom_damage_types[damage_type_weapon_key].sfx_weapon_foley_02_right_hand = "wwise/events/weapon/play_weapon_silence"
+end
+local function create_melee_damage_type_from_template_table(table_name)
+    for _, data in pairs(table_name) do
+        create_melee_damage_type_from_template_data(data)
+    end
+end
+
+-- ################################################################
 -- Custom Damage Types
--- ################################
+-- ################################################################
 mod.custom_damage_types = {
     ["owo_suppressed_autogun_bullet"] = {
         -- Sounds
@@ -107,14 +151,8 @@ mod.custom_damage_types = {
         --muzzle_flash_crit = "content/fx/particles/weapons/rifles/bolter/bolter_muzzle_secondary",
     },
 }
-for _, data in pairs(slim_blade_families_and_damage_types) do
-    local damage_type_weapon_key = "owo_"..data.damage_type.."_"..data.real_name
-    mod.custom_damage_types[damage_type_weapon_key] = table_clone(default_templates[data.damage_type])
-    mod.custom_damage_types[damage_type_weapon_key].sfx_swing = PlayerCharacterSoundEventAliases.sfx_swing.events[data.real_name]
-    mod.custom_damage_types[damage_type_weapon_key].sfx_swing_heavy = PlayerCharacterSoundEventAliases.sfx_swing_heavy.events[data.real_name]
-    mod.custom_damage_types[damage_type_weapon_key].sfx_weapon_foley_01_right_hand = "wwise/events/weapon/play_weapon_silence" -- special swing
-    mod.custom_damage_types[damage_type_weapon_key].sfx_weapon_foley_02_right_hand = "wwise/events/weapon/play_weapon_silence"
-end
+create_melee_damage_type_from_template_table(slim_blade_families_and_damage_types)
+create_melee_damage_type_from_template_table(chainsword_blade_families_and_damage_types)
 
 -- ################################
 -- Adding Damage Types to EWC

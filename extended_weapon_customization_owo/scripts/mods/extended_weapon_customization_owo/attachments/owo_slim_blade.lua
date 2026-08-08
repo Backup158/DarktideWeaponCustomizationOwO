@@ -32,6 +32,7 @@ local create_an_attachment = mod.create_an_attachment
 local for_all_weapon_models = mod.for_all_weapon_models
 local create_group_indicator = mod.create_group_indicator
 local dump_if_debug = mod.dump_if_debug
+local calculate_damage_type_key_name = mod.calculate_damage_type_key_name
 
 local slim_blade_families_and_damage_types = mod.slim_blade_families_and_damage_types
 
@@ -211,7 +212,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     end
     -- Calls the above for all the variants
     local function slim_blade_variant_helper_single(number_string, base_name, model_base_path, table_of_all_transformations)
-        local calculated_damage_type = ("owo_"..slim_blade_families_and_damage_types[base_name].damage_type.."_"..slim_blade_families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
+        local calculated_damage_type = calculate_damage_type_key_name(slim_blade_families_and_damage_types, base_name)
         
         -- Flat
         slim_blade_attach_helper({
@@ -263,7 +264,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         })
     end
     local function slim_blade_variant_helper(amount_of_models, table_of_models_to_skip, base_name, model_base_path, table_of_all_transformations)
-        local calculated_damage_type = ("owo_"..slim_blade_families_and_damage_types[base_name].damage_type.."_"..slim_blade_families_and_damage_types[base_name].real_name) or "metal_slashing_medium"
+        local calculated_damage_type = calculate_damage_type_key_name(slim_blade_families_and_damage_types, base_name)
         
         -- Flat
         for_all_weapon_models(amount_of_models, table_of_models_to_skip, function(number_string)
