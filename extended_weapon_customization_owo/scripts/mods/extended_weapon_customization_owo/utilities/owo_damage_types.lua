@@ -48,7 +48,7 @@ local default_templates = {
     sawing = {
         game_damage_type = "sawing",
         gibbing_type = gibbing_types.sawing,
-        gibbing_power = gibbing_types.always,
+        gibbing_power = gibbing_power.always,
     },
 } 
 
