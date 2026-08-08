@@ -501,7 +501,7 @@ for i = 1, amount_of_siblings do
     copy_attachments_and_fixes_to_siblings(siblings_to_add[i])
 end
 
-dump_if_debug(attachments_table_for_ewc, "uwu fuck you bitch\nALL THE FUCKING TABLE RAAAGH")
+--dump_if_debug(attachments_table_for_ewc, "uwu fuck you bitch\nALL THE FUCKING TABLE RAAAGH")
 
 -- ################################
 -- **Sending it to the actual table that gets read by the base mod**
