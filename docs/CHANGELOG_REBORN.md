@@ -1,7 +1,17 @@
 # 4.6.0 - UNRELEASED
 ## Added
+- Chainsword Blades
+    - Chainsword blades onto the Eviscerator
+    - Eviscerator blades onto the Chainsword
+    - Created new Chainsword damage types for each of them
 ## Changed
-- Refactored damage types so it's done only on all mods being loaded, so load order doesn't matter for EWC (still recommended to keep it after base additions)
+- Refactored damage types
+    - It's done only on all mods being loaded, so load order doesn't matter with EWC
+        - still recommended to keep OwO after base additions bc of the soft requirement
+        - But if I ever get rid of that, it'll be fine in whatever order
+        - Robustness yesss
+    - Clarified `families_and_damage_types` was just for slim blades, since I needed one for chainsword blades separately
+    - Created function for making damage types from a given family/damage_type table
 - Refactored file structure. Now whenever I add a new attachment/fix, all edits are done in one file instead of being spread out
 - Refactored copying to siblings for improved performance
 - Refactored common fixes and attachments
