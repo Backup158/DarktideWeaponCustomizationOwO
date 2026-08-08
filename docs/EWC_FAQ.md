@@ -16,6 +16,8 @@ There are two important things to note for load order
 - The two patches need to load before EWC.
 - The two patches need to load early in the load order. Some mods, if loaded before the patches, will prevent them from working.
 
+<a id="addon-plugins"></a>
+
 # Links to Addon Plugins
 General, place these *after* `extended_weapon_customization`. Defer to the plugins if they have more specific instructions.
 
@@ -36,6 +38,8 @@ General, place these *after* `extended_weapon_customization`. Defer to the plugi
   - Moving the gun off the screen when you aim.
 - [*xsScythes*](https://www.nexusmods.com/warhammer40kdarktide/mods/918) by xsSplater
   - Scythes for Psyker staves
+
+<a id="load-order"></a>
 
 ## Load Order
 The recommended load order is as follows:
