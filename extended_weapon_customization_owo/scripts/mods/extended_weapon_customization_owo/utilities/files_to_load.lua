@@ -18,6 +18,7 @@ mod.attachment_names = {
     "owo_holographic_sight",
     "owo_sight_reticle",
     "owo_empty_attachments",
+    "owo_chainsword_blade",
 }
 
 mod.special_needs_fixes = { 
