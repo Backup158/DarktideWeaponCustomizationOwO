@@ -114,6 +114,25 @@ local these_fixes = {
         },
     },
     -- -----------
+    -- AK Irons
+    -- -----------
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                has = "owo_iron_sight_kalashnikov",
+            },
+            receiver = {
+                has = all_headhunter_autogun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.0, 0.008),
+                rotation = vector3_box(0.0, 0.0, 0.0),
+            },
+        },
+    },
+    -- -----------
     -- Holographic Sights
     -- -----------
     --  Sight Alignment

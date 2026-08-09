@@ -14,6 +14,7 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
+local _item_empty = "content/characters/empty_item/empty_item"
 
 -- ################################
 -- Some Variables for Common Attachments
@@ -41,6 +42,15 @@ function mod.owo_iron_sight(given_attachment_node)
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
+    -- Kitbash helper items
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac1", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", "ap_sight_01")
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac2", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", "ap_sight_01")
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac3", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
+    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac4", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac5", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
+    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac6", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_02/stock_02", "ap_sight_01")
+    
+
     local ak_irons = attachment_group_prefix.."kalashnikov"
     create_an_attachment(table_to_return, ak_irons,
         -- Attachment
@@ -63,7 +73,8 @@ function mod.owo_iron_sight(given_attachment_node)
             }
         },
         -- Kitbash
-        {   item = _item_ranged.."/sights/autogun_rifle_sight_01",
+        {   --[[
+            item = _item_ranged.."/sights/autogun_rifle_sight_01",
             fix = {
                 disable_in_ui = false,
                 offset = {
@@ -148,20 +159,103 @@ function mod.owo_iron_sight(given_attachment_node)
                     },
                 },
             },
+            ]]
+            base_unit = _item_empty,
+            attachments = {
+                owo_base_sight = {
+                    item = _item_ranged.."/sights/autogun_rifle_sight_01",
+                    fix = {
+                        disable_in_ui = false,
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.245, -0.006),
+                            rotation = vector3_box(0.0, 0.0, 0.0),
+                            scale = vector3_box(1.0, 1.0, 1.0)
+                        },
+                        hide = {
+                            mesh = {2,3,4,5,6} -- one of these is the front rail lol
+                        },
+                    },
+                    children = {
+                        -- Range select
+                        sight_ac1 = {
+                            item = _item_ranged.."/sights/owo_iron_sight_ak_ac1",
+                            fix = {
+                                offset = {
+                                    node = 1,
+                                    position = vector3_box(-0.004, -0.06, 0.01),
+                                    rotation = vector3_box(0.0, 90, 0.0),
+                                    scale = vector3_box(0.36, 0.36, 0.25),
+                                },
+                            },
+                        },
+                        sight_ac2 = {
+                            item = _item_ranged.."/sights/owo_iron_sight_ak_ac1",
+                            fix = {
+                                offset = {
+                                    node = 1,
+                                    position = vector3_box(0.022, -0.06, 0.01),
+                                    rotation = vector3_box(0.0, 90, 0.0),
+                                    scale = vector3_box(0.32, 0.32, 0.06),
+                                },
+                            },
+                        },
+                        -- Rear sight (making that v notch)
+                        sight_ac3 = {
+                            item = _item_ranged.."/sights/owo_iron_sight_ak_ac5",
+                            fix = {
+                                offset = {
+                                    node = 1,
+                                    position = vector3_box(0.009, -0.07, 0.021),
+                                    rotation = vector3_box(90.0, 90.0, 0.0),
+                                    scale = vector3_box(0.23, 0.047, 0.22),
+                                },
+                            },
+                        },
+                        sight_ac4 = {
+                            item = _item_ranged.."/sights/owo_iron_sight_ak_ac5",
+                            fix = {
+                                offset = {
+                                    node = 1,
+                                    position = vector3_box(-0.009, -0.07, 0.021),
+                                    rotation = vector3_box(90.0, -90.0, 0.0),
+                                    scale = vector3_box(0.23, 0.047, 0.22),
+                                },
+                            },
+                        },
+                        -- rear butt
+                        sight_ac5 = {
+                            item = _item_ranged.."/sights/owo_iron_sight_ak_ac5",
+                            fix = {
+                                offset = {
+                                    node = 1,
+                                    position = vector3_box(0.008, -0.022, 0.003),
+                                    rotation = vector3_box(-145, 90, 145),
+                                    scale = vector3_box(0.23, 0.24, 0.25),
+                                },
+                            },
+                        },
+                        -- Dust cover
+                        sight_ac6 = {
+                            item = _item_ranged.."/sights/owo_iron_sight_ak_ac6",
+                            fix = {
+                                offset = {
+                                    node = 1,
+                                    position = vector3_box(0.0, 0.0, -0.014),
+                                    rotation = vector3_box(0.0, 0.0, 0.0),
+                                    scale = vector3_box(0.85, 1.42, 0.8),
+                                },
+                            },
+                        },
+                    }
+                },
+                
+            },
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
         current_attachment_node
     )
-
-    -- Kitbash helper items
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac1", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", "ap_sight_01")
-    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac2", nil, "content/weapons/player/melee/hatchet/attachments/grip_03/grip_03", "ap_sight_01")
-    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac3", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
-    --create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac4", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac5", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_01/stock_01", "ap_sight_01")
-    create_kitbash_full_item(table_to_return, _item_ranged.."/sights/owo_iron_sight_ak_ac6", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/stock_02/stock_02", "ap_sight_01")
-    
 
     return table_to_return
 

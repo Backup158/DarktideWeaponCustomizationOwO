@@ -4,7 +4,14 @@
 ## Changed
 
 ## Fixed
+- Crash when hovering chainsword body 10-12
+    - `create_attachments.lua` did not have safety checks when prepending 0
+    - Thus creating nonsensical numbers when fed two digit values
 - Missing mod options for randomization: chainsword blades
+- Equipping AK Irons would move suppressors forwards
+    - Both were made as simple kitbashes
+    - Making the AK base apply as the muzzle base, so the fix hit both
+    - Turned AK Irons into a full kitbash
 
 # 4.6.0 - 2026-08-08
 ## Added
