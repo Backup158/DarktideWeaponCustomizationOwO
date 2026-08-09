@@ -56,6 +56,7 @@ local function owo_chainsword_blade_helper(chainsword_name, path, amount_of_mode
         local base_name = attachment_group_prefix..chainsword_name
         local base_item_address = path
         local damage_type = calculate_damage_type_key_name(chainsword_blade_families_and_damage_types, chainsword_name)
+        local selection_group = base_name
 
         local specific_name = attachment_group_prefix..base_name.."_"..number_string
 
@@ -65,7 +66,7 @@ local function owo_chainsword_blade_helper(chainsword_name, path, amount_of_mode
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
                 damage_type = damage_type,
-                custom_selection_group = base_name,
+                custom_selection_group = selection_group,
                 randomization_requirement = "mod_option_chainsword_blade_randomization",
             },
             -- Fixes
