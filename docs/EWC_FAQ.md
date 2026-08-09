@@ -9,6 +9,7 @@ Most of the contents of this page are pinned in the Discord thread\*; this is a 
 - [Installation](#installation)
 - [Links to Addon Plugins](#addon-plugins)
 - [FAQ](#faq)
+- [Legacy FAQ](#legacy-faq)
 
 <a id="installation">
 
@@ -213,3 +214,29 @@ Make sure you have the [Visual Loadout Customization Community Patch](https://ww
 If *most* attachments work but only a few aren't, it's likely an issue with that specific part when used in conjection with the current combination of attachments. Report these to the respective addon plugin author.
 
 \* EWC checks where to put attachments using a legacy algorithm. Using the current algorithm means every single part needs to be realigned, so the legacy algorithm was restored with this patch.
+
+<a id="legacy-faq">
+
+# Legacy Weapon Customization FAQ</a>
+The intention of the FAQ is to answer questions specifically about the rebuild of `weapon_customization` --> `extended_weapon_customization`. As such, it does not address questions that we've been answering for the old version. For posterity, I'll include a few of those common ones.
+
+<a id="legacy-faq-1">
+
+## 1. Can other people see these?</a>
+No, this mod is entirely client-side. This means that your customizations are only visible to yourself, and other players won't see it, even with this mod installed.
+
+Out of respect for Fatshark, there will be no efforts made to allow others to see your weapons. As an alternative, consider sharing pictures of your weapons in the Discord thread.
+
+One way to create the illusion of this is to enable Randomization in the Mod Options. This will give other players random attachment selections, which may appear as if they chose those customizations themselves.
+
+<a id="legacy-faq-2">
+
+## 2. I can't see my weapon skins anymore!</a>
+As a side effect of implementing customization, you can't see the effects of choosing a skin through the "Cosmetics" button. Other people will still see the equipped skin, but for you to see it, you'll need to recreate it through EWC. This can take some combination of swapping attachments and applying colors and patterns.
+
+Note that the red and white Mastery reward skins are not a paintjob, but separate parts
+
+<a id="legacy-faq-3">
+
+## 3. I keep hearing some rustling noise when walking!</a>
+This is actually from Visible Equipment. Open Mod Options --> Disable "Sounds from own character" and "Sounds from other characters"
