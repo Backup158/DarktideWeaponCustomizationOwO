@@ -97,6 +97,6 @@ function mod.owo_chainsword_blade(given_slot, given_attachment_node)
     return owo_chainsword_blade_helper("chainsword", "content/weapons/player/melee/chain_sword/attachments/body_01/body_01", 12, {}, given_slot, given_attachment_node)
 end
 
-function mod.owo_2h_chainsword_blade(given_slot, given_attachment_node)
-    return owo_chainsword_blade_helper("2h_chainsword", "content/weapons/player/melee/2h_chain_sword/attachments/body_01/body_01", 7, {5}, given_slot, given_attachment_node)
+function mod.owo_chainsword_2h_blade(given_slot, given_attachment_node)
+    return owo_chainsword_blade_helper("chainsword_2h", "content/weapons/player/melee/2h_chain_sword/attachments/body_01/body_01", 7, {5}, given_slot, given_attachment_node)
 end
