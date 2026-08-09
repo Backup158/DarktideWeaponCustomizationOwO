@@ -64,18 +64,20 @@ In the customization menu, parts will be in sections named `Ostracized without O
 &emsp; AK Irons
 > [!WARNING]
 > 
-> Nonfunctional
+> Works but can be a bit odd
 
 # Melee
 ## Blade/Body
-- **Slim Blades**: Power Swords, Power Falchions, Relic Blades, Blaze Force Swords, Blaze Force Greatsword, "Devil's Claw" Sword, Heavy Sword, Dueling Sword  \
+- **Slim Blades**: Power Swords, Power Falchions, Mechanicus Power Swords, Relic Blades, Blaze Force Swords, Blaze Force Greatsword, "Devil's Claw" Sword, Heavy Sword, Dueling Sword  \
 &emsp; Comes in Flat and Slim, each with Grip variants  \
 &emsp; &emsp; Flat: Blade's cutting edge is slimmed down  \
 &emsp; &emsp; Slim: Blade is less wide and its cutting edge is slimmed down  \
-&emsp; &emsp; Grip Variant: Also shrinks the grip
-> [!WARNING]
-> 
-> Grip variants change nothing
+&emsp; &emsp; Grip Variant: Also shrinks the grip  \
+![Slim Blade on Power Sword](/assets/images/Screenshot%202025-03-07%2017-19-03.png)
+
+- **Chainsword Blades**: Assault Chainswords, Heavy Eviscerators  \
+&emsp; Allows each weapon to use the other's body/chain  \
+![Eviscerator on Chainsword](/assets/images/owo_rebuild_chainsword_blade.png)
 
 ## Rear Head
 - **Rear Spike**: Combat Axes, Tactical Axes  \
