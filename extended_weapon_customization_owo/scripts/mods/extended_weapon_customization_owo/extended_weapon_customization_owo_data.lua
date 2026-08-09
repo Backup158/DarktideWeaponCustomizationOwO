@@ -20,6 +20,8 @@ local widgets_toggleable_to_add = {
                 "mod_option_slim_blade_randomization",
                 "mod_option_suppressor_randomization",
                 "mod_option_tactical_stock_randomization",
+                "mod_option_chainsword_blade_randomization",
+                "mod_option_chainsword_chain_randomization",
             }
         },
     },

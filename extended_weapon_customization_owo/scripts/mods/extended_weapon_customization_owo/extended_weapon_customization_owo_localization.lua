@@ -281,6 +281,12 @@ local localizations = {
 	mod_option_tactical_stock_randomization = {
 		en = "Tactical Stocks",
 	},
+	mod_option_chainsword_blade_randomization = {
+		en = "Chainsword Blades",
+	},
+	mod_option_chainsword_chain_randomization = {
+		en = "Chainsword Chains",
+	},
 }
 
 -- ################

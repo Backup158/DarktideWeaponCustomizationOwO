@@ -1,3 +1,11 @@
+# 4.7.0 - UNRELEASED
+## Added
+
+## Changed
+
+## Fixed
+- Missing mod options for randomization: chainsword blades
+
 # 4.6.0 - 2026-08-08
 ## Added
 - Chainsword Blades
@@ -21,6 +29,7 @@
     - Now there are tables in the shared fix requirements so it's easier to make sweeping changes
 ## Fixed
 - ~~my life haha~~
+- AML will sort it after base additions
 
 # 4.5.0 - 2026-07-23
 ## Added
