@@ -11,6 +11,7 @@ local type = type
 --local pairs = pairs
 local string = string
 local string_find = string.find
+local string_len = string.len
 local table = table
 local table_insert = table.insert
 local table_contains = table.contains
@@ -263,7 +264,12 @@ function mod.for_all_weapon_models(range_end_inclusive, table_of_values_to_exclu
     for i = 1, range_end_inclusive do
         -- if nothing needed to be excluded, or it's not one of the things to exclude
         if not (table_of_values_to_exclude and table_contains(table_of_values_to_exclude, i)) then
-            function_to_run("0"..tostring(i))
+            local number_as_string = tostring(i)
+            if string_len < 2 then
+                function_to_run("0"..number_as_string)
+            else
+                function_to_run(number_as_string)
+            end
         end
     end
     -- Now for mastery item
