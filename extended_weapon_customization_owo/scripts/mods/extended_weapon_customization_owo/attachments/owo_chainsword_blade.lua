@@ -145,7 +145,7 @@ local function owo_chainsword_chain_group_helper(current_slot, current_attachmen
     end
 
     for i = 1, #table_of_replacement_paths do
-        local specific_name = attachment_group_prefix..chainsword_name..tostring(i)
+        local specific_name = attachment_group_prefix.."_"..tostring(i)
         local replacement_path = table_of_replacement_paths[i]
 
         table_to_return, all_attachment_names = owo_chainsword_chain_single_helper(table_to_return, current_attachment_node, specific_name, replacement_path, attachment_group_name, all_attachment_names)
