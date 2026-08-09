@@ -2,8 +2,10 @@
 ## Added
 - Chainsword Blades
     - Chainsword blades onto the Eviscerator
-    - Eviscerator blades onto the Chainsword
+    - Eviscerator blades onto the Assault Chainsword
     - Created new Chainsword damage types for each of them
+- Chainsword chains
+    - For use with the above
 ## Changed
 - Refactored damage types
     - It's done only on all mods being loaded, so load order doesn't matter with EWC
