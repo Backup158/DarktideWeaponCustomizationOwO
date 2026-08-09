@@ -265,7 +265,7 @@ function mod.for_all_weapon_models(range_end_inclusive, table_of_values_to_exclu
         -- if nothing needed to be excluded, or it's not one of the things to exclude
         if not (table_of_values_to_exclude and table_contains(table_of_values_to_exclude, i)) then
             local number_as_string = tostring(i)
-            if string_len < 2 then
+            if string_len(number_as_string) < 2 then
                 function_to_run("0"..number_as_string)
             else
                 function_to_run(number_as_string)
