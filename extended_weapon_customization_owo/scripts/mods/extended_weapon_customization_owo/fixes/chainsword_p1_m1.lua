@@ -30,7 +30,7 @@ local custom_fixes = {
     -- Chainsword Blades
     {   attachment_slot = "body",
         requirements = {
-            stock = {
+            body = {
                 has = owo_chainsword_2h_with_gap,
             },
         },
