@@ -79,6 +79,11 @@ end
 local all_holographic_sights_names = create_requirements_string_from_names_table(mod.all_holographic_sights_names)
 mod.all_holographic_sights_names.all = all_holographic_sights_names
 
+-- --------------------------------
+-- Chainsword parts
+-- --------------------------------
+mod.owo_chainsword_2h_with_gap = "owo_chainsword_2h_blade_02|owo_chainsword_2h_blade_ml01"
+
 -- ################################
 -- Syn's Parts
 -- ################################
