@@ -130,7 +130,7 @@ You can click the button to disable it, turning it red.
 <a id="faq-8">
 
 ## 8. How do I use the flashlights?</a>
-On weapons without flashlights in the base game, flashlights use the Interact button (the one for using Medicae stations, picking up ammo, etc.). Press it while aiming down sights, or quickly double tap it. These behaviors can be toggled in the Mod Options.
+On weapons without flashlights in the base game, flashlights use the Interact button (the one for using Medicae stations, picking up ammo, etc.). Press it while aiming down sights, or quickly double tap it. These behaviors (and the reminder message in chat) can be toggled in the Mod Options.
 
 Otherwise, flashlights can be used as usual, with the Special Action button.
 
