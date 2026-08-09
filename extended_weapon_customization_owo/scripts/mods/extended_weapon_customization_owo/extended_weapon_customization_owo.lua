@@ -445,14 +445,16 @@ add_attachments_to_list_of_weapons(mod.owo_slim_blade("head"), one_handed_mauls,
 add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator(), { "powersword_p1_m1", "powersword_p2_m1", "powersword_2h_p1_m1", "forcesword_p1_m1", "forcesword_2h_p1_m1", }, "blade_indicator")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("body"), {"combatsword_p1_m1", "combatsword_p2_m1", "combatsword_p3_m1", }, "blade_indicator")
 add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("head"), one_handed_mauls, "blade_indicator")
+--table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
 ]]
 add_attachments_to_list_of_weapons(mod.owo_invisible_shock_maul_connector(), one_handed_mauls, "connector")
 
 add_attachments_to_list_of_weapons(mod.owo_chainsword_blade(), {"chainsword_2h_p1_m1"}, "body")
+add_attachments_to_list_of_weapons(mod.owo_chainsword_chain(), {"chainsword_2h_p1_m1"}, "body")
 add_attachments_to_list_of_weapons(mod.owo_chainsword_2h_blade(), {"chainsword_p1_m1"}, "body")
+add_attachments_to_list_of_weapons(mod.owo_chainsword_2h_chain(), {"chainsword_p1_m1"}, "body")
 
 add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01"), {"combataxe_p1_m1", "combataxe_p2_m1", }, "head_rear")
---table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
 
 -- ################################
 -- Manual Overrides for Attachments
