@@ -56,9 +56,9 @@ local function owo_chainsword_blade_helper(chainsword_name, path, amount_of_mode
         local base_name = attachment_group_prefix..chainsword_name
         local base_item_address = path
         local damage_type = calculate_damage_type_key_name(chainsword_blade_families_and_damage_types, chainsword_name)
-        local selection_group = base_name
+        local selection_group = attachment_group_prefix
 
-        local specific_name = attachment_group_prefix..base_name.."_"..number_string
+        local specific_name = base_name.."_"..number_string
 
         create_an_attachment(table_to_return, specific_name,
             -- Attachment
