@@ -449,7 +449,7 @@ add_attachments_to_list_of_weapons(mod.owo_slim_blade_indicator("head"), one_han
 add_attachments_to_list_of_weapons(mod.owo_invisible_shock_maul_connector(), one_handed_mauls, "connector")
 
 add_attachments_to_list_of_weapons(mod.owo_chainsword_blade(), {"chainsword_2h_p1_m1"}, "body")
-add_attachments_to_list_of_weapons(mod.owo_chainsword_2h_blade(), {"chainsword_p1_m1"}, "body")
+add_attachments_to_list_of_weapons(mod.owo_2h_chainsword_blade(), {"chainsword_p1_m1"}, "body")
 
 add_attachments_to_list_of_weapons(mod.owo_rear_spike("head_rear", "ap_head_01"), {"combataxe_p1_m1", "combataxe_p2_m1", }, "head_rear")
 --table_dump(mod.owo_slim_blade(), "SLIM BLADE EXAMPLE", 9)
