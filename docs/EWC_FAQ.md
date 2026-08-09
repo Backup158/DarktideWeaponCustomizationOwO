@@ -74,9 +74,11 @@ Load EWC before `GoToMastery` and `enhanced_character_selection`. Do NOT use wit
 <a id="faq-1">
 
 ## 1. What files are for EWC? What are the other files in the pins?</a>
-`extended_weapon_customization` and the 2 patches are all that is *required* for functionality. `extended_weapon_customization_base_additions` (EWC BA) provides additional options.
+`extended_weapon_customization` and the 2 patches are all that is *required* for functionality. `extended_weapon_customization_base_additions` (EWC BA) provides additional options. The pinned versions of these are usually test versions which may have experimental fixes and functionality. The versions on Nexus (see [Installation](#installation)) are the latest stable versions.
 
-`visible_equipment` is a completely standalone mod to show weapons on the body. `pure_cinema` is a completely standalone mod to allow dropped enemy weapons to fire and to visually swap enemy weapons.
+`visible_equipment` is a completely standalone mod to show weapons on the body. It used to be part of `weapon_customization`, but has grown to be split into its own mod. You can find it on [Nexus](https://www.nexusmods.com/warhammer40kdarktide/mods/852).
+
+`pure_cinema` is a completely standalone mod to allow dropped enemy weapons to fire and to visually swap enemy weapons. It was mostly a "for fun" thing so it's not as granular as a fully-released mod, so keep that mind.
 
 
 <a id="faq-2">
@@ -140,24 +142,23 @@ It saves internally, but the changes may not show up right after painting.
 
 People have had luck with applying colors before loading into the Mourningstar, using a mod such as [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89). Otherwise, try swapping weapon loadouts while in the Psykhanium or playing a match.
 
-Also make sure that the slot you selected is the correct one, in case you're actually trying to paint a bayonet or whatever (FAQ 10).
+Also make sure that the slot you selected is the correct one, in case you're actually trying to paint a bayonet or whatever ([FAQ 10](#faq-10)).
 
 
 <a id="faq-10">
 
 ## 10. I tried coloring a part, and other parts got the same color!</a>
 Whenever a part is colored, all parts attached to its slot as a child inherit that color. The child can then be colored separately without propagating to the parent.
-This color inheritance can go down the chain. Normally, the receiver is the root of all parts.
+This color inheritance goes down the chain. Normally, the receiver is the root of all parts, so coloring the receiver will color pretty much everything.
 
-
-
+For example, you could color a barrel purple, which will make the muzzle purple too. You can then go to the muzzle, then color it yellow.
 
 <a id="faq-11">
 
 ## 11. Weapon damage is doubled in the Psykhanium.</a>
 It’s a side effect of the damage type feature. It only affects offline matches, not online matches, so you won’t be banned.
-There is no workaround, besides disabling the mod temporarily whenever you want to test breakpoints (Mod Options --> Toggle Mods --> Extended Weapon Customization).
 
+Unfortunately, there is no workaround. You can only disable the mod temporarily whenever you want to test breakpoints (Mod Options --> Toggle Mods --> Extended Weapon Customization).
 
 <a id="faq-12">
 
@@ -168,7 +169,9 @@ It's a bug with scopes added by plugins. The ones that zoom in make the crosshai
 <a id="faq-13">
 
 ## 13. I can't upgrade weapons with Hadron: "Cannot complete operation"</a>
-Close the menu then open it again. Psych Ward helps, like in FAQ 9.
+Close the menu then open it again. This happens with the base game but gets worse with this mod. Reopening the menu lets the game catch a breath, and usually lets you keep going afterwards.
+
+Using [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) helps, like in [FAQ 9](#faq-9). When you're doing things before loading into the Mourningstar, there's less things happening in the background.
 
 
 <a id="faq-14">
@@ -176,10 +179,13 @@ Close the menu then open it again. Psych Ward helps, like in FAQ 9.
 ## 14. The Hive Scum dual weapons are missing VFX for the left gun.</a>
 This is a known issue. it happens regardless if you have equipped any customized parts. There is no ETA on the fix.
 
+![Dual autopistols with one vfx](/assets/images/ewc_faq_dual_pistol_vfx.png)
 
 <a id="faq-15">
 
 ## 15. The game is crashing when I hover over some parts.</a>
 Go to Mod Options --> Extended Weapon Customization --> Disable the Randomization options
+
+Typically, the crash message looks something like this: `[Script Error]: scripts/managers/ui/ui_unit_spawner.lua:83: Unit not found #ID[b0db5a12576cdaaf]`
 
 Why does this help? Nobody knows but it usually works :D Praise the Omnissiah
