@@ -21,7 +21,8 @@ To use this mod specifically, there are three files you need to install.
 2. [Visual Loadout Customization Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/853)
 3. Extended Weapon Customization. The mod can be found on:
   - [NexusMods.com](https://www.nexusmods.com/warhammer40kdarktide/mods/277)
-  - Pinned in the [Discord channel](https://discord.com/channels/1048312349867646996/1168063453416669284) mentioned earlier. The pinned version is sometimes a potentially-unstable release with beta features.
+  - Pinned in the [Discord channel](https://discord.com/channels/1048312349867646996/1168063453416669284) mentioned earlier. Usually, the pinned version is a potentially-unstable release with beta features.
+
 There are two important things to note for load order
 - The two patches need to load before EWC.
 - The two patches need to load early in the load order. Some mods, if loaded before the patches, will prevent them from working.
@@ -239,4 +240,4 @@ Note that the red and white Mastery reward skins are not a paintjob, but separat
 <a id="legacy-faq-3">
 
 ## 3. I keep hearing some rustling noise when walking!</a>
-This is actually from Visible Equipment. Open Mod Options --> Disable "Sounds from own character" and "Sounds from other characters"
+This is actually from Visible Equipment. Open Mod Options --> Visible Equipment --> Disable "Sounds from own character" and "Sounds from other characters"
