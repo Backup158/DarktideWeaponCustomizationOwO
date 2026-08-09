@@ -73,7 +73,7 @@ In the customization menu, parts will be in sections named `Ostracized without O
 &emsp; &emsp; Flat: Blade's cutting edge is slimmed down  \
 &emsp; &emsp; Slim: Blade is less wide and its cutting edge is slimmed down  \
 &emsp; &emsp; Grip Variant: Also shrinks the grip  \
-![Slim Blade on Power Sword](/assets/images/Screenshot%202025-03-07%2017-19-03.png)
+![Slim Blade on Power Sword](/assets/images/owo_slim_blade_psword.png)
 
 - **Chainsword Blades**: Assault Chainswords, Heavy Eviscerators  \
 &emsp; Allows each weapon to use the other's body/chain  \
