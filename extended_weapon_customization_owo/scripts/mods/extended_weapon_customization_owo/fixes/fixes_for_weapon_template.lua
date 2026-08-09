@@ -6,22 +6,15 @@ local mod = get_mod("extended_weapon_customization_owo")
 local vector3 = Vector3
 local vector3_box = Vector3Box
 
-local create_requirements_string_from_names_table = mod.create_requirements_string_from_names_table
-
 -- ################################
 -- Game Content Addresses
 -- ################################
-local _item = "content/items/weapons/player"
-local _item_ranged = _item.."/ranged"
-local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
-local _item_minion = "content/items/weapons/minions"
 
 -- ################################
 -- Attachment Names for Fixes
 -- ################################
 local shared_fix_tables = mod.shared_fix_tables
-local all_owo_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
 
 -- ###################################################################
 -- FIXES TO RETURN
@@ -47,12 +40,7 @@ local custom_fixes = {
 }
 
 local custom_attachments = {
-
-}
--- Patches for if other plugins already defined
-local ewc_ba = get_mod("extended_weapon_customization_base_additions")
-if not ewc_ba then
-    custom_attachments.flashlight = {
+    flashlight = {
         parent_slot = "barrel",
         default_path = _item_empty_trinket,
         fix = {
@@ -63,12 +51,9 @@ if not ewc_ba then
                 node = 1,
             },
         },
-    }
-    custom_attachments.muzzle = {
-        parent_slot = "rail",
-        default_path = _item_empty_trinket,
-    }
-end
+    },
+    sight_reticle = shared_fix_tables["default_attachment_sight_reticle"],
+}
 
 return {
     fixes = custom_fixes,
