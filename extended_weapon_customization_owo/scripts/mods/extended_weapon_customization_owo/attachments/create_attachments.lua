@@ -280,7 +280,13 @@ function mod.return_all_numbers_for_hide()
 end
 
 function mod.calculate_damage_type_key_name(table_of_contents, base_name)
-    return ("owo_"..table_of_contents[base_name].damage_type.."_"..table_of_contents[base_name].real_name) or "metal_slashing_medium"
+    local found_damage_type = "metal_slashing_medium"
+    if table_of_contents[base_name] then
+        found_damage_type = ("owo_"..table_of_contents[base_name].damage_type.."_"..table_of_contents[base_name].real_name) or found_damage_type
+    else
+        mod:error("Calculating damage type failed! Could not find: "..base_name)
+    end
+    return found_damage_type
 end
 
 -- ################################
