@@ -189,3 +189,27 @@ Go to Mod Options --> Extended Weapon Customization --> Disable the Randomizatio
 Typically, the crash message looks something like this: `[Script Error]: scripts/managers/ui/ui_unit_spawner.lua:83: Unit not found #ID[b0db5a12576cdaaf]`
 
 Why does this help? Nobody knows but it usually works :D Praise the Omnissiah
+
+<a id="faq-16">
+
+## 16. The game is crashing with some "gmatch" error when I try to customize weapons.</a>
+`[Script Error]: scripts/foundation/utilities/string.lua:21: bad argument #1 to 'gmatch' (string expected, got nil)`
+
+This message comes from the [MasterItem Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) failing to load. Make sure these things are true:
+1. There is a `master_item_community_patch` folder in the Darktide mods folder and `master_item_community_patch` written in the `mod_load_order.txt`.
+2. There are no red messages appearing on the right side of the screen when you open the game.
+3. In the `mod_load_order.txt` file, `master_item_community_patch` is loading BEFORE `extended_weapon_customization` and is at the top of the list.
+4. The `mod_load_order.txt` file has been saved.
+
+For #3, the important part is that it has to load before any mod that affects the same functions. Since there's not an easy way to find that out, conventional wisdom says to put it at the top of the list. 
+
+For #4, one thing that causes issues for people is that they'll fix the load order, but then they'll close the load order file without saving. The game doesn't recognize the changes (since it's not actually saved), and when the user reopens the load order file, it *looks* ok but actually isn't saved.
+
+<a id="faq-17">
+
+## 17. When I try to equip attachments, everything is the wrong place!</a>
+Make sure you have the [Visual Loadout Customization Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/853) installed and loading before EWC. This patch is what keeps the weapon alignment working.\*
+
+If *most* attachments work but only a few aren't, it's likely an issue with that specific part when used in conjection with the current combination of attachments. Report these to the respective addon plugin author.
+
+\* EWC checks where to put attachments using a legacy algorithm. Using the current algorithm means every single part needs to be realigned, so the legacy algorithm was restored with this patch.
