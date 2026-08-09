@@ -53,14 +53,13 @@ local function owo_chainsword_blade_helper(chainsword_name, path, amount_of_mode
 
         local specific_name = attachment_group_prefix..base_name.."_"..number_string
 
-        local selection_group = attachment_group_name.."_"..name_to_use
         create_an_attachment(table_to_return, specific_name,
             -- Attachment
             {   replacement_path = _item_melee.."/blades/"..specific_name,
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
                 damage_type = damage_type,
-                custom_selection_group = selection_group,
+                custom_selection_group = base_name,
                 randomization_requirement = "mod_option_chainsword_blade_randomization",
             },
             -- Fixes
