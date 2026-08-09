@@ -1,7 +1,7 @@
-# 4.6.0 - UNRELEASED
+# 4.6.0 - 2026-08-08
 ## Added
 - Chainsword Blades
-    - Chainsword blades onto the Eviscerator
+    - Chainsword blades onto the Heavy Eviscerator
     - Eviscerator blades onto the Assault Chainsword
     - Created new Chainsword damage types for each of them
 - Chainsword chains
@@ -20,6 +20,7 @@
     - Before I just copy pasted them among the weapon files
     - Now there are tables in the shared fix requirements so it's easier to make sweeping changes
 ## Fixed
+- ~~my life haha~~
 
 # 4.5.0 - 2026-07-23
 ## Added
