@@ -37,6 +37,7 @@ local custom_fixes = {
             },
         },
     },
+    shared_fix_tables["default_sight_reticle_position_holo"],
 }
 
 local custom_attachments = {
