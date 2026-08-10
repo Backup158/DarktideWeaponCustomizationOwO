@@ -6,6 +6,9 @@ local mod = get_mod("extended_weapon_customization_owo")
 local vector3 = Vector3
 local vector3_box = Vector3Box
 
+local table = table
+local table_insert = table.insert
+
 -- ################################
 -- Game Content Addresses
 -- ################################
@@ -30,8 +33,8 @@ local _item_empty = "content/characters/empty_item/empty_item"
 local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
 local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 
--- local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
+local create_kitbash_full_item = mod.create_kitbash_full_item
 
 local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
 local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
