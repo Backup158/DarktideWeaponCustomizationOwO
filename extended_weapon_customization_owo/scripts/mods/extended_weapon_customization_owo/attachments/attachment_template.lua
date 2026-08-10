@@ -14,6 +14,7 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
+local _item_empty = "content/characters/empty_item/empty_item"
 
 -- ################################
 -- Some Variables for Common Attachments
@@ -35,9 +36,7 @@ local create_an_attachment = mod.create_an_attachment
 local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
 local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
 
-local attachment_localizations = {
-
-}
+local attachment_localizations = mod.attachment_localizations
 
 -- ################################
 -- Attachment
@@ -67,28 +66,33 @@ function mod.KITBASH_ITEM(given_slot, given_attachment_node)
         -- Fixes
         nil,
         -- Kitbash
-        {   item = _item_empty_trinket, -- invisible base
-            fix = {
-                disable_in_ui = false,
-                offset = {
-                    node = 1,
-                    position = vector3_box(0.0, 0.0, 0.0),
-                    rotation = vector3_box(0.0, 0.0, 0.0),
-                    scale = vector3_box(1.0, 1.0, 1.0)
-                },
-            },
-            children = {
-                CHILD_SLOT_NAME = {
-                    item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+        {   base_unit = _item_empty, -- invisible base
+            attachments = {
+                base_slot_name = {
+                    item = _item_ranged.."/sights/autogun_rifle_sight_01",
                     fix = {
+                        disable_in_ui = false,
                         offset = {
                             node = 1,
-                            position = vector3_box(0, 0.0, 0.0),
+                            position = vector3_box(0.0, 0.0, 0.0),
                             rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = vector3_box(1.0, 1.0, 1.0),
+                            scale = vector3_box(1.0, 1.0, 1.0)
                         },
                     },
-                },
+                    children = {
+                        CHILD_SLOT_NAME = {
+                            item = _item_ranged.."/muzzles/autogun_rifle_ak_muzzle_03",
+                            fix = {
+                                offset = {
+                                    node = 1,
+                                    position = vector3_box(0, 0.0, 0.0),
+                                    rotation = vector3_box(0.0, 0.0, 0.0),
+                                    scale = vector3_box(1.0, 1.0, 1.0),
+                                },
+                            },
+                        },
+                    },
+                },  
             },
         },
         -- Attachment Node
