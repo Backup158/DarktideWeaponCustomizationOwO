@@ -116,7 +116,7 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, 0.0, 0.007),
+                position = vector3_box(0.0, 0.0, 0.008),
                 rotation = vector3_box(0.2, 0.0, 0.0),
             },
         },
