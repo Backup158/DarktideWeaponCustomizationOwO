@@ -168,7 +168,7 @@ function mod.owo_iron_sight(given_attachment_node)
                         disable_in_ui = false,
                         offset = {
                             node = 1,
-                            position = vector3_box(0.0, 0.245, -0.006),
+                            position = vector3_box(0.0, 0.245, -0.004),
                             rotation = vector3_box(0.0, 0.0, 0.0),
                             scale = vector3_box(1.0, 1.0, 1.0)
                         },
