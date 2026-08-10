@@ -37,20 +37,7 @@ local create_an_attachment = mod.create_an_attachment
 local localize_all_from_group = mod.localize_all_from_group
 local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
 
-local tactical_stock_localizations = {
-	owo_tactical_stock_telescoping_in = {
-		en = "Telescoping Stock (Pushed in)",
-	},
-	owo_tactical_stock_folded_n_1 = {
-		en = "Folded Stock (Natural, Left)",
-	},
-	owo_tactical_stock_folded_n_m = {
-		en = "Folded Stock M (Natural, Left)",
-	},
-	owo_tactical_stock_folded_n_u = {
-		en = "Folded Stock (Natural, Under)",
-	},
-}
+local tactical_stock_localizations = mod.owo_tactical_stock_localizations
 
 -- ################################
 -- Attachment

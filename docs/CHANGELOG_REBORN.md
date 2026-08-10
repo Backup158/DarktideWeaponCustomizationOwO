@@ -2,7 +2,7 @@
 ## Added
 
 ## Changed
-
+- Refactored tactical stock localization so it appears in the localization file
 ## Fixed
 - Crash when hovering chainsword body 10-12
     - `create_attachments.lua` did not have safety checks when prepending 0

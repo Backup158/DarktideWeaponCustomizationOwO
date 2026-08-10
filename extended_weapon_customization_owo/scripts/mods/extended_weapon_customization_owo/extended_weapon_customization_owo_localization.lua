@@ -183,7 +183,20 @@ end
 -- ---------------
 -- Tactical Stocks
 -- ---------------
--- Done in attachments file because global list would not be initialized in time
+mod.owo_tactical_stock_localizations = {
+	owo_tactical_stock_telescoping_in = {
+		en = "Telescoping Stock (Pushed in)",
+	},
+	owo_tactical_stock_folded_n_1 = {
+		en = "Folded Stock (Natural, Left)",
+	},
+	owo_tactical_stock_folded_n_m = {
+		en = "Folded Stock M (Natural, Left)",
+	},
+	owo_tactical_stock_folded_n_u = {
+		en = "Folded Stock (Natural, Under)",
+	},
+}
 
 -- ################################
 -- Mod Options and Data
