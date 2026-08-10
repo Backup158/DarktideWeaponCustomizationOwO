@@ -37,18 +37,18 @@ end
 -- Custom Slots
 -- ###############
 mod:add_global_localize_strings({
-	-- ------------------------------
+	-- ==============================
 	-- Separators
-	-- ------------------------------
-	-- ---------------
+	-- ==============================
+	-- ===============
 	-- Mod Name
-	-- ---------------
+	-- ===============
     loc_ewc_extended_weapon_customization_owo = {
         en = "Ostracized without Objection (OwO)",
     },
-	-- ---------------
+	-- ===============
 	-- Attachment Slots
-	-- ---------------
+	-- ===============
 	attachment_slot_flashlight_under_small = {
         en = "Flashlight (Under)",
     },
@@ -61,18 +61,26 @@ mod:add_global_localize_strings({
 	attachment_slot_barrel_foreskin = {
 		en = "Barrel Shroud",
 	},
-	-- ---------------
+	-- ===============
 	-- Separator groups
+	-- ===============
 	-- ---------------
 	-- 	Flashlights
+	-- ---------------
 	--		DONE IN ./attachments/owo_flashlight.lua
+	-- ---------------
 	--  Tactical Stocks
+	-- ---------------
 	loc_ewc_owo_tactical_stock = {
 		en = "OwO - Tactical Stocks",
 	},
+	-- ---------------
 	-- Suppressors
+	-- ---------------
 	--		DONE BELOW TO ACCOUNT FOR VARIANTS
+	-- ---------------
 	-- Holographic Sights
+	-- ---------------
 	loc_ewc_owo_holographic_sight_eotech = {
 		en = "OwO - Holographic Sights - EOTech",
 	},
@@ -81,6 +89,12 @@ mod:add_global_localize_strings({
 	},
 	loc_ewc_owo_holographic_sight_dot = {
 		en = "OwO - Holographic Sights - DOT",
+	},
+	-- ---------------
+	-- Kalashnikov Barrel
+	-- ---------------
+	loc_ewc_owo_kalashnikov_barrel = {
+		en = "OwO - Kalashnikov Barrels",
 	},
 })
 
@@ -195,6 +209,12 @@ mod.owo_tactical_stock_localizations = {
 	},
 	owo_tactical_stock_folded_n_u = {
 		en = "Folded Stock (Natural, Under)",
+	},
+}
+
+mod.owo_kalashnikov_barrel_localizations = {
+	owo_kalashnikov_barrel_base = {
+		en = "Kalashnikov Barrel ",
 	},
 }
 

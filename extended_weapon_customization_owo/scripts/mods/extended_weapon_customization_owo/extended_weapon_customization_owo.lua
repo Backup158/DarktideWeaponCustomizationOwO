@@ -409,28 +409,45 @@ local one_handed_mauls = {
 -- ################
 -- Ranged
 -- ################
+-- ----------------
 -- Special/Flashlight
+-- ----------------
 add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), all_ranged_weapons, "flashlight")
 add_attachments_to_list_of_weapons(mod.owo_tactical_flashlight(), all_ranged_weapons, "flashlight")
 add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), { "shotpistol_shield_p1_m1", "stubrevolver_p1_m1" }, "flashlight_under_small")
 
+-- ----------------
 -- Muzzle
+-- ----------------
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_muzzle_no_double, "muzzle")
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), { "galvanic_rifle_p1_m1" }, "muzzle_2")
 --add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_sight_01"), {"ogryn_thumper_p1_m1"}, "muzzle")
 add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_barrel_01"), {"ogryn_heavystubber_p2_m1"}, "muzzle")
 
+-- ----------------
 -- Barrel Shroud
+-- ----------------
 add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_muzzle_no_double, "barrel_foreskin")
 
+-- ----------------
+-- Barrel
+-- ----------------
+add_attachments_to_list_of_weapons(mod.owo_kalashnikov_barrel(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "barrel")
+
+-- ----------------
 -- Stock
+-- ----------------
 add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", "bolter_p1_m1", "boltpistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", }, "stock")
 --add_attachments_to_list_of_weapons(mod.probe_for_node(), {"lasgun_p2_m1", }, "stock")
 
+-- ----------------
 -- Magazine
+-- ----------------
 add_attachments_to_list_of_weapons(mod.owo_mag(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "magazine")
 
+-- ----------------
 -- Sight
+-- ----------------
 add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "sight")
 add_attachments_to_list_of_weapons(mod.owo_holographic_sight(), sighted_weapons, "sight")
 add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), sighted_weapons, "sight_reticle")

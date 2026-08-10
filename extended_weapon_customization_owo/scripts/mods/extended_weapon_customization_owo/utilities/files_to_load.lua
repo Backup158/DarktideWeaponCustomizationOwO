@@ -19,6 +19,7 @@ mod.attachment_names = {
     "owo_sight_reticle",
     "owo_empty_attachments",
     "owo_chainsword_blade",
+    "owo_modern_barrel",
 }
 
 mod.special_needs_fixes = { 
