@@ -51,18 +51,7 @@ local these_fixes = {
     -- ----------------------
     -- Rails
     --  Removes rail for AK Irons
-    {   attachment_slot = "rail",
-        requirements = {
-            sight = {
-                has = "owo_iron_sight_kalashnikov",
-            },
-        },
-        fix = {
-            attach = {
-                rail = _item_empty_trinket,
-            },
-        },
-    },
+    shared_fix_tables["default_sight_ak_iron_remove_rail"],
     --  Attaches rail for Holosight and telescopic
     {   attachment_slot = "rail",
         requirements = {

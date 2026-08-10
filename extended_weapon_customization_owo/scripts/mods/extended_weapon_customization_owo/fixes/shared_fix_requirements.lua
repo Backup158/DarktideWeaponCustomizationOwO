@@ -133,7 +133,21 @@ mod.shared_fix_tables = {
             },
         },
     },
-
+    -- Rails
+    --  Removes rail for AK Irons
+    ["default_sight_ak_iron_remove_rail"] = {   
+        attachment_slot = "rail",
+        requirements = {
+            sight = {
+                has = "owo_iron_sight_kalashnikov",
+            },
+        },
+        fix = {
+            attach = {
+                rail = _item_empty_trinket,
+            },
+        },
+    },
     -- --------------------------------------
     -- Attachment Slots
     -- --------------------------------------
