@@ -28,6 +28,7 @@ local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
 
 local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
+local all_owo_kalashnikov_barrel_names = mod.all_owo_kalashnikov_barrel_names
 
 local syn_ma5_extensions = mod.syn_ma5_extensions
 local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions
@@ -74,6 +75,23 @@ local these_fixes = {
                 position = vector3_box(0.0, 0.12, 0.015),
                 rotation = vector3_box(0, 0.035, 0),
                 scale = vector3_box(1, 1.0, 1),
+            },
+        },
+    },
+
+    {
+        attachment_slot = "barrel",
+        requirements = {
+            barrel = {
+                has = all_owo_kalashnikov_barrel_names,
+            },
+            receiver = {
+                has = all_headhunter_autogun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.0, -0.03),
             },
         },
     },
