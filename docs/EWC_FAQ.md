@@ -123,11 +123,12 @@ If there is no "Customize" button or you see a `"loc_weapon_inventory_tip_1": st
 
 ## 7. What do the buttons at the top do?</a>
 Some attachments, when equipped, provide additional features. These buttons allow you to toggle these features, if applicable.
-- _Damage Type_: (Bayonet Icon) Changes attack sounds, weapon trails, and/or gibbing effects
-- _Crosshair_: Forces a custom crosshair
-- _Alternate Fire_: Forces ADS view or braced view
+- _Damage Type_ (Bayonet Icon): Changes attack sounds, weapon trails, and/or gibbing effects
+- _Crosshair_ (Cross Icon): Changes the crosshair, such as by forcing a custom one or removing the one you have
+- _Alternate Fire_ (Gear Icon): Forces ADS view or braced view
 You can click the button to disable it, turning it red.
 
+![Attachments with feature labels](/assets/images/ewc_attachment_icons.png)
 
 <a id="faq-8">
 
@@ -167,6 +168,7 @@ Unfortunately, there is no workaround. You can only disable the mod temporarily 
 ## 12. My crosshair is gone!</a>
 It's a bug with scopes added by plugins. The ones that zoom in make the crosshair disappear until you die. The plugins cannot fix this, and there is no ETA on it being fixed in the main mod.
 
+Strangely enough, the crosshairs can reappear after dying in-game. Not really useful information, but funny to know.
 
 <a id="faq-13">
 
