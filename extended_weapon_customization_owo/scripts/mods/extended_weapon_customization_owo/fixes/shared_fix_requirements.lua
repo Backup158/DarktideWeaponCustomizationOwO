@@ -37,6 +37,7 @@ mod.shared_fix_requirements_file_has_run = true
 -- Sight Reticles
 -- --------------------------------
 mod.all_owo_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
+info_if_debug("OwO All Sight Reticles: "..mod.all_owo_sight_reticle_names)
 
 -- --------------------------------
 -- Slim and Flat Blades (with grip included)
@@ -59,12 +60,13 @@ for i = 1, #(slim_blades_flip_list_blade) do
 end
 mod.combined_slim_blades_to_flip = create_requirements_string_from_names_table(slim_blades_to_flip)
 --dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE AFTER FLIPPING NYA AAAAAA")
-info_if_debug("uwu all combined blades: "..mod.combined_slim_blades_to_flip)
+info_if_debug("OwO List of Slim Blades that need to be flipped: "..mod.combined_slim_blades_to_flip)
 
 -- --------------------------------
 -- Suppressors
 -- --------------------------------
 mod.all_owo_suppressor = create_requirements_string_from_names_table(mod.all_owo_suppressor)
+info_if_debug("OwO All Suppressors: "..mod.all_owo_suppressor)
 
 -- --------------------------------
 -- Holographic Sights
@@ -83,6 +85,7 @@ end
 --  Not sure if this redundancy is required but it feels like otherwise i'd be creating a key before iterating through all keys
 local all_holographic_sights_names = create_requirements_string_from_names_table(mod.all_holographic_sights_names)
 mod.all_holographic_sights_names.all = all_holographic_sights_names
+dump_if_debug(mod.all_holographic_sights_names, "OwO All Holographic Sights: ", 15)
 
 -- --------------------------------
 -- Chainsword parts
