@@ -70,6 +70,12 @@ mod.all_owo_suppressor = create_requirements_string_from_names_table(mod.all_owo
 -- Holographic Sights
 -- --------------------------------
 -- Turns each group into a long string
+-- The goal is to have
+-- mod.all_holographic_sights_names
+--      .all
+--      .eotech
+--      .vortex
+-- etc
 for holosight_group, holosight_list in pairs(mod.all_holographic_sights_names) do
     mod.all_holographic_sights_names[holosight_group] = create_requirements_string_from_names_table(holosight_list)
 end
