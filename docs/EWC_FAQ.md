@@ -3,7 +3,9 @@ Extended Weapon Customization (EWC) is a mod for *Warhammer 40,000: Darktide* th
 
 Most of the contents of this page are pinned in the Discord thread\*; this is a mirror link for easy sharing.
 
-\*Most discussion happens in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8). Check the [#weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284)
+Note that I (Backup158) wrote this and am hosting it on the webpage for my EWC add-on plugin, but the questions here primarily concern the main plugin itself. The webpage banner may be confusing, but rest assured, this page is about Extended Weapon Customization as a whole.
+
+*\*Most discussion happens in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8). Check the [#weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284)*
 
 # Table of Contents
 - [Installation](#installation)
@@ -127,6 +129,8 @@ Some attachments, when equipped, provide additional features. These buttons allo
 - _Crosshair_ (Cross Icon): Changes the crosshair, such as by forcing a custom one or removing the one you have
 - _Alternate Fire_ (Gear Icon): Forces ADS view or braced view
 You can click the button to disable it, turning it red.
+
+Here are some examples of attachments with these features:
 
 ![Attachments with feature labels](/assets/images/ewc_attachment_icons.png)
 
