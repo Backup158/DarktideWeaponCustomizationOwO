@@ -118,18 +118,19 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
     )
     -- Adding name to list of attachments 
     --   ex
-    --      eotech
+    --      eotech {
     --          eotech
     --          eotech_short
-    --      vortex
+    --      }
+    --      vortex {
     --          vortex
     --          vortex_short
-    --   i dont feel like passing the table through the chain. lazy global use, go
-    if mod.all_holographic_sights_names.first_run then
-        if not mod.all_holographic_sights_names[broad_name] then
-            mod.all_holographic_sights_names[broad_name] = {}
+    --      }
+    if local_version_of_all_holographic_sights_names then
+        if not local_version_of_all_holographic_sights_names[broad_name] then
+            local_version_of_all_holographic_sights_names[broad_name] = {}
         end
-        table_insert(mod.all_holographic_sights_names[broad_name], shortname)
+        table_insert(local_version_of_all_holographic_sights_names[broad_name], shortname)
     end
     -- Localizing name
     localize_single_attachment_with_table(shortname, attachment_localizations)
@@ -159,9 +160,10 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
     -- Logging all names
+    local local_version_of_all_holographic_sights_names
     if not mod.all_holographic_sights_names then
         mod.all_holographic_sights_names = {}
-        mod.all_holographic_sights_names.first_run = true
+        local_version_of_all_holographic_sights_names = {}
     end
 
     -- adding helpers
@@ -238,7 +240,9 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     -- DOT EHS-1
     -- ---------------
 
-    mod.all_holographic_sights_names.first_run = false
+    if local_version_of_all_holographic_sights_names then
+        mod.all_holographic_sights_names = local_version_of_all_holographic_sights_names
+    end
     --table.dump(mod.all_holographic_sights_names, "nya ALL HOLOSIGHT NAMES", 20)
     return table_to_return
 end
