@@ -47,7 +47,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- Logging all names
     local all_suppressor_names = nil
-    if not mod.all_suppressor_names then
+    if not mod.all_owo_suppressor then
         all_suppressor_names = {}
     end
 
@@ -357,7 +357,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- sending to global table
     if all_suppressor_names then
-        mod.all_suppressor_names = all_suppressor_names
+        mod.all_owo_suppressor = all_suppressor_names
     end
    
     return table_to_return

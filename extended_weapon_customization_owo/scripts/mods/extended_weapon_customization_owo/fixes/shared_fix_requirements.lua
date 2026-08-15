@@ -64,8 +64,7 @@ info_if_debug("uwu all combined blades: "..mod.combined_slim_blades_to_flip)
 -- --------------------------------
 -- Suppressors
 -- --------------------------------
-local all_suppressor_names = mod.all_suppressor_names
-mod.any_suppressor = create_requirements_string_from_names_table(all_suppressor_names)
+mod.all_owo_suppressor = create_requirements_string_from_names_table(mod.all_owo_suppressor)
 
 -- --------------------------------
 -- Holographic Sights
