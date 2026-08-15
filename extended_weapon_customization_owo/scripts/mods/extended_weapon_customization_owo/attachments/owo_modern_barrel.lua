@@ -68,7 +68,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
                 custom_selection_group = attachment_group_name,
-                randomization_requirement = "mod_option_kalashnikov_barrel_randomization",
+                randomization_requirement = "mod_option_modern_barrel_randomization",
             },
             -- Fixes
             fixes,

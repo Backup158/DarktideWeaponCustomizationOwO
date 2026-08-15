@@ -94,7 +94,7 @@ mod:add_global_localize_strings({
 	-- Kalashnikov Barrel
 	-- ---------------
 	loc_ewc_owo_kalashnikov_barrel = {
-		en = "OwO - Kalashnikov Barrels",
+		en = "OwO - Contemporary Barrels - Kalashnikov",
 	},
 })
 
@@ -319,6 +319,9 @@ local localizations = {
 	},
 	mod_option_chainsword_chain_randomization = {
 		en = "Chainsword Chains",
+	},
+	mod_option_modern_barrel_randomization = {
+		en = "Contemporary Barrels",
 	},
 }
 
