@@ -78,8 +78,22 @@ info_if_debug("OwO All Suppressors: "..mod.all_owo_suppressor)
 --      .eotech
 --      .vortex
 -- etc
+-- However, mod.all_holographic_sights_names goes {
+--   eotech = { }
+--   vortex = { }
+--   first_run = false
+-- }
+-- Therefore I can only create a requirements string for the others
+-- So in the end it'll be mod.all_holographic_sights_names goes {
+--   all = eotech_string.."|"..vortex_string etc
+--   eotech = eotech_string
+--   vortex = vortex_string
+--   first_run = false
+-- }
 for holosight_group, holosight_list in pairs(mod.all_holographic_sights_names) do
-    mod.all_holographic_sights_names[holosight_group] = create_requirements_string_from_names_table(holosight_list)
+    if type(holosight_list) == "table" then
+        mod.all_holographic_sights_names[holosight_group] = create_requirements_string_from_names_table(holosight_list)
+    end
 end
 -- Creates a single string for all
 --  Not sure if this redundancy is required but it feels like otherwise i'd be creating a key before iterating through all keys
