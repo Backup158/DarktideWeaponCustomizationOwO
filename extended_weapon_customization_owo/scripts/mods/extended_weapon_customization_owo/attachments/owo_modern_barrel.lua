@@ -83,7 +83,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             current_attachment_node
         )
         -- Adding name to this group's list
-        if table_to_insert_to then
+        if all_these_attachments then
             table_to_insert_to[name_suffix] = table_to_insert_to[name_suffix] or {}
             table_insert(table_to_insert_to[name_suffix], shortname)
         end
@@ -212,7 +212,6 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         }
     )
     -- Barrel
-
     --  Type 2 (Longer)
     table_insert(table_to_return.fixes, 
     {
@@ -239,6 +238,35 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         fix = {
             offset = {
                 position = vector3_box(0.0, type2_super_short_distance, -0.03),
+            },
+        },
+    })
+    --  Type 1 (Shorter)
+    table_insert(table_to_return.fixes, 
+    {
+        attachment_slot = "barrel",
+        requirements = {
+            barrel = {
+                has = mod.all_owo_kalashnikov_barrel_names.type1.short,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, type1_short_distance, -0.03),
+            },
+        },
+    })
+    table_insert(table_to_return.fixes, 
+    {
+        attachment_slot = "barrel",
+        requirements = {
+            barrel = {
+                has = mod.all_owo_kalashnikov_barrel_names.type1.super_short,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, type1_super_short_distance, -0.03),
             },
         },
     })
