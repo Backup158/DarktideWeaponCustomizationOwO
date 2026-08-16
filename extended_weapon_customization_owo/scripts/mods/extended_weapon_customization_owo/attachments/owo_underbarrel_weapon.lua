@@ -52,85 +52,88 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
         all_these_attachments = {}
     end
 
-    -- adding helpers
-    local owo_kitbash_base_bolt_pistol = _item_ranged.."/underbarrels/owo_underbarrel_weapon_bolt_pistol"
-    create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol, nil, "content/weapons/player/ranged/bolt_pistol/attachments/receiver_01/receiver_01", current_attachment_node)
-    create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_grip", nil, "content/weapons/player/ranged/bolt_pistol/attachments/grip_01/grip_01", current_attachment_node)
-    create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_magazine", nil, "content/weapons/player/ranged/bolt_pistol/attachments/magazine_01/magazine_01", current_attachment_node)
-    create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_barrel", nil, "content/weapons/player/ranged/bolt_pistol/attachments/barrel_01/barrel_01", current_attachment_node)
+    -- Bolt Pistol attachment
+    for_all_weapon_models(2, {"ml01"}, function(number_as_string)
+        -- adding helpers
+        local owo_kitbash_base_bolt_pistol = _item_ranged.."/underbarrels/owo_underbarrel_weapon_bolt_pistol_"..number_as_string
+        create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol, nil, "content/weapons/player/ranged/bolt_pistol/attachments/receiver_"..number_as_string.."/receiver_"..number_as_string, current_attachment_node)
+        create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_grip", nil, "content/weapons/player/ranged/bolt_pistol/attachments/grip_"..number_as_string.."/grip_"..number_as_string, current_attachment_node)
+        create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_magazine", nil, "content/weapons/player/ranged/bolt_pistol/attachments/magazine_"..number_as_string.."/magazine_"..number_as_string, current_attachment_node)
+        create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_barrel", nil, "content/weapons/player/ranged/bolt_pistol/attachments/barrel_"..number_as_string.."/barrel_"..number_as_string, current_attachment_node)
 
-
-    local name_suffix = "bolt_pistol"
-    local shortname = attachment_group_prefix..name_suffix
-    create_an_attachment(table_to_return, shortname,
-        -- Attachment
-        {   replacement_path = _item_ranged.."/underbarrels/"..shortname,
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-            custom_selection_group = "extended_weapon_customization_owo",
-        },
-        -- Fixes
-        nil,
-        -- Kitbash
-        {   base_unit = _item_empty, -- invisible base
-            attachments = {
-                owo_underbarrel_weapon_receiver = {
-                    item = owo_kitbash_base_bolt_pistol,
-                    fix = {
-                        disable_in_ui = false,
-                        offset = {
-                            node = 1,
-                            position = vector3_box(-0.002, -0.069, -0.065),
-                            rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = vector3_box(0.8, 0.8, 0.8)
-                        },
-                    },
-                    children = {
-                        owo_underbarrel_weapon_grip = {
-                            item = owo_kitbash_base_bolt_pistol.."_grip",
-                            fix = {
-                                offset = {
-                                    node = 1,
-                                    position = vector3_box(0.0, 0.0, 0.0),
-                                    rotation = vector3_box(0.0, 90, 0.0),
-                                    scale = vector3_box(1.0, 1.0, 1.0),
-                                },
-                            },
-                        },
-                        owo_underbarrel_weapon_magazine = {
-                            item = owo_kitbash_base_bolt_pistol.."_magazine",
-                            fix = {
-                                offset = {
-                                    node = 1,
-                                    position = vector3_box(0.0, 0.0, 0.0),
-                                    rotation = vector3_box(0.0, 90, 0.0),
-                                    scale = vector3_box(1.0, 1.0, 1.0),
-                                },
-                            },
-                        },
-                        owo_underbarrel_weapon_barrel = {
-                            item = owo_kitbash_base_bolt_pistol.."_barrel",
-                            fix = {
-                                offset = {
-                                    node = 1,
-                                    position = vector3_box(0.0, 0.0, 0.0),
-                                    rotation = vector3_box(0.0, 90, 0.0),
-                                    scale = vector3_box(1.0, 1.0, 1.0),
-                                },
-                            },
-                        },
-                    },
-                },  
+        local name_suffix = "bolt_pistol_"..number_as_string
+        local shortname = attachment_group_prefix..name_suffix
+        create_an_attachment(table_to_return, shortname,
+            -- Attachment
+            {   replacement_path = _item_ranged.."/underbarrels/"..shortname,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+                custom_selection_group = "extended_weapon_customization_owo",
+                randomization_requirement = "mod_option_underbarrel_laspistol_randomization",
             },
-        },
-        -- Attachment Node
-        current_attachment_node
-    )
-    -- Adding name to this group's list
-    if all_these_attachments then
-        table_insert(all_these_attachments, shortname)
-    end
-    localize_attachment_triple_threat(attachment_group_name, name_suffix, nil)
+            -- Fixes
+            nil,
+            -- Kitbash
+            {   base_unit = _item_empty, -- invisible base
+                attachments = {
+                    owo_underbarrel_weapon_receiver = {
+                        item = owo_kitbash_base_bolt_pistol,
+                        fix = {
+                            disable_in_ui = false,
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0.0, 0.0, 0.0),
+                                rotation = vector3_box(0.0, 0.0, 0.0),
+                                scale = vector3_box(0.8, 0.8, 0.8)
+                            },
+                        },
+                        children = {
+                            owo_underbarrel_weapon_grip = {
+                                item = owo_kitbash_base_bolt_pistol.."_grip",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = vector3_box(0.0, 0.0, 0.0),
+                                        rotation = vector3_box(0.0, 0, 0.0),
+                                        scale = vector3_box(1.0, 1.0, 1.0),
+                                    },
+                                },
+                            },
+                            owo_underbarrel_weapon_magazine = {
+                                item = owo_kitbash_base_bolt_pistol.."_magazine",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = vector3_box(0.0, 0.0, 0.0),
+                                        rotation = vector3_box(0.0, 0, 0.0),
+                                        scale = vector3_box(1.0, 1.0, 1.0),
+                                    },
+                                },
+                            },
+                            owo_underbarrel_weapon_barrel = {
+                                item = owo_kitbash_base_bolt_pistol.."_barrel",
+                                fix = {
+                                    offset = {
+                                        node = 1,
+                                        position = vector3_box(0.0, 0.0, 0.0),
+                                        rotation = vector3_box(0.0, 0, 0.0),
+                                        scale = vector3_box(1.0, 1.0, 1.0),
+                                    },
+                                },
+                            },
+                        },
+                    },  
+                },
+            },
+            -- Attachment Node
+            current_attachment_node
+        )
+        -- Adding name to this group's list
+        if all_these_attachments then
+            table_insert(all_these_attachments, shortname)
+        end
+        localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
+    end)
    
     -- Making list of all attachments global
     if all_these_attachments then
