@@ -77,7 +77,7 @@ function mod.owo_bayonet_flip(given_slot, given_attachment_node)
                             disable_in_ui = false,
                             offset = {
                                 node = 1,
-                                position = vector3_box(0.0, -0.085, -0.052),
+                                position = vector3_box(-0.002, -0.069, -0.065),
                                 rotation = vector3_box(180.0, 0.0, 180.0),
                                 scale = vector3_box(1.0, 1.0, 1.0)
                             },
