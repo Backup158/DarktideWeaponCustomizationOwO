@@ -98,7 +98,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
     -- Short: This one is slightly longer than the other shorts
     list_of_names_to_use.type1 = list_of_names_to_use.type1 or {}
     local type1_short_distance = 0.202
-    local type1_super_short_distance = 0.19
+    local type1_super_short_distance = 0.134
     for_all_weapon_models(8, {3, 4}, function(number_as_string)
         local owo_kitbash_helper_address = owo_kalash_kitbash_item_string_prefix.."squish_"..number_as_string
         create_kitbash_full_item(table_to_return, owo_kitbash_helper_address, nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/barrel_"..number_as_string.."/barrel_"..number_as_string, current_attachment_node)
@@ -130,7 +130,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                             node = 1,
                             position = vector3_box(0.0, -1 * type1_super_short_distance, 0.0),
                             rotation = vector3_box(0.0, 0, 0.0),
-                            scale = vector3_box(1, 0.69, 1),
+                            scale = vector3_box(1, 0.57, 1),
                         },
                     },
                 },
