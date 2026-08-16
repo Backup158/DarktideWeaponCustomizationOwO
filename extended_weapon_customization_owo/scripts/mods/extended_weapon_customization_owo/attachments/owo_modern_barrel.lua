@@ -57,8 +57,8 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         list_of_names_to_use = mod.all_owo_kalashnikov_barrel_names
     end
 
-    local function owo_kalashnikov_barrel_helper(name_suffix, number_string, fixes, kitbashs, table_to_insert_to)
-        local shortname = attachment_group_prefix..name_suffix.."_"..number_string
+    local function owo_kalashnikov_barrel_helper(name_suffix, number_as_string, fixes, kitbashs, table_to_insert_to)
+        local shortname = attachment_group_prefix..name_suffix.."_"..number_as_string
         create_an_attachment(table_to_return, shortname,
             -- Attachment
             {   replacement_path = _item_ranged.."/barrels/"..shortname,
@@ -80,7 +80,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             table_insert(table_to_insert_to[name_suffix], shortname)
         end
         
-        localize_attachment_triple_threat(attachment_group_name, name_suffix, number_string)
+        localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
     end
 
     -- Creating helper attachments
