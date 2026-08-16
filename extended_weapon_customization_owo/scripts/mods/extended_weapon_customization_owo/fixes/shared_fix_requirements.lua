@@ -132,6 +132,7 @@ mod.syn_hellgun_receivers = "syn_hellgun_receiver_01|syn_hellgun_receiver_02|syn
 mod.all_infantry_autogun_receivers = "autogun_rifle_receiver_01|autogun_rifle_receiver_02|autogun_rifle_receiver_03|autogun_rifle_receiver_04|autogun_rifle_receiver_ml01"
 mod.all_braced_autogun_receivers = "autogun_rifle_ak_receiver_01|autogun_rifle_ak_receiver_02|autogun_rifle_ak_receiver_03|autogun_rifle_ak_receiver_04|autogun_rifle_ak_receiver_ml01"
 mod.all_headhunter_autogun_receivers = "autogun_rifle_killshot_receiver_01|autogun_rifle_killshot_receiver_02|autogun_rifle_killshot_receiver_03|autogun_rifle_killshot_receiver_04|autogun_rifle_killshot_receiver_ml01"
+mod.all_autogun_receivers = mod.all_infantry_autogun_receivers.."|"..mod.all_braced_autogun_receivers.."|"..mod.all_headhunter_autogun_receivers
 mod.all_recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_rifle_elysian_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_rifle_elysian_receiver_06|lasgun_rifle_elysian_receiver_07|lasgun_rifle_elysian_receiver_08|lasgun_rifle_elysian_receiver_ml01"
 
 -- ################################################################

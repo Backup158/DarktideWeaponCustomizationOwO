@@ -102,7 +102,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             },
             fix = {
                 offset = {
-                    position = vector3_box(0.0, 0.268, 0.0),
+                    position = vector3_box(0.0, 0.268, -0.03),
                 },
             },
         },
