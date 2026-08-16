@@ -371,6 +371,18 @@ local localizations = {
 		en = "Helbore",
 	},
 	-- ---------------
+	-- OwO underbarrel Weapons
+	-- ---------------
+	owo_underbarrel_weapon_veteran_guardsman_laspistol = {
+		en = "Veteran Guardsman Laspistol Attachment",
+	},
+	owo_underbarrel_weapon_veteran_guardsman_laspistol_bolt_pistol = {
+		en = "Bolt Pistol",
+	},
+	owo_underbarrel_weapon_veteran_guardsman_laspistol_plasma_pistol = {
+		en = "Plasma Pistol",
+	},
+	-- ---------------
 	-- Contemporary Barrels
 	-- ---------------
 	-- This is a pretty weird system. What I have is base + the other description + number

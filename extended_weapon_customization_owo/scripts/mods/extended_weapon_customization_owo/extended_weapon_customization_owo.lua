@@ -416,7 +416,11 @@ add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), all_ranged_weapon
 add_attachments_to_list_of_weapons(mod.owo_tactical_flashlight(), all_ranged_weapons, "flashlight")
 add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), { "shotpistol_shield_p1_m1", "stubrevolver_p1_m1" }, "flashlight_under_small")
 
+-- ----------------
+-- Bayonet
+-- ----------------
 add_attachments_to_list_of_weapons(mod.owo_bayonet_flip(), all_ranged_weapons, "bayonet")
+
 -- ----------------
 -- Muzzle
 -- ----------------
@@ -434,6 +438,11 @@ add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_muzzle_no_double
 -- Barrel
 -- ----------------
 add_attachments_to_list_of_weapons(mod.owo_kalashnikov_barrel(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "barrel")
+
+-- ----------------
+-- OwO Underbarrel Weapon
+-- ----------------
+add_attachments_to_list_of_weapons(mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(), {"laspistol_p1_m1", }, "owo_underbarrel_weapon")
 
 -- ----------------
 -- Stock
