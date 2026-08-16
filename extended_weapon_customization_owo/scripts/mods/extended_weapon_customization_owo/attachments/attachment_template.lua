@@ -107,7 +107,7 @@ function mod.KITBASH_ITEM(given_slot, given_attachment_node)
 
     -- Making list of all attachments global
     if all_these_attachments then
-        mod.all_KITBASH_ITEM_names = create_requirements_string_from_names_table(all_these_attachments)
+        mod.all_KITBASH_ITEM_names = mod.create_requirements_string_from_names_table(all_these_attachments)
     end
 
     -- This is the point to insert fixes that apply to all the parts
