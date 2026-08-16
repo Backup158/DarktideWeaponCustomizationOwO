@@ -45,6 +45,18 @@ In the customization menu, parts will be in sections named `Ostracized without O
 
 ![Autogun with AK Bayonet and AK Barrel](/assets/images/owo_rebuild_ak_barrel.png)
 
+## Underbarrel Weapon
+### Veteran Guardsman Laspistol Wargear
+- Laspistols
+- Underbarrel Plasma Pistols (32) and Bolt Pistols (2)
+  - Plasma Pistols have a variant for various combinations of receivers (4) and barrels (8)
+  - Bolt Pistols have a variant for each magazine
+- Yes, you read that correctly lol. These are based on a misprint in one of the 10th edition rulebooks
+
+![Two Valhallan Veterans wielding laspistols equipped with a bolt pistol and plasma pistol underbarrel, respectively](/assets/images/owo_rebuild_veteran_guardsman_showcase.png)
+
+![10th Edition Rulebook](/assets/images/10e_veteran_guardsman.jpg)
+
 ## Muzzle
 - **Suppressors**: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers  \
 &emsp; Comes in normal and slim variants  \
