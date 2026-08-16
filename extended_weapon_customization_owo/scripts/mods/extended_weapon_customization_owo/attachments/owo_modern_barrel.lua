@@ -199,10 +199,31 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 barrel = {
                     has = mod.all_owo_kalashnikov_barrel_names.all,
                 },
+                bayonet = {
+                    missing = mod.all_owo_bayonet.flip,
+                },
             },
             fix = {
                 offset = {
                     position = vector3_box(0.0, 0.085, -0.045),
+                },
+            },
+        }
+    )
+    table_insert(table_to_return.fixes, 
+        {
+            attachment_slot = "bayonet",
+            requirements = {
+                barrel = {
+                    has = mod.all_owo_kalashnikov_barrel_names.all,
+                },
+                bayonet = {
+                    has = mod.all_owo_bayonet_flip_names,
+                },
+            },
+            fix = {
+                offset = {
+                    position = vector3_box(0.0, 0.085, 0),
                 },
             },
         }

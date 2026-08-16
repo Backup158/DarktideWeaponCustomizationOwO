@@ -48,7 +48,7 @@ function mod.owo_bayonet_flip(given_slot, given_attachment_node)
 
     -- Logging all names if this is the first time
     local all_these_attachments = nil
-    if not mod.all_owo_bayonet_names then
+    if not mod.all_owo_bayonet_flip_names then
         all_these_attachments = {}
     end
 
@@ -98,7 +98,7 @@ function mod.owo_bayonet_flip(given_slot, given_attachment_node)
 
     -- Making list of all attachments global
     if all_these_attachments then
-        mod.all_owo_bayonet_names = mod.create_requirements_string_from_names_table(all_these_attachments)
+        mod.all_owo_bayonet_flip_names = mod.create_requirements_string_from_names_table(all_these_attachments)
     end
 
     -- This is the point to insert fixes that apply to all the parts
