@@ -52,7 +52,7 @@ function mod.owo_bayonet(given_slot, given_attachment_node)
         all_these_attachments = {}
     end
 
-    for_all_weapon_models(5, {2, "ml01"}, function(number_as_string)
+    for_all_weapon_models(5, {3, "ml01"}, function(number_as_string)
         -- adding helpers
         local owo_kitbash_address = _item_ranged.."/bayonets/owo_bayonet_vesa_soviet_"..number_as_string
         create_kitbash_full_item(table_to_return, owo_kitbash_address, nil, "content/weapons/player/attachments/bayonets/bayonet_"..number_as_string.."/bayonet_"..number_as_string, current_attachment_node)
