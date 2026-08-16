@@ -200,7 +200,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                     has = mod.all_owo_kalashnikov_barrel_names.all,
                 },
                 bayonet = {
-                    missing = mod.all_owo_bayonet.flip,
+                    missing = mod.all_owo_bayonet_flip_names,
                 },
             },
             fix = {
