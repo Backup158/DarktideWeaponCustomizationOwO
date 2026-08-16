@@ -22,13 +22,6 @@ local _item_empty = "content/characters/empty_item/empty_item"
 -- ################################
 -- Some Variables for Common Attachments
 -- ################################
---local infantry_autogun_receivers = "autogun_rifle_receiver_01|autogun_rifle_receiver_ml01"
---local braced_autogun_receivers = "autogun_rifle_ak_receiver_01|autogun_rifle_ak_receiver_02|autogun_rifle_ak_receiver_03|autogun_rifle_ak_receiver_ml01"
---local vigilant_autogun_receivers = "autogun_rifle_killshot_receiver_01|autogun_rifle_killshot_receiver_02|autogun_rifle_killshot_receiver_03|autogun_rifle_killshot_receiver_04|autogun_rifle_killshot_receiver_ml01"
---local infantry_lasgun_receivers = "lasgun_rifle_receiver_01|lasgun_rifle_receiver_02|lasgun_rifle_receiver_03|lasgun_rifle_receiver_ml01"
---local helbore_lasgun_receivers = "lasgun_rifle_krieg_receiver_01|lasgun_rifle_krieg_receiver_02|lasgun_krieg_rifle_receiver_03|lasgun_rifle_krieg_receiver_04|lasgun_rifle_krieg_receiver_05|lasgun_krieg_rifle_receiver_06|lasgun_rifle_krieg_receiver_ml01"
---local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_elysian_rifle_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_elysian_rifle_receiver_06|lasgun_elysian_rifle_receiver_07|lasgun_rifle_elysian_receiver_ml01"
-
 -- Camera Angles for Preview
 local render_unit_rot_profile_left = mod.render_unit_rot_profile_left
 local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
@@ -41,7 +34,6 @@ local localize_single_attachment_with_table = mod.localize_single_attachment_wit
 local return_all_numbers_for_hide = mod.return_all_numbers_for_hide
 local for_all_weapon_models = mod.for_all_weapon_models
 
-local attachment_localizations = mod.owo_modern_barrel_localizations
 local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
 
 -- ################################
