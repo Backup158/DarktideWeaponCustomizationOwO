@@ -2,9 +2,11 @@
 ## Added
 - Contemporary Barrels
     - For the autoguns
-    - Short AK Barrels and 
+    - Short AK Barrels (Rocks Glass) and Shorter AK Barrels (Shots Glass)
+        - Shorter version of the Braced Autogun barrels
+        - The names are in reference to serving glasses used for vodka (idk I don't drink)
 ## Changed
-- Refactored tactical stock localization so it appears in the localization file
+- Restructured Mod Options to have more subcategories
 ## Fixed
 - Crash when hovering chainsword body 10-12
     - `create_attachments.lua` did not have safety checks when prepending 0
@@ -14,6 +16,10 @@
     - Both were made as simple kitbashes
     - Making the AK base apply as the muzzle base, so the fix hit both
     - Turned AK Irons into a full kitbash
+## Developer
+- Refactored tactical stock localization so it appears in the localization file
+- Updated localization standard so I can copy it for each attachment group, instead of fiddling with 
+- Adopted a test version of the info.json file
 
 # 4.6.0 - 2026-08-08
 ## Added
