@@ -5,6 +5,15 @@
     - Short AK Barrels (Rocks Glass) and Shorter AK Barrels (Shots Glass)
         - Shorter version of the Braced Autogun barrels
         - The names are in reference to serving glasses used for vodka (idk I don't drink)
+- AK Style Helbore Bayonets
+    - For basically all ranged lol
+    - Helbore bayonets (the slashy kind) but flipped upside down
+    - Isn't set up for all of them, but that's something for future me
+- Veteran Guardsman Laspistol Wargear
+    - Laspistols
+    - Underbarrel plasma pistols and bolt pistols
+    - Yes, underbarrel pistols for your pistol lol
+    - There was a misprint in one of the 10th edition rulebooks
 ## Changed
 - Restructured Mod Options to have more subcategories
 ## Fixed
