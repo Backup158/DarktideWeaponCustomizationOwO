@@ -46,9 +46,9 @@ local custom_attachments = {
         default_path = _item_empty_trinket,
         fix = {
             offset= {
-                position = vector3_box(0.0, 0.0, 0.0),
+                position = vector3_box(0.0, 0.064, -0.14),
                 rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1.0, 1.0, 1.0),
+                scale = vector3_box(0.75, 0.75, 0.75),
                 node = 1,
             },
         },
