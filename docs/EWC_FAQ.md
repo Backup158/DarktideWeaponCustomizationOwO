@@ -38,11 +38,11 @@ General, place these *after* `extended_weapon_customization`. Defer to the plugi
   - On the Nexus page of EWC, in the "Optional Files" section. Put this one before the other add-on plugins in the load order.
   - Adds parts across different weapon types. Notably contains reflex sights, laser sights, and flaming sword blades.
 - *The Syndonai Edits* (Syn's Edits) by Syndonai: 
-  - Discord only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1528304576783188099).
+  - [Discord](https://discord.gg/GFyCGNpJb8) only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1528304576783188099).
   - Contains many sci-fi and 40k parts. Generally, it just does everything because Syn is a legend.
   - There is a changelog included in the files, which mentions all the added parts.
 - *MOAR DAKKA!* by MarcathRoosevelt
-  - Discord only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1497059693309460712).
+  - [Discord](https://discord.gg/GFyCGNpJb8) only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1497059693309460712).
   - Adds heretic weapon skins, machine gun parts to autoguns, and fisting. Most parts are for Ogryn.
   - The most recent changelog is also found [linked in the pins](https://discord.com/channels/1048312349867646996/1168063453416669284/1483360143558312008).
 - [*Ostracized without Objection*](https://www.nexusmods.com/warhammer40kdarktide/mods/429) (OwO) by me
