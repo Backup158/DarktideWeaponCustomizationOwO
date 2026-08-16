@@ -1,0 +1,14 @@
+{
+    "name": "Extended Weapon Customization - Ostracized without Objection (OwO)",
+    "author": "Backup158",
+    "version": "4.7.0",
+    "homepage": "https://www.nexusmods.com/warhammer40kdarktide/mods/429",
+    "source": "https://github.com/Backup158/DarktideWeaponCustomizationOwO",
+    "description": "",
+    "order": {
+        "require": ["extended_weapon_customization"],
+        "load_before": [],
+        "load_after": ["extended_weapon_customization", "extended_weapon_customization_base_additions"]
+    },
+    "localization": {}
+}
