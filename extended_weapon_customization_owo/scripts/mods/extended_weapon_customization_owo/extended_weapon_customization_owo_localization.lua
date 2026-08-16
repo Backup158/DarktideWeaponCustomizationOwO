@@ -364,11 +364,11 @@ local localizations = {
 	-- ---------------
 	-- Bayonets
 	-- ---------------
-	owo_bayonet = {
-		en = "Bayonet",
+	owo_bayonet_flip = {
+		en = "AKM Style Bayonet",
 	},
-	owo_bayonet_helbore_flip = {
-		en = "Helbore AK Style",
+	owo_bayonet_flip_helbore = {
+		en = "Helbore",
 	},
 	-- ---------------
 	-- Contemporary Barrels

@@ -416,7 +416,7 @@ add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), all_ranged_weapon
 add_attachments_to_list_of_weapons(mod.owo_tactical_flashlight(), all_ranged_weapons, "flashlight")
 add_attachments_to_list_of_weapons(mod.owo_color_flashlight(), { "shotpistol_shield_p1_m1", "stubrevolver_p1_m1" }, "flashlight_under_small")
 
-add_attachments_to_list_of_weapons(mod.owo_bayonet(), all_ranged_weapons, "bayonet")
+add_attachments_to_list_of_weapons(mod.owo_bayonet_flip(), all_ranged_weapons, "bayonet")
 -- ----------------
 -- Muzzle
 -- ----------------

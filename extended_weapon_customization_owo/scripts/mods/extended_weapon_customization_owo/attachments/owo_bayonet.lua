@@ -38,11 +38,11 @@ local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
 -- ################################
 -- Attachment
 -- ################################
-function mod.owo_bayonet(given_slot, given_attachment_node)
+function mod.owo_bayonet_flip(given_slot, given_attachment_node)
     local current_slot = given_slot or "bayonet"
-    local current_attachment_node = given_attachment_node or "ap_bayonet_01"
+    local current_attachment_node = given_attachment_node or "ap_muzzle_01"
 
-    local attachment_group_name = "owo_bayonet"
+    local attachment_group_name = "owo_bayonet_flip"
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
 
@@ -57,7 +57,7 @@ function mod.owo_bayonet(given_slot, given_attachment_node)
         local owo_kitbash_address = _item_ranged.."/bayonets/owo_bayonet_vesa_helbore_"..number_as_string
         create_kitbash_full_item(table_to_return, owo_kitbash_address, nil, "content/weapons/player/attachments/bayonets/bayonet_"..number_as_string.."/bayonet_"..number_as_string, current_attachment_node)
 
-        local name_suffix = "helbore_flip_"..number_as_string
+        local name_suffix = "helbore_"..number_as_string
         local shortname = attachment_group_prefix..name_suffix
         create_an_attachment(table_to_return, shortname,
             -- Attachment
