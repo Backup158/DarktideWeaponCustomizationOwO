@@ -82,9 +82,9 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                             disable_in_ui = false,
                             offset = {
                                 node = 1,
-                                position = vector3_box(0.0, 0.02, 0.044),
+                                position = vector3_box(0.0, 0.02, 0.022),
                                 rotation = vector3_box(0.0, 0.0, 0.0),
-                                scale = vector3_box(0.8, 0.55, 0.6)
+                                scale = vector3_box(0.8, 0.69, 0.78)
                             },
                         },
                         children = {
