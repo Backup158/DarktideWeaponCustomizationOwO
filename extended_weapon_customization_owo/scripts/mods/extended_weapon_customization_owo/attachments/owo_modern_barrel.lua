@@ -91,6 +91,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/barrels/owo_kalashnikov_barrel_base_to_hide", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/barrel_02/barrel_02", current_attachment_node)
     create_kitbash_full_item(table_to_return, _item_ranged.."/barrels/owo_kalashnikov_barrel_helper_barrel_squish_long", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/barrel_03/barrel_03", current_attachment_node)
 
+    -- Long Barrels
     owo_kalashnikov_barrel_helper("short", "03", 
     {
         -- wtf is this hahahaha
@@ -156,21 +157,6 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 },
             },
         },
-        -- Since the real underlying barrel is just a tube, the bayonet is just sitting there
-        -- This moves it forwards and down so it'd fit the barrel we actually see
-        {
-            attachment_slot = "bayonet",
-            requirements = {
-                barrel = {
-                    has = attachment_group_name.."_super_short",
-                },
-            },
-            fix = {
-                offset = {
-                    position = vector3_box(0.0, 0.085, -0.045),
-                },
-            },
-        },
     }, 
     {
         base_unit = "content/weapons/player/ranged/lasgun_rifle_krieg/attachments/barrel_07/barrel_07",
@@ -190,9 +176,28 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
     })
 
+    -- These fixes are used by all of them
+    table_insert(table_to_return.fixes, 
+        -- Since the real underlying barrel is just a tube, the bayonet is just sitting there
+        -- This moves it forwards and down so it'd fit the barrel we actually see
+        {
+            attachment_slot = "bayonet",
+            requirements = {
+                barrel = {
+                    has = mod.all_owo_kalashnikov_barrel_names,
+                },
+            },
+            fix = {
+                offset = {
+                    position = vector3_box(0.0, 0.085, -0.045),
+                },
+            },
+        }
+    )
+
     -- Making list of all attachments global
     if all_these_attachments then
-        mod.all_owo_kalashnikov_barrel_names = all_these_attachments
+        mod.all_owo_kalashnikov_barrel_names = create_requirements_string_from_names_table(all_these_attachments)
     end
 
     return table_to_return
