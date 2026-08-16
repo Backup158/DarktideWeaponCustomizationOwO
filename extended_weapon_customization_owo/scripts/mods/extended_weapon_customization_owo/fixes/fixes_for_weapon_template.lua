@@ -9,6 +9,7 @@ local vector3_box = Vector3Box
 -- ################################
 -- Game Content Addresses
 -- ################################
+local _item = "content/items/weapons/player"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 
 -- ################################
