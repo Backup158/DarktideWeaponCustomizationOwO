@@ -97,7 +97,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             attachment_slot = "barrel",
             requirements = {
                 barrel = {
-                    has = attachment_group_name.."short",
+                    has = attachment_group_name.."_short",
                 },
             },
             fix = {
@@ -112,7 +112,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             attachment_slot = "bayonet",
             requirements = {
                 barrel = {
-                    has = attachment_group_name.."short",
+                    has = attachment_group_name.."_short",
                 },
             },
             fix = {

@@ -71,25 +71,27 @@ info_if_debug("OwO All Suppressors: "..mod.all_owo_suppressor)
 -- --------------------------------
 -- Holographic Sights
 -- --------------------------------
--- Turns each group into a long string
--- The goal is to have
--- mod.all_holographic_sights_names
---      .all
---      .eotech
---      .vortex
--- etc
--- However, mod.all_holographic_sights_names goes {
---   eotech = { }
---   vortex = { }
---   first_run = false
--- }
--- Therefore I can only create a requirements string for the others
--- So in the end it'll be mod.all_holographic_sights_names goes {
---   all = eotech_string.."|"..vortex_string etc
---   eotech = eotech_string
---   vortex = vortex_string
---   first_run = false
--- }
+--[[
+   Turns each group into a long string
+   The goal is to have
+   mod.all_holographic_sights_names
+        .all
+        .eotech
+        .vortex
+   etc
+   However, mod.all_holographic_sights_names goes {
+     eotech = { }
+     vortex = { }
+     first_run = false
+   }
+   Therefore I can only create a requirements string for the others
+   So in the end it'll be mod.all_holographic_sights_names goes {
+     all = eotech_string.."|"..vortex_string etc
+     eotech = eotech_string
+     vortex = vortex_string
+     first_run = false
+   }
+]]
 for holosight_group, holosight_list in pairs(mod.all_holographic_sights_names) do
     if type(holosight_list) == "table" then
         mod.all_holographic_sights_names[holosight_group] = create_requirements_string_from_names_table(holosight_list)
@@ -105,6 +107,11 @@ dump_if_debug(mod.all_holographic_sights_names, "OwO All Holographic Sights: ", 
 -- Chainsword parts
 -- --------------------------------
 mod.owo_chainsword_2h_with_gap = "owo_chainsword_2h_blade_02|owo_chainsword_2h_blade_ml01"
+
+-- --------------------------------
+-- Modern Barrels
+-- --------------------------------
+mod.all_owo_kalashnikov_barrel_names = create_requirements_string_from_names_table(mod.all_owo_kalashnikov_barrel_names)
 
 -- ################################
 -- Syn's Parts

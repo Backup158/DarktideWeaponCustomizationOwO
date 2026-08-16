@@ -78,7 +78,9 @@ local these_fixes = {
             },
         },
     },
-
+    -- ----------------------
+    -- Barrels
+    -- ----------------------
     {
         attachment_slot = "barrel",
         requirements = {
@@ -91,7 +93,7 @@ local these_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, 0.0, -0.03),
+                position = vector3_box(0.0, 0.268, -0.03),
             },
         },
     },
