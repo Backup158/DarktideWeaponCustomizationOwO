@@ -141,7 +141,7 @@ local custom_attachments = {
     },
     sight_reticle = mod.shared_fix_tables["default_attachment_sight_reticle"],
     barrel_foreskin = {
-        parent_slot = "barrel",
+        parent_slot = "receiver",
         default_path = _item_empty_trinket,
         fix = {
             offset = {

@@ -15,6 +15,7 @@
     - Yes, underbarrel pistols for your pistol lol
     - There was a misprint in one of the 10th edition rulebooks
 ## Changed
+- Perhaps improved barrel shroud positioning logic
 - Restructured Mod Options to have more subcategories
 ## Fixed
 - Crash when hovering chainsword body 10-12

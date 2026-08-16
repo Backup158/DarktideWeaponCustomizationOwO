@@ -165,7 +165,7 @@ local custom_attachments = {
         },
     },
     barrel_foreskin = {
-        parent_slot = "barrel",
+        parent_slot = "receiver",
         default_path = _item_empty_trinket,
         fix = {
             offset = {
