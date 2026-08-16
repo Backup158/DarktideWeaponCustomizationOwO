@@ -362,7 +362,7 @@ local localizations = {
 		en = "Contemporary Barrels",
 	},
 	mod_option_underbarrel_laspistol_randomization = {
-		en = "Veteran Guardsman Laspistol Attachments",
+		en = "Veteran Guardsman Laspistol Wargear",
 	},
 	-- ==============================
 	-- Weapon Attachments (Again)
@@ -380,7 +380,7 @@ local localizations = {
 	-- OwO underbarrel Weapons
 	-- ---------------
 	owo_underbarrel_weapon_veteran_guardsman_laspistol = {
-		en = "Veteran Guardsman Laspistol Attachment",
+		en = "Veteran Guardsman Laspistol Wargear",
 	},
 	owo_underbarrel_weapon_veteran_guardsman_laspistol_bolt_pistol = {
 		en = "Bolt Pistol",
