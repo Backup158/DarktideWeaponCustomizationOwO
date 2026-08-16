@@ -209,7 +209,12 @@ end
 -- barrel name + suffix + number --> Kalashnikov Barrel - Short 07
 -- This should work with other languages since mod:Localize finds your language --> replaces english --> there's nothing for your language so it grabs the english (which is actually in your language)
 function mod.localize_attachment_triple_threat(attachment_group_name, attachment_suffix, number_string) 
-    local attachment_name = attachment_group_name.."_"..number_string.."_"..attachment_suffix
+    local attachment_name
+    if number_string then
+       attachment_name = attachment_group_name.."_"..number_string.."_"..attachment_suffix
+    else
+       attachment_name = attachment_group_name.."_"..attachment_suffix
+    end
 
     local attachment_start = mod:localize("loc_"..attachment_group_name)
     local attachment_end = mod:localize("loc_"..attachment_group_name.."_"..attachment_suffix)
