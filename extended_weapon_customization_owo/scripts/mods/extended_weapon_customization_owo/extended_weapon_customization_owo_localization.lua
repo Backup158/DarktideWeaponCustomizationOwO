@@ -293,7 +293,7 @@ local localizations = {
 		en = "All",
 	},
 	group_randomization_options_ranged = {
-		en = "Ranged",
+		en = "Randomization Options - Ranged",
 	},
 	group_randomization_options_sight = {
 		en = "Sights",
@@ -311,7 +311,7 @@ local localizations = {
 		en = "Other",
 	},
 	group_randomization_options_melee = {
-		en = "Melee",
+		en = "Randomization Options - Melee",
 	},
 	group_randomization_options_body = {
 		en = "Body",
