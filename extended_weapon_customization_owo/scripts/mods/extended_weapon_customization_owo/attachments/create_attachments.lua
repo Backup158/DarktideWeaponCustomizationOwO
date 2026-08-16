@@ -273,7 +273,7 @@ function mod.for_all_weapon_models(range_end_inclusive, table_of_values_to_exclu
         end
     end
     -- Now for mastery item
-    if not table_of_values_to_exclude or not table_contains(table_of_values_to_exclude, "ml01") then
+    if (not table_of_values_to_exclude) or not table_contains(table_of_values_to_exclude, "ml01") then
         function_to_run("ml01")
     end
 end
