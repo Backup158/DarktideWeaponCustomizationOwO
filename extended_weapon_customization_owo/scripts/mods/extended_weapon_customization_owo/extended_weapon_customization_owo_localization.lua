@@ -61,6 +61,9 @@ mod:add_global_localize_strings({
 	attachment_slot_barrel_foreskin = {
 		en = "Barrel Shroud",
 	},
+	attachment_slot_owo_underbarrel_weapon = {
+		en = "Underbarrel Weapon",
+	},
 	-- ===============
 	-- Separator groups
 	-- ===============
@@ -357,6 +360,9 @@ local localizations = {
 	},
 	mod_option_modern_barrel_randomization = {
 		en = "Contemporary Barrels",
+	},
+	mod_option_underbarrel_laspistol_randomization = {
+		en = "Veteran Guardsman Laspistol Attachments",
 	},
 	-- ==============================
 	-- Weapon Attachments (Again)
