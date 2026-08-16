@@ -84,7 +84,7 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                 node = 1,
                                 position = vector3_box(0.0, 0.0, 0.0),
                                 rotation = vector3_box(0.0, 0.0, 0.0),
-                                scale = vector3_box(0.8, 0.8, 0.8)
+                                scale = vector3_box(0.8, 0.55, 0.6)
                             },
                         },
                         children = {
@@ -92,7 +92,7 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                 item = owo_kitbash_base_bolt_pistol.."_grip",
                                 fix = {
                                     offset = {
-                                        node = 1,
+                                        node = 3,
                                         position = vector3_box(0.0, 0.0, 0.0),
                                         rotation = vector3_box(0.0, 0, 0.0),
                                         scale = vector3_box(1.0, 1.0, 1.0),
@@ -103,8 +103,8 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                 item = owo_kitbash_base_bolt_pistol.."_magazine",
                                 fix = {
                                     offset = {
-                                        node = 1,
-                                        position = vector3_box(0.0, 0.0, 0.0),
+                                        node = 3,
+                                        position = vector3_box(0.0, -0.08, -0.02),
                                         rotation = vector3_box(0.0, 0, 0.0),
                                         scale = vector3_box(1.0, 1.0, 1.0),
                                     },
@@ -115,9 +115,9 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                 fix = {
                                     offset = {
                                         node = 1,
-                                        position = vector3_box(0.0, 0.0, 0.0),
+                                        position = vector3_box(0.0, -0.1, -0.036),
                                         rotation = vector3_box(0.0, 0, 0.0),
-                                        scale = vector3_box(1.0, 1.0, 1.0),
+                                        scale = vector3_box(1.0, 1.3, 1.0),
                                     },
                                 },
                             },
@@ -172,7 +172,7 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                     node = 1,
                                     position = vector3_box(0.0, 0.0, 0.0),
                                     rotation = vector3_box(0.0, 0.0, 0.0),
-                                    scale = vector3_box(0.8, 0.8, 0.8)
+                                    scale = vector3_box(0.6, 0.5, 0.69)
                                 },
                             },
                             children = {
@@ -181,7 +181,7 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                     fix = {
                                         offset = {
                                             node = 1,
-                                            position = vector3_box(0.0, 0.0, 0.0),
+                                            position = vector3_box(0.0, 0.0, -0.04),
                                             rotation = vector3_box(0.0, 0, 0.0),
                                             scale = vector3_box(1.0, 1.0, 1.0),
                                         },
@@ -192,9 +192,9 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                     fix = {
                                         offset = {
                                             node = 1,
-                                            position = vector3_box(0.0, 0.0, 0.0),
+                                            position = vector3_box(0.0, 0.042, -0.08),
                                             rotation = vector3_box(0.0, 0, 0.0),
-                                            scale = vector3_box(1.0, 1.0, 1.0),
+                                            scale = vector3_box(1.0, 1.0, 0.69),
                                         },
                                     },
                                 },
@@ -205,7 +205,7 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                             node = 1,
                                             position = vector3_box(0.0, 0.0, 0.0),
                                             rotation = vector3_box(0.0, 0, 0.0),
-                                            scale = vector3_box(1.0, 0.55, 1.0),
+                                            scale = vector3_box(1.0, 0.85, 1.0),
                                         },
                                     },
                                 },
@@ -214,8 +214,8 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                     fix = {
                                         offset = {
                                             node = 1,
-                                            position = vector3_box(0.0, 0.0, 0.0),
-                                            rotation = vector3_box(0.0, 0, 0.0),
+                                            position = vector3_box(0.0, -0.1, 0.04),
+                                            rotation = vector3_box(45.0, 0, 0.0),
                                             scale = vector3_box(1.0, 1.0, 1.0),
                                         },
                                     },
