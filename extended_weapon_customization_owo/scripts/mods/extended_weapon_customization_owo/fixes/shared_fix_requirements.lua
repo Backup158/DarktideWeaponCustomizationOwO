@@ -111,7 +111,6 @@ mod.owo_chainsword_2h_with_gap = "owo_chainsword_2h_blade_02|owo_chainsword_2h_b
 -- --------------------------------
 -- Modern Barrels
 -- --------------------------------
--- mod.all_owo_kalashnikov_barrel_names = create_requirements_string_from_names_table(mod.all_owo_kalashnikov_barrel_names)
 
 -- ################################
 -- Syn's Parts

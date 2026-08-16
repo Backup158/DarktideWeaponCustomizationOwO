@@ -28,7 +28,6 @@ local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
 
 local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
-local all_owo_kalashnikov_barrel_names = mod.all_owo_kalashnikov_barrel_names
 
 local syn_ma5_extensions = mod.syn_ma5_extensions
 local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions
