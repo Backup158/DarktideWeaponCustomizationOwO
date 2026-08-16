@@ -66,10 +66,10 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
     end
 
     local function owo_kalashnikov_barrel_helper(name_suffix, number_string, fixes, kitbashs, table_to_insert_to)
-        local shortname = attachment_group_prefix..name_suffix
+        local shortname = attachment_group_prefix..name_suffix.."_"..number_string
         create_an_attachment(table_to_return, shortname,
             -- Attachment
-            {   replacement_path = _item_ranged.."/barrels/"..shortname.."_"..number_string,
+            {   replacement_path = _item_ranged.."/barrels/"..shortname,
                 icon_render_unit_rotation_offset = render_unit_rot_profile_left,
                 icon_render_camera_position_offset = render_cam_pos_profile_left,
                 custom_selection_group = attachment_group_name,
