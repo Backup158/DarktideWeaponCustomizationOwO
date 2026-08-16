@@ -25,7 +25,7 @@ To use this mod specifically, there are three files you need to install.
   - [NexusMods.com](https://www.nexusmods.com/warhammer40kdarktide/mods/277)
   - Pinned in the [Discord channel](https://discord.com/channels/1048312349867646996/1168063453416669284) mentioned earlier. Usually, the pinned version is a potentially-unstable release with beta features.
 
-There are two important things to note for load order
+There are two important things to note for load order:
 - The two patches need to load before EWC.
 - The two patches need to load early in the load order. Some mods, if loaded before the patches, will prevent them from working.
 
@@ -38,11 +38,13 @@ General, place these *after* `extended_weapon_customization`. Defer to the plugi
   - On the Nexus page of EWC, in the "Optional Files" section. Put this one before the other add-on plugins in the load order.
   - Adds parts across different weapon types. Notably contains reflex sights, laser sights, and flaming sword blades.
 - *The Syndonai Edits* (Syn's Edits) by Syndonai: 
-  - Discord only. See the pins in the Discord chat.
-  - Contains many sci-fi and 40k parts. Generally just does everything.
+  - Discord only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1528304576783188099).
+  - Contains many sci-fi and 40k parts. Generally, it just does everything because Syn is a legend.
+  - There is a changelog included in the files, which mentions all the added parts.
 - *MOAR DAKKA!* by MarcathRoosevelt
-  - Discord only. See the pins in the Discord chat.
+  - Discord only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1497059693309460712).
   - Adds heretic weapon skins, machine gun parts to autoguns, and fisting. Most parts are for Ogryn.
+  - The most recent changelog is also found [linked in the pins](https://discord.com/channels/1048312349867646996/1168063453416669284/1483360143558312008).
 - [*Ostracized without Objection*](https://www.nexusmods.com/warhammer40kdarktide/mods/429) (OwO) by me
   - Mainly real-world attachments
 - [*Empty Sights*](https://github.com/Backup158/DarktideWeaponCustomizationEmptySights/releases/latest) by me
@@ -225,7 +227,7 @@ If *most* attachments work but only a few aren't, it's likely an issue with that
 <a id="legacy-faq">
 
 # Legacy Weapon Customization FAQ</a>
-The intention of the FAQ is to answer questions specifically about the rebuild of `weapon_customization` --> `extended_weapon_customization`. As such, it does not address questions that we've been answering for the old version. For posterity, I'll include a few of those common ones.
+The intention of the main FAQ is to answer questions specifically about the rebuild of `weapon_customization` --> `extended_weapon_customization`. As such, it does not address questions that we've been answering for the old version. However, for posterity, I'll include a few of the common ones that still pertain to the rebuild.
 
 <a id="legacy-faq-1">
 
