@@ -289,6 +289,30 @@ local localizations = {
 	group_randomization_options_description = {
 		en = "Allows randomized weapons to use these attachment options",
 	},
+	group_randomization_options_all = {
+		en = "All",
+	},
+	group_randomization_options_sight = {
+		en = "Ranged - Sights",
+	},
+	group_randomization_options_barrel = {
+		en = "Ranged - Barrels",
+	},
+	group_randomization_options_muzzle = {
+		en = "Ranged - Muzzles",
+	},
+	group_randomization_options_stock = {
+		en = "Ranged - Stocks",
+	},
+	group_randomization_options_other_ranged = {
+		en = "Ranged - Other",
+	},
+	group_randomization_options_main_melee = {
+		en = "Melee - Main Body",
+	},
+	group_randomization_options_chainsword = {
+		en = "Chainsword Parts",
+	},
 	mod_option_empty_randomization = {
 		en = "Empty Attachments",
 	},
