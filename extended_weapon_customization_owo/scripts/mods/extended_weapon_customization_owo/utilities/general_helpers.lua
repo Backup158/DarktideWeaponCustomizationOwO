@@ -206,6 +206,20 @@ function mod.localize_all_from_group(attachment_names, localizations_to_use)
 	end
 end
 
+-- barrel name + suffix + number --> Kalashnikov Barrel - Short 07
+-- This should work with other languages since mod:Localize finds your language --> replaces english --> there's nothing for your language so it grabs the english (which is actually in your language)
+function mod.localize_attachment_triple_threat(attachment_group_name, attachment_suffix, number_string) 
+    local attachment_name = attachment_start.."_"..number_string.."_"..attachment_suffix
+
+    local attachment_start = mod:Localize("loc_"..attachment_group_name)
+    local attachment_end = mod:Localize("loc_"..attachment_group_name.."_"..attachment_suffix)
+    mod:add_global_localize_strings({
+        ["loc_"..attachment_name] = {
+            en = string_format("%s - %s %s", attachment_start, attachment_end, number_string)
+        },
+    })
+end
+
 -- ----------
 -- Apply 2D Transformation to Vector3Box
 -- DESC: given a vector3box, multiply it with the transformation given

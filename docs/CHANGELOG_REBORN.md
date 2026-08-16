@@ -1,6 +1,8 @@
 # 4.7.0 - UNRELEASED
 ## Added
-
+- Contemporary Barrels
+    - For the autoguns
+    - Short AK Barrels and 
 ## Changed
 - Refactored tactical stock localization so it appears in the localization file
 ## Fixed

@@ -40,12 +40,12 @@ local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional
 local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
 local return_all_numbers_for_hide = mod.return_all_numbers_for_hide
 
-local attachment_localizations = mod.owo_kalashnikov_barrel_localizations
+local attachment_localizations = mod.owo_modern_barrel_localizations
+local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
 
 -- ################################
 -- Attachment
 -- ################################
-
 function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
     local current_slot = given_slot or "barrel"
     local current_attachment_node = given_attachment_node or "ap_barrel_01"
@@ -60,7 +60,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         all_these_attachments = {}
     end
 
-    local function owo_kalashnikov_barrel_helper(name_suffix, fixes, kitbashs)
+    local function owo_kalashnikov_barrel_helper(name_suffix, number_string, fixes, kitbashs)
         local shortname = attachment_group_prefix..name_suffix
         create_an_attachment(table_to_return, shortname,
             -- Attachment
@@ -81,16 +81,17 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         if all_these_attachments then
             table_insert(all_these_attachments, shortname)
         end
-        localize_single_attachment_with_table(shortname, attachment_localizations)
+        
+        localize_attachment_triple_threat(attachment_group_name, name_suffix, number_string)
 
         return table_to_return, all_these_attachments
     end
 
     -- Creating helper attachments
     create_kitbash_full_item(table_to_return, _item_ranged.."/barrels/owo_kalashnikov_barrel_base_to_hide", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/barrel_02/barrel_02", current_attachment_node)
-    create_kitbash_full_item(table_to_return, _item_ranged.."/barrels/owo_kalashnikov_barrel_helper_barrel_squish", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/barrel_03/barrel_03", current_attachment_node)
+    create_kitbash_full_item(table_to_return, _item_ranged.."/barrels/owo_kalashnikov_barrel_helper_barrel_squish_long", nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/barrel_03/barrel_03", current_attachment_node)
 
-    owo_kalashnikov_barrel_helper("short", 
+    owo_kalashnikov_barrel_helper("short", "03", 
     {
         -- wtf is this hahahaha
         {
@@ -126,13 +127,62 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         base_unit = "content/weapons/player/ranged/lasgun_rifle_krieg/attachments/barrel_07/barrel_07",
         attachments = {
             owo_barrel_we_actually_see = {
-                item = _item_ranged.."/barrels/owo_kalashnikov_barrel_helper_barrel_squish",
+                item = _item_ranged.."/barrels/owo_kalashnikov_barrel_helper_barrel_squish_long",
                 fix = {
                     offset = {
                         node = 1,
                         position = vector3_box(0.0, -0.268, 0.0),
                         rotation = vector3_box(0.0, 0, 0.0),
                         scale = vector3_box(1, 0.6, 1),
+                    },
+                },
+            },
+            
+        },
+    })
+    owo_kalashnikov_barrel_helper("super_short", "03", 
+    {
+        -- wtf is this hahahaha
+        {
+            attachment_slot = "barrel",
+            requirements = {
+                barrel = {
+                    has = attachment_group_name.."_super_short",
+                },
+            },
+            fix = {
+                offset = {
+                    position = vector3_box(0.0, 0.2, -0.03),
+                },
+            },
+        },
+        -- Since the real underlying barrel is just a tube, the bayonet is just sitting there
+        -- This moves it forwards and down so it'd fit the barrel we actually see
+        {
+            attachment_slot = "bayonet",
+            requirements = {
+                barrel = {
+                    has = attachment_group_name.."_super_short",
+                },
+            },
+            fix = {
+                offset = {
+                    position = vector3_box(0.0, 0.085, -0.045),
+                },
+            },
+        },
+    }, 
+    {
+        base_unit = "content/weapons/player/ranged/lasgun_rifle_krieg/attachments/barrel_07/barrel_07",
+        attachments = {
+            owo_barrel_we_actually_see = {
+                item = _item_ranged.."/barrels/owo_kalashnikov_barrel_helper_barrel_squish_long",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, -0.2, 0.0),
+                        rotation = vector3_box(0.0, 0, 0.0),
+                        scale = vector3_box(1, 0.5, 1),
                     },
                 },
             },

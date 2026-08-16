@@ -212,16 +212,18 @@ mod.owo_tactical_stock_localizations = {
 	},
 }
 
-mod.owo_kalashnikov_barrel_localizations = {
-	owo_kalashnikov_barrel_base = {
-		en = "Kalashnikov Barrel ",
-	},
-}
+-- ---------------
+-- Contemporary Barrels
+-- ---------------
+-- see Localizations = {}
 
 -- ################################
 -- Mod Options and Data
 -- ################################
 local localizations = {
+	-- ==============================
+	-- Mod Information
+	-- ==============================
 	mod_name = {
 		en = "EWC - OwO (Ostracized without Objection)",
 		["zh-cn"] = "武器自定义扩展 - OwO（Ostracized without Objection）",
@@ -233,6 +235,9 @@ local localizations = {
 		["zh-cn"] = "为武器自定义扩展插件添加各种附件,这些附件受史实武器及tacticool启发",
 		ru = "Если кто-то присылает вам «UwU», не ломайте себе голову в поиске ответа, пытаясь понять, что вообще это означает. Это слово нельзя расшифровать по буквам. Вместо этого термин используется, как эмодзи для обозначения реакции на что-то милое или радующее вас. Представьте картину милого котёнка, который залез с лапками в блюдце с молоком. Это так мило, что почти отвратительно, и ваша первая реакция, скорее всего, «Ой! Как восхитительно» или «UwU», что произносится как «ooh woo».",
 	},
+	-- ---------------
+	-- Widgets
+	-- ---------------
 	debug_mode = {
 		en = "Debug Mode",
 	},
@@ -322,6 +327,27 @@ local localizations = {
 	},
 	mod_option_modern_barrel_randomization = {
 		en = "Contemporary Barrels",
+	},
+	-- ==============================
+	-- Weapon Attachments (Again)
+	-- ==============================
+	-- ---------------
+	-- Contemporary Barrels
+	-- ---------------
+	-- This is a pretty weird system. What I have is base + the other description + number
+	--   With some automatic formatting
+	-- so owo_kalashnikov_barrel_short_07 --> owo_kalashnikov_barrel + owo_kalashnikov_barrel_short + "07" --> Kalashnikov Barrel - Shot Glass 07
+	owo_kalashnikov_barrel = {
+		en = "Kalashnikov Barrel",
+	},
+	-- For AK Barrels I used Vodka glass sizes
+	-- Short: Rocks glass (on the rocks)
+	owo_kalashnikov_barrel_short = {
+		en = "Rocks Glass",
+	},
+	-- Super Short: Shot Glass
+	owo_kalashnikov_barrel_super_short = {
+		en = "Shot Glass",
 	},
 }
 
