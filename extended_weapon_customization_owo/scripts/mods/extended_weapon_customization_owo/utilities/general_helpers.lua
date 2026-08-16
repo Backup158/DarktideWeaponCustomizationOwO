@@ -211,8 +211,8 @@ end
 function mod.localize_attachment_triple_threat(attachment_group_name, attachment_suffix, number_string) 
     local attachment_name = attachment_group_name.."_"..number_string.."_"..attachment_suffix
 
-    local attachment_start = mod:Localize("loc_"..attachment_group_name)
-    local attachment_end = mod:Localize("loc_"..attachment_group_name.."_"..attachment_suffix)
+    local attachment_start = mod:localize("loc_"..attachment_group_name)
+    local attachment_end = mod:localize("loc_"..attachment_group_name.."_"..attachment_suffix)
 
     local attachment_combination = attachment_start.." - "..attachment_end
     if number_string then
