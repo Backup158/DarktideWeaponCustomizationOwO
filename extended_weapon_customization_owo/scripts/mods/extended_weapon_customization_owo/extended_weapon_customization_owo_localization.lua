@@ -362,6 +362,15 @@ local localizations = {
 	-- Weapon Attachments (Again)
 	-- ==============================
 	-- ---------------
+	-- Bayonets
+	-- ---------------
+	owo_bayonet = {
+		en = "Bayonet",
+	},
+	owo_bayonet_helbore_flip = {
+		en = "Helbore AK Style",
+	},
+	-- ---------------
 	-- Contemporary Barrels
 	-- ---------------
 	-- This is a pretty weird system. What I have is base + the other description + number
