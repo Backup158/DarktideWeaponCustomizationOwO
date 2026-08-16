@@ -1,4 +1,4 @@
-# 4.7.0 - UNRELEASED
+# 4.7.0 - 2026-08-16
 ## Added
 - Contemporary Barrels
     - For the autoguns
