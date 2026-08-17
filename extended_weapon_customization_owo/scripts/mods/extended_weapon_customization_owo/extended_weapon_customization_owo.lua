@@ -432,7 +432,7 @@ add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_barrel_01"),
 -- ----------------
 -- Barrel Shroud
 -- ----------------
-add_attachments_to_list_of_weapons(mod.owo_suppressor(nil, "ap_barrel_01"), ranged_muzzle_no_double, "barrel_foreskin")
+add_attachments_to_list_of_weapons(mod.owo_suppressor("barrel_foreskin", "ap_barrel_01"), ranged_muzzle_no_double, "barrel_foreskin")
 
 -- ----------------
 -- Barrel
