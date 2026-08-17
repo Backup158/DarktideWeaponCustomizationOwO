@@ -8,6 +8,7 @@
 - Suppressors no longer have the base mesh visible
 ## Fixed
 ## Developer
+- Refactored some global attachment names to be called by the attachment file itself instead of shared fixes. In the future this makes it easier to keep everything together instead of jumping between the file and the shared file, so adopting the same thing over time makes it more consistent.
 
 # 4.7.0 - 2026-08-16
 ## Added

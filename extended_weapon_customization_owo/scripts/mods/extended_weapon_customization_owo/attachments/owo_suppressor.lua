@@ -174,7 +174,9 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         table_to_send.ac_sca = transformations_table.ac_sca_slim
         table_to_send.ac1_sca = transformations_table.ac1_sca_slim
         table_to_send.ac2_sca = transformations_table.ac2_sca_slim
-        table_to_send.custom_selection = "owo_suppressor_slim"
+        
+        custom_attachment_overwrites = custom_attachment_overwrites or {}
+        custom_attachment_overwrites.custom_selection = "owo_suppressor_slim"
         create_suppressor(name.."_slim", model_table, table_to_send, custom_attachment_overwrites)
     end
 
