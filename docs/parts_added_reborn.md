@@ -143,6 +143,7 @@ All flashlights come with color and beam power variants. Each combination is its
   - Flat: Blade's cutting edge is slimmed down
   - Slim: Blade is less wide and its cutting edge is slimmed down
   - Grip Variant: Also shrinks the grip
+
 ![Slim Blade on Power Sword](/assets/images/owo_slim_blade_psword.png)
 
 > [!WARNING]
@@ -152,6 +153,7 @@ All flashlights come with color and beam power variants. Each combination is its
 ### **Chainsword Blades**
 - *Weapons*: Assault Chainswords, Heavy Eviscerators
 - Allows each weapon to use the other's body/chain
+
 ![Eviscerator on Chainsword](/assets/images/owo_rebuild_chainsword_blade.png)
 
 ## Rear Head
