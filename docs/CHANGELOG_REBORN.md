@@ -1,4 +1,4 @@
-# 4.8.0 - 2026-08-idk
+# 4.8.0 - 2026-08-17
 ## Added
 - Suppressors
     - PBS-1 now has a variant with the base muzzle visible
