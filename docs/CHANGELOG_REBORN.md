@@ -1,7 +1,11 @@
 # 4.8.0 - 2026-08-idk
 ## Added
+- Suppressors
+    - PBS-1 now has a variant with the base muzzle visible
 ## Changed
 - Suppressors no longer have a damage type if it's not a muzzle
+- Suppressors are actually categorized by regular vs slim
+- Suppressors no longer have the base mesh visible
 ## Fixed
 ## Developer
 

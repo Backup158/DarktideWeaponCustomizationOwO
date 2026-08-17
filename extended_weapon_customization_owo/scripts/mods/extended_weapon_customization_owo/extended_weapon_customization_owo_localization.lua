@@ -179,6 +179,9 @@ local suppressor_localizations = {
 	owo_suppressor_03 = {
 		en = "PBS-1 Suppressor"
 	},
+	owo_suppressor_03_visible_base = {
+		en = "PBS-1 Suppressor (Visible Base)"
+	},
 	owo_suppressor_04 = {
 		en = "Heavy Metal Suppressor 01"
 	},
