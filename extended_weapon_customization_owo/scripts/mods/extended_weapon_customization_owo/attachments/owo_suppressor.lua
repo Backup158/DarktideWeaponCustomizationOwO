@@ -51,6 +51,9 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         all_suppressor_names = {}
     end
 
+    -- ############
+    -- Create Single Suppressor
+    -- ############
     local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwites)
         local model_to_use = nil
         if type(model_table) == "table" then
@@ -80,8 +83,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         -- Removes damage type if it's not a muzzle weapon
         if not ((current_slot_name == "muzzle") or (current_slot_name == "muzzle_2")) then
             given_damage_type = nil
-        end
-        
+        end    
 
         create_an_attachment(table_to_return, name,
             {   replacement_path = _item_ranged.."/muzzles/"..name,
@@ -147,6 +149,10 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             table_insert(all_suppressor_names, name)
         end
     end
+
+    -- ############
+    -- Create Normal and Slim Suppressor
+    -- ############
     local function create_suppressor_and_slim(name, model_table, transformations_table)
         local table_to_send = {
             icon_rot = render_unit_rot_profile_left,
@@ -169,7 +175,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         table_to_send.ac_sca = transformations_table.ac_sca_slim
         table_to_send.ac1_sca = transformations_table.ac1_sca_slim
         table_to_send.ac2_sca = transformations_table.ac2_sca_slim
-        create_suppressor(name.."_slim", model_table, table_to_send, "owo_suppressor_slim")
+        table_to_send.custom_selection = "owo_suppressor_slim"
+        create_suppressor(name.."_slim", model_table, table_to_send)
     end
 
     -- --------------------------------
