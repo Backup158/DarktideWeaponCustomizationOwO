@@ -7,9 +7,8 @@
 # ***Notices youw pawts*** (Parts I added)
 In the customization menu, parts will be in sections named `Ostracized without Objection (OwO)` or `OwO - <some_name>`
 
-> **Part**
-- *Weapons*: Weapons available
-> 
+> ### **Part**
+> - *Weapons*: Weapons available
 > - Description
 
 # Ranged
