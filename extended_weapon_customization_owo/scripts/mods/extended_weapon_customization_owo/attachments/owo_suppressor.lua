@@ -67,14 +67,18 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         local given_damage_type 
         if type(custom_attachment_overwites) == "table" then
             given_selection_group = custom_attachment_overwites.custom_selection
-            given_damage_type = custom_attachment_overwites.damage_type
+            given_damage_type = custom_attachment_overwites.damage_type or "owo_suppressed_autogun_bullet"
+        end
+        -- Removes damage type if it's not a muzzle weapon
+        if not ((current_slot_name == "muzzle") or (current_slot_name == "muzzle_2")) then
+            given_damage_type = nil
         end
 
         create_an_attachment(table_to_return, name,
             {   replacement_path = _item_ranged.."/muzzles/"..name,
                 icon_render_unit_rotation_offset = transformations_table.icon_rot,
                 icon_render_camera_position_offset = transformations_table.icon_pos,
-                damage_type = given_damage_type or "owo_suppressed_autogun_bullet",
+                damage_type = given_damage_type,
                 custom_selection_group = given_selection_group or "owo_suppressor",
                 randomization_requirement = "mod_option_suppressor_randomization",
             },
@@ -87,7 +91,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                         children = {},
                     },
                     ]]
-                    base = {
+                    real_muzzle_base_to_attach = {
                         item = model_table.base or _item_ranged.."/muzzles/owo_supp_base",
                         fix = {
                             disable_in_ui = false,

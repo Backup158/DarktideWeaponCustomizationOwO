@@ -4,7 +4,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- DATA
 -- ###################################################################
 -- Prints a message to the console log containing the current version number
-mod.version = "4.7.0"
+mod.version = "4.8.0"
 mod:info('v' .. mod.version .. mod:localize("mod_version_logging_message"))
 
 -- Discord mode
@@ -424,8 +424,8 @@ add_attachments_to_list_of_weapons(mod.owo_bayonet_flip(), all_ranged_weapons, "
 -- ----------------
 -- Muzzle
 -- ----------------
-add_attachments_to_list_of_weapons(mod.owo_suppressor(), ranged_muzzle_no_double, "muzzle")
-add_attachments_to_list_of_weapons(mod.owo_suppressor(), { "galvanic_rifle_p1_m1" }, "muzzle_2")
+add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_muzzle_01"), ranged_muzzle_no_double, "muzzle")
+add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_muzzle_01"), { "galvanic_rifle_p1_m1" }, "muzzle_2")
 --add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_sight_01"), {"ogryn_thumper_p1_m1"}, "muzzle")
 add_attachments_to_list_of_weapons(mod.owo_suppressor("muzzle", "ap_barrel_01"), {"ogryn_heavystubber_p2_m1"}, "muzzle")
 

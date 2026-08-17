@@ -1,3 +1,10 @@
+# 4.8.0 - 2026-08-idk
+## Added
+## Changed
+- Suppressors no longer have a damage type if it's not a muzzle
+## Fixed
+## Developer
+
 # 4.7.0 - 2026-08-16
 ## Added
 - Contemporary Barrels
