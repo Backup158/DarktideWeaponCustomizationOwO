@@ -65,7 +65,6 @@ info_if_debug("OwO List of Slim Blades that need to be flipped: "..mod.combined_
 -- --------------------------------
 -- Suppressors
 -- --------------------------------
-mod.all_owo_suppressor = create_requirements_string_from_names_table(mod.all_owo_suppressor)
 info_if_debug("OwO All Suppressors: "..mod.all_owo_suppressor)
 
 -- --------------------------------

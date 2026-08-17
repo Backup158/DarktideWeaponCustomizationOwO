@@ -395,7 +395,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- sending to global table
     if all_suppressor_names then
-        mod.all_owo_suppressor = all_suppressor_names
+        mod.all_owo_suppressor = mod.create_requirements_string_from_names_table(all_suppressor_names)
     end
    
     return table_to_return
