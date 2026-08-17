@@ -243,7 +243,7 @@ local suppressor_localizations = {
 local suppressor_suffixes = {
 	slot_name = {"muzzle", "barrel_foreskin" },
 	size_variant = {
-		["_slim"] = {
+		["slim"] = {
 			en = "(Slim)"
 		} 
 	},
