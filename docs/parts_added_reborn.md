@@ -7,21 +7,47 @@
 # ***Notices youw pawts*** (Parts I added)
 In the customization menu, parts will be in sections named `Ostracized without Objection (OwO)` or `OwO - <some_name>`
 
-> **Part**: Weapons available
+> **Part**
+- *Weapons*: Weapons available
 > 
-> &emsp; Description
+> - Description
 
 # Ranged
 ## Special/Flashlight
-- All flashlights come with color variants
-- **Colored Default Flashlights**: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers  \
+All flashlights come with color and beam power variants. Each combination is its own category, which each of the following types of flashlight included.
 
+- Colors (9):
+    - Green
+    - Red
+    - Blue
+    - Magenta
+    - Cyan
+    - Yellow
+    - Pink
+    - Andy
+    - Leyley
+- Beam Strengths (4):
+    - Narrow
+    - Narrow (Cool) - This reduces the color temperature, slightly shifting it
+    - Weak
+    - Default
+
+![Flashlight colors. Yellow then Cyan on top, then Pink on the bottom.](/assets/images/owo_rebuild_flashlight.png)
 > [!TIP]
 > 
 > There's... a lot of these...
+> There are 4 * 9 = 36 combinations of Color and Beam Strength. So that's how many categories thare are in the menu.
+> Each category holds each flashlight model
+> That's rough
 
-- **MP5 Flashlights**: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers  \
-&emsp; Sits on top of the sight rail
+### **Colored Default Flashlights**
+- *Weapons*: All ranged weapons
+- Each model of flashlight (5) for each of the color and beam types, plus one model that's supposed to be invisible
+- That means theres 36 * (5 + 1) = 216 of these flashlights! Scrolling through the menu is horrible. I am not sorry.
+
+### **MP5 Flashlights**
+- *Weapons*: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers
+- Sits on top of the sight rail
 > [!WARNING]
 > 
 > Nonfunctional
@@ -29,16 +55,20 @@ In the customization menu, parts will be in sections named `Ostracized without O
 > [!TIP]
 > 
 > Don't use with sights lol
-- **Tactical Flashlights**: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers  \
-&emsp; Big flashlight (like a handheld)
+> Since it sits on the sight rail, it'll block your view
+
+### **Tactical Flashlights**
+- *Weapons*: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers
+- Big flashlight (like a handheld) but on the gun
 > [!WARNING]
 > 
 > Nonfunctional
 
 ## Bayonet
-- **AK Style Helbore Bayonets**: uhhh like all the ranged weapons xd  \
-&emsp; The slashing Helbore bayonets but flipped upside down  \
-&emsp; Mimicking the style of Soviet Type 1 and Type 2 AKM Bayonets
+### **AK Style Helbore Bayonets**
+- *Weapons*: All ranged weapons
+- The slashing Helbore bayonets but flipped upside down
+- Mimicking the style of Soviet Type 1 and Type 2 AKM Bayonets
 > [!WARNING]
 > 
 > Not aligned for all weapons
@@ -46,8 +76,8 @@ In the customization menu, parts will be in sections named `Ostracized without O
 ![Autogun with AK Bayonet and AK Barrel](/assets/images/owo_rebuild_ak_barrel.png)
 
 ## Underbarrel Weapon
-### Veteran Guardsman Laspistol Wargear
-- Laspistols
+### **Veteran Guardsman Laspistol Wargear**
+- *Weapons*: Heavy Laspistols
 - Underbarrel Plasma Pistols (32) and Bolt Pistols (2)
   - Plasma Pistols have a variant for various combinations of receivers (4) and barrels (8)
   - Bolt Pistols have a variant for each magazine
@@ -58,69 +88,77 @@ In the customization menu, parts will be in sections named `Ostracized without O
 ![10th Edition Rulebook](/assets/images/10e_veteran_guardsman.jpg)
 
 ## Muzzle
-- **Suppressors**: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers  \
-&emsp; Comes in normal and slim variants  \
-&emsp; &emsp; Double Suppressor (2)  \
-&emsp; &emsp; PBS-1  \
-&emsp; &emsp; Heavy Metal (2)
+### **Suppressors**
+- *Weapons*: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers
+- Comes in normal and slim variants
+  - Double Suppressor (2)
+  - PBS-1
+  - Heavy Metal (2)
 > [!WARNING]
 > 
 > 1. Muzzle flash is at the base of the suppressor, not actual muzzle part. Trying to move that around seemed impossible
 > 2. PBS-1 has a muzzle in the middle that clips. It's a base to keep the muzzle flash, but hiding it has been oddly difficult to get working
 
 ## Barrel
-- **Contemporary Barrels**: Autoguns  \
-&emsp; **Kalashnikov Barrels**  \
-&emsp; &emsp; Shortened Braced Autogun Barrels  \
-&emsp; &emsp; They come in Short (Rocks Glass) and Shorter (Shot Glass)  \
+### **Contemporary Barrels**
+- *Weapons*: Autoguns
+- **Kalashnikov Barrels**
+  - Shortened Braced Autogun Barrels
+  - They come in Short (Rocks Glass) and Shorter (Shot Glass)
 
 ![Autogun with AK Bayonet and AK Barrel](/assets/images/owo_rebuild_ak_barrel.png)
 
 ## Stock
-- **Tactical Stocks**: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/--- Lasguns  \
-&emsp; Comes in normal and slim variants  \
-&emsp; &emsp; Skeletal Stock  \
-&emsp; &emsp; Naturally folded stocks  \
-&emsp; &emsp; &emsp; Left (2)  \
-&emsp; &emsp; &emsp; Wire stock folded under
+### **Tactical Stocks**
+- *Weapons*: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/--- Lasguns
+- Comes in normal and slim variants
+  - Skeletal Stock
+  - Naturally folded stocks
+    - Left (2)
+    - Wire stock folded under
 > [!WARNING]
 > 
 > Do not use with Helbores yet
 
 ## Magazine
-- **Magazines**: Infantry/Braced/Vigilant Autoguns,  \
-&emsp; AK Extended Mag
+### **Magazines**
+- *Weapons*: Infantry/Braced/Vigilant Autoguns,
+- AK Extended Mag
 > [!WARNING]
 > 
 > Nonfunctional
 
 ## Sight
-- **Iron Sights**: Infantry/Braced/Vigilant Autoguns,  \
-&emsp; AK Irons
+### **Iron Sights**
+- *Weapons*: Infantry/Braced/Vigilant Autoguns,
+- AK Irons
 > [!WARNING]
 > 
 > Works but alignment can decide to not work
 
 # Melee
 ## Blade/Body
-- **Slim Blades**: Power Swords, Power Falchions, Mechanicus Power Swords, Relic Blades, Blaze Force Swords, Blaze Force Greatsword, "Devil's Claw" Sword, Heavy Sword, Dueling Sword  \
-&emsp; Comes in Flat and Slim, each with Grip variants  \
-&emsp; &emsp; Flat: Blade's cutting edge is slimmed down  \
-&emsp; &emsp; Slim: Blade is less wide and its cutting edge is slimmed down  \
-&emsp; &emsp; Grip Variant: Also shrinks the grip  \
+### **Slim Blades**
+- *Weapons*: Power Swords, Power Falchions, Mechanicus Power Swords, Relic Blades, Blaze Force Swords, Blaze Force Greatsword, "Devil's Claw" Sword, Heavy Sword, Dueling Sword
+- Comes in Flat and Slim, each with Grip variants
+  - Flat: Blade's cutting edge is slimmed down
+  - Slim: Blade is less wide and its cutting edge is slimmed down
+  - Grip Variant: Also shrinks the grip
 ![Slim Blade on Power Sword](/assets/images/owo_slim_blade_psword.png)
 
 > [!WARNING]
 > 
 > Some of them are just flipped backwards. Despite a few months of effort, they aren't cooperating. Therefore they are unholy (tbh it probably just means I need to remake them).
 
-- **Chainsword Blades**: Assault Chainswords, Heavy Eviscerators  \
-&emsp; Allows each weapon to use the other's body/chain  \
+### **Chainsword Blades**
+- *Weapons*: Assault Chainswords, Heavy Eviscerators
+- Allows each weapon to use the other's body/chain
 ![Eviscerator on Chainsword](/assets/images/owo_rebuild_chainsword_blade.png)
 
 ## Rear Head
-- **Rear Spike**: Combat Axes, Tactical Axes  \
-&emsp; Puts a spike on the back
+### **Rear Spike**
+- *Weapons*: Combat Axes, Tactical Axes
+- Puts a spike on the back
 > [!WARNING]
 > 
 > Nonfunctional
