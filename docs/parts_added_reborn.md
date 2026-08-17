@@ -89,9 +89,9 @@ All flashlights come with color and beam power variants. Each combination is its
 ## Muzzle
 ### **Suppressors**
 - *Weapons*: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers
-- Comes in normal and slim variants
+- Comes in normal and slim variants. The categories are made based on these main types.
   - Double Suppressor (2)
-  - PBS-1
+  - PBS-1 (2): The second variant is the same as the first, but it doesn't hide the base muzzle used for positioning
   - Heavy Metal (2)
 > [!WARNING]
 > 
