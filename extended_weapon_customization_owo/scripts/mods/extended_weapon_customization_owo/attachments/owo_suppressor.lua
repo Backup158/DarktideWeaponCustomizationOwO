@@ -69,8 +69,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         local given_selection_group 
         local given_damage_type 
         local meshes_to_hide = {
-            -- NOT: 1 (crash)
-            -- NOT: 2 (doesn't change anything)
+            -- uhh it's probably one of these
             mesh = {1,2,3,4,5},
         }
         if type(custom_attachment_overwrites) == "table" then
