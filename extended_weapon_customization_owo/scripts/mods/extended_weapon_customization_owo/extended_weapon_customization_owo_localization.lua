@@ -16,7 +16,8 @@ local string_regex_sub = string.gsub
 -- ################################
 -- Helper functions for localization
 -- ################################
-local function append_to_localization(localizations_table, string_to_append)
+-- I don't use this anymore
+local function append_string_to_localization_english_only(localizations_table, string_to_append)
 	if not type(string_to_append) == "string" then
 		mod:error("Trying to append nonstring! I can't tell you where though hehe")
 		return
@@ -27,6 +28,42 @@ local function append_to_localization(localizations_table, string_to_append)
 	end
 	local new_local = table_clone(localizations_table)
 	new_local.en = new_local.en.." "..string_to_append
+	return new_local
+end
+
+-- #################
+-- Append Suffix to Localizations
+-- Takes two tables of localizations
+-- Then it puts them together
+-- 	ex: first table is { en = "fried", ru = "Сука"} and second table is { en = "chicken", ru = "Блять"}
+-- 	This will return a new table { en = "fried chicken", ru = "Сука Блять"}
+--  Note the added space
+-- #################
+local function append_suffix_table_to_localization(localizations_table, second_localizations_table)
+	if not type(second_localizations_table) == "table" then
+		mod:error("Trying to append nontable! I can't tell you where though hehe")
+		return
+	end
+	if not type(localizations_table) == "table" then
+		mod:error("Localization table is not a table! There was the second table at least")
+		return
+	end
+	local new_local = table_clone(localizations_table)
+	for language, suffix in pairs(second_localizations_table) do
+		-- Safety checks for appending non string
+		if type(suffix) == "string" then
+			-- Safety check for if there's no actual language in the first table
+			-- Not erroring so I can continue with the others
+			-- At least it'll be logged
+			if not new_local[language] then
+				mod:info("First localization table does not have language: "..language.."; "..suffix)
+			else
+				new_local[language] = new_local[language].." "..suffix
+			end
+		else
+			mod:info("Failed localization append. Suffix is not string for: "..language)
+		end
+	end
 	return new_local
 end
 
@@ -192,13 +229,30 @@ local suppressor_localizations = {
 		en = "Wrapped Suppressor 01"
 	},
 } 
+local suppressor_suffixes = {
+	slot_name = {"muzzle", "barrel_foreskin" },
+	size_variant = {
+		["_slim"] = {
+			en = "(Slim)"
+		} 
+	},
+}
 for attachment_name, localizations in pairs(suppressor_localizations) do
-	mod:add_global_localize_strings({
-		["loc_"..attachment_name] = localizations,
-	})
-	mod:add_global_localize_strings({
-		["loc_"..attachment_name.."_slim"] = append_to_localization(localizations, "(Slim)"),
-	})
+	-- The slot names are only for technical reasons
+	-- ex. labelling a suppressor as a muzzle or barrel_foreskin
+	-- These will use the same name as the "generic" localization
+	for i = 1, #suppressor_suffixes.slot_name do
+		local current_slot = suppressor_suffixes.slot_name[i]
+		local attachment_name = attachment_name.."_"..current_slot
+		mod:add_global_localize_strings({
+			["loc_"..attachment_name] = localizations,
+		})
+		for suffix, second_localizations in pairs(suppressor_suffixes.size_variant) do
+			mod:add_global_localize_strings({
+				["loc_"..attachment_name.."_"..suffix] = append_suffix_table_to_localization(localizations, second_localizations),
+			})
+		end
+	end
 end
 -- ---------------
 -- Tactical Stocks

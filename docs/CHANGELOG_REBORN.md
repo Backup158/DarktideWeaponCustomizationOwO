@@ -2,6 +2,10 @@
 ## Added
 - Suppressors
     - PBS-1 now has a variant with the base muzzle visible
+- Updated localization helper to support localization instead of only English
+    - ...yeah
+    - that's pretty embarassing
+    - Though it's not like I expect anyone to translate this monster lol
 ## Changed
 - Suppressors no longer have a damage type if it's not a muzzle
 - Suppressors are actually categorized by regular vs slim
