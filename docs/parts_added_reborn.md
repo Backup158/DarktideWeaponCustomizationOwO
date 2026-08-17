@@ -1,6 +1,6 @@
 [![NexusScreens](https://img.shields.io/badge/Screenshots_on_Nexus_Mods-gray?logo=nexusmods)](https://www.nexusmods.com/warhammer40kdarktide/mods/429?tab=images "Mod page hosted on Nexus Mods")
 [![RepoDirect](https://img.shields.io/badge/Repository-86d37a?logo=refinedgithub&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO "OwO Repository README")
-[![RepoPages](https://img.shields.io/badge/Repository_Introduction_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](/DarktideWeaponCustomizationOwO/ "OwO Repository README on GitHub Pages")
+[![RepoPages](https://img.shields.io/badge/Repository_Introduction_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](./DarktideWeaponCustomizationOwO/ "OwO Repository README on GitHub Pages")
 [![ThisPageDirect](https://img.shields.io/badge/This_Page_(Direct)-e8d4b6?logo=github&logoColor=86d37a&labelColor=gray&color=e8d4b6)](https://github.com/Backup158/DarktideWeaponCustomizationOwO/blob/main/docs/parts_added_reborn.md "Parts added page when displayed directly on the repository.")
 [![ThisPagePages](https://img.shields.io/badge/This_Page_(Pages)-e8d4b6?logo=github&logoColor=e18bbc&labelColor=gray&color=e8d4b6)](https://backup158.github.io/DarktideWeaponCustomizationOwO/parts_added_reborn.html "Parts added page when displayed on GitHub Pages")
 
@@ -31,7 +31,7 @@ All flashlights come with color and beam power variants. Each combination is its
     - Weak
     - Default
 
-![Flashlight colors. Yellow then Cyan on top, then Pink on the bottom.](/assets/images/owo_rebuild_flashlight.png)
+![Flashlight colors. Yellow then Cyan on top, then Pink on the bottom.](./assets/images/owo_rebuild_flashlight.png)
 > [!TIP]
 > 
 > There's... a lot of these...
@@ -72,7 +72,7 @@ All flashlights come with color and beam power variants. Each combination is its
 > 
 > Not aligned for all weapons
 
-![Autogun with AK Bayonet and AK Barrel](/assets/images/owo_rebuild_ak_barrel.png)
+![Autogun with AK Bayonet and AK Barrel](./assets/images/owo_rebuild_ak_barrel.png)
 
 ## Underbarrel Weapon
 ### **Veteran Guardsman Laspistol Wargear**
@@ -82,9 +82,9 @@ All flashlights come with color and beam power variants. Each combination is its
   - Bolt Pistols have a variant for each magazine
 - Yes, you read that correctly lol. These are based on a misprint in one of the 10th edition rulebooks
 
-![Two Valhallan Veterans wielding laspistols equipped with a bolt pistol and plasma pistol underbarrel, respectively](/assets/images/owo_rebuild_veteran_guardsman_showcase.png)
+![Two Valhallan Veterans wielding laspistols equipped with a bolt pistol and plasma pistol underbarrel, respectively](./assets/images/owo_rebuild_veteran_guardsman_showcase.png)
 
-![10th Edition Rulebook](/assets/images/10e_veteran_guardsman.jpg)
+![10th Edition Rulebook](./assets/images/10e_veteran_guardsman.jpg)
 
 ## Muzzle
 ### **Suppressors**
@@ -105,7 +105,7 @@ All flashlights come with color and beam power variants. Each combination is its
   - Shortened Braced Autogun Barrels
   - They come in Short (Rocks Glass) and Shorter (Shot Glass)
 
-![Autogun with AK Bayonet and AK Barrel](/assets/images/owo_rebuild_ak_barrel.png)
+![Autogun with AK Bayonet and AK Barrel](./assets/images/owo_rebuild_ak_barrel.png)
 
 ## Stock
 ### **Tactical Stocks**
@@ -144,7 +144,7 @@ All flashlights come with color and beam power variants. Each combination is its
   - Slim: Blade is less wide and its cutting edge is slimmed down
   - Grip Variant: Also shrinks the grip
 
-![Slim Blade on Power Sword](/assets/images/owo_slim_blade_psword.png)
+![Slim Blade on Power Sword](./assets/images/owo_slim_blade_psword.png)
 
 > [!WARNING]
 > 
@@ -154,7 +154,7 @@ All flashlights come with color and beam power variants. Each combination is its
 - *Weapons*: Assault Chainswords, Heavy Eviscerators
 - Allows each weapon to use the other's body/chain
 
-![Eviscerator on Chainsword](/assets/images/owo_rebuild_chainsword_blade.png)
+![Eviscerator on Chainsword](./assets/images/owo_rebuild_chainsword_blade.png)
 
 ## Rear Head
 ### **Rear Spike**
