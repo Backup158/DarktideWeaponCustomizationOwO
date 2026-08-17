@@ -30,7 +30,7 @@ local all_recon_lasgun_receivers = mod.all_recon_lasgun_receivers
 
 local all_owo_sight_reticle_names = mod.all_owo_sight_reticle_names
 local all_holographic_sights_names = mod.all_holographic_sights_names
-local all_owo_suppressor_names = mod.all_owo_suppressor_names
+local all_owo_suppressor_names = mod.all_owo_suppressor_names.muzzle
 
 local syn_ma5_extensions = mod.syn_ma5_extensions
 local syn_ma5_compact_extensions = mod.syn_ma5_compact_extensions

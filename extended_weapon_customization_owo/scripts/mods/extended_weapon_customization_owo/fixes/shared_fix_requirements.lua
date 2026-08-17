@@ -65,7 +65,8 @@ info_if_debug("OwO List of Slim Blades that need to be flipped: "..mod.combined_
 -- --------------------------------
 -- Suppressors
 -- --------------------------------
-info_if_debug("OwO All Suppressors: "..mod.all_owo_suppressor_names)
+info_if_debug("OwO All Suppressors (Muzzle): "..mod.all_owo_suppressor_names.muzzle)
+info_if_debug("OwO All Suppressors (Barrel Foreskin): "..mod.all_owo_suppressor_names.barrel_foreskin)
 
 -- --------------------------------
 -- Holographic Sights

@@ -25,7 +25,7 @@ local short_arbites_barrels = "syn_assaultshotgun_barrel_01|syn_assaultshotgun_b
 local slightly_shorter_barrels = "shotgun_rifle_barrel_01|shotgun_rifle_barrel_07|shotgun_rifle_barrel_08|shotgun_rifle_barrel_09|shotgun_rifle_barrel_10"
 local long_barrels = "shotgun_rifle_barrel_04"
 
---local any_owo_suppressors = mod.all_owo_suppressor_names
+--local any_owo_suppressors = mod.all_owo_suppressor_names.muzzle
 
 local custom_fixes = {
     -- Tactical Stocks

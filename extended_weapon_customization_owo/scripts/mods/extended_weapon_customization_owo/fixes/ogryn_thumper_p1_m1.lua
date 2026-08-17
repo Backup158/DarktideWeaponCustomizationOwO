@@ -23,7 +23,7 @@ local create_requirements_string_from_names_table = mod.create_requirements_stri
 -- FIXES TO RETURN
 -- ###################################################################
 --dump_if_debug(mod.all_owo_suppressor_names, "SUPPRESSOR NAMES CALLED FROM THUMPER", 10)
---local all_suppressor_names = mod.all_owo_suppressor_names
+--local all_suppressor_names = mod.all_owo_suppressor_names.muzzle
 --local any_suppressor = create_requirements_string_from_names_table(all_suppressor_names)
 --info_if_debug(any_suppressor)
 

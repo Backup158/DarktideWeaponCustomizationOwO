@@ -55,6 +55,10 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     -- Create Single Suppressor
     -- ############
     local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwrites)
+        -- Because I'm reusing this for barrel_foreskin, there should be some basic
+        local name_only = name
+        local name = name.."_"..current_slot_name
+        
         local model_to_use = nil
         if type(model_table) == "table" then
             if not model_table.ac1 then
@@ -101,7 +105,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                         children = {},
                     },
                     ]]
-                    ["real_muzzle_base_"..current_slot_name] = {
+                    ["real_muzzle_base"] = {
                         item = model_table.base or _item_ranged.."/muzzles/owo_supp_base",
                         fix = {
                             disable_in_ui = false,
@@ -382,7 +386,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- sending to global table
     if all_suppressor_names then
-        mod.all_owo_suppressor_names = mod.create_requirements_string_from_names_table(all_suppressor_names)
+        mod.all_owo_suppressor_names = mod.all_owo_suppressor_names or {}
+        mod.all_owo_suppressor_names[current_slot_name] = mod.create_requirements_string_from_names_table(all_suppressor_names)
     end
    
     table.dump(table_to_return, "owo notices your suppressors table", 15)

@@ -7,6 +7,9 @@
 - Suppressors are actually categorized by regular vs slim
 - Suppressors no longer have the base mesh visible
 ## Fixed
+- I broke all the suppressors again last time lol
+    - All muzzle suppressors were taking the barrel shroud position
+    - Now I've properly separated them
 ## Developer
 - Refactored some global attachment names to be called by the attachment file itself instead of shared fixes. In the future this makes it easier to keep everything together instead of jumping between the file and the shared file, so adopting the same thing over time makes it more consistent.
 
