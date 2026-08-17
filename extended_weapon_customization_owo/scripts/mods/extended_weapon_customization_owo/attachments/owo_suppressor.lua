@@ -106,7 +106,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                         children = {},
                     },
                     ]]
-                    ["real_muzzle_base"] = {
+                    ["real_muzzle_base_"..current_slot_name] = {
                         item = model_table.base or _item_ranged.."/muzzles/owo_supp_base",
                         fix = {
                             disable_in_ui = false,
