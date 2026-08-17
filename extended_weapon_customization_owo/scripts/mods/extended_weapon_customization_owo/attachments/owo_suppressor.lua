@@ -54,7 +54,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     -- ############
     -- Create Single Suppressor
     -- ############
-    local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwites)
+    local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwrites)
         local model_to_use = nil
         if type(model_table) == "table" then
             if not model_table.ac1 then
@@ -73,10 +73,10 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             -- NOT: 2 (doesn't change anything)
             mesh = {1,2,3,4,5},
         }
-        if type(custom_attachment_overwites) == "table" then
-            given_selection_group = custom_attachment_overwites.custom_selection
-            given_damage_type = custom_attachment_overwites.damage_type or "owo_suppressed_autogun_bullet"
-            if custom_attachment_overwites.do_not_hide_base_mesh then
+        if type(custom_attachment_overwrites) == "table" then
+            given_selection_group = custom_attachment_overwrites.custom_selection
+            given_damage_type = custom_attachment_overwrites.damage_type or "owo_suppressed_autogun_bullet"
+            if custom_attachment_overwrites.do_not_hide_base_mesh then
                 meshes_to_hide = nil
             end
         end
@@ -153,7 +153,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     -- ############
     -- Create Normal and Slim Suppressor
     -- ############
-    local function create_suppressor_and_slim(name, model_table, transformations_table, custom_attachment_overwites)
+    local function create_suppressor_and_slim(name, model_table, transformations_table, custom_attachment_overwrites)
         local table_to_send = {
             icon_rot = render_unit_rot_profile_left,
             icon_pos = render_cam_pos_profile_left,
@@ -168,14 +168,14 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             ac1_sca = transformations_table.ac1_sca,
             ac2_sca = transformations_table.ac2_sca,
         }
-        create_suppressor(name, model_table, table_to_send, custom_attachment_overwites)
+        create_suppressor(name, model_table, table_to_send, custom_attachment_overwrites)
 
         -- destructively changes table, which is ok since we won't be needing it again
         table_to_send.ac_sca = transformations_table.ac_sca_slim
         table_to_send.ac1_sca = transformations_table.ac1_sca_slim
         table_to_send.ac2_sca = transformations_table.ac2_sca_slim
         table_to_send.custom_selection = "owo_suppressor_slim"
-        create_suppressor(name.."_slim", model_table, table_to_send, custom_attachment_overwites)
+        create_suppressor(name.."_slim", model_table, table_to_send, custom_attachment_overwrites)
     end
 
     -- --------------------------------
