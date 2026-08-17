@@ -67,6 +67,17 @@ local function append_suffix_table_to_localization(localizations_table, second_l
 	return new_local
 end
 
+local function create_global_localization_from_table_then_append_suffixes(attachment_name, localizations, table_containing_suffixes)
+	mod:add_global_localize_strings({
+		["loc_"..attachment_name] = localizations,
+	})
+	for suffix, second_localizations in pairs(table_containing_suffixes) do
+		mod:add_global_localize_strings({
+			["loc_"..attachment_name.."_"..suffix] = append_suffix_table_to_localization(localizations, second_localizations),
+		})
+	end
+end
+
 -- ################################
 -- Localizations for the base mod to use
 -- ################################
@@ -202,11 +213,11 @@ mod:add_global_localize_strings({
 -- ---------------
 -- Suppressors
 -- ---------------
+local suppressor_slot_name_localization_table = {
+		en = "OwO - Suppressors"
+	}
 local suppressor_localizations = {
 	-- So i can cover the variants
-	ewc_owo_suppressor = {
-		en = "OwO - Suppressors"
-	},
 	owo_suppressor_01 = {
 		en = "Double Suppressor 01"
 	},
@@ -237,6 +248,8 @@ local suppressor_suffixes = {
 		} 
 	},
 }
+create_global_localization_from_table_then_append_suffixes("ewc_owo_suppressor", suppressor_slot_name_localization_table, suppressor_suffixes.size_variant)
+
 for attachment_name, localizations in pairs(suppressor_localizations) do
 	-- The slot names are only for technical reasons
 	-- ex. labelling a suppressor as a muzzle or barrel_foreskin
@@ -244,14 +257,8 @@ for attachment_name, localizations in pairs(suppressor_localizations) do
 	for i = 1, #suppressor_suffixes.slot_name do
 		local current_slot = suppressor_suffixes.slot_name[i]
 		local attachment_name = attachment_name.."_"..current_slot
-		mod:add_global_localize_strings({
-			["loc_"..attachment_name] = localizations,
-		})
-		for suffix, second_localizations in pairs(suppressor_suffixes.size_variant) do
-			mod:add_global_localize_strings({
-				["loc_"..attachment_name.."_"..suffix] = append_suffix_table_to_localization(localizations, second_localizations),
-			})
-		end
+
+		create_global_localization_from_table_then_append_suffixes(attachment_name, localizations, suppressor_suffixes.size_variant)
 	end
 end
 -- ---------------
