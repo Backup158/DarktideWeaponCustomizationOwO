@@ -47,7 +47,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- Logging all names
     local all_suppressor_names = nil
-    if not mod.all_owo_suppressor_names then
+    mod.all_owo_suppressor_names = mod.all_owo_suppressor_names or {}
+    if not mod.all_owo_suppressor_names[current_slot_name] then
         all_suppressor_names = {}
     end
 
