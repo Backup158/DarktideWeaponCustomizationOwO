@@ -385,6 +385,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         mod.all_owo_suppressor = mod.create_requirements_string_from_names_table(all_suppressor_names)
     end
    
+    table.dump(table_to_return, "owo notices your suppressors table", 15)
     return table_to_return
 
 end
