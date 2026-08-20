@@ -75,7 +75,10 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         }
         if type(custom_attachment_overrides) == "table" then
             given_selection_group = custom_attachment_overrides.custom_selection
-            given_damage_type = custom_attachment_overrides.damage_type
+            given_damage_type = custom_attachment_overrides.damage_type or "owo_suppressed_autogun_bullet"
+            if custom_attachment_overrides.do_not_hide_base_mesh then
+                meshes_to_hide = nil
+            end
         else
             -- This needs to be set somewhere
             given_damage_type = "owo_suppressed_autogun_bullet"
@@ -84,10 +87,6 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         -- Removes damage type if it's not a muzzle weapon, regardless of the above
         if not (current_slot_name == "muzzle") or (current_slot_name == "muzzle_2") then
             given_damage_type = nil
-            given_damage_type = custom_attachment_overrides.damage_type or "owo_suppressed_autogun_bullet"
-            if custom_attachment_overrides.do_not_hide_base_mesh then
-                meshes_to_hide = nil
-            end
         end    
 
         create_an_attachment(table_to_return, name,
@@ -154,28 +153,20 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             table_insert(all_owo_suppressor_names, name)
         end
     end
-    local function create_suppressor_and_slim(name, model_table, transformations_table)
-        local table_to_send = {
-            icon_rot = render_unit_rot_profile_left,
-            icon_pos = render_cam_pos_profile_left,
-            pos = transformations_table.pos,
-            ac_pos = transformations_table.ac_pos,
-            ac1_pos = transformations_table.ac1_pos,
-            ac2_pos = transformations_table.ac2_pos,
-            ac_rot = transformations_table.ac_rot,
-            ac1_rot = transformations_table.ac1_rot,
-            ac2_rot = transformations_table.ac2_rot,
-            ac_sca = transformations_table.ac_sca,
-            ac1_sca = transformations_table.ac1_sca,
-            ac2_sca = transformations_table.ac2_sca,
-        }
-        create_suppressor(name, model_table, table_to_send)
+    -- ############
+    -- Create Normal and Slim Suppressor
+    -- ############
+    local function create_suppressor_and_slim(name, model_table, transformations_table, custom_attachment_overrides)
+        create_suppressor(name, model_table, transformations_table, custom_attachment_overrides)
 
         -- destructively changes table, which is ok since we won't be needing it again
-        table_to_send.ac_sca = transformations_table.ac_sca_slim
-        table_to_send.ac1_sca = transformations_table.ac1_sca_slim
-        table_to_send.ac2_sca = transformations_table.ac2_sca_slim
-        create_suppressor(name.."_slim", model_table, table_to_send, "owo_suppressor_slim")
+        transformations_table.ac_sca = transformations_table.ac_sca_slim
+        transformations_table.ac1_sca = transformations_table.ac1_sca_slim
+        transformations_table.ac2_sca = transformations_table.ac2_sca_slim
+
+        custom_attachment_overrides = custom_attachment_overrides or {}
+        custom_attachment_overrides.custom_selection = "owo_suppressor_slim"
+        create_suppressor(name.."_slim", model_table, transformations_table, custom_attachment_overrides)
     end
 
     -- --------------------------------
@@ -252,6 +243,27 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             ac2_rot = suppressor_pbs1_ac2_rot,
             ac2_sca = suppressor_pbs1_ac2_sca,
             ac2_sca_slim = suppressor_pbs1_ac2_sca_slim,
+        }
+    )
+    --  One PBS-1 that doesn't hide the base
+    create_suppressor_and_slim("owo_suppressor_03_visible_base", 
+        {   ac1 = _item_ranged.."/muzzles/pbs_ac1",
+            ac2 = _item_ranged.."/muzzles/pbs_ac2",
+        }, 
+        {
+            icon_rot = render_unit_rot_profile_left,
+            icon_pos = render_cam_pos_profile_left,
+            ac1_pos = suppressor_pbs1_ac1_pos,
+            ac1_rot = suppressor_pbs1_ac1_rot,
+            ac1_sca = suppressor_pbs1_ac1_sca,
+            ac1_sca_slim = suppressor_pbs1_ac1_sca_slim,
+            ac2_pos = suppressor_pbs1_ac2_pos,
+            ac2_rot = suppressor_pbs1_ac2_rot,
+            ac2_sca = suppressor_pbs1_ac2_sca,
+            ac2_sca_slim = suppressor_pbs1_ac2_sca_slim,
+        },
+        {
+            do_not_hide_base_mesh = true,
         }
     )
     -- Big Metal Suppressor
