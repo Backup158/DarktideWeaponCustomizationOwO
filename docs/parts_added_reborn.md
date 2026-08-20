@@ -25,6 +25,7 @@ All flashlights come with color and beam power variants. Each combination is its
     - Pink
     - Andy
     - Leyley
+    - Custom - This is set in the Mod Options (Requires DMF v26.08.19+)
 - Beam Strengths (4):
     - Narrow
     - Narrow (Cool) - This reduces the color temperature, slightly shifting it
@@ -35,14 +36,14 @@ All flashlights come with color and beam power variants. Each combination is its
 > [!TIP]
 > 
 > There's... a lot of these...
-> There are 4 * 9 = 36 combinations of Color and Beam Strength. So that's how many categories thare are in the menu.
-> Each category holds each flashlight model
+> There are 4 * 10 = 40 combinations of Color and Beam Strength. So that's how many categories thare are in the menu.
+> And then each category holds each flashlight model
 > That's rough
 
 ### **Colored Default Flashlights**
 - *Weapons*: All ranged weapons
 - Each model of flashlight (5) for each of the color and beam types, plus one model that's supposed to be invisible
-- That means theres 36 * (5 + 1) = 216 of these flashlights! Scrolling through the menu is horrible. I am not sorry.
+- That means theres 40 * (5 + 1) = 240 of these flashlights! Scrolling through the menu is horrible. I am not sorry.
 
 ### **MP5 Flashlights**
 - *Weapons*: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers
