@@ -47,19 +47,11 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- Logging all names
     local all_suppressor_names = nil
-    mod.all_owo_suppressor_names = mod.all_owo_suppressor_names or {}
-    if not mod.all_owo_suppressor_names[current_slot_name] then
+    if not mod.all_suppressor_names then
         all_suppressor_names = {}
     end
 
-    -- ############
-    -- Create Single Suppressor
-    -- ############
-    local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwrites)
-        -- Because I'm reusing this for barrel_foreskin, there should be some basic
-        --local name_only = name
-        --local name = name.."_"..current_slot_name
-        
+    local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwites)
         local model_to_use = nil
         if type(model_table) == "table" then
             if not model_table.ac1 then
@@ -73,30 +65,16 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         end
         local given_selection_group 
         local given_damage_type 
-        local meshes_to_hide = {
-            -- uhh it's probably one of these
-            mesh = {1,2,3,4,5},
-        }
-        if type(custom_attachment_overwrites) == "table" then
-            given_selection_group = custom_attachment_overwrites.custom_selection
-            given_damage_type = custom_attachment_overwrites.damage_type or "owo_suppressed_autogun_bullet"
-            if custom_attachment_overwrites.do_not_hide_base_mesh then
-                meshes_to_hide = nil
-            end
-        else
-            -- This needs to be set somewhere
-            given_damage_type = "owo_suppressed_autogun_bullet"
+        if type(custom_attachment_overwites) == "table" then
+            given_selection_group = custom_attachment_overwites.custom_selection
+            given_damage_type = custom_attachment_overwites.damage_type
         end
-        -- Removes damage type if it's not a muzzle weapon, regardless of the above
-        if not (current_slot_name == "muzzle") or (current_slot_name == "muzzle_2") then
-            given_damage_type = nil
-        end    
 
         create_an_attachment(table_to_return, name,
-            {   replacement_path = _item_ranged.."/"..current_slot_name.."s/"..name,
+            {   replacement_path = _item_ranged.."/muzzles/"..name,
                 icon_render_unit_rotation_offset = transformations_table.icon_rot,
                 icon_render_camera_position_offset = transformations_table.icon_pos,
-                damage_type = given_damage_type,
+                damage_type = given_damage_type or "owo_suppressed_autogun_bullet",
                 custom_selection_group = given_selection_group or "owo_suppressor",
                 randomization_requirement = "mod_option_suppressor_randomization",
             },
@@ -109,8 +87,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                         children = {},
                     },
                     ]]
-                    --real_muzzle_base = {
-                    ["real_base_"..current_slot_name] = {
+                    base = {
                         item = model_table.base or _item_ranged.."/muzzles/owo_supp_base",
                         fix = {
                             disable_in_ui = false,
@@ -120,10 +97,15 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                                 rotation = vector3_box(0, 0, 0),
                                 scale = vector3_box(1, 1, 1),
                             },
-                            hide = meshes_to_hide,
+                            --[[
+                            hide = {
+                                -- NOT: 1 (crash)
+                                -- NOT: 2 (doesn't change anything)
+                                mesh = {2},
+                            },]]
                         },
                         children = {
-                            [current_slot_name.."_ac1"] = {
+                            muzzle_ac1 = {
                                 item = model_to_use or model_table.ac1,
                                 fix = {
                                     offset = {
@@ -134,7 +116,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                                     },
                                 },
                             },
-                            [current_slot_name.."ac2"] = {
+                            muzzle_ac2 = {
                                 item = model_to_use or model_table.ac2,
                                 fix = {
                                     offset = {
@@ -157,21 +139,28 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             table_insert(all_suppressor_names, name)
         end
     end
-
-    -- ############
-    -- Create Normal and Slim Suppressor
-    -- ############
-    local function create_suppressor_and_slim(name, model_table, transformations_table, custom_attachment_overwrites)
-        create_suppressor(name, model_table, transformations_table, custom_attachment_overwrites)
+    local function create_suppressor_and_slim(name, model_table, transformations_table)
+        local table_to_send = {
+            icon_rot = render_unit_rot_profile_left,
+            icon_pos = render_cam_pos_profile_left,
+            pos = transformations_table.pos,
+            ac_pos = transformations_table.ac_pos,
+            ac1_pos = transformations_table.ac1_pos,
+            ac2_pos = transformations_table.ac2_pos,
+            ac_rot = transformations_table.ac_rot,
+            ac1_rot = transformations_table.ac1_rot,
+            ac2_rot = transformations_table.ac2_rot,
+            ac_sca = transformations_table.ac_sca,
+            ac1_sca = transformations_table.ac1_sca,
+            ac2_sca = transformations_table.ac2_sca,
+        }
+        create_suppressor(name, model_table, table_to_send)
 
         -- destructively changes table, which is ok since we won't be needing it again
-        transformations_table.ac_sca = transformations_table.ac_sca_slim
-        transformations_table.ac1_sca = transformations_table.ac1_sca_slim
-        transformations_table.ac2_sca = transformations_table.ac2_sca_slim
-
-        custom_attachment_overwrites = custom_attachment_overwrites or {}
-        custom_attachment_overwrites.custom_selection = "owo_suppressor_slim"
-        create_suppressor(name.."_slim", model_table, transformations_table, custom_attachment_overwrites)
+        table_to_send.ac_sca = transformations_table.ac_sca_slim
+        table_to_send.ac1_sca = transformations_table.ac1_sca_slim
+        table_to_send.ac2_sca = transformations_table.ac2_sca_slim
+        create_suppressor(name.."_slim", model_table, table_to_send, "owo_suppressor_slim")
     end
 
     -- --------------------------------
@@ -250,29 +239,6 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             ac2_sca_slim = suppressor_pbs1_ac2_sca_slim,
         }
     )
-    --  One PBS-1 that doesn't hide the base
-    create_suppressor_and_slim("owo_suppressor_03_visible_base", 
-        {   ac1 = _item_ranged.."/muzzles/pbs_ac1",
-            ac2 = _item_ranged.."/muzzles/pbs_ac2",
-        }, 
-        {
-            icon_rot = render_unit_rot_profile_left,
-            icon_pos = render_cam_pos_profile_left,
-            ac1_pos = suppressor_pbs1_ac1_pos,
-            ac1_rot = suppressor_pbs1_ac1_rot,
-            ac1_sca = suppressor_pbs1_ac1_sca,
-            ac1_sca_slim = suppressor_pbs1_ac1_sca_slim,
-            ac2_pos = suppressor_pbs1_ac2_pos,
-            ac2_rot = suppressor_pbs1_ac2_rot,
-            ac2_sca = suppressor_pbs1_ac2_sca,
-            ac2_sca_slim = suppressor_pbs1_ac2_sca_slim,
-        },
-        {
-            do_not_hide_base_mesh = true,
-        }
-    )
-
-
     -- Big Metal Suppressor
     local suppressor_metal_ac1_pos = vector3_box(0, 0.13, 0)
     local suppressor_metal_ac1_rot = vector3_box(-90, 0, 0)
@@ -391,9 +357,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- sending to global table
     if all_suppressor_names then
-        mod.all_owo_suppressor_names = mod.all_owo_suppressor_names or {}
-        mod.all_owo_suppressor_names[current_slot_name] = mod.create_requirements_string_from_names_table(all_suppressor_names)
-        table.dump(table_to_return, "owo notices your suppressors table", 15)
+        mod.all_suppressor_names = all_suppressor_names
     end
    
     return table_to_return
