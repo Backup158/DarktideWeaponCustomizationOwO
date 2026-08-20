@@ -55,7 +55,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     -- ############
     -- Create Single Suppressor
     -- ############
-    local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwites)
+    local function create_suppressor(name, model_table, transformations_table, custom_attachment_overrides)
         local model_to_use = nil
         if type(model_table) == "table" then
             if not model_table.ac1 then
@@ -69,9 +69,13 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         end
         local given_selection_group 
         local given_damage_type 
-        if type(custom_attachment_overwites) == "table" then
-            given_selection_group = custom_attachment_overwites.custom_selection
-            given_damage_type = custom_attachment_overwites.damage_type
+        local meshes_to_hide = {
+            -- uhh it's probably one of these
+            mesh = {1,2,3,4,5},
+        }
+        if type(custom_attachment_overrides) == "table" then
+            given_selection_group = custom_attachment_overrides.custom_selection
+            given_damage_type = custom_attachment_overrides.damage_type
         else
             -- This needs to be set somewhere
             given_damage_type = "owo_suppressed_autogun_bullet"
@@ -80,6 +84,10 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         -- Removes damage type if it's not a muzzle weapon, regardless of the above
         if not (current_slot_name == "muzzle") or (current_slot_name == "muzzle_2") then
             given_damage_type = nil
+            given_damage_type = custom_attachment_overrides.damage_type or "owo_suppressed_autogun_bullet"
+            if custom_attachment_overrides.do_not_hide_base_mesh then
+                meshes_to_hide = nil
+            end
         end    
 
         create_an_attachment(table_to_return, name,
@@ -109,12 +117,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                                 rotation = vector3_box(0, 0, 0),
                                 scale = vector3_box(1, 1, 1),
                             },
-                            --[[
-                            hide = {
-                                -- NOT: 1 (crash)
-                                -- NOT: 2 (doesn't change anything)
-                                mesh = {2},
-                            },]]
+                            hide = meshes_to_hide,
                         },
                         children = {
                             [current_slot_name.."_ac1"] = {
