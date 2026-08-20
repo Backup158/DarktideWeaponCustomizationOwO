@@ -65,9 +65,9 @@ info_if_debug("OwO List of Slim Blades that need to be flipped: "..mod.combined_
 -- --------------------------------
 -- Suppressors
 -- --------------------------------
-info_if_debug("OwO All Suppressors (Muzzle): "..mod.all_owo_suppressor_names.muzzle)
-info_if_debug("OwO All Suppressors (Barrel Foreskin): "..mod.all_owo_suppressor_names.barrel_foreskin)
-
+for slot_name, _ in pairs(mod.all_owo_suppressor_names) do
+    info_if_debug("OwO All Suppressors ("..slot_name.."): "..mod.all_owo_suppressor_names[slot_name])
+end
 -- --------------------------------
 -- Holographic Sights
 -- --------------------------------
