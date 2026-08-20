@@ -1,3 +1,12 @@
+# 4.9.0 - 2026-08-xxx
+## Added
+- Flashlights
+    - There is now a custom color that grabs from the mod options
+    - Requires the latest update for DMF
+## Changed
+## Fixed
+## Developer
+
 # 4.8.0 - 2026-08-17
 ## Added
 - Suppressors

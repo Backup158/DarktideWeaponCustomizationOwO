@@ -18,6 +18,16 @@ return {
                 type = "checkbox",
                 default_value = false,
             },
+            {   setting_id = "attachment_options",
+                type = "group",
+                sub_widgets = {
+                    {   setting_id = "mod_option_custom_flashlight_color",
+                        type = "color",
+                        default_value = {255, 167, 161, 255}, -- Defaulting to a bright lavender
+                        has_alpha = false,
+                    },
+                },
+            },
             {   setting_id = "group_randomization_options",
                 type = "group",
                 sub_widgets = {

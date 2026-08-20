@@ -24,6 +24,11 @@ mod.flashlight_colors = {
     leyley = vector3_box(convert_255_rgb_to_percent_decimal(223, 127, 190)),
     -- black = vector3_box(1, 1, 1), -- just becomes white
 }
+local custom_flashlight_color = mod:get("mod_option_custom_flashlight_color")
+if custom_flashlight_color then
+    -- mod:get returns {A R G B}
+    mod.flashlight_colors["custom"] = vector3_box(convert_255_rgb_to_percent_decimal(custom_flashlight_color[2], custom_flashlight_color[3], custom_flashlight_color[4]))
+end
 local flashlight_colors = mod.flashlight_colors
 
 mod.flashlight_intensities = {

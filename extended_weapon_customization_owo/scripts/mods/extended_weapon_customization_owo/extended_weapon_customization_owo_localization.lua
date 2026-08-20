@@ -348,6 +348,18 @@ local localizations = {
 		en = "You are using the MT Plugin, which is made for the OLD version of Weapon Customization! {#color(255, 35, 5)}IT NO LONGER WORKS{#reset()}, and is no longer required for OwO.",
 	},
 	-- ---------------
+	-- Attachment Settings
+	-- ---------------
+	attachment_options = {
+		en = "Attachment Details",
+	},
+	mod_option_custom_flashlight_color = {
+		en = "Custom Flashlight Color",
+	},
+	mod_option_custom_flashlight_color_description = {
+		en = "Sets the color for the \"Custom\" flashlight group. Exact color may look different in-game due to lighting differences. \n!!!\nDoes not take change until game restart!\n!!!",
+	},
+	-- ---------------
 	-- Randomization
 	-- ---------------
 	group_randomization_options = {
