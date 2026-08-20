@@ -5,6 +5,7 @@
     - Requires the latest update for DMF
 ## Changed
 ## Fixed
+- Unfornicated the suppressors
 ## Developer
 
 # 4.8.0 - 2026-08-17
