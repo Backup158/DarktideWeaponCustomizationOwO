@@ -47,10 +47,14 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- Logging all names
     local all_owo_suppressor_names = nil
-    if not mod.all_owo_suppressor_names then
+    mod.all_owo_suppressor_names = mod.all_owo_suppressor_names or {}
+    if not mod.all_owo_suppressor_names[current_slot_name] then
         all_owo_suppressor_names = {}
     end
 
+    -- ############
+    -- Create Single Suppressor
+    -- ############
     local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwites)
         local model_to_use = nil
         if type(model_table) == "table" then
@@ -68,13 +72,21 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         if type(custom_attachment_overwites) == "table" then
             given_selection_group = custom_attachment_overwites.custom_selection
             given_damage_type = custom_attachment_overwites.damage_type
+        else
+            -- This needs to be set somewhere
+            given_damage_type = "owo_suppressed_autogun_bullet"
         end
 
+        -- Removes damage type if it's not a muzzle weapon, regardless of the above
+        if not (current_slot_name == "muzzle") or (current_slot_name == "muzzle_2") then
+            given_damage_type = nil
+        end    
+
         create_an_attachment(table_to_return, name,
-            {   replacement_path = _item_ranged.."/muzzles/"..name,
+            {   replacement_path = _item_ranged.."/muzzles/"..name, -- DO NOT FUCK WITH THIS LINE!!!!!!!!!!
                 icon_render_unit_rotation_offset = transformations_table.icon_rot,
                 icon_render_camera_position_offset = transformations_table.icon_pos,
-                damage_type = given_damage_type or "owo_suppressed_autogun_bullet",
+                damage_type = given_damage_type,
                 custom_selection_group = given_selection_group or "owo_suppressor",
                 randomization_requirement = "mod_option_suppressor_randomization",
             },
@@ -357,7 +369,9 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
 
     -- sending to global table
     if all_owo_suppressor_names then
-        mod.all_owo_suppressor_names = all_owo_suppressor_names
+        mod.all_owo_suppressor_names = mod.all_owo_suppressor_names or {}
+        mod.all_owo_suppressor_names[current_slot_name] = mod.create_requirements_string_from_names_table(all_suppressor_names)
+        table.dump(table_to_return, "owo notices your suppressors table", 15)
     end
    
     return table_to_return
