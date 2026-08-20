@@ -1,18 +1,10 @@
-# 4.9.0 - 2026-08-xxx
-## Added
-- Flashlights
-    - There is now a custom color that grabs from the mod options
-    - Requires the latest update for DMF
-## Changed
-## Fixed
-- Unfornicated the suppressors
-- Invisible flashlight was trying to be a stock for some reason
-## Developer
-
-# 4.8.0 - 2026-08-17
+# 4.8.0 - 2026-08-xxx
 ## Added
 - Suppressors
     - PBS-1 now has a variant with the base muzzle visible
+- Flashlights
+    - There is now a custom color that grabs from the mod options
+    - Requires the latest update for DMF
 - Updated localization helper to support localization instead of only English
     - ...yeah
     - that's pretty embarassing
@@ -25,6 +17,7 @@
 - I broke all the suppressors again last time lol
     - All muzzle suppressors were taking the barrel shroud position
     - Now I've properly separated them
+- Invisible flashlight was trying to be a stock for some reason
 ## Developer
 - Refactored some global attachment names to be called by the attachment file itself instead of shared fixes. In the future this makes it easier to keep everything together instead of jumping between the file and the shared file, so adopting the same thing over time makes it more consistent.
 
