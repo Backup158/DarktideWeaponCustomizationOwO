@@ -58,7 +58,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwrites)
         -- Because I'm reusing this for barrel_foreskin, there should be some basic
         --local name_only = name
-        local name = name.."_"..current_slot_name
+        --local name = name.."_"..current_slot_name
         
         local model_to_use = nil
         if type(model_table) == "table" then
@@ -109,8 +109,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                         children = {},
                     },
                     ]]
-                    real_muzzle_base = {
-                    --["real_muzzle_base_"..current_slot_name] = {
+                    --real_muzzle_base = {
+                    ["real_base_"..current_slot_name] = {
                         item = model_table.base or _item_ranged.."/muzzles/owo_supp_base",
                         fix = {
                             disable_in_ui = false,
@@ -123,7 +123,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                             hide = meshes_to_hide,
                         },
                         children = {
-                            muzzle_ac1 = {
+                            [current_slot_name.."_ac1"] = {
                                 item = model_to_use or model_table.ac1,
                                 fix = {
                                     offset = {
@@ -134,7 +134,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
                                     },
                                 },
                             },
-                            muzzle_ac2 = {
+                            [current_slot_name.."ac2"] = {
                                 item = model_to_use or model_table.ac2,
                                 fix = {
                                     offset = {
