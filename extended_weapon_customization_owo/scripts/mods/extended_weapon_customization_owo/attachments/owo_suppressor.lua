@@ -9,6 +9,8 @@ local vector3_box = Vector3Box
 local type = type
 local table = table
 local table_insert = table.insert
+local string = string
+local string_find = string.find
 
 -- ################################
 -- Game Content Addresses
@@ -85,7 +87,7 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         end
 
         -- Removes damage type if it's not a muzzle weapon, regardless of the above
-        if not (current_slot_name == "muzzle") or (current_slot_name == "muzzle_2") then
+        if not string_find(current_slot_name, "muzzle") then
             given_damage_type = nil
         end    
 
