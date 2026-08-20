@@ -11,6 +11,7 @@
     - Though it's not like I expect anyone to translate this monster lol
 ## Changed
 - Suppressors no longer have a damage type if it's not a muzzle
+    - Now the barrel shrouds won't mess with you
 - Suppressors are actually categorized by regular vs slim
 - Suppressors no longer have the base mesh visible
 ## Fixed
