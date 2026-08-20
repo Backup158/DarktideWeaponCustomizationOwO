@@ -4,11 +4,13 @@
     "version": "4.8.0",
     "homepage": "https://www.nexusmods.com/warhammer40kdarktide/mods/429",
     "source": "https://github.com/Backup158/DarktideWeaponCustomizationOwO",
-    "description": "",
+    "description": "Extended Weapon Customization plugin adding various parts, typically inspired by historical and tacticool weapons.",
     "order": {
-        "require": ["extended_weapon_customization"],
-        "load_before": [],
-        "load_after": ["extended_weapon_customization", "extended_weapon_customization_base_additions"]
+        "require": [
+            ["extended_weapon_customization"]
+        ],
+        "load_after": ["extended_weapon_customization", "extended_weapon_customization_base_additions"],
+        "load_before": []
     },
     "localization": {}
 }
