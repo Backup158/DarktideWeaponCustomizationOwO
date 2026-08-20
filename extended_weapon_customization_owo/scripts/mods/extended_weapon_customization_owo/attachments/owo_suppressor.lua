@@ -46,9 +46,9 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     local table_to_return = mod.init_table_to_return("owo_suppressor")
 
     -- Logging all names
-    local all_suppressor_names = nil
-    if not mod.all_suppressor_names then
-        all_suppressor_names = {}
+    local all_owo_suppressor_names = nil
+    if not mod.all_owo_suppressor_names then
+        all_owo_suppressor_names = {}
     end
 
     local function create_suppressor(name, model_table, transformations_table, custom_attachment_overwites)
@@ -135,8 +135,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         )
 
         -- Adding name to list of suppressors
-        if all_suppressor_names then
-            table_insert(all_suppressor_names, name)
+        if all_owo_suppressor_names then
+            table_insert(all_owo_suppressor_names, name)
         end
     end
     local function create_suppressor_and_slim(name, model_table, transformations_table)
@@ -356,8 +356,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
     )
 
     -- sending to global table
-    if all_suppressor_names then
-        mod.all_suppressor_names = all_suppressor_names
+    if all_owo_suppressor_names then
+        mod.all_owo_suppressor_names = all_owo_suppressor_names
     end
    
     return table_to_return
