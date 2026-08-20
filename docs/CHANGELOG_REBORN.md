@@ -1,4 +1,4 @@
-# 4.8.0 - 2026-08-xxx
+# 4.8.0 - 2026-08-20
 ## Added
 - Suppressors
     - PBS-1 now has a variant with the base muzzle visible
@@ -10,15 +10,21 @@
     - that's pretty embarassing
     - Though it's not like I expect anyone to translate this monster lol
 ## Changed
-- Suppressors no longer have a damage type if it's not a muzzle
+- [REDACTED] Suppressors no longer have a damage type if it's not a muzzle
     - Now the barrel shrouds won't mess with you
+    - haha
+    - just kidding
+    - that's for the weekend
 - Suppressors are actually categorized by regular vs slim
 - Suppressors no longer have the base mesh visible
 ## Fixed
 - I broke all the suppressors again last time lol
     - All muzzle suppressors were taking the barrel shroud position
-    - Now I've properly separated them
-- Invisible flashlight was trying to be a stock for some reason
+    - Now they're back to how they were
+    - Which is to say
+    - Shit!
+    - Not really. The broken part wasn't actually too noticable
+- Invisible flashlight was trying to be a stock for some reason, so now it's actually invisible
 ## Developer
 - Refactored some global attachment names to be called by the attachment file itself instead of shared fixes. In the future this makes it easier to keep everything together instead of jumping between the file and the shared file, so adopting the same thing over time makes it more consistent.
 
