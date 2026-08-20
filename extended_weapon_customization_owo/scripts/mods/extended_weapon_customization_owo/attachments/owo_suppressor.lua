@@ -89,7 +89,8 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
         -- Removes damage type if it's not a muzzle weapon, regardless of the above
         if not string_find(current_slot_name, "muzzle") then
             -- mod:echo(current_slot_name.." is not a muzzle haha andrew you are banging my daughter")
-            given_damage_type = nil
+            --given_damage_type = nil
+            given_damage_type = "owo_suppressed_autogun_bullet"
         end    
 
         create_an_attachment(table_to_return, name,
