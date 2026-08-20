@@ -254,12 +254,12 @@ for attachment_name, localizations in pairs(suppressor_localizations) do
 	-- The slot names are only for technical reasons
 	-- ex. labelling a suppressor as a muzzle or barrel_foreskin
 	-- These will use the same name as the "generic" localization
-	for i = 1, #suppressor_suffixes.slot_name do
-		local current_slot = suppressor_suffixes.slot_name[i]
-		local attachment_name = attachment_name.."_"..current_slot
+	--for i = 1, #suppressor_suffixes.slot_name do
+	--	local current_slot = suppressor_suffixes.slot_name[i]
+	--	local attachment_name = attachment_name.."_"..current_slot
 
 		create_global_localization_from_table_then_append_suffixes(attachment_name, localizations, suppressor_suffixes.size_variant)
-	end
+	--end
 end
 -- ---------------
 -- Tactical Stocks
