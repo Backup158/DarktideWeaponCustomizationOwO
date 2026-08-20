@@ -6,6 +6,7 @@
 ## Changed
 ## Fixed
 - Unfornicated the suppressors
+- Invisible flashlight was trying to be a stock for some reason
 ## Developer
 
 # 4.8.0 - 2026-08-17

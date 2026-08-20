@@ -57,8 +57,8 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
         -- adding helpers
         local owo_kitbash_base_bolt_pistol = _item_ranged.."/underbarrels/owo_underbarrel_weapon_vesa_bolt_pistol_"..number_as_string
         create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol, nil, "content/weapons/player/ranged/bolt_pistol/attachments/receiver_"..number_as_string.."/receiver_"..number_as_string, current_attachment_node)
-        create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_grip", nil, "content/weapons/player/ranged/bolt_pistol/attachments/grip_"..number_as_string.."/grip_"..number_as_string, current_attachment_node)
-        create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_magazine", nil, "content/weapons/player/ranged/bolt_pistol/attachments/magazine_"..number_as_string.."/magazine_"..number_as_string, current_attachment_node)
+        create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_grip", nil, "content/weapons/player/ranged/bolt_pistol/attachments/grip_"..number_as_string.."/grip_"..number_as_string, "ap_grip_01")
+        create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_magazine", nil, "content/weapons/player/ranged/bolt_pistol/attachments/magazine_"..number_as_string.."/magazine_"..number_as_string, "ap_magazine_01")
         create_kitbash_full_item(table_to_return, owo_kitbash_base_bolt_pistol.."_barrel", nil, "content/weapons/player/ranged/bolt_pistol/attachments/barrel_"..number_as_string.."/barrel_"..number_as_string, current_attachment_node)
 
         local name_suffix = "bolt_pistol_"..number_as_string
@@ -93,7 +93,8 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                 fix = {
                                     offset = {
                                         node = 1,
-                                        position = vector3_box(0.0, -0.1, -0.036),
+                                        --position = vector3_box(0.0, -0.1, -0.036),
+                                        position = vector3_box(0.0, 0.0, 0.0),
                                         rotation = vector3_box(0.0, 0, 0.0),
                                         scale = vector3_box(1.0, 1.0, 1.0),
                                     },
@@ -104,7 +105,8 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                 fix = {
                                     offset = {
                                         node = 1,
-                                        position = vector3_box(0.0, -0.09, -0.036),
+                                        --position = vector3_box(0.0, -0.09, -0.036),
+                                        position = vector3_box(0.0, 0.0, 0.0),
                                         rotation = vector3_box(0.0, 0, 0.0),
                                         scale = vector3_box(1.0, 1.0, 1.0),
                                     },
@@ -137,8 +139,8 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
 
     -- Plasma Pistol attachment
     local owo_kitbash_base_plasma_pistol_prefix = _item_ranged.."/underbarrels/owo_underbarrel_weapon_vesa_plasma_pistol_"
-    create_kitbash_full_item(table_to_return, owo_kitbash_base_plasma_pistol_prefix.."_grip", nil, "content/weapons/player/ranged/plasma_rifle/attachments/grip_01/grip_01", current_attachment_node)
-    create_kitbash_full_item(table_to_return, owo_kitbash_base_plasma_pistol_prefix.."_magazine", nil, "content/weapons/player/ranged/plasma_rifle/attachments/magazine_01/magazine_01", current_attachment_node)
+    create_kitbash_full_item(table_to_return, owo_kitbash_base_plasma_pistol_prefix.."_grip", nil, "content/weapons/player/ranged/plasma_rifle/attachments/grip_01/grip_01", "ap_grip_01")
+    create_kitbash_full_item(table_to_return, owo_kitbash_base_plasma_pistol_prefix.."_magazine", nil, "content/weapons/player/ranged/plasma_rifle/attachments/magazine_01/magazine_01", "ap_magazine_01")
     for_all_weapon_models(3, nil, function(number_as_string)
         -- adding helpers
         local owo_kitbash_base_plasma_pistol = owo_kitbash_base_plasma_pistol_prefix..number_as_string
@@ -147,7 +149,7 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
         -- Now making one for each barrel
         for_all_weapon_models(8, nil, function(second_number_as_string)
             create_kitbash_full_item(table_to_return, owo_kitbash_base_plasma_pistol.."_barrel_"..second_number_as_string, nil, "content/weapons/player/ranged/plasma_rifle/attachments/barrel_"..second_number_as_string.."/barrel_"..second_number_as_string, current_attachment_node)
-            create_kitbash_full_item(table_to_return, owo_kitbash_base_plasma_pistol.."_stock_"..second_number_as_string, nil, "content/weapons/player/ranged/plasma_rifle/attachments/stock_"..second_number_as_string.."/stock_"..second_number_as_string, current_attachment_node)
+            create_kitbash_full_item(table_to_return, owo_kitbash_base_plasma_pistol.."_stock_"..second_number_as_string, nil, "content/weapons/player/ranged/plasma_rifle/attachments/stock_"..second_number_as_string.."/stock_"..second_number_as_string, "ap_stock_01")
 
             local name_suffix = "plasma_pistol_"..number_as_string.."_"..second_number_as_string
             local shortname = attachment_group_prefix..name_suffix
@@ -181,7 +183,8 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                     fix = {
                                         offset = {
                                             node = 1,
-                                            position = vector3_box(0.0, 0.0, -0.04),
+                                            --position = vector3_box(0.0, 0.0, -0.04),
+                                            position = vector3_box(0.0, 0.0, 0.0),
                                             rotation = vector3_box(0.0, 0, 0.0),
                                             scale = vector3_box(1.0, 1.0, 1.0),
                                         },
@@ -192,7 +195,8 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                     fix = {
                                         offset = {
                                             node = 1,
-                                            position = vector3_box(0.0, 0.042, -0.08),
+                                            --position = vector3_box(0.0, 0.042, -0.08),
+                                            position = vector3_box(0.0, 0.0, 0.0),
                                             rotation = vector3_box(0.0, 0, 0.0),
                                             scale = vector3_box(1.0, 1.0, 0.69),
                                         },
@@ -214,8 +218,10 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
                                     fix = {
                                         offset = {
                                             node = 1,
-                                            position = vector3_box(0.0, -0.1, 0.04),
-                                            rotation = vector3_box(45.0, 0, 0.0),
+                                            --position = vector3_box(0.0, -0.1, 0.04),
+                                            --rotation = vector3_box(45.0, 0, 0.0),
+                                            position = vector3_box(0.0, 0.0, 0.0),
+                                            rotation = vector3_box(0.0, 0.0, 0.0),
                                             scale = vector3_box(1.0, 1.0, 1.0),
                                         },
                                     },

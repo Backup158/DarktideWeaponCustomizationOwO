@@ -83,10 +83,13 @@ function mod.owo_suppressor(given_slot_name, given_attachment_node)
             if custom_attachment_overwrites.do_not_hide_base_mesh then
                 meshes_to_hide = nil
             end
+        else
+            -- This needs to be set somewhere
+            given_damage_type = "owo_suppressed_autogun_bullet"
         end
-        -- Removes damage type if it's not a muzzle weapon
-        if not ((current_slot_name == "muzzle") or (current_slot_name == "muzzle_2")) then
-            given_damage_type = nil
+        -- Removes damage type if it's not a muzzle weapon, regardless of the above
+        if (current_slot_name == "muzzle") or (current_slot_name == "muzzle_2") then
+            given_damage_type = "owo_suppressed_autogun_bullet"
         end    
 
         create_an_attachment(table_to_return, name,
