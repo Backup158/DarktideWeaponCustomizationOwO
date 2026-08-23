@@ -127,6 +127,7 @@ local these_fixes = {
 }
 
 local custom_attachments = {
+    --[[
     sight = {
         parent_slot = "receiver",
         default_path = _item_empty_trinket,
@@ -138,6 +139,11 @@ local custom_attachments = {
                 node = 1,
             },
         },
+    },]]
+    -- Having a custom attachmnet point would fuck the other plugins because ewc didnt actually differentiate them
+    sight = {
+        parent_slot = "rail",
+        default_path = _item_empty_trinket,
     },
     sight_reticle = mod.shared_fix_tables["default_attachment_sight_reticle"],
     barrel_foreskin = {
