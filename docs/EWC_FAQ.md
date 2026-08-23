@@ -53,6 +53,9 @@ General, place these *after* `extended_weapon_customization`. Defer to the plugi
   - Moving the gun off the screen when you aim.
 - [*xsScythes*](https://www.nexusmods.com/warhammer40kdarktide/mods/918) by xsSplater
   - Scythes for Psyker staves
+- [*Tools of the Omnissiah*] by Geoff From Accounting
+  - [Discord](https://discord.gg/GFyCGNpJb8) only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1540705958097854564).
+  - Various parts for Skitarii weapons
 
 <a id="load-order">
 
