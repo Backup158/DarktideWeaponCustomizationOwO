@@ -34,15 +34,17 @@ There are two important things to note for load order:
 # Links to Addon Plugins</a>
 General, place these *after* `extended_weapon_customization`. Defer to the plugins if they have more specific instructions.
 
+Note: Anything here that said "Discord only" is referring to the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8). The given link directs you to a specific message in the server, containing the files to download. However, message links are infamously fickle when clicked in the browser. When it doubt, open Discord yourself --> go to the Darktide Modders Discord --> go to the #weapon-customization-mod channel --> check the 3rd-most recent pin there --> click the relevant link.
+
 - [EWC Base Additions](https://www.nexusmods.com/warhammer40kdarktide/mods/277) by Grasmann
   - On the Nexus page of EWC, in the "Optional Files" section. Put this one before the other add-on plugins in the load order.
   - Adds parts across different weapon types. Notably contains reflex sights, laser sights, and flaming sword blades.
 - *The Syndonai Edits* (Syn's Edits) by Syndonai: 
-  - [Discord](https://discord.gg/GFyCGNpJb8) only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1528304576783188099) (Note: Message links are very fickle on browser. When in doubt, go to Discord yourself and check the pins manually).
+  - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/)
   - Contains many sci-fi and 40k parts. Generally, it just does everything because Syn is a legend.
   - There is a changelog included in the files, which mentions all the added parts.
 - *MOAR DAKKA!* by MarcathRoosevelt
-  - [Discord](https://discord.gg/GFyCGNpJb8) only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1497059693309460712) (Note: Message links are very fickle on browser. When in doubt, go to Discord yourself and check the pins manually)s.
+  - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1497059693309460712)
   - Adds heretic weapon skins, machine gun parts to autoguns, and fisting. Most parts are for Ogryn.
   - The most recent changelog is also found [linked in the pins](https://discord.com/channels/1048312349867646996/1168063453416669284/1483360143558312008).
 - [*Ostracized without Objection*](https://www.nexusmods.com/warhammer40kdarktide/mods/429) (OwO) by me
@@ -54,7 +56,7 @@ General, place these *after* `extended_weapon_customization`. Defer to the plugi
 - [*xsScythes*](https://www.nexusmods.com/warhammer40kdarktide/mods/918) by xsSplater
   - Scythes for Psyker staves
 - [*Tools of the Omnissiah*] by Geoff From Accounting
-  - [Discord](https://discord.gg/GFyCGNpJb8) only. See the pins in the Discord chat. It'll direct you to this [message](https://discord.com/channels/1048312349867646996/1168063453416669284/1540705958097854564).
+  - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1540705958097854564).
   - Various parts for Skitarii weapons
 
 <a id="load-order">
