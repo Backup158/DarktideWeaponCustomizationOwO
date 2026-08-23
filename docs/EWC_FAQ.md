@@ -1,11 +1,9 @@
 # Extended Weapon Customization Informational Page
 Extended Weapon Customization (EWC) is a mod for *Warhammer 40,000: Darktide* that allows you swap parts on your weapons, with support for community-added kitbashed parts. It being such an ambitious project naturally leads to having a few confusing aspects and known issues/quirks. This page serves as an officially unofficial FAQ for common issues and solutions for this mod. 
 
-Most of the contents of this page are pinned in the Discord thread\*; this is a mirror link for easy sharing.
-
 Note that I (Backup158) wrote this and am hosting it on the webpage for my EWC add-on plugin, but the questions here primarily concern the main plugin itself. The webpage banner may be confusing, but rest assured, this page is about Extended Weapon Customization as a whole.
 
-*\*Most discussion happens in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8). Check the [#weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284)*
+*\*Most discussion happens in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8). Check the [#weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284). The main contents of this page are pinned in the Discord thread\*; this page includes elaborations and more pictures, all in one spot for easy sharing.*
 
 # Table of Contents
 - [Installation](#installation)
