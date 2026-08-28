@@ -37,7 +37,7 @@ Note: Anything here that said "Discord only" is referring to the [Darktide Modde
 - [EWC Base Additions](https://www.nexusmods.com/warhammer40kdarktide/mods/277) by Grasmann
   - On the Nexus page of EWC, in the "Optional Files" section. Put this one before the other add-on plugins in the load order.
   - Adds parts across different weapon types. Notably contains reflex sights, laser sights, and flaming sword blades.
-- *The Syndonai Edits* (Syn's Edits) by Syndonai: 
+- *The Syndonai Edits* (Syn's Edits) by Syndonai 
   - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/)
   - Contains many sci-fi and 40k parts. Generally, it just does everything because Syn is a legend.
   - There is a changelog included in the files, which mentions all the added parts.
@@ -45,17 +45,17 @@ Note: Anything here that said "Discord only" is referring to the [Darktide Modde
   - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1497059693309460712)
   - Adds heretic weapon skins, machine gun parts to autoguns, and fisting. Most parts are for Ogryn.
   - The most recent changelog is also found [linked in the pins](https://discord.com/channels/1048312349867646996/1168063453416669284/1483360143558312008).
-- [*Ostracized without Objection*](https://www.nexusmods.com/warhammer40kdarktide/mods/429) (OwO) by me
+- [*Ostracized without Objection*](https://www.nexusmods.com/warhammer40kdarktide/mods/429) (OwO) by Backup158
   - Mainly real-world attachments
-- [*Empty Sights*](https://github.com/Backup158/DarktideWeaponCustomizationEmptySights/releases/latest) by me
+- [*Empty Sights*](https://github.com/Backup158/DarktideWeaponCustomizationEmptySights/releases/latest) by Backup158
   - Reflex sights from base additions, but without the reticle.
-- [*Hidden Viewmodels While Aiming*](https://www.nexusmods.com/warhammer40kdarktide/mods/461) by me
+- [*Hidden Viewmodels While Aiming*](https://www.nexusmods.com/warhammer40kdarktide/mods/461) by Backup158
   - Moving the gun off the screen when you aim.
 - [*xsScythes*](https://www.nexusmods.com/warhammer40kdarktide/mods/918) by xsSplater
-  - Scythes for Psyker staves
-- [*Tools of the Omnissiah*] by Geoff From Accounting
-  - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1540705958097854564).
-  - Various parts for Skitarii weapons
+  - Scythes for Psyker staves.
+- [*Tools of the Omnissiah*](https://www.nexusmods.com/warhammer40kdarktide/mods/1238) by Geoff From Accounting
+  - Primarily various parts for Skitarii weapons.
+  - Also some real world parts, such as Mateba barrels for stub revolvers.
 
 <a id="load-order">
 
