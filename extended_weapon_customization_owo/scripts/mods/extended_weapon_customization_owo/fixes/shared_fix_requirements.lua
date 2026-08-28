@@ -177,6 +177,26 @@ mod.shared_fix_tables = {
             },
         },
     },
+    --  Attaches rail for Holosight and telescopic
+    ["default_sight_add_rail"] = {   
+        attachment_slot = "rail",
+        requirements = {
+            sight = {
+                has = all_holographic_sights_names.all,
+            },
+        },
+        fix = {
+            attach = {
+                rail = "lasgun_rifle_rail_01",
+            },
+            offset = {
+                position = vector3_box(0, 0, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
     -- --------------------------------------
     -- Attachment Slots
     -- --------------------------------------

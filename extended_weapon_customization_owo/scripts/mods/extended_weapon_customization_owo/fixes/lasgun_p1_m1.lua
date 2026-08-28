@@ -53,24 +53,7 @@ local these_fixes = {
     --  Removes rail for AK Irons
     shared_fix_tables["default_sight_ak_iron_remove_rail"],
     --  Attaches rail for Holosight and telescopic
-    {   attachment_slot = "rail",
-        requirements = {
-            sight = {
-                has = all_holographic_sights_names.all,
-            },
-        },
-        fix = {
-            attach = {
-                rail = "lasgun_rifle_rail_01",
-            },
-            offset = {
-                position = vector3_box(0, 0, 0),
-                rotation = vector3_box(0, 0, 0),
-                scale = vector3_box(1, 1, 1),
-                node = 1,
-            },
-        },
-    },
+    shared_fix_tables["default_sight_add_rail"],
     -- -----------
     -- Holographic Sights
     -- -----------
