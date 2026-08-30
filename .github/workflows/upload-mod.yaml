@@ -1,0 +1,33 @@
+name: Upload Mod to NexusMods
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number for the release'
+        required: true
+
+jobs:
+  upload-to-nexusmods:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Zip mod files
+        run: zip -r extended_weapon_customization_owo.zip extended_weapon_customization_owo/*
+
+      - name: Upload mod to NexusMods
+        id: upload
+        uses: Nexus-Mods/upload-action@main
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_id: ${{ vars.NEXUSMODS_FILE_ID }}
+          filename: extended_weapon_customization_owo.zip
+          display_name: "Extended Weapon Customization - Ostracized without Objection (OwO)"
+          description: "https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG_REBORN"
+          changelog: "https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG_REBORN"
+          version: ${{ github.event.release.tag_name || github.event.inputs.version }}
+          update_mod_version: true
