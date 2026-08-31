@@ -28,6 +28,6 @@ jobs:
           filename: extended_weapon_customization_owo.zip
           display_name: "Extended Weapon Customization - Ostracized without Objection (OwO)"
           description: "https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG_REBORN"
-          changelog: "https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG_REBORN"
+          # changelog: "https://backup158.github.io/DarktideWeaponCustomizationOwO/CHANGELOG_REBORN"
           version: ${{ github.event.release.tag_name || github.event.inputs.version }}
           update_mod_version: true
