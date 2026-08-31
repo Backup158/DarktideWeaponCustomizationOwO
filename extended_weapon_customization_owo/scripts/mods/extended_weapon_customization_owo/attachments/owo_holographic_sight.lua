@@ -37,7 +37,7 @@ local create_requirements_string_from_names_table = mod.create_requirements_stri
 -- Attachment
 -- ################################
 local function localization_triple_threat_holographic_no_number(attachment_group_name, name_suffix, variant_suffix)
-    local string_for_variant = nil
+    local string_for_variant = nil -- bad practice to use nil purposefully tut tut 
     if variant_suffix then
         string_for_variant = mod:localize("loc_"..attachment_group_name..variant_suffix)
     end
