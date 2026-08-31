@@ -99,7 +99,7 @@ local these_fixes = {
                 rail = "lasgun_rifle_rail_01",
             },
             offset = {
-                position = vector3_box(0, 0.29, 0.1),
+                position = vector3_box(0, 0.3, 0.107),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
                 node = 1,
@@ -127,7 +127,12 @@ local these_fixes = {
 }
 
 local custom_attachments = {
+    rail = {
+        parent_slot = "receiver",
+        default_path = _item_empty_trinket,
+    },
     --[[
+    -- Having a custom attachment point would fuck the other plugins because ewc didnt actually differentiate them. So we can just go fuck ourselves! :D
     sight = {
         parent_slot = "receiver",
         default_path = _item_empty_trinket,
@@ -140,7 +145,6 @@ local custom_attachments = {
             },
         },
     },]]
-    -- Having a custom attachmnet point would fuck the other plugins because ewc didnt actually differentiate them
     sight = {
         parent_slot = "rail",
         default_path = _item_empty_trinket,

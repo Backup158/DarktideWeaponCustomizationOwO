@@ -31,7 +31,7 @@ local create_an_attachment = mod.create_an_attachment
 
 local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
 local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
-local create_group_indicator = mod.create_group_indicator
+local create_requirements_string_from_names_table = mod.create_requirements_string_from_names_table
 
 local attachment_localizations = {
 
