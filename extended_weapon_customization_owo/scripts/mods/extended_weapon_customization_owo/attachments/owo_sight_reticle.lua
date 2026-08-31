@@ -30,7 +30,7 @@ local _item_minion = "content/items/weapons/minions"
 
 -- Camera Angles for Preview
 local render_unit_rot_spread_ass_cheeks = mod.render_unit_rot_spread_ass_cheeks
-local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
+local render_cam_pos_reticle_close = mod.render_cam_pos_reticle_close
 
 local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
@@ -65,7 +65,7 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
         -- Attachment
         {   replacement_path = _item_ranged.."/sights/"..shortname,
             icon_render_unit_rotation_offset = render_unit_rot_spread_ass_cheeks,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
+            icon_render_camera_position_offset = render_cam_pos_reticle_close,
             custom_selection_group = "extended_weapon_customization_owo",
             randomization_requirement = "mod_option_sight_reticle_randomization",
         },
@@ -89,7 +89,7 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
             -- Attachment
             {   replacement_path = _item_ranged.."/sights/"..shortname,
                 icon_render_unit_rotation_offset = render_unit_rot_spread_ass_cheeks,
-                icon_render_camera_position_offset = render_cam_pos_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_reticle_close,
                 custom_selection_group = "extended_weapon_customization_owo",
                 randomization_requirement = "mod_option_sight_reticle_randomization",
             },
