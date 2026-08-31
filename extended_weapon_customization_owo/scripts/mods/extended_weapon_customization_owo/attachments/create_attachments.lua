@@ -306,8 +306,8 @@ mod.render_cam_pos_sword_blade = {-.025, -2.5, .7}
 mod.render_unit_rot_headon = {0, 0, 0}
 mod.render_unit_rot_spread_ass_cheeks = {
     [1] = {90, 0, -103},
-    [2] = {90, 0, 160},
-    [3] = {90, 7, -106},
+    [2] = {60, 0, 0},
+    [3] = {90, 4, -105},
 }
 mod.render_cam_pos_reticle_close = {
     [1] = {0, 0.45, 0.21},
