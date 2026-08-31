@@ -305,12 +305,12 @@ mod.render_unit_rot_sword_blade = {90, 30, 0}
 mod.render_cam_pos_sword_blade = {-.025, -2.5, .7}
 mod.render_unit_rot_headon = {0, 0, 0}
 mod.render_unit_rot_spread_ass_cheeks = {
-    [1] = {90, 5, -103},
-    [2] = {90, 0, 90},
-    [3] = {90, 5, -103},
+    [1] = {90, 0, -103},
+    [2] = {90, 0, 120},
+    [3] = {90, 5, -102},
 }
 mod.render_cam_pos_reticle_close = {
     [1] = {0, 0.36, 0.21},
     [2] = {0, 0.36, 0.25},
-    [3] = {0, 0.4, 0.2},
+    [3] = {0, 0.45, 0.2},
 }
