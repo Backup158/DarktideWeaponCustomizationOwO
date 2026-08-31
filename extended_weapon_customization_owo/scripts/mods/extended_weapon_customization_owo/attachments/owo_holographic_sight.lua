@@ -40,7 +40,7 @@ local attachment_localizations = {
 -- ################################
 -- Attachment
 -- ################################
-local function generate_holographic_variant(table_to_return, attachment_group_name, broad_name, suffix_name, current_attachment_node, table_of_children_with_fixes, child_fix_multiplier)
+local function generate_holographic_variant(table_to_return, local_version_of_all_holographic_sights_names, attachment_group_name, broad_name, suffix_name, current_attachment_node, table_of_children_with_fixes, child_fix_multiplier)
     local shortname = attachment_group_name.."_"..broad_name..suffix_name
 
     local children_table = table_merge_recursive(
@@ -136,10 +136,10 @@ local function generate_holographic_variant(table_to_return, attachment_group_na
     localize_single_attachment_with_table(shortname, attachment_localizations)
 end
 
-local function create_all_holographic_variants(table_to_return, attachment_group_name, unique_name, current_attachment_node, table_of_children_with_fixes)
-    generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "", current_attachment_node, table_of_children_with_fixes)
+local function create_all_holographic_variants(table_to_return, local_version_of_all_holographic_sights_names, attachment_group_name, unique_name, current_attachment_node, table_of_children_with_fixes)
+    generate_holographic_variant(table_to_return, local_version_of_all_holographic_sights_names, attachment_group_name, unique_name, "", current_attachment_node, table_of_children_with_fixes)
     local short_scale = {x = 1, y = 0.85, z = 1}
-    generate_holographic_variant(table_to_return, attachment_group_name, unique_name, "_short", current_attachment_node, table_of_children_with_fixes, {
+    generate_holographic_variant(table_to_return, local_version_of_all_holographic_sights_names, attachment_group_name, unique_name, "_short", current_attachment_node, table_of_children_with_fixes, {
         sight_base = {
             scale = {x = 1, y = 1, z = 0.85},
         },
@@ -183,7 +183,7 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     local eotech_housing_pos = vector3_box(0.00, 0.018, 0.018)
     local eotech_housing_rot = vector3_box(180, 90, -90)
     local eotech_housing_scl = vector3_box(1.25, 0.366 * 1.3, 0.256)
-    create_all_holographic_variants(table_to_return, attachment_group_name, "eotech", current_attachment_node, {
+    create_all_holographic_variants(table_to_return, local_version_of_all_holographic_sights_names, attachment_group_name, "eotech", current_attachment_node, {
         sight_ac1 = {
             item = _item_ranged.."/sights/owo_eotech_housing_chainsword",
             fix = {
@@ -242,6 +242,13 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
 
     if local_version_of_all_holographic_sights_names then
         mod.all_holographic_sights_names = local_version_of_all_holographic_sights_names
+        local final_boss_string = {}
+        for broad_name, list_of_names in pairs(mod.all_holographic_sights_names) do
+            local requirements_string_of_broads = create_requirements_string_from_names_table(mod.all_holographic_sights_names[broad_name])
+            mod.all_holographic_sights_names[broad_name] = requirements_string_of_broads
+            table_insert(final_boss_string, requirements_string_of_broads)
+        end
+        mod.all_holographic_sights_names.all = create_requirements_string_from_names_table(final_boss_string)
     end
     --table.dump(mod.all_holographic_sights_names, "nya ALL HOLOSIGHT NAMES", 20)
     return table_to_return
