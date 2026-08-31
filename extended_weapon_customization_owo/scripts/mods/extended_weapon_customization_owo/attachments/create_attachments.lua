@@ -304,6 +304,7 @@ mod.render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
 mod.render_unit_rot_sword_blade = {90, 30, 0}
 mod.render_cam_pos_sword_blade = {-.025, -2.5, .7}
 mod.render_unit_rot_headon = {0, 0, 0}
+-- For the Sight Reticles
 mod.render_unit_rot_spread_ass_cheeks = {
     [1] = {90, 0, -103},
     [2] = {60, 0, 0},
