@@ -138,7 +138,7 @@ local function generate_holographic_variant(table_to_return, local_version_of_al
         table_insert(local_version_of_all_holographic_sights_names[broad_name], shortname)
     end
     -- Localizing name
-    localization_triple_threat_holographic_no_number(attachment_group_name, name_suffix, number_as_string)
+    localization_triple_threat_holographic_no_number(attachment_group_name, broad_name, suffix_name)
 end
 
 local function create_all_holographic_variants(table_to_return, local_version_of_all_holographic_sights_names, attachment_group_name, unique_name, current_attachment_node, table_of_children_with_fixes)
