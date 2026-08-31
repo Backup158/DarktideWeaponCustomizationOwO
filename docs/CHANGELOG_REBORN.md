@@ -1,3 +1,21 @@
+# 4.8.1 - 2026-31
+## Fixed
+- Other plugins' sights were getting unaligned
+    - The holographic sight was not properly logging its name
+    - This meant the fixes were trying to match `nil`, so it was always valid for any sight
+    - This then subjected every other sight to... The EWC Fix Lottery
+- Fixed doubled sights from other plugins on the Galvanic Rifle
+    - This was because I defined an attachment slot for `sight` based on the receiver instead of the rail
+    - EWC is a goon so it just takes my new slot and gives it to everyone, so there's two `sight`
+- Made previews for Sight Reticles visible
+    - Reticle 1 and 3 are general visible (`(+)` and `[+]`)
+    - What about reticle 2?
+    - I have no clue
+    - That father fucker just up and disappeared
+    - I spent the entire time aligning the other 2 and slowly rotating reticle 2 to try and find it
+    - But it's just GONE?? like a fart in the wind
+    - I'll get my fucking child support, reticle 2
+
 # 4.8.0 - 2026-08-20
 ## Added
 - Suppressors
