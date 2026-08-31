@@ -443,18 +443,18 @@ local localizations = {
 	-- ==============================
 	-- Weapon Attachments (Again)
 	-- ==============================
-	-- ---------------
+	-- ------------------------------
 	-- Bayonets
-	-- ---------------
+	-- ------------------------------
 	owo_bayonet_flip = {
 		en = "AKM Style Bayonet",
 	},
 	owo_bayonet_flip_helbore = {
 		en = "Helbore",
 	},
-	-- ---------------
+	-- ------------------------------
 	-- OwO underbarrel Weapons
-	-- ---------------
+	-- ------------------------------
 	owo_underbarrel_weapon_veteran_guardsman_laspistol = {
 		en = "Veteran Guardsman Laspistol Wargear",
 	},
@@ -464,8 +464,11 @@ local localizations = {
 	owo_underbarrel_weapon_veteran_guardsman_laspistol_plasma_pistol = {
 		en = "Plasma Pistol",
 	},
+	-- ------------------------------
+	-- Barrels
+	-- ------------------------------
 	-- ---------------
-	-- Contemporary Barrels
+	-- Contemporary
 	-- ---------------
 	-- This is a pretty weird system. What I have is base + the other description + number
 	--   With some automatic formatting
@@ -481,6 +484,21 @@ local localizations = {
 	-- Super Short: Shot Glass
 	owo_kalashnikov_barrel_super_short = {
 		en = "Shot Glass",
+	},
+	-- ------------------------------
+	-- Sights
+	-- ------------------------------
+	-- ---------------
+	-- Holographic
+	-- ---------------
+	owo_holographic_sight = {
+		en = "Holographic Sight",
+	},
+	owo_holographic_sight_short = {
+		en = " (Short)",
+	},
+	owo_holographic_sight_eotech = {
+		en = "EOTech HWS XPS2",
 	},
 }
 

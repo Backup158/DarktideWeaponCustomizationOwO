@@ -33,13 +33,17 @@ local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional
 local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
 local create_requirements_string_from_names_table = mod.create_requirements_string_from_names_table
 
-local attachment_localizations = {
-
-}
-
 -- ################################
 -- Attachment
 -- ################################
+local function localization_triple_threat_holographic_no_number(attachment_group_name, name_suffix, variant_suffix)
+    local string_for_variant = nil
+    if variant_suffix then
+        string_for_variant = mod:localize("loc_"..attachment_group_name..variant_suffix)
+    end
+    localize_attachment_triple_threat(attachment_group_name, name_suffix, string_for_variant)
+end
+
 local function generate_holographic_variant(table_to_return, local_version_of_all_holographic_sights_names, attachment_group_name, broad_name, suffix_name, current_attachment_node, table_of_children_with_fixes, child_fix_multiplier)
     local shortname = attachment_group_name.."_"..broad_name..suffix_name
 
@@ -133,7 +137,7 @@ local function generate_holographic_variant(table_to_return, local_version_of_al
         table_insert(local_version_of_all_holographic_sights_names[broad_name], shortname)
     end
     -- Localizing name
-    localize_single_attachment_with_table(shortname, attachment_localizations)
+    localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
 end
 
 local function create_all_holographic_variants(table_to_return, local_version_of_all_holographic_sights_names, attachment_group_name, unique_name, current_attachment_node, table_of_children_with_fixes)
