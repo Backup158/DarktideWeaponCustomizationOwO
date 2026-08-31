@@ -28,10 +28,6 @@ local _item_minion = "content/items/weapons/minions"
 --local helbore_lasgun_receivers = "lasgun_rifle_krieg_receiver_01|lasgun_rifle_krieg_receiver_02|lasgun_krieg_rifle_receiver_03|lasgun_rifle_krieg_receiver_04|lasgun_rifle_krieg_receiver_05|lasgun_krieg_rifle_receiver_06|lasgun_rifle_krieg_receiver_ml01"
 --local recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_elysian_rifle_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_elysian_rifle_receiver_06|lasgun_elysian_rifle_receiver_07|lasgun_rifle_elysian_receiver_ml01"
 
--- Camera Angles for Preview
-local render_unit_rot_spread_ass_cheeks = mod.render_unit_rot_spread_ass_cheeks
-local render_cam_pos_reticle_close = mod.render_cam_pos_reticle_close
-
 local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 
@@ -88,8 +84,8 @@ function mod.owo_sight_reticle(given_slot, given_attachment_node)
         create_an_attachment(table_to_return, shortname,
             -- Attachment
             {   replacement_path = _item_ranged.."/sights/"..shortname,
-                icon_render_unit_rotation_offset = render_unit_rot_spread_ass_cheeks,
-                icon_render_camera_position_offset = render_cam_pos_reticle_close,
+                icon_render_unit_rotation_offset = mod.render_unit_rot_spread_ass_cheeks[i] or mod.render_unit_rot_spread_ass_cheeks[1],
+                icon_render_camera_position_offset = mod.render_cam_pos_reticle_close[i] or mod.render_cam_pos_reticle_close[1],
                 custom_selection_group = "extended_weapon_customization_owo",
                 randomization_requirement = "mod_option_sight_reticle_randomization",
             },
