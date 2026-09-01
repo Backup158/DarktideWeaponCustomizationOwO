@@ -15,7 +15,7 @@ In the customization menu, parts will be in sections named `Ostracized without O
 ## Special/Flashlight
 All flashlights come with color and beam power variants. Each combination is its own category, which each of the following types of flashlight included.
 
-- Colors (9):
+- Colors (10):
     - Green
     - Red
     - Blue
@@ -43,7 +43,7 @@ All flashlights come with color and beam power variants. Each combination is its
 ### **Colored Default Flashlights**
 - *Weapons*: All ranged weapons
 - Each model of flashlight (5) for each of the color and beam types, plus one model that's supposed to be invisible
-- That means theres 40 * (5 + 1) = 240 of these flashlights! Scrolling through the menu is horrible. I am not sorry.
+- That means theres 40 beams * (5 + 1) models = 240 of these flashlights! Scrolling through the menu is horrible. I am not sorry.
 
 ### **MP5 Flashlights**
 - *Weapons*: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers
