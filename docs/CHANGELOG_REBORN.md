@@ -1,8 +1,8 @@
 # 4.8.2 - 2026-09-XXX
 ## Fixed
 - Kalashnikov Barrels not lining up 
-    - Vigilant Autogun's origin is higher up, so I had to move it down
-    - I forgot to make it not do that for the other cases
+    - Braced Autogun's origin is lower, so I had to move the others down
+    - I forgot to set the exception
     - Which is pretty embarassing since I noticed that when I first made these lol
 ## Developer
 - Moved hardcoded fix requirements to its own file

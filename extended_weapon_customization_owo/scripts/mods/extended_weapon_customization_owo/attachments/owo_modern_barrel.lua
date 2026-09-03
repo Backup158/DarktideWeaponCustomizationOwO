@@ -229,7 +229,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         }
     )
     -- Barrel
-    local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
+    local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
     --  Type 1 (Shorter)
     --      Vigilant Autogun: The barrel origin is higher so I need to drop it
     table_insert(table_to_return.fixes, 
@@ -240,7 +240,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type1.short,
             },
             receiver = {
-                has = all_headhunter_autogun_receivers,
+                has = all_braced_autogun_receivers,
             },
         },
         fix = {
@@ -257,7 +257,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type1.super_short,
             },
             receiver = {
-                has = all_headhunter_autogun_receivers,
+                has = all_braced_autogun_receivers,
             },
         },
         fix = {
@@ -275,7 +275,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type1.short,
             },
             receiver = {
-                missing = all_headhunter_autogun_receivers,
+                missing = all_braced_autogun_receivers,
             },
         },
         fix = {
@@ -292,7 +292,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type1.super_short,
             },
             receiver = {
-                missing = all_headhunter_autogun_receivers,
+                missing = all_braced_autogun_receivers,
             },
         },
         fix = {
@@ -311,7 +311,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type2.short,
             },
             receiver = {
-                has = all_headhunter_autogun_receivers,
+                has = all_braced_autogun_receivers,
             },
         },
         fix = {
@@ -328,7 +328,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type2.super_short,
             },
             receiver = {
-                has = all_headhunter_autogun_receivers,
+                has = all_braced_autogun_receivers,
             },
         },
         fix = {
@@ -346,7 +346,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type2.short,
             },
             receiver = {
-                missing = all_headhunter_autogun_receivers,
+                missing = all_braced_autogun_receivers,
             },
         },
         fix = {
@@ -363,7 +363,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type2.super_short,
             },
             receiver = {
-                missing = all_headhunter_autogun_receivers,
+                missing = all_braced_autogun_receivers,
             },
         },
         fix = {
