@@ -31,7 +31,7 @@ local create_an_attachment = mod.create_an_attachment
 
 local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
 local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
-local create_requirements_string_from_names_table = mod.create_requirements_string_from_names_table
+local create_requirements_string_from_values_of_names_table = mod.create_requirements_string_from_values_of_names_table
 local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
 
 -- ################################
@@ -249,11 +249,11 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
         mod.all_holographic_sights_names = local_version_of_all_holographic_sights_names
         local final_boss_string = {}
         for broad_name, list_of_names in pairs(mod.all_holographic_sights_names) do
-            local requirements_string_of_broads = create_requirements_string_from_names_table(mod.all_holographic_sights_names[broad_name])
+            local requirements_string_of_broads = create_requirements_string_from_values_of_names_table(mod.all_holographic_sights_names[broad_name])
             mod.all_holographic_sights_names[broad_name] = requirements_string_of_broads
             table_insert(final_boss_string, requirements_string_of_broads)
         end
-        mod.all_holographic_sights_names.all = create_requirements_string_from_names_table(final_boss_string)
+        mod.all_holographic_sights_names.all = create_requirements_string_from_values_of_names_table(final_boss_string)
     end
     --table.dump(mod.all_holographic_sights_names, "nya ALL HOLOSIGHT NAMES", 20)
     return table_to_return

@@ -6,7 +6,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 local vector3 = Vector3
 local vector3_box = Vector3Box
 
-local create_requirements_string_from_names_table = mod.create_requirements_string_from_names_table
+local create_requirements_string_from_values_of_names_table = mod.create_requirements_string_from_values_of_names_table
 
 -- ################################
 -- Game Content Addresses

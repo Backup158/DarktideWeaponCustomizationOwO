@@ -11,7 +11,7 @@ local vector3_box = Vector3Box
 
 local dump_if_debug = mod.dump_if_debug
 local info_if_debug = mod.info_if_debug
-local create_requirements_string_from_names_table = mod.create_requirements_string_from_names_table
+local create_requirements_string_from_values_of_names_table = mod.create_requirements_string_from_values_of_names_table
 
 -- ################################
 -- Game Content Addresses
@@ -36,7 +36,7 @@ mod.shared_fix_requirements_file_has_run = true
 -- --------------------------------
 -- Sight Reticles
 -- --------------------------------
-mod.all_owo_sight_reticle_names = create_requirements_string_from_names_table(mod.all_owo_sight_reticle_names)
+mod.all_owo_sight_reticle_names = create_requirements_string_from_values_of_names_table(mod.all_owo_sight_reticle_names)
 info_if_debug("OwO All Sight Reticles: "..mod.all_owo_sight_reticle_names)
 
 -- --------------------------------
@@ -52,13 +52,13 @@ for i = 1, #(slim_blades_flip_list_blade) do
     for j = 1, #(slim_blades_flip_list_prefix) do
         for k = 1, #(slim_blades_flip_list_suffix) do
             local blade = "owo_slim_blade_"..slim_blades_flip_list_prefix[j]..slim_blades_flip_list_blade[i]..slim_blades_flip_list_suffix[k]
-            slim_blades_to_flip[blade] = create_requirements_string_from_names_table(mod.all_slim_blade_names[blade])
+            slim_blades_to_flip[blade] = create_requirements_string_from_values_of_names_table(mod.all_slim_blade_names[blade])
             -- info_if_debug("results of flipping nyaaaa: "..blade.."\n"..slim_blades_to_flip[blade])
             mod.all_slim_blade_names[blade] = slim_blades_to_flip[blade]
         end
     end
 end
-mod.combined_slim_blades_to_flip = create_requirements_string_from_names_table(slim_blades_to_flip)
+mod.combined_slim_blades_to_flip = create_requirements_string_from_values_of_names_table(slim_blades_to_flip)
 --dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE AFTER FLIPPING NYA AAAAAA")
 info_if_debug("OwO List of Slim Blades that need to be flipped: "..mod.combined_slim_blades_to_flip)
 
@@ -94,12 +94,12 @@ end
 ]]
 for holosight_group, holosight_list in pairs(mod.all_holographic_sights_names) do
     if type(holosight_list) == "table" then
-        mod.all_holographic_sights_names[holosight_group] = create_requirements_string_from_names_table(holosight_list)
+        mod.all_holographic_sights_names[holosight_group] = create_requirements_string_from_values_of_names_table(holosight_list)
     end
 end
 -- Creates a single string for all
 --  Not sure if this redundancy is required but it feels like otherwise i'd be creating a key before iterating through all keys
-local all_holographic_sights_names = create_requirements_string_from_names_table(mod.all_holographic_sights_names)
+local all_holographic_sights_names = create_requirements_string_from_values_of_names_table(mod.all_holographic_sights_names)
 mod.all_holographic_sights_names.all = all_holographic_sights_names
 dump_if_debug(mod.all_holographic_sights_names, "OwO All Holographic Sights: ", 15)
 

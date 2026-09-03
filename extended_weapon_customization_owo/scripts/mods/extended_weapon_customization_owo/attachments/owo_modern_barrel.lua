@@ -176,13 +176,13 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
     if all_these_attachments then
         mod.all_owo_kalashnikov_barrel_names = {}
         mod.all_owo_kalashnikov_barrel_names.type1 = mod.all_owo_kalashnikov_barrel_names.type1 or {}
-        mod.all_owo_kalashnikov_barrel_names.type1.short = mod.create_requirements_string_from_names_table(all_these_attachments.type1.short)
-        mod.all_owo_kalashnikov_barrel_names.type1.super_short = mod.create_requirements_string_from_names_table(all_these_attachments.type1.super_short)
-        mod.all_owo_kalashnikov_barrel_names.type1.all = mod.create_requirements_string_from_names_table(mod.all_owo_kalashnikov_barrel_names.type1)
+        mod.all_owo_kalashnikov_barrel_names.type1.short = mod.create_requirements_string_from_values_of_names_table(all_these_attachments.type1.short)
+        mod.all_owo_kalashnikov_barrel_names.type1.super_short = mod.create_requirements_string_from_values_of_names_table(all_these_attachments.type1.super_short)
+        mod.all_owo_kalashnikov_barrel_names.type1.all = mod.create_requirements_string_from_values_of_names_table(mod.all_owo_kalashnikov_barrel_names.type1)
         mod.all_owo_kalashnikov_barrel_names.type2 = mod.all_owo_kalashnikov_barrel_names.type2 or {}
-        mod.all_owo_kalashnikov_barrel_names.type2.short = mod.create_requirements_string_from_names_table(all_these_attachments.type2.short)
-        mod.all_owo_kalashnikov_barrel_names.type2.super_short = mod.create_requirements_string_from_names_table(all_these_attachments.type2.super_short)
-        mod.all_owo_kalashnikov_barrel_names.type2.all = mod.create_requirements_string_from_names_table(mod.all_owo_kalashnikov_barrel_names.type2)
+        mod.all_owo_kalashnikov_barrel_names.type2.short = mod.create_requirements_string_from_values_of_names_table(all_these_attachments.type2.short)
+        mod.all_owo_kalashnikov_barrel_names.type2.super_short = mod.create_requirements_string_from_values_of_names_table(all_these_attachments.type2.super_short)
+        mod.all_owo_kalashnikov_barrel_names.type2.all = mod.create_requirements_string_from_values_of_names_table(mod.all_owo_kalashnikov_barrel_names.type2)
         mod.all_owo_kalashnikov_barrel_names.all = mod.all_owo_kalashnikov_barrel_names.type1.all.."|"..mod.all_owo_kalashnikov_barrel_names.type2.all
         --table.dump(all_these_attachments, "uwu all these attachments kalashnikov", 15)
         --table.dump(mod.all_owo_kalashnikov_barrel_names, "uwu global var these attachments kalashnikov", 15)

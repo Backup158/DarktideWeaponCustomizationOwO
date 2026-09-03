@@ -243,7 +243,7 @@ function mod.owo_underbarrel_weapon_veteran_guardsman_laspistol(given_slot, give
    
     -- Making list of all attachments global
     if all_these_attachments then
-        mod.all_owo_underbarrel_weapon_veteran_guardsman_laspistol_names = mod.create_requirements_string_from_names_table(all_these_attachments)
+        mod.all_owo_underbarrel_weapon_veteran_guardsman_laspistol_names = mod.create_requirements_string_from_values_of_names_table(all_these_attachments)
     end
 
     -- This is the point to insert fixes that apply to all the parts

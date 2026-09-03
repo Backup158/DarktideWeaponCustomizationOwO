@@ -113,14 +113,14 @@ end
 --  table_of_attachment_names: table of strings; attachment names, such as "owo_suppressor_01"
 -- RETURN: string
 -- ######
-function mod.create_requirements_string_from_names_table(table_of_attachment_names)
+function mod.create_requirements_string_from_values_of_names_table(table_of_attachment_names)
     local final_string = ""
     -- Exits if not given table
     if not (type(table_of_attachment_names) == "table") then
         if type(table_of_attachment_names) == "string" then
             info_if_debug("table of attachments is already string: "..table_of_attachment_names)
         else
-            info_if_debug("Not given table/string! create_requirements_string_from_names_table for "..tostring(table_of_attachment_names))
+            info_if_debug("Not given table/string! create_requirements_string_from_values_of_names_table for "..tostring(table_of_attachment_names))
         end
         return table_of_attachment_names
     end
