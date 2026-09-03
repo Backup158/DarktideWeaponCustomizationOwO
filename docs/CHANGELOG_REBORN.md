@@ -1,4 +1,15 @@
-# 4.8.1 - 2026-31
+# 4.8.2 - 2026-09-XXX
+## Fixed
+- Kalashnikov Barrels not lining up 
+    - Vigilant Autogun's origin is higher up, so I had to move it down
+    - I forgot to make it not do that for the other cases
+    - Which is pretty embarassing since I noticed that when I first made these lol
+## Developer
+- Moved hardcoded fix requirements to its own file
+    - This is so it can load before attachemnts are created
+    - I should've done this a while ago
+
+# 4.8.1 - 2026-08-31
 ## Fixed
 - Other plugins' sights were getting unaligned
     - The holographic sight was not properly logging its name
