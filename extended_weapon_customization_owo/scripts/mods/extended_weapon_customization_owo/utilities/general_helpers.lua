@@ -206,8 +206,17 @@ function mod.localize_all_from_group(attachment_names, localizations_to_use)
 	end
 end
 
--- barrel name + suffix + number --> Kalashnikov Barrel - Short 07
--- This should work with other languages since mod:Localize finds your language --> replaces english --> there's nothing for your language so it grabs the english (which is actually in your language)
+-- ----------
+-- Localize Attachment Triple Threat
+-- DESC: Creates a global localization using the values in the localization file
+--      barrel name + suffix + number --> Kalashnikov Barrel - Short 07
+--      This should work with other languages since mod:Localize finds your language --> replaces english --> there's nothing for your language so it grabs the english (which is actually in your language)
+-- PARAM: 
+--      attachment_group_name: string; such as owo_contemporary_barrel
+--      attachment_suffix: string; the specific ending of a name that's words, such as kalashnikov_barrel
+--      number_string: string (optional); if the attachment ends in a number, the number as a string, where 1 --> "01"
+-- RETURN: N/A
+-- ----------
 function mod.localize_attachment_triple_threat(attachment_group_name, attachment_suffix, number_string) 
     local attachment_name
     if number_string then
