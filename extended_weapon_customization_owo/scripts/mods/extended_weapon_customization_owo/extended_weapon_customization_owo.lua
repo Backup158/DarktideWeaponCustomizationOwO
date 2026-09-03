@@ -4,7 +4,7 @@ local mod = get_mod("extended_weapon_customization_owo")
 -- DATA
 -- ###################################################################
 -- Prints a message to the console log containing the current version number
-mod.version = "4.8.2"
+mod.version = "4.9.0"
 mod:info('v' .. mod.version .. mod:localize("mod_version_logging_message"))
 
 -- Discord mode
@@ -438,7 +438,7 @@ add_attachments_to_list_of_weapons(mod.owo_suppressor("barrel_foreskin", "ap_muz
 -- ----------------
 -- Barrel
 -- ----------------
-add_attachments_to_list_of_weapons(mod.owo_kalashnikov_barrel(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "barrel")
+add_attachments_to_list_of_weapons(mod.owo_kalashnikov_barrel(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", }, "barrel")
 
 -- ----------------
 -- OwO Underbarrel Weapon

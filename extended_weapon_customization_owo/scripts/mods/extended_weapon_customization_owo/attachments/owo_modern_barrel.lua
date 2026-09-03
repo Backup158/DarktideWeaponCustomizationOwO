@@ -230,6 +230,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
     )
     -- Barrel
     local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
+    local all_receiver_exceptions = all_braced_autogun_receivers
     --  Type 1 (Shorter)
     --      Braced Autogun: The barrel origin is lower so I need not drop it
     table_insert(table_to_return.fixes, 
@@ -275,7 +276,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type1.short,
             },
             receiver = {
-                missing = all_braced_autogun_receivers,
+                missing = all_receiver_exceptions,
             },
         },
         fix = {
@@ -292,7 +293,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type1.super_short,
             },
             receiver = {
-                missing = all_braced_autogun_receivers,
+                missing = all_receiver_exceptions,
             },
         },
         fix = {
@@ -346,7 +347,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type2.short,
             },
             receiver = {
-                missing = all_braced_autogun_receivers,
+                missing = all_receiver_exceptions,
             },
         },
         fix = {
@@ -363,7 +364,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
                 has = mod.all_owo_kalashnikov_barrel_names.type2.super_short,
             },
             receiver = {
-                missing = all_braced_autogun_receivers,
+                missing = all_receiver_exceptions,
             },
         },
         fix = {

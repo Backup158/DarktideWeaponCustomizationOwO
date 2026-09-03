@@ -1,4 +1,8 @@
-# 4.8.2 - 2026-09-XXX
+# 4.9.0 - 2026-09-XXX
+## Added
+- Contemporary barrels
+    - Now on shredder autopistol and lasguns
+    - because adding more bugs is a good idea!
 ## Fixed
 - Kalashnikov Barrels not lining up 
     - Braced Autogun's origin is lower, so I had to move the others down
