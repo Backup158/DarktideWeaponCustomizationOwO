@@ -1,4 +1,4 @@
-# 4.9.0 - 2026-09-XXX
+# 4.9.0 - 2026-09-03
 ## Added
 - Contemporary barrels
     - Now on shredder autopistol and lasguns
