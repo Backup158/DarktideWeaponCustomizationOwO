@@ -135,6 +135,29 @@ function mod.create_requirements_string_from_values_of_names_table(table_of_atta
 
     return final_string
 end
+local create_requirements_string_from_values_of_names_table = mod.create_requirements_string_from_values_of_names_table
+
+-- ######
+-- Shallow Create "All" Requirements String in Table
+-- DESC: Given a table where the requirement strings are stored in separate keys, make a key that has them all
+-- PARAM:
+--  table_of_attachment_names: table of keys and (tables or strings)
+function mod.shallow_create_all_requirements_string_in_table(table_of_attachment_names)
+    -- Exits if not given table
+    if not (type(table_of_attachment_names) == "table") then
+        info_if_debug("Not given table! shallow_create_all_requirements_string_in_table for "..tostring(table_of_attachment_names))
+        return table_of_attachment_names
+    end
+
+    -- Make sure each value is already is a spread out requirements string
+    for variant_name, requirements_table_or_string in pairs(table_of_attachment_names) do
+        table_of_attachment_names[variant_name] = create_requirements_string_from_values_of_names_table(requirements_table_or_string)
+    end
+
+    -- Making the "All"
+    local concatenated_all_values = create_requirements_string_from_values_of_names_table(table_of_attachment_names)
+    table_of_attachment_names.all = concatenated_all_values
+end
 
 -- ######
 -- String is key in table?
