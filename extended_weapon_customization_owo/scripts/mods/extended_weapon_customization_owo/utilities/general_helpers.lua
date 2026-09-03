@@ -107,7 +107,7 @@ function mod.table_insert_all_from_table(destination_table, source_table)
 end
 
 -- ######
--- Create Requirements String from Table of Names\
+-- Create Requirements String from Values of a Table of Names
 -- DESC: concatenates all strings from a table into one X|Y|...|Z
 -- PARAM:
 --  table_of_attachment_names: table of strings; attachment names, such as "owo_suppressor_01"
