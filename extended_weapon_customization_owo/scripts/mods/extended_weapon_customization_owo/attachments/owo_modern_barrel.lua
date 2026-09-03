@@ -229,13 +229,18 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         }
     )
     -- Barrel
+    local all_headhunter_autogun_receivers = mod.all_headhunter_autogun_receivers
     --  Type 1 (Shorter)
+    --      Vigilant Autogun: The barrel origin is higher so I need to drop it
     table_insert(table_to_return.fixes, 
     {
         attachment_slot = "barrel",
         requirements = {
             barrel = {
                 has = mod.all_owo_kalashnikov_barrel_names.type1.short,
+            },
+            receiver = {
+                has = all_headhunter_autogun_receivers,
             },
         },
         fix = {
@@ -251,6 +256,9 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             barrel = {
                 has = mod.all_owo_kalashnikov_barrel_names.type1.super_short,
             },
+            receiver = {
+                has = all_headhunter_autogun_receivers,
+            },
         },
         fix = {
             offset = {
@@ -258,13 +266,52 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             },
         },
     })
+    --      Other Barrels
+    table_insert(table_to_return.fixes, 
+    {
+        attachment_slot = "barrel",
+        requirements = {
+            barrel = {
+                has = mod.all_owo_kalashnikov_barrel_names.type1.short,
+            },
+            receiver = {
+                missing = all_headhunter_autogun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, type1_short_distance, 0.0),
+            },
+        },
+    })
+    table_insert(table_to_return.fixes, 
+    {
+        attachment_slot = "barrel",
+        requirements = {
+            barrel = {
+                has = mod.all_owo_kalashnikov_barrel_names.type1.super_short,
+            },
+            receiver = {
+                missing = all_headhunter_autogun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, type1_super_short_distance, 0.0),
+            },
+        },
+    })
     --  Type 2 (Longer)
+    --      Vigilant
     table_insert(table_to_return.fixes, 
     {
         attachment_slot = "barrel",
         requirements = {
             barrel = {
                 has = mod.all_owo_kalashnikov_barrel_names.type2.short,
+            },
+            receiver = {
+                has = all_headhunter_autogun_receivers,
             },
         },
         fix = {
@@ -280,10 +327,48 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             barrel = {
                 has = mod.all_owo_kalashnikov_barrel_names.type2.super_short,
             },
+            receiver = {
+                has = all_headhunter_autogun_receivers,
+            },
         },
         fix = {
             offset = {
                 position = vector3_box(0.0, type2_super_short_distance, -0.03),
+            },
+        },
+    })
+    -- Others
+    table_insert(table_to_return.fixes, 
+    {
+        attachment_slot = "barrel",
+        requirements = {
+            barrel = {
+                has = mod.all_owo_kalashnikov_barrel_names.type2.short,
+            },
+            receiver = {
+                missing = all_headhunter_autogun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, type2_short_distance, 0.0),
+            },
+        },
+    })
+    table_insert(table_to_return.fixes, 
+    {
+        attachment_slot = "barrel",
+        requirements = {
+            barrel = {
+                has = mod.all_owo_kalashnikov_barrel_names.type2.super_short,
+            },
+            receiver = {
+                missing = all_headhunter_autogun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, type2_super_short_distance, 0.0),
             },
         },
     })
