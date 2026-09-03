@@ -231,7 +231,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
     -- Barrel
     local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
     --  Type 1 (Shorter)
-    --      Vigilant Autogun: The barrel origin is higher so I need to drop it
+    --      Braced Autogun: The barrel origin is lower so I need not drop it
     table_insert(table_to_return.fixes, 
     {
         attachment_slot = "barrel",
@@ -245,7 +245,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, type1_short_distance, -0.03),
+                position = vector3_box(0.0, type1_short_distance, 0),
             },
         },
     })
@@ -262,7 +262,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, type1_super_short_distance, -0.03),
+                position = vector3_box(0.0, type1_super_short_distance, 0),
             },
         },
     })
@@ -280,7 +280,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, type1_short_distance, 0.0),
+                position = vector3_box(0.0, type1_short_distance, -0.03),
             },
         },
     })
@@ -297,12 +297,12 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, type1_super_short_distance, 0.0),
+                position = vector3_box(0.0, type1_super_short_distance, -0.03),
             },
         },
     })
     --  Type 2 (Longer)
-    --      Vigilant
+    --      Braced
     table_insert(table_to_return.fixes, 
     {
         attachment_slot = "barrel",
@@ -316,7 +316,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, type2_short_distance, -0.03),
+                position = vector3_box(0.0, type2_short_distance, 0.0),
             },
         },
     })
@@ -333,7 +333,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, type2_super_short_distance, -0.03),
+                position = vector3_box(0.0, type2_super_short_distance, 0.0),
             },
         },
     })
@@ -351,7 +351,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, type2_short_distance, 0.0),
+                position = vector3_box(0.0, type2_short_distance, -0.03),
             },
         },
     })
@@ -368,7 +368,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         },
         fix = {
             offset = {
-                position = vector3_box(0.0, type2_super_short_distance, 0.0),
+                position = vector3_box(0.0, type2_super_short_distance, -0.03),
             },
         },
     })
