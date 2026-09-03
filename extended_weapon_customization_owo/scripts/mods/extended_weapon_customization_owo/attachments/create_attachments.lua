@@ -294,24 +294,3 @@ function mod.calculate_damage_type_key_name(table_of_contents, base_name)
     end
     return found_damage_type
 end
-
--- ################################
--- Some Variables for Common Attachments
--- ################################
--- Camera Angles for Preview
-mod.render_unit_rot_profile_left = {90, 0, 30}
-mod.render_cam_pos_profile_left = {-0.2, -1.75, 0.15}
-mod.render_unit_rot_sword_blade = {90, 30, 0}
-mod.render_cam_pos_sword_blade = {-.025, -2.5, .7}
-mod.render_unit_rot_headon = {0, 0, 0}
--- For the Sight Reticles
-mod.render_unit_rot_spread_ass_cheeks = {
-    [1] = {90, 0, -103},
-    [2] = {60, 0, 0},
-    [3] = {90, 4, -105},
-}
-mod.render_cam_pos_reticle_close = {
-    [1] = {0, 0.45, 0.21},
-    [2] = {0, 0.45, 0.25},
-    [3] = {0, 0.75, 0.2},
-}

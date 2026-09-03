@@ -321,6 +321,7 @@ attachments_table_for_ewc.flashlight_templates = table_clone(load_mod_file("atta
 
 load_mod_file("utilities/owo_damage_types")
 load_mod_file("attachments/create_attachments")
+load_mod_file("fixes/hard_coded_attachments_for_fixes")
 
 local attachment_names = mod.attachment_names
 for i = 1, #(attachment_names) do
