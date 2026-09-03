@@ -41,11 +41,11 @@ end
 -- #################
 local function append_suffix_table_to_localization(localizations_table, second_localizations_table)
 	if not type(second_localizations_table) == "table" then
-		mod:error("Trying to append nontable! I can't tell you where though hehe")
+		mod:error("Trying to append nontable! I can't tell you where though hehe. The second localization \"table\" is: "..tostring(second_localizations_table))
 		return
 	end
 	if not type(localizations_table) == "table" then
-		mod:error("Localization table is not a table! There was the second table at least")
+		mod:error("Localization table is not a table! There was the second table at least. The localization \"table\" is: "..tostring(localizations_table))
 		return
 	end
 	local new_local = table_clone(localizations_table)
