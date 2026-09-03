@@ -1,12 +1,14 @@
 # 4.idkWhatToCallThis - 2026-09-XXX
 ## Added
 ## Fixed
+- Missing attachment localizations because `mod.localize_attachment_triple_threat` put the number in the wrong spot
 ## Developer
 - Renamed `mod.create_requirements_string_from_names_table` to `mod.create_requirements_string_from_values_of_names_table`
 - Created `mod.shallow_create_all_requirements_string_in_table` to automatically run the above on one level of a table
     - This is to avoid the monstrosity that is the contemporary barrel localization
     - So yeah i changed it to that in `owo_modern_barrel.lua`
-    
+- More detailed error messages for adding localization suffix tables
+
 # 4.9.0 - 2026-09-03
 ## Added
 - Contemporary barrels
