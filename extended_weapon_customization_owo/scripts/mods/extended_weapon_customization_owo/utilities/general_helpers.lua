@@ -211,7 +211,7 @@ end
 function mod.localize_attachment_triple_threat(attachment_group_name, attachment_suffix, number_string) 
     local attachment_name
     if number_string then
-       attachment_name = attachment_group_name.."_"..number_string.."_"..attachment_suffix
+       attachment_name = attachment_group_name.."_"..attachment_suffix.."_"..number_string
     else
        attachment_name = attachment_group_name.."_"..attachment_suffix
     end
