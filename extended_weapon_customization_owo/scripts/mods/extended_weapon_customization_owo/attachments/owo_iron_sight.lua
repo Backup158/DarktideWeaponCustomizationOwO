@@ -317,6 +317,8 @@ function mod.owo_laspistol_iron(given_attachment_node)
             all_these_attachments.jank = all_these_attachments.jank or {}
             table_insert(all_these_attachments.jank, attachment_group_prefix..name_suffix.."_jank")
             table_insert(all_these_attachments.jank, attachment_group_prefix..name_suffix.."_jank_with_rail")
+            all_these_attachments.rail = all_these_attachments.rail or {}
+            table_insert(all_these_attachments.rail, attachment_group_prefix..name_suffix.."_jank_with_rail")
         end
     end
 
