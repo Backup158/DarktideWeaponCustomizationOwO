@@ -33,7 +33,7 @@ local custom_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.02, 0.00, 0.03),
+                position = vector3_box(-0.02, 0.00, 0.03),
                 -- rotation = vector3_box(0, 0, 0),
             },
         },
@@ -46,7 +46,7 @@ local custom_fixes = {
         },
         fix = {
             offset = {
-                position = vector3_box(0.025, 0.00, 0.04),
+                position = vector3_box(-0.025, 0.00, 0.04),
                 -- rotation = vector3_box(0, 0, 0),
             },
         },
