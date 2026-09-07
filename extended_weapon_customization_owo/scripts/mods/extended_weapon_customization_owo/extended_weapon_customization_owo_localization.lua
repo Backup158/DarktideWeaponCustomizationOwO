@@ -515,7 +515,7 @@ local localizations = {
 	owo_iron_sight_laspistol_iron_jank = {
 		en = "Laspistol (Point Shooting)",
 	},
-	owo_iron_sight_laspistol_iron_with_rail_jank = {
+	owo_iron_sight_laspistol_iron_jank_with_rail = {
 		en = "Laspistol (Point Shooting with Rail)",
 	},
 }

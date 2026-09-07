@@ -297,27 +297,32 @@ function mod.owo_laspistol_iron(given_attachment_node)
         )
         -- Adding name to this group's list
         if all_these_attachments then
-            table_insert(all_these_attachments, shortname)
+            all_these_attachments.all = all_these_attachments.all or {}
+            table_insert(all_these_attachments.all, shortname)
         end
         localize_attachment_triple_threat(attachment_group_name, name_suffix, nil)
     end
 
-    laspistol_helper("laspistol_iron_with_rail_jank", nil, {   
+    local function laspistol_call_helper_and_rail(name_suffix, fixes, kitbashes)
+        laspistol_helper(name_suffix, fixes, kitbashes)
+        laspistol_helper(name_suffix.."_with_rail", fixes, kitbashes)
+        if all_these_attachments then
+            all_these_attachments.rail = all_these_attachments.rail or {}
+            table_insert(all_these_attachments.rail, attachment_group_prefix..name_suffix.."_with_rail")
+        end
+    end
+
+    laspistol_call_helper_and_rail("laspistol_iron_jank", nil, {   
         base_unit = _item_empty, -- invisible base
     })
-    laspistol_helper("laspistol_iron_jank", nil, {   
-        base_unit = _item_empty, -- invisible base
-    })
-    laspistol_helper("laspistol_iron_with_rail", nil, {   
-        base_unit = _item_empty, -- invisible base
-    })
-    laspistol_helper("laspistol_iron", nil, {   
+    laspistol_call_helper_and_rail("laspistol_iron", nil, {   
         base_unit = _item_empty, -- invisible base
     })
 
     -- Making list of all attachments global
     if all_these_attachments then
-        mod.all_laspistol_iron_names = mod.create_requirements_string_from_values_of_names_table(all_these_attachments)
+        mod.shallow_create_all_requirements_string_in_table(all_these_attachments)
+        mod.all_laspistol_iron_names = all_these_attachments
     end
 
     -- This is the point to insert fixes that apply to all the parts
@@ -326,7 +331,7 @@ function mod.owo_laspistol_iron(given_attachment_node)
         attachment_slot = "rail",
         requirements = {
             sight = {
-                has = attachment_group_prefix.."laspistol_iron_with_rail_jank".."|"..attachment_group_prefix.."laspistol_iron_with_rail",
+                has = mod.all_laspistol_iron_names.rail,
             },
             rail = {
                 missing = "lasgun_pistol_rail_01",
@@ -343,7 +348,8 @@ function mod.owo_laspistol_iron(given_attachment_node)
         attachment_slot = "rail",
         requirements = {
             sight = {
-                has = attachment_group_prefix.."laspistol_iron_jank".."|"..attachment_group_prefix.."laspistol_iron",
+                has = mod.all_laspistol_iron_names.all,
+                missing = mod.all_laspistol_iron_names.rail,
             },
             rail = {
                 missing = "owo_invisible_lasgun_pistol_rail_empty",
