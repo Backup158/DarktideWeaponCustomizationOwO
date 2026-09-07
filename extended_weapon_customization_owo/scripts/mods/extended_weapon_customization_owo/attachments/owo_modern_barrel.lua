@@ -57,7 +57,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         list_of_names_to_use = mod.all_owo_kalashnikov_barrel_names
     end
 
-    local function owo_kalashnikov_barrel_helper(name_suffix, number_as_string, fixes, kitbashs, table_to_insert_to)
+    local function owo_kalashnikov_barrel_helper(name_suffix, number_as_string, fixes, kitbashes, table_to_insert_to)
         local shortname = attachment_group_prefix..name_suffix.."_"..number_as_string
         create_an_attachment(table_to_return, shortname,
             -- Attachment
@@ -70,7 +70,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
             -- Fixes
             fixes,
             -- Kitbash
-            kitbashs,
+            kitbashes,
             -- Attachment Node
             current_attachment_node
         )

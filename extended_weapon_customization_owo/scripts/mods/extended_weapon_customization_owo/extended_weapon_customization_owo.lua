@@ -75,7 +75,7 @@ local attachments_table_for_ewc = {
 	fixes = {
 
 	},
-	kitbashs = {
+	kitbashes = {
 
 	}
 }
@@ -155,7 +155,7 @@ local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list,
             merge_recursive_safe(attachments_table_for_ewc.attachment_slots[weapon_id], attachment_blob.attachment_slots)
         end
 
-        -- Fixes (from these files) and kitbashs only need to be defined once
+        -- Fixes (from these files) and kitbashes only need to be defined once
         -- Fixes are NOT merge recursive because when the keys are indices, so fixes would get merged together
         if not attachments_table_for_ewc.fixes[weapon_id] then 
             attachments_table_for_ewc.fixes[weapon_id] = {} 
@@ -163,7 +163,7 @@ local function add_attachments_to_list_of_weapons(attachment_blob, weapons_list,
         table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], attachment_blob.fixes)
     end
     
-    merge_recursive_safe(attachments_table_for_ewc.kitbashs, attachment_blob.kitbashs)
+    merge_recursive_safe(attachments_table_for_ewc.kitbashes, attachment_blob.kitbashes)
 end
 
 -- ######
@@ -565,6 +565,10 @@ end
 -- **Sending it to the actual table that gets read by the base mod**
 -- This must happen BEFORE all mods are loaded, since that's when EWC looks for it.
 -- ################################
+-- EWC calls kitbashes "kitbashs" so reassign that 
+attachments_table_for_ewc.kitbashs = attachments_table_for_ewc.kitbashes
+attachments_table_for_ewc.kitbashes = nil
+-- Assign to actual table
 mod.extended_weapon_customization_plugin = attachments_table_for_ewc
 
 -- ###################################################################

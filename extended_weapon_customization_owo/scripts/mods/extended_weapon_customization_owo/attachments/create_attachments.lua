@@ -50,7 +50,7 @@ function mod.init_table_to_return(internal_name)
         attachments = { },
         attachment_slots = { },
         fixes = { },
-        kitbashs = { },
+        kitbashes = { },
     }
 end
 
@@ -76,7 +76,7 @@ local function create_kitbash_merge_table(table_to_add_to, replacement_name, int
         disable_vfx_exclusion = false
     end
     -- create kitbash table to send back for merging
-    table_to_add_to.kitbashs[replacement_name] = {
+    table_to_add_to.kitbashes[replacement_name] = {
         -- attachments = { [internal_name] = kitbash_data },
         attachments = { base = kitbash_data }, -- had issues with hide mesh when done the other way
         display_name = "loc_"..internal_name,
@@ -153,7 +153,7 @@ function mod.create_kitbash_full_item(table_to_add_to, replacement_name, interna
         display_name_to_use = "loc_"..internal_name
     end
 
-    table_to_add_to.kitbashs[replacement_name] = {
+    table_to_add_to.kitbashes[replacement_name] = {
         is_fallback_item = false,
         show_in_1p = true,
         base_unit = given_base_unit,
