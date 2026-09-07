@@ -457,11 +457,17 @@ add_attachments_to_list_of_weapons(mod.owo_tactical_stock(), {"autogun_p1_m1", "
 add_attachments_to_list_of_weapons(mod.owo_mag(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "magazine")
 
 -- ----------------
+-- Rail
+-- ----------------
+add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "rifle_rail", "content/items/weapons/player/ranged/rails/lasgun_rifle_rail_01"), {"laspistol_p1_m1"}, "rail")
+
+-- ----------------
 -- Sight
 -- ----------------
 add_attachments_to_list_of_weapons(mod.owo_iron_sight(), { "autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", }, "sight")
 add_attachments_to_list_of_weapons(mod.owo_holographic_sight(), sighted_weapons, "sight")
 add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), sighted_weapons, "sight_reticle")
+add_attachments_to_list_of_weapons(mod.owo_laspistol_iron(), { "laspistol_p1_m1", }, "sight")
 
 -- ################
 -- Melee

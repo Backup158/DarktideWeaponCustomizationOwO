@@ -500,6 +500,24 @@ local localizations = {
 	owo_holographic_sight_eotech = {
 		en = "EOTech HWS XPS2",
 	},
+	-- ---------------
+	-- Iron Sights
+	-- ---------------
+	owo_iron_sight = {
+		en = "Iron Sight",
+	},
+	owo_iron_sight_laspistol_iron = {
+		en = "Laspistol",
+	},
+	owo_iron_sight_laspistol_iron_with_rail = {
+		en = "Laspistol (Rail)",
+	},
+	owo_iron_sight_laspistol_iron_jank = {
+		en = "Laspistol (Point Shooting)",
+	},
+	owo_iron_sight_laspistol_iron_with_rail_jank = {
+		en = "Laspistol (Point Shooting with Rail)",
+	},
 }
 
 -- ################

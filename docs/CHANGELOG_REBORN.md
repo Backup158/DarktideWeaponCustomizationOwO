@@ -1,5 +1,11 @@
-# 4.idkWhatToCallThis - 2026-09-XXX
+# 4.10,0 - 2026-09-XXX
 ## Added
+- Invisible Rifle Rails
+    - For laspistol
+- Laspistol Irons
+    - For laspistol
+    - With and without rails
+    - With and without alignment for aiming
 ## Fixed
 - Missing attachment localizations because `mod.localize_attachment_triple_threat` put the number in the wrong spot
 ## Developer

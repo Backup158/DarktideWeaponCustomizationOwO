@@ -260,3 +260,99 @@ function mod.owo_iron_sight(given_attachment_node)
     return table_to_return
 
 end
+
+function mod.owo_laspistol_iron(given_attachment_node)
+    local current_attachment_node = given_attachment_node or "ap_sight_01"
+
+    local attachment_group_name = "owo_iron_sight"
+    local attachment_group_prefix = attachment_group_name.."_"
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
+
+    -- Logging all names if this is the first time
+    local all_these_attachments = nil
+    if not mod.all_laspistol_iron_names then
+        all_these_attachments = {}
+    end
+
+    local function laspistol_helper(name_suffix, fixes, kitbashes)
+        local shortname = attachment_group_prefix..name_suffix
+        create_an_attachment(table_to_return, shortname,
+            -- Attachment
+            {   replacement_path = _item_ranged.."/sights/"..shortname,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+                custom_selection_group = "extended_weapon_customization_owo",
+            },
+            -- Fixes
+            fixes,
+            -- Kitbash
+            kitbashes,
+            -- Attachment Node
+            current_attachment_node
+        )
+        -- Adding name to this group's list
+        if all_these_attachments then
+            table_insert(all_these_attachments, shortname)
+        end
+        localize_attachment_triple_threat(attachment_group_name, name_suffix, nil)
+    end
+
+    laspistol_helper("laspistol_iron_with_rail_jank", nil, {   
+        base_unit = _item_empty, -- invisible base
+    })
+    laspistol_helper("laspistol_iron_jank", {
+        {
+            {   attachment_slot = "rail",
+                requirements = {
+                    sight = {
+                        has = attachment_group_prefix.."laspistol_iron_jank",
+                    },
+                    rail = {
+                        missing = "owo_invisible_rifle_rail",
+                    },
+                },
+                fix = {
+                    attach = {
+                        rail = "owo_invisible_rifle_rail",
+                    },
+                },
+            },
+        }
+    }, {   
+        base_unit = _item_empty, -- invisible base
+    })
+    laspistol_helper("laspistol_iron_with_rail", nil, {   
+        base_unit = _item_empty, -- invisible base
+    })
+    laspistol_helper("laspistol_iron", {
+        {
+            {   attachment_slot = "rail",
+                requirements = {
+                    sight = {
+                        has = attachment_group_prefix.."laspistol_iron",
+                    },
+                    rail = {
+                        missing = "owo_invisible_rifle_rail",
+                    },
+                },
+                fix = {
+                    attach = {
+                        rail = "owo_invisible_rifle_rail",
+                    },
+                },
+            },
+        }
+    }, {   
+        base_unit = _item_empty, -- invisible base
+    })
+
+    -- Making list of all attachments global
+    if all_these_attachments then
+        mod.all_laspistol_iron_names = mod.create_requirements_string_from_values_of_names_table(all_these_attachments)
+    end
+
+    -- This is the point to insert fixes that apply to all the parts
+
+    return table_to_return
+
+end
