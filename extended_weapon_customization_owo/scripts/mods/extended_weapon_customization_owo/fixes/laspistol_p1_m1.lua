@@ -25,10 +25,12 @@ local custom_fixes = {
     -- Sights
     -- ----------------------
     -- Laspistol Irons
+    --  Irons with rail
     {   attachment_slot = "sight_offset",
         requirements = {
             sight = {
-                has = "owo_iron_sight_laspistol_iron_with_rail",
+                has = mod.all_laspistol_iron_names.rail,
+                missing = mod.all_laspistol_iron_names.jank,
             },
         },
         fix = {
@@ -38,10 +40,12 @@ local custom_fixes = {
             },
         },
     },
+    -- Irons alone
     {   attachment_slot = "sight_offset",
         requirements = {
             sight = {
-                has = "owo_iron_sight_laspistol_iron",
+                has = mod.all_laspistol_iron_names.all,
+                missing = mod.all_laspistol_iron_names.jank.."|"..mod.all_laspistol_iron_names.rail,
             },
         },
         fix = {

@@ -310,13 +310,18 @@ function mod.owo_laspistol_iron(given_attachment_node)
             all_these_attachments.rail = all_these_attachments.rail or {}
             table_insert(all_these_attachments.rail, attachment_group_prefix..name_suffix.."_with_rail")
         end
+
+        laspistol_helper(name_suffix.."_jank", fixes, kitbashes)
+        laspistol_helper(name_suffix.."_jank_with_rail", fixes, kitbashes)
+        if all_these_attachments then
+            all_these_attachments.jank = all_these_attachments.jank or {}
+            table_insert(all_these_attachments.jank, attachment_group_prefix..name_suffix.."_jank")
+            table_insert(all_these_attachments.jank, attachment_group_prefix..name_suffix.."_jank_with_rail")
+        end
     end
 
     create_kitbash_full_item(table_to_return, attachment_group_prefix.."_vesa_laspistol_night", nil, "content/weapons/player/ranged/plasma_rifle/attachments/barrel_01/barrel_01", "ap_sight_01")
 
-    laspistol_call_helper_and_rail("laspistol_iron_jank", nil, {   
-        base_unit = _item_empty, -- invisible base
-    })
     laspistol_call_helper_and_rail("laspistol_iron", nil, {   
         base_unit = _item_empty, -- invisible base
     })
