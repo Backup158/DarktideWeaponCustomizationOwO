@@ -31,11 +31,7 @@ local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 local create_an_attachment = mod.create_an_attachment
 
 local apply_two_dimensional_transformation_to_vector = mod.apply_two_dimensional_transformation_to_vector
-local localize_single_attachment_with_table = mod.localize_single_attachment_with_table
-
-local attachment_localizations = {
-
-}
+local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
 
 -- ################################
 -- Attachment

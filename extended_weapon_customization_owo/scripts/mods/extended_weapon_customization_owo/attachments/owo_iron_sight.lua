@@ -36,6 +36,8 @@ local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 
+local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
+
 -- ################################
 -- Attachment
 -- ################################
