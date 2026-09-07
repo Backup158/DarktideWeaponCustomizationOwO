@@ -20,40 +20,34 @@ local shared_fix_tables = mod.shared_fix_tables
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
-
-
 local custom_fixes = {
     -- ----------------------
     -- Sights
     -- ----------------------
     -- Laspistol Irons
-    {
-        {   attachment_slot = "sight_offset",
-            requirements = {
-                sight = {
-                    has = "owo_iron_sight_laspistol_iron_with_rail",
-                },
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                has = "owo_iron_sight_laspistol_iron_with_rail",
             },
-            fix = {
-                offset = {
-                    position = vector3_box(0.0, 0.00, 0.00),
-                    -- rotation = vector3_box(0, 0, 0),
-                },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.00, 0.00),
+                -- rotation = vector3_box(0, 0, 0),
             },
         },
     },
-    {
-        {   attachment_slot = "sight_offset",
-            requirements = {
-                sight = {
-                    has = "owo_iron_sight_laspistol_iron",
-                },
+    {   attachment_slot = "sight_offset",
+        requirements = {
+            sight = {
+                has = "owo_iron_sight_laspistol_iron",
             },
-            fix = {
-                offset = {
-                    position = vector3_box(0.0, 0.00, 0.00),
-                    -- rotation = vector3_box(0, 0, 0),
-                },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.00, 0.00),
+                -- rotation = vector3_box(0, 0, 0),
             },
         },
     },
