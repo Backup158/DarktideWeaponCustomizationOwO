@@ -279,7 +279,7 @@ function mod.owo_laspistol_iron(given_attachment_node)
         all_these_attachments = {}
     end
 
-    local function laspistol_helper(name_suffix, fixes, kitbashes)
+    local function laspistol_helper(name_suffix, fixes, kitbashes, group_name)
         local shortname = attachment_group_prefix..name_suffix
         create_an_attachment(table_to_return, shortname,
             -- Attachment
@@ -304,15 +304,16 @@ function mod.owo_laspistol_iron(given_attachment_node)
     end
 
     local function laspistol_call_helper_and_rail(name_suffix, fixes, kitbashes)
-        laspistol_helper(name_suffix, fixes, kitbashes)
-        laspistol_helper(name_suffix.."_with_rail", fixes, kitbashes)
+        local group_name = attachment_group_prefix..name_suffix
+        laspistol_helper(name_suffix, fixes, kitbashes, group_name)
+        laspistol_helper(name_suffix.."_with_rail", fixes, kitbashes, group_name)
         if all_these_attachments then
             all_these_attachments.rail = all_these_attachments.rail or {}
             table_insert(all_these_attachments.rail, attachment_group_prefix..name_suffix.."_with_rail")
         end
 
-        laspistol_helper(name_suffix.."_jank", fixes, kitbashes)
-        laspistol_helper(name_suffix.."_jank_with_rail", fixes, kitbashes)
+        laspistol_helper(name_suffix.."_jank", fixes, kitbashes, group_name)
+        laspistol_helper(name_suffix.."_jank_with_rail", fixes, kitbashes, group_name)
         if all_these_attachments then
             all_these_attachments.jank = all_these_attachments.jank or {}
             table_insert(all_these_attachments.jank, attachment_group_prefix..name_suffix.."_jank")

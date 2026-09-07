@@ -147,6 +147,15 @@ mod:add_global_localize_strings({
 	loc_ewc_owo_kalashnikov_barrel = {
 		en = "OwO - Contemporary Barrels - Kalashnikov",
 	},
+	-- ---------------
+	-- Iron Sights
+	-- ---------------
+	loc_ewc_owo_iron_sight_laspistol_iron = {
+		en = "OwO - Iron Sights - Laspistol",
+	},
+	loc_ewc_owo_iron_sight_laspistol_iron_night = {
+		en = "OwO - Iron Sights - Laspistol (Night)",
+	},
 })
 
 -- ###############
@@ -495,7 +504,7 @@ local localizations = {
 		en = "Holographic Sight",
 	},
 	owo_holographic_sight_short = {
-		en = " (Short)",
+		en = "(Short)",
 	},
 	owo_holographic_sight_eotech = {
 		en = "EOTech HWS XPS2",
@@ -505,6 +514,15 @@ local localizations = {
 	-- ---------------
 	owo_iron_sight = {
 		en = "Iron Sight",
+	},
+	owo_iron_sight_with_rail = {
+		en = "(w/ Rail)",
+	},
+	owo_iron_sight_jank = {
+		en = "(Point Shooting)",
+	},
+	owo_iron_sight_jank_with_rail = {
+		en = "(Point Shooting w/ Rail)",
 	},
 	owo_iron_sight_laspistol_iron = {
 		en = "Laspistol",
