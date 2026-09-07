@@ -321,6 +321,7 @@ function mod.owo_laspistol_iron(given_attachment_node)
     end
 
     create_kitbash_full_item(table_to_return, attachment_group_prefix.."_vesa_laspistol_night", nil, "content/weapons/player/ranged/plasma_rifle/attachments/barrel_01/barrel_01", "ap_sight_01")
+    create_kitbash_full_item(table_to_return, attachment_group_prefix.."_vesa_laspistol_night_arc", nil, "content/weapons/player/ranged/arc_rifle/attachments/underbarrel_01/underbarrel_01", "ap_sight_01")
 
     laspistol_call_helper_and_rail("laspistol_iron", nil, {   
         base_unit = _item_empty, -- invisible base
@@ -328,14 +329,27 @@ function mod.owo_laspistol_iron(given_attachment_node)
     laspistol_call_helper_and_rail("laspistol_iron_night", nil, {   
         base_unit = _item_empty, -- invisible base
         attachments = {
+            --[[
             owo_sight_ac1 = {
                 item = attachment_group_prefix.."_vesa_laspistol_night",
                 fix = {
                     offset = {
                         node = 1,
-                        position = vector3_box(0.0, 0.164, -0.014),
+                        position = vector3_box(0.0, 0.167, -0.014),
                         rotation = vector3_box(90.0, 0.0, -180.0),
-                        scale = vector3_box(0.05, 0.05, 0.05),
+                        scale = vector3_box(0.04, 0.03, 0.03),
+                    },
+                },
+            },
+            ]]
+            owo_sight_ac1 = {
+                item = attachment_group_prefix.."_vesa_laspistol_night_arc",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.168, -0.026),
+                        rotation = vector3_box(90.0, 0.0, 0.0),
+                        scale = vector3_box(0.05, 0.03, 0.03),
                     },
                 },
             },
