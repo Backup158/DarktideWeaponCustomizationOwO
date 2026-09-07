@@ -311,12 +311,12 @@ function mod.owo_laspistol_iron(given_attachment_node)
                         has = attachment_group_prefix.."laspistol_iron_jank",
                     },
                     rail = {
-                        missing = "owo_invisible_rifle_rail",
+                        missing = "owo_invisible_lasgun_pistol_rail_empty",
                     },
                 },
                 fix = {
                     attach = {
-                        rail = "owo_invisible_rifle_rail",
+                        rail = "owo_invisible_lasgun_pistol_rail_empty",
                     },
                 },
             },
@@ -335,12 +335,12 @@ function mod.owo_laspistol_iron(given_attachment_node)
                         has = attachment_group_prefix.."laspistol_iron",
                     },
                     rail = {
-                        missing = "owo_invisible_rifle_rail",
+                        missing = "owo_invisible_lasgun_pistol_rail_empty",
                     },
                 },
                 fix = {
                     attach = {
-                        rail = "owo_invisible_rifle_rail",
+                        rail = "owo_invisible_lasgun_pistol_rail_empty",
                     },
                 },
             },
