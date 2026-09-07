@@ -15,6 +15,6 @@ return {
 		"extended_weapon_customization",
 		"extended_weapon_customization_base_additions",
 	},
-	version = "4.9.0",
+	version = "4.10.0",
 	packages = {},
 }
