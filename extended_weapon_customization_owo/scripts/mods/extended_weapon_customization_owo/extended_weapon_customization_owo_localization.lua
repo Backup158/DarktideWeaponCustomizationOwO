@@ -150,6 +150,9 @@ mod:add_global_localize_strings({
 	-- ---------------
 	-- Iron Sights
 	-- ---------------
+	loc_ewc_owo_iron_sight = {
+		en = "OwO - Iron Sights",
+	},
 	loc_ewc_owo_iron_sight_laspistol_iron = {
 		en = "OwO - Iron Sights - Laspistol",
 	},
@@ -514,6 +517,9 @@ local localizations = {
 	-- ---------------
 	owo_iron_sight = {
 		en = "Iron Sight",
+	},
+	owo_iron_sight_kalashnikov = {
+		en = "Kalashnikov",
 	},
 	owo_iron_sight_with_rail = {
 		en = "(w/ Rail)",

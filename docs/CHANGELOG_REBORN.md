@@ -3,6 +3,8 @@
 ## Added
 - Laspistol Night Iron Sights
 - The other laspistol iron sight variants
+## Changed
+- Split Iron Sights into selection groups
 ## Developer
 - Refactored laspistol irons to create all variants
 - Renamed `laspstol_with_rail_jank` to `laspistol_jank_with_rail` arbitrarily. kiss your sister
