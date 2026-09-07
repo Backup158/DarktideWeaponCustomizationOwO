@@ -280,18 +280,27 @@ local function insert_custom_fixes_for_weapon(weapon_id)
         for _, custom_fix in pairs(fixes_table_to_add) do
             local inserted = false
 
+            -- Compares with all fixes currently in the list for that weapon
+            --   Since fixes are an array, I can't tell if it's the same until checking the requirements
+            --   In which case, I must do an exhaustive search
+            -- If a matching condition is found, replace it
             for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
-                -- if requirements are identical, replace that fix
-                if (not inserted) and table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
-                    --[[
-                    if debug_mode then
-                        mod:info("Replacing fix for "..weapon_id)
-                        table_dump(attachments_table_for_ewc.fixes[weapon_id][i], "\tREPLACING", 10)
-                        table_dump(custom_fix, "\tWITH", 10)
+                -- Make sure the fixes try to affect the same slot first (cheap check)
+                local fixes_are_for_the_same_slot = (attachments_table_for_ewc.fixes[weapon_id][i].attachment_slot == custom_fix.attachment_slot)
+                if fixes_are_for_the_same_slot then
+                    -- If requirements are identical, replace that fix
+                    local fixes_have_identical_requirements = table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements)
+                    if (not inserted) and fixes_have_identical_requirements then
+                        --[[
+                        if debug_mode then
+                            mod:info("Replacing fix for "..weapon_id)
+                            table_dump(attachments_table_for_ewc.fixes[weapon_id][i], "\tREPLACING", 10)
+                            table_dump(custom_fix, "\tWITH", 10)
+                        end
+                        ]]
+                        attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
+                        inserted = true
                     end
-                    ]]
-                    attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
-                    inserted = true
                 end
             end
             
