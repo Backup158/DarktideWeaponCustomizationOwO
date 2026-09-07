@@ -312,11 +312,29 @@ function mod.owo_laspistol_iron(given_attachment_node)
         end
     end
 
+    create_kitbash_full_item(table_to_return, attachment_group_prefix.."_vesa_laspistol_night", nil, "content/weapons/player/ranged/plasma_rifle/attachments/barrel_01/barrel_01", "ap_sight_01")
+
     laspistol_call_helper_and_rail("laspistol_iron_jank", nil, {   
         base_unit = _item_empty, -- invisible base
     })
     laspistol_call_helper_and_rail("laspistol_iron", nil, {   
         base_unit = _item_empty, -- invisible base
+    })
+    laspistol_call_helper_and_rail("laspistol_iron_night", nil, {   
+        base_unit = _item_empty, -- invisible base
+        attachments = {
+            owo_sight_ac1 = {
+                item = attachment_group_prefix.."_vesa_laspistol_night",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.164, -0.014),
+                        rotation = vector3_box(90.0, 0.0, -180.0),
+                        scale = vector3_box(0.05, 0.05, 0.05),
+                    },
+                },
+            },
+        },
     })
 
     -- Making list of all attachments global
