@@ -330,23 +330,21 @@ function mod.owo_laspistol_iron(given_attachment_node)
         base_unit = _item_empty, -- invisible base
     })
     laspistol_helper("laspistol_iron", {
-        {
-            {   attachment_slot = "rail",
-                requirements = {
-                    sight = {
-                        has = attachment_group_prefix.."laspistol_iron",
-                    },
-                    rail = {
-                        missing = "owo_invisible_lasgun_pistol_rail_empty",
-                    },
+        {   attachment_slot = "rail",
+            requirements = {
+                sight = {
+                    has = attachment_group_prefix.."laspistol_iron",
                 },
-                fix = {
-                    attach = {
-                        rail = "owo_invisible_lasgun_pistol_rail_empty",
-                    },
+                rail = {
+                    missing = "owo_invisible_lasgun_pistol_rail_empty",
                 },
             },
-        }
+            fix = {
+                attach = {
+                    rail = "owo_invisible_lasgun_pistol_rail_empty",
+                },
+            },
+        },
     }, {   
         base_unit = _item_empty, -- invisible base
     })
