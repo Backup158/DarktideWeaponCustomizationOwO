@@ -278,19 +278,27 @@ local function insert_custom_fixes_for_weapon(weapon_id)
     --table_insert_all_from_table(attachments_table_for_ewc.fixes[weapon_id], fixes_table_to_add)
     if fixes_table_to_add then
         for _, custom_fix in pairs(fixes_table_to_add) do
-            local inserted = false
-
             -- Compares with all fixes currently in the list for that weapon
             --   Since fixes are an array, I can't tell if it's the same until checking the requirements
             --   In which case, I must do an exhaustive search
             -- If a matching condition is found, replace it
-            for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
+            local found_and_replaced_duplicate = false
+            local i = 1
+            local amount_of_fixes_for_weapon_in_final_table = #attachments_table_for_ewc.fixes[weapon_id]
+            while (not found_and_replaced_duplicate) and (i < amount_of_fixes_for_weapon_in_final_table)  do
                 -- Make sure the fixes try to affect the same slot first (cheap check)
                 local fixes_are_for_the_same_slot = (attachments_table_for_ewc.fixes[weapon_id][i].attachment_slot == custom_fix.attachment_slot)
                 if fixes_are_for_the_same_slot then
                     -- If requirements are identical, replace that fix
-                    local fixes_have_identical_requirements = table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements)
-                    if (not inserted) and fixes_have_identical_requirements then
+                    --   Check if requirements exist
+                    local main_has_reqs, custom_has_reqs = attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements
+                    if (not (main_has_reqs and custom_has_reqs)) then
+                        mod:error("Fixes are missing requirements for "..weapon_id)
+                        table_dump(attachments_table_for_ewc.fixes[weapon_id][i], "\tREPLACING", 10)
+                        table_dump(custom_fix, "\tWITH", 10)
+                    end
+                    local fixes_have_identical_requirements = (main_has_reqs and custom_has_reqs) and table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements)
+                    if fixes_have_identical_requirements then
                         --[[
                         if debug_mode then
                             mod:info("Replacing fix for "..weapon_id)
@@ -299,12 +307,13 @@ local function insert_custom_fixes_for_weapon(weapon_id)
                         end
                         ]]
                         attachments_table_for_ewc.fixes[weapon_id][i] = custom_fix
-                        inserted = true
+                        found_and_replaced_duplicate = true
                     end
                 end
+                i = i + 1
             end
             
-            if not inserted then
+            if not found_and_replaced_duplicate then
                 table_insert(attachments_table_for_ewc.fixes[weapon_id], custom_fix)
             end
         end
