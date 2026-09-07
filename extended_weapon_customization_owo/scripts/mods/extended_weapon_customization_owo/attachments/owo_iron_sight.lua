@@ -6,6 +6,9 @@ local mod = get_mod("extended_weapon_customization_owo")
 local vector3 = Vector3
 local vector3_box = Vector3Box
 
+local table = table
+local table_insert = table.insert
+
 -- ################################
 -- Game Content Addresses
 -- ################################
