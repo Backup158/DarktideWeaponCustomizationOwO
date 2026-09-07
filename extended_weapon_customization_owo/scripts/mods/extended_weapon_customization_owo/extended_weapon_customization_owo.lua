@@ -477,8 +477,8 @@ add_attachments_to_list_of_weapons(mod.owo_mag(), { "autogun_p1_m1", "autogun_p2
 -- ----------------
 -- Rail
 -- ----------------
---add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "rifle_rail", "content/items/weapons/player/ranged/rails/lasgun_rifle_rail_01"), {"laspistol_p1_m1"}, "rail")
---add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "lasgun_pistol_rail", "content/items/weapons/player/ranged/rails/lasgun_pistol_rail_01"), {"laspistol_p1_m1"}, "rail")
+add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "rifle_rail", "content/items/weapons/player/ranged/rails/lasgun_rifle_rail_01"), {"laspistol_p1_m1"}, "rail")
+add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "lasgun_pistol_rail", "content/items/weapons/player/ranged/rails/lasgun_pistol_rail_01"), {"laspistol_p1_m1"}, "rail")
 
 -- ----------------
 -- Sight
