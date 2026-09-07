@@ -145,11 +145,16 @@ All flashlights come with color and beam power variants. Each combination is its
 
 ### **Iron Sights - Laspistol**
 - *Weapons*: Heavy Laspistols
-- Variants
+- Includes
+  - Normal iron sights
+  - Night iron sights (highlighted front post)
+- Variants for each
   - Point Shooting: Not aligning the sights. Keeps the pistol a bit below the crosshair
   - Rail: Autoequips a rail.
 
 ![laspistol iron sights comparison](./assets/images/owo_rebuild_laspistol_iron_comp.png)
+
+![laspistol night irons](./assets/images/owo_rebuild_laspistol_iron_night.png)
 
 # Melee
 ## Blade/Body
