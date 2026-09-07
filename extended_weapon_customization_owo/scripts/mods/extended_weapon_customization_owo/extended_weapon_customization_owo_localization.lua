@@ -510,13 +510,19 @@ local localizations = {
 		en = "Laspistol",
 	},
 	owo_iron_sight_laspistol_iron_with_rail = {
-		en = "Laspistol (Rail)",
+		en = "Laspistol (w/ Rail)",
 	},
 	owo_iron_sight_laspistol_iron_jank = {
 		en = "Laspistol (Point Shooting)",
 	},
 	owo_iron_sight_laspistol_iron_jank_with_rail = {
-		en = "Laspistol (Point Shooting with Rail)",
+		en = "Laspistol (Point Shooting w/ Rail)",
+	},
+	owo_iron_sight_laspistol_iron_night = {
+		en = "Laspistol Night",
+	},
+	owo_iron_sight_laspistol_iron_night_with_rail = {
+		en = "Laspistol Night (w/ Rail)",
 	},
 }
 
