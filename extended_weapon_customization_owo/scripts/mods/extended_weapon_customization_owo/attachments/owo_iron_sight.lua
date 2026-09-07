@@ -350,7 +350,7 @@ function mod.owo_laspistol_iron(given_attachment_node)
                 fix = {
                     offset = {
                         node = 1,
-                        position = vector3_box(0.0, 0.166, -0.027),
+                        position = vector3_box(0.0, 0.166, -0.026),
                         rotation = vector3_box(90.0, 0.0, 0.0),
                         scale = vector3_box(0.045, 0.03, 0.03),
                     },
