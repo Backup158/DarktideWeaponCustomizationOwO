@@ -1,4 +1,13 @@
-# 4.10,0 - 2026-09-XXX
+# 4.11.0 - 2026-09-07
+*May require reequiping some Laspistol iron sights*
+## Added
+- Laspistol Night Iron Sights
+- The other laspistol iron sight variants
+## Developer
+- Refactored laspistol irons to create all variants
+- Renamed `laspstol_with_rail_jank` to `laspistol_jank_with_rail` arbitrarily. kiss your sister
+
+# 4.10,0 - 2026-09-07
 ## Added
 - Invisible Rifle Rails
     - For laspistol
