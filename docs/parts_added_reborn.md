@@ -128,13 +128,28 @@ All flashlights come with color and beam power variants. Each combination is its
 > 
 > Nonfunctional
 
+## Rail
+### **Invisible Rifle Rail**
+- *Weapons*: Heavy Laspistols
+- huh?
+### **Invisible Pistol Rail**
+- *Weapons*: Heavy Laspistols
+- Equipping these will hide your sights too
+
+![when you can't even SAY! MY NAME!](./assets/images/invisible.gif)
+
 ## Sight
-### **Iron Sights**
+### **Iron Sights - Kalashnikov**
 - *Weapons*: Infantry/Braced/Vigilant Autoguns,
 - AK Irons
-> [!WARNING]
-> 
-> Works but alignment can decide to not work
+
+### **Iron Sights - Laspistol**
+- *Weapons*: Heavy Laspistols
+- Variants
+  - Point Shooting: Not aligning the sights. Keeps the pistol a bit below the crosshair
+  - Rail: Autoequips a rail.
+
+![laspistol iron sights comparison](./assets/images/owo_rebuild_laspistol_iron_comp.png)
 
 # Melee
 ## Blade/Body
