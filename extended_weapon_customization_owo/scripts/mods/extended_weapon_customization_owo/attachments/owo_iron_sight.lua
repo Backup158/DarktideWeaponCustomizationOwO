@@ -305,45 +305,13 @@ function mod.owo_laspistol_iron(given_attachment_node)
     laspistol_helper("laspistol_iron_with_rail_jank", nil, {   
         base_unit = _item_empty, -- invisible base
     })
-    laspistol_helper("laspistol_iron_jank", {
-        {   attachment_slot = "rail",
-            requirements = {
-                sight = {
-                    has = attachment_group_prefix.."laspistol_iron_jank",
-                },
-                rail = {
-                    missing = "owo_invisible_lasgun_pistol_rail_empty",
-                },
-            },
-            fix = {
-                attach = {
-                    rail = "owo_invisible_lasgun_pistol_rail_empty",
-                },
-            },
-        },
-    }, {   
+    laspistol_helper("laspistol_iron_jank", nil, {   
         base_unit = _item_empty, -- invisible base
     })
     laspistol_helper("laspistol_iron_with_rail", nil, {   
         base_unit = _item_empty, -- invisible base
     })
-    laspistol_helper("laspistol_iron", {
-        {   attachment_slot = "rail",
-            requirements = {
-                sight = {
-                    has = attachment_group_prefix.."laspistol_iron",
-                },
-                rail = {
-                    missing = "owo_invisible_lasgun_pistol_rail_empty",
-                },
-            },
-            fix = {
-                attach = {
-                    rail = "owo_invisible_lasgun_pistol_rail_empty",
-                },
-            },
-        },
-    }, {   
+    laspistol_helper("laspistol_iron", nil, {   
         base_unit = _item_empty, -- invisible base
     })
 
@@ -353,6 +321,40 @@ function mod.owo_laspistol_iron(given_attachment_node)
     end
 
     -- This is the point to insert fixes that apply to all the parts
+    --  Adding rail to railed ones
+    table_insert(table_to_return.fixes, {
+        attachment_slot = "rail",
+        requirements = {
+            sight = {
+                has = attachment_group_prefix.."laspistol_iron_with_rail_jank".."|"..attachment_group_prefix.."laspistol_iron_with_rail",
+            },
+            rail = {
+                missing = "lasgun_pistol_rail_01",
+            },
+        },
+        fix = {
+            attach = {
+                rail = "lasgun_pistol_rail_01",
+            },
+        },
+    })
+    -- Removing rails for unravished
+    table_insert(table_to_return.fixes, {
+        attachment_slot = "rail",
+        requirements = {
+            sight = {
+                has = attachment_group_prefix.."laspistol_iron_jank".."|"..attachment_group_prefix.."laspistol_iron",
+            },
+            rail = {
+                missing = "owo_invisible_lasgun_pistol_rail_empty",
+            },
+        },
+        fix = {
+            attach = {
+                rail = "owo_invisible_lasgun_pistol_rail_empty",
+            },
+        },
+    })
 
     return table_to_return
 
