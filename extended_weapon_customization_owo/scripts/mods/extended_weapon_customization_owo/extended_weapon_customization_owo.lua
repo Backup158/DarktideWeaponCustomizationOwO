@@ -282,7 +282,7 @@ local function insert_custom_fixes_for_weapon(weapon_id)
 
             for i = 1, #attachments_table_for_ewc.fixes[weapon_id] do
                 -- if requirements are identical, replace that fix
-                if table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
+                if (not inserted) and table_equals(attachments_table_for_ewc.fixes[weapon_id][i].requirements, custom_fix.requirements) then
                     --[[
                     if debug_mode then
                         mod:info("Replacing fix for "..weapon_id)
@@ -459,8 +459,8 @@ add_attachments_to_list_of_weapons(mod.owo_mag(), { "autogun_p1_m1", "autogun_p2
 -- ----------------
 -- Rail
 -- ----------------
-add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "rifle_rail", "content/items/weapons/player/ranged/rails/lasgun_rifle_rail_01"), {"laspistol_p1_m1"}, "rail")
-add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "lasgun_pistol_rail", "content/items/weapons/player/ranged/rails/lasgun_pistol_rail_01"), {"laspistol_p1_m1"}, "rail")
+--add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "rifle_rail", "content/items/weapons/player/ranged/rails/lasgun_rifle_rail_01"), {"laspistol_p1_m1"}, "rail")
+--add_attachments_to_list_of_weapons(mod.owo_invisible_generic("rail", "ap_rail_01", "lasgun_pistol_rail", "content/items/weapons/player/ranged/rails/lasgun_pistol_rail_01"), {"laspistol_p1_m1"}, "rail")
 
 -- ----------------
 -- Sight
