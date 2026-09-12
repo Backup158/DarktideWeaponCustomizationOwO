@@ -263,6 +263,33 @@ function mod.localize_attachment_triple_threat(attachment_group_name, attachment
 end
 
 -- ----------
+-- Localize Attachment QUADRUPLE Threat
+-- For when I have the same suffix in the same family
+--   like i have a_x, a_y, a_z as the main variants
+--   and each of those have variants j k l
+--   so I'd have to localize a_x_j, a_x_k, ...
+--   I'll store these as a_x and a_j, and so on
+-- ----------
+function mod.localize_attachment_quadruple_threat_shared_suffix(attachment_group_name, specific_name, variant_suffix, number_string)
+    local attachment_name = attachment_group_name.."_"..specific_name.."_"..variant_suffix
+    local attachment_start = mod:localize("loc_"..attachment_group_name.."_"..specific_name)
+    local attachment_end = mod:localize("loc_"..attachment_group_name.."_"..variant_suffix)
+
+    local attachment_combination = attachment_start.." - "..attachment_end
+
+    if number_string then
+        attachment_combination = attachment_combination.." "..number_string
+        attachment_name = attachment_name.."_"..number_string
+    end
+
+    mod:add_global_localize_strings({
+        ["loc_"..attachment_name] = {
+            en = attachment_combination
+        },
+    })
+end
+
+-- ----------
 -- Apply 2D Transformation to Vector3Box
 -- DESC: given a vector3box, multiply it with the transformation given
 --  not just modifying the vector without returning because that affects the one it was cloned from
