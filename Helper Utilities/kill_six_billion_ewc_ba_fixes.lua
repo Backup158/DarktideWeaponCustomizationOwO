@@ -321,7 +321,7 @@ local function one_fix_get_and_compare_all_targets_to_ba_fix(weapon_id, current_
             local all_are_true = true
             local index_of_each_intel = 1
             -- All tables will have the same length, so it's fine
-            while all_are_true and (index_of_each_intel < #slot_to_check) do
+            while all_are_true and (index_of_each_intel < (#slot_to_check + 1)) do
                 -- The logic goes like this
                 --   Comparing fix returns true if that case works
                 --   and it retuns false if not
