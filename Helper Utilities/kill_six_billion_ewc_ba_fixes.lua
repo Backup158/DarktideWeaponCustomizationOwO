@@ -7,7 +7,8 @@
 local ewc_ba = get_mod("extended_weapon_customization_base_additions")
 
 if not (ewc_ba and ewc_ba.extended_weapon_customization_plugin and ewc_ba.extended_weapon_customization_plugin.fixes) then
-    echo_if_verbose("Missing ewc ba fixes. Standing down.")
+    -- If you uncomment this, you need to have some `local mod = get_mod("xxx")`
+    -- mod:info("Missing ewc ba fixes. Standing down.")
     return
 end 
 
