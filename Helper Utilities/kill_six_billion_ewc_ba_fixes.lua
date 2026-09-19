@@ -217,17 +217,17 @@ local function check_my_fix_for_target(one_of_my_fixes_under_a_weapon)
 
     local function check_for_target_intel(one_fix)
         -- These could be formatted as `local x = fix[target].y or "default" but I want the error message
-        local slot_to_check = one_of_my_fixes_under_a_weapon[target_acquired_name].slot
+        local slot_to_check = one_fix.slot
         if not slot_to_check then
             echo_if_verbose("Given fix was missing a slot. Defaulting to rail.")
             slot_to_check = "rail"
         end
-        local type_of_check = one_of_my_fixes_under_a_weapon[target_acquired_name].has_or_missing
+        local type_of_check = one_fix.has_or_missing
         if not type_of_check then
             echo_if_verbose("Given fix was missing if it was has/missing. Defaulting to has.")
             type_of_check = "has"
         end
-        local my_target_requirements_string = one_of_my_fixes_under_a_weapon[target_acquired_name].condition
+        local my_target_requirements_string = one_fix.condition
         if not my_target_requirements_string then
             echo_if_verbose("Given fix was missing if it was has/missing. Defaulting to scope_01.")
             my_target_requirements_string = "scope_01"
