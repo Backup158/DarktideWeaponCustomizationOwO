@@ -142,10 +142,13 @@ mod:add_global_localize_strings({
 		en = "OwO - Holographic Sights - DOT",
 	},
 	-- ---------------
-	-- Kalashnikov Barrel
+	-- Contemporary Barrel
 	-- ---------------
 	loc_ewc_owo_kalashnikov_barrel = {
 		en = "OwO - Contemporary Barrels - Kalashnikov",
+	},
+	loc_ewc_owo_armalite_barrel = {
+		en = "OwO - Contemporary Barrels - Armalite",
 	},
 	-- ---------------
 	-- Iron Sights
@@ -496,6 +499,12 @@ local localizations = {
 	-- Super Short: Shot Glass
 	owo_kalashnikov_barrel_super_short = {
 		en = "Shot Glass",
+	},
+	owo_armalite_barrel = {
+		en = "Armalite Barrel",
+	},
+	owo_armalite_barrel_no_post = {
+		en = "No Front Post",
 	},
 	-- ------------------------------
 	-- Sights

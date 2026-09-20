@@ -397,3 +397,145 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
     return table_to_return
 
 end
+
+function mod.owo_armalite_barrel(given_slot, given_attachment_node)
+    local current_slot = given_slot or "barrel"
+    local current_attachment_node = given_attachment_node or "ap_barrel_01"
+
+    local attachment_group_name = "owo_armalite_barrel"
+    local attachment_group_prefix = attachment_group_name.."_"
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
+
+    -- Logging all names if this is the first time
+    local all_these_attachments = nil
+    local list_of_names_to_use
+    if not mod.all_owo_armalite_barrel_names then
+        all_these_attachments = {}
+        list_of_names_to_use = all_these_attachments
+    else
+        list_of_names_to_use = mod.all_owo_armalite_barrel_names
+    end
+
+    local function owo_armalite_barrel_helper(name_suffix, number_as_string, fixes, kitbashes, table_to_insert_to)
+        local shortname = attachment_group_prefix..name_suffix.."_"..number_as_string
+        create_an_attachment(table_to_return, shortname,
+            -- Attachment
+            {   replacement_path = _item_ranged.."/barrels/"..shortname,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+                custom_selection_group = attachment_group_name,
+                randomization_requirement = "mod_option_modern_barrel_randomization",
+            },
+            -- Fixes
+            fixes,
+            -- Kitbash
+            kitbashes,
+            -- Attachment Node
+            current_attachment_node
+        )
+        -- Adding name to this group's list
+        if all_these_attachments then
+            table_to_insert_to[name_suffix] = table_to_insert_to[name_suffix] or {}
+            table_insert(table_to_insert_to[name_suffix], shortname)
+        end
+        
+        localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
+    end
+
+    -- Creating helper attachments
+    local owo_armalite_kitbash_item_string_prefix = _item_ranged.."/barrels/owo_armalite_barrel_helper_barrel_"
+    
+    -- Short: This one is slightly longer than the other shorts
+    list_of_names_to_use.type1 = list_of_names_to_use.type1 or {}
+    local type1_short_distance = 0.202
+    local type1_super_short_distance = 0.134
+    for_all_weapon_models(8, {3, 4}, function(number_as_string)
+        local owo_kitbash_helper_address = owo_armalite_kitbash_item_string_prefix.."squish_"..number_as_string
+        create_kitbash_full_item(table_to_return, owo_kitbash_helper_address, nil, "content/weapons/player/ranged/autogun_rifle_ak/attachments/barrel_"..number_as_string.."/barrel_"..number_as_string, current_attachment_node)
+        owo_kalashnikov_barrel_helper("short", number_as_string, nil,
+        {
+            base_unit = "content/weapons/player/ranged/lasgun_rifle_krieg/attachments/barrel_07/barrel_07",
+            attachments = {
+                owo_barrel_we_actually_see = {
+                    item = owo_kitbash_helper_address,
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, -1 * type1_short_distance, 0.0),
+                            rotation = vector3_box(0.0, 0, 0.0),
+                            scale = vector3_box(1, 0.8, 1),
+                        },
+                    },
+                },
+            },
+        }, list_of_names_to_use.type1)
+        owo_kalashnikov_barrel_helper("super_short", number_as_string, nil, 
+        {
+            base_unit = "content/weapons/player/ranged/lasgun_rifle_krieg/attachments/barrel_07/barrel_07",
+            attachments = {
+                owo_barrel_we_actually_see = {
+                    item = owo_kitbash_helper_address,
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, -1 * type1_super_short_distance, 0.0),
+                            rotation = vector3_box(0.0, 0, 0.0),
+                            scale = vector3_box(1, 0.57, 1),
+                        },
+                    },
+                },
+            },
+        }, list_of_names_to_use.type1)
+    end)
+
+
+    -- Making list of all attachments global
+    if all_these_attachments then
+        -- Making all the requirement strings from the current arrays of names
+        -- all_these_attachments
+        --  |- Type 1
+        --     |- variant a
+        --     |- variant b
+        --  |- Type 2
+        --     |- variant a
+        --     |- variant b
+        -- I want to have an .all for each type, then one overall
+        local final_all_requirements = {}
+        for type_of_armalite_barrel, table_containing_variants_with_name_arrays in pairs(all_these_attachments) do
+            mod.shallow_create_all_requirements_string_in_table(table_containing_variants_with_name_arrays)
+            -- Now, all_these_attachments[whatever_name].all will exist
+            table_insert(final_all_requirements, all_these_attachments[type_of_armalite_barrel].all)
+        end
+        all_these_attachments.all = mod.create_requirements_string_from_values_of_names_table(final_all_requirements)
+
+        mod.all_owo_armalite_barrel_names = all_these_attachments
+    end
+
+    -- These fixes are used by multiple barrels
+    -- Barrel
+    local all_braced_autogun_receivers = mod.all_braced_autogun_receivers
+    --  Type 1 (Shorter)
+    --      Braced Autogun: The barrel origin is lower so I need not drop it
+    table_insert(table_to_return.fixes, 
+    {
+        attachment_slot = "barrel",
+        requirements = {
+            barrel = {
+                has = mod.all_owo_armalite_barrel_names,
+            },
+            receiver = {
+                has = all_braced_autogun_receivers,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, 0.0, 0.0),
+            },
+        },
+    })
+
+    --table.dump(table_to_return.fixes, "uwu fixes from armalite", 15)
+
+    return table_to_return
+
+end
