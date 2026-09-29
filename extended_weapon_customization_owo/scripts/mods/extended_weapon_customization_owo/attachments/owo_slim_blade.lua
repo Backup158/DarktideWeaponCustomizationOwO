@@ -437,7 +437,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_dclaw_g_scl = vector3_box(0.6, 1.0, 1.0)
     local slim_dclaw_scl = vector3_box(0.5, 0.65, 1.0)
     local slim_dclaw_g_scl = vector3_box(0.6, 0.65, 1.0)
-    slim_blade_variant_helper(7, nil, "dclaw", "content/weapons/player/melee/combat_sword/attachments/blade_01/blade_01", {
+    slim_blade_variant_helper(9, { 8 }, "dclaw", "content/weapons/player/melee/combat_sword/attachments/blade_01/blade_01", {
         flat_scale = flat_dclaw_scl,
         flat_g_scale = flat_dclaw_g_scl,
         slim_scale = slim_dclaw_scl,
