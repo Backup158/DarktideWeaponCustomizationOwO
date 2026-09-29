@@ -1,6 +1,8 @@
 # 4.12.0 - WIP
 ## Added
 - Armalite Barrels
+- Slim Blades
+    - Has the new DClaw blade
 ## Fixed
 - Combat Shotgun sights being placed into the wrong slot
 ## Developer
