@@ -38,7 +38,7 @@ Note: Anything here that said "Discord only" is referring to the [Darktide Modde
   - On the Nexus page of EWC, in the "Optional Files" section. Put this one before the other add-on plugins in the load order.
   - Adds parts across different weapon types. Notably contains reflex sights, laser sights, and flaming sword blades.
 - *The Syndonai Edits* (Syn's Edits) by Syndonai 
-  - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/)
+  - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1554092963246903338)
   - Contains many sci-fi and 40k parts. Generally, it just does everything because Syn is a legend.
   - There is a changelog included in the files, which mentions all the added parts.
 - *MOAR DAKKA!* by MarcathRoosevelt
