@@ -8,7 +8,7 @@ Note that I (Backup158) wrote this and am hosting it on the webpage for my EWC a
 ## Temporary Link to Fixed Version
 After Depths of the Damned (1.13.0), EWC and some related mods broke. The Real Stimm Shady, Geoff from Accounting, and myself investigated some of the issues and have found fixes. We've submitted these to grasmann for review and merging. In the meantime, our edits can be found here:
 
-[Repository with Downloads for Fixes](https://github.com/Backup158/darktide_extended_weapon_customization_BaH)
+[Downloads for Fixes](https://github.com/Backup158/darktide_extended_weapon_customization_BaH/releases/latest)
 
 After this has been merged into the main mod, this section will be removed.
 
