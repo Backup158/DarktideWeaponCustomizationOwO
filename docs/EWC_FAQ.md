@@ -177,7 +177,9 @@ For example, you could color a barrel purple, which will make the muzzle purple 
 ## 11. Weapon damage is doubled in the Psykhanium.</a>
 It’s a side effect of the damage type feature. It only affects offline matches, not online matches, so you won’t be banned.
 
-Unfortunately, there is no workaround. You can only disable the mod temporarily whenever you want to test breakpoints (Mod Options --> Toggle Mods --> Extended Weapon Customization).
+~~Unfortunately, there is no workaround. You can only disable the mod temporarily whenever you want to test breakpoints (Mod Options --> Toggle Mods --> Extended Weapon Customization).~~
+
+Download the fix for Depths of the Damned
 
 <a id="faq-12">
 
@@ -196,10 +198,10 @@ Using [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) helps
 
 <a id="faq-14">
 
-## 14. The Hive Scum dual weapons are missing VFX for the left gun.</a>
-This is a known issue. it happens regardless if you have equipped any customized parts. There is no ETA on the fix.
+## 14. The Hive Scum dual weapons are missing VFX for the right-hand gun.</a>
+~~This is a known issue. it happens regardless if you have equipped any customized parts. There is no ETA on the fix.~~
 
-![Dual autopistols with one vfx](/assets/images/ewc_faq_dual_pistol_vfx.png)
+Download the fix for Depths of the Damned
 
 <a id="faq-15">
 
