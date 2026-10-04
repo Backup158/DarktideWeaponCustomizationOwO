@@ -5,6 +5,7 @@
     - Has the new DClaw blade
 ## Fixed
 - Combat Shotgun sights being placed into the wrong slot
+- Missing mod title
 ## Developer
 - Removed version logging
     - DMF does this natively now
