@@ -624,6 +624,6 @@ if mod:get("owo_mode") then
 end
 
 -- mod_title is what ewc uses to label this when debugging
-localizations.mod_title = mod_name
+localizations.mod_title = localizations.mod_name
 return localizations
 
