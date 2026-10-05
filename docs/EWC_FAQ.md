@@ -49,7 +49,7 @@ Note: Anything here that said "Discord only" is referring to the [Darktide Modde
   - Contains many sci-fi and 40k parts. Generally, it just does everything because Syn is a legend.
   - There is a changelog included in the files, which mentions all the added parts.
 - *MOAR DAKKA!* by MarcathRoosevelt
-  - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1551106025648558211)
+  - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1556508761928245270)
   - Adds heretic weapon skins, machine gun parts to autoguns, and fisting. Most parts are for Ogryn.
   - The most recent changelog is also found [linked in the pins](https://discord.com/channels/1048312349867646996/1168063453416669284/1483360143558312008).
 - [*Ostracized without Objection*](https://www.nexusmods.com/warhammer40kdarktide/mods/429) (OwO) by Backup158
