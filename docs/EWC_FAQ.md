@@ -48,7 +48,7 @@ Note: Anything here that said "Discord only" is referring to the [Darktide Modde
   - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1556194497917091900)
   - Contains many sci-fi and 40k parts. Generally, it just does everything because Syn is a legend.
   - There is a changelog included in the files, which mentions all the added parts.
-- *MOAR DAKKA!* by MarcathRoosevelt
+- *MOAR DAKKA!* by The Real Stimm Shady (MarcathRoosevelt)
   - Discord only: [Link to message](https://discord.com/channels/1048312349867646996/1168063453416669284/1556508761928245270)
   - Adds heretic weapon skins, machine gun parts to autoguns, and fisting. Most parts are for Ogryn.
   - The most recent changelog is also found [linked in the pins](https://discord.com/channels/1048312349867646996/1168063453416669284/1483360143558312008).
@@ -81,7 +81,11 @@ extended_weapon_customization_empty_scopes
 ```
 You don't have to use every add-on plugin. The list just includes most of the common ones.
 
-Load EWC before `GoToMastery` and `enhanced_character_selection`. Do NOT use with `DumpStatFinder`.
+Load MICP and VLCCP high in the load order; they can be prevented from working if a mod before them tries to edit the same thing. One example is `transonic_stance_colors`, so make sure these patches load before that. (Note: with the temp fixes, EWC gets the same load order treatment as the VLCCP)
+
+Load EWC before `GoToMastery`, `enhanced_character_selection`, `transonic_stance_colors`, and `visible_equipment`. 
+
+Do NOT use with `DumpStatFinder`.
 
 <a id="faq">
 
