@@ -168,6 +168,7 @@ local custom_fixes = {
         },
     },
     -- Syn Arbites Barrels
+    --[[
     {   attachment_slot = "muzzle",
         requirements = {
             muzzle = {
@@ -187,6 +188,7 @@ local custom_fixes = {
             },
         },
     },
+    ]]
     --  EWC BA Combat Shotgun
     {   attachment_slot = "muzzle",
         requirements = {
@@ -239,6 +241,121 @@ local custom_fixes = {
         fix = {
             offset = {
                 position = vector3_box(0, 0.69, 0.0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    -- ----------------------
+    -- Bayonets
+    -- ----------------------
+    {   attachment_slot = "bayonet",
+        requirements = {
+            bayonet = {
+                has = "query:shotgun_p3_m1,bayonet,extended_weapon_customization_owo",
+            },
+            barrel = {
+                has = pump_action_shotgun_normal_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.744, -0.058),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    {   attachment_slot = "bayonet",
+        requirements = {
+            bayonet = {
+                has = "query:shotgun_p3_m1,bayonet,extended_weapon_customization_owo",
+            },
+            barrel = {
+                has = pump_action_shotgun_long_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.764, -0.058),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    -- Syn Arbites Barrels
+    --[[
+    {   attachment_slot = "bayonet",
+        requirements = {
+            bayonet = {
+                has = "query:shotgun_p3_m1,bayonet,extended_weapon_customization_owo",
+            },
+            barrel = {
+                has = short_arbites_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.41, 0.01),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    ]]
+    --  EWC BA Combat Shotgun
+    {   attachment_slot = "bayonet",
+        requirements = {
+            bayonet = {
+                has = "query:shotgun_p3_m1,bayonet,extended_weapon_customization_owo",
+            },
+            barrel = {
+                has = combat_shotgun_normal_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.512, -0.038),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    {   attachment_slot = "bayonet",
+        requirements = {
+            bayonet = {
+                has = "query:shotgun_p3_m1,bayonet,extended_weapon_customization_owo",
+            },
+            barrel = {
+                has = combat_shotgun_slightly_shorter_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.476, -0.038),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    {   attachment_slot = "bayonet",
+        requirements = {
+            bayonet = {
+                has = "query:shotgun_p3_m1,bayonet,extended_weapon_customization_owo",
+            },
+            barrel = {
+                has = combat_shotgun_long_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.706, -0.054),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
                 node = 1,
