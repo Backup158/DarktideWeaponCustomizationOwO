@@ -58,19 +58,27 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
             randomization_requirement = "mod_option_flashlight_randomization",
         },
         -- Fixes
-        nil,
+        --nil,
+        {
+            {   attachment_slot = "flashlight",
+                requirements = {
+                    flashlight = {
+                        has = attachment_name,
+                    },
+                },
+                fix = {
+                    node = 1,
+                    offset = {
+                        position = table_of_children_and_fixes.base_position or vector3_box(0.0, 0.0, 0.0),
+                        rotation =  vector3_box(0, 0, 0),
+                        scale = vector3_box(1.0, 1.0, 1.0),
+                    },
+                },
+            }
+        },
         -- Kitbash
         {
             base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
-            fix = {
-                disable_in_ui = false,
-                offset = {
-                    node = table_of_children_and_fixes.base_node or 1,
-                    position = table_of_children_and_fixes.base_position or vector3_box(0, 0, 0),
-                    rotation = vector3_box(0.0, 0.0, 0.0),
-                    scale = vector3_box(1.0, 1.0, 1.0)
-                },
-            },
             attachments = table_clone(table_of_children_and_fixes.children),
             
         },
