@@ -58,28 +58,30 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
             randomization_requirement = "mod_option_flashlight_randomization",
         },
         -- Fixes
-        --nil,
+        nil,
+        -- Kitbash
+        --  There are two routes I can take: 
+        --      base_unit empty with all children (messes up flashlight_template color)
+        --      base_unit flashlight_01 with attachments and position set in fixes (induces the Lottery)
+        --  I have chosen the forbidden middle path, shoving a real base unit inside the anus lmao
         {
-            {   attachment_slot = "flashlight",
-                requirements = {
-                    flashlight = {
-                        has = attachment_name,
+            base_unit = _item_empty,
+            --base_unit = "content/weapons/player/attachments/flashlights/flashlight_05/flashlight_05",
+            attachments = {
+                owo_flashlight_base = {
+                    item = _item_ranged.."/flashlights/flashlight_01",
+                    fix = {
+                        disable_in_ui = false,
+                        offset = {
+                            node = table_of_children_and_fixes.base_node or 1,
+                            position = table_of_children_and_fixes.base_position or vector3_box(0, 0, 0),
+                            rotation = vector3_box(0.0, 0.0, 0.0),
+                            scale = vector3_box(1.0, 1.0, 1.0)
+                        },
                     },
-                },
-                fix = {
-                    node = 1,
-                    offset = {
-                        position = table_of_children_and_fixes.base_position or vector3_box(0.0, 0.0, 0.0),
-                        rotation =  vector3_box(0, 0, 0),
-                        scale = vector3_box(1.0, 1.0, 1.0),
-                    },
+                    children = table_clone(table_of_children_and_fixes.children)
                 },
             }
-        },
-        -- Kitbash
-        {
-            base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
-            attachments = table_clone(table_of_children_and_fixes.children),
             
         },
         -- ATTACHMENT NODE 
@@ -134,18 +136,24 @@ function mod.owo_color_flashlight()
                     custom_selection_group = colored_flashlight_group_name,
                 },
                 -- Fixes
-                nil,
+                {
+                    {   attachment_slot = "flashlight",
+                        requirements = {
+                            has = owo_invis_color_flashlight,
+                        },
+                        fix = {
+                            offset = {
+                                node = 1,
+                                position = vector3_box(0.0, 0.0, 0.0),
+                                rotation = vector3_box(0.0, 0.0, 0.0),
+                                scale = vector3_box(0.0001, 0.0001, 0.0001),
+                            },
+                        },
+                    }
+                },
                 -- Kitbash
                 {
                     base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
-                    fix = {
-                        offset = {
-                            node = 1,
-                            position = vector3_box(0.0, 0.0, 0.0),
-                            rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = vector3_box(0.0001, 0.0001, 0.0001),
-                        },
-                    },
                 },
                 -- ATTACHMENT NODE 
                 -- DON'T FORGET THIS
@@ -187,7 +195,7 @@ function mod.owo_tactical_flashlight()
             -- ---------------
             local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
             kitbash_flashlight_help(table_to_return, owo_tactical_light_01, attachment_group_prefix, color, template_suffix, {
-                base_position = vector3_box(0.0, 0.202, 0.0),
+                base_position = vector3_box(0.0, 0.102, 0.0),
                 children = {
                     flashlight_ac1 = {
                         item = _item_ranged.."/flashlights/owo_flashlight_ac1_grip4",
