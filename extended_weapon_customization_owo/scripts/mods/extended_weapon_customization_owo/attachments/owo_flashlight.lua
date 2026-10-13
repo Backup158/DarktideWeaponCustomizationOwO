@@ -60,29 +60,18 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
         -- Fixes
         nil,
         -- Kitbash
-        --  There are two routes I can take: 
+        --  There are some routes I can take: 
         --      base_unit empty with all children (messes up flashlight_template color)
         --      base_unit flashlight_01 with attachments and position set in fixes (induces the Lottery)
-        --  I have chosen the forbidden middle path, shoving a real base unit inside the anus lmao
+        --      the forbidden middle path, shoving a real base unit inside the anus lmao (this looks like ass)
+        --          (then hiding the real base unit with fixes)
+        --          then plugin authors can move it by shifting owo_flashlight_base
+        --  OR
+        --  I just use the default position and move it as needed
+        --  yknow, like every other normal attachment
         {
-            base_unit = _item_empty,
-            --base_unit = "content/weapons/player/attachments/flashlights/flashlight_05/flashlight_05",
-            attachments = {
-                owo_flashlight_base = {
-                    item = _item_ranged.."/flashlights/flashlight_01",
-                    fix = {
-                        disable_in_ui = false,
-                        offset = {
-                            node = table_of_children_and_fixes.base_node or 1,
-                            position = table_of_children_and_fixes.base_position or vector3_box(0, 0, 0),
-                            rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = vector3_box(1.0, 1.0, 1.0)
-                        },
-                    },
-                    children = table_clone(table_of_children_and_fixes.children)
-                },
-            }
-            
+            base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
+            attachments = table_clone(table_of_children_and_fixes.children),
         },
         -- ATTACHMENT NODE 
         -- DON'T FORGET THIS
