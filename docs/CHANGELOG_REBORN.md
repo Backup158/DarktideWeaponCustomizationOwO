@@ -3,6 +3,7 @@
 - Armalite Barrels
 - Slim Blades
     - Has the new DClaw blade
+- Support for Huntsman's Shotgun
 ## Fixed
 - Combat Shotgun sights being placed into the wrong slot
 - Missing mod title

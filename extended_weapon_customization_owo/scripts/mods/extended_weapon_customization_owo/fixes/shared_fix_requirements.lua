@@ -140,6 +140,24 @@ mod.shared_fix_tables = {
             },
         },
     },
+    ["default_sight_reticle_position_holo_for_2"] = {   
+        attachment_slot = "sight_reticle",
+        requirements = {
+            sight_2 = {
+                has = all_holographic_sights_names,
+            },
+            sight_reticle = {
+                has = all_owo_sight_reticle_names,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0.0, -0.016, 0.01),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+            },
+        },
+    },
     -- Rails
     --  Removes rail for AK Irons
     ["default_sight_ak_iron_remove_rail"] = {   
@@ -180,6 +198,18 @@ mod.shared_fix_tables = {
     -- --------------------------------------
     ["default_attachment_sight_reticle"] = {
         parent_slot = "sight",
+        default_path = _item_empty_trinket,
+        fix = {
+            offset = {
+                position = vector3_box(0, 0, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    ["default_attachment_sight_reticle_for_2"] = {
+        parent_slot = "sight_2",
         default_path = _item_empty_trinket,
         fix = {
             offset = {

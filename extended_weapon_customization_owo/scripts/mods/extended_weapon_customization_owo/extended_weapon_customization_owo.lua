@@ -350,7 +350,7 @@ local all_ranged_weapons = {
     "bolter_p1_m1", "boltpistol_p1_m1", 
     "flamer_p1_m1", "plasmagun_p1_m1", 
     "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
-    "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
+    "shotgun_p1_m1", "shotgun_p2_m1", "shotgun_p3_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
     "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1",
     "arc_rifle_p1_m1", "galvanic_rifle_p1_m1", "phosphor_pistol_p1_m1",
@@ -362,6 +362,7 @@ local ranged_muzzle_no_double = {
     "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
     "shotgun_p1_m1", 
     --"shotgun_p2_m1", 
+    "shotgun_p3_m1", 
     "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     --"ogryn_gauntlet_p1_m1", 
     "ogryn_rippergun_p1_m1", 
@@ -378,13 +379,15 @@ local ranged_weapons_using_regular_sight = {
     --"flamer_p1_m1", "plasmagun_p1_m1", 
     "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", "laspistol_p1_m1", 
     -- "shotgun_p1_m1", 
-    "shotgun_p2_m1", "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
+    "shotgun_p2_m1", 
+    "shotgun_p4_m1", "shotpistol_shield_p1_m1", "stubrevolver_p1_m1", 
     "ogryn_gauntlet_p1_m1", "ogryn_rippergun_p1_m1", "ogryn_heavystubber_p1_m1", "ogryn_heavystubber_p2_m1", "ogryn_thumper_p1_m1", 
     "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1",
     "arc_rifle_p1_m1", "galvanic_rifle_p1_m1", "phosphor_pistol_p1_m1",
 }
 local ranged_weapons_using_sight_2 = {
     "shotgun_p1_m1", 
+    "shotgun_p3_m1", 
 }
 local all_melee_weapons = {
     "chainaxe_p1_m1", 
@@ -489,6 +492,7 @@ add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), ranged_weapons_using
 add_attachments_to_list_of_weapons(mod.owo_holographic_sight(), ranged_weapons_using_sight_2, "sight_2")
 add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), ranged_weapons_using_sight_2, "sight_reticle")
 add_attachments_to_list_of_weapons(mod.owo_laspistol_iron(), { "laspistol_p1_m1", }, "sight")
+add_attachments_to_list_of_weapons(mod.owo_invisible_generic("sight", "ap_sight_01", "shotgun_sight", "content/items/weapons/player/ranged/sights/shotgun_pump_action_sight_01"), {"shotgun_p3_m1"}, "sight")
 
 -- ################
 -- Melee
