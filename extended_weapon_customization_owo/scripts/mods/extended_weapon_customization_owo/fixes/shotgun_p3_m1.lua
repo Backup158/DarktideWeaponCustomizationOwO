@@ -46,6 +46,7 @@ local pump_action_shotgun_normal_barrels = mod.pump_action_shotgun_normal_barrel
 local pump_action_shotgun_long_barrels = mod.pump_action_shotgun_long_barrels
 
 --local any_owo_suppressors = mod.all_owo_suppressor_names.muzzle
+local owo_tactical_flashlight = mod.all_owo_tactical_flashlight.tactical_light
 
 local custom_fixes = {
     -- Tactical Stocks
@@ -124,6 +125,27 @@ local custom_fixes = {
             },
         },
         ]]
+    -- ----------------------
+    -- Flashlights
+    -- ----------------------
+    {   attachment_slot = "flashlight",
+        requirements = {
+            flashlight = {
+                has = owo_tactical_flashlight,
+            },
+            barrel = {
+                has = pump_action_shotgun_normal_barrels.."|"..pump_action_shotgun_long_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.126, 0.0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
     -- ----------------------
     -- Muzzles
     -- ----------------------

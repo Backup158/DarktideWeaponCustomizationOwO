@@ -34,6 +34,7 @@ local render_cam_pos_profile_left = mod.render_cam_pos_profile_left
 local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 local for_all_weapon_models = mod.for_all_weapon_models
+local number_as_string = mod.number_as_string
 
 local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
 
@@ -135,15 +136,12 @@ function mod.owo_tactical_flashlight()
     
     -- Logging all names if this is the first time
     local all_these_attachments = nil
-    local list_of_names_to_use
     if not mod.all_owo_tactical_flashlight then
         all_these_attachments = {}
-        list_of_names_to_use = all_these_attachments
-    else
-        list_of_names_to_use = mod.all_owo_tactical_flashlight
     end
 
-    local function kitbash_flashlight_help(table_to_return, attachment_name, attachment_group_prefix, color, template_suffix, table_of_children_and_fixes, custom_attachment_node)
+    local function kitbash_flashlight_help(table_to_return, attachment_group_prefix, color, template_suffix, name_suffix, number_as_string, table_of_children_and_fixes, custom_attachment_node)
+        local attachment_name = attachment_group_prefix..color.."_"..template_suffix.."_"..name_suffix.."_"..number_as_string
         create_an_attachment(table_to_return, attachment_name,
             -- Attachment
             {   replacement_path = _item_ranged.."/flashlights/"..attachment_name,
@@ -176,8 +174,8 @@ function mod.owo_tactical_flashlight()
 
         -- Adding name to this group's list
         if all_these_attachments then
-            table_to_insert_to[name_suffix] = table_to_insert_to[name_suffix] or {}
-            table_insert(table_to_insert_to[name_suffix], shortname)
+            all_these_attachments[name_suffix] = all_these_attachments[name_suffix] or {}
+            table_insert(all_these_attachments[name_suffix], attachment_name)
         end
         
         localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
@@ -198,8 +196,7 @@ function mod.owo_tactical_flashlight()
             -- ---------------
             -- Tactical Light
             -- ---------------
-            local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
-            kitbash_flashlight_help(table_to_return, owo_tactical_light_01, attachment_group_prefix, color, template_suffix, {
+            kitbash_flashlight_help(table_to_return, attachment_group_prefix, color, template_suffix, "tactical_light", "01", {
                 base_position = vector3_box(0.0, 0.102, 0.0),
                 children = {
                     flashlight_ac1 = {
@@ -229,8 +226,7 @@ function mod.owo_tactical_flashlight()
             -- ---------------
             -- MP5 Light
             -- ---------------
-            local owo_mp5_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_01"
-            kitbash_flashlight_help(table_to_return, owo_mp5_light_01, attachment_group_prefix, color, template_suffix, {
+            kitbash_flashlight_help(table_to_return, attachment_group_prefix, color, template_suffix, "mp5_light", "01", {
                 base_position = mp5_light_base_pos,
                 children = {
                     flashlight_ac1 = {
@@ -257,8 +253,7 @@ function mod.owo_tactical_flashlight()
                     },
                 }
             }, "ap_sight_01")
-            local owo_mp5_light_02 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_02"
-            kitbash_flashlight_help(table_to_return, owo_mp5_light_02, attachment_group_prefix, color, template_suffix, {
+            kitbash_flashlight_help(table_to_return, attachment_group_prefix, color, template_suffix, "mp5_light", "02", {
                 base_position = mp5_light_base_pos,
                 children = {
                     flashlight_ac1 = {
@@ -286,6 +281,18 @@ function mod.owo_tactical_flashlight()
                 }
             }, "ap_sight_01")
         end
+    end
+
+    -- Making list of all attachments global
+    if all_these_attachments then
+        local final_all_requirements = {}
+        for type_of_flashlight, list_of_variants in pairs(all_these_attachments) do
+            all_these_attachments[type_of_flashlight] = mod.create_requirements_string_from_values_of_names_table(list_of_variants)
+            table_insert(final_all_requirements, all_these_attachments[type_of_flashlight])
+        end
+        all_these_attachments.all = mod.create_requirements_string_from_values_of_names_table(final_all_requirements)
+
+        mod.all_owo_tactical_flashlight = all_these_attachments
     end
 
     return table_to_return

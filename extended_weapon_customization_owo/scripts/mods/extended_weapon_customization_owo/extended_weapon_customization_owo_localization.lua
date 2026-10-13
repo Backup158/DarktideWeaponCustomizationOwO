@@ -557,6 +557,21 @@ local localizations = {
 	owo_iron_sight_laspistol_iron_night_with_rail = {
 		en = "Laspistol Night (w/ Rail)",
 	},
+	-- ------------------------------
+	-- Flashlights
+	-- ------------------------------
+	-- ---------------
+	-- Tactical
+	-- ---------------
+	owo_flashlight = {
+		en = "Flashlight",
+	},
+	owo_flashlight_tactical_light = {
+		en = "Tactical",
+	},
+	owo_flashlight_mp5_light = {
+		en = "MP5",
+	},
 }
 
 -- ################
