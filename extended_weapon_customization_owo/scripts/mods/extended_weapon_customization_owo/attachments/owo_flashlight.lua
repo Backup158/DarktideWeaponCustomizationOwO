@@ -61,24 +61,17 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
         nil,
         -- Kitbash
         {
-            base_unit = _item_empty,
-            --base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
-            
-            attachments = {
-                owo_flashlight_base = {
-                    item = _item_ranged.."/flashlights/flashlight_01",
-                    fix = {
-                        disable_in_ui = false,
-                        offset = {
-                            node = table_of_children_and_fixes.base_node or 1,
-                            position = table_of_children_and_fixes.base_position or vector3_box(0, 0, 0),
-                            rotation = vector3_box(0.0, 0.0, 0.0),
-                            scale = vector3_box(1.0, 1.0, 1.0)
-                        },
-                    },
-                    children = table_clone(table_of_children_and_fixes.children)
+            base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
+            fix = {
+                disable_in_ui = false,
+                offset = {
+                    node = table_of_children_and_fixes.base_node or 1,
+                    position = table_of_children_and_fixes.base_position or vector3_box(0, 0, 0),
+                    rotation = vector3_box(0.0, 0.0, 0.0),
+                    scale = vector3_box(1.0, 1.0, 1.0)
                 },
-            }
+            },
+            attachments = table_clone(table_of_children_and_fixes.children),
             
         },
         -- ATTACHMENT NODE 
