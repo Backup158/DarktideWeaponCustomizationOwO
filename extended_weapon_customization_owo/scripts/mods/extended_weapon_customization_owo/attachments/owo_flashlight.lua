@@ -139,7 +139,9 @@ function mod.owo_color_flashlight()
                 {
                     {   attachment_slot = "flashlight",
                         requirements = {
-                            has = owo_invis_color_flashlight,
+                            flashlight = {
+                                has = owo_invis_color_flashlight,
+                            },
                         },
                         fix = {
                             offset = {
