@@ -37,6 +37,13 @@ mod.all_braced_autogun_receivers = "autogun_rifle_ak_receiver_01|autogun_rifle_a
 mod.all_headhunter_autogun_receivers = "autogun_rifle_killshot_receiver_01|autogun_rifle_killshot_receiver_02|autogun_rifle_killshot_receiver_03|autogun_rifle_killshot_receiver_04|autogun_rifle_killshot_receiver_ml01"
 mod.all_autogun_receivers = mod.all_infantry_autogun_receivers.."|"..mod.all_braced_autogun_receivers.."|"..mod.all_headhunter_autogun_receivers
 mod.all_recon_lasgun_receivers = "lasgun_rifle_elysian_receiver_01|lasgun_rifle_elysian_receiver_02|lasgun_rifle_elysian_receiver_03|lasgun_rifle_elysian_receiver_04|lasgun_rifle_elysian_receiver_05|lasgun_rifle_elysian_receiver_06|lasgun_rifle_elysian_receiver_07|lasgun_rifle_elysian_receiver_08|lasgun_rifle_elysian_receiver_ml01"
+mod.combat_shotgun_slightly_shorter_barrels = "shotgun_rifle_barrel_01|shotgun_rifle_barrel_07|shotgun_rifle_barrel_08|shotgun_rifle_barrel_09|shotgun_rifle_barrel_10"
+mod.combat_shotgun_normal_barrels = "shotgun_rifle_barrel_02|shotgun_rifle_barrel_03|shotgun_rifle_barrel_05|shotgun_rifle_barrel_06|shotgun_rifle_barrel_ml01"
+mod.combat_shotgun_long_barrels = "shotgun_rifle_barrel_04"
+mod.arbites_shotgun_short_barrels = "assault_shotgun_receiver_01|assault_shotgun_receiver_03|assault_shotgun_receiver_deluxe01|assault_shotgun_receiver_ml01"
+mod.pump_action_shotgun_normal_barrels = "shotgun_pump_action_barrel_01"
+-- No 02 because go find yourself in the loving arms of the lord :)
+mod.pump_action_shotgun_long_barrels = "shotgun_pump_action_barrel_03|shotgun_pump_action_barrel_ml01"
 
 -- ################
 -- Syn's Parts
@@ -50,4 +57,4 @@ mod.syn_recon_extensions = "recon_extension_01|recon_extension_02|recon_extensio
 mod.syn_g36_extensions = "g36_extension_01|g36_extension_02"
 mod.syn_all_receiver_extensions = mod.syn_all_ma5_extensions.."|"..mod.syn_recon_extensions.."|"..mod.syn_g36_extensions
 mod.syn_hellgun_receivers = "syn_hellgun_receiver_01|syn_hellgun_receiver_02|syn_hellgun_receiver_03|syn_hellgun_receiver_ml01|syn_hellgun_receiver_14|syn_hellgun_receiver_15"
-
+mod.syn_arbites_shotgun_short_barrels = "syn_assaultshotgun_barrel_01|syn_assaultshotgun_barrel_03|syn_assaultshotgun_barrel_04|syn_assaultshotgun_barrel_05"

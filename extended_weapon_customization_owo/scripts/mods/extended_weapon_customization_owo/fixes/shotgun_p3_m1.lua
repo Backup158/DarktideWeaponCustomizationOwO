@@ -38,9 +38,12 @@ local syn_all_receiver_extensions = mod.syn_all_receiver_extensions
 local folded_stock_n_l_pos = vector3_box(-0.015, -0.12, 0.075)
 local folded_stock_n_l_rot = vector3_box(0, 0, -174)
 
-local short_arbites_barrels = "syn_assaultshotgun_barrel_01|syn_assaultshotgun_barrel_03|syn_assaultshotgun_barrel_04|syn_assaultshotgun_barrel_05"
-local slightly_shorter_barrels = "shotgun_rifle_barrel_01|shotgun_rifle_barrel_07|shotgun_rifle_barrel_08|shotgun_rifle_barrel_09|shotgun_rifle_barrel_10"
-local long_barrels = "shotgun_rifle_barrel_04"
+local short_arbites_barrels = mod.syn_arbites_shotgun_short_barrels
+local combat_shotgun_slightly_shorter_barrels = mod.combat_shotgun_slightly_shorter_barrels
+local combat_shotgun_normal_barrels = mod.combat_shotgun_normal_barrels
+local combat_shotgun_long_barrels = mod.combat_shotgun_long_barrels
+local pump_action_shotgun_normal_barrels = mod.pump_action_shotgun_normal_barrels
+local pump_action_shotgun_long_barrels = mod.pump_action_shotgun_long_barrels
 
 --local any_owo_suppressors = mod.all_owo_suppressor_names.muzzle
 
@@ -134,7 +137,7 @@ local custom_fixes = {
                 has = "query:shotgun_p3_m1,muzzle,extended_weapon_customization_owo",
             },
             barrel = {
-                has = "shotgun_pump_action_barrel_01",
+                has = pump_action_shotgun_normal_barrels,
             },
         },
         fix = {
@@ -152,8 +155,7 @@ local custom_fixes = {
                 has = "query:shotgun_p3_m1,muzzle,extended_weapon_customization_owo",
             },
             barrel = {
-                -- No 03 because go find yourself in the loving arms of the lord :)
-                has = "shotgun_pump_action_barrel_03|shotgun_pump_action_barrel_ml01",
+                has = pump_action_shotgun_long_barrels,
             },
         },
         fix = {
@@ -165,6 +167,7 @@ local custom_fixes = {
             },
         },
     },
+    -- Syn Arbites Barrels
     {   attachment_slot = "muzzle",
         requirements = {
             muzzle = {
@@ -184,6 +187,7 @@ local custom_fixes = {
             },
         },
     },
+    --  EWC BA Combat Shotgun
     {   attachment_slot = "muzzle",
         requirements = {
             muzzle = {
@@ -191,12 +195,12 @@ local custom_fixes = {
                 -- has = any_owo_suppressors,
             },
             barrel = {
-                has = slightly_shorter_barrels,
+                has = combat_shotgun_normal_barrels,
             },
         },
         fix = {
             offset = {
-                position = vector3_box(0, -0.48, 0),
+                position = vector3_box(0, 0.494, 0),
                 rotation = vector3_box(0, 0, 0),
                 scale = vector3_box(1, 1, 1),
                 node = 1,
@@ -210,7 +214,26 @@ local custom_fixes = {
                 -- has = any_owo_suppressors,
             },
             barrel = {
-                has = long_barrels,
+                has = combat_shotgun_slightly_shorter_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.464, 0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
+    {   attachment_slot = "muzzle",
+        requirements = {
+            muzzle = {
+                has = "query:shotgun_p3_m1,muzzle,extended_weapon_customization_owo",
+                -- has = any_owo_suppressors,
+            },
+            barrel = {
+                has = combat_shotgun_long_barrels,
             },
         },
         fix = {

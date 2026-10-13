@@ -21,9 +21,9 @@ local _item_minion = "content/items/weapons/minions"
 local folded_stock_n_l_pos = vector3_box(-0.015, -0.12, 0.075)
 local folded_stock_n_l_rot = vector3_box(0, 0, -174)
 
-local short_arbites_barrels = "syn_assaultshotgun_barrel_01|syn_assaultshotgun_barrel_03|syn_assaultshotgun_barrel_04|syn_assaultshotgun_barrel_05"
-local slightly_shorter_barrels = "shotgun_rifle_barrel_01|shotgun_rifle_barrel_07|shotgun_rifle_barrel_08|shotgun_rifle_barrel_09|shotgun_rifle_barrel_10"
-local long_barrels = "shotgun_rifle_barrel_04"
+local short_arbites_barrels = mod.syn_arbites_shotgun_short_barrels
+local slightly_shorter_barrels = mod.combat_shotgun_slightly_shorter_barrels
+local long_barrels = mod.combat_shotgun_long_barrels
 
 --local any_owo_suppressors = mod.all_owo_suppressor_names.muzzle
 
