@@ -52,6 +52,11 @@ function mod.owo_bayonet_flip(given_slot, given_attachment_node)
         all_these_attachments = {}
     end
 
+    -- The longer one needs to be moved separately. I'm aligning them based on where the lug would be
+    local bayonet_position_exceptions = {
+        ["04"] = vector3_box(-0.002, -0.153, -0.065),
+    }
+
     for_all_weapon_models(5, {3, "ml01"}, function(number_as_string)
         -- adding helpers
         local owo_kitbash_address = _item_ranged.."/bayonets/owo_bayonet_vesa_helbore_"..number_as_string
@@ -77,7 +82,7 @@ function mod.owo_bayonet_flip(given_slot, given_attachment_node)
                             disable_in_ui = false,
                             offset = {
                                 node = 1,
-                                position = vector3_box(-0.002, -0.069, -0.065),
+                                position = bayonet_position_exceptions[number_as_string] or vector3_box(-0.002, -0.069, -0.065),
                                 rotation = vector3_box(180.0, 0.0, 180.0),
                                 scale = vector3_box(1.0, 1.0, 1.0)
                             },
