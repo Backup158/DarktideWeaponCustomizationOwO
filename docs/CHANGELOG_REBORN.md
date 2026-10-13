@@ -4,8 +4,12 @@
 - Slim Blades
     - Has the new DClaw blade
 - Support for Huntsman's Shotgun
+- Flashlight
+    - Tactical flashlight finally remade
+    - MP5 lights also made but not yet repositioned. I need to think about how to do this properly
 ## Fixed
 - Combat Shotgun sights being placed into the wrong slot
+- Made bayonet alignment consistent
 - Missing mod title
 ## Developer
 - Removed version logging
