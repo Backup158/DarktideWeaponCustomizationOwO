@@ -176,7 +176,8 @@ function mod.owo_tactical_flashlight()
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_attacher_stock3", nil, "content/weapons/player/ranged/autogun_rifle/attachments/stock_03/stock_03", "ap_flashlight_01")
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac2_attacher_ap_muzzle1", nil, "content/weapons/player/ranged/autogun_pistol/attachments/muzzle_01/muzzle_01", "ap_flashlight_01")
 
-    local mp5_light_base_pos = vector3_box(0.0, 0.244, 0.33)
+    --local mp5_light_base_pos = vector3_box(0.0, 0.244, 0.33)
+    local mp5_light_base_pos = vector3_box(-0.058, -0.178, 0.14)
 
     for color, _ in pairs(flashlight_colors) do
         for template_suffix, _ in pairs(flashlight_intensities) do
