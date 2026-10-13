@@ -115,7 +115,7 @@ function mod.owo_color_flashlight()
                 "ap_flashlight_01"
             )
 
-            -- Create localization
+            -- Create localization for slot
             mod:add_global_localize_strings({
                 ["loc_ewc_"..colored_flashlight_group_name] = {
                     en = "OwO - Flashlight: "..color..", "..template_suffix,
