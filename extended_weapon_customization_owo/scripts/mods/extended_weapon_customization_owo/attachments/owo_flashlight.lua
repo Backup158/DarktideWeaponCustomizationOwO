@@ -21,6 +21,7 @@ local _item_ranged = _item.."/ranged"
 --local _item_melee = _item.."/melee"
 --local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 --local _item_minion = "content/items/weapons/minions"
+local _item_empty = "content/characters/empty_item/empty_item"
 
 -- ################################
 -- Some Variables for Common Attachments
@@ -47,7 +48,6 @@ end
 -- Attachment
 -- ################################
 local function kitbash_flashlight_help(table_to_return, attachment_name, attachment_group_prefix, color, template_suffix, table_of_children_and_fixes, custom_attachment_node)
-
     create_an_attachment(table_to_return, attachment_name,
         -- Attachment
         {   replacement_path = _item_ranged.."/flashlights/"..attachment_name,
@@ -58,48 +58,27 @@ local function kitbash_flashlight_help(table_to_return, attachment_name, attachm
             randomization_requirement = "mod_option_flashlight_randomization",
         },
         -- Fixes
-        --nil,
-        {
-            {
-                attachment_slot = "flashlight",
-                requirements = {
-                    flashlight = {
-                        has = attachment_name,
-                    },
-                },
-                fix = {
-                    node = 1,
-                    offset = {
-                        position = table_of_children_and_fixes.base_position or vector3_box(0.0, 0.0, 0.0),
-                        rotation =  vector3_box(0, 0, 0),
-                        scale = vector3_box(1.0, 1.0, 1.0),
-                    },
-                },
-            }
-        },
+        nil,
         -- Kitbash
         {
-            base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
-            --item = _item_ranged.."/flashlights/flashlight_01",
-            --[[
+            base_unit = _item_empty,
+            --base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
             
             attachments = {
-                zzz_shared_material_overrides = {
-                    item = "",
-                    children = table_of_children_and_fixes.children,
+                owo_flashlight_base = {
+                    item = _item_ranged.."/flashlights/flashlight_01",
+                    fix = {
+                        disable_in_ui = false,
+                        offset = {
+                            node = table_of_children_and_fixes.base_node or 1,
+                            position = table_of_children_and_fixes.base_position or vector3_box(0, 0, 0),
+                            rotation = vector3_box(0.0, 0.0, 0.0),
+                            scale = vector3_box(1.0, 1.0, 1.0)
+                        },
+                    },
+                    children = table_clone(table_of_children_and_fixes.children)
                 },
             }
-            ]]
-            fix = {
-                disable_in_ui = true,
-                offset = {
-                    node = 1,
-                    position = table_of_children_and_fixes.base_position or vector3_box(0, 0, 0),
-                    rotation = vector3_box(0.0, 0.0, 0.0),
-                    scale = vector3_box(1.0, 1.0, 1.0)
-                },
-            },
-            children = table_clone(table_of_children_and_fixes.children),
             
         },
         -- ATTACHMENT NODE 
@@ -154,24 +133,18 @@ function mod.owo_color_flashlight()
                     custom_selection_group = colored_flashlight_group_name,
                 },
                 -- Fixes
-                {
-                    {
-                        attachment_slot = "flashlight",
-                        requirements = {
-                            flashlight = {
-                                has = owo_invis_color_flashlight,
-                            },
-                        },
-                        fix = {
-                            offset = {
-                                scale = vector3_box(0.0001, 0.0001, 0.0001),
-                            },
-                        },
-                    }
-                },
+                nil,
                 -- Kitbash
                 {
-                    base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01"
+                    base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
+                    fix = {
+                        offset = {
+                            node = 1,
+                            position = vector3_box(0.0, 0.0, 0.0),
+                            rotation = vector3_box(0.0, 0.0, 0.0),
+                            scale = vector3_box(0.0001, 0.0001, 0.0001),
+                        },
+                    },
                 },
                 -- ATTACHMENT NODE 
                 -- DON'T FORGET THIS
@@ -212,7 +185,7 @@ function mod.owo_tactical_flashlight()
             -- ---------------
             local owo_tactical_light_01 = attachment_group_prefix..color.."_"..template_suffix.."_tactical_light_01"
             kitbash_flashlight_help(table_to_return, owo_tactical_light_01, attachment_group_prefix, color, template_suffix, {
-                base_position = vector3_box(0.016, 0.202, 0.05),
+                base_position = vector3_box(0.0, 0.202, 0.0),
                 children = {
                     flashlight_ac1 = {
                         item = _item_ranged.."/flashlights/owo_flashlight_ac1_grip4",
@@ -268,7 +241,7 @@ function mod.owo_tactical_flashlight()
                         },
                     },
                 }
-            }, "ap_receiver_01")
+            }, "ap_sight_01")
             local owo_mp5_light_02 = attachment_group_prefix..color.."_"..template_suffix.."_mp5_light_02"
             kitbash_flashlight_help(table_to_return, owo_mp5_light_02, attachment_group_prefix, color, template_suffix, {
                 base_position = mp5_light_base_pos,
@@ -296,7 +269,7 @@ function mod.owo_tactical_flashlight()
                         },
                     },
                 }
-            }, "ap_receiver_01")
+            }, "ap_sight_01")
         end
     end
 
