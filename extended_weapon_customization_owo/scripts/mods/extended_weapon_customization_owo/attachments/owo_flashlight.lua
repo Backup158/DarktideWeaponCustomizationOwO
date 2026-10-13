@@ -35,50 +35,14 @@ local create_kitbash_full_item = mod.create_kitbash_full_item
 local create_an_attachment = mod.create_an_attachment
 local for_all_weapon_models = mod.for_all_weapon_models
 
+local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
+
 local flashlight_colors = mod.flashlight_colors
 local flashlight_intensities = mod.flashlight_intensities
-
-local first_time_setup = false
-if not mod.all_flashlights_for_fixes then
-    first_time_setup = true
-    mod.all_flashlights_for_fixes = {}
-end
 
 -- ################################
 -- Attachment
 -- ################################
-local function kitbash_flashlight_help(table_to_return, attachment_name, attachment_group_prefix, color, template_suffix, table_of_children_and_fixes, custom_attachment_node)
-    create_an_attachment(table_to_return, attachment_name,
-        -- Attachment
-        {   replacement_path = _item_ranged.."/flashlights/"..attachment_name,
-            icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-            icon_render_camera_position_offset = render_cam_pos_profile_left,
-            flashlight_template = "owo_"..color.."_flashlight_"..template_suffix,
-            custom_selection_group = attachment_group_prefix..color.."_"..template_suffix,
-            randomization_requirement = "mod_option_flashlight_randomization",
-        },
-        -- Fixes
-        nil,
-        -- Kitbash
-        --  There are some routes I can take: 
-        --      base_unit empty with all children (messes up flashlight_template color)
-        --      base_unit flashlight_01 with attachments and position set in fixes (induces the Lottery)
-        --      the forbidden middle path, shoving a real base unit inside the anus lmao (this looks like ass)
-        --          (then hiding the real base unit with fixes)
-        --          then plugin authors can move it by shifting owo_flashlight_base
-        --  OR
-        --  I just use the default position and move it as needed
-        --  yknow, like every other normal attachment
-        {
-            base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
-            attachments = table_clone(table_of_children_and_fixes.children),
-        },
-        -- ATTACHMENT NODE 
-        -- DON'T FORGET THIS
-        custom_attachment_node or "ap_flashlight_01"
-    )
-end
-
 function mod.owo_color_flashlight()
     local attachment_group_name = "owo_flashlight"
     local attachment_group_prefix = attachment_group_name.."_"
@@ -168,6 +132,56 @@ function mod.owo_tactical_flashlight()
     local attachment_group_name = "owo_flashlight"
     local attachment_group_prefix = attachment_group_name.."_"
     local table_to_return = mod.init_table_to_return(attachment_group_name)
+    
+    -- Logging all names if this is the first time
+    local all_these_attachments = nil
+    local list_of_names_to_use
+    if not mod.all_owo_tactical_flashlight then
+        all_these_attachments = {}
+        list_of_names_to_use = all_these_attachments
+    else
+        list_of_names_to_use = mod.all_owo_tactical_flashlight
+    end
+
+    local function kitbash_flashlight_help(table_to_return, attachment_name, attachment_group_prefix, color, template_suffix, table_of_children_and_fixes, custom_attachment_node)
+        create_an_attachment(table_to_return, attachment_name,
+            -- Attachment
+            {   replacement_path = _item_ranged.."/flashlights/"..attachment_name,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+                flashlight_template = "owo_"..color.."_flashlight_"..template_suffix,
+                custom_selection_group = attachment_group_prefix..color.."_"..template_suffix,
+                randomization_requirement = "mod_option_flashlight_randomization",
+            },
+            -- Fixes
+            nil,
+            -- Kitbash
+            --  There are some routes I can take: 
+            --      base_unit empty with all children (messes up flashlight_template color)
+            --      base_unit flashlight_01 with attachments and position set in fixes (induces the Lottery)
+            --      the forbidden middle path, shoving a real base unit inside the anus lmao (this looks like ass)
+            --          (then hiding the real base unit with fixes)
+            --          then plugin authors can move it by shifting owo_flashlight_base
+            --  OR
+            --  I just use the default position and move it as needed
+            --  yknow, like every other normal attachment
+            {
+                base_unit = "content/weapons/player/attachments/flashlights/flashlight_01/flashlight_01",
+                attachments = table_clone(table_of_children_and_fixes.children),
+            },
+            -- ATTACHMENT NODE 
+            -- DON'T FORGET THIS
+            custom_attachment_node or "ap_flashlight_01"
+        )
+
+        -- Adding name to this group's list
+        if all_these_attachments then
+            table_to_insert_to[name_suffix] = table_to_insert_to[name_suffix] or {}
+            table_insert(table_to_insert_to[name_suffix], shortname)
+        end
+        
+        localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
+    end
 
     -- Kitbash helper items
     create_kitbash_full_item(table_to_return, _item_ranged.."/flashlights/owo_flashlight_ac1_grip1", nil, "content/weapons/player/melee/combat_knife/attachments/grip_01/grip_01", "ap_flashlight_01")
