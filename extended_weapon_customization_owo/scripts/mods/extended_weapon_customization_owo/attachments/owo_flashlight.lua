@@ -285,14 +285,7 @@ function mod.owo_tactical_flashlight()
 
     -- Making list of all attachments global
     if all_these_attachments then
-        local final_all_requirements = {}
-        for type_of_flashlight, list_of_variants in pairs(all_these_attachments) do
-            all_these_attachments[type_of_flashlight] = mod.create_requirements_string_from_values_of_names_table(list_of_variants)
-            table_insert(final_all_requirements, all_these_attachments[type_of_flashlight])
-        end
-        all_these_attachments.all = mod.create_requirements_string_from_values_of_names_table(final_all_requirements)
-
-        mod.all_owo_tactical_flashlight = all_these_attachments
+        mod.one_layer_transfer_first_time_setup_localizations_to_global(all_these_attachments, "all_owo_tactical_flashlight")
     end
 
     return table_to_return

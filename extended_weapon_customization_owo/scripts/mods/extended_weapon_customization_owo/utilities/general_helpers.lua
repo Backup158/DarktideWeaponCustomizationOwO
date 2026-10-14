@@ -229,6 +229,17 @@ function mod.localize_all_from_group(attachment_names, localizations_to_use)
 	end
 end
 
+function mod.one_layer_transfer_first_time_setup_localizations_to_global(local_attachments_table, attachment_name_for_global)
+    local final_all_requirements = {}
+    for name_of_major_variant, list_of_variants in pairs(local_attachments_table) do
+        local_attachments_table[name_of_major_variant] = create_requirements_string_from_values_of_names_table(list_of_variants)
+        table_insert(final_all_requirements, local_attachments_table[name_of_major_variant])
+    end
+    local_attachments_table.all = create_requirements_string_from_values_of_names_table(final_all_requirements)
+
+    mod[attachment_name_for_global] = local_attachments_table
+end
+
 -- ----------
 -- Localize Attachment Triple Threat
 -- DESC: Creates a global localization using the values in the localization file
