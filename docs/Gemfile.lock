@@ -309,7 +309,7 @@ DEPENDENCIES
   jekyll (>= 3.6.3)
   jekyll-gfm-admonitions
   jekyll-optional-front-matter
-  kramdown (>= 2.3.0)
+  kramdown (= 2.3.0)
   nokogiri (>= 1.18.9)
   rdiscount (>= 2.2.7.4)
   redcarpet (>= 3.5.1)
