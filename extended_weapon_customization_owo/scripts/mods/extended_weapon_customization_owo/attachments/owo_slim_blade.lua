@@ -19,6 +19,7 @@ local _item_ranged = _item.."/ranged"
 local _item_melee = _item.."/melee"
 local _item_empty_trinket = _item.."/trinkets/unused_trinket"
 local _item_minion = "content/items/weapons/minions"
+local _item_empty = "content/characters/empty_item/empty_item"
 
 -- ################################
 -- Some Variables for Common Attachments
@@ -39,42 +40,6 @@ local slim_blade_families_and_damage_types = mod.slim_blade_families_and_damage_
 -- ################################
 -- Attachment
 -- ################################
-function mod.owo_slim_blade_indicator(given_slot_name)
-    local current_slot_name = given_slot_name or "blade"
-    local current_attachment_node = "ap_blade_01"
-
-    local attachment_group_name = "owo_slim_blade"
-    local attachment_indicator_name = attachment_group_name.."_indicator"
-    local table_to_return = mod.init_table_to_return(attachment_indicator_name)
-
-    for i, _ in pairs(slim_blade_families_and_damage_types) do
-        local indicator_address_internal_name = attachment_indicator_name.."_"..i
-        local indicator_address = _item.."/indicators/"..indicator_address_internal_name
-        create_group_indicator(table_to_return, indicator_address_internal_name, current_attachment_node, current_slot_name)
-        --[[
-        create_an_attachment(table_to_return, indicator_address,
-            -- Attachment
-            {   replacement_path = _item_melee.."/blades/"..indicator_address,
-                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
-                icon_render_camera_position_offset = render_cam_pos_profile_left,
-                damage_type = damage_type,
-                custom_selection_group = selection_group,
-            },
-            -- Fixes
-            nil,
-            -- Kitbash
-            {   --base_unit = indicator_address,
-                base_unit = "content/characters/empty_item/empty_item",
-            },
-            -- ATTACHMENT NODE 
-            -- DON'T FORGET THIS
-            current_attachment_node
-        )]]
-    end
-    -- dump_if_debug(table_to_return, "Indicators table to return uwu")
-    return table_to_return
-end
-
 function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local current_slot_name = given_slot_name or "blade"
     -- local current_attachment_node = given_attachment_node or "ap_blade_01"
@@ -118,6 +83,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 blade_scl = scales_table -- in case i get lazy and don't make it a table
             end
         end
+        --[[
         table_insert(fixes_to_add, {   
             attachment_slot = current_slot_name,
             requirements = {
@@ -135,6 +101,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
                 },
             },
         })
+        ]]
 
         --      Grip resizing
         if scales_table and type(scales_table) == "table" and scales_table.grip_scl then
@@ -176,25 +143,22 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             -- Fixes
             fixes_to_add,
             -- Kitbash
-            {   base_unit = string_regex_sub(base_item_address, "01", number_string),
-                --[[
-                --base_unit = "content/characters/empty_item/empty_item",
+            {   --base_unit = string_regex_sub(base_item_address, "01", number_string),
+                base_unit = _item_empty,
                 attachments = {
-                    zzz_shared_material_overrides = {
-                        item = "",
-                        children = {},
+                    owo_blade_base = {
+                        item = string_regex_sub(base_item_address, "01", number_string),
+                        fix = {
+                            disable_in_ui = false,
+                            offset = {
+                                node = 1,
+                                position = blade_pos or vector3_box(0.0, 0.0, 0.0),
+                                rotation = blade_rot or vector3_box(0.0, 0.0, 0.0),
+                                scale = blade_scl or vector3_box(0.5,1,1),
+                            },
+                        },
                     },
-                    base = {
-                        --item = string_regex_sub(base_item_address, "01", number_string),
-                        item = "content/characters/empty_item/empty_item",
-                        children = {
-                            blade_indicator = {
-                                item = _item_melee.."/blades/owo_slim_blade_indicator_"..base_name,
-                            }
-                        }
-                    }
-                }
-                ]]
+                },
             },
             -- ATTACHMENT NODE 
             -- DON'T FORGET THIS
@@ -321,6 +285,12 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             })
         end)
     end
+    -- ------------------------------------
+    -- Execution
+    -- ------------------------------------
+    -- I have both styles in the code but only use one
+    -- base_unit vs empty + attachment
+    -- Base unit was simplest but led to the Lottery, which I believe should not be encouraged
     -- ------------------
     -- Power Sword Blades
     -- ------------------
@@ -328,7 +298,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_psword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_psword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_psword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(7, {4}, "psword", "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01", {
+    -- local power_sword_address = "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01"
+    local power_sword_address = _item_melee.."/blades/power_sword_blade_01"
+    slim_blade_variant_helper(7, {4}, "psword", power_sword_address, {
         flat_scale = flat_psword_scl,
         flat_g_scale = flat_psword_g_scl,
         slim_scale = slim_psword_scl,
@@ -341,7 +313,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_pfalchion_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_pfalchion_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_pfalchion_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(2, nil, "pfalchion", "content/weapons/player/melee/power_falchion/attachments/blade_01/blade_01", {
+    -- local power_falchion_address = "content/weapons/player/melee/power_falchion/attachments/blade_01/blade_01"
+    local power_falchion_address = _item_melee.."/blades/power_falchion_blade_01"
+    slim_blade_variant_helper(2, nil, "pfalchion", power_falchion_address, {
         flat_scale = flat_pfalchion_scl,
         flat_g_scale = flat_pfalchion_g_scl,
         slim_scale = slim_pfalchion_scl,
@@ -350,14 +324,18 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     -- ------------------
     -- Mechanicus Power Sword
     -- ------------------
+    -- Reuses Power Sword address
     -- Weird ass formatting makes me copy them manually
-    slim_blade_variant_helper_single("08", "mech_psword", "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01", {
+    local flat_mech_psword_pos_lowered = vector3_box(0.0, 0.0, -0.03)
+    slim_blade_variant_helper_single("08", "mech_psword", power_sword_address, {
+        pos = flat_mech_psword_pos_lowered,
         flat_scale = flat_psword_scl,
         flat_g_scale = flat_psword_g_scl,
         slim_scale = slim_psword_scl,
         slim_g_scale = slim_psword_g_scl,
     })
-    slim_blade_variant_helper_single("08_ml01", "mech_psword", "content/weapons/player/melee/power_sword/attachments/blade_01/blade_01", {
+    slim_blade_variant_helper_single("08_ml01", "mech_psword", power_sword_address, {
+        pos = flat_mech_psword_pos_lowered,
         flat_scale = flat_psword_scl,
         flat_g_scale = flat_psword_g_scl,
         slim_scale = slim_psword_scl,
@@ -366,7 +344,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     -- what the actual shit?
     -- i'm not rewriting the function so i'm just gonna do this cursed swap
     -- this game was created by psychopaths
-    slim_blade_variant_helper_single("01", "mech_psword", "content/weapons/player/melee/power_sword/attachments/blade_deluxe01/blade_deluxe01", {
+    -- local mech_power_sword_evil_ass_address = "content/weapons/player/melee/power_sword/attachments/blade_deluxe01/blade_deluxe01"
+    local mech_power_sword_evil_ass_address = _item_melee.."/blades/power_sword_blade_deluxe01"
+    slim_blade_variant_helper_single("01", "mech_psword", mech_power_sword_evil_ass_address, {
         flat_scale = flat_psword_scl,
         flat_g_scale = flat_psword_g_scl,
         slim_scale = slim_psword_scl,
@@ -379,7 +359,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_2h_psword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_2h_psword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_2h_psword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(3, nil, "2h_psword", "content/weapons/player/melee/2h_power_sword/attachments/blade_01/blade_01", {
+    -- local relic_blade_address = "content/weapons/player/melee/2h_power_sword/attachments/blade_01/blade_01"
+    local relic_blade_address = _item_melee.."/blades/2h_power_sword_blade_01"
+    slim_blade_variant_helper(3, nil, "2h_psword", relic_blade_address, {
         --pos = vector3_box(0, 0.0, 0.065),
         flat_scale = flat_2h_psword_scl,
         flat_g_scale = flat_2h_psword_g_scl,
@@ -389,7 +371,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     -- Short variants
     local flat_2h_psword_short_scl = vector3_box(0.35, 1.0, 0.75)
     local slim_2h_psword_short_scl = vector3_box(0.35, 0.65, 0.75)
-    slim_blade_variant_helper(3, nil, "2h_psword_short", "content/weapons/player/melee/2h_power_sword/attachments/blade_01/blade_01", {
+    slim_blade_variant_helper(3, nil, "2h_psword_short", relic_blade_address, {
         flat_scale = flat_2h_psword_short_scl,
         flat_g_scale = flat_2h_psword_g_scl,
         slim_scale = slim_2h_psword_scl,
@@ -402,7 +384,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_fsword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_fsword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_fsword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(5, nil, "fsword", "content/weapons/player/melee/force_sword/attachments/blade_01/blade_01", {
+    -- local force_sword_address = "content/weapons/player/melee/force_sword/attachments/blade_01/blade_01"
+    local force_sword_address = _item_melee.."/blades/force_sword_blade_01"
+    slim_blade_variant_helper(5, nil, "fsword", force_sword_address, {
         flat_scale = flat_fsword_scl,
         flat_g_scale = flat_fsword_g_scl,
         slim_scale = slim_fsword_scl,
@@ -415,7 +399,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_2h_fsword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_2h_fsword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_2h_fsword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(5, nil, "2h_fsword", "content/weapons/player/melee/2h_force_sword/attachments/blade_01/blade_01", {
+    -- local force_great_sword_address = "content/weapons/player/melee/2h_force_sword/attachments/blade_01/blade_01"
+    local force_great_sword_address = _item_melee.."/blades/2h_force_sword_blade_01"
+    slim_blade_variant_helper(5, nil, "2h_fsword", force_great_sword_address, {
         flat_scale = flat_2h_fsword_scl,
         flat_g_scale = flat_2h_fsword_g_scl,
         slim_scale = slim_2h_fsword_scl,
@@ -424,7 +410,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     -- Short variants
     local flat_2h_fsword_short_scl = vector3_box(0.35, 1.0, 0.8)
     local slim_2h_fsword_short_scl = vector3_box(0.35, 0.65, 0.8)
-    slim_blade_variant_helper(5, nil, "2h_fsword_short", "content/weapons/player/melee/2h_force_sword/attachments/blade_01/blade_01", {
+    slim_blade_variant_helper(5, nil, "2h_fsword_short", force_great_sword_address, {
         flat_scale = flat_2h_fsword_short_scl,
         flat_g_scale = flat_2h_fsword_g_scl,
         slim_scale = slim_2h_fsword_scl,
@@ -437,7 +423,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_dclaw_g_scl = vector3_box(0.6, 1.0, 1.0)
     local slim_dclaw_scl = vector3_box(0.5, 0.65, 1.0)
     local slim_dclaw_g_scl = vector3_box(0.6, 0.65, 1.0)
-    slim_blade_variant_helper(9, { 8 }, "dclaw", "content/weapons/player/melee/combat_sword/attachments/blade_01/blade_01", {
+    -- local dclaw_address = "content/weapons/player/melee/combat_sword/attachments/blade_01/blade_01"
+    local dclaw_address = _item_melee.."/blades/combat_sword_blade_01"
+    slim_blade_variant_helper(9, { 8 }, "dclaw", dclaw_address, {
         flat_scale = flat_dclaw_scl,
         flat_g_scale = flat_dclaw_g_scl,
         slim_scale = slim_dclaw_scl,
@@ -450,7 +438,9 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
     local flat_hsword_g_scl = vector3_box(0.5, 1.0, 1.0)
     local slim_hsword_scl = vector3_box(0.35, 0.65, 1.0)
     local slim_hsword_g_scl = vector3_box(0.5, 0.65, 1.0)
-    slim_blade_variant_helper(6, nil, "hsword", "content/weapons/player/melee/falchion/attachments/blade_01/blade_01", {
+    -- local hsword_address = "content/weapons/player/melee/falchion/attachments/blade_01/blade_01"
+    local hsword_address = _item_melee.."/blades/falchion_blade_01"
+    slim_blade_variant_helper(6, nil, "hsword", hsword_address, {
         flat_scale = flat_hsword_scl,
         flat_g_scale = flat_hsword_g_scl,
         slim_scale = slim_hsword_scl,
