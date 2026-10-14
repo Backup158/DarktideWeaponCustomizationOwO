@@ -44,8 +44,8 @@ info_if_debug("OwO All Sight Reticles: "..mod.all_owo_sight_reticle_names)
 -- --------------------------------
 local slim_blades_to_flip = {}
 --dump_if_debug(mod.all_slim_blade_names, "UWU SLIM BLADES TABLE BEFORE FLIPPING NYA")
--- psword not necessary
-local slim_blades_flip_list_blade = {"pfalchion", "dclaw", "hsword", "2h_psword", "2h_psword_short"}
+-- psword and relic blade are not necessary. They're symmetrical
+local slim_blades_flip_list_blade = {"pfalchion", "dclaw", "hsword", }
 for i = 1, #(slim_blades_flip_list_blade) do
     local blade = slim_blades_flip_list_blade[i]
     slim_blades_to_flip[blade] = mod.all_slim_blade_names[blade].all

@@ -28,15 +28,9 @@ local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
 -- ###################################################################
 local custom_fixes = {
     -- Slim Blades
-    --[[
     {   attachment_slot = "head",
         requirements = {
-            --blade_indicator = {
-            --    has = "owo_slim_blade_indicator_pfalchion",
-                -- has = "query:powermaul_p2_m1,blade_indicator,extended_weapon_customization_owo"
-            --},
             head = {
-                --has = "query:powermaul_p2_m1,head,extended_weapon_customization_owo"
                 has = combined_slim_blades_to_flip,
             },
         },
@@ -47,8 +41,8 @@ local custom_fixes = {
                 --scale = vector3_box(1.25, 1.25, 1.25),
             },
         },
-    },]]
-    --[
+    },
+    --[[]
     {   attachment_slot = "head",
         requirements = {
             head = {
@@ -67,12 +61,7 @@ local custom_fixes = {
     -- works for slim: 02, 04, 06
 }
 
-local custom_attachments = {
-    blade_indicator = {
-        parent_slot = "head",
-        default_path = _item_empty_trinket,
-    }
-}
+local custom_attachments
 
 return {
     fixes = custom_fixes,

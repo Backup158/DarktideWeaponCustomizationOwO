@@ -29,7 +29,6 @@ local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
 
 local custom_fixes = {
     -- Slim Blades
-    --[[
     {   attachment_slot = "head",
         requirements = {
             head = {
@@ -44,7 +43,7 @@ local custom_fixes = {
             },
         },
     },
-    ]]
+    --[[
     {   attachment_slot = "head",
         requirements = {
             head = {
@@ -58,14 +57,10 @@ local custom_fixes = {
             },
         },
     },
+    ]]
 }
 
-local custom_attachments = {
-    blade_indicator = {
-        parent_slot = "head",
-        default_path = _item_empty_trinket,
-    }
-}
+local custom_attachments
 
 return {
     fixes = custom_fixes,
