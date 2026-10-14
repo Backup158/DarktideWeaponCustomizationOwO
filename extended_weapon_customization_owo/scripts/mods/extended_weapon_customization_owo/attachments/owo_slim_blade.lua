@@ -168,7 +168,19 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             true
         )
 
-        local_table_of_attachments_add_one(all_attachment_names, slim_blade_name, selection_group)
+        if all_attachment_names then
+            all_attachment_names[base_name] = all_attachment_names[base_name] or {}
+            -- owo_slim_blade_slim_psword_grip_01 --> slim_grip
+            -- removing name so it'd be like _slim__grip_
+            local group_identifier = string_regex_sub(selection_group, attachment_group_name, "")
+            group_identifier = string_regex_sub(group_identifier, base_name, "")
+            group_identifier = string_regex_sub(group_identifier, number_string, "")
+            -- Simplify underscores and strip edges
+            group_identifier = string_regex_sub(group_identifier, "_+", "_")
+            group_identifier = string_regex_sub(group_identifier, "_$", "")
+            group_identifier = string_regex_sub(group_identifier, "^_", "")
+            local_table_of_attachments_add_one(all_attachment_names[base_name], slim_blade_name, group_identifier)       
+        end
     end
     -- Calls the above for all the variants
     local function slim_blade_variant_helper_single(number_string, base_name, model_base_path, table_of_all_transformations)
