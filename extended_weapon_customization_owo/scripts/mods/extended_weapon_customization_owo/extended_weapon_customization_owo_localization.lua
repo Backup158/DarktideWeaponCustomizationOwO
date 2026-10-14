@@ -193,13 +193,13 @@ for attachment_name_code, human_name in pairs(slim_blade_names) do
 		["loc_ewc_owo_slim_blade_flat_"..attachment_name_code] = {
 			en = "OwO Slim Blades - Flat "..human_name
 		},
-		["loc_ewc_owo_slim_blade_flat_"..attachment_name_code.."_g"] = {
+		["loc_ewc_owo_slim_blade_flat_"..attachment_name_code.."_grip"] = {
 			en = "OwO Slim Blades - Flat "..human_name.." (Grip)"
 		},
 		["loc_ewc_owo_slim_blade_slim_"..attachment_name_code] = {
 			en = "OwO Slim Blades - Slim "..human_name
 		},
-		["loc_ewc_owo_slim_blade_slim_"..attachment_name_code.."_g"] = {
+		["loc_ewc_owo_slim_blade_slim_"..attachment_name_code.."_grip"] = {
 			en = "OwO Slim Blades - Slim "..human_name.." (Grip)"
 		},
 	})
