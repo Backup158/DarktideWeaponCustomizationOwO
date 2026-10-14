@@ -26,9 +26,6 @@ local combined_slim_blades_to_flip = mod.combined_slim_blades_to_flip
 -- ###################################################################
 -- FIXES TO RETURN
 -- ###################################################################
---info_if_debug("FLIPPING BLADES FOR "..Localize("loc_powermaul_p2_m1")..": "..combined_slim_blades_to_flip)
---local all_hsword = mod.all_slim_blade_names["owo_slim_blade_flat_hsword"].."|"..mod.all_slim_blade_names["owo_slim_blade_flat_hsword_g"].."|"..mod.all_slim_blade_names["owo_slim_blade_slim_hsword_g"].."|"..mod.all_slim_blade_names["owo_slim_blade_slim_hsword"]
---info_if_debug("flat hswords uwu: " .. all_hsword)
 local custom_fixes = {
     -- Slim Blades
     --[[
