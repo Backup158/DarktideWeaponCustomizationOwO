@@ -258,8 +258,8 @@ function mod.local_table_of_attachments_add_one(local_all_attachment_names_table
     --   Add straight up to table
     --   Add based on variant
     if variant_name then
-        local_all_attachment_names_table[selection_group] = local_all_attachment_names_table[selection_group] or {}
-        table_insert(local_all_attachment_names_table[selection_group], attachment_name)
+        local_all_attachment_names_table[variant_name] = local_all_attachment_names_table[variant_name] or {}
+        table_insert(local_all_attachment_names_table[variant_name], attachment_name)
     else
         table_insert(local_all_attachment_names_table, attachment_name)
     end
@@ -269,21 +269,82 @@ end
 -- Transfer Local Table of Attachments to Global
 -- ---------------
 -- DESCRIPTION: 
+--      Simple list: attachments = {"a", "b" ...}
+--      One layer: 
+--          attachments
+--           |- ["var_1"] = {"a", "b"}
+--           |- ["var_2"] = {"c", "d"}
+--      Multilayer: 
+--          all_these_attachments
+--           |- Type 1
+--              |- variant_a
+--                  |- {x, y, z}
+--              |- variant_b
+--                  |- {aa, bb, cc}
+--           |- Type 2
+--              |- variant_a
+--                  |- {dd, ee, ff}
+--              |- variant_b
+--                  |- {gg, hh, ii}
 -- PARAMETERS:
 -- RETURN: Nothing. Since Lua is pass by reference, there's no need to return anything
 -- ---------------
-function mod.transfer_local_table_of_attachments_to_global_one_layer_of_keys(local_all_attachment_names_table, attachment_name_for_global)
+function mod.transfer_local_table_of_attachments_to_global(local_all_attachment_names_table, attachment_name_for_global)
     -- This is how you check if it's the first time
     if not local_all_attachment_names_table then return end
 
-    local final_all_requirements = {}
-    for name_of_major_variant, list_of_variants in pairs(local_all_attachment_names_table) do
-        local_all_attachment_names_table[name_of_major_variant] = create_requirements_string_from_values_of_names_table(list_of_variants)
-        table_insert(final_all_requirements, local_all_attachment_names_table[name_of_major_variant])
+    -- Simple List
+    if local_all_attachment_names_table[1] then
+        local_all_attachment_names_table = create_requirements_string_from_values_of_names_table(local_all_attachment_names_table)
+    else
+        -- This will go down the chain until it finds a {x, y, z}
+        -- Then at that layer, it will flatten that out into requirement strings
+        local function recursive_check_layer_make_strings_at_the_end(current_layer_of_table)
+            -- There's a flat list in the given table, meaning this is the end of the line
+            --   The goal is to go from
+            --          attachments
+            --           |- ["var_1"] = {"a", "b"}
+            --           |- ["var_2"] = {"c", "d"}
+            --   to
+            --          attachments
+            --           |- ["var_1"] = "a|b"
+            --           |- ["var_2"] = "c|d"
+            --           |- ["all"] = "a|b|c|d"
+            if (type(current_layer_of_table[1]) == "string") then
+                return create_requirements_string_from_values_of_names_table(current_layer_of_table)
+            else
+                local result = {}
+                local all_parts = {}
+                
+                for key, value in pairs(current_layer_of_table) do
+                    if type(value) == "table" then
+                        result[key] = recursive_check_layer_make_strings_at_the_end(value)
+                        -- Collect the "all" values from deeper levels
+                        -- Or if it's a string at the end
+                        if result[key]["all"] then
+                            table_insert(all_parts, result[key]["all"])
+                        elseif type(result[key]) == "string" then
+                            table_insert(all_parts, result[key])
+                        end
+                    else
+                        result[key] = value
+                    end
+                end
+                
+                -- If we collected any "all" values, combine them
+                if #all_parts > 0 then
+                    result["all"] = recursive_check_layer_make_strings_at_the_end(all_parts)
+                end
+                
+                return result
+            end
+        end
+
+        local_all_attachment_names_table = recursive_check_layer_make_strings_at_the_end(local_all_attachment_names_table)
     end
-    local_all_attachment_names_table.all = create_requirements_string_from_values_of_names_table(final_all_requirements)
 
     mod[attachment_name_for_global] = local_all_attachment_names_table
+    table_dump(local_all_attachment_names_table, "Transferred table of attachments to global uwu", 6)
 end
 
 -- ----------
