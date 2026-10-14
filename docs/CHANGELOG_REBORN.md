@@ -13,7 +13,9 @@
 - Missing mod title
 - Redid Slim Blades so it not as subjected to The Lottery
 ## Developer
-- Refactored localization from local table to global list on first setup because I was getting bored of copy pasting it
+- Refactored transfer from local table of attachments to global list on first setup because I was getting bored of copy pasting it
+    - `mod.local_table_of_attachments_add_one` handles adding one attachment to the list or to a key
+    - `mod.transfer_local_table_of_attachments_to_global_one_layer_of_keys` handles transferring the one layer to a global
 - Removed version logging
     - DMF does this natively now
     - The only purpose was to make sure users had this mod updated, and if the DMF logging is not in the log, I think it's safe to assume they just need to update everything

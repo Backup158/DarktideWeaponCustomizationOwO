@@ -229,15 +229,61 @@ function mod.localize_all_from_group(attachment_names, localizations_to_use)
 	end
 end
 
-function mod.one_layer_transfer_first_time_setup_localizations_to_global(local_attachments_table, attachment_name_for_global)
-    local final_all_requirements = {}
-    for name_of_major_variant, list_of_variants in pairs(local_attachments_table) do
-        local_attachments_table[name_of_major_variant] = create_requirements_string_from_values_of_names_table(list_of_variants)
-        table_insert(final_all_requirements, local_attachments_table[name_of_major_variant])
-    end
-    local_attachments_table.all = create_requirements_string_from_values_of_names_table(final_all_requirements)
+-- ------------------------------
+-- Make Local Table for Attachments
+-- ------------------------------
+-- ---------------
+-- Adding One Attachment to the List
+-- ---------------
+-- DESCRIPTION: One first time setup of an attachment group, I create a local table to track all the ones I added
+--   This gets transferred to a global variable later
+-- There are two forms
+--      local_attachments = {"attachment1", "attachment2", ...}
+--      local_attachments = {
+--                              ["variant_1"] = {"attachment_1", "attachment_2"},
+--                              ["variant_2"] = {"attachment_3", "attachment_4"},s
+--                          }
+--      I call this straight up and variant-based
+-- PARAMETERS: 
+--      local_all_attachment_names_table: table
+--      attachment_name: string; "owo_suppressor_01"
+--      variant_name: string; "dclaw", so it can go like ["dclaw"] = {"owo_slim_dclaw_01", "owo_slim_dclaw_02", ...}
+-- RETURN: Nothing. Since Lua is pass by reference, there's no need to return anything
+-- ---------------
+function mod.local_table_of_attachments_add_one(local_all_attachment_names_table, attachment_name, variant_name)
+    -- This is how you check if it's the first time
+    if not local_all_attachment_names_table then return end
 
-    mod[attachment_name_for_global] = local_attachments_table
+    -- Two cases: 
+    --   Add straight up to table
+    --   Add based on variant
+    if variant_name then
+        local_all_attachment_names_table[selection_group] = local_all_attachment_names_table[selection_group] or {}
+        table_insert(local_all_attachment_names_table[selection_group], attachment_name)
+    else
+        table_insert(local_all_attachment_names_table, attachment_name)
+    end
+end
+
+-- ---------------
+-- Transfer Local Table of Attachments to Global
+-- ---------------
+-- DESCRIPTION: 
+-- PARAMETERS:
+-- RETURN: Nothing. Since Lua is pass by reference, there's no need to return anything
+-- ---------------
+function mod.transfer_local_table_of_attachments_to_global_one_layer_of_keys(local_all_attachment_names_table, attachment_name_for_global)
+    -- This is how you check if it's the first time
+    if not local_all_attachment_names_table then return end
+
+    local final_all_requirements = {}
+    for name_of_major_variant, list_of_variants in pairs(local_all_attachment_names_table) do
+        local_all_attachment_names_table[name_of_major_variant] = create_requirements_string_from_values_of_names_table(list_of_variants)
+        table_insert(final_all_requirements, local_all_attachment_names_table[name_of_major_variant])
+    end
+    local_all_attachment_names_table.all = create_requirements_string_from_values_of_names_table(final_all_requirements)
+
+    mod[attachment_name_for_global] = local_all_attachment_names_table
 end
 
 -- ----------

@@ -34,6 +34,7 @@ local for_all_weapon_models = mod.for_all_weapon_models
 local create_group_indicator = mod.create_group_indicator
 local dump_if_debug = mod.dump_if_debug
 local calculate_damage_type_key_name = mod.calculate_damage_type_key_name
+local local_table_of_attachments_add_one = mod.local_table_of_attachments_add_one
 
 local slim_blade_families_and_damage_types = mod.slim_blade_families_and_damage_types
 
@@ -167,12 +168,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             true
         )
 
-        if all_attachment_names then
-            if not all_attachment_names[selection_group] then
-                all_attachment_names[selection_group] = {}
-            end
-            table_insert(all_attachment_names[selection_group], slim_blade_name)
-        end
+        local_table_of_attachments_add_one(all_attachment_names, slim_blade_name, selection_group)
     end
     -- Calls the above for all the variants
     local function slim_blade_variant_helper_single(number_string, base_name, model_base_path, table_of_all_transformations)
@@ -446,31 +442,8 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_scale = slim_hsword_scl,
         slim_g_scale = slim_hsword_g_scl,
     })
-    --[[
-    table.insert(table_to_return.fixes, {
-        {
-            attachment_slot = current_slot_name,
-            requirements = {
-                [current_slot_name] = {
-                    has = attachment_group_prefix..,
-                },
-            },
-            fix = {
-                offset = {
-                    -- position = vector3_box(0.0, 0.12, 0.015),
-                    position = vector3_box(0.0, 0.12, 0.015),
-                    rotation = vector3_box(0, 0.035, 0),
-                    scale = vector3_box(1, 1.0, 1),
-                },
-            },
-        }
-    })]]
-    -- dump_if_debug(table_to_return, "slim blades ALLLL")
 
-    if not mod.all_slim_blade_names then
-        -- dump_if_debug(all_attachment_names, "ALL SLIM BLADE NAMES uwu")
-        mod.all_slim_blade_names = all_attachment_names
-    end
+    mod.transfer_local_table_of_attachments_to_global_one_layer_of_keys(all_attachment_names, "all_slim_blade_names")
 
     return table_to_return
 
