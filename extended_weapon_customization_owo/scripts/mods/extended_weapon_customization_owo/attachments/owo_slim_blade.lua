@@ -190,7 +190,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_blade_attach_helper({
             number_string = number_string, 
             base_name = base_name, 
-            name_to_use = "flat_"..base_name.."_g", 
+            name_to_use = "flat_"..base_name.."_grip", 
             base_item_address = model_base_path,
             damage_type = calculated_damage_type,
         }, {
@@ -214,7 +214,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_blade_attach_helper({
             number_string = number_string, 
             base_name = base_name, 
-            name_to_use = "slim_"..base_name.."_g", 
+            name_to_use = "slim_"..base_name.."_grip", 
             base_item_address = model_base_path,
             damage_type = calculated_damage_type,
         }, {
@@ -244,7 +244,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             slim_blade_attach_helper({
                 number_string = number_string, 
                 base_name = base_name, 
-                name_to_use = "flat_"..base_name.."_g", 
+                name_to_use = "flat_"..base_name.."_grip", 
                 base_item_address = model_base_path,
                 damage_type = calculated_damage_type,
             }, {
@@ -271,7 +271,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
             slim_blade_attach_helper({
                 number_string = number_string, 
                 base_name = base_name, 
-                name_to_use = "slim_"..base_name.."_g", 
+                name_to_use = "slim_"..base_name.."_grip", 
                 base_item_address = model_base_path,
                 damage_type = calculated_damage_type,
             }, {
