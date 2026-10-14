@@ -1,6 +1,5 @@
-# 4.12.0 - WIP
+# 4.12.0 - 2026-10-14
 ## Added
-- Armalite Barrels
 - Slim Blades
     - Has the new DClaw blade
 - Support for Huntsman's Shotgun
@@ -12,6 +11,8 @@
 - Made bayonet alignment consistent
 - Missing mod title
 - Redid Slim Blades so it not as subjected to The Lottery
+    - Is this finally the end of the flipped blades
+    - pray for a miracle
 ## Developer
 - Refactored transfer from local table of attachments to global list on first setup because I was getting bored of copy pasting it
     - `mod.local_table_of_attachments_add_one` handles adding one attachment to the list or to a key
