@@ -443,7 +443,7 @@ function mod.owo_slim_blade(given_slot_name, given_attachment_node)
         slim_g_scale = slim_hsword_g_scl,
     })
 
-    mod.transfer_local_table_of_attachments_to_global_one_layer_of_keys(all_attachment_names, "all_slim_blade_names")
+    mod.transfer_local_table_of_attachments_to_global(all_attachment_names, "all_slim_blade_names")
 
     return table_to_return
 

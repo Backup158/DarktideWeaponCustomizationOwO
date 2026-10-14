@@ -284,7 +284,7 @@ function mod.owo_tactical_flashlight()
     end
 
     -- Making list of all attachments global
-    mod.transfer_local_table_of_attachments_to_global_one_layer_of_keys(all_these_attachments, "all_owo_tactical_flashlight")
+    mod.transfer_local_table_of_attachments_to_global(all_these_attachments, "all_owo_tactical_flashlight")
     
 
     return table_to_return

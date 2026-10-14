@@ -246,7 +246,7 @@ function mod.owo_holographic_sight(given_slot, given_attachment_node)
     -- ---------------
 
     if local_version_of_all_holographic_sights_names then
-        mod.transfer_local_table_of_attachments_to_global_one_layer_of_keys(local_version_of_all_holographic_sights_names, "all_holographic_sights_names")
+        mod.transfer_local_table_of_attachments_to_global(local_version_of_all_holographic_sights_names, "all_holographic_sights_names")
     end
     --table.dump(mod.all_holographic_sights_names, "nya ALL HOLOSIGHT NAMES", 20)
     return table_to_return
