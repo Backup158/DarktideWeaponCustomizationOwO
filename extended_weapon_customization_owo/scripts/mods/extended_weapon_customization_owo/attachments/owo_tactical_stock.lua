@@ -120,7 +120,7 @@ function mod.owo_tactical_stock(given_attachment_node)
 
     -- Making list of all attachments global
     if all_these_attachments then
-        mod.all_tactical_stock_names = all_these_attachments
+        mod.all_tactical_stock_names = mod.create_requirements_string_from_values_of_names_table(all_these_attachments)
     end
 
     return table_to_return
