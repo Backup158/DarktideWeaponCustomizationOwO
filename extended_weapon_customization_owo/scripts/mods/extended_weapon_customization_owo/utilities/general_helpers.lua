@@ -344,7 +344,7 @@ function mod.transfer_local_table_of_attachments_to_global(local_all_attachment_
     end
 
     mod[attachment_name_for_global] = local_all_attachment_names_table
-    table_dump(local_all_attachment_names_table, "Transferred table of attachments to global uwu", 6)
+    --table_dump(local_all_attachment_names_table, "Transferred table of attachments to global uwu", 6)
 end
 
 -- ----------
