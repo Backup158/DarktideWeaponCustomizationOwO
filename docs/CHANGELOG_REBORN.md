@@ -1,3 +1,9 @@
+# 4.13.0 - 2026-10-WIP
+## Added
+
+## Fixed
+- Excessive debug in console log
+
 # 4.12.0 - 2026-10-14
 ## Added
 - Slim Blades
