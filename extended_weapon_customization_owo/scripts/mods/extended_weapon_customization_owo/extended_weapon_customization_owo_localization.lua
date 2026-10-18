@@ -150,6 +150,9 @@ mod:add_global_localize_strings({
 	loc_ewc_owo_armalite_barrel = {
 		en = "OwO - Contemporary Barrels - Armalite",
 	},
+	loc_ewc_owo_trench_shotgun_barrel = {
+		en = "OwO - Contemporary Barrels - Trench Shotgun",
+	},
 	-- ---------------
 	-- Iron Sights
 	-- ---------------
@@ -505,6 +508,9 @@ local localizations = {
 	},
 	owo_armalite_barrel_no_post = {
 		en = "No Front Post",
+	},
+	owo_trench_shotgun_barrel = {
+		en = "M1897 Trench Gun Barrel",
 	},
 	-- ------------------------------
 	-- Sights

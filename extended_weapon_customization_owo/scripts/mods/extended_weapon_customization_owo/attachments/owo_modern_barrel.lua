@@ -508,3 +508,147 @@ function mod.owo_armalite_barrel(given_slot, given_attachment_node)
     return table_to_return
 
 end
+
+function mod.owo_trench_shotgun_barrel(given_slot, given_attachment_node)
+    local current_slot = given_slot or "barrel"
+    local current_attachment_node = given_attachment_node or "ap_barrel_01"
+
+    local attachment_group_name = "owo_trench_shotgun_barrel"
+    local attachment_group_prefix = attachment_group_name.."_"
+    local table_to_return = mod.init_table_to_return(attachment_group_name)
+
+    -- Logging all names if this is the first time
+    local all_these_attachments = nil
+    local list_of_names_to_use
+    if not mod.all_owo_trench_shotgun_barrels then
+        all_these_attachments = {}
+        list_of_names_to_use = all_these_attachments
+    else
+        list_of_names_to_use = mod.all_owo_trench_shotgun_barrels
+    end
+
+    local function owo_trench_shotgun_barrel_helper(number_as_string, fixes, kitbashes, table_to_insert_to)
+        local shortname = attachment_group_prefix.."_"..number_as_string
+        create_an_attachment(table_to_return, shortname,
+            -- Attachment
+            {   replacement_path = _item_ranged.."/barrels/"..shortname,
+                icon_render_unit_rotation_offset = render_unit_rot_profile_left,
+                icon_render_camera_position_offset = render_cam_pos_profile_left,
+                custom_selection_group = attachment_group_name,
+                randomization_requirement = "mod_option_modern_barrel_randomization",
+            },
+            -- Fixes
+            fixes,
+            -- Kitbash
+            kitbashes,
+            -- Attachment Node
+            current_attachment_node
+        )
+        -- Adding name to this group's list
+        if all_these_attachments then
+            table_to_insert_to = table_to_insert_to or {}
+            table_insert(table_to_insert_to, shortname)
+        end
+        
+        -- I need to reformat these to have the localization work with my structure but idgaf
+        -- localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
+    end
+
+    -- Creating helper attachments
+    local owo_kitbash_helper_address = _item_ranged.."/barrels/owo_trench_shotgun_barrel_helper_barrel_"
+    --  Make sure this one disables the vfx spawner exclusion
+    create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."barrel_extension_yummy", nil, "content/weapons/player/ranged/lasgun_rifle_krieg/attachments/barrel_07/barrel_07", "ap_barrel_01", true)
+    create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."shroud_grill", nil, "content/weapons/player/ranged/stubgun_ogryn/attachments/barrel_01/barrel_01", "ap_barrel_01")
+    create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."block_between_barrels", nil, "content/weapons/player/melee/thunder_hammer/attachments/head_04/head_04", "ap_head_01")
+    create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."front_curve_thing", nil, "content/weapons/player/ranged/lasgun_rifle/attachments/stock_03/stock_03", "ap_stock_01")
+    create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."front_bulge_thing", nil, "content/weapons/player/melee/axe/attachments/pommel_03/pommel_03", "ap_pommel_01")
+    
+    owo_trench_shotgun_barrel_helper("01", nil,
+    {
+        base_unit = "content/weapons/player/ranged/shotgun_pump_action/attachments/barrel_01/barrel_01",
+        attachments = {
+            owo_barrel_extension = {
+                item = owo_kitbash_helper_address.."barrel_extension_yummy",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.708, 0.0),
+                        rotation = vector3_box(0, 0, 0),
+                        scale = vector3_box(1.32, 1.0, 1.32),
+                    },
+                },
+            },
+            owo_barrel_foreskin_grater_front = {
+                item = owo_kitbash_helper_address.."shroud_grill",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.43, 0.0),
+                        rotation = vector3_box(180.0, 0, 180),
+                        scale = vector3_box(0.4, 0.466, 0.4),
+                    },
+                },
+            },
+            owo_barrel_foreskin_grater_back = {
+                item = owo_kitbash_helper_address.."shroud_grill",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.09, 0.0),
+                        rotation = vector3_box(180.0, 0, 180),
+                        scale = vector3_box(0.4, 0.5, 0.4),
+                    },
+                },
+            },
+            owo_barrel_foreskin_tumor = {
+                item = owo_kitbash_helper_address.."front_bulge_thing",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.9, -0.042),
+                        rotation = vector3_box(90.0, 0, 0.0),
+                        scale = vector3_box(0.5, 0.5, 0.5),
+                    },
+                },
+            },
+            owo_barrel_foreskin_hanger_front = {
+                item = owo_kitbash_helper_address.."front_curve_thing",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.798, -0.03),
+                        rotation = vector3_box(0.0, 0, 180.0),
+                        scale = vector3_box(0.45, 0.45, 0.202),
+                    },
+                },
+            },
+            owo_barrel_foreskin_hanger_back = {
+                item = owo_kitbash_helper_address.."front_curve_thing",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.87, -0.016),
+                        rotation = vector3_box(0.0, 0, 0.0),
+                        scale = vector3_box(0.45, 0.45, 0.585),
+                    },
+                },
+            },
+            owo_barrel_testicle_block = {
+                item = owo_kitbash_helper_address.."block_between_barrels",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(-0.024, 0.23, -0.032),
+                        rotation = vector3_box(0.0, 90, 0.0),
+                        scale = vector3_box(0.18, 0.666, 0.312),
+                    },
+                },
+            },
+        },
+    }, list_of_names_to_use)
+
+    mod.transfer_local_table_of_attachments_to_global(all_these_attachments, "all_owo_trench_shotgun_barrels")
+
+    return table_to_return
+
+end

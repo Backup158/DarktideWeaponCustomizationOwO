@@ -47,6 +47,7 @@ local pump_action_shotgun_long_barrels = mod.pump_action_shotgun_long_barrels
 
 --local any_owo_suppressors = mod.all_owo_suppressor_names.muzzle
 local owo_tactical_flashlight = mod.all_owo_tactical_flashlight.tactical_light
+local owo_trench_gun_barrels = mod.all_owo_trench_shotgun_barrels
 
 local custom_fixes = {
     -- Tactical Stocks
@@ -269,6 +270,26 @@ local custom_fixes = {
             },
         },
     },
+    -- OwO
+    --  Trench Gun
+    {   attachment_slot = "muzzle",
+        requirements = {
+            muzzle = {
+                has = "query:shotgun_p3_m1,muzzle,extended_weapon_customization_owo",
+            },
+            barrel = {
+                has = owo_trench_gun_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.9, 0.0),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
     -- ----------------------
     -- Bayonets
     -- ----------------------
@@ -384,20 +405,37 @@ local custom_fixes = {
             },
         },
     },
+    -- OwO
+    --  Trench Gun
+    {   attachment_slot = "bayonet",
+        requirements = {
+            bayonet = {
+                has = "query:shotgun_p3_m1,bayonet,extended_weapon_customization_owo",
+            },
+            barrel = {
+                has = owo_trench_gun_barrels,
+            },
+        },
+        fix = {
+            offset = {
+                position = vector3_box(0, 0.914, -0.042),
+                rotation = vector3_box(0, 0, 0),
+                scale = vector3_box(1, 1, 1),
+                node = 1,
+            },
+        },
+    },
     -- -----------
     -- Holographic Sights
     -- -----------
     {   attachment_slot = "sight_2",
         requirements = {
-            -- sight = {
-            --  missing = "sight_01", -- Whatever the default sights are
-            --},
             sight_2 = {
                 has = all_holographic_sights_names.eotech,
             },
-            syn_receiver_extension = {
-                missing = "query:shotgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
-            },
+            --syn_receiver_extension = {
+            --    missing = "query:shotgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+            --},
         },
         fix = {
             offset = {
@@ -408,15 +446,12 @@ local custom_fixes = {
     --  Sight Alignment
     {   attachment_slot = "sight_offset",
         requirements = {
-            -- sight = {
-            --  missing = "sight_01", -- Whatever the default sights are
-            --},
             sight_2 = {
                 has = all_holographic_sights_names.eotech,
             },
-            syn_receiver_extension = {
-                missing = "query:shotgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
-            },
+            --syn_receiver_extension = {
+            --    missing = "query:shotgun_p3_m1,syn_receiver_extension,extended_weapon_customization_syn_edits",
+            --},
         },
         fix = {
             offset = {

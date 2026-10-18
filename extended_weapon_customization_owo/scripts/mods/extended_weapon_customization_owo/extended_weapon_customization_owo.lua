@@ -460,6 +460,7 @@ add_attachments_to_list_of_weapons(mod.owo_suppressor("barrel_foreskin", "ap_muz
 -- Barrel
 -- ----------------
 add_attachments_to_list_of_weapons(mod.owo_kalashnikov_barrel(), {"autogun_p1_m1", "autogun_p2_m1", "autogun_p3_m1", "autopistol_p1_m1", "lasgun_p1_m1", "lasgun_p2_m1", "lasgun_p3_m1", }, "barrel")
+add_attachments_to_list_of_weapons(mod.owo_trench_shotgun_barrel(), {"shotgun_p3_m1"}, "barrel")
 
 -- ----------------
 -- OwO Underbarrel Weapon
@@ -492,7 +493,9 @@ add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), ranged_weapons_using
 add_attachments_to_list_of_weapons(mod.owo_holographic_sight(), ranged_weapons_using_sight_2, "sight_2")
 add_attachments_to_list_of_weapons(mod.owo_sight_reticle(), ranged_weapons_using_sight_2, "sight_reticle")
 add_attachments_to_list_of_weapons(mod.owo_laspistol_iron(), { "laspistol_p1_m1", }, "sight")
-add_attachments_to_list_of_weapons(mod.owo_invisible_generic("sight", "ap_sight_01", "shotgun_sight", "content/items/weapons/player/ranged/sights/shotgun_pump_action_sight_01"), {"shotgun_p3_m1"}, "sight")
+
+-- shotgun_p3 sight which is really a rail
+--add_attachments_to_list_of_weapons(mod.owo_invisible_generic("sight", "ap_sight_01", "shotgun_sight", "content/items/weapons/player/ranged/sights/shotgun_pump_action_sight_01"), {"shotgun_p3_m1"}, "sight")
 
 -- ################
 -- Melee
