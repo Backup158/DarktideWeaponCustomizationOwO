@@ -97,13 +97,17 @@ All flashlights come with color and beam power variants. Each combination is its
 > 2. PBS-1 has a muzzle in the middle that clips. It's a base to keep the muzzle flash, but hiding it has been oddly difficult to get working
 
 ## Barrel
-### **Contemporary Barrels**
+### **Contemporary Barrels - Kalashnikov**
 - *Weapons*: Autoguns
-- **Kalashnikov Barrels**
-  - Shortened Braced Autogun Barrels
-  - They come in Short (Rocks Glass) and Shorter (Shot Glass)
+- Shortened Braced Autogun Barrels
+- They come in Short (Rocks Glass) and Shorter (Shot Glass)
 
 ![Autogun with AK Bayonet and AK Barrel](./assets/images/owo_rebuild_ak_barrel.png)
+
+### **Contemporary Barrels - Trench Gun**
+- *Weapons*: Huntsman's Shotgun
+- Pump action barrel with a heat shield
+- Based on the M1897 Winchester
 
 ## Stock
 ### **Tactical Stocks**
