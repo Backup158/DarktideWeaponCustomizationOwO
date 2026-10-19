@@ -11,6 +11,8 @@ In the customization menu, parts will be in sections named `Ostracized without O
 > - *Weapons*: Weapons available
 > - Description
 
+*Last updated: v4.13.0*
+
 # Ranged
 ## Special/Flashlight
 All flashlights come with color and beam power variants. Each combination is its own category, which each of the following types of flashlight included.
@@ -167,10 +169,6 @@ All flashlights come with color and beam power variants. Each combination is its
   - Grip Variant: Also shrinks the grip
 
 ![Slim Blade on Power Sword](./assets/images/owo_slim_blade_psword.png)
-
-> [!WARNING]
-> 
-> Some of them are just flipped backwards. Despite a few months of effort, they aren't cooperating. Therefore they are unholy (tbh it probably just means I need to remake them).
 
 ### **Chainsword Blades**
 - *Weapons*: Assault Chainswords, Heavy Eviscerators
