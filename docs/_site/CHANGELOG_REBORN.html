@@ -1,908 +1,845 @@
-<!DOCTYPE html>
-<html lang="en-US">
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=00ecefcf7cfb1467cb06689ee15b494d9b7f1872">
-
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>4.13.0 - 2026-10-WIP | Darktide Mod: Extended Weapon Customization - OwO</title>
-<meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="4.13.0 - 2026-10-WIP" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection" />
-<meta property="og:description" content="Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection" />
-<meta property="og:site_name" content="Darktide Mod: Extended Weapon Customization - OwO" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="4.13.0 - 2026-10-WIP" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection","headline":"4.13.0 - 2026-10-WIP","url":"/CHANGELOG_REBORN.html"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-            <a id="forkme_banner" href="https://github.com/Backup158/DarktideWeaponCustomizationOwO">View on GitHub</a>
-          
-
-          <h1 id="project_title">Darktide Mod: Extended Weapon Customization - OwO</h1>
-          <h2 id="project_tagline">Information about the Extended Weapon Customization mod's add-on plugin Ostracized without Objection</h2>
-
-          
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1 id="wip">4.13.0 - 2026-10-WIP</h1>
+<h1 id="4130---2026-10-wip">4.13.0 - 2026-10-WIP</h1>
 <h2 id="added">Added</h2>
+
 <h2 id="fixed">Fixed</h2>
 <ul>
-<li>Excessive debug in console log</li>
+  <li>Excessive debug in console log</li>
 </ul>
-<h1 id="section">4.12.0 - 2026-10-14</h1>
+
+<h1 id="4120---2026-10-14">4.12.0 - 2026-10-14</h1>
 <h2 id="added-1">Added</h2>
 <ul>
-<li>Slim Blades
-<ul>
-<li>Has the new DClaw blade</li>
+  <li>Slim Blades
+    <ul>
+      <li>Has the new DClaw blade</li>
+    </ul>
+  </li>
+  <li>Support for Huntsman’s Shotgun</li>
+  <li>Flashlight
+    <ul>
+      <li>Tactical flashlight finally remade</li>
+      <li>MP5 lights also made but not yet repositioned. I need to think about how to do this properly
+        <h2 id="fixed-1">Fixed</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Combat Shotgun sights being placed into the wrong slot</li>
+  <li>Made bayonet alignment consistent</li>
+  <li>Missing mod title</li>
+  <li>Redid Slim Blades so it not as subjected to The Lottery
+    <ul>
+      <li>Is this finally the end of the flipped blades</li>
+      <li>pray for a miracle
+        <h2 id="developer">Developer</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Refactored transfer from local table of attachments to global list on first setup because I was getting bored of copy pasting it
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">mod.local_table_of_attachments_add_one</code> handles adding one attachment to the list or to a key</li>
+      <li><code class="language-plaintext highlighter-rouge">mod.transfer_local_table_of_attachments_to_global</code> handles transferring the one layer to a global</li>
+    </ul>
+  </li>
+  <li>Removed version logging
+    <ul>
+      <li>DMF does this natively now</li>
+      <li>The only purpose was to make sure users had this mod updated, and if the DMF logging is not in the log, I think it’s safe to assume they just need to update everything</li>
+      <li>Makes it less tedious to maintain multiple version numbers</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>Support for Huntsman's Shotgun</li>
-<li>Flashlight
-<ul>
-<li>Tactical flashlight finally remade</li>
-<li>MP5 lights also made but not yet repositioned. I need to think about how to do this properly</li>
-</ul>
-</li>
-</ul>
-<h2 id="fixed-1">Fixed</h2>
-<ul>
-<li>Combat Shotgun sights being placed into the wrong slot</li>
-<li>Made bayonet alignment consistent</li>
-<li>Missing mod title</li>
-<li>Redid Slim Blades so it not as subjected to The Lottery
-<ul>
-<li>Is this finally the end of the flipped blades</li>
-<li>pray for a miracle</li>
-</ul>
-</li>
-</ul>
-<h2 id="developer">Developer</h2>
-<ul>
-<li>Refactored transfer from local table of attachments to global list on first setup because I was getting bored of copy pasting it
-<ul>
-<li><code>mod.local_table_of_attachments_add_one</code> handles adding one attachment to the list or to a key</li>
-<li><code>mod.transfer_local_table_of_attachments_to_global</code> handles transferring the one layer to a global</li>
-</ul>
-</li>
-<li>Removed version logging
-<ul>
-<li>DMF does this natively now</li>
-<li>The only purpose was to make sure users had this mod updated, and if the DMF logging is not in the log, I think it's safe to assume they just need to update everything</li>
-<li>Makes it less tedious to maintain multiple version numbers</li>
-</ul>
-</li>
-</ul>
-<h1 id="section-1">4.11.0 - 2026-09-07</h1>
+
+<h1 id="4110---2026-09-07">4.11.0 - 2026-09-07</h1>
 <p><em>May require reequiping some Laspistol iron sights</em></p>
 <h2 id="added-2">Added</h2>
 <ul>
-<li>Laspistol Night Iron Sights</li>
-<li>The other laspistol iron sight variants</li>
+  <li>Laspistol Night Iron Sights</li>
+  <li>The other laspistol iron sight variants
+    <h2 id="changed">Changed</h2>
+  </li>
+  <li>Split Iron Sights into selection groups
+    <h2 id="developer-1">Developer</h2>
+  </li>
+  <li>Refactored laspistol irons to create all variants</li>
+  <li>Renamed <code class="language-plaintext highlighter-rouge">laspstol_with_rail_jank</code> to <code class="language-plaintext highlighter-rouge">laspistol_jank_with_rail</code> arbitrarily. kiss your sister</li>
 </ul>
-<h2 id="changed">Changed</h2>
-<ul>
-<li>Split Iron Sights into selection groups</li>
-</ul>
-<h2 id="developer-1">Developer</h2>
-<ul>
-<li>Refactored laspistol irons to create all variants</li>
-<li>Renamed <code>laspstol_with_rail_jank</code> to <code>laspistol_jank_with_rail</code> arbitrarily. kiss your sister</li>
-</ul>
-<h1 id="section-2">4.10,0 - 2026-09-07</h1>
+
+<h1 id="4100---2026-09-07">4.10,0 - 2026-09-07</h1>
 <h2 id="added-3">Added</h2>
 <ul>
-<li>Invisible Rifle Rails
-<ul>
-<li>For laspistol</li>
+  <li>Invisible Rifle Rails
+    <ul>
+      <li>For laspistol</li>
+    </ul>
+  </li>
+  <li>Laspistol Irons
+    <ul>
+      <li>For laspistol</li>
+      <li>With and without rails</li>
+      <li>With and without alignment for aiming
+        <h2 id="fixed-2">Fixed</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Missing attachment localizations because <code class="language-plaintext highlighter-rouge">mod.localize_attachment_triple_threat</code> put the number in the wrong spot</li>
+  <li>Vulnerability when inserting custom fixes per weapon that would allow it to pass nil and crash
+    <h2 id="developer-2">Developer</h2>
+  </li>
+  <li>Renamed <code class="language-plaintext highlighter-rouge">mod.create_requirements_string_from_names_table</code> to <code class="language-plaintext highlighter-rouge">mod.create_requirements_string_from_values_of_names_table</code></li>
+  <li>Created <code class="language-plaintext highlighter-rouge">mod.shallow_create_all_requirements_string_in_table</code> to automatically run the above on one level of a table
+    <ul>
+      <li>This is to avoid the monstrosity that is the contemporary barrel localization</li>
+      <li>So yeah i changed it to that in <code class="language-plaintext highlighter-rouge">owo_modern_barrel.lua</code></li>
+    </ul>
+  </li>
+  <li>More detailed error messages for adding localization suffix tables</li>
+  <li>Refactored inserting custom fixes per weapon to avoid checking more fixes after it’s already replaced a fix</li>
+  <li>Renamed <code class="language-plaintext highlighter-rouge">kitbashs</code> to <code class="language-plaintext highlighter-rouge">kitbashes</code> for internal use, then copies the values over before sending it to the main mod</li>
 </ul>
-</li>
-<li>Laspistol Irons
-<ul>
-<li>For laspistol</li>
-<li>With and without rails</li>
-<li>With and without alignment for aiming</li>
-</ul>
-</li>
-</ul>
-<h2 id="fixed-2">Fixed</h2>
-<ul>
-<li>Missing attachment localizations because <code>mod.localize_attachment_triple_threat</code> put the number in the wrong spot</li>
-<li>Vulnerability when inserting custom fixes per weapon that would allow it to pass nil and crash</li>
-</ul>
-<h2 id="developer-2">Developer</h2>
-<ul>
-<li>Renamed <code>mod.create_requirements_string_from_names_table</code> to <code>mod.create_requirements_string_from_values_of_names_table</code></li>
-<li>Created <code>mod.shallow_create_all_requirements_string_in_table</code> to automatically run the above on one level of a table
-<ul>
-<li>This is to avoid the monstrosity that is the contemporary barrel localization</li>
-<li>So yeah i changed it to that in <code>owo_modern_barrel.lua</code></li>
-</ul>
-</li>
-<li>More detailed error messages for adding localization suffix tables</li>
-<li>Refactored inserting custom fixes per weapon to avoid checking more fixes after it's already replaced a fix</li>
-<li>Renamed <code>kitbashs</code> to <code>kitbashes</code> for internal use, then copies the values over before sending it to the main mod</li>
-</ul>
-<h1 id="section-3">4.9.0 - 2026-09-03</h1>
+
+<h1 id="490---2026-09-03">4.9.0 - 2026-09-03</h1>
 <h2 id="added-4">Added</h2>
 <ul>
-<li>Contemporary barrels
-<ul>
-<li>Now on shredder autopistol and lasguns</li>
-<li>because adding more bugs is a good idea!</li>
+  <li>Contemporary barrels
+    <ul>
+      <li>Now on shredder autopistol and lasguns</li>
+      <li>because adding more bugs is a good idea!
+        <h2 id="fixed-3">Fixed</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Kalashnikov Barrels not lining up
+    <ul>
+      <li>Braced Autogun’s origin is lower, so I had to move the others down</li>
+      <li>I forgot to set the exception</li>
+      <li>Which is pretty embarassing since I noticed that when I first made these lol
+        <h2 id="developer-3">Developer</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Moved hardcoded fix requirements to its own file
+    <ul>
+      <li>This is so it can load before attachemnts are created</li>
+      <li>I should’ve done this a while ago</li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
-<h2 id="fixed-3">Fixed</h2>
-<ul>
-<li>Kalashnikov Barrels not lining up
-<ul>
-<li>Braced Autogun's origin is lower, so I had to move the others down</li>
-<li>I forgot to set the exception</li>
-<li>Which is pretty embarassing since I noticed that when I first made these lol</li>
-</ul>
-</li>
-</ul>
-<h2 id="developer-3">Developer</h2>
-<ul>
-<li>Moved hardcoded fix requirements to its own file
-<ul>
-<li>This is so it can load before attachemnts are created</li>
-<li>I should've done this a while ago</li>
-</ul>
-</li>
-</ul>
-<h1 id="section-4">4.8.1 - 2026-08-31</h1>
+
+<h1 id="481---2026-08-31">4.8.1 - 2026-08-31</h1>
 <h2 id="fixed-4">Fixed</h2>
 <ul>
-<li>Other plugins' sights were getting unaligned
-<ul>
-<li>The holographic sight was not properly logging its name</li>
-<li>This meant the fixes were trying to match <code>nil</code>, so it was always valid for any sight</li>
-<li>This then subjected every other sight to... The EWC Fix Lottery</li>
+  <li>Other plugins’ sights were getting unaligned
+    <ul>
+      <li>The holographic sight was not properly logging its name</li>
+      <li>This meant the fixes were trying to match <code class="language-plaintext highlighter-rouge">nil</code>, so it was always valid for any sight</li>
+      <li>This then subjected every other sight to… The EWC Fix Lottery</li>
+    </ul>
+  </li>
+  <li>Fixed doubled sights from other plugins on the Galvanic Rifle
+    <ul>
+      <li>This was because I defined an attachment slot for <code class="language-plaintext highlighter-rouge">sight</code> based on the receiver instead of the rail</li>
+      <li>EWC is a goon so it just takes my new slot and gives it to everyone, so there’s two <code class="language-plaintext highlighter-rouge">sight</code></li>
+    </ul>
+  </li>
+  <li>Made previews for Sight Reticles visible
+    <ul>
+      <li>Reticle 1 and 3 are general visible (<code class="language-plaintext highlighter-rouge">(+)</code> and <code class="language-plaintext highlighter-rouge">[+]</code>)</li>
+      <li>What about reticle 2?</li>
+      <li>I have no clue</li>
+      <li>That father fucker just up and disappeared</li>
+      <li>I spent the entire time aligning the other 2 and slowly rotating reticle 2 to try and find it</li>
+      <li>But it’s just GONE?? like a fart in the wind</li>
+      <li>I’ll get my fucking child support, reticle 2</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>Fixed doubled sights from other plugins on the Galvanic Rifle
-<ul>
-<li>This was because I defined an attachment slot for <code>sight</code> based on the receiver instead of the rail</li>
-<li>EWC is a goon so it just takes my new slot and gives it to everyone, so there's two <code>sight</code></li>
-</ul>
-</li>
-<li>Made previews for Sight Reticles visible
-<ul>
-<li>Reticle 1 and 3 are general visible (<code>(+)</code> and <code>[+]</code>)</li>
-<li>What about reticle 2?</li>
-<li>I have no clue</li>
-<li>That father fucker just up and disappeared</li>
-<li>I spent the entire time aligning the other 2 and slowly rotating reticle 2 to try and find it</li>
-<li>But it's just GONE?? like a fart in the wind</li>
-<li>I'll get my fucking child support, reticle 2</li>
-</ul>
-</li>
-</ul>
-<h1 id="section-5">4.8.0 - 2026-08-20</h1>
+
+<h1 id="480---2026-08-20">4.8.0 - 2026-08-20</h1>
 <h2 id="added-5">Added</h2>
 <ul>
-<li>Suppressors
-<ul>
-<li>PBS-1 now has a variant with the base muzzle visible</li>
+  <li>Suppressors
+    <ul>
+      <li>PBS-1 now has a variant with the base muzzle visible</li>
+    </ul>
+  </li>
+  <li>Flashlights
+    <ul>
+      <li>There is now a custom color that grabs from the mod options</li>
+      <li>Requires the latest update for DMF</li>
+    </ul>
+  </li>
+  <li>Updated localization helper to support localization instead of only English
+    <ul>
+      <li>…yeah</li>
+      <li>that’s pretty embarassing</li>
+      <li>Though it’s not like I expect anyone to translate this monster lol
+        <h2 id="changed-1">Changed</h2>
+      </li>
+    </ul>
+  </li>
+  <li>[REDACTED] Suppressors no longer have a damage type if it’s not a muzzle
+    <ul>
+      <li>Now the barrel shrouds won’t mess with you</li>
+      <li>haha</li>
+      <li>just kidding</li>
+      <li>that’s for the weekend</li>
+    </ul>
+  </li>
+  <li>Suppressors are actually categorized by regular vs slim</li>
+  <li>Suppressors no longer have the base mesh visible
+    <h2 id="fixed-5">Fixed</h2>
+  </li>
+  <li>I broke all the suppressors again last time lol
+    <ul>
+      <li>All muzzle suppressors were taking the barrel shroud position</li>
+      <li>Now they’re back to how they were</li>
+      <li>Which is to say</li>
+      <li>Shit!</li>
+      <li>Not really. The broken part wasn’t actually too noticable</li>
+    </ul>
+  </li>
+  <li>Invisible flashlight was trying to be a stock for some reason, so now it’s actually invisible
+    <h2 id="developer-4">Developer</h2>
+  </li>
+  <li>Refactored some global attachment names to be called by the attachment file itself instead of shared fixes. In the future this makes it easier to keep everything together instead of jumping between the file and the shared file, so adopting the same thing over time makes it more consistent.</li>
 </ul>
-</li>
-<li>Flashlights
-<ul>
-<li>There is now a custom color that grabs from the mod options</li>
-<li>Requires the latest update for DMF</li>
-</ul>
-</li>
-<li>Updated localization helper to support localization instead of only English
-<ul>
-<li>...yeah</li>
-<li>that's pretty embarassing</li>
-<li>Though it's not like I expect anyone to translate this monster lol</li>
-</ul>
-</li>
-</ul>
-<h2 id="changed-1">Changed</h2>
-<ul>
-<li>[REDACTED] Suppressors no longer have a damage type if it's not a muzzle
-<ul>
-<li>Now the barrel shrouds won't mess with you</li>
-<li>haha</li>
-<li>just kidding</li>
-<li>that's for the weekend</li>
-</ul>
-</li>
-<li>Suppressors are actually categorized by regular vs slim</li>
-<li>Suppressors no longer have the base mesh visible</li>
-</ul>
-<h2 id="fixed-5">Fixed</h2>
-<ul>
-<li>I broke all the suppressors again last time lol
-<ul>
-<li>All muzzle suppressors were taking the barrel shroud position</li>
-<li>Now they're back to how they were</li>
-<li>Which is to say</li>
-<li>Shit!</li>
-<li>Not really. The broken part wasn't actually too noticable</li>
-</ul>
-</li>
-<li>Invisible flashlight was trying to be a stock for some reason, so now it's actually invisible</li>
-</ul>
-<h2 id="developer-4">Developer</h2>
-<ul>
-<li>Refactored some global attachment names to be called by the attachment file itself instead of shared fixes. In the future this makes it easier to keep everything together instead of jumping between the file and the shared file, so adopting the same thing over time makes it more consistent.</li>
-</ul>
-<h1 id="section-6">4.7.0 - 2026-08-16</h1>
+
+<h1 id="470---2026-08-16">4.7.0 - 2026-08-16</h1>
 <h2 id="added-6">Added</h2>
 <ul>
-<li>Contemporary Barrels
-<ul>
-<li>For the autoguns</li>
-<li>Short AK Barrels (Rocks Glass) and Shorter AK Barrels (Shots Glass)
-<ul>
-<li>Shorter version of the Braced Autogun barrels</li>
-<li>The names are in reference to serving glasses used for vodka (idk I don't drink)</li>
+  <li>Contemporary Barrels
+    <ul>
+      <li>For the autoguns</li>
+      <li>Short AK Barrels (Rocks Glass) and Shorter AK Barrels (Shots Glass)
+        <ul>
+          <li>Shorter version of the Braced Autogun barrels</li>
+          <li>The names are in reference to serving glasses used for vodka (idk I don’t drink)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>AK Style Helbore Bayonets
+    <ul>
+      <li>For basically all ranged lol</li>
+      <li>Helbore bayonets (the slashy kind) but flipped upside down</li>
+      <li>Isn’t set up for all of them, but that’s something for future me</li>
+    </ul>
+  </li>
+  <li>Veteran Guardsman Laspistol Wargear
+    <ul>
+      <li>Laspistols</li>
+      <li>Underbarrel plasma pistols and bolt pistols</li>
+      <li>Yes, underbarrel pistols for your pistol lol</li>
+      <li>There was a misprint in one of the 10th edition rulebooks
+        <h2 id="changed-2">Changed</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Perhaps improved barrel shroud positioning logic</li>
+  <li>Restructured Mod Options to have more subcategories
+    <h2 id="fixed-6">Fixed</h2>
+  </li>
+  <li>Crash when hovering chainsword body 10-12
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">create_attachments.lua</code> did not have safety checks when prepending 0</li>
+      <li>Thus creating nonsensical numbers when fed two digit values</li>
+    </ul>
+  </li>
+  <li>Missing mod options for randomization: chainsword blades</li>
+  <li>Equipping AK Irons would move suppressors forwards
+    <ul>
+      <li>Both were made as simple kitbashes</li>
+      <li>Making the AK base apply as the muzzle base, so the fix hit both</li>
+      <li>Turned AK Irons into a full kitbash
+        <h2 id="developer-5">Developer</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Refactored tactical stock localization so it appears in the localization file</li>
+  <li>Updated localization standard so I can copy it for each attachment group, instead of fiddling with</li>
+  <li>Adopted a test version of the info.json file</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>AK Style Helbore Bayonets
-<ul>
-<li>For basically all ranged lol</li>
-<li>Helbore bayonets (the slashy kind) but flipped upside down</li>
-<li>Isn't set up for all of them, but that's something for future me</li>
-</ul>
-</li>
-<li>Veteran Guardsman Laspistol Wargear
-<ul>
-<li>Laspistols</li>
-<li>Underbarrel plasma pistols and bolt pistols</li>
-<li>Yes, underbarrel pistols for your pistol lol</li>
-<li>There was a misprint in one of the 10th edition rulebooks</li>
-</ul>
-</li>
-</ul>
-<h2 id="changed-2">Changed</h2>
-<ul>
-<li>Perhaps improved barrel shroud positioning logic</li>
-<li>Restructured Mod Options to have more subcategories</li>
-</ul>
-<h2 id="fixed-6">Fixed</h2>
-<ul>
-<li>Crash when hovering chainsword body 10-12
-<ul>
-<li><code>create_attachments.lua</code> did not have safety checks when prepending 0</li>
-<li>Thus creating nonsensical numbers when fed two digit values</li>
-</ul>
-</li>
-<li>Missing mod options for randomization: chainsword blades</li>
-<li>Equipping AK Irons would move suppressors forwards
-<ul>
-<li>Both were made as simple kitbashes</li>
-<li>Making the AK base apply as the muzzle base, so the fix hit both</li>
-<li>Turned AK Irons into a full kitbash</li>
-</ul>
-</li>
-</ul>
-<h2 id="developer-5">Developer</h2>
-<ul>
-<li>Refactored tactical stock localization so it appears in the localization file</li>
-<li>Updated localization standard so I can copy it for each attachment group, instead of fiddling with</li>
-<li>Adopted a test version of the info.json file</li>
-</ul>
-<h1 id="section-7">4.6.0 - 2026-08-08</h1>
+
+<h1 id="460---2026-08-08">4.6.0 - 2026-08-08</h1>
 <h2 id="added-7">Added</h2>
 <ul>
-<li>Chainsword Blades
-<ul>
-<li>Chainsword blades onto the Heavy Eviscerator</li>
-<li>Eviscerator blades onto the Assault Chainsword</li>
-<li>Created new Chainsword damage types for each of them</li>
+  <li>Chainsword Blades
+    <ul>
+      <li>Chainsword blades onto the Heavy Eviscerator</li>
+      <li>Eviscerator blades onto the Assault Chainsword</li>
+      <li>Created new Chainsword damage types for each of them</li>
+    </ul>
+  </li>
+  <li>Chainsword chains
+    <ul>
+      <li>For use with the above
+        <h2 id="changed-3">Changed</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Refactored damage types
+    <ul>
+      <li>It’s done only on all mods being loaded, so load order doesn’t matter with EWC
+        <ul>
+          <li>still recommended to keep OwO after base additions bc of the soft requirement</li>
+          <li>But if I ever get rid of that, it’ll be fine in whatever order</li>
+          <li>Robustness yesss</li>
+        </ul>
+      </li>
+      <li>Clarified <code class="language-plaintext highlighter-rouge">families_and_damage_types</code> was just for slim blades, since I needed one for chainsword blades separately</li>
+      <li>Created function for making damage types from a given family/damage_type table</li>
+    </ul>
+  </li>
+  <li>Refactored file structure. Now whenever I add a new attachment/fix, all edits are done in one file instead of being spread out</li>
+  <li>Refactored copying to siblings for improved performance</li>
+  <li>Refactored common fixes and attachments
+    <ul>
+      <li>Before I just copy pasted them among the weapon files</li>
+      <li>Now there are tables in the shared fix requirements so it’s easier to make sweeping changes
+        <h2 id="fixed-7">Fixed</h2>
+      </li>
+    </ul>
+  </li>
+  <li><del>my life haha</del></li>
+  <li>AML will sort it after base additions</li>
 </ul>
-</li>
-<li>Chainsword chains
-<ul>
-<li>For use with the above</li>
-</ul>
-</li>
-</ul>
-<h2 id="changed-3">Changed</h2>
-<ul>
-<li>Refactored damage types
-<ul>
-<li>It's done only on all mods being loaded, so load order doesn't matter with EWC
-<ul>
-<li>still recommended to keep OwO after base additions bc of the soft requirement</li>
-<li>But if I ever get rid of that, it'll be fine in whatever order</li>
-<li>Robustness yesss</li>
-</ul>
-</li>
-<li>Clarified <code>families_and_damage_types</code> was just for slim blades, since I needed one for chainsword blades separately</li>
-<li>Created function for making damage types from a given family/damage_type table</li>
-</ul>
-</li>
-<li>Refactored file structure. Now whenever I add a new attachment/fix, all edits are done in one file instead of being spread out</li>
-<li>Refactored copying to siblings for improved performance</li>
-<li>Refactored common fixes and attachments
-<ul>
-<li>Before I just copy pasted them among the weapon files</li>
-<li>Now there are tables in the shared fix requirements so it's easier to make sweeping changes</li>
-</ul>
-</li>
-</ul>
-<h2 id="fixed-7">Fixed</h2>
-<ul>
-<li><del>my life haha</del></li>
-<li>AML will sort it after base additions</li>
-</ul>
-<h1 id="section-8">4.5.0 - 2026-07-23</h1>
+
+<h1 id="450---2026-07-23">4.5.0 - 2026-07-23</h1>
 <h2 id="added-8">Added</h2>
 <ul>
-<li>Slim Blades
-<ul>
-<li>Mechanicus Power Sword is added to list of available blades (and whoever named them is a psychopath)</li>
-<li>Mechanicus Power Sword can use slim blades. They'll look weird due to the lack of guard on the grip</li>
+  <li>Slim Blades
+    <ul>
+      <li>Mechanicus Power Sword is added to list of available blades (and whoever named them is a psychopath)</li>
+      <li>Mechanicus Power Sword can use slim blades. They’ll look weird due to the lack of guard on the grip</li>
+    </ul>
+  </li>
+  <li>Added parts to the new weapons
+    <ul>
+      <li>“dual_autopistols_p1_m1”, “dual_stubpistols_p1_m1”, “needlepistol_p1_m1”,
+  “arc_rifle_p1_m1”, “galvanic_rifle_p1_m1”, “phosphor_pistol_p1_m1”</li>
+      <li>All the flashlights (tactical ones are still broken)</li>
+      <li>Holographic Sights</li>
+      <li>Suppressors
+        <h2 id="changed-4">Changed</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Refactored list of slim blade damage types so it’s one table i need to edit
+    <h2 id="fixed-8">Fixed</h2>
+  </li>
+  <li>Helbore Lasguns with suppressors have bayonets aligned now
+    <ul>
+      <li>Before, they were clipping inside the muzzle</li>
+      <li>Now, they should be closer to the bottom lug of the barrel</li>
+    </ul>
+  </li>
+  <li>Vigilant Autogun and Braced alignments (copied values from Infantry Autogun)</li>
+  <li>Infantry Lasgun sight alignments
+    <ul>
+      <li>the reticles themselves are jank and evil</li>
+      <li>half the time they align</li>
+      <li>all of the time, they don’t hide the housing properly</li>
+      <li>Use the empty sight reticle for now</li>
+    </ul>
+  </li>
+  <li>Recon Lasgun holosight alignments
+    <ul>
+      <li>With partial compatibility with Syn’s receivers</li>
+      <li>Sometimes the alignments don’t register and it just stays floating</li>
+      <li>I’m guessing this is the same cause as the slim blade flip issue. This issue will be investigated</li>
+    </ul>
+  </li>
+  <li>Helbore Lasgun holosight alignments
+    <ul>
+      <li>The sight itself works, but the reticles won’t cooperate for me, for whatever reason</li>
+      <li>Use the empty reticle</li>
+    </ul>
+  </li>
+  <li>Aligned suppressor tip
+    <ul>
+      <li>Wrapped and Heavy Metal 2</li>
+      <li>There’s supposed to be a tip with a noticable barrel edge, but it was too deep inside so it was just a flat, closed barrel</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>Added parts to the new weapons
-<ul>
-<li>&quot;dual_autopistols_p1_m1&quot;, &quot;dual_stubpistols_p1_m1&quot;, &quot;needlepistol_p1_m1&quot;,
-&quot;arc_rifle_p1_m1&quot;, &quot;galvanic_rifle_p1_m1&quot;, &quot;phosphor_pistol_p1_m1&quot;</li>
-<li>All the flashlights (tactical ones are still broken)</li>
-<li>Holographic Sights</li>
-<li>Suppressors</li>
-</ul>
-</li>
-</ul>
-<h2 id="changed-4">Changed</h2>
-<ul>
-<li>Refactored list of slim blade damage types so it's one table i need to edit</li>
-</ul>
-<h2 id="fixed-8">Fixed</h2>
-<ul>
-<li>Helbore Lasguns with suppressors have bayonets aligned now
-<ul>
-<li>Before, they were clipping inside the muzzle</li>
-<li>Now, they should be closer to the bottom lug of the barrel</li>
-</ul>
-</li>
-<li>Vigilant Autogun and Braced alignments (copied values from Infantry Autogun)</li>
-<li>Infantry Lasgun sight alignments
-<ul>
-<li>the reticles themselves are jank and evil</li>
-<li>half the time they align</li>
-<li>all of the time, they don't hide the housing properly</li>
-<li>Use the empty sight reticle for now</li>
-</ul>
-</li>
-<li>Recon Lasgun holosight alignments
-<ul>
-<li>With partial compatibility with Syn's receivers</li>
-<li>Sometimes the alignments don't register and it just stays floating</li>
-<li>I'm guessing this is the same cause as the slim blade flip issue. This issue will be investigated</li>
-</ul>
-</li>
-<li>Helbore Lasgun holosight alignments
-<ul>
-<li>The sight itself works, but the reticles won't cooperate for me, for whatever reason</li>
-<li>Use the empty reticle</li>
-</ul>
-</li>
-<li>Aligned suppressor tip
-<ul>
-<li>Wrapped and Heavy Metal 2</li>
-<li>There's supposed to be a tip with a noticable barrel edge, but it was too deep inside so it was just a flat, closed barrel</li>
-</ul>
-</li>
-</ul>
-<h1 id="section-9">2026-05-05</h1>
+
+<h1 id="2026-05-05">2026-05-05</h1>
 <p>v4.4.0</p>
 <ul>
-<li>Reverted the suppressor changes, to support the new EWC version</li>
+  <li>Reverted the suppressor changes, to support the new EWC version</li>
 </ul>
+
 <h3 id="refactor">Refactor</h3>
 <ul>
-<li>Made more player-facing messages localization strings, so they can be easily translated if needed</li>
+  <li>Made more player-facing messages localization strings, so they can be easily translated if needed</li>
 </ul>
-<h1 id="section-10">2026-04-27</h1>
+
+<h1 id="2026-04-27">2026-04-27</h1>
 <p>v4.4.0-beta</p>
 <ul>
-<li>Added error message about using the MT Plugin</li>
-<li>Added options to disable randomization for all groups of parts</li>
+  <li>Added error message about using the MT Plugin</li>
+  <li>Added options to disable randomization for all groups of parts
+    <h2 id="added-partssupport">Added Parts/Support</h2>
+  </li>
+  <li>Barrel Shrouds (<code class="language-plaintext highlighter-rouge">barrel_foreskin</code>) slot
+    <ul>
+      <li>Reusing Suppressors to keep the old bug</li>
+      <li>It only works on Autoguns and “works” is being generous</li>
+    </ul>
+  </li>
+  <li>Added slim variant of Wrapped Suppressor</li>
+  <li><del>Aligned Suppressors on Combat Shotguns for Syn’s barrels</del></li>
+  <li><del>Aligned Holographic Sights for Syn’s receiver extensions</del>
+    <ul>
+      <li><del>sight offset has similar issues with flipped blades, in that they’re inconsistent and make me want to contribute to the statistic</del>
+        <h2 id="fixes">Fixes</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Robust handling for <code class="language-plaintext highlighter-rouge">mod.create_requirements_string_from_names_table</code> mainly around passing various types</li>
+  <li>Realigned suppressors for Combat Shotguns</li>
+  <li>Decided FUCK IT for the flipped blades issue
+    <ul>
+      <li>I gave up</li>
+      <li>But before I did, I tried another method</li>
+      <li>Fixes are now written manually instead of dynamically</li>
+      <li>I believe there was an issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files</li>
+      <li>Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped</li>
+      <li>never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE</li>
+    </ul>
+  </li>
+  <li>Localized groups for holographic sights</li>
+  <li><del>Realigned EOTech HWS’s to hide the chainsword triggers more</del></li>
+  <li>Slim Blade vfx <code class="language-plaintext highlighter-rouge">spawner</code> crashes
+    <ul>
+      <li>Removed unused slot indicators</li>
+      <li>Disabled all vfx spawner exclusions (<code class="language-plaintext highlighter-rouge">disable_vfx_spawner_exclusion</code> is now true when creating any blade)
+        <h2 id="refactor-1">Refactor</h2>
+      </li>
+    </ul>
+  </li>
+  <li>Reorganized OwO mode shitposting to be more easily read</li>
+  <li>Replaced <code class="language-plaintext highlighter-rouge">ipairs</code> with index based array access, per Fatshark’s Lua optimization guide</li>
+  <li>Set error messages to use localization strings, for easier translation</li>
 </ul>
-<h2 id="added-partssupport">Added Parts/Support</h2>
-<ul>
-<li>Barrel Shrouds (<code>barrel_foreskin</code>) slot
-<ul>
-<li>Reusing Suppressors to keep the old bug</li>
-<li>It only works on Autoguns and &quot;works&quot; is being generous</li>
-</ul>
-</li>
-<li>Added slim variant of Wrapped Suppressor</li>
-<li><del>Aligned Suppressors on Combat Shotguns for Syn's barrels</del></li>
-<li><del>Aligned Holographic Sights for Syn's receiver extensions</del>
-<ul>
-<li><del>sight offset has similar issues with flipped blades, in that they're inconsistent and make me want to contribute to the statistic</del></li>
-</ul>
-</li>
-</ul>
-<h2 id="fixes">Fixes</h2>
-<ul>
-<li>Robust handling for <code>mod.create_requirements_string_from_names_table</code> mainly around passing various types</li>
-<li>Realigned suppressors for Combat Shotguns</li>
-<li>Decided FUCK IT for the flipped blades issue
-<ul>
-<li>I gave up</li>
-<li>But before I did, I tried another method</li>
-<li>Fixes are now written manually instead of dynamically</li>
-<li>I believe there was an issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files</li>
-<li>Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped</li>
-<li>never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE</li>
-</ul>
-</li>
-<li>Localized groups for holographic sights</li>
-<li><del>Realigned EOTech HWS's to hide the chainsword triggers more</del></li>
-<li>Slim Blade vfx <code>spawner</code> crashes
-<ul>
-<li>Removed unused slot indicators</li>
-<li>Disabled all vfx spawner exclusions (<code>disable_vfx_spawner_exclusion</code> is now true when creating any blade)</li>
-</ul>
-</li>
-</ul>
-<h2 id="refactor-1">Refactor</h2>
-<ul>
-<li>Reorganized OwO mode shitposting to be more easily read</li>
-<li>Replaced <code>ipairs</code> with index based array access, per Fatshark's Lua optimization guide</li>
-<li>Set error messages to use localization strings, for easier translation</li>
-</ul>
-<h1 id="section-11">2025-12-23</h1>
+
+<h1 id="2025-12-23">2025-12-23</h1>
 <p>v4.3.1</p>
+
 <ul>
-<li>Fixed logging to happen only with debug mod, so I don't keep polluting people's logs</li>
-<li>Fixed attachments:
-<ul>
-<li>Slim blades being flipped for:
-<ul>
-<li>Arbites Shock Maul</li>
-<li>Shock Maul and Suppression Shield</li>
+  <li>Fixed logging to happen only with debug mod, so I don’t keep polluting people’s logs</li>
+  <li>Fixed attachments:
+    <ul>
+      <li>Slim blades being flipped for:
+        <ul>
+          <li>Arbites Shock Maul</li>
+          <li>Shock Maul and Suppression Shield</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Refactored requirements to be in its own file
+    <ul>
+      <li>So I don’t have a untalge the mess of “ok who already edited the global”</li>
+      <li>And I don’t have to copy the functions multiple times
+        <ul>
+          <li>especially the slim blade ones</li>
+          <li>just in case one comes first</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
-</li>
-<li>Refactored requirements to be in its own file
-<ul>
-<li>So I don't have a untalge the mess of &quot;ok who already edited the global&quot;</li>
-<li>And I don't have to copy the functions multiple times
-<ul>
-<li>especially the slim blade ones</li>
-<li>just in case one comes first</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="section-12">2025-11-30</h1>
+
+<h1 id="2025-11-30">2025-11-30</h1>
 <p>v4.3.0</p>
+
 <h2 id="added-9">Added</h2>
 <ul>
-<li>Flashlights
-<ul>
-<li>Added to:
-<ul>
-<li>Flamer</li>
-<li>Plasma Gun</li>
-<li>Combat Shotgun</li>
-<li>Double-Barreled Shotgun</li>
-<li>Exterminator Shotgun</li>
-<li>Subductor Shotpistol and Riot Shield</li>
-<li>Grenadier Gauntlet</li>
-<li>Ripper Guns</li>
-<li>Twin-Linked Heavy Stubbers</li>
-<li>Heavy Stubbers</li>
-<li>Rumbler/Kickback</li>
+  <li>Flashlights
+    <ul>
+      <li>Added to:
+        <ul>
+          <li>Flamer</li>
+          <li>Plasma Gun</li>
+          <li>Combat Shotgun</li>
+          <li>Double-Barreled Shotgun</li>
+          <li>Exterminator Shotgun</li>
+          <li>Subductor Shotpistol and Riot Shield</li>
+          <li>Grenadier Gauntlet</li>
+          <li>Ripper Guns</li>
+          <li>Twin-Linked Heavy Stubbers</li>
+          <li>Heavy Stubbers</li>
+          <li>Rumbler/Kickback</li>
+        </ul>
+      </li>
+      <li>also with the changes to how slots work, they fuckin FLOAT</li>
+    </ul>
+  </li>
+  <li>Small underbarrel flashlights (“Flashlight (Under)”)
+    <ul>
+      <li>Added to:
+        <ul>
+          <li>Subductor Shotpistol and Riot Shield</li>
+          <li>Quickdraw Stubrevolvers</li>
+        </ul>
+      </li>
+      <li>Half sized and sits under barrel</li>
+      <li>doesn’t actually turn on bc that’s just how the original mod works</li>
+      <li>also with the changes to how slots work, they fuckin FLOAT</li>
+    </ul>
+  </li>
+  <li>Suppressors
+    <ul>
+      <li>Added to:
+        <ul>
+          <li>Combat Shotgun</li>
+          <li>Exterminator Shotgun</li>
+          <li>Subductor Shotpistol and Riot Shield</li>
+          <li>Ripper Guns</li>
+          <li><del>Heavy Stubbers</del>
+            <ul>
+              <li>nvm this drove me insane</li>
+            </ul>
+          </li>
+          <li>Rumbler/Kickback
+            <ul>
+              <li>works when reloading :D</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Variants
+        <ul>
+          <li>Wrapped Suppressor
+            <ul>
+              <li>a metal suppressor wrapped in a bandage</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Slim Blades:
+    <ul>
+      <li>Added to:
+        <ul>
+          <li>Arbites Shock Maul</li>
+          <li>Shock Maul and Supression Shield</li>
+          <li>Shock Maul</li>
+        </ul>
+      </li>
+      <li>Note: Blades are reversed on these new weapons
+        <ul>
+          <li>I’m working on the fixes for these. It’d be simple enough to brute force it, but I’m working on a more robust solution</li>
+        </ul>
+      </li>
+      <li>Using with invisible connectors may lead to weirdness at the base
+        <ul>
+          <li>These blades were not all designed to be used as standalones</li>
+          <li>This is the same as when used on the non-maul weapons. just that the connector usually covers it up (at the cost of clipping)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Invisible Connectors:
+    <ul>
+      <li>Added to:
+        <ul>
+          <li>Arbites Shock Maul</li>
+          <li>Shock Maul and Supression Shield</li>
+          <li>Shock Maul</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Damage Types</strong>: Slashing
+    <ul>
+      <li>Used in slim blades</li>
+      <li>Matches what the source weapon uses (e.g. Slim Power Sword blades use the damage type from Power Swords)</li>
+      <li>Does not change sounds atm</li>
+    </ul>
+  </li>
+  <li>Mod options to toggle randomization
+    <ul>
+      <li>Toggling flashlights</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>also with the changes to how slots work, they fuckin FLOAT</li>
-</ul>
-</li>
-<li>Small underbarrel flashlights (&quot;Flashlight (Under)&quot;)
-<ul>
-<li>Added to:
-<ul>
-<li>Subductor Shotpistol and Riot Shield</li>
-<li>Quickdraw Stubrevolvers</li>
-</ul>
-</li>
-<li>Half sized and sits under barrel</li>
-<li>doesn't actually turn on bc that's just how the original mod works</li>
-<li>also with the changes to how slots work, they fuckin FLOAT</li>
-</ul>
-</li>
-<li>Suppressors
-<ul>
-<li>Added to:
-<ul>
-<li>Combat Shotgun</li>
-<li>Exterminator Shotgun</li>
-<li>Subductor Shotpistol and Riot Shield</li>
-<li>Ripper Guns</li>
-<li><del>Heavy Stubbers</del>
-<ul>
-<li>nvm this drove me insane</li>
-</ul>
-</li>
-<li>Rumbler/Kickback
-<ul>
-<li>works when reloading :D</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Variants
-<ul>
-<li>Wrapped Suppressor
-<ul>
-<li>a metal suppressor wrapped in a bandage</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Slim Blades:
-<ul>
-<li>Added to:
-<ul>
-<li>Arbites Shock Maul</li>
-<li>Shock Maul and Supression Shield</li>
-<li>Shock Maul</li>
-</ul>
-</li>
-<li>Note: Blades are reversed on these new weapons
-<ul>
-<li>I'm working on the fixes for these. It'd be simple enough to brute force it, but I'm working on a more robust solution</li>
-</ul>
-</li>
-<li>Using with invisible connectors may lead to weirdness at the base
-<ul>
-<li>These blades were not all designed to be used as standalones</li>
-<li>This is the same as when used on the non-maul weapons. just that the connector usually covers it up (at the cost of clipping)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Invisible Connectors:
-<ul>
-<li>Added to:
-<ul>
-<li>Arbites Shock Maul</li>
-<li>Shock Maul and Supression Shield</li>
-<li>Shock Maul</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Damage Types</strong>: Slashing
-<ul>
-<li>Used in slim blades</li>
-<li>Matches what the source weapon uses (e.g. Slim Power Sword blades use the damage type from Power Swords)</li>
-<li>Does not change sounds atm</li>
-</ul>
-</li>
-<li>Mod options to toggle randomization
-<ul>
-<li>Toggling flashlights</li>
-</ul>
-</li>
-</ul>
+
 <hr />
-<h1 id="section-13">2025-10-29</h1>
+<h1 id="2025-10-29">2025-10-29</h1>
 <p>v4.2.0</p>
+
 <h2 id="added-10">Added</h2>
 <ul>
-<li>Suppressors and Flashlights to Revolvers
-<ul>
-<li>I forgor</li>
-<li>Note: PBS-1 still has the stupid clipping</li>
+  <li>Suppressors and Flashlights to Revolvers
+    <ul>
+      <li>I forgor</li>
+      <li>Note: PBS-1 still has the stupid clipping</li>
+    </ul>
+  </li>
+  <li>Localizations and groups for Suppressors
+    <ul>
+      <li>in the months that i had the suppressors, i never really settled on a name for them</li>
+      <li>i still havent settled :D</li>
+      <li>but at least they’re not just 1-5 now
+        <ul>
+          <li>double cans</li>
+          <li>PBS-1</li>
+          <li>heavy metal</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Flashlights [WIP]
+    <ul>
+      <li>None of these work LMAO</li>
+      <li>MP5 flashlights (2)
+        <ul>
+          <li>goes on the sight rail</li>
+        </ul>
+      </li>
+      <li>Big Tactical Light
+        <ul>
+          <li>like a regular flashlight you hold in your hand, but on the gun (oooo)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>Localizations and groups for Suppressors
-<ul>
-<li>in the months that i had the suppressors, i never really settled on a name for them</li>
-<li>i still havent settled :D</li>
-<li>but at least they're not just 1-5 now
-<ul>
-<li>double cans</li>
-<li>PBS-1</li>
-<li>heavy metal</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Flashlights [WIP]
-<ul>
-<li>None of these work LMAO</li>
-<li>MP5 flashlights (2)
-<ul>
-<li>goes on the sight rail</li>
-</ul>
-</li>
-<li>Big Tactical Light
-<ul>
-<li>like a regular flashlight you hold in your hand, but on the gun (oooo)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+
 <h2 id="fixed-9">Fixed</h2>
 <ul>
-<li>Alignments for Slim Blades
-<ul>
-<li>attachment points did not use <code>ap_body_01</code>. it's all blade, regardless of slot name</li>
-<li>this still means the blades with builtin hilts (such as psword) will be too high. am working on that</li>
+  <li>Alignments for Slim Blades
+    <ul>
+      <li>attachment points did not use <code class="language-plaintext highlighter-rouge">ap_body_01</code>. it’s all blade, regardless of slot name</li>
+      <li>this still means the blades with builtin hilts (such as psword) will be too high. am working on that</li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <h2 id="refactorsdeveloper-talk">Refactors/Developer Talk</h2>
 <ul>
-<li>Reworked helpers to be full items
-<ul>
-<li>for:
-<ul>
-<li>Suppressors</li>
-<li>Tactical Stocks</li>
-<li>Iron Sights</li>
-<li>Flashlights</li>
+  <li>Reworked helpers to be full items
+    <ul>
+      <li>for:
+        <ul>
+          <li>Suppressors</li>
+          <li>Tactical Stocks</li>
+          <li>Iron Sights</li>
+          <li>Flashlights</li>
+        </ul>
+      </li>
+      <li>because when they aren’t, there may be weirdness with the game trying to use them as something they’re not (ex bullets getting hidden)</li>
+      <li>also meant fixes might apply to them when they weren’t supposed to</li>
+    </ul>
+  </li>
+  <li>Reworked single kitbashes (no children) to full items
+    <ul>
+      <li>for:
+        <ul>
+          <li>Slim Blades</li>
+        </ul>
+      </li>
+      <li>also helps prevent wonkiness with fixes, since it overwrites</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>because when they aren't, there may be weirdness with the game trying to use them as something they're not (ex bullets getting hidden)</li>
-<li>also meant fixes might apply to them when they weren't supposed to</li>
-</ul>
-</li>
-<li>Reworked single kitbashes (no children) to full items
-<ul>
-<li>for:
-<ul>
-<li>Slim Blades</li>
-</ul>
-</li>
-<li>also helps prevent wonkiness with fixes, since it overwrites</li>
-</ul>
-</li>
-</ul>
+
 <hr />
-<h1 id="section-14">2025-10-07</h1>
+<h1 id="2025-10-07">2025-10-07</h1>
 <p>v4.1.0</p>
+
 <h2 id="added-11">Added</h2>
 <ul>
-<li>Flashlight
-<ul>
-<li>Variants for each flashlight model per color</li>
-<li>Added a bunch of colors: green, red, blue, cyan, magenta, yellow, pink</li>
-<li>Added 4 variants for size and stuff
-<ul>
-<li>narrow: what I used last time for <code>owo_flashlight_green_01</code></li>
-<li>narrow cool: same but lower color temperature</li>
-<li>weak: wider and shorter beam, with cooler temperature</li>
-<li>default: copying the default flashlight template, so just color is different</li>
+  <li>Flashlight
+    <ul>
+      <li>Variants for each flashlight model per color</li>
+      <li>Added a bunch of colors: green, red, blue, cyan, magenta, yellow, pink</li>
+      <li>Added 4 variants for size and stuff
+        <ul>
+          <li>narrow: what I used last time for <code class="language-plaintext highlighter-rouge">owo_flashlight_green_01</code></li>
+          <li>narrow cool: same but lower color temperature</li>
+          <li>weak: wider and shorter beam, with cooler temperature</li>
+          <li>default: copying the default flashlight template, so just color is different</li>
+        </ul>
+      </li>
+      <li>this makes 180 flashlights :3</li>
+      <li>good luck babe</li>
+    </ul>
+  </li>
+  <li>Slim Blades
+    <ul>
+      <li>made available on relic blade, force sword, and force greatsword</li>
+      <li>blades from relic blade, force sword, and force greatsword</li>
+      <li>short variants for relic/fgs</li>
+      <li>they sit too low. fix comes later</li>
+    </ul>
+  </li>
+  <li>[WIP] Iron sights
+    <ul>
+      <li>on: autoguns</li>
+      <li>ak irons</li>
+      <li>shape is alright, but the sights dont work lol</li>
+    </ul>
+  </li>
+  <li>[WIP] Magazines
+    <ul>
+      <li>on: autoguns</li>
+      <li>ak extended mag</li>
+      <li>it just doesn’t fucking work lmao</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>this makes 180 flashlights :3</li>
-<li>good luck babe</li>
-</ul>
-</li>
-<li>Slim Blades
-<ul>
-<li>made available on relic blade, force sword, and force greatsword</li>
-<li>blades from relic blade, force sword, and force greatsword</li>
-<li>short variants for relic/fgs</li>
-<li>they sit too low. fix comes later</li>
-</ul>
-</li>
-<li>[WIP] Iron sights
-<ul>
-<li>on: autoguns</li>
-<li>ak irons</li>
-<li>shape is alright, but the sights dont work lol</li>
-</ul>
-</li>
-<li>[WIP] Magazines
-<ul>
-<li>on: autoguns</li>
-<li>ak extended mag</li>
-<li>it just doesn't fucking work lmao</li>
-</ul>
-</li>
-</ul>
+
 <h2 id="fixed-10">Fixed</h2>
 <ul>
-<li>Aligned tactical stocks for bolter
-<ul>
-<li>sizd up and moved to back</li>
-<li>still dont try on helbores</li>
+  <li>Aligned tactical stocks for bolter
+    <ul>
+      <li>sizd up and moved to back</li>
+      <li>still dont try on helbores</li>
+    </ul>
+  </li>
+  <li>Logic error when looping over all models
+    <ul>
+      <li>Used break instead of continue (and lua doesn’t have continue)</li>
+      <li>So i’d lose all the models after the first one i wanted to skip</li>
+      <li>fixing this restored from 3 psword blades to 6 psword blades (index 7), not counting mastery
+        <ul>
+          <li>7 models to use, skip #4</li>
+          <li>break meant only 1-3 were added</li>
+          <li>now it’s 1-3, 5-7</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>wonky fix interaction between merge tables and suppressors
+    <ul>
+      <li>suppressors would get the fixes meant for merge tables???</li>
+      <li>eg suppressor (empty base) with folded under stock
+        <ul>
+          <li>stock would be in default position, as if i didnt do anything to it</li>
+          <li>suppressor would get the rotation/scaling from it</li>
+        </ul>
+      </li>
+      <li>fixed by using the base unit version</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>Logic error when looping over all models
-<ul>
-<li>Used break instead of continue (and lua doesn't have continue)</li>
-<li>So i'd lose all the models after the first one i wanted to skip</li>
-<li>fixing this restored from 3 psword blades to 6 psword blades (index 7), not counting mastery
-<ul>
-<li>7 models to use, skip #4</li>
-<li>break meant only 1-3 were added</li>
-<li>now it's 1-3, 5-7</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>wonky fix interaction between merge tables and suppressors
-<ul>
-<li>suppressors would get the fixes meant for merge tables???</li>
-<li>eg suppressor (empty base) with folded under stock
-<ul>
-<li>stock would be in default position, as if i didnt do anything to it</li>
-<li>suppressor would get the rotation/scaling from it</li>
-</ul>
-</li>
-<li>fixed by using the base unit version</li>
-</ul>
-</li>
-</ul>
+
 <h2 id="developer-talk">Developer talk</h2>
 <ul>
-<li>Decided how to add fixes
-<ul>
-<li>each weapon has its own file in the <code>fixes</code> folder
-<ul>
-<li>all it does is return the fixes</li>
-<li>then the main file reads all those (right before copying to sibling marks) and adds them in
-<ul>
-<li>requires me to maintain the list of the weapons in the fixes folder, but idc</li>
-<li>automatically detecting files int he folder is very resource intensive, and this only risks me forgetting to add something during testing</li>
+  <li>Decided how to add fixes
+    <ul>
+      <li>each weapon has its own file in the <code class="language-plaintext highlighter-rouge">fixes</code> folder
+        <ul>
+          <li>all it does is return the fixes</li>
+          <li>then the main file reads all those (right before copying to sibling marks) and adds them in
+            <ul>
+              <li>requires me to maintain the list of the weapons in the fixes folder, but idc</li>
+              <li>automatically detecting files int he folder is very resource intensive, and this only risks me forgetting to add something during testing</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>this means the fixes given per attachment are the universal fixes
+        <ul>
+          <li>technically we cant do universal fixes like that</li>
+          <li>it has to be put under each weapon</li>
+          <li>but that means i’d need more effort when it comes to making custom fixes
+            <ul>
+              <li>cant just insert because the order they get applied in may not be consistent</li>
+              <li>i have the custom fixes overwrite them if the requirements match exactly</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>I prefer it this way because i like having the kitbash and attachments defined in the same file
+        <ul>
+          <li>there’s overhead from having to process and skip values, but i find the headache annoying enough when swapping between two files</li>
+          <li>also it’s not like this is noticeable</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Merged redundent functions into more generic functions
+    <ul>
+      <li>in the main file, adding fixes and kitbashes can be done by inserting each table and merge recursive, respectively</li>
+      <li>made them global into <code class="language-plaintext highlighter-rouge">generic_helpers.lua</code> to be used in <code class="language-plaintext highlighter-rouge">create_attachments.lua</code></li>
+    </ul>
+  </li>
+  <li>Made kitbash creation cleaner
+    <ul>
+      <li>split into functions for merge table and full item</li>
+      <li>then call the appropriate one within the <code class="language-plaintext highlighter-rouge">create_an_attachment</code> function</li>
+      <li>now it’s not directly in the main file :)</li>
+    </ul>
+  </li>
+  <li>Added comments for more functions</li>
+  <li>refactored suppressor creation to copypaste less code</li>
 </ul>
-</li>
-</ul>
-</li>
-<li>this means the fixes given per attachment are the universal fixes
-<ul>
-<li>technically we cant do universal fixes like that</li>
-<li>it has to be put under each weapon</li>
-<li>but that means i'd need more effort when it comes to making custom fixes
-<ul>
-<li>cant just insert because the order they get applied in may not be consistent</li>
-<li>i have the custom fixes overwrite them if the requirements match exactly</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>I prefer it this way because i like having the kitbash and attachments defined in the same file
-<ul>
-<li>there's overhead from having to process and skip values, but i find the headache annoying enough when swapping between two files</li>
-<li>also it's not like this is noticeable</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Merged redundent functions into more generic functions
-<ul>
-<li>in the main file, adding fixes and kitbashes can be done by inserting each table and merge recursive, respectively</li>
-<li>made them global into <code>generic_helpers.lua</code> to be used in <code>create_attachments.lua</code></li>
-</ul>
-</li>
-<li>Made kitbash creation cleaner
-<ul>
-<li>split into functions for merge table and full item</li>
-<li>then call the appropriate one within the <code>create_an_attachment</code> function</li>
-<li>now it's not directly in the main file :)</li>
-</ul>
-</li>
-<li>Added comments for more functions</li>
-<li>refactored suppressor creation to copypaste less code</li>
-</ul>
+
 <hr />
-<h1 id="section-15">2025-09-29</h1>
+<h1 id="2025-09-29">2025-09-29</h1>
 <p>v4.0.0</p>
+
 <p>Initial release for the rebuilt version in Discord. Continuing the version count from the old plugin to keep git in order.</p>
+
 <h2 id="laying-the-framework-for-me-to-readd-parts">Laying the framework for me to readd parts</h2>
 <p>for the nerds</p>
 <ul>
-<li>functions for each group of attachments (ex suppressors together)</li>
-<li>functions to add a group of attachments to a weapon (or multiple at once)</li>
-<li>functions to copy over attachments to another weapon
-<ul>
-<li>used to propagate changes from mark to mark</li>
-<li>and from family to family (ex ilas --&gt; recon)</li>
+  <li>functions for each group of attachments (ex suppressors together)</li>
+  <li>functions to add a group of attachments to a weapon (or multiple at once)</li>
+  <li>functions to copy over attachments to another weapon
+    <ul>
+      <li>used to propagate changes from mark to mark</li>
+      <li>and from family to family (ex ilas –&gt; recon)</li>
+    </ul>
+  </li>
+  <li>defining the attachment functions globally in separate files
+    <ul>
+      <li>slightly worse performance but much cleaner code</li>
+      <li>at startup and it’s only a few function calls</li>
+      <li>i’m sure the auto mark propagation is worse than this</li>
+      <li>esp the table search lol</li>
+    </ul>
+  </li>
+  <li>function to execute a function for a range
+    <ul>
+      <li>used to iterate through each mesh</li>
+      <li>ex 8 power sword blades, so script runs it for 7 then the mastery one</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>defining the attachment functions globally in separate files
-<ul>
-<li>slightly worse performance but much cleaner code</li>
-<li>at startup and it's only a few function calls</li>
-<li>i'm sure the auto mark propagation is worse than this</li>
-<li>esp the table search lol</li>
-</ul>
-</li>
-<li>function to execute a function for a range
-<ul>
-<li>used to iterate through each mesh</li>
-<li>ex 8 power sword blades, so script runs it for 7 then the mastery one</li>
-</ul>
-</li>
-</ul>
+
 <h2 id="added-12">Added</h2>
 <ul>
-<li>Suppressors
-<ul>
-<li>Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/Recon Lasguns</li>
-<li>Changed the tip of suppressor 5 to not be a colored tip</li>
-<li>dont use on bolter/boltpistol</li>
+  <li>Suppressors
+    <ul>
+      <li>Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/Recon Lasguns</li>
+      <li>Changed the tip of suppressor 5 to not be a colored tip</li>
+      <li>dont use on bolter/boltpistol</li>
+    </ul>
+  </li>
+  <li>Tactical stocks
+    <ul>
+      <li>Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/— Lasguns</li>
+      <li>unaligned for most things</li>
+      <li>🥀</li>
+    </ul>
+  </li>
+  <li>Flashlight <strong>(new)</strong>
+    <ul>
+      <li>Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/Recon Lasguns</li>
+      <li>Green light</li>
+    </ul>
+  </li>
+  <li>slim blades
+    <ul>
+      <li>“Devil’s Claw” Swords, Heavy Swords, Dueling Swords, Power Swords, Power Falchions</li>
+      <li>blades from: power sword, devil’s claw sword, power falchion <strong>(new)</strong>, heavy sword <strong>(new)</strong></li>
+      <li>_g variants do not work as intended (won’t resize the grip)</li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>Tactical stocks
-<ul>
-<li>Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/--- Lasguns</li>
-<li>unaligned for most things</li>
-<li>🥀</li>
-</ul>
-</li>
-<li>Flashlight <strong>(new)</strong>
-<ul>
-<li>Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/Recon Lasguns</li>
-<li>Green light</li>
-</ul>
-</li>
-<li>slim blades
-<ul>
-<li>&quot;Devil's Claw&quot; Swords, Heavy Swords, Dueling Swords, Power Swords, Power Falchions</li>
-<li>blades from: power sword, devil's claw sword, power falchion <strong>(new)</strong>, heavy sword <strong>(new)</strong></li>
-<li>_g variants do not work as intended (won't resize the grip)</li>
-</ul>
-</li>
-</ul>
-
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        
-        <p class="copyright">Darktide Mod: Extended Weapon Customization - OwO maintained by <a href="https://github.com/Backup158">Backup158</a></p>
-        
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-  </body>
-</html>
