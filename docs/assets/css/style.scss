@@ -1,7 +1,7 @@
 ---
 ---
 
-@use "{{ site.theme }}";
+@import "{{ site.theme }}";
 /* "{{ site.theme }}" = Your theme name, taken from _config.yml */
 /* Eg: @import 'jekyll-theme-cayman'; */
 /* https://github.com/pages-themes/slate/blob/master/_sass/jekyll-theme-slate.scss */
