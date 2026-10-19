@@ -25,14 +25,14 @@ This mod is installed like any other mod. See the [Darktide Modding Community's 
 
 To use this mod specifically, there are three files you need to install.
 1. [MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409)
-2. [Visual Loadout Customization Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/853)
+2. [Visual Loadout Customization Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/853) (\*This should NOT be used with the Temporary Fix. If you are using the Temporary Fix, disregard other mentions of this patch on this page.)
 3. Extended Weapon Customization. The mod can be found on:
   - [NexusMods.com](https://www.nexusmods.com/warhammer40kdarktide/mods/277)
   - Pinned in the [Discord channel](https://discord.com/channels/1048312349867646996/1168063453416669284) mentioned earlier. Usually, the pinned version is a potentially-unstable release with beta features.
 
 There are two important things to note for load order:
-- The two patches need to load before EWC.
-- The two patches need to load early in the load order. Some mods, if loaded before the patches, will prevent them from working.
+- The two\* patches need to load before EWC.
+- The two\* patches need to load early in the load order. Some mods, if loaded before the patches, will prevent them from working.
 
 <a id="addon-plugins">
 
