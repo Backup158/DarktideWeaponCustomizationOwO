@@ -25,24 +25,25 @@ Report alignment issues, and I might fix it if I'm not busy (lying umder blamket
 # Installation
 ## Requirements
 1. [MasterItems Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/409) by Grasmann
-2. Extended Weapon Customization (EWC) by Grasmann. There are multiple ways of getting this file:
-  - [Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277)
+2. Extended Weapon Customization (EWC) by Grasmann. ~~There are multiple ways of getting this file:~~
+  - ~~[Nexus Link](https://www.nexusmods.com/warhammer40kdarktide/mods/277)~~
   - [The #weapon-customization-mod channel](https://discord.com/channels/1048312349867646996/1168063453416669284) in the [Darktide Modders Discord](https://discord.gg/GFyCGNpJb8) 
-    - Download files are in the pins. Search for the latest message from Grasmann. Sometimes, this is a beta release with extra feature.
-    - Also be sure to check out the FAQ below in the pins
-3. This mod
+    - Download files are in the pins. ~~Search for the latest message from Grasmann. Sometimes, this is a beta release with extra feature.~~ Use the community fix.
+    - Also be sure to check out the FAQ below in the pins.
+3. Extended Weapon Customization Base Additions (EWC BA) by Grasmann.
+  - Same download as EWC.
+  - This is required for positioning of parts. This requirement will be removed soon.
+4. This mod
   - [Nexus link](https://www.nexusmods.com/warhammer40kdarktide/mods/429?tab=files)
   - [GitHub releases](https://github.com/Backup158/DarktideWeaponCustomizationOwO/releases/latest)
 
-Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods)
+Use whatever installation method you prefer. If you don't have one, check out the [DMF Documentation for manual installation](https://dmf-docs.darkti.de/#/installing-mods).
 
 > [!WARNING]
 >
 > Game updates may cause issues with EWC. They will be fixed whenever EWC is updated. There is no exact timeline for when that happens, and all we can do is wait.
 ## Load Order
-Load order doesn't matter with rebuilt EWC plugins.
-
-Just make sure you don't use it with the deprecated `weapon_customization`
+Load after EWC and EWC BA.
 
 # Parts Added
 This list is hosted externally.  \
