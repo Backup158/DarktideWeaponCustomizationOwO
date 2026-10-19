@@ -60,21 +60,16 @@ Not comprehensive
 - Random autistic people arguing on forums: For posting pictures of their guns
 
 # FAQ
+<a id="faq-1"></a>
 
-> [!WARNING]
->
-> Anything below is not updated for the rebuild. I'll do that once I'm ready to release on Nexus (it's been 4 months but i'll do it eventually!)
-
-<a id="faq-3"></a>
-
-3) **X attachment is unaligned when used with Y!**
+1) **X attachment is unaligned when used with Y!**
    
 &emsp; Yeah that's what happens when I'm lazy. Send a screenshot of the customization menu so I know which combination is messed up, and I'll try and get that fixed. Delivery date depends on bedrotting status.
 
 
-<a id="faq-6"></a>
+<a id="faq-2"></a>
 
-6) **When I use the scopes in game, they glitch out and are impossible to aim with!**
+2) **When I use the scopes in game, they glitch out and are impossible to aim with!**
 
 &emsp; This is a consequence of the mesh streamer system. You can avoid it by:  \
 &emsp;&emsp; a) Increasing the Mesh Quality in the Options menu 
@@ -82,7 +77,7 @@ Not comprehensive
 
 ![MeshQualitySettings](https://imgur.com/mR2GsjV.png)
 </details>
-&emsp;&emsp; b) Completely disabling it in `<Darktide>\bundle\application_settings\settings_common.ini`, but this will likely have disastrous consequences for your FPS. See the spoiler for more details.
+&emsp;&emsp; b) Completely disabling it in `<Darktide>\bundle\application_settings\settings_common.ini`, but this may negatively impact your FPS. See the spoiler for more details.
 <details> <summary>Disabling the mesh streamer</summary>
   
 The mesh streamer basically makes it so your computer only renders things in high quality if it's close and visible, so it won't use up as many resources on, for example, a Scab Shooter's helmet 70 meters away. Sometimes, it'll set your sights as low priority, so you'll be aiming through a garbled mess throughout the match. This tends to happen more for users with AMD GPUs, which includes me lol.
@@ -101,9 +96,9 @@ mesh_streamer_settings = {
 
 </details>
 
-<a id="faq-7"></a>
+<a id="faq-3"></a>
 
-7) **What do you mean by "intended for screenshots" ?**
+3) **What do you mean by "intended for screenshots" ?**
 
 &emsp; It means I'm mostly concerned with how the weapon looks like when inspecting it. Clipping with animations and during use is not important here. For example, the Elysian grip-stock for the Helbore does not line up with your hands at all, but it's more accurate to one depiction of the Accatran Mk IVe Modified Sniper Lasgun.  \
 &emsp; That also means that appearances and accuracy are prioritized over performance. For example, the Masterkey is made of 8 components. There's a few parts I could've taken out, which would've changed it a bit but not enough to matter when it's sitting under your gun. I kept them anyways because I think it looks better when you get up close.
@@ -119,9 +114,9 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 
 ## FAQ - New Parts
 
-<a id="faq-13"></a>
+<a id="faq-4"></a>
 
-13) **XYZ part is historically inaccurate!**
+4) **XYZ part is historically inaccurate!**
 
 &emsp; Yeah could be. My sources mostly start at Wikipedia articles, old forum posts, and random people posting videos themselves shooting things. Everything I made was based on some picture I saw, which may not have necessarily reflected the majority. If you could include some sources for me to throw into my Darktide mod autism folder\* to review later, I'll try and make an attachment like it. Though if it's something like a knob being 2 cm off, you can just edit the mod yourself lol. I made a [guide](https://backup158.github.io/Darktide_EWC_Edits.html) for that.  \
 &emsp; Also keep in mind that the way iron sights work on a screen is not how they work in real life. Authentic peep sights are nearly impossible to use in games, even though they work IRL.
@@ -134,9 +129,9 @@ From the Lexicanum, originally sourced from *Imperial Armour Volume 8 - Raid on 
 ##
 </details>
 
-<a id="faq-14"></a>
+<a id="faq-5"></a>
 
-14) **Can you add XYZ?**
+5) **Can you add XYZ?**
 
 &emsp; Maybe. Leave a picture and the attachment's name in the posts or the Discord thread, and I'll think about it.
 Keep in mind that I can only use parts already in the game, and I'm not the most creative person.
