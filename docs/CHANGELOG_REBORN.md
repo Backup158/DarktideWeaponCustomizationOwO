@@ -1,6 +1,10 @@
-# 4.13.0 - 2026-10-WIP
+# 4.14.0 - 2026-10-WIP
 ## Added
+- Simple localization helper with just name and number
 
+# 4.13.0 - 2026-10-18
+## Added
+- Trench Gun barrel for Huntsman
 ## Fixed
 - Excessive debug in console log
 

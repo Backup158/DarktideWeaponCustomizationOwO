@@ -347,6 +347,18 @@ function mod.transfer_local_table_of_attachments_to_global(local_all_attachment_
     --table_dump(local_all_attachment_names_table, "Transferred table of attachments to global uwu", 6)
 end
 
+function mod.localize_attachment_simple(attachment_group_name, number_string) 
+    local attachment_localized = mod:localize("loc_"..attachment_group_name)
+    local attachment_full = attachment_localized.."_"..number_string
+
+    mod:add_global_localize_strings({
+        ["loc_"..attachment_name.."_"..number_string] = {
+            en = attachment_full
+        },
+    })
+end
+
+
 -- ----------
 -- Localize Attachment Triple Threat
 -- DESC: Creates a global localization using the values in the localization file

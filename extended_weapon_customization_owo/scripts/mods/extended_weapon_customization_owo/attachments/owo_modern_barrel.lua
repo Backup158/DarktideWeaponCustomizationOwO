@@ -34,6 +34,7 @@ local localize_single_attachment_with_table = mod.localize_single_attachment_wit
 local return_all_numbers_for_hide = mod.return_all_numbers_for_hide
 local for_all_weapon_models = mod.for_all_weapon_models
 
+local localize_attachment_simple = mod.localize_attachment_simple
 local localize_attachment_triple_threat = mod.localize_attachment_triple_threat
 
 -- ################################
@@ -550,8 +551,7 @@ function mod.owo_trench_shotgun_barrel(given_slot, given_attachment_node)
             table_insert(table_to_insert_to, shortname)
         end
         
-        -- I need to reformat these to have the localization work with my structure but idgaf
-        -- localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
+        localize_attachment_simple(attachment_group_name, number_as_string)
     end
 
     -- Creating helper attachments
