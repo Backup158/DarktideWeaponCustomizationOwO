@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=dc547874166f3cf1de9c0f6e4093a18af7b238ae">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Extended Weapon Customization Informational Page | Darktide Mod: Extended Weapon Customization - OwO</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Extended Weapon Customization Informational Page" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection" />
+<meta property="og:description" content="Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection" />
+<meta property="og:site_name" content="Darktide Mod: Extended Weapon Customization - OwO" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Extended Weapon Customization Informational Page" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Information about the Extended Weapon Customization mod&#39;s add-on plugin Ostracized without Objection","headline":"Extended Weapon Customization Informational Page","url":"/EWC_FAQ.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+            <a id="forkme_banner" href="https://github.com/Backup158/DarktideWeaponCustomizationOwO">View on GitHub</a>
+          
+
+          <h1 id="project_title">Darktide Mod: Extended Weapon Customization - OwO</h1>
+          <h2 id="project_tagline">Information about the Extended Weapon Customization mod's add-on plugin Ostracized without Objection</h2>
+
+          
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="extended-weapon-customization-informational-page">Extended Weapon Customization Informational Page</h1>
+<p>Extended Weapon Customization (EWC) is a mod for <em>Warhammer 40,000: Darktide</em> that allows you swap parts on your weapons, with support for community-added kitbashed parts. It being such an ambitious project naturally leads to having a few confusing aspects and known issues/quirks. This page serves as an officially unofficial FAQ for common issues and solutions for this mod.</p>
+<p>Note that I (Backup158) wrote this and am hosting it on the webpage for my EWC add-on plugin, but the questions here primarily concern the main plugin itself. The webpage banner may be confusing, but rest assured, this page is about Extended Weapon Customization as a whole.</p>
+<p><em>*Most discussion happens in the <a href="https://discord.gg/GFyCGNpJb8">Darktide Modders Discord</a>. Check the <a href="https://discord.com/channels/1048312349867646996/1168063453416669284">#weapon-customization-mod channel</a>. The main contents of this page are pinned in the Discord thread*; this page includes elaborations and more pictures, all in one spot for easy sharing.</em></p>
+<h2 id="temporary-link-to-fixed-version">Temporary Link to Fixed Version</h2>
+<p>After Depths of the Damned (1.13.0), EWC and some related mods broke. The Real Stimm Shady, Geoff from Accounting, and myself investigated some of the issues and have found fixes. We've submitted these to grasmann for review and merging. In the meantime, our edits can be found here:</p>
+<p><a href="https://github.com/Backup158/darktide_extended_weapon_customization_BaH/releases/latest">Downloads for Fixes</a></p>
+<p>After this has been merged into the main mod, this section will be removed.</p>
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#addon-plugins">Links to Addon Plugins</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#legacy-faq">Legacy FAQ</a></li>
+</ul>
+<a id="installation">
+<h1 id="installationa">Installation</a></h1>
+<p>This mod is installed like any other mod. See the <a href="https://dmf-docs.darkti.de/#/installing-mods">Darktide Modding Community's Guide for Manual Mod Installation</a> if you don't already know how to do so.</p>
+<p>To use this mod specifically, there are three files you need to install.</p>
+<ol>
+<li><a href="https://www.nexusmods.com/warhammer40kdarktide/mods/409">MasterItems Community Patch</a></li>
+<li><a href="https://www.nexusmods.com/warhammer40kdarktide/mods/853">Visual Loadout Customization Community Patch</a> (*This should NOT be used with the Temporary Fix. If you are using the Temporary Fix, disregard other mentions of this patch on this page.)</li>
+<li>Extended Weapon Customization. The mod can be found on:</li>
+</ol>
+<ul>
+<li><a href="https://www.nexusmods.com/warhammer40kdarktide/mods/277">NexusMods.com</a></li>
+<li>Pinned in the <a href="https://discord.com/channels/1048312349867646996/1168063453416669284">Discord channel</a> mentioned earlier. Usually, the pinned version is a potentially-unstable release with beta features.</li>
+</ul>
+<p>There are two important things to note for load order:</p>
+<ul>
+<li>The two* patches need to load before EWC.</li>
+<li>The two* patches need to load early in the load order. Some mods, if loaded before the patches, will prevent them from working.</li>
+</ul>
+<a id="addon-plugins">
+<h1 id="links-to-addon-pluginsa">Links to Addon Plugins</a></h1>
+<p>General, place these <em>after</em> <code>extended_weapon_customization</code>. Defer to the plugins if they have more specific instructions.</p>
+<p>Note: Anything here that said &quot;Discord only&quot; is referring to the <a href="https://discord.gg/GFyCGNpJb8">Darktide Modders Discord</a>. The given link directs you to a specific message in the server, containing the files to download. However, message links are infamously fickle when clicked in the browser. When it doubt, open Discord yourself --&gt; go to the Darktide Modders Discord --&gt; go to the #weapon-customization-mod channel --&gt; check the 3rd-most recent pin there --&gt; click the relevant link.</p>
+<ul>
+<li><a href="https://www.nexusmods.com/warhammer40kdarktide/mods/277">EWC Base Additions</a> by Grasmann
+<ul>
+<li>On the Nexus page of EWC, in the &quot;Optional Files&quot; section. Put this one before the other add-on plugins in the load order.</li>
+<li>Adds parts across different weapon types. Notably contains reflex sights, laser sights, and flaming sword blades.</li>
+</ul>
+</li>
+<li><em>The Syndonai Edits</em> (Syn's Edits) by Syndonai
+<ul>
+<li>Discord only: <a href="https://discord.com/channels/1048312349867646996/1168063453416669284/1556194497917091900">Link to message</a></li>
+<li>Contains many sci-fi and 40k parts. Generally, it just does everything because Syn is a legend.</li>
+<li>There is a changelog included in the files, which mentions all the added parts.</li>
+</ul>
+</li>
+<li><em>MOAR DAKKA!</em> by The Real Stimm Shady (MarcathRoosevelt)
+<ul>
+<li>Discord only: <a href="https://discord.com/channels/1048312349867646996/1168063453416669284/1556508761928245270">Link to message</a></li>
+<li>Adds heretic weapon skins, machine gun parts to autoguns, and fisting. Most parts are for Ogryn.</li>
+<li>The most recent changelog is also found <a href="https://discord.com/channels/1048312349867646996/1168063453416669284/1483360143558312008">linked in the pins</a>.</li>
+</ul>
+</li>
+<li><a href="https://www.nexusmods.com/warhammer40kdarktide/mods/429"><em>Ostracized without Objection</em></a> (OwO) by Backup158
+<ul>
+<li>Mainly real-world attachments</li>
+</ul>
+</li>
+<li><a href="https://github.com/Backup158/DarktideWeaponCustomizationEmptySights/releases/latest"><em>Empty Sights</em></a> by Backup158
+<ul>
+<li>Reflex sights from base additions, but without the reticle.</li>
+</ul>
+</li>
+<li><a href="https://www.nexusmods.com/warhammer40kdarktide/mods/461"><em>Hidden Viewmodels While Aiming</em></a> by Backup158
+<ul>
+<li>Moving the gun off the screen when you aim.</li>
+</ul>
+</li>
+<li><a href="https://www.nexusmods.com/warhammer40kdarktide/mods/918"><em>xsScythes</em></a> by xsSplater
+<ul>
+<li>Scythes for Psyker staves.</li>
+</ul>
+</li>
+<li><a href="https://www.nexusmods.com/warhammer40kdarktide/mods/1238"><em>Tools of the Omnissiah</em></a> by Geoff From Accounting
+<ul>
+<li>Primarily various parts for Skitarii weapons.</li>
+<li>Also some real world parts, such as Mateba barrels for stub revolvers.</li>
+</ul>
+</li>
+</ul>
+<a id="load-order">
+<h2 id="load-ordera">Load Order</a></h2>
+<p>The recommended load order is as follows:</p>
+<pre><code>master_item_community_patch
+visual_loadout_customization_community_patch
+extended_weapon_customization_no_gun
+extended_weapon_customization
+extended_weapon_customization_base_additions
+extended_weapon_customization_owo
+extended_weapon_customization_syn_edits
+extended_weapon_customization_more_dakka
+extended_weapon_customization_empty_scopes
+</code></pre>
+<p>You don't have to use every add-on plugin. The list just includes most of the common ones.</p>
+<p>Load MICP and VLCCP high in the load order; they can be prevented from working if a mod before them tries to edit the same thing. One example is <code>transonic_stance_colors</code>, so make sure these patches load before that. (Note: with the temp fixes, EWC gets the same load order treatment as the VLCCP)</p>
+<p>Load EWC before <code>GoToMastery</code>, <code>enhanced_character_selection</code>, <code>transonic_stance_colors</code>, and <code>visible_equipment</code>.</p>
+<p>Do NOT use with <code>DumpStatFinder</code>.</p>
+<a id="faq">
+<h1 id="ewc-faqa">EWC FAQ</a></h1>
+<a id="faq-1">
+<h2 id="what-files-are-for-ewc-what-are-the-other-files-in-the-pinsa">1. What files are for EWC? What are the other files in the pins?</a></h2>
+<p><code>extended_weapon_customization</code> and the 2 patches are all that is <em>required</em> for functionality. <code>extended_weapon_customization_base_additions</code> (EWC BA) provides additional options. The pinned versions of these are usually test versions which may have experimental fixes and functionality. The versions on Nexus (see <a href="#installation">Installation</a>) are the latest stable versions.</p>
+<p><code>visible_equipment</code> is a completely standalone mod to show weapons on the body. It used to be part of <code>weapon_customization</code>, but has grown to be split into its own mod. You can find it on <a href="https://www.nexusmods.com/warhammer40kdarktide/mods/852">Nexus</a>.</p>
+<p><code>pure_cinema</code> is a completely standalone mod to allow dropped enemy weapons to fire and to visually swap enemy weapons. It was mostly a &quot;for fun&quot; thing so it's not as granular as a fully-released mod, so keep that mind.</p>
+<a id="faq-2">
+<h2 id="are-there-compatibility-issuesa">2. Are there compatibility issues?</a></h2>
+<p>Yes. Load EWC before <code>GoToMastery</code> and <code>enhanced_character_selection</code>. Do NOT use with <code>DumpStatFinder</code>.</p>
+<a id="faq-3">
+<h2 id="can-i-use-the-old-plugins-stilla">3. Can I use the old plugins still?</a></h2>
+<p>No. All add-on plugins need to be completely remade for EWC, which will take a looong time. The MT Plugin is planned to be updated eventually, with no ETA. Syn's Edits and OwO have WIP versions pinned in the Discord chat.</p>
+<p>Basically, anything named <code>weapon_customization_xxx</code> will NOT work. The new mods have adopted the naming convention of <code>extended_weapon_customization_xxx</code>.</p>
+<a id="faq-4">
+<h2 id="where-can-i-get-scopes-for-my-guna">4. Where can I get scopes for my gun?</a></h2>
+<p>EWC BA and Syn's Edits include scopes.</p>
+<a id="faq-5">
+<h2 id="can-i-transfer-my-customized-weapons-from-the-old-codeweaponcustomizationcode-to-ewca">5. Can I transfer my customized weapons from the old <code>weapon_customization</code> to EWC?</a></h2>
+<p>Unfortunately not, even after the plugins are rebuilt. A converter won't be possible for technical reasons.</p>
+<a id="faq-6">
+<h2 id="how-do-i-customize-weaponsa">6. How do I customize weapons?</a></h2>
+<p>Open the inventory and select your weapon, then click the &quot;Customize&quot; button (left half of the attached picture). This will bring up a menu where you can select attachments to equip. Click the attachment on the left panel (right half of the attached picture), then click the &quot;Equip&quot; button on the bottom right.
+<img src="/assets/images/ewc_faq_customize1.png" alt="CustomizeWeapons_CustomizeButton" />
+<img src="/assets/images/ewc_faq_customize2.png" alt="CustomizeWeapons_SelectAttachment" /></p>
+<p>If there is no &quot;Customize&quot; button or you see a <code>&quot;loc_weapon_inventory_tip_1&quot;: string not found</code> text upon customizing, go into Mod Options -&gt; Toggle Mods -&gt; make sure EWC is enabled</p>
+<a id="faq-7">
+<h2 id="what-do-the-buttons-at-the-top-doa">7. What do the buttons at the top do?</a></h2>
+<p>Some attachments, when equipped, provide additional features. These buttons allow you to toggle these features, if applicable.</p>
+<ul>
+<li><em>Damage Type</em> (Bayonet Icon): Changes attack sounds, weapon trails, and/or gibbing effects</li>
+<li><em>Crosshair</em> (Cross Icon): Changes the crosshair, such as by forcing a custom one or removing the one you have</li>
+<li><em>Alternate Fire</em> (Gear Icon): Forces ADS view or braced view
+You can click the button to disable it, turning it red.</li>
+</ul>
+<p>Here are some examples of attachments with these features:</p>
+<p><img src="/assets/images/ewc_attachment_icons.png" alt="Attachments with feature labels" /></p>
+<a id="faq-8">
+<h2 id="how-do-i-use-the-flashlightsa">8. How do I use the flashlights?</a></h2>
+<p>On weapons without flashlights in the base game, flashlights use the Interact button (the one for using Medicae stations, picking up ammo, etc.). Press it while aiming down sights, or quickly double tap it. These behaviors (and the reminder message in chat) can be toggled in the Mod Options.</p>
+<p>Otherwise, flashlights can be used as usual, with the Special Action button.</p>
+<p><a id="faq-9"></a></p>
+<h2 id="why-arent-colors-saving-when-i-paint-weapons">9. Why aren't colors saving when I paint weapons?</h2>
+<p>It saves internally, but the changes may not show up right after painting.</p>
+<p>People have had luck with applying colors before loading into the Mourningstar, using a mod such as <a href="https://www.nexusmods.com/warhammer40kdarktide/mods/89">Psych Ward</a>. Otherwise, try swapping weapon loadouts while in the Psykhanium or playing a match.</p>
+<p>Also make sure that the slot you selected is the correct one, in case you're actually trying to paint a bayonet or whatever (<a href="#faq-10">FAQ 10</a>).</p>
+<a id="faq-10">
+<h2 id="i-tried-coloring-a-part-and-other-parts-got-the-same-colora">10. I tried coloring a part, and other parts got the same color!</a></h2>
+<p>Whenever a part is colored, all parts attached to its slot as a child inherit that color. The child can then be colored separately without propagating to the parent.
+This color inheritance goes down the chain. Normally, the receiver is the root of all parts, so coloring the receiver will color pretty much everything.</p>
+<p>For example, you could color a barrel purple, which will make the muzzle purple too. You can then go to the muzzle, then color it yellow.</p>
+<a id="faq-11">
+<h2 id="weapon-damage-is-doubled-in-the-psykhaniuma">11. Weapon damage is doubled in the Psykhanium.</a></h2>
+<p>It’s a side effect of the damage type feature. It only affects offline matches, not online matches, so you won’t be banned.</p>
+<p><del>Unfortunately, there is no workaround. You can only disable the mod temporarily whenever you want to test breakpoints (Mod Options --&gt; Toggle Mods --&gt; Extended Weapon Customization).</del></p>
+<p>Download the fix for Depths of the Damned</p>
+<a id="faq-12">
+<h2 id="my-crosshair-is-gonea">12. My crosshair is gone!</a></h2>
+<p>It's a bug with scopes added by plugins. The ones that zoom in make the crosshair disappear until you die. The plugins cannot fix this, and there is no ETA on it being fixed in the main mod.</p>
+<p>Strangely enough, the crosshairs can reappear after dying in-game. Not really useful information, but funny to know.</p>
+<a id="faq-13">
+<h2 id="i-cant-upgrade-weapons-with-hadron-quotcannot-complete-operationquota">13. I can't upgrade weapons with Hadron: &quot;Cannot complete operation&quot;</a></h2>
+<p>Close the menu then open it again. This happens with the base game but gets worse with this mod. Reopening the menu lets the game catch a breath, and usually lets you keep going afterwards.</p>
+<p>Using <a href="https://www.nexusmods.com/warhammer40kdarktide/mods/89">Psych Ward</a> helps, like in <a href="#faq-9">FAQ 9</a>. When you're doing things before loading into the Mourningstar, there's less things happening in the background.</p>
+<a id="faq-14">
+<h2 id="the-hive-scum-dual-weapons-are-missing-vfx-for-the-right-hand-guna">14. The Hive Scum dual weapons are missing VFX for the right-hand gun.</a></h2>
+<p><del>This is a known issue. it happens regardless if you have equipped any customized parts. There is no ETA on the fix.</del></p>
+<p>Download the fix for Depths of the Damned</p>
+<a id="faq-15">
+<h2 id="the-game-is-crashing-when-i-hover-over-some-partsa">15. The game is crashing when I hover over some parts.</a></h2>
+<p>Go to Mod Options --&gt; Extended Weapon Customization --&gt; Disable the Randomization options</p>
+<p>Typically, the crash message looks something like this: <code>[Script Error]: scripts/managers/ui/ui_unit_spawner.lua:83: Unit not found #ID[b0db5a12576cdaaf]</code></p>
+<p>Why does this help? Nobody knows but it usually works :D Praise the Omnissiah</p>
+<a id="faq-16">
+<h2 id="the-game-is-crashing-with-some-quotgmatchquot-error-when-i-try-to-customize-weaponsa">16. The game is crashing with some &quot;gmatch&quot; error when I try to customize weapons.</a></h2>
+<p><code>[Script Error]: scripts/foundation/utilities/string.lua:21: bad argument #1 to 'gmatch' (string expected, got nil)</code></p>
+<p>This message comes from the <a href="https://www.nexusmods.com/warhammer40kdarktide/mods/409">MasterItem Community Patch</a> failing to load. Make sure these things are true:</p>
+<ol>
+<li>There is a <code>master_item_community_patch</code> folder in the Darktide mods folder and <code>master_item_community_patch</code> written in the <code>mod_load_order.txt</code>.</li>
+<li>There are no red messages appearing on the right side of the screen when you open the game.</li>
+<li>In the <code>mod_load_order.txt</code> file, <code>master_item_community_patch</code> is loading BEFORE <code>extended_weapon_customization</code> and is at the top of the list.</li>
+<li>The <code>mod_load_order.txt</code> file has been saved.</li>
+</ol>
+<p>For #3, the important part is that it has to load before any mod that affects the same functions. Since there's not an easy way to find that out, conventional wisdom says to put it at the top of the list.</p>
+<p>For #4, one thing that causes issues for people is that they'll fix the load order, but then they'll close the load order file without saving. The game doesn't recognize the changes (since it's not actually saved), and when the user reopens the load order file, it <em>looks</em> ok but actually isn't saved.</p>
+<a id="faq-17">
+<h2 id="when-i-try-to-equip-attachments-everything-is-the-wrong-placea">17. When I try to equip attachments, everything is the wrong place!</a></h2>
+<p>Make sure you have the <a href="https://www.nexusmods.com/warhammer40kdarktide/mods/853">Visual Loadout Customization Community Patch</a> installed and loading before EWC. This patch is what keeps the weapon alignment working.*</p>
+<p>If <em>most</em> attachments work but only a few aren't, it's likely an issue with that specific part when used in conjection with the current combination of attachments. Report these to the respective addon plugin author.</p>
+<p>* EWC checks where to put attachments using a legacy algorithm. Using the current algorithm means every single part needs to be realigned, so the legacy algorithm was restored with this patch.</p>
+<a id="legacy-faq">
+<h1 id="legacy-weapon-customization-faqa">Legacy Weapon Customization FAQ</a></h1>
+<p>The intention of the main FAQ is to answer questions specifically about the rebuild of <code>weapon_customization</code> --&gt; <code>extended_weapon_customization</code>. As such, it does not address questions that we've been answering for the old version. However, for posterity, I'll include a few of the common ones that still pertain to the rebuild.</p>
+<a id="legacy-faq-1">
+<h2 id="can-other-people-see-thesea">1. Can other people see these?</a></h2>
+<p>No, this mod is entirely client-side. This means that your customizations are only visible to yourself, and other players won't see it, even with this mod installed.</p>
+<p>Out of respect for Fatshark, there will be no efforts made to allow others to see your weapons. As an alternative, consider sharing pictures of your weapons in the Discord thread.</p>
+<p>One way to create the illusion of this is to enable Randomization in the Mod Options. This will give other players random attachment selections, which may appear as if they chose those customizations themselves.</p>
+<a id="legacy-faq-2">
+<h2 id="i-cant-see-my-weapon-skins-anymorea">2. I can't see my weapon skins anymore!</a></h2>
+<p>As a side effect of implementing customization, you can't see the effects of choosing a skin through the &quot;Cosmetics&quot; button. Other people will still see the equipped skin, but for you to see it, you'll need to recreate it through EWC. This can take some combination of swapping attachments and applying colors and patterns.</p>
+<p>Note that the red and white Mastery reward skins are not a paintjob, but separate parts</p>
+<a id="legacy-faq-3">
+<h2 id="i-keep-hearing-some-rustling-noise-when-walkinga">3. I keep hearing some rustling noise when walking!</a></h2>
+<p>This is actually from Visible Equipment. Open Mod Options --&gt; Visible Equipment --&gt; Disable &quot;Sounds from own character&quot; and &quot;Sounds from other characters&quot;</p>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p class="copyright">Darktide Mod: Extended Weapon Customization - OwO maintained by <a href="https://github.com/Backup158">Backup158</a></p>
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+  </body>
+</html>

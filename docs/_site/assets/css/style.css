@@ -266,7 +266,7 @@ Small Device Styles
   h5 { font-size: 14px; }
   h6 { font-size: 12px; }
   code, pre { min-width: 240px; max-width: 320px; font-size: 11px; } }
-/* "jekyll-theme-slate" = Your theme name */
+/* "jekyll-theme-slate" = Your theme name, taken from _config.yml */
 /* Eg: @import 'jekyll-theme-cayman'; */
 /* https://github.com/pages-themes/slate/blob/master/_sass/jekyll-theme-slate.scss */
 /* Your css rules goes after this */

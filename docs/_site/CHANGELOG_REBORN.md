@@ -1,0 +1,481 @@
+# 4.13.0 - 2026-10-WIP
+## Added
+
+## Fixed
+- Excessive debug in console log
+
+# 4.12.0 - 2026-10-14
+## Added
+- Slim Blades
+    - Has the new DClaw blade
+- Support for Huntsman's Shotgun
+- Flashlight
+    - Tactical flashlight finally remade
+    - MP5 lights also made but not yet repositioned. I need to think about how to do this properly
+## Fixed
+- Combat Shotgun sights being placed into the wrong slot
+- Made bayonet alignment consistent
+- Missing mod title
+- Redid Slim Blades so it not as subjected to The Lottery
+    - Is this finally the end of the flipped blades
+    - pray for a miracle
+## Developer
+- Refactored transfer from local table of attachments to global list on first setup because I was getting bored of copy pasting it
+    - `mod.local_table_of_attachments_add_one` handles adding one attachment to the list or to a key
+    - `mod.transfer_local_table_of_attachments_to_global` handles transferring the one layer to a global
+- Removed version logging
+    - DMF does this natively now
+    - The only purpose was to make sure users had this mod updated, and if the DMF logging is not in the log, I think it's safe to assume they just need to update everything
+    - Makes it less tedious to maintain multiple version numbers
+
+# 4.11.0 - 2026-09-07
+*May require reequiping some Laspistol iron sights*
+## Added
+- Laspistol Night Iron Sights
+- The other laspistol iron sight variants
+## Changed
+- Split Iron Sights into selection groups
+## Developer
+- Refactored laspistol irons to create all variants
+- Renamed `laspstol_with_rail_jank` to `laspistol_jank_with_rail` arbitrarily. kiss your sister
+
+# 4.10,0 - 2026-09-07
+## Added
+- Invisible Rifle Rails
+    - For laspistol
+- Laspistol Irons
+    - For laspistol
+    - With and without rails
+    - With and without alignment for aiming
+## Fixed
+- Missing attachment localizations because `mod.localize_attachment_triple_threat` put the number in the wrong spot
+- Vulnerability when inserting custom fixes per weapon that would allow it to pass nil and crash
+## Developer
+- Renamed `mod.create_requirements_string_from_names_table` to `mod.create_requirements_string_from_values_of_names_table`
+- Created `mod.shallow_create_all_requirements_string_in_table` to automatically run the above on one level of a table
+    - This is to avoid the monstrosity that is the contemporary barrel localization
+    - So yeah i changed it to that in `owo_modern_barrel.lua`
+- More detailed error messages for adding localization suffix tables
+- Refactored inserting custom fixes per weapon to avoid checking more fixes after it's already replaced a fix
+- Renamed `kitbashs` to `kitbashes` for internal use, then copies the values over before sending it to the main mod
+
+# 4.9.0 - 2026-09-03
+## Added
+- Contemporary barrels
+    - Now on shredder autopistol and lasguns
+    - because adding more bugs is a good idea!
+## Fixed
+- Kalashnikov Barrels not lining up 
+    - Braced Autogun's origin is lower, so I had to move the others down
+    - I forgot to set the exception
+    - Which is pretty embarassing since I noticed that when I first made these lol
+## Developer
+- Moved hardcoded fix requirements to its own file
+    - This is so it can load before attachemnts are created
+    - I should've done this a while ago
+
+# 4.8.1 - 2026-08-31
+## Fixed
+- Other plugins' sights were getting unaligned
+    - The holographic sight was not properly logging its name
+    - This meant the fixes were trying to match `nil`, so it was always valid for any sight
+    - This then subjected every other sight to... The EWC Fix Lottery
+- Fixed doubled sights from other plugins on the Galvanic Rifle
+    - This was because I defined an attachment slot for `sight` based on the receiver instead of the rail
+    - EWC is a goon so it just takes my new slot and gives it to everyone, so there's two `sight`
+- Made previews for Sight Reticles visible
+    - Reticle 1 and 3 are general visible (`(+)` and `[+]`)
+    - What about reticle 2?
+    - I have no clue
+    - That father fucker just up and disappeared
+    - I spent the entire time aligning the other 2 and slowly rotating reticle 2 to try and find it
+    - But it's just GONE?? like a fart in the wind
+    - I'll get my fucking child support, reticle 2
+
+# 4.8.0 - 2026-08-20
+## Added
+- Suppressors
+    - PBS-1 now has a variant with the base muzzle visible
+- Flashlights
+    - There is now a custom color that grabs from the mod options
+    - Requires the latest update for DMF
+- Updated localization helper to support localization instead of only English
+    - ...yeah
+    - that's pretty embarassing
+    - Though it's not like I expect anyone to translate this monster lol
+## Changed
+- [REDACTED] Suppressors no longer have a damage type if it's not a muzzle
+    - Now the barrel shrouds won't mess with you
+    - haha
+    - just kidding
+    - that's for the weekend
+- Suppressors are actually categorized by regular vs slim
+- Suppressors no longer have the base mesh visible
+## Fixed
+- I broke all the suppressors again last time lol
+    - All muzzle suppressors were taking the barrel shroud position
+    - Now they're back to how they were
+    - Which is to say
+    - Shit!
+    - Not really. The broken part wasn't actually too noticable
+- Invisible flashlight was trying to be a stock for some reason, so now it's actually invisible
+## Developer
+- Refactored some global attachment names to be called by the attachment file itself instead of shared fixes. In the future this makes it easier to keep everything together instead of jumping between the file and the shared file, so adopting the same thing over time makes it more consistent.
+
+# 4.7.0 - 2026-08-16
+## Added
+- Contemporary Barrels
+    - For the autoguns
+    - Short AK Barrels (Rocks Glass) and Shorter AK Barrels (Shots Glass)
+        - Shorter version of the Braced Autogun barrels
+        - The names are in reference to serving glasses used for vodka (idk I don't drink)
+- AK Style Helbore Bayonets
+    - For basically all ranged lol
+    - Helbore bayonets (the slashy kind) but flipped upside down
+    - Isn't set up for all of them, but that's something for future me
+- Veteran Guardsman Laspistol Wargear
+    - Laspistols
+    - Underbarrel plasma pistols and bolt pistols
+    - Yes, underbarrel pistols for your pistol lol
+    - There was a misprint in one of the 10th edition rulebooks
+## Changed
+- Perhaps improved barrel shroud positioning logic
+- Restructured Mod Options to have more subcategories
+## Fixed
+- Crash when hovering chainsword body 10-12
+    - `create_attachments.lua` did not have safety checks when prepending 0
+    - Thus creating nonsensical numbers when fed two digit values
+- Missing mod options for randomization: chainsword blades
+- Equipping AK Irons would move suppressors forwards
+    - Both were made as simple kitbashes
+    - Making the AK base apply as the muzzle base, so the fix hit both
+    - Turned AK Irons into a full kitbash
+## Developer
+- Refactored tactical stock localization so it appears in the localization file
+- Updated localization standard so I can copy it for each attachment group, instead of fiddling with 
+- Adopted a test version of the info.json file
+
+# 4.6.0 - 2026-08-08
+## Added
+- Chainsword Blades
+    - Chainsword blades onto the Heavy Eviscerator
+    - Eviscerator blades onto the Assault Chainsword
+    - Created new Chainsword damage types for each of them
+- Chainsword chains
+    - For use with the above
+## Changed
+- Refactored damage types
+    - It's done only on all mods being loaded, so load order doesn't matter with EWC
+        - still recommended to keep OwO after base additions bc of the soft requirement
+        - But if I ever get rid of that, it'll be fine in whatever order
+        - Robustness yesss
+    - Clarified `families_and_damage_types` was just for slim blades, since I needed one for chainsword blades separately
+    - Created function for making damage types from a given family/damage_type table
+- Refactored file structure. Now whenever I add a new attachment/fix, all edits are done in one file instead of being spread out
+- Refactored copying to siblings for improved performance
+- Refactored common fixes and attachments
+    - Before I just copy pasted them among the weapon files
+    - Now there are tables in the shared fix requirements so it's easier to make sweeping changes
+## Fixed
+- ~~my life haha~~
+- AML will sort it after base additions
+
+# 4.5.0 - 2026-07-23
+## Added
+- Slim Blades
+    - Mechanicus Power Sword is added to list of available blades (and whoever named them is a psychopath)
+    - Mechanicus Power Sword can use slim blades. They'll look weird due to the lack of guard on the grip
+- Added parts to the new weapons
+    - "dual_autopistols_p1_m1", "dual_stubpistols_p1_m1", "needlepistol_p1_m1",
+    "arc_rifle_p1_m1", "galvanic_rifle_p1_m1", "phosphor_pistol_p1_m1"
+    - All the flashlights (tactical ones are still broken)
+    - Holographic Sights
+    - Suppressors
+## Changed
+- Refactored list of slim blade damage types so it's one table i need to edit
+## Fixed
+- Helbore Lasguns with suppressors have bayonets aligned now
+    - Before, they were clipping inside the muzzle
+    - Now, they should be closer to the bottom lug of the barrel
+- Vigilant Autogun and Braced alignments (copied values from Infantry Autogun)
+- Infantry Lasgun sight alignments
+    - the reticles themselves are jank and evil
+    - half the time they align
+    - all of the time, they don't hide the housing properly
+    - Use the empty sight reticle for now
+- Recon Lasgun holosight alignments
+    - With partial compatibility with Syn's receivers
+    - Sometimes the alignments don't register and it just stays floating
+    - I'm guessing this is the same cause as the slim blade flip issue. This issue will be investigated
+- Helbore Lasgun holosight alignments
+    - The sight itself works, but the reticles won't cooperate for me, for whatever reason
+    - Use the empty reticle
+- Aligned suppressor tip
+    - Wrapped and Heavy Metal 2
+    - There's supposed to be a tip with a noticable barrel edge, but it was too deep inside so it was just a flat, closed barrel
+
+# 2026-05-05
+v4.4.0
+- Reverted the suppressor changes, to support the new EWC version
+
+### Refactor
+- Made more player-facing messages localization strings, so they can be easily translated if needed
+
+# 2026-04-27
+v4.4.0-beta
+- Added error message about using the MT Plugin
+- Added options to disable randomization for all groups of parts
+## Added Parts/Support
+- Barrel Shrouds (`barrel_foreskin`) slot
+    - Reusing Suppressors to keep the old bug
+    - It only works on Autoguns and "works" is being generous
+- Added slim variant of Wrapped Suppressor
+- ~~Aligned Suppressors on Combat Shotguns for Syn's barrels~~
+- ~~Aligned Holographic Sights for Syn's receiver extensions~~
+    - ~~sight offset has similar issues with flipped blades, in that they're inconsistent and make me want to contribute to the statistic~~
+## Fixes
+- Robust handling for `mod.create_requirements_string_from_names_table` mainly around passing various types
+- Realigned suppressors for Combat Shotguns
+- Decided FUCK IT for the flipped blades issue
+    - I gave up
+    - But before I did, I tried another method
+    - Fixes are now written manually instead of dynamically
+    - I believe there was an issue with files being run in parallel, so the variables were not fully written before they were used by each weapon files
+    - Since after restarts, there could be no blades flipped, some blades flipped (with no consistency in which ones), or all blades flipped
+    - never fUCING MIND AAAAAAAAA IM GOING TO EAT SOMEONE
+- Localized groups for holographic sights
+- ~~Realigned EOTech HWS's to hide the chainsword triggers more~~
+- Slim Blade vfx `spawner` crashes
+    - Removed unused slot indicators
+    - Disabled all vfx spawner exclusions (`disable_vfx_spawner_exclusion` is now true when creating any blade)
+## Refactor
+- Reorganized OwO mode shitposting to be more easily read
+- Replaced `ipairs` with index based array access, per Fatshark's Lua optimization guide
+- Set error messages to use localization strings, for easier translation
+
+# 2025-12-23
+v4.3.1
+
+- Fixed logging to happen only with debug mod, so I don't keep polluting people's logs
+- Fixed attachments:
+    - Slim blades being flipped for:
+        - Arbites Shock Maul
+        - Shock Maul and Suppression Shield
+- Refactored requirements to be in its own file
+    - So I don't have a untalge the mess of "ok who already edited the global"
+    - And I don't have to copy the functions multiple times
+        - especially the slim blade ones
+        - just in case one comes first
+
+# 2025-11-30
+v4.3.0
+
+## Added
+- Flashlights 
+    - Added to:
+        - Flamer
+        - Plasma Gun
+        - Combat Shotgun
+        - Double-Barreled Shotgun
+        - Exterminator Shotgun
+        - Subductor Shotpistol and Riot Shield
+        - Grenadier Gauntlet
+        - Ripper Guns
+        - Twin-Linked Heavy Stubbers
+        - Heavy Stubbers
+        - Rumbler/Kickback
+    - also with the changes to how slots work, they fuckin FLOAT
+- Small underbarrel flashlights ("Flashlight (Under)")
+    - Added to:
+        - Subductor Shotpistol and Riot Shield
+        - Quickdraw Stubrevolvers
+    - Half sized and sits under barrel
+    - doesn't actually turn on bc that's just how the original mod works
+    - also with the changes to how slots work, they fuckin FLOAT
+- Suppressors
+    - Added to:
+        - Combat Shotgun
+        - Exterminator Shotgun
+        - Subductor Shotpistol and Riot Shield
+        - Ripper Guns
+        - ~~Heavy Stubbers~~
+            - nvm this drove me insane
+        - Rumbler/Kickback
+            - works when reloading :D
+    - Variants
+        - Wrapped Suppressor
+            - a metal suppressor wrapped in a bandage
+- Slim Blades:
+    - Added to:
+        - Arbites Shock Maul
+        - Shock Maul and Supression Shield
+        - Shock Maul
+    - Note: Blades are reversed on these new weapons
+        - I'm working on the fixes for these. It'd be simple enough to brute force it, but I'm working on a more robust solution
+    - Using with invisible connectors may lead to weirdness at the base
+        - These blades were not all designed to be used as standalones
+        - This is the same as when used on the non-maul weapons. just that the connector usually covers it up (at the cost of clipping)
+- Invisible Connectors:
+    - Added to:
+        - Arbites Shock Maul
+        - Shock Maul and Supression Shield
+        - Shock Maul
+- **Damage Types**: Slashing
+    - Used in slim blades
+    - Matches what the source weapon uses (e.g. Slim Power Sword blades use the damage type from Power Swords)
+    - Does not change sounds atm
+- Mod options to toggle randomization
+    - Toggling flashlights
+
+---
+# 2025-10-29
+v4.2.0
+
+## Added
+- Suppressors and Flashlights to Revolvers
+    - I forgor
+    - Note: PBS-1 still has the stupid clipping
+- Localizations and groups for Suppressors
+    - in the months that i had the suppressors, i never really settled on a name for them
+    - i still havent settled :D
+    - but at least they're not just 1-5 now
+        - double cans
+        - PBS-1
+        - heavy metal
+- Flashlights [WIP]
+    - None of these work LMAO
+    - MP5 flashlights (2)
+        - goes on the sight rail
+    - Big Tactical Light
+        - like a regular flashlight you hold in your hand, but on the gun (oooo)
+
+## Fixed
+- Alignments for Slim Blades
+    - attachment points did not use `ap_body_01`. it's all blade, regardless of slot name
+    - this still means the blades with builtin hilts (such as psword) will be too high. am working on that
+
+## Refactors/Developer Talk
+- Reworked helpers to be full items
+    - for:
+        - Suppressors
+        - Tactical Stocks
+        - Iron Sights
+        - Flashlights
+    - because when they aren't, there may be weirdness with the game trying to use them as something they're not (ex bullets getting hidden)
+    - also meant fixes might apply to them when they weren't supposed to
+- Reworked single kitbashes (no children) to full items
+    - for:
+        - Slim Blades
+    - also helps prevent wonkiness with fixes, since it overwrites
+
+---
+# 2025-10-07
+v4.1.0
+
+## Added
+- Flashlight
+    - Variants for each flashlight model per color
+    - Added a bunch of colors: green, red, blue, cyan, magenta, yellow, pink
+    - Added 4 variants for size and stuff
+        - narrow: what I used last time for `owo_flashlight_green_01`
+        - narrow cool: same but lower color temperature
+        - weak: wider and shorter beam, with cooler temperature
+        - default: copying the default flashlight template, so just color is different
+    - this makes 180 flashlights :3
+    - good luck babe
+- Slim Blades
+    - made available on relic blade, force sword, and force greatsword
+    - blades from relic blade, force sword, and force greatsword
+    - short variants for relic/fgs
+    - they sit too low. fix comes later
+- [WIP] Iron sights
+    - on: autoguns
+    - ak irons
+    - shape is alright, but the sights dont work lol
+- [WIP] Magazines
+    - on: autoguns
+    - ak extended mag
+    - it just doesn't fucking work lmao
+
+## Fixed
+- Aligned tactical stocks for bolter
+    - sizd up and moved to back
+    - still dont try on helbores
+- Logic error when looping over all models
+    - Used break instead of continue (and lua doesn't have continue)
+    - So i'd lose all the models after the first one i wanted to skip
+    - fixing this restored from 3 psword blades to 6 psword blades (index 7), not counting mastery
+        - 7 models to use, skip #4
+        - break meant only 1-3 were added
+        - now it's 1-3, 5-7
+- wonky fix interaction between merge tables and suppressors
+    - suppressors would get the fixes meant for merge tables???
+    - eg suppressor (empty base) with folded under stock
+        - stock would be in default position, as if i didnt do anything to it
+        - suppressor would get the rotation/scaling from it
+    - fixed by using the base unit version
+
+## Developer talk
+- Decided how to add fixes
+    - each weapon has its own file in the `fixes` folder
+        - all it does is return the fixes
+        - then the main file reads all those (right before copying to sibling marks) and adds them in
+            - requires me to maintain the list of the weapons in the fixes folder, but idc
+            - automatically detecting files int he folder is very resource intensive, and this only risks me forgetting to add something during testing
+    - this means the fixes given per attachment are the universal fixes
+        - technically we cant do universal fixes like that
+        - it has to be put under each weapon
+        - but that means i'd need more effort when it comes to making custom fixes
+            - cant just insert because the order they get applied in may not be consistent
+            - i have the custom fixes overwrite them if the requirements match exactly
+    - I prefer it this way because i like having the kitbash and attachments defined in the same file
+        - there's overhead from having to process and skip values, but i find the headache annoying enough when swapping between two files
+        - also it's not like this is noticeable
+- Merged redundent functions into more generic functions
+    - in the main file, adding fixes and kitbashes can be done by inserting each table and merge recursive, respectively
+    - made them global into `generic_helpers.lua` to be used in `create_attachments.lua`
+- Made kitbash creation cleaner
+    - split into functions for merge table and full item
+    - then call the appropriate one within the `create_an_attachment` function
+    - now it's not directly in the main file :)
+- Added comments for more functions
+- refactored suppressor creation to copypaste less code
+
+---
+# 2025-09-29
+v4.0.0
+
+Initial release for the rebuilt version in Discord. Continuing the version count from the old plugin to keep git in order.
+
+## Laying the framework for me to readd parts
+for the nerds
+- functions for each group of attachments (ex suppressors together)
+- functions to add a group of attachments to a weapon (or multiple at once)
+- functions to copy over attachments to another weapon
+    - used to propagate changes from mark to mark
+    - and from family to family (ex ilas --> recon)
+- defining the attachment functions globally in separate files
+    - slightly worse performance but much cleaner code
+    - at startup and it's only a few function calls
+    - i'm sure the auto mark propagation is worse than this
+    - esp the table search lol
+- function to execute a function for a range
+    - used to iterate through each mesh
+    - ex 8 power sword blades, so script runs it for 7 then the mastery one
+
+## Added
+- Suppressors
+    - Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/Recon Lasguns
+    - Changed the tip of suppressor 5 to not be a colored tip
+    - dont use on bolter/boltpistol
+- Tactical stocks
+    - Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/--- Lasguns
+    - unaligned for most things
+    - 🥀 
+- Flashlight **(new)**
+    - Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltgun, Bolt Pistol, Infantry/Helbore/Recon Lasguns
+    - Green light
+- slim blades
+    - "Devil's Claw" Swords, Heavy Swords, Dueling Swords, Power Swords, Power Falchions
+    - blades from: power sword, devil's claw sword, power falchion **(new)**, heavy sword **(new)**
+    - _g variants do not work as intended (won't resize the grip)
