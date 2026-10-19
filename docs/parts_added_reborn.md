@@ -60,9 +60,6 @@ All flashlights come with color and beam power variants. Each combination is its
 ### **Tactical Flashlights**
 - *Weapons*: Infantry/Braced/Vigilant Autoguns, Shredder Autopistol, Spearhead Boltguns, Bolt Pistols, Infantry/Helbore/Recon Lasguns, Heavy Laspistols, Quickdraw Stub Revolvers
 - Big flashlight (like a handheld) but on the gun
-> [!WARNING]
-> 
-> Nonfunctional
 
 ## Bayonet
 ### **AK Style Helbore Bayonets**
