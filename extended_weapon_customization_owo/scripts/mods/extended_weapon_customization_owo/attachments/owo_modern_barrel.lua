@@ -58,7 +58,7 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         list_of_names_to_use = mod.all_owo_kalashnikov_barrel_names
     end
 
-    local function owo_kalashnikov_barrel_helper(name_suffix, number_as_string, fixes, kitbashes, table_to_insert_to)
+    local function owo_kalashnikov_barrel_helper(name_suffix, number_as_string, fixes, kitbashes, table_to_log_attachment_names)
         local shortname = attachment_group_prefix..name_suffix.."_"..number_as_string
         create_an_attachment(table_to_return, shortname,
             -- Attachment
@@ -77,8 +77,8 @@ function mod.owo_kalashnikov_barrel(given_slot, given_attachment_node)
         )
         -- Adding name to this group's list
         if all_these_attachments then
-            table_to_insert_to[name_suffix] = table_to_insert_to[name_suffix] or {}
-            table_insert(table_to_insert_to[name_suffix], shortname)
+            table_to_log_attachment_names[name_suffix] = table_to_log_attachment_names[name_suffix] or {}
+            table_insert(table_to_log_attachment_names[name_suffix], shortname)
         end
         
         localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
@@ -386,7 +386,7 @@ function mod.owo_armalite_barrel(given_slot, given_attachment_node)
         list_of_names_to_use = mod.all_owo_armalite_barrel_names
     end
 
-    local function owo_armalite_barrel_helper(name_suffix, number_as_string, fixes, kitbashes, table_to_insert_to)
+    local function owo_armalite_barrel_helper(name_suffix, number_as_string, fixes, kitbashes, table_to_log_attachment_names)
         local shortname = attachment_group_prefix..name_suffix.."_"..number_as_string
         create_an_attachment(table_to_return, shortname,
             -- Attachment
@@ -405,8 +405,8 @@ function mod.owo_armalite_barrel(given_slot, given_attachment_node)
         )
         -- Adding name to this group's list
         if all_these_attachments then
-            table_to_insert_to[name_suffix] = table_to_insert_to[name_suffix] or {}
-            table_insert(table_to_insert_to[name_suffix], shortname)
+            table_to_log_attachment_names[name_suffix] = table_to_log_attachment_names[name_suffix] or {}
+            table_insert(table_to_log_attachment_names[name_suffix], shortname)
         end
         
         localize_attachment_triple_threat(attachment_group_name, name_suffix, number_as_string)
@@ -528,7 +528,7 @@ function mod.owo_trench_shotgun_barrel(given_slot, given_attachment_node)
         list_of_names_to_use = mod.all_owo_trench_shotgun_barrels
     end
 
-    local function owo_trench_shotgun_barrel_helper(number_as_string, fixes, kitbashes, table_to_insert_to)
+    local function owo_trench_shotgun_barrel_helper(number_as_string, fixes, kitbashes, table_to_log_attachment_names)
         local shortname = attachment_group_prefix.."_"..number_as_string
         create_an_attachment(table_to_return, shortname,
             -- Attachment
@@ -547,8 +547,8 @@ function mod.owo_trench_shotgun_barrel(given_slot, given_attachment_node)
         )
         -- Adding name to this group's list
         if all_these_attachments then
-            table_to_insert_to = table_to_insert_to or {}
-            table_insert(table_to_insert_to, shortname)
+            table_to_log_attachment_names = table_to_log_attachment_names or {}
+            table_insert(table_to_log_attachment_names, shortname)
         end
         
         localize_attachment_simple(attachment_group_name, number_as_string)
