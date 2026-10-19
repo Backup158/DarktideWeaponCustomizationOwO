@@ -1,4 +1,6 @@
-![thumbnail](./assets/images/nexus_thumbnail.png)
+<p align="center">
+  <img src="./assets/images/nexus_thumbnail.png" />
+</p>
 
 [![NexusLink](https://img.shields.io/badge/Nexus_Mods-gray?logo=nexusmods)](https://www.nexusmods.com/warhammer40kdarktide/mods/429 "Mod page hosted on Nexus Mods")
 [![Discord](https://img.shields.io/badge/Darktide_Modders_Discord-7289da?logo=discord&logoColor=7289DA&labelColor=gray&color=7289DA)](https://discord.gg/rKYWtaDx4D "Darktide Modders Discord")
