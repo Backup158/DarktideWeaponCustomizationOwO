@@ -352,7 +352,7 @@ function mod.localize_attachment_simple(attachment_group_name, number_string)
     local attachment_full = attachment_localized.."_"..number_string
 
     mod:add_global_localize_strings({
-        ["loc_"..attachment_name.."_"..number_string] = {
+        ["loc_"..attachment_group_name.."_"..number_string] = {
             en = attachment_full
         },
     })
