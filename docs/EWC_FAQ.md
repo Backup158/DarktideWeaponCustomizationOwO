@@ -63,6 +63,9 @@ Note: Anything here that said "Discord only" is referring to the [Darktide Modde
 - [*Tools of the Omnissiah*](https://www.nexusmods.com/warhammer40kdarktide/mods/1238) by Geoff From Accounting
   - Primarily various parts for Skitarii weapons.
   - Also some real world parts, such as Mateba barrels for stub revolvers.
+- [*robert attachments*](https://www.nexusmods.com/warhammer40kdarktide/mods/1523) by robert
+  - Requires CustomAssets!
+  - Imported custom models as attachments
 
 <a id="load-order">
 
