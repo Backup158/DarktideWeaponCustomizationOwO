@@ -559,10 +559,15 @@ function mod.owo_trench_shotgun_barrel(given_slot, given_attachment_node)
     --  Make sure this one disables the vfx spawner exclusion
     create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."barrel_extension_yummy", nil, "content/weapons/player/ranged/lasgun_rifle_krieg/attachments/barrel_07/barrel_07", "ap_barrel_01", true)
     create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."shroud_grill", nil, "content/weapons/player/ranged/stubgun_ogryn/attachments/barrel_01/barrel_01", "ap_barrel_01")
+    create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."shroud_flamer", nil, "content/weapons/player/ranged/flamer_rifle/attachments/barrel_01/barrel_01", "ap_barrel_01")
     create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."block_between_barrels", nil, "content/weapons/player/melee/thunder_hammer/attachments/head_04/head_04", "ap_head_01")
     create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."front_curve_thing", nil, "content/weapons/player/ranged/lasgun_rifle/attachments/stock_03/stock_03", "ap_stock_01")
     create_kitbash_full_item(table_to_return, owo_kitbash_helper_address.."front_bulge_thing", nil, "content/weapons/player/melee/axe/attachments/pommel_03/pommel_03", "ap_pommel_01")
     
+    -- Note for helpers:
+    -- Curve thing cannot be a hatchet. That includes the connector and it can't be hidden properly
+
+    -- Simple with Stubber shield
     owo_trench_shotgun_barrel_helper("01", nil,
     {
         base_unit = "content/weapons/player/ranged/shotgun_pump_action/attachments/barrel_01/barrel_01",
@@ -646,6 +651,80 @@ function mod.owo_trench_shotgun_barrel(given_slot, given_attachment_node)
             },
         },
     }, list_of_names_to_use)
+    -- Simple with Flamer
+    owo_trench_shotgun_barrel_helper("02", nil,
+    {
+        base_unit = "content/weapons/player/ranged/shotgun_pump_action/attachments/barrel_03/barrel_03",
+        attachments = {
+            owo_barrel_extension = {
+                item = owo_kitbash_helper_address.."barrel_extension_yummy",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.708, 0.0),
+                        rotation = vector3_box(0, 0, 0),
+                        scale = vector3_box(1.32, 1.0, 1.32),
+                    },
+                },
+            },
+            owo_barrel_foreskin_grater_front = {
+                item = owo_kitbash_helper_address.."shroud_flamer",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.388, 0.026),
+                        rotation = vector3_box(0.0, 0, 0),
+                        scale = vector3_box(0.9, 0.595, 0.49),
+                    },
+                },
+            },
+            owo_barrel_foreskin_tumor = {
+                item = owo_kitbash_helper_address.."front_bulge_thing",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.9, -0.042),
+                        rotation = vector3_box(90.0, 0, 0.0),
+                        scale = vector3_box(0.5, 0.5, 0.5),
+                    },
+                },
+            },
+            owo_barrel_foreskin_hanger_front = {
+                item = owo_kitbash_helper_address.."front_curve_thing",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.798, -0.03),
+                        rotation = vector3_box(0.0, 0, 180.0),
+                        scale = vector3_box(0.45, 0.45, 0.202),
+                    },
+                },
+            },
+            owo_barrel_foreskin_hanger_back = {
+                item = owo_kitbash_helper_address.."front_curve_thing",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(0.0, 0.87, -0.016),
+                        rotation = vector3_box(0.0, 0, 0.0),
+                        scale = vector3_box(0.45, 0.45, 0.585),
+                    },
+                },
+            },
+            owo_barrel_testicle_block = {
+                item = owo_kitbash_helper_address.."block_between_barrels",
+                fix = {
+                    offset = {
+                        node = 1,
+                        position = vector3_box(-0.024, 0.23, -0.032),
+                        rotation = vector3_box(0.0, 90, 0.0),
+                        scale = vector3_box(0.18, 0.666, 0.312),
+                    },
+                },
+            },
+        },
+    }, list_of_names_to_use)
+
 
     mod.transfer_local_table_of_attachments_to_global(all_these_attachments, "all_owo_trench_shotgun_barrels")
 
