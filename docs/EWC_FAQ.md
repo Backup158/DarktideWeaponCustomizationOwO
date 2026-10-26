@@ -64,7 +64,7 @@ Note: Anything here that said "Discord only" is referring to the [Darktide Modde
   - Primarily various parts for Skitarii weapons.
   - Also some real world parts, such as Mateba barrels for stub revolvers.
 - [*robert attachments*](https://www.nexusmods.com/warhammer40kdarktide/mods/1523) by robert
-  - Requires CustomAssets!
+  - Requires CustomAssets! The installation for this is a bit more involved.
   - Imported custom models as attachments
 
 <a id="load-order">
@@ -237,6 +237,8 @@ For #4, one thing that causes issues for people is that they'll fix the load ord
 <a id="faq-17">
 
 ## 17. When I try to equip attachments, everything is the wrong place!</a>
+*Note: Currently not applicable with the temporary fix. Just make sure EWC loads high up now.*
+
 Make sure you have the [Visual Loadout Customization Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/853) installed and loading before EWC. This patch is what keeps the weapon alignment working.\*
 
 If *most* attachments work but only a few aren't, it's likely an issue with that specific part when used in conjection with the current combination of attachments. Report these to the respective addon plugin author.
