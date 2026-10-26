@@ -205,10 +205,15 @@ Using [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89) helps
 
 <a id="faq-14">
 
-## 14. The Hive Scum dual weapons are missing VFX for the right-hand gun.</a>
+## ~~14. The Hive Scum dual weapons are missing VFX for the right-hand gun.~~</a>
 ~~This is a known issue. it happens regardless if you have equipped any customized parts. There is no ETA on the fix.~~
 
 Download the fix for Depths of the Damned
+
+## 14. Aiming through a scope has weird dots.
+![scope with dots](./assets/images/ewc_faq_scope_opacity.png)
+
+This is due to the transparency/opacity system. Go to Mod Options --> Extended Weapon Customization --> set Scope Opacity to 100
 
 <a id="faq-15">
 
